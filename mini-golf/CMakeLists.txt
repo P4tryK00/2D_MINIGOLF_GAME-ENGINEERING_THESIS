@@ -1,0 +1,26 @@
+cmake_minimum_required(VERSION 4.0)
+project(mini_golf)
+
+include(FETCHCONTENT)
+set(BUILD_SHARED_LIBS OFF)
+FETCHCONTENT_DECLARE(SFML GIT_REPOSITORY https://github.com/SFML/SFML.git GIT_TAG 2.6.0)
+FETCHCONTENT_MAKEAVAILABLE(SFML)
+set(CMAKE_CXX_STANDARD 20)
+
+set(PROJECT_SOURCES
+        main.cpp
+        Game.cpp
+        Game.h
+        DEFINITIONS.h
+        Ball.cpp
+        Ball.h
+        InputManager.cpp
+        InputManager.h
+
+
+)
+add_executable(mini_golf ${PROJECT_SOURCES})
+
+
+target_link_libraries(mini_golf sfml-graphics)
+target_link_libraries(mini_golf sfml-audio)

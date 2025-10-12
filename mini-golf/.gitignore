@@ -1,0 +1,61 @@
+# .gitignore dla projektu Mini Golf
+
+### C++ / CMake ###
+
+# Tutaj ignoruję katalogi budowania, które generuje mi CMake.
+# Zazwyczaj używam 'build' lub CLion tworzy 'cmake-build-debug'.
+# Ta reguła jest kluczowa, żeby nie wrzucać do repozytorium binarek,
+# [cite_start]plików obiektowych i bibliotek, w tym SFML pobranego przez FetchContent[cite: 1].
+/build/
+/cmake-build-*/
+
+# Pliki cache i inne rzeczy od CMake, które czasem lądują w głównym folderze.
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CTestTestfile.cmake
+Makefile
+install_manifest.txt
+
+# Jawne ignorowanie plików binarnych i pośrednich - na wszelki wypadek,
+# gdyby wygenerowały się poza standardowym katalogiem budowania.
+*.o
+*.obj
+*.a
+*.so
+*.lib
+*.dll
+*.exe
+*.out
+*.app
+
+### IDE / Edytor Kodu ###
+
+# Ustawienia dla moich edytorów i IDE. Nie chcę tego w repozytorium.
+
+# Visual Studio / VS Code
+.vs/
+.vscode/
+*.VC.db
+*.suo
+*.user
+*.sln.docstates
+
+# CLion
+.idea/
+
+# Qt Creator
+*.pro.user
+*.pro.user.*
+
+
+### Pliki Systemu Operacyjnego ###
+
+# Różne pliki systemowe, których nie potrzebuję w projekcie.
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
