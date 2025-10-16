@@ -21,6 +21,8 @@ class Game {
         sf::Vector2f forceVector;
         sf::Texture backgroundTexture;
         sf::RectangleShape background;
+        sf::Texture holeTexture;
+        sf::CircleShape hole;
 
     private:
         void processEvents();
@@ -28,6 +30,7 @@ class Game {
         void render();
         bool isReady;
         const static sf::Time timePerFrame;
+        bool ballInHole;
 };
 
 #endif // GAME_H

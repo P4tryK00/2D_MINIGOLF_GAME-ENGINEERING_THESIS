@@ -25,7 +25,15 @@ Game::Game()
     sf::Vector2u size = mWindow.getSize();
     ball.setPosition(sf::Vector2f(size.x / 2.f, size.y / 2.f));
 
+    if (!holeTexture.loadFromFile("Resources/hole.png")) {
+        std::cerr << "Error: could not load hole.png\n";
+    }
+    hole.setTexture(&holeTexture);
+    hole.setRadius(24.f);
+    hole.setOrigin(24.f, 24.f);
 
+
+    hole.setPosition(sf::Vector2f(size.x / 2.f, size.y / 2.f + 150.f));
 }
 
 void Game::run()
@@ -74,6 +82,7 @@ void Game::render()
 {
     mWindow.clear();
     mWindow.draw(background);
+    mWindow.draw(hole);
     ball.draw(mWindow);
     mWindow.display();
 }

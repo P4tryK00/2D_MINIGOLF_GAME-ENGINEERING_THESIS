@@ -11,13 +11,46 @@ Ball::Ball()
     velocity = sf::Vector2f(0.f, 0.f);
 }
 
+
+
 void Ball::update(float dt)
 {
     player.move(velocity * dt);
-    velocity *= 0.98f;
+    velocity *= 0.98f; // Zastosowanie tarcia
+
+    // Zatrzymanie piłki przy bardzo małej prędkości
     if (std::abs(velocity.x) < 0.1f) velocity.x = 0.f;
     if (std::abs(velocity.y) < 0.1f) velocity.y = 0.f;
 
+    float radius = texture.getSize().x / 2.f;
+    sf::Vector2f pos = player.getPosition();
+
+    // Kolizja z lewą ścianą
+    if (pos.x - radius < 0.f)
+    {
+        velocity.x = -velocity.x;
+        // Rozwiązanie problemu "przyklejania": ręczne ustawienie pozycji piłki na granicy
+        player.setPosition(radius, pos.y);
+    }
+    // Kolizja z prawą ścianą
+    else if (pos.x + radius > SCREEN_WIDTH) // SCREEN_WIDTH to 600
+    {
+        velocity.x = -velocity.x;
+        player.setPosition(SCREEN_WIDTH - radius, pos.y);
+    }
+
+    // Kolizja z górną ścianą
+    if (pos.y - radius < 0.f)
+    {
+        velocity.y = -velocity.y;
+        player.setPosition(pos.x, radius);
+    }
+    // Kolizja z dolną ścianą
+    else if (pos.y + radius > SCREEN_HEIGHT) // SCREEN_HEIGHT to 800
+    {
+        velocity.y = -velocity.y;
+        player.setPosition(pos.x, SCREEN_HEIGHT - radius);
+    }
 }
 
 void Ball::draw(sf::RenderWindow& window)
