@@ -8,29 +8,19 @@ Game::Game()
     , ball()
     , inputManager()
     , forceVector(0.f, 0.f)
-    , isReady(false)
 {
 
-    if (!backgroundTexture.loadFromFile("Resources/grass.png")) {
-        std::cerr << "Error: could not load grass.png\n";
-    }
-
-    backgroundTexture.setRepeated(true);
-
+    background.setTexture(&TextureManager::get("grass"));
     background.setSize(sf::Vector2f(mWindow.getSize()));
-    background.setTexture(&backgroundTexture);
-
     background.setTextureRect(sf::IntRect(0, 0, mWindow.getSize().x, mWindow.getSize().y));
 
     sf::Vector2u size = mWindow.getSize();
     ball.setPosition(sf::Vector2f(size.x / 2.f, size.y / 2.f));
 
-    if (!holeTexture.loadFromFile("Resources/hole.png")) {
-        std::cerr << "Error: could not load hole.png\n";
-    }
-    hole.setTexture(&holeTexture);
-    hole.setRadius(24.f);
-    hole.setOrigin(24.f, 24.f);
+
+    hole.setTexture(&TextureManager::get("hole"));
+    hole.setRadius(18.f);
+    hole.setOrigin(18.f, 18.f);
 
 
     hole.setPosition(sf::Vector2f(size.x / 2.f, size.y / 2.f + 150.f));
@@ -71,9 +61,6 @@ void Game::update(sf::Time dt)
     if (inputManager.isReady()) {
         forceVector = inputManager.getForceVector();
         ball.applyImpulse(forceVector);
-        isReady = true;
-    } else {
-        isReady = false;
     }
     ball.update(dt.asSeconds());
 }

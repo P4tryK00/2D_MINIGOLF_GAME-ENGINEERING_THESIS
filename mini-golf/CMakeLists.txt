@@ -16,6 +16,14 @@ set(PROJECT_SOURCES
         Ball.h
         InputManager.cpp
         InputManager.h
+        TextureManager.cpp
+        TextureManager.h
+        FontManager.cpp
+        FontManager.h
+        SoundManager.cpp
+        SoundManager.h
+        ResourceManager.cpp
+        ResourceManager.h
 
 
 )

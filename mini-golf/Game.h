@@ -5,6 +5,7 @@
 #include "Ball.h"
 #include "InputManager.h"
 #include "DEFINITIONS.h"
+#include "ResourceManager.h"
 #include <iostream>
 
 
@@ -19,7 +20,6 @@ class Game {
         Ball ball;
         InputManager inputManager;
         sf::Vector2f forceVector;
-        sf::Texture backgroundTexture;
         sf::RectangleShape background;
         sf::Texture holeTexture;
         sf::CircleShape hole;
@@ -28,7 +28,6 @@ class Game {
         void processEvents();
         void update(sf::Time dt);
         void render();
-        bool isReady;
         const static sf::Time timePerFrame;
         bool ballInHole;
 };

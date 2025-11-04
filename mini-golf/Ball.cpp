@@ -3,11 +3,9 @@
 
 Ball::Ball()
 {
-    if (!texture.loadFromFile("Resources/ball.png")) {
-        std::cerr << "Error: Could not load ball texture\n";
-    }
-    player.setTexture(texture);
-    player.setOrigin(texture.getSize().x / 2.f, texture.getSize().y / 2.f);
+    const sf::Texture& ballTexture = TextureManager::get("ball");
+    player.setTexture(ballTexture);
+    player.setOrigin(ballTexture.getSize().x / 2.f, ballTexture.getSize().y / 2.f);
     velocity = sf::Vector2f(0.f, 0.f);
 }
 
@@ -16,13 +14,13 @@ Ball::Ball()
 void Ball::update(float dt)
 {
     player.move(velocity * dt);
-    velocity *= 0.98f; // Zastosowanie tarcia
+    velocity *= 0.98f;
 
     // Zatrzymanie piłki przy bardzo małej prędkości
     if (std::abs(velocity.x) < 0.1f) velocity.x = 0.f;
     if (std::abs(velocity.y) < 0.1f) velocity.y = 0.f;
 
-    float radius = texture.getSize().x / 2.f;
+    float radius = TextureManager::get("ball").getSize().x / 2.f;
     sf::Vector2f pos = player.getPosition();
 
     // Kolizja z lewą ścianą

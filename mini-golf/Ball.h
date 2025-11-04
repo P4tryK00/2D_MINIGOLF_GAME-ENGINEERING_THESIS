@@ -3,12 +3,11 @@
 
 #include <SFML/Graphics.hpp>
 #include "DEFINITIONS.h"
-
+#include "ResourceManager.h"
 
 class Ball {
 private:
     sf::Sprite player;
-    sf::Texture texture;
     sf::Vector2f velocity;
 
 public:
