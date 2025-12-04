@@ -7,8 +7,7 @@
 void ResourceManager::loadAllResources() {
     // Tekstury
     TextureManager::load("ball", BALL_TEXTURE_PATH);
-    TextureManager::load("hole", HOLE_TEXTURE_PATH);
-    TextureManager::load("grass", GRASS_TEXTURE_PATH);
+    TextureManager::load("tileset", TILESET_PATH);
     // Czcionki
 
     // Dzwieki

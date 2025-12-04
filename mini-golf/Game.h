@@ -7,7 +7,7 @@
 #include "DEFINITIONS.h"
 #include "ResourceManager.h"
 #include <iostream>
-
+#include "TileMap.h"
 
 class Game {
 
@@ -20,9 +20,9 @@ class Game {
         Ball ball;
         InputManager inputManager;
         sf::Vector2f forceVector;
-        sf::RectangleShape background;
         sf::Texture holeTexture;
         sf::CircleShape hole;
+        TileMap tileMap;
 
     private:
         void processEvents();

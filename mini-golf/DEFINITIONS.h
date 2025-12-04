@@ -5,6 +5,7 @@
 #ifndef MINI_GOLF_DEFINITIONS_H
 #define MINI_GOLF_DEFINITIONS_H
 
+#include "SFML/Graphics.hpp"
 // Wymiary okna
 #define SCREEN_WIDTH 600
 #define SCREEN_HEIGHT 800
@@ -14,7 +15,11 @@
 
 // Tekstury
 #define BALL_TEXTURE_PATH "Resources/ball.png"
-#define HOLE_TEXTURE_PATH "Resources/hole.png"
-#define GRASS_TEXTURE_PATH "Resources/grass.png"
+#define TILESET_PATH "Resources/tileset.png"
+
+//Levels
+#define  LEVEL_WIDTH  19
+#define LEVEL_HEIGHT  25
+#define TILE_SIZE sf::Vector2u(32, 32)
 
 #endif //MINI_GOLF_DEFINITIONS_H

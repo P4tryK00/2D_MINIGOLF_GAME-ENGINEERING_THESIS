@@ -24,6 +24,8 @@ set(PROJECT_SOURCES
         SoundManager.h
         ResourceManager.cpp
         ResourceManager.h
+        TileMap.cpp
+        TileMap.h
 
 
 )
