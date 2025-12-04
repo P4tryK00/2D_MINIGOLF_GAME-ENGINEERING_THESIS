@@ -1,0 +1,6 @@
+-kolizja z sciana
+-dzialajacy dolek
+-strzalka
+-GRAFIKI
+-zmienna predkosc
+-pseudo 3D
