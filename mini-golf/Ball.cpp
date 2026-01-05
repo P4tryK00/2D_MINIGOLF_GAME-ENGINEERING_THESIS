@@ -16,14 +16,14 @@ void Ball::update(float dt)
     player.move(velocity * dt);
     velocity *= 0.98f;
 
-    // Zatrzymanie piłki przy bardzo małej prędkości
+
     if (std::abs(velocity.x) < 0.1f) velocity.x = 0.f;
     if (std::abs(velocity.y) < 0.1f) velocity.y = 0.f;
 
     float radius = TextureManager::get("ball").getSize().x / 2.f;
     sf::Vector2f pos = player.getPosition();
 
-    // Kolizja z lewą ścianą
+
     if (pos.x - radius < 0.f)
     {
         velocity.x = -velocity.x;
@@ -31,7 +31,7 @@ void Ball::update(float dt)
         player.setPosition(radius, pos.y);
     }
     // Kolizja z prawą ścianą
-    else if (pos.x + radius > SCREEN_WIDTH) // SCREEN_WIDTH to 600
+    else if (pos.x + radius > SCREEN_WIDTH)
     {
         velocity.x = -velocity.x;
         player.setPosition(SCREEN_WIDTH - radius, pos.y);
