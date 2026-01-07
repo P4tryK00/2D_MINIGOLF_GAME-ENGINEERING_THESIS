@@ -14,8 +14,10 @@
 #define TITLE "Mini Golf by Patryk Jozwiak"
 
 // Tekstury
-#define BALL_TEXTURE_PATH "Resources/ball.png"
-#define TILESET_PATH "Resources/tileset.png"
+#define BALL_TEXTURE_PATH "Resources/textures/ball.png"
+#define TILESET_PATH "Resources/textures/tileset.png"
+// Czcionki
+#define FONT_PATH "Resources/font/ByteBounce.ttf"
 
 //Levels
 #define  LEVEL_WIDTH  19

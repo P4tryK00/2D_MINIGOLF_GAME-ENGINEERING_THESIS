@@ -1,7 +1,7 @@
 #include "TileMap.h"
 #include "TextureManager.h"
 
-bool TileMap::load(const std::string& textureKey, sf::Vector2u tileSize, const int* tiles, unsigned int width, unsigned int height)
+bool TileMap::load(const std::string& textureKey, sf::Vector2u tileSize, std::vector<int>tiles, unsigned int width, unsigned int height)
 {
     m_tileset = &TextureManager::get(textureKey);
     m_vertices.setPrimitiveType(sf::Quads);

@@ -11,44 +11,15 @@ Ball::Ball()
 
 
 
-void Ball::update(float dt)
+void Ball::update(float dt, float friction)
 {
     player.move(velocity * dt);
-    velocity *= 0.98f;
+    velocity *= friction;
 
 
     if (std::abs(velocity.x) < 0.1f) velocity.x = 0.f;
     if (std::abs(velocity.y) < 0.1f) velocity.y = 0.f;
 
-    float radius = TextureManager::get("ball").getSize().x / 2.f;
-    sf::Vector2f pos = player.getPosition();
-
-
-    if (pos.x - radius < 0.f)
-    {
-        velocity.x = -velocity.x;
-        // Rozwiązanie problemu "przyklejania": ręczne ustawienie pozycji piłki na granicy
-        player.setPosition(radius, pos.y);
-    }
-    // Kolizja z prawą ścianą
-    else if (pos.x + radius > SCREEN_WIDTH)
-    {
-        velocity.x = -velocity.x;
-        player.setPosition(SCREEN_WIDTH - radius, pos.y);
-    }
-
-    // Kolizja z górną ścianą
-    if (pos.y - radius < 0.f)
-    {
-        velocity.y = -velocity.y;
-        player.setPosition(pos.x, radius);
-    }
-    // Kolizja z dolną ścianą
-    else if (pos.y + radius > SCREEN_HEIGHT) // SCREEN_HEIGHT to 800
-    {
-        velocity.y = -velocity.y;
-        player.setPosition(pos.x, SCREEN_HEIGHT - radius);
-    }
 }
 
 void Ball::draw(sf::RenderWindow& window)
@@ -74,4 +45,23 @@ sf::Vector2f Ball::getPosition() const
 void Ball::setPosition(const sf::Vector2f& pos)
 {
     player.setPosition(pos);
+}
+
+void Ball::stop()
+{
+    velocity = sf::Vector2f(0.f, 0.f);
+}
+
+void Ball::invertVelocity()
+{
+    velocity = -velocity;
+}
+
+sf::Vector2f Ball::getVelocity() const
+{
+    return velocity;
+}
+
+void Ball::setScale(float factor) {
+    player.setScale(factor, factor);
 }

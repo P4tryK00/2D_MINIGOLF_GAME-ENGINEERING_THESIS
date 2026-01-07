@@ -9,7 +9,7 @@ void ResourceManager::loadAllResources() {
     TextureManager::load("ball", BALL_TEXTURE_PATH);
     TextureManager::load("tileset", TILESET_PATH);
     // Czcionki
-
+    FontManager::load("font", FONT_PATH);
     // Dzwieki
 
 }

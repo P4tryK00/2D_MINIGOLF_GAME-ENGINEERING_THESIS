@@ -55,3 +55,24 @@ bool InputManager::isDragging() const
 {
     return isGrabbed;
 }
+
+sf::Vector2f InputManager::getCurrentForce(const sf::RenderWindow& window) const
+{
+    if (!isGrabbed) return {0.f, 0.f};
+
+    // Obliczamy wektor tak samo jak przy strzale
+    sf::Vector2i pixelPos = sf::Mouse::getPosition(window);
+    sf::Vector2f worldPos = window.mapPixelToCoords(pixelPos);
+
+    sf::Vector2f diff = ballStartPos - worldPos;
+
+    float length = std::sqrt(diff.x * diff.x + diff.y * diff.y);
+    if (length > 0.f) {
+        diff /= length;
+        // Używamy tego samego mnożnika co w getForceVector (* 5.f) i limitu (1000.f)
+        float strength = std::min(length * 5.f, 1000.f);
+        diff *= strength;
+    }
+
+    return diff;
+}

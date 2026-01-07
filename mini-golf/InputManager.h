@@ -18,6 +18,7 @@ public:
     void handleEvent(const sf::Event& event, Ball& ball, sf::RenderWindow& window);
     bool isReady() const;
     sf::Vector2f getForceVector();
+    sf::Vector2f getCurrentForce(const sf::RenderWindow& window) const;
     bool isDragging() const;
 };
 

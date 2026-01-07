@@ -5,58 +5,44 @@
 #include "Ball.h"
 #include "InputManager.h"
 #include "DEFINITIONS.h"
-#include "ResourceManager.h"
+#include "ResourceManager.h" // Ważne dla czcionek
 #include <iostream>
 #include "TileMap.h"
+#include <vector>
+#include <cmath>
 
 class Game {
-
-    public:
+public:
     Game();
     void run();
 
-    private:
-        sf::RenderWindow mWindow;
-        Ball ball;
-        InputManager inputManager;
-        sf::Vector2f forceVector;
-        sf::Texture holeTexture;
-        sf::CircleShape hole;
-        TileMap tileMap;
+private:
+    sf::RenderWindow mWindow;
+    Ball ball;
+    InputManager inputManager;
+    sf::Vector2f forceVector;
 
-    private:
-        void processEvents();
-        void update(sf::Time dt);
-        void render();
-        const static sf::Time timePerFrame;
-        bool ballInHole;
-        const inline static int level[] = {
-        4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 6,
-        3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3,
-        3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3,
-        3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3,
-        3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3,
-        3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3,
-        3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3,
-        3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3,
-        3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3,
-        3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3,
-        3, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 3,
-        3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3,
-        3, 0, 0, 0, 0, 0, 0, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 3,
-        3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3,
-        3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3,
-        3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3,
-        3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3,
-        3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3,
-        3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3,
-        3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3,
-        3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3,
-        3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3,
-        3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3,
-        3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3,
-        4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
-    };
+    // UI
+    sf::Text scoreText;
+    sf::Text winText;
+    int strokes;
+    bool ballInHole;
+
+    // Mapa
+    TileMap tileMap;
+    std::vector<int> levelData; // Zdefiniujemy to w .cpp dla porządku
+
+    // Metody
+    void initUI();
+    void processEvents();
+    void update(sf::Time dt);
+    void render();
+    int getTileAt(sf::Vector2f position);
+
+    sf::RectangleShape aimLine;
+    void updateAimLine();
+
+    const static sf::Time timePerFrame;
 };
 
 #endif // GAME_H
