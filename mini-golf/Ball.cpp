@@ -1,5 +1,4 @@
 #include "Ball.h"
-#include <iostream>
 
 Ball::Ball()
 {
@@ -9,17 +8,13 @@ Ball::Ball()
     velocity = sf::Vector2f(0.f, 0.f);
 }
 
-
-
 void Ball::update(float dt, float friction)
 {
     player.move(velocity * dt);
     velocity *= friction;
 
-
     if (std::abs(velocity.x) < 0.1f) velocity.x = 0.f;
     if (std::abs(velocity.y) < 0.1f) velocity.y = 0.f;
-
 }
 
 void Ball::draw(sf::RenderWindow& window)
@@ -50,6 +45,18 @@ void Ball::setPosition(const sf::Vector2f& pos)
 void Ball::stop()
 {
     velocity = sf::Vector2f(0.f, 0.f);
+}
+
+// Nowa fizyka: Odbicie X (ściany boczne)
+void Ball::bounceX()
+{
+    velocity.x = -velocity.x * 0.8f; // Odwracamy X, zachowujemy Y, tracimy energię
+}
+
+// Nowa fizyka: Odbicie Y (sufit/podłoga)
+void Ball::bounceY()
+{
+    velocity.y = -velocity.y * 0.8f; // Odwracamy Y, zachowujemy X, tracimy energię
 }
 
 void Ball::invertVelocity()

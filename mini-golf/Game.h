@@ -30,7 +30,8 @@ private:
 
     // Mapa
     TileMap tileMap;
-    std::vector<int> levelData; // Zdefiniujemy to w .cpp dla porządku
+    std::vector<int> levelData;
+    sf::Vector2f lastSafePos;
 
     // Metody
     void initUI();
@@ -38,6 +39,7 @@ private:
     void update(sf::Time dt);
     void render();
     int getTileAt(sf::Vector2f position);
+    bool isWall(int tileId);
 
     sf::RectangleShape aimLine;
     void updateAimLine();

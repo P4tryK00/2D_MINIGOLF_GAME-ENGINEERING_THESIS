@@ -4,6 +4,7 @@
 #include <SFML/Graphics.hpp>
 #include "DEFINITIONS.h"
 #include "ResourceManager.h"
+#include <cmath>
 
 class Ball {
 private:
@@ -19,7 +20,12 @@ public:
     sf::Vector2f getPosition() const;
     void setPosition(const sf::Vector2f& pos);
     void stop();
-    void invertVelocity();
+
+    // Nowe metody fizyki
+    void bounceX(); // Odbicie od pionowej ściany
+    void bounceY(); // Odbicie od poziomej ściany
+
+    void invertVelocity(); // Stara metoda (można zostawić dla bezpieczeństwa)
     sf::Vector2f getVelocity() const;
     void setScale(float factor);
 
