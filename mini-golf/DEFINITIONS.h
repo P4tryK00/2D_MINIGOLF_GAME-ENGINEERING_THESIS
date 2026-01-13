@@ -16,8 +16,16 @@
 // Tekstury
 #define BALL_TEXTURE_PATH "Resources/textures/ball.png"
 #define TILESET_PATH "Resources/textures/tileset.png"
+
 // Czcionki
 #define FONT_PATH "Resources/font/ByteBounce.ttf"
+
+// Muzyka / dzwieki
+#define WIN_PATH "Resources/sounds/win.wav"
+#define HIT_PATH "Resources/sounds/hit.wav"
+#define SPLASH_PATH "Resources/sounds/splash.wav"
+#define WALL_HIT_PATH "Resources/sounds/wall_hit.wav"
+
 
 //Levels
 #define  LEVEL_WIDTH  19

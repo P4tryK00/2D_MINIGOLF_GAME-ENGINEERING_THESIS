@@ -5,11 +5,13 @@
 #include "Ball.h"
 #include "InputManager.h"
 #include "DEFINITIONS.h"
-#include "ResourceManager.h" // Ważne dla czcionek
+#include "ResourceManager.h"
 #include <iostream>
 #include "TileMap.h"
 #include <vector>
 #include <cmath>
+#include <cstdlib>
+#include <ctime>
 
 class Game {
 public:
@@ -21,6 +23,12 @@ private:
     Ball ball;
     InputManager inputManager;
     sf::Vector2f forceVector;
+    // Dzwieki
+    sf::Sound m_hitSound;
+    sf::Sound m_splashSound;
+    sf::Sound m_wallHitSound;
+    sf::Sound m_winSound;
+    void initSounds();
 
     // UI
     sf::Text scoreText;
@@ -40,11 +48,14 @@ private:
     void render();
     int getTileAt(sf::Vector2f position);
     bool isWall(int tileId);
+    bool wasInWater;
+    bool isSinking;
 
     sf::RectangleShape aimLine;
     void updateAimLine();
 
     const static sf::Time timePerFrame;
+
 };
 
 #endif // GAME_H

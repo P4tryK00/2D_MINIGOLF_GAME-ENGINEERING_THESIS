@@ -11,7 +11,10 @@ void ResourceManager::loadAllResources() {
     // Czcionki
     FontManager::load("font", FONT_PATH);
     // Dzwieki
-
+    SoundManager::load("win", WIN_PATH);
+    SoundManager::load("hit", HIT_PATH);
+    SoundManager::load("splash", SPLASH_PATH);
+    SoundManager::load ("wall_hit", WALL_HIT_PATH);
 }
 
 void ResourceManager::cleanUpAllResources() {

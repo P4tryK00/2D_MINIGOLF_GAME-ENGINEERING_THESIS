@@ -26,6 +26,9 @@ set(PROJECT_SOURCES
         ResourceManager.h
         TileMap.cpp
         TileMap.h
+        State.h
+        StateManager.cpp
+        StateManager.h
 
 
 )

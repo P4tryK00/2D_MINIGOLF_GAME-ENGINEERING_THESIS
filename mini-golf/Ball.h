@@ -20,6 +20,7 @@ public:
     sf::Vector2f getPosition() const;
     void setPosition(const sf::Vector2f& pos);
     void stop();
+    sf::Vector2f getScale() const { return player.getScale(); }
 
     // Nowe metody fizyki
     void bounceX(); // Odbicie od pionowej ściany
