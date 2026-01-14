@@ -22,12 +22,16 @@ public:
     void addState(StateRef newState, bool isReplacing = true);
     void removeState();
     void processStateChanges();
+    void switchState(StateRef newState);
     StateRef& getActiveState();
 
 private:
     std::stack<StateRef> m_states;
     StateRef m_newState;
-    bool m_isRemoving, m_isAdding, m_isReplacing;
+    bool m_isRemoving;
+    bool m_isAdding;
+    bool m_isReplacing;
+    bool m_isClearing;
 };
 
 

@@ -29,6 +29,12 @@ set(PROJECT_SOURCES
         State.h
         StateManager.cpp
         StateManager.h
+        GameState.cpp
+        GameState.h
+        MainMenuState.cpp
+        MainMenuState.h
+        PauseMenuState.cpp
+        PauseMenuState.h
 
 
 )
