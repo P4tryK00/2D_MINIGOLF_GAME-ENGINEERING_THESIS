@@ -1,47 +1,55 @@
 #include "GameState.h"
 #include <cmath>
-#include <iostream>
+
+
+
 
 GameState::GameState(GameDataRef data) : m_data(data) {
-    // Inicjalizacja zmiennych w liście inicjalizacyjnej
     strokes = 0;
     ballInHole = false;
     wasInWater = false;
     isSinking = false;
+
+    isJumping = false;
+    jumpTimer = 0.0f;
+
+    lives = 3;
+
     forceVector = {0.f, 0.f};
 }
 
 void GameState::init() {
-    // 1. Definicja Mapy - PRZENIESIONE Z GAME.CPP
     levelData = {
         9, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 10,
         3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4,
         3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4,
-        3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4,
+        3, 0, 14, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4,
         3, 0, 0, 0, 0, 0, 0, 0, 12, 12, 12, 0, 0, 0, 0, 0, 0, 0, 4,
         3, 0, 0, 0, 0, 0, 0, 0, 12, 12, 12, 0, 0, 0, 0, 0, 0, 0, 4,
         3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4,
         3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4,
         3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4,
         3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4,
-        3, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 4, 
+        3, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 4,
         3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4,
-        3, 0, 0, 0, 0, 0, 0, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 4, 
+        3, 0, 0, 0, 0, 0, 0, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 4,
         3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4,
         3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4,
-        3, 0, 0, 0, 11, 11, 11, 11, 11, 11, 11, 11, 11, 0, 0, 0, 0, 0, 4, 
+        3, 0, 0, 0, 11, 11, 11, 11, 11, 11, 11, 11, 11, 0, 0, 0, 0, 0, 4,
         3, 0, 0, 0, 11, 11, 11, 11, 11, 11, 11, 11, 11, 0, 0, 0, 0, 0, 4,
         3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4,
         3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4,
         3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4,
         3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4,
         3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4,
-        3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4,
+        3, 0, 0, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 15, 0, 0, 4,
         3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4,
         7, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 8,
     };
 
     tileMap.load("tileset", TILE_SIZE, levelData, LEVEL_WIDTH, LEVEL_HEIGHT);
+
+    m_data->window.setView(m_data->window.getDefaultView());
 
     sf::Vector2u size = m_data->window.getSize();
     ball.setPosition(sf::Vector2f(size.x / 2.f, size.y / 2.f + 200.f));
@@ -53,37 +61,79 @@ void GameState::init() {
 
     initUI();
     initSounds();
+
     m_fadeRect.setSize(sf::Vector2f(SCREEN_WIDTH, SCREEN_HEIGHT));
     m_alpha = 255.0f;
     m_fadeRect.setFillColor(sf::Color(0, 0, 0, 255));
+
+    lives = 3;
+    heartSprites.clear();
+    const sf::Texture& heartTex = TextureManager::get("heart");
+
+    for (int i = 0; i < 3; i++) {
+        float scale = 1.5f;
+        sf::Sprite heart;
+        heart.setTexture(heartTex);
+
+        heart.setScale(scale, scale);
+        float spacing = 60.0f;
+        float margin = 70.0f;
+        float xPos = SCREEN_WIDTH - margin - (i * spacing);
+        float yPos = 10.f;
+
+        heart.setPosition(xPos, yPos);
+        heartSprites.push_back(heart);
+    }
+    updateHearts();
+}
+
+void GameState::updateHearts() {
+    const sf::Texture& redHeart = TextureManager::get("heart");
+    const sf::Texture& whiteHeart = TextureManager::get("heart_white");
+
+    for (int i = 0; i < heartSprites.size(); i++) {
+        if (i < lives) {
+            heartSprites[i].setTexture(redHeart);
+        } else {
+            heartSprites[i].setTexture(whiteHeart);
+        }
+    }
+}
+
+void GameState::resetLevel() {
+    ballInHole = false;
+    strokes = 0;
+    lives = 3;
+    updateHearts();
+
+    scoreText.setString("Strokes: 0");
+    ball.stop();
+
+    sf::Vector2u size = m_data->window.getSize();
+    sf::Vector2f startPos(size.x / 2.f, size.y / 2.f + 200.f);
+    ball.setPosition(startPos);
+    lastSafePos = startPos;
+
+    wasInWater = false;
+    isSinking = false;
+    ball.setScale(1.0f);
+    isJumping = false;
 }
 
 void GameState::handleInput(sf::Event& event) {
     if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::R) {
-        ballInHole = false;
-        strokes = 0;
-        scoreText.setString("Strokes: 0");
-        ball.stop();
-        sf::Vector2u size = m_data->window.getSize();
-        sf::Vector2f startPos(size.x / 2.f, size.y / 2.f + 200.f);
-        ball.setPosition(startPos);
-        lastSafePos = startPos;
-        wasInWater = false;
-        isSinking = false;
-        ball.setScale(1.0f);
+        resetLevel();
     }
-        if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape) {
-            auto texture = std::make_shared<sf::Texture>();
-            texture->create(m_data->window.getSize().x, m_data->window.getSize().y);
-            texture->update(m_data->window);
+    if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape) {
+        auto texture = std::make_shared<sf::Texture>();
+        texture->create(m_data->window.getSize().x, m_data->window.getSize().y);
+        texture->update(m_data->window);
 
-            sf::Sprite sprite;
-            sprite.setTexture(*texture);
+        sf::Sprite sprite;
+        sprite.setTexture(*texture);
 
-            m_data->machine.addState(std::make_unique<PauseMenuState>(m_data, sprite, texture), false);
-        }
-
-
+        m_data->machine.addState(std::make_unique<PauseMenuState>(m_data, sprite, texture), false);
+    }
 
     inputManager.handleEvent(event, ball, m_data->window);
 }
@@ -91,38 +141,39 @@ void GameState::handleInput(sf::Event& event) {
 void GameState::update(float dt) {
 
     if (m_alpha > 0.0f) {
-        m_alpha -= 300.0f * dt; // Szybkość rozjaśniania
+        m_alpha -= 300.0f * dt;
         if (m_alpha < 0.0f) m_alpha = 0.0f;
         m_fadeRect.setFillColor(sf::Color(0, 0, 0, static_cast<sf::Uint8>(m_alpha)));
     }
+
     if (isSinking) {
         float currentScale = ball.getScale().x;
-        // Zmniejszamy skalę (szybkość tonięcia)
         currentScale -= dt * 2.5f;
 
         if (currentScale < 0.f) currentScale = 0.f;
         ball.setScale(currentScale);
 
-        // Opcjonalnie: Centrujemy piłkę powoli
-        // int gridX = static_cast<int>(ball.getPosition().x) / 32; ...
-        // Ale to może być zbyteczne, sama skala wystarczy.
-
-        // KONIEC TONIĘCIA -> RESET
         if (currentScale <= 0.f) {
             isSinking = false;
-            ball.stop();
-            ball.setPosition(lastSafePos);
-            ball.setScale(1.0f);
-            wasInWater = false; // Resetujemy pamięć wody po respawnie
-        }
-        return; // PRZERYWAMY update(), nie obliczamy kolizji ani ruchu
-    }
 
+            lives--;
+            updateHearts();
+
+            if (lives <= 0) {
+                resetLevel();
+            } else {
+                ball.stop();
+                ball.setPosition(lastSafePos);
+                ball.setScale(1.0f);
+                wasInWater = false;
+            }
+        }
+        return;
+    }
 
     bool ballIsStopped = (std::abs(ball.getVelocity().x) < 5.f && std::abs(ball.getVelocity().y) < 5.f);
 
-    // --- 1. LOGIKA STEROWANIA ---
-    if (!ballInHole && ballIsStopped) {
+    if (!ballInHole && ballIsStopped && !isJumping) {
         if (inputManager.isReady()) {
             forceVector = inputManager.getForceVector();
             if (std::abs(forceVector.x) > 1.f || std::abs(forceVector.y) > 1.f) {
@@ -139,10 +190,9 @@ void GameState::update(float dt) {
         }
     }
 
-    // --- 2. IDENTYFIKACJA TERENU I DŹWIĘK ---
     int tileUnderBall = getTileAt(ball.getPosition());
 
-    if (tileUnderBall == 11) {
+    if (tileUnderBall == 11 && !isJumping) {
         if (!wasInWater) {
             m_splashSound.play();
             wasInWater = true;
@@ -151,56 +201,41 @@ void GameState::update(float dt) {
         wasInWater = false;
     }
 
-    // --- 3. FIZYKA TERENU ---
     float currentFriction = 0.98f;
-    if (tileUnderBall == 2) currentFriction = 0.90f;
 
-    // --- WODA (ID 11) - FIX FIZYKI ---
-    // --- WODA (ID 11) - FIX BLOKOWANIA ---
-    if (tileUnderBall == 11) {
+    if (isJumping) currentFriction = 0.999f;
+    else if (tileUnderBall == 2) currentFriction = 0.90f;
+
+    if (tileUnderBall == 11 && !isJumping) {
         currentFriction = 0.96f;
-
         int gridX = static_cast<int>(ball.getPosition().x) / 32;
         int gridY = static_cast<int>(ball.getPosition().y) / 32;
         sf::Vector2f waterCenter(gridX * 32.f + 16.f, gridY * 32.f + 16.f);
         sf::Vector2f toCenter = waterCenter - ball.getPosition();
         float distance = std::sqrt(toCenter.x * toCenter.x + toCenter.y * toCenter.y);
-
         float currentSpeed = std::sqrt(ball.getVelocity().x * ball.getVelocity().x +
                                        ball.getVelocity().y * ball.getVelocity().y);
 
         if (distance > 1.0f) {
             sf::Vector2f direction = toCenter / distance;
-
             float pullStrength = 10.0f;
-            // Skalowanie siły w zależności od odległości od centrum wody
             float edgeFactor = 1.0f - (distance / 24.0f);
             if (edgeFactor < 0.0f) edgeFactor = 0.0f;
-
-
             pullStrength *= (edgeFactor * edgeFactor);
 
-            // Skalowanie dla prędkości
             if (currentSpeed > 300.f) pullStrength *= 0.1f;
             else if (currentSpeed > 100.f) pullStrength *= 0.5f;
 
-            // --- Aplikacja siły ---
             sf::Vector2f currentVel = ball.getVelocity();
             sf::Vector2f impulse = direction * pullStrength;
             sf::Vector2f newVel = currentVel + impulse;
-
-            // Zabezpieczenie przed przyspieszaniem (woda tylko zwalnia/zmienia kierunek)
             float oldSpeed = std::sqrt(currentVel.x*currentVel.x + currentVel.y*currentVel.y);
             float newSpeed = std::sqrt(newVel.x*newVel.x + newVel.y*newVel.y);
-
             if (newSpeed > oldSpeed && oldSpeed > 0.1f) {
                 newVel = (newVel / newSpeed) * oldSpeed;
             }
-
             ball.applyImpulse(newVel);
         }
-
-        // Reszta logiki (skalowanie wizualne i tonięcie) bez zmian...
         float targetScale = std::min(1.0f, std::max(0.6f, distance / 15.f));
         float currentScale = ball.getScale().x;
         float smoothScale = currentScale + (targetScale - currentScale) * 5.0f * dt;
@@ -209,47 +244,124 @@ void GameState::update(float dt) {
         if (distance < 8.0f && currentSpeed < 60.f) {
             isSinking = true;
         }
-
     }
 
     ball.update(dt, currentFriction);
 
-    // --- 4. KOLIZJE ZE ŚCIANAMI ---
-    sf::Vector2f ballPos = ball.getPosition();
-    float r = 10.f;
-    sf::Vector2f pTop = {ballPos.x, ballPos.y - r};
-    sf::Vector2f pBottom = {ballPos.x, ballPos.y + r};
-    sf::Vector2f pLeft = {ballPos.x - r, ballPos.y};
-    sf::Vector2f pRight = {ballPos.x + r, ballPos.y};
+    sf::Vector2f pos = ball.getPosition();
+    sf::Vector2u windowSize = m_data->window.getSize();
 
-    bool hitTop = isWall(getTileAt(pTop));
-    bool hitBottom = isWall(getTileAt(pBottom));
-    bool hitLeft = isWall(getTileAt(pLeft));
-    bool hitRight = isWall(getTileAt(pRight));
+    if (pos.x < -50 || pos.x > windowSize.x + 50 || pos.y < -50 || pos.y > windowSize.y + 50) {
+        lives--;
+        updateHearts();
+
+        if (lives <= 0) {
+            resetLevel();
+        } else {
+            ball.stop();
+            ball.setPosition(lastSafePos);
+            ball.setScale(1.0f);
+            isJumping = false;
+            jumpTimer = 0.0f;
+        }
+    }
 
     float speed = std::sqrt(ball.getVelocity().x * ball.getVelocity().x + ball.getVelocity().y * ball.getVelocity().y);
 
-    if (hitTop || hitBottom) {
-        if (speed > 50.f) m_wallHitSound.play();
-        ball.bounceY();
-        if(hitTop) ball.setPosition(sf::Vector2f(ballPos.x, ballPos.y + 1.f));
-        if(hitBottom) ball.setPosition(sf::Vector2f(ballPos.x, ballPos.y - 1.f));
+    if (!isJumping) {
+        bool triggerJump = false;
+        float minSpeedForJump = 150.0f;
+
+        if (speed > minSpeedForJump) {
+            if (tileUnderBall == 13 && ball.getVelocity().y < 0) triggerJump = true;
+            else if (tileUnderBall == 14 && ball.getVelocity().y > 0) triggerJump = true;
+            else if (tileUnderBall == 15 && ball.getVelocity().x > 0) triggerJump = true;
+            else if (tileUnderBall == 16 && ball.getVelocity().x < 0) triggerJump = true;
+        }
+
+        if (triggerJump) {
+            isJumping = true;
+            jumpTimer = 0.8f;
+        }
     }
 
-    if (hitLeft || hitRight) {
-        if (speed > 50.f) m_wallHitSound.play();
-        ball.bounceX();
-        if(hitLeft) ball.setPosition(sf::Vector2f(ballPos.x + 1.f, ballPos.y));
-        if(hitRight) ball.setPosition(sf::Vector2f(ballPos.x - 1.f, ballPos.y));
+    if (isJumping) {
+        jumpTimer -= dt;
+
+        float jumpProgress = 1.0f - (jumpTimer / 0.8f);
+        float scaleFactor = 1.0f + (0.5f * std::sin(jumpProgress * 3.14159f));
+        ball.setScale(scaleFactor);
+
+        if (jumpTimer <= 0.0f) {
+            isJumping = false;
+            ball.setScale(1.0f);
+
+            sf::Vector2f landPos = ball.getPosition();
+            if (landPos.x < 0 || landPos.x > windowSize.x || landPos.y < 0 || landPos.y > windowSize.y) {
+                 ball.stop();
+                 ball.setPosition(lastSafePos);
+            }
+        }
     }
 
-    // --- 5. DOŁEK I BETON ---
-    if (!ballInHole && !isSinking && tileUnderBall != 11 && tileUnderBall != 1 && tileUnderBall != 12) {
+    if (!isJumping) {
+        sf::Vector2f ballPos = ball.getPosition();
+        float r = 10.f;
+
+        sf::Vector2f pTop    = {ballPos.x, ballPos.y - r};
+        sf::Vector2f pBottom = {ballPos.x, ballPos.y + r};
+        sf::Vector2f pLeft   = {ballPos.x - r, ballPos.y};
+        sf::Vector2f pRight  = {ballPos.x + r, ballPos.y};
+
+        int tTop    = getTileAt(pTop);
+        int tBottom = getTileAt(pBottom);
+        int tLeft   = getTileAt(pLeft);
+        int tRight  = getTileAt(pRight);
+
+        bool stdHitTop    = isWall(tTop);
+        bool stdHitBottom = isWall(tBottom);
+        bool stdHitLeft   = isWall(tLeft);
+        bool stdHitRight  = isWall(tRight);
+
+        bool rampHitTop = false;
+        bool rampHitBottom = false;
+        bool rampHitLeft = false;
+        bool rampHitRight = false;
+
+        if (tTop == 14 || tTop == 15 || tTop == 16) rampHitTop = true;
+        if (tBottom == 13 || tBottom == 15 || tBottom == 16) rampHitBottom = true;
+        if (tLeft == 13 || tLeft == 14 || tLeft == 15) rampHitLeft = true;
+        if (tRight == 13 || tRight == 14 || tRight == 16) rampHitRight = true;
+
+        bool hitTop    = stdHitTop || rampHitTop;
+        bool hitBottom = stdHitBottom || rampHitBottom;
+        bool hitLeft   = stdHitLeft || rampHitLeft;
+        bool hitRight  = stdHitRight || rampHitRight;
+
+        if (hitTop || hitBottom) {
+            if (speed > 50.f && (stdHitTop || stdHitBottom)) {
+                m_wallHitSound.play();
+            }
+            ball.bounceY();
+            if(hitTop) ball.setPosition(sf::Vector2f(ballPos.x, ballPos.y + 1.f));
+            if(hitBottom) ball.setPosition(sf::Vector2f(ballPos.x, ballPos.y - 1.f));
+        }
+
+        if (hitLeft || hitRight) {
+            if (speed > 50.f && (stdHitLeft || stdHitRight)) {
+                m_wallHitSound.play();
+            }
+            ball.bounceX();
+            if(hitLeft) ball.setPosition(sf::Vector2f(ballPos.x + 1.f, ballPos.y));
+            if(hitRight) ball.setPosition(sf::Vector2f(ballPos.x - 1.f, ballPos.y));
+        }
+    }
+
+    if (!ballInHole && !isSinking && !isJumping && tileUnderBall != 11 && tileUnderBall != 1 && tileUnderBall != 12) {
         ball.setScale(1.0f);
     }
 
-    // Dołek
-    if (tileUnderBall == 1) {
+    if (tileUnderBall == 1 && !isJumping) {
         int gridX = static_cast<int>(ball.getPosition().x) / 32;
         int gridY = static_cast<int>(ball.getPosition().y) / 32;
         sf::Vector2f holeCenter(gridX * 32.f + 16.f, gridY * 32.f + 16.f);
@@ -262,7 +374,6 @@ void GameState::update(float dt) {
                 currentFriction = 0.94f;
                 sf::Vector2f direction = toHole / distance;
                 float pullStrength = 1.0f + (20.0f - distance) * 0.15f;
-
                 ball.applyImpulse(ball.getVelocity() + (direction * pullStrength));
                 float scale = std::max(0.0f, distance / 20.f);
                 ball.setScale(scale);
@@ -280,27 +391,24 @@ void GameState::update(float dt) {
         }
     }
 
-    // Beton
-    if (tileUnderBall == 12) {
-        currentFriction = 0.99f;
-        float speed = std::sqrt(ball.getVelocity().x * ball.getVelocity().x + ball.getVelocity().y * ball.getVelocity().y);
-        if (speed > 40.f) {
-            float rX = ((std::rand() % 200) - 100) / 100.0f;
-            float rY = ((std::rand() % 200) - 100) / 100.0f;
-            float roughness = 8.0f;
-            sf::Vector2f jitter(rX * roughness, rY * roughness);
-            ball.applyImpulse(ball.getVelocity() + jitter);
-
-            float bounceIntensity = (std::abs(rX) + std::abs(rY)) / 2.0f;
-            float bounceScale = 1.0f + (bounceIntensity * 0.06f);
-            ball.setScale(bounceScale);
-        } else {
-            ball.setScale(1.0f);
-        }
+    if (tileUnderBall == 12 && !isJumping) {
+         currentFriction = 0.99f;
+         float speedBeton = std::sqrt(ball.getVelocity().x * ball.getVelocity().x + ball.getVelocity().y * ball.getVelocity().y);
+         if (speedBeton > 40.f) {
+             float rX = ((std::rand() % 200) - 100) / 100.0f;
+             float rY = ((std::rand() % 200) - 100) / 100.0f;
+             float roughness = 8.0f;
+             sf::Vector2f jitter(rX * roughness, rY * roughness);
+             ball.applyImpulse(ball.getVelocity() + jitter);
+             float bounceIntensity = (std::abs(rX) + std::abs(rY)) / 2.0f;
+             float bounceScale = 1.0f + (bounceIntensity * 0.06f);
+             ball.setScale(bounceScale);
+         } else {
+             ball.setScale(1.0f);
+         }
     }
 
     updateAimLine();
-
 }
 
 void GameState::draw(float dt) {
@@ -309,6 +417,11 @@ void GameState::draw(float dt) {
     ball.draw(m_data->window);
     m_data->window.draw(aimLine);
     m_data->window.draw(scoreText);
+
+    for (const auto& heart : heartSprites) {
+        m_data->window.draw(heart);
+    }
+
     if (ballInHole) {
         m_data->window.draw(winText);
     }
@@ -324,7 +437,7 @@ void GameState::initUI() {
     scoreText.setCharacterSize(24);
     scoreText.setFillColor(sf::Color::White);
     scoreText.setPosition(10.f, 10.f);
-    scoreText.setString("HIT COUNT: 0");
+    scoreText.setString("Strokes: 0");
 
     winText.setFont(font);
     winText.setCharacterSize(50);
@@ -348,7 +461,7 @@ void GameState::initSounds() {
 void GameState::updateAimLine() {
     bool ballIsStopped = (std::abs(ball.getVelocity().x) < 5.f && std::abs(ball.getVelocity().y) < 5.f);
 
-    if (inputManager.isDragging() && !ballInHole && !isSinking && ballIsStopped) {
+    if (inputManager.isDragging() && !ballInHole && !isSinking && ballIsStopped && !isJumping) {
         sf::Vector2f ballPos = ball.getPosition();
         sf::Vector2f force = inputManager.getCurrentForce(m_data->window);
 
@@ -369,7 +482,6 @@ void GameState::updateAimLine() {
     }
 }
 
-// Metody pomocnicze (getTileAt, isWall) kopiujesz bez zmian
 int GameState::getTileAt(sf::Vector2f position) {
     if (position.x < 0 || position.y < 0 || position.x >= SCREEN_WIDTH || position.y >= SCREEN_HEIGHT) return 3;
     int gridX = static_cast<int>(position.x) / 32;

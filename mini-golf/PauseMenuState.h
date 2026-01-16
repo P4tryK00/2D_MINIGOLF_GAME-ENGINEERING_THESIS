@@ -29,10 +29,12 @@ private:
 
     sf::Text m_pauseTitle;
     sf::Text m_resumeButton;
+    sf::Text m_resetButton;
     sf::Text m_menuButton;
     sf::RectangleShape m_fadeRect;
     float m_alpha;
     bool m_isGoingToMenu;
+    bool m_isReseting;
 };
 
 #endif //MINI_GOLF_PAUSEMENUSTATE_H

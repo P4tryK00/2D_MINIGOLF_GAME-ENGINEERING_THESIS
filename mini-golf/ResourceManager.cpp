@@ -8,6 +8,8 @@ void ResourceManager::loadAllResources() {
     // Tekstury
     TextureManager::load("ball", BALL_TEXTURE_PATH);
     TextureManager::load("tileset", TILESET_PATH);
+    TextureManager::load("heart", HEART_PATH);
+    TextureManager::load("heart_white", HEART_WHITE_PATH);
     // Czcionki
     FontManager::load("font", FONT_PATH);
     // Dzwieki

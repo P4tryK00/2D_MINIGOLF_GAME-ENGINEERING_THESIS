@@ -14,6 +14,7 @@
 #include "ResourceManager.h"
 #include "PauseMenuState.h"
 #include <SFML/Audio.hpp>
+#include <numbers>
 
 class GameState : public State {
 public:
@@ -43,6 +44,8 @@ private:
     bool ballInHole;
     bool wasInWater;
     bool isSinking;
+    bool isJumping;
+    float jumpTimer;
 
 
     // Dźwięki
@@ -61,6 +64,12 @@ private:
     //przejscie
     sf::RectangleShape m_fadeRect;
     float m_alpha;
+
+    int lives;
+    std::vector<sf::Sprite> heartSprites;
+    void updateHearts();
+    void resetLevel();
+
 };
 
 

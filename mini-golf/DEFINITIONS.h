@@ -16,7 +16,8 @@
 // Tekstury
 #define BALL_TEXTURE_PATH "Resources/textures/ball.png"
 #define TILESET_PATH "Resources/textures/tileset.png"
-
+#define HEART_WHITE_PATH "Resources/textures/heart_white.png"
+#define HEART_PATH "Resources/textures/heart.png"
 // Czcionki
 #define FONT_PATH "Resources/font/ByteBounce.ttf"
 
