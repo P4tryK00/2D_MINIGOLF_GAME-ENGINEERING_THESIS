@@ -4,7 +4,7 @@
 
 
 
-GameState::GameState(GameDataRef data) : m_data(data) {
+GameState::GameState(GameDataRef data,int level) : m_data(data),m_level(level) {
     strokes = 0;
     ballInHole = false;
     wasInWater = false;
@@ -16,36 +16,12 @@ GameState::GameState(GameDataRef data) : m_data(data) {
     lives = 3;
 
     forceVector = {0.f, 0.f};
+    levelFinishTimer = 0.0f;
 }
 
 void GameState::init() {
-    levelData = {
-        9, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 10,
-        3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4,
-        3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4,
-        3, 0, 14, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4,
-        3, 0, 0, 0, 0, 0, 0, 0, 12, 12, 12, 0, 0, 0, 0, 0, 0, 0, 4,
-        3, 0, 0, 0, 0, 0, 0, 0, 12, 12, 12, 0, 0, 0, 0, 0, 0, 0, 4,
-        3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4,
-        3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4,
-        3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4,
-        3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4,
-        3, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 4,
-        3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4,
-        3, 0, 0, 0, 0, 0, 0, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 4,
-        3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4,
-        3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4,
-        3, 0, 0, 0, 11, 11, 11, 11, 11, 11, 11, 11, 11, 0, 0, 0, 0, 0, 4,
-        3, 0, 0, 0, 11, 11, 11, 11, 11, 11, 11, 11, 11, 0, 0, 0, 0, 0, 4,
-        3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4,
-        3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4,
-        3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4,
-        3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4,
-        3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4,
-        3, 0, 0, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 15, 0, 0, 4,
-        3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4,
-        7, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 8,
-    };
+
+    levelData = LevelManager::getLevel(m_level);
 
     tileMap.load("tileset", TILE_SIZE, levelData, LEVEL_WIDTH, LEVEL_HEIGHT);
 
@@ -132,7 +108,7 @@ void GameState::handleInput(sf::Event& event) {
         sf::Sprite sprite;
         sprite.setTexture(*texture);
 
-        m_data->machine.addState(std::make_unique<PauseMenuState>(m_data, sprite, texture), false);
+        m_data->machine.addState(std::make_unique<PauseMenuState>(m_data, sprite, texture, m_level), false);
     }
 
     inputManager.handleEvent(event, ball, m_data->window);
@@ -289,7 +265,7 @@ void GameState::update(float dt) {
         jumpTimer -= dt;
 
         float jumpProgress = 1.0f - (jumpTimer / 0.8f);
-        float scaleFactor = 1.0f + (0.5f * std::sin(jumpProgress * 3.14159f));
+        float scaleFactor = 1.0f + (0.5f * std::sin(jumpProgress * std::numbers::pi_v<float>));
         ball.setScale(scaleFactor);
 
         if (jumpTimer <= 0.0f) {
@@ -361,6 +337,9 @@ void GameState::update(float dt) {
         ball.setScale(1.0f);
     }
 
+    // ... wewnątrz update ...
+
+    // Dołek
     if (tileUnderBall == 1 && !isJumping) {
         int gridX = static_cast<int>(ball.getPosition().x) / 32;
         int gridY = static_cast<int>(ball.getPosition().y) / 32;
@@ -369,15 +348,19 @@ void GameState::update(float dt) {
         float distance = std::sqrt(toHole.x * toHole.x + toHole.y * toHole.y);
 
         if (distance < 20.f) {
+            // ... (logika przyciągania bez zmian) ...
+
             float currentSpeed = std::sqrt(ball.getVelocity().x * ball.getVelocity().x + ball.getVelocity().y * ball.getVelocity().y);
             if (currentSpeed < 250.f) {
-                currentFriction = 0.94f;
-                sf::Vector2f direction = toHole / distance;
-                float pullStrength = 1.0f + (20.0f - distance) * 0.15f;
-                ball.applyImpulse(ball.getVelocity() + (direction * pullStrength));
-                float scale = std::max(0.0f, distance / 20.f);
-                ball.setScale(scale);
+                 // ... (fizyka wciągania) ...
+                 currentFriction = 0.94f;
+                 sf::Vector2f direction = toHole / distance;
+                 float pullStrength = 1.0f + (20.0f - distance) * 0.15f;
+                 ball.applyImpulse(ball.getVelocity() + (direction * pullStrength));
+                 float scale = std::max(0.0f, distance / 20.f);
+                 ball.setScale(scale);
 
+                // --- WPADNIĘCIE ---
                 if (distance < 5.0f) {
                     if (!ballInHole) {
                         m_winSound.play();
@@ -388,6 +371,25 @@ void GameState::update(float dt) {
                     ball.setScale(0.f);
                 }
             }
+        }
+    }
+
+    // --- NOWA LOGIKA: PRZEJŚCIE DO EKRANU ZWYCIĘSTWA ---
+    if (ballInHole) {
+        levelFinishTimer += dt;
+
+        // Czekamy 1.0 sekundy po wpadnięciu
+        if (levelFinishTimer > 1.0f) {
+            // Robimy zrzut ekranu do tła
+            auto texture = std::make_shared<sf::Texture>();
+            texture->create(m_data->window.getSize().x, m_data->window.getSize().y);
+            texture->update(m_data->window);
+            sf::Sprite bgSprite(*texture);
+
+            // Przełączamy na ekran zwycięstwa (switchState - czyścimy pamięć starej gry)
+            // Przekazujemy: strokes (wynik) i m_level (żeby wiedzieć co jest następne)
+            m_data->machine.switchState(std::make_unique<LevelCompleteState>(m_data, bgSprite, texture, strokes, m_level));
+            return;
         }
     }
 

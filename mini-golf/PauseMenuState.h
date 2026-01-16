@@ -13,7 +13,7 @@
 class PauseMenuState : public State {
 public:
     // Przyjmujemy Sprite ORAZ wskaźnik do tekstury, żeby ją utrzymać przy życiu
-    PauseMenuState(GameDataRef data, sf::Sprite bgSprite, std::shared_ptr<sf::Texture> bgTexture);
+    PauseMenuState(GameDataRef data, sf::Sprite bgSprite, std::shared_ptr<sf::Texture> bgTexture, int levelNumber);
 
     void init() override;
     void handleInput(sf::Event& event) override;
@@ -23,7 +23,7 @@ public:
 private:
     GameDataRef m_data;
 
-    std::shared_ptr<sf::Texture> m_bgTexture; // Przechowujemy teksturę
+    std::shared_ptr<sf::Texture> m_bgTexture;
     sf::Sprite m_backgroundSprite;
     sf::RectangleShape m_dimmer;
 
@@ -35,6 +35,7 @@ private:
     float m_alpha;
     bool m_isGoingToMenu;
     bool m_isReseting;
+    int m_currentLevel;
 };
 
 #endif //MINI_GOLF_PAUSEMENUSTATE_H

@@ -7,7 +7,8 @@
 
 
 #include "State.h"
-#include "Game.h" // Dostęp do GameDataRef
+#include "Game.h"
+#include "LevelSelectState.h"
 
 class MainMenuState : public State {
 public:

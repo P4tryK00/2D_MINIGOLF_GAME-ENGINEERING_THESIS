@@ -6,9 +6,6 @@ MainMenuState::MainMenuState(GameDataRef data) : m_data(data) {
 }
 
 void MainMenuState::init() {
-    // --- KLUCZOWA POPRAWKA: RESET WIDOKU ---
-    // Przywracamy domyślny widok, żeby przyciski i myszka działały poprawnie
-    // niezależnie od tego, co działo się w grze.
     m_data->window.setView(m_data->window.getDefaultView());
 
     // 1. Ustawienie Tytułu
@@ -86,13 +83,13 @@ void MainMenuState::update(float dt) {
         }
         m_fadeRect.setFillColor(sf::Color(0, 0, 0, static_cast<sf::Uint8>(m_alpha)));
     }
-    // 2. ANIMACJA WYJŚCIA (Ściemnianie do gry)
+    //
     else if (m_isTransitioning) {
         m_alpha += 500.0f * dt;
         if (m_alpha >= 255.0f) {
             m_alpha = 255.0f;
             // Zmiana stanu na Grę
-            m_data->machine.addState(std::make_unique<GameState>(m_data), true);
+            m_data->machine.addState(std::make_unique<LevelSelectState>(m_data), true);
         }
         m_fadeRect.setFillColor(sf::Color(0, 0, 0, static_cast<sf::Uint8>(m_alpha)));
     }

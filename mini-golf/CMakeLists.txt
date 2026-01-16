@@ -35,6 +35,12 @@ set(PROJECT_SOURCES
         MainMenuState.h
         PauseMenuState.cpp
         PauseMenuState.h
+        LevelSelectState.cpp
+        LevelSelectState.h
+        LevelManager.cpp
+        LevelManager.h
+        LevelCompleteState.cpp
+        LevelCompleteState.h
 
 
 )

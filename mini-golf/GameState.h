@@ -15,10 +15,12 @@
 #include "PauseMenuState.h"
 #include <SFML/Audio.hpp>
 #include <numbers>
+#include "LevelManager.h"
+#include "LevelCompleteState.h"
 
 class GameState : public State {
 public:
-    GameState(GameDataRef data);
+    GameState(GameDataRef data,int level);
 
     void init() override;
     void handleInput(sf::Event& event) override;
@@ -33,6 +35,8 @@ private:
     std::vector<int> levelData;
     sf::Vector2f lastSafePos;
     sf::Vector2f forceVector;
+    int m_level;
+
 
     // UI
     sf::Text scoreText;
@@ -46,6 +50,7 @@ private:
     bool isSinking;
     bool isJumping;
     float jumpTimer;
+    float levelFinishTimer;
 
 
     // Dźwięki

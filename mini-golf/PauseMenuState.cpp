@@ -3,8 +3,8 @@
 #include "ResourceManager.h"
 #include "GameState.h"
 
-PauseMenuState::PauseMenuState(GameDataRef data, sf::Sprite bgSprite, std::shared_ptr<sf::Texture> bgTexture)
-    : m_data(data), m_backgroundSprite(bgSprite), m_bgTexture(bgTexture)
+PauseMenuState::PauseMenuState(GameDataRef data, sf::Sprite bgSprite, std::shared_ptr<sf::Texture> bgTexture, int levelNumber)
+    : m_data(data), m_backgroundSprite(bgSprite), m_bgTexture(bgTexture), m_currentLevel(levelNumber)
 {
 }
 
@@ -112,7 +112,7 @@ void PauseMenuState::update(float dt) {
         m_alpha += 500.0f * dt;
         if (m_alpha >= 255.0f) {
             m_alpha = 255.0f;
-            m_data->machine.switchState(std::make_unique<GameState>(m_data));
+            m_data->machine.switchState(std::make_unique<GameState>(m_data, m_currentLevel));
             return;
         }
         m_fadeRect.setFillColor(sf::Color(0, 0, 0, static_cast<sf::Uint8>(m_alpha)));
