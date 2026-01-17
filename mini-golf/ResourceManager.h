@@ -1,7 +1,3 @@
-//
-// Created by patry on 04.11.2025.
-//
-
 #ifndef MINI_GOLF_RESOURCEMANAGER_H
 #define MINI_GOLF_RESOURCEMANAGER_H
 
@@ -10,12 +6,28 @@
 #include "SoundManager.h"
 #include "DEFINITIONS.h"
 
+/**
+ * @class ResourceManager
+ * @brief Fasada zarządzająca ładowaniem wszystkich zasobów aplikacji.
+ *
+ * Klasa statyczna, która agreguje wywołania do poszczególnych menedżerów
+ * (Texture, Font, Sound) w celu jednorazowego załadowania lub zwolnienia
+ * wszystkich assetów gry.
+ */
 class ResourceManager {
-    public:
+public:
     ResourceManager() = delete;
+
+    /**
+     * @brief Ładuje wszystkie tekstury, czcionki i dźwięki zdefiniowane w DEFINITIONS.h.
+     * Powinna być wywołana na początku funkcji main().
+     */
     static void loadAllResources();
+
+    /**
+     * @brief Czyści pamięć wszystkich menedżerów zasobów.
+     */
     static void cleanUpAllResources();
 };
-
 
 #endif //MINI_GOLF_RESOURCEMANAGER_H

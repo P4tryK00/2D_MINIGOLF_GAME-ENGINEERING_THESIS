@@ -3,17 +3,20 @@
 #include "ResourceManager.h"
 #include "GameState.h"
 
+// Konstruktor przyjmuje teksturę jako shared_ptr, aby utrzymać zasób w pamięci
 PauseMenuState::PauseMenuState(GameDataRef data, sf::Sprite bgSprite, std::shared_ptr<sf::Texture> bgTexture, int levelNumber)
     : m_data(data), m_backgroundSprite(bgSprite), m_bgTexture(bgTexture), m_currentLevel(levelNumber)
 {
 }
 
 void PauseMenuState::init() {
+    // Utworzenie półprzezroczystego prostokąta (Overlay)
     m_dimmer.setSize(sf::Vector2f(SCREEN_WIDTH, SCREEN_HEIGHT));
-    m_dimmer.setFillColor(sf::Color(0, 0, 0, 150));
+    m_dimmer.setFillColor(sf::Color(0, 0, 0, 150)); // Alpha = 150
 
     const sf::Font& font = FontManager::get("font");
 
+    // Tytuł PAUSED
     m_pauseTitle.setFont(font);
     m_pauseTitle.setString("PAUSED");
     m_pauseTitle.setCharacterSize(60);
@@ -22,6 +25,7 @@ void PauseMenuState::init() {
     m_pauseTitle.setOrigin(titleRect.left + titleRect.width/2.0f, titleRect.top + titleRect.height/2.0f);
     m_pauseTitle.setPosition(SCREEN_WIDTH / 2.0f, SCREEN_HEIGHT / 5.0f);
 
+    // Przycisk RESUME (Wznów)
     m_resumeButton.setFont(font);
     m_resumeButton.setString("RESUME");
     m_resumeButton.setCharacterSize(40);
@@ -30,6 +34,7 @@ void PauseMenuState::init() {
     m_resumeButton.setOrigin(resRect.left + resRect.width/2.0f, resRect.top + resRect.height/2.0f);
     m_resumeButton.setPosition(SCREEN_WIDTH / 2.0f, SCREEN_HEIGHT / 2.0f - 50.f);
 
+    // Przycisk RESET (Restart poziomu)
     m_resetButton.setFont(font);
     m_resetButton.setString("RESET");
     m_resetButton.setCharacterSize(40);
@@ -38,6 +43,7 @@ void PauseMenuState::init() {
     m_resetButton.setOrigin(resetRect.left + resetRect.width/2.0f, resetRect.top + resetRect.height/2.0f);
     m_resetButton.setPosition(SCREEN_WIDTH / 2.0f, SCREEN_HEIGHT / 2.0f + 20.f);
 
+    // Przycisk MENU
     m_menuButton.setFont(font);
     m_menuButton.setString("BACK TO MENU");
     m_menuButton.setCharacterSize(40);
@@ -57,8 +63,9 @@ void PauseMenuState::init() {
 void PauseMenuState::handleInput(sf::Event& event) {
     if (event.type == sf::Event::KeyPressed) {
         if (event.key.code == sf::Keyboard::Escape) {
+            // Ponowne wciśnięcie ESC wznawia grę (jeśli nie trwa animacja wyjścia)
             if (!m_isGoingToMenu && !m_isReseting) {
-                m_data->machine.removeState();
+                m_data->machine.removeState(); // Zdejmuje stan pauzy ze stosu
             }
         }
     }
@@ -69,14 +76,17 @@ void PauseMenuState::handleInput(sf::Event& event) {
 
         if (!m_isGoingToMenu && !m_isReseting) {
 
+            // Kliknięcie RESUME
             if (m_resumeButton.getGlobalBounds().contains(mousePosF)) {
                 m_data->machine.removeState();
             }
 
+            // Kliknięcie RESET
             if (m_resetButton.getGlobalBounds().contains(mousePosF)) {
                 m_isReseting = true;
             }
 
+            // Kliknięcie MENU
             if (m_menuButton.getGlobalBounds().contains(mousePosF)) {
                 m_isGoingToMenu = true;
             }
@@ -85,6 +95,7 @@ void PauseMenuState::handleInput(sf::Event& event) {
 }
 
 void PauseMenuState::update(float dt) {
+    // Hover effects
     if (!m_isGoingToMenu && !m_isReseting) {
         sf::Vector2i mousePos = sf::Mouse::getPosition(m_data->window);
         sf::Vector2f mousePosF = m_data->window.mapPixelToCoords(mousePos);
@@ -99,19 +110,23 @@ void PauseMenuState::update(float dt) {
         else m_menuButton.setFillColor(sf::Color::White);
     }
 
+    // Animacja wyjścia do MENU
     if (m_isGoingToMenu) {
         m_alpha += 500.0f * dt;
         if (m_alpha >= 255.0f) {
             m_alpha = 255.0f;
+            // SwitchState podmienia wszystkie stany na stosie na MainMenu
             m_data->machine.switchState(std::make_unique<MainMenuState>(m_data));
             return;
         }
         m_fadeRect.setFillColor(sf::Color(0, 0, 0, static_cast<sf::Uint8>(m_alpha)));
     }
+    // Animacja RESETU poziomu
     else if (m_isReseting) {
         m_alpha += 500.0f * dt;
         if (m_alpha >= 255.0f) {
             m_alpha = 255.0f;
+            // Podmienia stany na nową instancję GameState z tym samym poziomem
             m_data->machine.switchState(std::make_unique<GameState>(m_data, m_currentLevel));
             return;
         }
@@ -122,14 +137,18 @@ void PauseMenuState::update(float dt) {
 void PauseMenuState::draw(float dt) {
     m_data->window.clear();
 
+    // Rysowanie "zamrożonej" gry w tle
     m_data->window.draw(m_backgroundSprite);
+    // Rysowanie przyciemnienia
     m_data->window.draw(m_dimmer);
 
+    // Rysowanie interfejsu
     m_data->window.draw(m_pauseTitle);
     m_data->window.draw(m_resumeButton);
     m_data->window.draw(m_resetButton);
     m_data->window.draw(m_menuButton);
 
+    // Rysowanie efektu przejścia
     if (m_isGoingToMenu || m_isReseting) {
         m_data->window.draw(m_fadeRect);
     }

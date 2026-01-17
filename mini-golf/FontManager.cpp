@@ -1,9 +1,6 @@
-//
-// Created by patry on 04.11.2025.
-//
-
 #include "FontManager.h"
 
+// Inicjalizacja statycznej mapy
 std::map<std::string, sf::Font> FontManager::m_Font;
 
 void FontManager::load(const std::string& key, const std::string& path) {

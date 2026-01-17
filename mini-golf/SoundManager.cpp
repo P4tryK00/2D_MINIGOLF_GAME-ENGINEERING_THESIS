@@ -1,7 +1,3 @@
-//
-// Created by patry on 04.11.2025.
-//
-
 #include "SoundManager.h"
 
 std::map<std::string, sf::SoundBuffer> SoundManager::m_Sounds;

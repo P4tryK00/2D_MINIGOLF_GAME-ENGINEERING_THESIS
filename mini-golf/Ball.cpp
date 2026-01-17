@@ -4,15 +4,20 @@ Ball::Ball()
 {
     const sf::Texture& ballTexture = TextureManager::get("ball");
     player.setTexture(ballTexture);
+    // Ustawiamy punkt centralny (origin) na środku tekstury, aby rotacja i pozycja były liczone od środka
     player.setOrigin(ballTexture.getSize().x / 2.f, ballTexture.getSize().y / 2.f);
     velocity = sf::Vector2f(0.f, 0.f);
 }
 
 void Ball::update(float dt, float friction)
 {
+    // Przesunięcie o wektor prędkości * czas
     player.move(velocity * dt);
+
+    // Aplikacja tarcia (zwalnianie)
     velocity *= friction;
 
+    // Zatrzymanie całkowite, jeśli prędkość jest bardzo mała (zapobiega drganiom)
     if (std::abs(velocity.x) < 0.1f) velocity.x = 0.f;
     if (std::abs(velocity.y) < 0.1f) velocity.y = 0.f;
 }
@@ -47,16 +52,18 @@ void Ball::stop()
     velocity = sf::Vector2f(0.f, 0.f);
 }
 
-// Nowa fizyka: Odbicie X (ściany boczne)
 void Ball::bounceX()
 {
-    velocity.x = -velocity.x * 0.8f; // Odwracamy X, zachowujemy Y, tracimy energię
+    // Odbicie od ściany pionowej:
+    // Odwracamy wektor X. Mnożymy przez 0.8f, aby zasymulować utratę energii przy zderzeniu.
+    velocity.x = -velocity.x * 0.8f;
 }
 
-// Nowa fizyka: Odbicie Y (sufit/podłoga)
 void Ball::bounceY()
 {
-    velocity.y = -velocity.y * 0.8f; // Odwracamy Y, zachowujemy X, tracimy energię
+    // Odbicie od ściany poziomej:
+    // Odwracamy wektor Y, zachowujemy X.
+    velocity.y = -velocity.y * 0.8f;
 }
 
 void Ball::invertVelocity()

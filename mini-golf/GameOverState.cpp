@@ -2,7 +2,7 @@
 #include "GameState.h"
 #include "MainMenuState.h"
 #include "ResourceManager.h"
-#include "DEFINITIONS.h" // Upewnij się, że masz tu definicje ekranu
+#include "DEFINITIONS.h"
 
 GameOverState::GameOverState(GameDataRef data, sf::Sprite bgSprite, std::shared_ptr<sf::Texture> bgTexture, int level)
     : m_data(data), m_backgroundSprite(bgSprite), m_bgTexture(bgTexture), m_level(level)
@@ -10,15 +10,16 @@ GameOverState::GameOverState(GameDataRef data, sf::Sprite bgSprite, std::shared_
 }
 
 void GameOverState::init() {
+    // Reset widoku do domyślnego
     m_data->window.setView(m_data->window.getDefaultView());
 
-    // 1. Przyciemnienie (czerwonawe dla dramatyzmu, lub czarne)
+    // 1. Konfiguracja przyciemnienia tła
     m_dimmer.setSize(sf::Vector2f(SCREEN_WIDTH, SCREEN_HEIGHT));
-    m_dimmer.setFillColor(sf::Color(50, 0, 0, 150)); // Lekko czerwone tło
+    m_dimmer.setFillColor(sf::Color(50, 0, 0, 150)); // Półprzezroczysty czerwony
 
     const sf::Font& font = FontManager::get("font");
 
-    // 2. Tytuł GAME OVER
+    // 2. Tytuł GAME OVER - centrowanie
     m_title.setFont(font);
     m_title.setString("GAME OVER");
     m_title.setCharacterSize(80);
@@ -30,7 +31,7 @@ void GameOverState::init() {
     float centerX = SCREEN_WIDTH / 2.0f;
     float centerY = SCREEN_HEIGHT / 2.0f;
 
-    // 3. Przycisk RETRY
+    // 3. Konfiguracja przycisków
     m_retryButton.setFont(font);
     m_retryButton.setString("TRY AGAIN");
     m_retryButton.setCharacterSize(50);
@@ -39,7 +40,6 @@ void GameOverState::init() {
     m_retryButton.setOrigin(retryRect.left + retryRect.width / 2.0f, retryRect.top + retryRect.height / 2.0f);
     m_retryButton.setPosition(centerX, centerY);
 
-    // 4. Przycisk MENU
     m_menuButton.setFont(font);
     m_menuButton.setString("MAIN MENU");
     m_menuButton.setCharacterSize(40);
@@ -48,7 +48,7 @@ void GameOverState::init() {
     m_menuButton.setOrigin(menuRect.left + menuRect.width / 2.0f, menuRect.top + menuRect.height / 2.0f);
     m_menuButton.setPosition(centerX, centerY + 100.f);
 
-    // Fader setup
+    // Konfiguracja efektu przejścia (Fader)
     m_fadeRect.setSize(sf::Vector2f(SCREEN_WIDTH, SCREEN_HEIGHT));
     m_fadeRect.setFillColor(sf::Color(0, 0, 0, 0));
     m_alpha = 0.0f;
@@ -63,14 +63,13 @@ void GameOverState::handleInput(sf::Event& event) {
         sf::Vector2f mousePosF = m_data->window.mapPixelToCoords(mousePos);
 
         if (!m_isTransitioning) {
-            
-            // RETRY
+            // Sprawdzenie kliknięcia w przycisk RETRY
             if (m_retryButton.getGlobalBounds().contains(mousePosF)) {
                 m_isTransitioning = true;
                 m_retryLevel = true;
             }
 
-            // MENU
+            // Sprawdzenie kliknięcia w przycisk MENU
             if (m_menuButton.getGlobalBounds().contains(mousePosF)) {
                 m_isTransitioning = true;
                 m_goToMenu = true;
@@ -80,7 +79,7 @@ void GameOverState::handleInput(sf::Event& event) {
 }
 
 void GameOverState::update(float dt) {
-    // Hover Effects
+    // Efekt podświetlenia (Hover)
     if (!m_isTransitioning) {
         sf::Vector2i mousePos = sf::Mouse::getPosition(m_data->window);
         sf::Vector2f mousePosF = m_data->window.mapPixelToCoords(mousePos);
@@ -92,16 +91,16 @@ void GameOverState::update(float dt) {
         else m_menuButton.setFillColor(sf::Color::White);
     }
 
-    // Transition
+    // Obsługa animacji wyjścia (Fade out)
     if (m_isTransitioning) {
         m_alpha += 500.0f * dt;
         if (m_alpha >= 255.0f) {
             m_alpha = 255.0f;
-            
+
             if (m_goToMenu) {
                 m_data->machine.switchState(std::make_unique<MainMenuState>(m_data));
             } else if (m_retryLevel) {
-                // Restartujemy ten sam poziom (konstruktor GameState zresetuje życia do 3)
+                // Restart poziomu
                 m_data->machine.switchState(std::make_unique<GameState>(m_data, m_level));
             }
             return;
@@ -112,13 +111,17 @@ void GameOverState::update(float dt) {
 
 void GameOverState::draw(float dt) {
     m_data->window.clear();
-    
+
+    // Rysowanie zrzutu ekranu gry w tle
     m_data->window.draw(m_backgroundSprite);
+    // Rysowanie przyciemnienia
     m_data->window.draw(m_dimmer);
+
     m_data->window.draw(m_title);
     m_data->window.draw(m_retryButton);
     m_data->window.draw(m_menuButton);
-    
+
+    // Rysowanie efektu przejścia na wierzchu
     if (m_isTransitioning) {
         m_data->window.draw(m_fadeRect);
     }

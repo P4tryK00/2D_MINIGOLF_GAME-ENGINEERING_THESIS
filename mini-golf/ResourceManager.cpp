@@ -5,6 +5,8 @@
 #include "ResourceManager.h"
 
 void ResourceManager::loadAllResources() {
+    // Centralne ładowanie wszystkich zasobów przy starcie aplikacji
+
     // Tekstury
     TextureManager::load("ball", BALL_TEXTURE_PATH);
     TextureManager::load("tileset", TILESET_PATH);

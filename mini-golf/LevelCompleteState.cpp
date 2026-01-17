@@ -1,22 +1,23 @@
 #include "LevelCompleteState.h"
 
-
-
 LevelCompleteState::LevelCompleteState(GameDataRef data, sf::Sprite bgSprite, std::shared_ptr<sf::Texture> bgTexture, int strokes, int currentLevel)
     : m_data(data), m_backgroundSprite(bgSprite), m_bgTexture(bgTexture), m_strokes(strokes), m_currentLevel(currentLevel)
 {
 }
 
 void LevelCompleteState::init() {
+    // Automatyczny zapis wyniku przy wejściu do tego stanu
     SaveManager::submitScore(m_currentLevel, m_strokes);
+
     m_data->window.setView(m_data->window.getDefaultView());
 
+    // Przyciemnienie tła
     m_dimmer.setSize(sf::Vector2f(SCREEN_WIDTH, SCREEN_HEIGHT));
     m_dimmer.setFillColor(sf::Color(0, 0, 0, 150));
 
     const sf::Font& font = FontManager::get("font");
 
-    // 1. Tytuł (Na samej górze - 1/5 ekranu)
+    // 1. Tytuł LEVEL COMPLETE
     m_title.setFont(font);
     m_title.setString("LEVEL COMPLETE!");
     m_title.setCharacterSize(60);
@@ -25,32 +26,29 @@ void LevelCompleteState::init() {
     m_title.setOrigin(titleRect.left + titleRect.width / 2.0f, titleRect.top + titleRect.height / 2.0f);
     m_title.setPosition(SCREEN_WIDTH / 2.0f, SCREEN_HEIGHT / 5.0f);
 
-    // Ustalamy środek ekranu jako punkt odniesienia
     float centerX = SCREEN_WIDTH / 2.0f;
     float centerY = SCREEN_HEIGHT / 2.0f;
 
-    // 2. Wynik (Nad przyciskami)
+    // 2. Wyświetlenie wyniku (Strokes)
     m_scoreText.setFont(font);
     m_scoreText.setString("Strokes: " + std::to_string(m_strokes));
     m_scoreText.setCharacterSize(40);
     m_scoreText.setFillColor(sf::Color::White);
     sf::FloatRect scoreRect = m_scoreText.getLocalBounds();
     m_scoreText.setOrigin(scoreRect.left + scoreRect.width / 2.0f, scoreRect.top + scoreRect.height / 2.0f);
-    // Przesuwamy w górę o 120 pikseli od środka
     m_scoreText.setPosition(centerX, centerY - 120.f);
 
-    // 3. Przycisk NEXT LEVEL (Główny przycisk - lekko nad środkiem)
+    // 3. Przycisk NEXT LEVEL (Warunkowo: jeśli to nie ostatni poziom)
     if (m_currentLevel < 5) {
         m_nextLevelButton.setFont(font);
         m_nextLevelButton.setString("NEXT LEVEL");
-        m_nextLevelButton.setCharacterSize(50); // Większy, bo najważniejszy
+        m_nextLevelButton.setCharacterSize(50);
         m_nextLevelButton.setFillColor(sf::Color::Green);
         sf::FloatRect nextRect = m_nextLevelButton.getLocalBounds();
         m_nextLevelButton.setOrigin(nextRect.left + nextRect.width / 2.0f, nextRect.top + nextRect.height / 2.0f);
-        // Pozycja: -40 od środka
         m_nextLevelButton.setPosition(centerX, centerY - 40.f);
     } else {
-        // Komunikat końca gry
+        // Jeśli koniec gry
         m_nextLevelButton.setFont(font);
         m_nextLevelButton.setString("ALL LEVELS CLEARED!");
         m_nextLevelButton.setCharacterSize(40);
@@ -60,24 +58,22 @@ void LevelCompleteState::init() {
         m_nextLevelButton.setPosition(centerX, centerY - 40.f);
     }
 
-    // 4. Przycisk RETRY (Pod Next Level)
+    // 4. Przycisk RETRY
     m_retryButton.setFont(font);
     m_retryButton.setString("RETRY LEVEL");
     m_retryButton.setCharacterSize(40);
     m_retryButton.setFillColor(sf::Color::White);
     sf::FloatRect retryRect = m_retryButton.getLocalBounds();
     m_retryButton.setOrigin(retryRect.left + retryRect.width / 2.0f, retryRect.top + retryRect.height / 2.0f);
-    // Pozycja: +40 od środka (80px odstępu od Next Level)
     m_retryButton.setPosition(centerX, centerY + 40.f);
 
-    // 5. Przycisk MENU (Na dole)
+    // 5. Przycisk MENU
     m_menuButton.setFont(font);
     m_menuButton.setString("MAIN MENU");
     m_menuButton.setCharacterSize(40);
     m_menuButton.setFillColor(sf::Color::White);
     sf::FloatRect menuRect = m_menuButton.getLocalBounds();
     m_menuButton.setOrigin(menuRect.left + menuRect.width / 2.0f, menuRect.top + menuRect.height / 2.0f);
-    // Pozycja: +120 od środka (80px odstępu od Retry)
     m_menuButton.setPosition(centerX, centerY + 120.f);
 
     // Fader setup
@@ -95,16 +91,17 @@ void LevelCompleteState::handleInput(sf::Event& event) {
         sf::Vector2f mousePosF = m_data->window.mapPixelToCoords(mousePos);
 
         if (!m_isTransitioning) {
-            
-            // Kliknięcie NEXT LEVEL (tylko jeśli jest aktywny, tzn. poziom < 5)
+
+            // Kliknięcie NEXT LEVEL
             if (m_currentLevel < 5 && m_nextLevelButton.getGlobalBounds().contains(mousePosF)) {
                 m_isTransitioning = true;
                 m_goToMenu = false; // Idziemy do następnego poziomu
             }
 
+            // Kliknięcie RETRY
             if (m_retryButton.getGlobalBounds().contains(mousePosF)) {
                 m_isTransitioning = true;
-                m_retryLevel = true; // Ustawiamy flagę
+                m_retryLevel = true; // Ustawiamy flagę restartu
                 m_goToMenu = false;
             }
 
@@ -140,14 +137,15 @@ void LevelCompleteState::update(float dt) {
         m_alpha += 500.0f * dt;
         if (m_alpha >= 255.0f) {
             m_alpha = 255.0f;
-            
+
             if (m_goToMenu) {
                 // Wracamy do Menu Głównego
                 m_data->machine.switchState(std::make_unique<MainMenuState>(m_data));
-            }else if (m_retryLevel) {
+            } else if (m_retryLevel) {
+                // Restart obecnego poziomu
                 m_data->machine.switchState(std::make_unique<GameState>(m_data, m_currentLevel));
-            }else {
-                // Idziemy do następnego poziomu (currentLevel + 1)
+            } else {
+                // Idziemy do następnego poziomu
                 m_data->machine.switchState(std::make_unique<GameState>(m_data, m_currentLevel + 1));
             }
             return;
@@ -158,7 +156,8 @@ void LevelCompleteState::update(float dt) {
 
 void LevelCompleteState::draw(float dt) {
     m_data->window.clear();
-    
+
+    // Rysowanie elementów w odpowiedniej kolejności (tło -> przyciemnienie -> UI)
     m_data->window.draw(m_backgroundSprite);
     m_data->window.draw(m_dimmer);
     

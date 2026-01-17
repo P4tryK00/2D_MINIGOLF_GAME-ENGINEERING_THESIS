@@ -1,7 +1,3 @@
-//
-// Created by patry on 13.01.2026.
-//
-
 #include "StateManager.h"
 
 void StateManager::addState(StateRef newState, bool isReplacing) {
@@ -22,29 +18,36 @@ void StateManager::switchState(StateRef newState) {
 }
 
 void StateManager::processStateChanges() {
+    // 1. Obsługa usuwania stanu
     if (m_isRemoving && !m_states.empty()) {
-        m_states.pop();
+        m_states.pop(); // Niszczy górny stan (wywołuje destruktor)
+
+        // Jeśli na stosie pozostały inne stany, wznów ten poniżej
         if (!m_states.empty()) {
             m_states.top()->resume();
         }
         m_isRemoving = false;
     }
 
+    // 2. Obsługa dodawania stanu
     if (m_isAdding) {
         if (!m_states.empty()) {
             if (m_isClearing) {
-                // Czyścimy cały stos
+                // Całkowite czyszczenie stosu (np. Game Over -> Menu)
                 while (!m_states.empty()) {
                     m_states.pop();
                 }
             }
             else if (m_isReplacing) {
-                m_states.pop(); // Usuwamy tylko górny
+                // Zastąpienie tylko górnego stanu (np. Intro -> Menu)
+                m_states.pop();
             } else {
-                m_states.top()->pause(); // Pauzujemy górny
+                // Zapauzowanie obecnego stanu przed nałożeniem nowego (np. Gra -> Pauza)
+                m_states.top()->pause();
             }
         }
 
+        // Dodanie nowego stanu na stos i jego inicjalizacja
         m_states.push(std::move(m_newState));
         if (!m_states.empty()) {
             m_states.top()->init();

@@ -1,6 +1,5 @@
 #include "LevelSelectState.h"
 
-
 LevelSelectState::LevelSelectState(GameDataRef data) : m_data(data) {
 }
 
@@ -9,7 +8,7 @@ void LevelSelectState::init() {
 
     const sf::Font& font = FontManager::get("font");
 
-    // Tytuł
+    // Tytuł ekranu
     m_title.setFont(font);
     m_title.setString("SELECT LEVEL");
     m_title.setCharacterSize(60);
@@ -18,12 +17,16 @@ void LevelSelectState::init() {
     m_title.setOrigin(titleRect.left + titleRect.width / 2.0f, titleRect.top + titleRect.height / 2.0f);
     m_title.setPosition(SCREEN_WIDTH / 2.0f, 100.f);
 
+    // Pobranie postępu gracza z SaveManager (np. poziom 3)
     auto unlocked = SaveManager::getUnlockedLevel();
 
+    // Generowanie dynamiczne przycisków 1-5
     for (int i = 1; i <= 5; i++) {
         sf::Text btn;
         btn.setFont(font);
         btn.setCharacterSize(40);
+
+        // Logika blokowania: Jeśli indeks > odblokowany poziom -> Szary kolor i tekst LOCKED
         if (i > unlocked) {
             btn.setString("LEVEL " + std::to_string(i) + " (LOCKED)");
             btn.setFillColor(sf::Color(100, 100, 100)); // Szary
@@ -31,14 +34,15 @@ void LevelSelectState::init() {
             btn.setString("LEVEL " + std::to_string(i));
             btn.setFillColor(sf::Color::White);
         }
-        
+
+        // Centrowanie tekstu
         sf::FloatRect rect = btn.getLocalBounds();
         btn.setOrigin(rect.left + rect.width / 2.0f, rect.top + rect.height / 2.0f);
-        
-        // Układamy je w pionie
+
+        // Układamy je wertykalnie (co 70 pikseli)
         btn.setPosition(SCREEN_WIDTH / 2.0f, 200.f + (i * 70.f));
-        
-        m_levelButtons.push_back(btn);
+
+        m_levelButtons.push_back(btn); // Dodanie do wektora w celu późniejszego rysowania/obsługi
     }
 
     // Przycisk BACK
@@ -65,27 +69,28 @@ void LevelSelectState::handleInput(sf::Event& event) {
         sf::Vector2f mousePosF = m_data->window.mapPixelToCoords(mousePos);
 
         if (!m_isFadingIn && !m_isTransitioning) {
-            
+
+            // Iteracja po wszystkich przyciskach poziomów
             for (int i = 0; i < m_levelButtons.size(); i++) {
                 if (m_levelButtons[i].getGlobalBounds().contains(mousePosF)) {
 
-                    // Sprawdzamy czy odblokowany
+                    // Sprawdzamy czy poziom jest odblokowany
                     int levelNum = i + 1;
                     int unlocked = SaveManager::getUnlockedLevel();
 
                     if (levelNum <= unlocked) {
                         m_nextLevelToLoad = levelNum;
-                        m_isTransitioning = true;
+                        m_isTransitioning = true; // Uruchamiamy przejście
                         return;
                     } else {
-
+                        // Poziom zablokowany - brak akcji (można dodać dźwięk błędu)
                     }
                 }
             }
 
-            // Przycisk BACK
+            // Obsługa przycisku BACK
             if (m_backButton.getGlobalBounds().contains(mousePosF)) {
-                m_nextLevelToLoad = -1; // -1 oznacza powrót do Menu
+                m_nextLevelToLoad = -1; // Flaga oznaczająca powrót do Menu
                 m_isTransitioning = true;
             }
         }
@@ -93,7 +98,7 @@ void LevelSelectState::handleInput(sf::Event& event) {
 }
 
 void LevelSelectState::update(float dt) {
-    // Hover Effects
+    // Hover Effects (tylko dla odblokowanych poziomów)
     if (!m_isFadingIn && !m_isTransitioning) {
         sf::Vector2i mousePos = sf::Mouse::getPosition(m_data->window);
         sf::Vector2f mousePosF = m_data->window.mapPixelToCoords(mousePos);
@@ -111,12 +116,12 @@ void LevelSelectState::update(float dt) {
                 }
             }
         }
-        // Back
+        // Hover dla przycisku Back
         if (m_backButton.getGlobalBounds().contains(mousePosF)) m_backButton.setFillColor(sf::Color::Red);
         else m_backButton.setFillColor(sf::Color::White);
     }
 
-    // Animacja Wejścia
+    // Obsługa animacji (Fade In / Fade Out)
     if (m_isFadingIn) {
         m_alpha -= 500.0f * dt;
         if (m_alpha <= 0.0f) {
@@ -125,14 +130,14 @@ void LevelSelectState::update(float dt) {
         }
         m_fadeRect.setFillColor(sf::Color(0, 0, 0, static_cast<sf::Uint8>(m_alpha)));
     }
-    // Animacja Wyjścia
     else if (m_isTransitioning) {
         m_alpha += 500.0f * dt;
         if (m_alpha >= 255.0f) {
             m_alpha = 255.0f;
-            
+
+            // Logika zmiany stanu po wygaszeniu ekranu
             if (m_nextLevelToLoad != -1) {
-                // Ładujemy wybrany poziom
+                // Ładujemy wybrany poziom (GameState)
                 m_data->machine.addState(std::make_unique<GameState>(m_data, m_nextLevelToLoad), true);
             } else {
                 // Wracamy do Menu
