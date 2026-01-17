@@ -1,0 +1,58 @@
+\doxysection{Dokumentacja struktury ov\+\_\+callbacks}
+\hypertarget{structov__callbacks}{}\label{structov__callbacks}\index{ov\_callbacks@{ov\_callbacks}}
+
+
+{\ttfamily \#include $<$vorbisfile.\+h$>$}
+
+
+
+Diagram współpracy dla ov\+\_\+callbacks\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=145pt]{structov__callbacks__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structov__callbacks_a301b93b9f0436e5bde6dbdeb0edeae77}{read\+\_\+func}} )(void \texorpdfstring{$\ast$}{*}ptr, size\+\_\+t size, size\+\_\+t nmemb, void \texorpdfstring{$\ast$}{*}datasource)
+\item 
+int(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structov__callbacks_aa49d8079756c1c26e2ba9b974e463dfa}{seek\+\_\+func}} )(void \texorpdfstring{$\ast$}{*}datasource, \mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\+\_\+int64\+\_\+t}} offset, int whence)
+\item 
+int(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structov__callbacks_a4d1141e00251a23b27e1de261e8717ec}{close\+\_\+func}} )(void \texorpdfstring{$\ast$}{*}datasource)
+\item 
+long(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structov__callbacks_ab078f3f386b7c58e9fab2ede904e0e36}{tell\+\_\+func}} )(void \texorpdfstring{$\ast$}{*}datasource)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{structov__callbacks_a4d1141e00251a23b27e1de261e8717ec}\label{structov__callbacks_a4d1141e00251a23b27e1de261e8717ec} 
+\index{ov\_callbacks@{ov\_callbacks}!close\_func@{close\_func}}
+\index{close\_func@{close\_func}!ov\_callbacks@{ov\_callbacks}}
+\doxysubsubsection{\texorpdfstring{close\_func}{close\_func}}
+{\footnotesize\ttfamily int(\texorpdfstring{$\ast$}{*} ov\+\_\+callbacks\+::close\+\_\+func) (void \texorpdfstring{$\ast$}{*}datasource)}
+
+\Hypertarget{structov__callbacks_a301b93b9f0436e5bde6dbdeb0edeae77}\label{structov__callbacks_a301b93b9f0436e5bde6dbdeb0edeae77} 
+\index{ov\_callbacks@{ov\_callbacks}!read\_func@{read\_func}}
+\index{read\_func@{read\_func}!ov\_callbacks@{ov\_callbacks}}
+\doxysubsubsection{\texorpdfstring{read\_func}{read\_func}}
+{\footnotesize\ttfamily size\+\_\+t(\texorpdfstring{$\ast$}{*} ov\+\_\+callbacks\+::read\+\_\+func) (void \texorpdfstring{$\ast$}{*}ptr, size\+\_\+t size, size\+\_\+t nmemb, void \texorpdfstring{$\ast$}{*}datasource)}
+
+\Hypertarget{structov__callbacks_aa49d8079756c1c26e2ba9b974e463dfa}\label{structov__callbacks_aa49d8079756c1c26e2ba9b974e463dfa} 
+\index{ov\_callbacks@{ov\_callbacks}!seek\_func@{seek\_func}}
+\index{seek\_func@{seek\_func}!ov\_callbacks@{ov\_callbacks}}
+\doxysubsubsection{\texorpdfstring{seek\_func}{seek\_func}}
+{\footnotesize\ttfamily int(\texorpdfstring{$\ast$}{*} ov\+\_\+callbacks\+::seek\+\_\+func) (void \texorpdfstring{$\ast$}{*}datasource, \mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\+\_\+int64\+\_\+t}} offset, int whence)}
+
+\Hypertarget{structov__callbacks_ab078f3f386b7c58e9fab2ede904e0e36}\label{structov__callbacks_ab078f3f386b7c58e9fab2ede904e0e36} 
+\index{ov\_callbacks@{ov\_callbacks}!tell\_func@{tell\_func}}
+\index{tell\_func@{tell\_func}!ov\_callbacks@{ov\_callbacks}}
+\doxysubsubsection{\texorpdfstring{tell\_func}{tell\_func}}
+{\footnotesize\ttfamily long(\texorpdfstring{$\ast$}{*} ov\+\_\+callbacks\+::tell\+\_\+func) (void \texorpdfstring{$\ast$}{*}datasource)}
+
+
+
+Dokumentacja dla tej struktury została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/extlibs/headers/vorbis/\mbox{\hyperlink{vorbisfile_8h}{vorbisfile.\+h}}\end{DoxyCompactItemize}

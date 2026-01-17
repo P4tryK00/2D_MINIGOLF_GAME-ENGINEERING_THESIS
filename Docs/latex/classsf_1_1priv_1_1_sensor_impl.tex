@@ -1,0 +1,779 @@
+\doxysection{Dokumentacja klasy sf\+::priv\+::Sensor\+Impl}
+\hypertarget{classsf_1_1priv_1_1_sensor_impl}{}\label{classsf_1_1priv_1_1_sensor_impl}\index{sf::priv::SensorImpl@{sf::priv::SensorImpl}}
+
+
+Android implementation of sensors.  
+
+
+
+
+{\ttfamily \#include $<$Sensor\+Impl.\+hpp$>$}
+
+
+
+Diagram współpracy dla sf\+::priv\+::Sensor\+Impl\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classsf_1_1priv_1_1_sensor_impl__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_impl_a56f215f6e50f2ba7a09ed9a8aa5b1fe9}{open}} (\mbox{\hyperlink{classsf_1_1_sensor_a687375af3ab77b818fca73735bcaea84}{Sensor\+::\+Type}} sensor)
+\begin{DoxyCompactList}\small\item\em Open the sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_impl_a60dd0056d9ab4d27dcbebfc0428bd982}{close}} ()
+\begin{DoxyCompactList}\small\item\em Close the sensor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacesf_af97357d7d32e7d6a700d03be2f3b4811}{Vector3f}} \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_impl_acc9e72689184fb6ecca7c69c60cf8922}{update}} ()
+\begin{DoxyCompactList}\small\item\em Update the sensor and get its new value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_impl_a109e0ac8ff6605f8d1e22c6d8b64903c}{set\+Enabled}} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Enable or disable the sensor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_impl_a56f215f6e50f2ba7a09ed9a8aa5b1fe9}{open}} (\mbox{\hyperlink{classsf_1_1_sensor_a687375af3ab77b818fca73735bcaea84}{Sensor\+::\+Type}} sensor)
+\begin{DoxyCompactList}\small\item\em Open the sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_impl_a60dd0056d9ab4d27dcbebfc0428bd982}{close}} ()
+\begin{DoxyCompactList}\small\item\em Close the sensor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacesf_af97357d7d32e7d6a700d03be2f3b4811}{Vector3f}} \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_impl_acc9e72689184fb6ecca7c69c60cf8922}{update}} ()
+\begin{DoxyCompactList}\small\item\em Update the sensor and get its new value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_impl_a109e0ac8ff6605f8d1e22c6d8b64903c}{set\+Enabled}} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Enable or disable the sensor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_impl_a56f215f6e50f2ba7a09ed9a8aa5b1fe9}{open}} (\mbox{\hyperlink{classsf_1_1_sensor_a687375af3ab77b818fca73735bcaea84}{Sensor\+::\+Type}} sensor)
+\begin{DoxyCompactList}\small\item\em Open the sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_impl_a60dd0056d9ab4d27dcbebfc0428bd982}{close}} ()
+\begin{DoxyCompactList}\small\item\em Close the sensor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacesf_af97357d7d32e7d6a700d03be2f3b4811}{Vector3f}} \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_impl_acc9e72689184fb6ecca7c69c60cf8922}{update}} ()
+\begin{DoxyCompactList}\small\item\em Update the sensor and get its new value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_impl_a109e0ac8ff6605f8d1e22c6d8b64903c}{set\+Enabled}} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Enable or disable the sensor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_impl_a56f215f6e50f2ba7a09ed9a8aa5b1fe9}{open}} (\mbox{\hyperlink{classsf_1_1_sensor_a687375af3ab77b818fca73735bcaea84}{Sensor\+::\+Type}} sensor)
+\begin{DoxyCompactList}\small\item\em Open the sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_impl_a60dd0056d9ab4d27dcbebfc0428bd982}{close}} ()
+\begin{DoxyCompactList}\small\item\em Close the sensor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacesf_af97357d7d32e7d6a700d03be2f3b4811}{Vector3f}} \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_impl_acc9e72689184fb6ecca7c69c60cf8922}{update}} ()
+\begin{DoxyCompactList}\small\item\em Update the sensor and get its new value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_impl_a109e0ac8ff6605f8d1e22c6d8b64903c}{set\+Enabled}} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Enable or disable the sensor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_impl_a56f215f6e50f2ba7a09ed9a8aa5b1fe9}{open}} (\mbox{\hyperlink{classsf_1_1_sensor_a687375af3ab77b818fca73735bcaea84}{Sensor\+::\+Type}} sensor)
+\begin{DoxyCompactList}\small\item\em Open the sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_impl_a60dd0056d9ab4d27dcbebfc0428bd982}{close}} ()
+\begin{DoxyCompactList}\small\item\em Close the sensor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacesf_af97357d7d32e7d6a700d03be2f3b4811}{Vector3f}} \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_impl_acc9e72689184fb6ecca7c69c60cf8922}{update}} ()
+\begin{DoxyCompactList}\small\item\em Update the sensor and get its new value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_impl_a109e0ac8ff6605f8d1e22c6d8b64903c}{set\+Enabled}} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Enable or disable the sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Statyczne metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_impl_ac12b45aacf9994cfe4f6254d0000a0de}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Perform the global initialization of the sensor module. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_impl_ad406d95aabdb1291e18173384d5e32e0}{cleanup}} ()
+\begin{DoxyCompactList}\small\item\em Perform the global cleanup of the sensor module. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_impl_abcf148108a6135c1256ef1e192c70aa0}{is\+Available}} (\mbox{\hyperlink{classsf_1_1_sensor_a687375af3ab77b818fca73735bcaea84}{Sensor\+::\+Type}} sensor)
+\begin{DoxyCompactList}\small\item\em Check if a sensor is available. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_impl_a2a4b27419e6d216be4878d4f8c0a8e30}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Perform the global initialization of the sensor module. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_impl_a49b6b0b58eeaaf40f4204bc70f248850}{cleanup}} ()
+\begin{DoxyCompactList}\small\item\em Perform the global cleanup of the sensor module. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_impl_af7cf0a28197b18fd52a29332cf678dfb}{is\+Available}} (\mbox{\hyperlink{classsf_1_1_sensor_a687375af3ab77b818fca73735bcaea84}{Sensor\+::\+Type}} sensor)
+\begin{DoxyCompactList}\small\item\em Check if a sensor is available. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_impl_a2a4b27419e6d216be4878d4f8c0a8e30}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Perform the global initialization of the sensor module. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_impl_a49b6b0b58eeaaf40f4204bc70f248850}{cleanup}} ()
+\begin{DoxyCompactList}\small\item\em Perform the global cleanup of the sensor module. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_impl_af7cf0a28197b18fd52a29332cf678dfb}{is\+Available}} (\mbox{\hyperlink{classsf_1_1_sensor_a687375af3ab77b818fca73735bcaea84}{Sensor\+::\+Type}} sensor)
+\begin{DoxyCompactList}\small\item\em Check if a sensor is available. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_impl_a2a4b27419e6d216be4878d4f8c0a8e30}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Perform the global initialization of the sensor module. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_impl_a49b6b0b58eeaaf40f4204bc70f248850}{cleanup}} ()
+\begin{DoxyCompactList}\small\item\em Perform the global cleanup of the sensor module. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_impl_af7cf0a28197b18fd52a29332cf678dfb}{is\+Available}} (\mbox{\hyperlink{classsf_1_1_sensor_a687375af3ab77b818fca73735bcaea84}{Sensor\+::\+Type}} sensor)
+\begin{DoxyCompactList}\small\item\em Check if a sensor is available. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_impl_a2a4b27419e6d216be4878d4f8c0a8e30}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Perform the global initialization of the sensor module. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_impl_a49b6b0b58eeaaf40f4204bc70f248850}{cleanup}} ()
+\begin{DoxyCompactList}\small\item\em Perform the global cleanup of the sensor module. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_impl_af7cf0a28197b18fd52a29332cf678dfb}{is\+Available}} (\mbox{\hyperlink{classsf_1_1_sensor_a687375af3ab77b818fca73735bcaea84}{Sensor\+::\+Type}} sensor)
+\begin{DoxyCompactList}\small\item\em Check if a sensor is available. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Statyczne metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+static ASensor const \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_impl_a0ae2f4000c67790527dc56ba48c999a5}{get\+Default\+Sensor}} (\mbox{\hyperlink{classsf_1_1_sensor_a687375af3ab77b818fca73735bcaea84}{Sensor\+::\+Type}} sensor)
+\begin{DoxyCompactList}\small\item\em Get the default Android sensor matching the sensor type. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_impl_a37b4f846a564c779ef6c26aede950901}{process\+Sensor\+Events}} (int fd, int events, void \texorpdfstring{$\ast$}{*}data)
+\begin{DoxyCompactList}\small\item\em Process the pending sensor data available and add them to our lists. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+const ASensor \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_impl_ab5485b918e3c764ab30282b486febb07}{m\+\_\+sensor}}
+\begin{DoxyCompactList}\small\item\em Android sensor structure. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_impl_ac45910af43f12c29901c1db578db3b8d}{m\+\_\+index}}
+\begin{DoxyCompactList}\small\item\em Index of the sensor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1_sensor_a687375af3ab77b818fca73735bcaea84}{Sensor\+::\+Type}} \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_impl_ab62dc1b9dd265d8500a34fc8c35270c3}{m\+\_\+sensor}}
+\begin{DoxyCompactList}\small\item\em Type of the sensor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_impl_af6a81b65a64ea30b810630160827d375}{m\+\_\+enabled}}
+\begin{DoxyCompactList}\small\item\em Enable state of the sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Android implementation of sensors. 
+
+Windows implementation of sensors.
+
+Unix implementation of sensors.
+
+Mac OS X implementation of sensors.
+
+i\+OS implementation of sensors 
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{classsf_1_1priv_1_1_sensor_impl_ad406d95aabdb1291e18173384d5e32e0}\label{classsf_1_1priv_1_1_sensor_impl_ad406d95aabdb1291e18173384d5e32e0} 
+\index{sf::priv::SensorImpl@{sf::priv::SensorImpl}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!sf::priv::SensorImpl@{sf::priv::SensorImpl}}
+\doxysubsubsection{\texorpdfstring{cleanup()}{cleanup()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Sensor\+Impl\+::cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Perform the global cleanup of the sensor module. 
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{classsf_1_1priv_1_1_sensor_impl_ad406d95aabdb1291e18173384d5e32e0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_sensor_impl_a49b6b0b58eeaaf40f4204bc70f248850}\label{classsf_1_1priv_1_1_sensor_impl_a49b6b0b58eeaaf40f4204bc70f248850} 
+\index{sf::priv::SensorImpl@{sf::priv::SensorImpl}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!sf::priv::SensorImpl@{sf::priv::SensorImpl}}
+\doxysubsubsection{\texorpdfstring{cleanup()}{cleanup()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily static void sf\+::priv\+::\+Sensor\+Impl\+::cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Perform the global cleanup of the sensor module. 
+
+\Hypertarget{classsf_1_1priv_1_1_sensor_impl_a49b6b0b58eeaaf40f4204bc70f248850}\label{classsf_1_1priv_1_1_sensor_impl_a49b6b0b58eeaaf40f4204bc70f248850} 
+\index{sf::priv::SensorImpl@{sf::priv::SensorImpl}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!sf::priv::SensorImpl@{sf::priv::SensorImpl}}
+\doxysubsubsection{\texorpdfstring{cleanup()}{cleanup()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily static void sf\+::priv\+::\+Sensor\+Impl\+::cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Perform the global cleanup of the sensor module. 
+
+\Hypertarget{classsf_1_1priv_1_1_sensor_impl_a49b6b0b58eeaaf40f4204bc70f248850}\label{classsf_1_1priv_1_1_sensor_impl_a49b6b0b58eeaaf40f4204bc70f248850} 
+\index{sf::priv::SensorImpl@{sf::priv::SensorImpl}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!sf::priv::SensorImpl@{sf::priv::SensorImpl}}
+\doxysubsubsection{\texorpdfstring{cleanup()}{cleanup()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily static void sf\+::priv\+::\+Sensor\+Impl\+::cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Perform the global cleanup of the sensor module. 
+
+\Hypertarget{classsf_1_1priv_1_1_sensor_impl_a49b6b0b58eeaaf40f4204bc70f248850}\label{classsf_1_1priv_1_1_sensor_impl_a49b6b0b58eeaaf40f4204bc70f248850} 
+\index{sf::priv::SensorImpl@{sf::priv::SensorImpl}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!sf::priv::SensorImpl@{sf::priv::SensorImpl}}
+\doxysubsubsection{\texorpdfstring{cleanup()}{cleanup()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily static void sf\+::priv\+::\+Sensor\+Impl\+::cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Perform the global cleanup of the sensor module. 
+
+\Hypertarget{classsf_1_1priv_1_1_sensor_impl_a60dd0056d9ab4d27dcbebfc0428bd982}\label{classsf_1_1priv_1_1_sensor_impl_a60dd0056d9ab4d27dcbebfc0428bd982} 
+\index{sf::priv::SensorImpl@{sf::priv::SensorImpl}!close@{close}}
+\index{close@{close}!sf::priv::SensorImpl@{sf::priv::SensorImpl}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Sensor\+Impl\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Close the sensor. 
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{classsf_1_1priv_1_1_sensor_impl_a60dd0056d9ab4d27dcbebfc0428bd982_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_sensor_impl_a60dd0056d9ab4d27dcbebfc0428bd982}\label{classsf_1_1priv_1_1_sensor_impl_a60dd0056d9ab4d27dcbebfc0428bd982} 
+\index{sf::priv::SensorImpl@{sf::priv::SensorImpl}!close@{close}}
+\index{close@{close}!sf::priv::SensorImpl@{sf::priv::SensorImpl}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Sensor\+Impl\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Close the sensor. 
+
+\Hypertarget{classsf_1_1priv_1_1_sensor_impl_a60dd0056d9ab4d27dcbebfc0428bd982}\label{classsf_1_1priv_1_1_sensor_impl_a60dd0056d9ab4d27dcbebfc0428bd982} 
+\index{sf::priv::SensorImpl@{sf::priv::SensorImpl}!close@{close}}
+\index{close@{close}!sf::priv::SensorImpl@{sf::priv::SensorImpl}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Sensor\+Impl\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Close the sensor. 
+
+\Hypertarget{classsf_1_1priv_1_1_sensor_impl_a60dd0056d9ab4d27dcbebfc0428bd982}\label{classsf_1_1priv_1_1_sensor_impl_a60dd0056d9ab4d27dcbebfc0428bd982} 
+\index{sf::priv::SensorImpl@{sf::priv::SensorImpl}!close@{close}}
+\index{close@{close}!sf::priv::SensorImpl@{sf::priv::SensorImpl}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Sensor\+Impl\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Close the sensor. 
+
+\Hypertarget{classsf_1_1priv_1_1_sensor_impl_a60dd0056d9ab4d27dcbebfc0428bd982}\label{classsf_1_1priv_1_1_sensor_impl_a60dd0056d9ab4d27dcbebfc0428bd982} 
+\index{sf::priv::SensorImpl@{sf::priv::SensorImpl}!close@{close}}
+\index{close@{close}!sf::priv::SensorImpl@{sf::priv::SensorImpl}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Sensor\+Impl\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Close the sensor. 
+
+\Hypertarget{classsf_1_1priv_1_1_sensor_impl_a0ae2f4000c67790527dc56ba48c999a5}\label{classsf_1_1priv_1_1_sensor_impl_a0ae2f4000c67790527dc56ba48c999a5} 
+\index{sf::priv::SensorImpl@{sf::priv::SensorImpl}!getDefaultSensor@{getDefaultSensor}}
+\index{getDefaultSensor@{getDefaultSensor}!sf::priv::SensorImpl@{sf::priv::SensorImpl}}
+\doxysubsubsection{\texorpdfstring{getDefaultSensor()}{getDefaultSensor()}}
+{\footnotesize\ttfamily ASensor const  \texorpdfstring{$\ast$}{*} sf\+::priv\+::\+Sensor\+Impl\+::get\+Default\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_sensor_a687375af3ab77b818fca73735bcaea84}{Sensor\+::\+Type}}}]{sensor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Get the default Android sensor matching the sensor type. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em type} & Type of the sensor\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+The default Android sensor, NULL otherwise 
+\end{DoxyReturn}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_sensor_impl_a0ae2f4000c67790527dc56ba48c999a5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_sensor_impl_ac12b45aacf9994cfe4f6254d0000a0de}\label{classsf_1_1priv_1_1_sensor_impl_ac12b45aacf9994cfe4f6254d0000a0de} 
+\index{sf::priv::SensorImpl@{sf::priv::SensorImpl}!initialize@{initialize}}
+\index{initialize@{initialize}!sf::priv::SensorImpl@{sf::priv::SensorImpl}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Sensor\+Impl\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Perform the global initialization of the sensor module. 
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classsf_1_1priv_1_1_sensor_impl_ac12b45aacf9994cfe4f6254d0000a0de_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{classsf_1_1priv_1_1_sensor_impl_ac12b45aacf9994cfe4f6254d0000a0de_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_sensor_impl_a2a4b27419e6d216be4878d4f8c0a8e30}\label{classsf_1_1priv_1_1_sensor_impl_a2a4b27419e6d216be4878d4f8c0a8e30} 
+\index{sf::priv::SensorImpl@{sf::priv::SensorImpl}!initialize@{initialize}}
+\index{initialize@{initialize}!sf::priv::SensorImpl@{sf::priv::SensorImpl}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily static void sf\+::priv\+::\+Sensor\+Impl\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Perform the global initialization of the sensor module. 
+
+\Hypertarget{classsf_1_1priv_1_1_sensor_impl_a2a4b27419e6d216be4878d4f8c0a8e30}\label{classsf_1_1priv_1_1_sensor_impl_a2a4b27419e6d216be4878d4f8c0a8e30} 
+\index{sf::priv::SensorImpl@{sf::priv::SensorImpl}!initialize@{initialize}}
+\index{initialize@{initialize}!sf::priv::SensorImpl@{sf::priv::SensorImpl}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily static void sf\+::priv\+::\+Sensor\+Impl\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Perform the global initialization of the sensor module. 
+
+\Hypertarget{classsf_1_1priv_1_1_sensor_impl_a2a4b27419e6d216be4878d4f8c0a8e30}\label{classsf_1_1priv_1_1_sensor_impl_a2a4b27419e6d216be4878d4f8c0a8e30} 
+\index{sf::priv::SensorImpl@{sf::priv::SensorImpl}!initialize@{initialize}}
+\index{initialize@{initialize}!sf::priv::SensorImpl@{sf::priv::SensorImpl}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily static void sf\+::priv\+::\+Sensor\+Impl\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Perform the global initialization of the sensor module. 
+
+\Hypertarget{classsf_1_1priv_1_1_sensor_impl_a2a4b27419e6d216be4878d4f8c0a8e30}\label{classsf_1_1priv_1_1_sensor_impl_a2a4b27419e6d216be4878d4f8c0a8e30} 
+\index{sf::priv::SensorImpl@{sf::priv::SensorImpl}!initialize@{initialize}}
+\index{initialize@{initialize}!sf::priv::SensorImpl@{sf::priv::SensorImpl}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily static void sf\+::priv\+::\+Sensor\+Impl\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Perform the global initialization of the sensor module. 
+
+\Hypertarget{classsf_1_1priv_1_1_sensor_impl_abcf148108a6135c1256ef1e192c70aa0}\label{classsf_1_1priv_1_1_sensor_impl_abcf148108a6135c1256ef1e192c70aa0} 
+\index{sf::priv::SensorImpl@{sf::priv::SensorImpl}!isAvailable@{isAvailable}}
+\index{isAvailable@{isAvailable}!sf::priv::SensorImpl@{sf::priv::SensorImpl}}
+\doxysubsubsection{\texorpdfstring{isAvailable()}{isAvailable()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Sensor\+Impl\+::is\+Available (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_sensor_a687375af3ab77b818fca73735bcaea84}{Sensor\+::\+Type}}}]{sensor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Check if a sensor is available. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em sensor} & \doxylink{classsf_1_1_sensor}{Sensor} to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True if the sensor is available, false otherwise 
+\end{DoxyReturn}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{classsf_1_1priv_1_1_sensor_impl_abcf148108a6135c1256ef1e192c70aa0_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{classsf_1_1priv_1_1_sensor_impl_abcf148108a6135c1256ef1e192c70aa0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_sensor_impl_af7cf0a28197b18fd52a29332cf678dfb}\label{classsf_1_1priv_1_1_sensor_impl_af7cf0a28197b18fd52a29332cf678dfb} 
+\index{sf::priv::SensorImpl@{sf::priv::SensorImpl}!isAvailable@{isAvailable}}
+\index{isAvailable@{isAvailable}!sf::priv::SensorImpl@{sf::priv::SensorImpl}}
+\doxysubsubsection{\texorpdfstring{isAvailable()}{isAvailable()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily static bool sf\+::priv\+::\+Sensor\+Impl\+::is\+Available (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_sensor_a687375af3ab77b818fca73735bcaea84}{Sensor\+::\+Type}}}]{sensor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Check if a sensor is available. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em sensor} & \doxylink{classsf_1_1_sensor}{Sensor} to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True if the sensor is available, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_sensor_impl_af7cf0a28197b18fd52a29332cf678dfb}\label{classsf_1_1priv_1_1_sensor_impl_af7cf0a28197b18fd52a29332cf678dfb} 
+\index{sf::priv::SensorImpl@{sf::priv::SensorImpl}!isAvailable@{isAvailable}}
+\index{isAvailable@{isAvailable}!sf::priv::SensorImpl@{sf::priv::SensorImpl}}
+\doxysubsubsection{\texorpdfstring{isAvailable()}{isAvailable()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily static bool sf\+::priv\+::\+Sensor\+Impl\+::is\+Available (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_sensor_a687375af3ab77b818fca73735bcaea84}{Sensor\+::\+Type}}}]{sensor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Check if a sensor is available. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em sensor} & \doxylink{classsf_1_1_sensor}{Sensor} to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True if the sensor is available, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_sensor_impl_af7cf0a28197b18fd52a29332cf678dfb}\label{classsf_1_1priv_1_1_sensor_impl_af7cf0a28197b18fd52a29332cf678dfb} 
+\index{sf::priv::SensorImpl@{sf::priv::SensorImpl}!isAvailable@{isAvailable}}
+\index{isAvailable@{isAvailable}!sf::priv::SensorImpl@{sf::priv::SensorImpl}}
+\doxysubsubsection{\texorpdfstring{isAvailable()}{isAvailable()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily static bool sf\+::priv\+::\+Sensor\+Impl\+::is\+Available (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_sensor_a687375af3ab77b818fca73735bcaea84}{Sensor\+::\+Type}}}]{sensor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Check if a sensor is available. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em sensor} & \doxylink{classsf_1_1_sensor}{Sensor} to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True if the sensor is available, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_sensor_impl_af7cf0a28197b18fd52a29332cf678dfb}\label{classsf_1_1priv_1_1_sensor_impl_af7cf0a28197b18fd52a29332cf678dfb} 
+\index{sf::priv::SensorImpl@{sf::priv::SensorImpl}!isAvailable@{isAvailable}}
+\index{isAvailable@{isAvailable}!sf::priv::SensorImpl@{sf::priv::SensorImpl}}
+\doxysubsubsection{\texorpdfstring{isAvailable()}{isAvailable()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily static bool sf\+::priv\+::\+Sensor\+Impl\+::is\+Available (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_sensor_a687375af3ab77b818fca73735bcaea84}{Sensor\+::\+Type}}}]{sensor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Check if a sensor is available. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em sensor} & \doxylink{classsf_1_1_sensor}{Sensor} to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True if the sensor is available, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_sensor_impl_a56f215f6e50f2ba7a09ed9a8aa5b1fe9}\label{classsf_1_1priv_1_1_sensor_impl_a56f215f6e50f2ba7a09ed9a8aa5b1fe9} 
+\index{sf::priv::SensorImpl@{sf::priv::SensorImpl}!open@{open}}
+\index{open@{open}!sf::priv::SensorImpl@{sf::priv::SensorImpl}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Sensor\+Impl\+::open (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_sensor_a687375af3ab77b818fca73735bcaea84}{Sensor\+::\+Type}}}]{sensor }\end{DoxyParamCaption})}
+
+
+
+Open the sensor. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em sensor} & Type of the sensor\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True on success, false on failure 
+\end{DoxyReturn}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=347pt]{classsf_1_1priv_1_1_sensor_impl_a56f215f6e50f2ba7a09ed9a8aa5b1fe9_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{classsf_1_1priv_1_1_sensor_impl_a56f215f6e50f2ba7a09ed9a8aa5b1fe9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_sensor_impl_a56f215f6e50f2ba7a09ed9a8aa5b1fe9}\label{classsf_1_1priv_1_1_sensor_impl_a56f215f6e50f2ba7a09ed9a8aa5b1fe9} 
+\index{sf::priv::SensorImpl@{sf::priv::SensorImpl}!open@{open}}
+\index{open@{open}!sf::priv::SensorImpl@{sf::priv::SensorImpl}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Sensor\+Impl\+::open (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_sensor_a687375af3ab77b818fca73735bcaea84}{Sensor\+::\+Type}}}]{sensor }\end{DoxyParamCaption})}
+
+
+
+Open the sensor. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em sensor} & Type of the sensor\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True on success, false on failure 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_sensor_impl_a56f215f6e50f2ba7a09ed9a8aa5b1fe9}\label{classsf_1_1priv_1_1_sensor_impl_a56f215f6e50f2ba7a09ed9a8aa5b1fe9} 
+\index{sf::priv::SensorImpl@{sf::priv::SensorImpl}!open@{open}}
+\index{open@{open}!sf::priv::SensorImpl@{sf::priv::SensorImpl}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Sensor\+Impl\+::open (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_sensor_a687375af3ab77b818fca73735bcaea84}{Sensor\+::\+Type}}}]{sensor }\end{DoxyParamCaption})}
+
+
+
+Open the sensor. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em sensor} & Type of the sensor\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True on success, false on failure 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_sensor_impl_a56f215f6e50f2ba7a09ed9a8aa5b1fe9}\label{classsf_1_1priv_1_1_sensor_impl_a56f215f6e50f2ba7a09ed9a8aa5b1fe9} 
+\index{sf::priv::SensorImpl@{sf::priv::SensorImpl}!open@{open}}
+\index{open@{open}!sf::priv::SensorImpl@{sf::priv::SensorImpl}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Sensor\+Impl\+::open (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_sensor_a687375af3ab77b818fca73735bcaea84}{Sensor\+::\+Type}}}]{sensor }\end{DoxyParamCaption})}
+
+
+
+Open the sensor. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em sensor} & Type of the sensor\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True on success, false on failure 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_sensor_impl_a56f215f6e50f2ba7a09ed9a8aa5b1fe9}\label{classsf_1_1priv_1_1_sensor_impl_a56f215f6e50f2ba7a09ed9a8aa5b1fe9} 
+\index{sf::priv::SensorImpl@{sf::priv::SensorImpl}!open@{open}}
+\index{open@{open}!sf::priv::SensorImpl@{sf::priv::SensorImpl}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Sensor\+Impl\+::open (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_sensor_a687375af3ab77b818fca73735bcaea84}{Sensor\+::\+Type}}}]{sensor }\end{DoxyParamCaption})}
+
+
+
+Open the sensor. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em sensor} & Type of the sensor\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True on success, false on failure 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_sensor_impl_a37b4f846a564c779ef6c26aede950901}\label{classsf_1_1priv_1_1_sensor_impl_a37b4f846a564c779ef6c26aede950901} 
+\index{sf::priv::SensorImpl@{sf::priv::SensorImpl}!processSensorEvents@{processSensorEvents}}
+\index{processSensorEvents@{processSensorEvents}!sf::priv::SensorImpl@{sf::priv::SensorImpl}}
+\doxysubsubsection{\texorpdfstring{processSensorEvents()}{processSensorEvents()}}
+{\footnotesize\ttfamily int sf\+::priv\+::\+Sensor\+Impl\+::process\+Sensor\+Events (\begin{DoxyParamCaption}\item[{int}]{fd,  }\item[{int}]{events,  }\item[{void \texorpdfstring{$\ast$}{*}}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Process the pending sensor data available and add them to our lists. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em fd} & File descriptor \\
+\hline
+{\em events} & Bitmask of the poll events that were triggered \\
+\hline
+{\em data} & Data pointer supplied\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Whether it should continue (1) or unregister the callback (0) 
+\end{DoxyReturn}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_sensor_impl_a37b4f846a564c779ef6c26aede950901_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_sensor_impl_a109e0ac8ff6605f8d1e22c6d8b64903c}\label{classsf_1_1priv_1_1_sensor_impl_a109e0ac8ff6605f8d1e22c6d8b64903c} 
+\index{sf::priv::SensorImpl@{sf::priv::SensorImpl}!setEnabled@{setEnabled}}
+\index{setEnabled@{setEnabled}!sf::priv::SensorImpl@{sf::priv::SensorImpl}}
+\doxysubsubsection{\texorpdfstring{setEnabled()}{setEnabled()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Sensor\+Impl\+::set\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})}
+
+
+
+Enable or disable the sensor. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em enabled} & True to enable, false to disable \\
+\hline
+\end{DoxyParams}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_sensor_impl_a109e0ac8ff6605f8d1e22c6d8b64903c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_sensor_impl_a109e0ac8ff6605f8d1e22c6d8b64903c}\label{classsf_1_1priv_1_1_sensor_impl_a109e0ac8ff6605f8d1e22c6d8b64903c} 
+\index{sf::priv::SensorImpl@{sf::priv::SensorImpl}!setEnabled@{setEnabled}}
+\index{setEnabled@{setEnabled}!sf::priv::SensorImpl@{sf::priv::SensorImpl}}
+\doxysubsubsection{\texorpdfstring{setEnabled()}{setEnabled()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Sensor\+Impl\+::set\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})}
+
+
+
+Enable or disable the sensor. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em enabled} & True to enable, false to disable \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classsf_1_1priv_1_1_sensor_impl_a109e0ac8ff6605f8d1e22c6d8b64903c}\label{classsf_1_1priv_1_1_sensor_impl_a109e0ac8ff6605f8d1e22c6d8b64903c} 
+\index{sf::priv::SensorImpl@{sf::priv::SensorImpl}!setEnabled@{setEnabled}}
+\index{setEnabled@{setEnabled}!sf::priv::SensorImpl@{sf::priv::SensorImpl}}
+\doxysubsubsection{\texorpdfstring{setEnabled()}{setEnabled()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Sensor\+Impl\+::set\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})}
+
+
+
+Enable or disable the sensor. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em enabled} & True to enable, false to disable \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classsf_1_1priv_1_1_sensor_impl_a109e0ac8ff6605f8d1e22c6d8b64903c}\label{classsf_1_1priv_1_1_sensor_impl_a109e0ac8ff6605f8d1e22c6d8b64903c} 
+\index{sf::priv::SensorImpl@{sf::priv::SensorImpl}!setEnabled@{setEnabled}}
+\index{setEnabled@{setEnabled}!sf::priv::SensorImpl@{sf::priv::SensorImpl}}
+\doxysubsubsection{\texorpdfstring{setEnabled()}{setEnabled()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Sensor\+Impl\+::set\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})}
+
+
+
+Enable or disable the sensor. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em enabled} & True to enable, false to disable \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classsf_1_1priv_1_1_sensor_impl_a109e0ac8ff6605f8d1e22c6d8b64903c}\label{classsf_1_1priv_1_1_sensor_impl_a109e0ac8ff6605f8d1e22c6d8b64903c} 
+\index{sf::priv::SensorImpl@{sf::priv::SensorImpl}!setEnabled@{setEnabled}}
+\index{setEnabled@{setEnabled}!sf::priv::SensorImpl@{sf::priv::SensorImpl}}
+\doxysubsubsection{\texorpdfstring{setEnabled()}{setEnabled()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Sensor\+Impl\+::set\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})}
+
+
+
+Enable or disable the sensor. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em enabled} & True to enable, false to disable \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classsf_1_1priv_1_1_sensor_impl_acc9e72689184fb6ecca7c69c60cf8922}\label{classsf_1_1priv_1_1_sensor_impl_acc9e72689184fb6ecca7c69c60cf8922} 
+\index{sf::priv::SensorImpl@{sf::priv::SensorImpl}!update@{update}}
+\index{update@{update}!sf::priv::SensorImpl@{sf::priv::SensorImpl}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesf_af97357d7d32e7d6a700d03be2f3b4811}{Vector3f}} sf\+::priv\+::\+Sensor\+Impl\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update the sensor and get its new value. 
+
+\begin{DoxyReturn}{Zwraca}
+\doxylink{classsf_1_1_sensor}{Sensor} value 
+\end{DoxyReturn}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_sensor_impl_acc9e72689184fb6ecca7c69c60cf8922_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_sensor_impl_acc9e72689184fb6ecca7c69c60cf8922}\label{classsf_1_1priv_1_1_sensor_impl_acc9e72689184fb6ecca7c69c60cf8922} 
+\index{sf::priv::SensorImpl@{sf::priv::SensorImpl}!update@{update}}
+\index{update@{update}!sf::priv::SensorImpl@{sf::priv::SensorImpl}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesf_af97357d7d32e7d6a700d03be2f3b4811}{Vector3f}} sf\+::priv\+::\+Sensor\+Impl\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update the sensor and get its new value. 
+
+\begin{DoxyReturn}{Zwraca}
+\doxylink{classsf_1_1_sensor}{Sensor} value 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_sensor_impl_acc9e72689184fb6ecca7c69c60cf8922}\label{classsf_1_1priv_1_1_sensor_impl_acc9e72689184fb6ecca7c69c60cf8922} 
+\index{sf::priv::SensorImpl@{sf::priv::SensorImpl}!update@{update}}
+\index{update@{update}!sf::priv::SensorImpl@{sf::priv::SensorImpl}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesf_af97357d7d32e7d6a700d03be2f3b4811}{Vector3f}} sf\+::priv\+::\+Sensor\+Impl\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update the sensor and get its new value. 
+
+\begin{DoxyReturn}{Zwraca}
+\doxylink{classsf_1_1_sensor}{Sensor} value 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_sensor_impl_acc9e72689184fb6ecca7c69c60cf8922}\label{classsf_1_1priv_1_1_sensor_impl_acc9e72689184fb6ecca7c69c60cf8922} 
+\index{sf::priv::SensorImpl@{sf::priv::SensorImpl}!update@{update}}
+\index{update@{update}!sf::priv::SensorImpl@{sf::priv::SensorImpl}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesf_af97357d7d32e7d6a700d03be2f3b4811}{Vector3f}} sf\+::priv\+::\+Sensor\+Impl\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update the sensor and get its new value. 
+
+\begin{DoxyReturn}{Zwraca}
+\doxylink{classsf_1_1_sensor}{Sensor} value 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_sensor_impl_acc9e72689184fb6ecca7c69c60cf8922}\label{classsf_1_1priv_1_1_sensor_impl_acc9e72689184fb6ecca7c69c60cf8922} 
+\index{sf::priv::SensorImpl@{sf::priv::SensorImpl}!update@{update}}
+\index{update@{update}!sf::priv::SensorImpl@{sf::priv::SensorImpl}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesf_af97357d7d32e7d6a700d03be2f3b4811}{Vector3f}} sf\+::priv\+::\+Sensor\+Impl\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update the sensor and get its new value. 
+
+\begin{DoxyReturn}{Zwraca}
+\doxylink{classsf_1_1_sensor}{Sensor} value 
+\end{DoxyReturn}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{classsf_1_1priv_1_1_sensor_impl_af6a81b65a64ea30b810630160827d375}\label{classsf_1_1priv_1_1_sensor_impl_af6a81b65a64ea30b810630160827d375} 
+\index{sf::priv::SensorImpl@{sf::priv::SensorImpl}!m\_enabled@{m\_enabled}}
+\index{m\_enabled@{m\_enabled}!sf::priv::SensorImpl@{sf::priv::SensorImpl}}
+\doxysubsubsection{\texorpdfstring{m\_enabled}{m\_enabled}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Sensor\+Impl\+::m\+\_\+enabled\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Enable state of the sensor. 
+
+\Hypertarget{classsf_1_1priv_1_1_sensor_impl_ac45910af43f12c29901c1db578db3b8d}\label{classsf_1_1priv_1_1_sensor_impl_ac45910af43f12c29901c1db578db3b8d} 
+\index{sf::priv::SensorImpl@{sf::priv::SensorImpl}!m\_index@{m\_index}}
+\index{m\_index@{m\_index}!sf::priv::SensorImpl@{sf::priv::SensorImpl}}
+\doxysubsubsection{\texorpdfstring{m\_index}{m\_index}}
+{\footnotesize\ttfamily unsigned int sf\+::priv\+::\+Sensor\+Impl\+::m\+\_\+index\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Index of the sensor. 
+
+\Hypertarget{classsf_1_1priv_1_1_sensor_impl_ab5485b918e3c764ab30282b486febb07}\label{classsf_1_1priv_1_1_sensor_impl_ab5485b918e3c764ab30282b486febb07} 
+\index{sf::priv::SensorImpl@{sf::priv::SensorImpl}!m\_sensor@{m\_sensor}}
+\index{m\_sensor@{m\_sensor}!sf::priv::SensorImpl@{sf::priv::SensorImpl}}
+\doxysubsubsection{\texorpdfstring{m\_sensor}{m\_sensor}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const ASensor\texorpdfstring{$\ast$}{*} sf\+::priv\+::\+Sensor\+Impl\+::m\+\_\+sensor\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Android sensor structure. 
+
+\Hypertarget{classsf_1_1priv_1_1_sensor_impl_ab62dc1b9dd265d8500a34fc8c35270c3}\label{classsf_1_1priv_1_1_sensor_impl_ab62dc1b9dd265d8500a34fc8c35270c3} 
+\index{sf::priv::SensorImpl@{sf::priv::SensorImpl}!m\_sensor@{m\_sensor}}
+\index{m\_sensor@{m\_sensor}!sf::priv::SensorImpl@{sf::priv::SensorImpl}}
+\doxysubsubsection{\texorpdfstring{m\_sensor}{m\_sensor}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1_sensor_a687375af3ab77b818fca73735bcaea84}{Sensor\+::\+Type}} sf\+::priv\+::\+Sensor\+Impl\+::m\+\_\+sensor\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Type of the sensor. 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+Android/\mbox{\hyperlink{_android_2_sensor_impl_8hpp}{Sensor\+Impl.\+hpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/i\+OS/\mbox{\hyperlink{i_o_s_2_sensor_impl_8hpp}{Sensor\+Impl.\+hpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+OSX/\mbox{\hyperlink{_o_s_x_2_sensor_impl_8hpp}{Sensor\+Impl.\+hpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+Unix/\mbox{\hyperlink{_unix_2_sensor_impl_8hpp}{Sensor\+Impl.\+hpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+Win32/\mbox{\hyperlink{_win32_2_sensor_impl_8hpp}{Sensor\+Impl.\+hpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+Android/\mbox{\hyperlink{_android_2_sensor_impl_8cpp}{Sensor\+Impl.\+cpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/i\+OS/\mbox{\hyperlink{_sensor_impl_8mm}{Sensor\+Impl.\+mm}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+OSX/\mbox{\hyperlink{_o_s_x_2_sensor_impl_8cpp}{Sensor\+Impl.\+cpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+Unix/\mbox{\hyperlink{_unix_2_sensor_impl_8cpp}{Sensor\+Impl.\+cpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+Win32/\mbox{\hyperlink{_win32_2_sensor_impl_8cpp}{Sensor\+Impl.\+cpp}}\end{DoxyCompactItemize}

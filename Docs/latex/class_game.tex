@@ -1,0 +1,132 @@
+\doxysection{Dokumentacja klasy Game}
+\hypertarget{class_game}{}\label{class_game}\index{Game@{Game}}
+
+
+Główna klasa silnika gry.  
+
+
+
+
+{\ttfamily \#include $<$Game.\+h$>$}
+
+
+
+Diagram współpracy dla Game\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{class_game__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_a0688bdc6486839d4436175d1d05773e0}{Game}} (int width, int height, std\+::string title)
+\begin{DoxyCompactList}\small\item\em Konstruktor inicjalizujący grę. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_a1ab78f5ed0d5ea879157357cf2fb2afa}{run}} ()
+\begin{DoxyCompactList}\small\item\em Uruchamia główną pętlę gry. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+const sf\+::\+Time \mbox{\hyperlink{class_game_ab7ba02af20ea1e9ace8369419e064ca7}{time\+Per\+Frame}} = sf\+::seconds(1.f / 60.f)
+\begin{DoxyCompactList}\small\item\em Stały czas trwania jednej klatki logicznej (1/60 sekundy). \end{DoxyCompactList}\item 
+sf\+::\+Clock \mbox{\hyperlink{class_game_a56adf7f99e06924603e143d3f3324321}{clock}}
+\begin{DoxyCompactList}\small\item\em Zegar do mierzenia czasu rzeczywistego. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_game_8h_ae7efd7ef77698f16206f5c66180a389f}{Game\+Data\+Ref}} \mbox{\hyperlink{class_game_a7481ceba9e4ddc0ab2b96b411729bf58}{m\+\_\+data}} = std\+::make\+\_\+shared$<$\mbox{\hyperlink{struct_game_data}{Game\+Data}}$>$()
+\begin{DoxyCompactList}\small\item\em Współdzielone dane gry (okno, maszyna stanów). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Główna klasa silnika gry. 
+
+Odpowiada za inicjalizację okna, zarządzanie czasem (\doxylink{class_game}{Game} Loop) oraz uruchomienie maszyny stanów. 
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{class_game_a0688bdc6486839d4436175d1d05773e0}\label{class_game_a0688bdc6486839d4436175d1d05773e0} 
+\index{Game@{Game}!Game@{Game}}
+\index{Game@{Game}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{Game()}{Game()}}
+{\footnotesize\ttfamily Game\+::\+Game (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height,  }\item[{std\+::string}]{title }\end{DoxyParamCaption})}
+
+
+
+Konstruktor inicjalizujący grę. 
+
+
+\begin{DoxyItemize}
+\item Tworzy okno aplikacji i ustawia pierwszy stan (\doxylink{class_main_menu_state}{Main\+Menu\+State}).
+\item 
+\begin{DoxyParams}{Parametry}
+{\em width} & Szerokość okna. \\
+\hline
+{\em height} & Wysokość okna. \\
+\hline
+{\em title} & Tytuł okna. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_game_a1ab78f5ed0d5ea879157357cf2fb2afa}\label{class_game_a1ab78f5ed0d5ea879157357cf2fb2afa} 
+\index{Game@{Game}!run@{run}}
+\index{run@{run}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Game\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Uruchamia główną pętlę gry. 
+
+Pętla obsługuje\+:
+\begin{DoxyItemize}
+\item Zmiany stanów (process\+State\+Changes)
+\item Aktualizację logiki (update) ze stałym krokiem czasowym (fixed time step).
+\item Renderowanie (draw) z interpolacją. 
+\end{DoxyItemize}Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{class_game_a1ab78f5ed0d5ea879157357cf2fb2afa_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{class_game_a56adf7f99e06924603e143d3f3324321}\label{class_game_a56adf7f99e06924603e143d3f3324321} 
+\index{Game@{Game}!clock@{clock}}
+\index{clock@{clock}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{clock}{clock}}
+{\footnotesize\ttfamily sf\+::\+Clock Game\+::clock\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Zegar do mierzenia czasu rzeczywistego. 
+
+\Hypertarget{class_game_a7481ceba9e4ddc0ab2b96b411729bf58}\label{class_game_a7481ceba9e4ddc0ab2b96b411729bf58} 
+\index{Game@{Game}!m\_data@{m\_data}}
+\index{m\_data@{m\_data}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{m\_data}{m\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_game_8h_ae7efd7ef77698f16206f5c66180a389f}{Game\+Data\+Ref}} Game\+::m\+\_\+data = std\+::make\+\_\+shared$<$\mbox{\hyperlink{struct_game_data}{Game\+Data}}$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Współdzielone dane gry (okno, maszyna stanów). 
+
+\Hypertarget{class_game_ab7ba02af20ea1e9ace8369419e064ca7}\label{class_game_ab7ba02af20ea1e9ace8369419e064ca7} 
+\index{Game@{Game}!timePerFrame@{timePerFrame}}
+\index{timePerFrame@{timePerFrame}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{timePerFrame}{timePerFrame}}
+{\footnotesize\ttfamily const sf\+::\+Time Game\+::time\+Per\+Frame = sf\+::seconds(1.f / 60.f)\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Stały czas trwania jednej klatki logicznej (1/60 sekundy). 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_game_8h}{Game.\+h}}\item 
+\mbox{\hyperlink{_game_8cpp}{Game.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,249 @@
+\doxysection{codec.\+h}
+\hypertarget{codec_8h_source}{}\label{codec_8h_source}\index{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/vorbis/codec.h@{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/vorbis/codec.h}}
+\mbox{\hyperlink{codec_8h}{Idź do dokumentacji tego pliku.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/********************************************************************}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ THIS\ FILE\ IS\ PART\ OF\ THE\ OggVorbis\ SOFTWARE\ CODEC\ SOURCE\ CODE.\ \ \ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ USE,\ DISTRIBUTION\ AND\ REPRODUCTION\ OF\ THIS\ LIBRARY\ SOURCE\ IS\ \ \ \ \ *}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ GOVERNED\ BY\ A\ BSD-\/STYLE\ SOURCE\ LICENSE\ INCLUDED\ WITH\ THIS\ SOURCE\ *}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ IN\ 'COPYING'.\ PLEASE\ READ\ THESE\ TERMS\ BEFORE\ DISTRIBUTING.\ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ THE\ OggVorbis\ SOURCE\ CODE\ IS\ (C)\ COPYRIGHT\ 1994-\/2001\ \ \ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ by\ the\ Xiph.Org\ Foundation\ http://www.xiph.org/\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00010\ \textcolor{comment}{}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ ********************************************************************}}
+\DoxyCodeLine{00012\ \textcolor{comment}{}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ function:\ libvorbis\ codec\ headers}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ last\ mod:\ \$Id:\ codec.h\ 17021\ 2010-\/03-\/24\ 09:29:41Z\ xiphmont\ \$}}
+\DoxyCodeLine{00015\ \textcolor{comment}{}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ ********************************************************************/}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#ifndef\ \_vorbis\_codec\_h\_}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ \_vorbis\_codec\_h\_}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00022\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}}
+\DoxyCodeLine{00023\ \{}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_cplusplus\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{ogg_8h}{ogg/ogg.h}}>}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structvorbis__info}{vorbis\_info}}\{}
+\DoxyCodeLine{00029\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structvorbis__info_a2d832259b1e3fbf4d1cd619ab5743612}{version}};}
+\DoxyCodeLine{00030\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structvorbis__info_a4240e042b91744b4fd810426f18252b4}{channels}};}
+\DoxyCodeLine{00031\ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{structvorbis__info_a01879ed23ecd9605cf6779ef2663a681}{rate}};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \textcolor{comment}{/*\ The\ below\ bitrate\ declarations\ are\ *hints*.}}
+\DoxyCodeLine{00034\ \textcolor{comment}{\ \ \ \ \ Combinations\ of\ the\ three\ values\ carry\ the\ following\ implications:}}
+\DoxyCodeLine{00035\ \textcolor{comment}{}}
+\DoxyCodeLine{00036\ \textcolor{comment}{\ \ \ \ \ all\ three\ set\ to\ the\ same\ value:}}
+\DoxyCodeLine{00037\ \textcolor{comment}{\ \ \ \ \ \ \ implies\ a\ fixed\ rate\ bitstream}}
+\DoxyCodeLine{00038\ \textcolor{comment}{\ \ \ \ \ only\ nominal\ set:}}
+\DoxyCodeLine{00039\ \textcolor{comment}{\ \ \ \ \ \ \ implies\ a\ VBR\ stream\ that\ averages\ the\ nominal\ bitrate.\ \ No\ hard}}
+\DoxyCodeLine{00040\ \textcolor{comment}{\ \ \ \ \ \ \ upper/lower\ limit}}
+\DoxyCodeLine{00041\ \textcolor{comment}{\ \ \ \ \ upper\ and\ or\ lower\ set:}}
+\DoxyCodeLine{00042\ \textcolor{comment}{\ \ \ \ \ \ \ implies\ a\ VBR\ bitstream\ that\ obeys\ the\ bitrate\ limits.\ nominal}}
+\DoxyCodeLine{00043\ \textcolor{comment}{\ \ \ \ \ \ \ may\ also\ be\ set\ to\ give\ a\ nominal\ rate.}}
+\DoxyCodeLine{00044\ \textcolor{comment}{\ \ \ \ \ none\ set:}}
+\DoxyCodeLine{00045\ \textcolor{comment}{\ \ \ \ \ \ \ the\ coder\ does\ not\ care\ to\ speculate.}}
+\DoxyCodeLine{00046\ \textcolor{comment}{\ \ */}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{structvorbis__info_a2d9d0e0725ae71c855ad39ce07bf7c88}{bitrate\_upper}};}
+\DoxyCodeLine{00049\ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{structvorbis__info_a71127d3e35c30fa110d7f321302a91b8}{bitrate\_nominal}};}
+\DoxyCodeLine{00050\ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{structvorbis__info_a216284288febd46a5547901cd5e6cd62}{bitrate\_lower}};}
+\DoxyCodeLine{00051\ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{structvorbis__info_aa511ecfc9eee8129df8f70e62ed08dc7}{bitrate\_window}};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{structvorbis__info_a440988f081a417fd1586a4c3d44bc00c}{codec\_setup}};}
+\DoxyCodeLine{00054\ \}\ \mbox{\hyperlink{codec_8h_a7dd4c2d03d96b7064d3188f3bafbe52a}{vorbis\_info}};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{comment}{/*\ vorbis\_dsp\_state\ buffers\ the\ current\ vorbis\ audio}}
+\DoxyCodeLine{00057\ \textcolor{comment}{\ \ \ analysis/synthesis\ state.\ \ The\ DSP\ state\ belongs\ to\ a\ specific}}
+\DoxyCodeLine{00058\ \textcolor{comment}{\ \ \ logical\ bitstream\ ****************************************************/}}
+\DoxyCodeLine{00059\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structvorbis__dsp__state}{vorbis\_dsp\_state}}\{}
+\DoxyCodeLine{00060\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structvorbis__dsp__state_a9b983a6901a311f2d354f2b6c51cf93b}{analysisp}};}
+\DoxyCodeLine{00061\ \ \ \mbox{\hyperlink{structvorbis__info}{vorbis\_info}}\ *\mbox{\hyperlink{structvorbis__dsp__state_ab6819a31e79031cdcd8f2ff40a5c1def}{vi}};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \textcolor{keywordtype}{float}\ **\mbox{\hyperlink{structvorbis__dsp__state_ab33bafd2638e5bea5737709feea89027}{pcm}};}
+\DoxyCodeLine{00064\ \ \ \textcolor{keywordtype}{float}\ **\mbox{\hyperlink{structvorbis__dsp__state_ab2c2a87593f0d7a3c867ba80102c4260}{pcmret}};}
+\DoxyCodeLine{00065\ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \mbox{\hyperlink{structvorbis__dsp__state_a33cf1637859094c31429dace6dfc79e2}{pcm\_storage}};}
+\DoxyCodeLine{00066\ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \mbox{\hyperlink{structvorbis__dsp__state_a6d09bbf3927e337d721b05f669bd70c6}{pcm\_current}};}
+\DoxyCodeLine{00067\ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \mbox{\hyperlink{structvorbis__dsp__state_a8db33e5f4c0b7f31f218c9ff6ccd7ac3}{pcm\_returned}};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \textcolor{keywordtype}{int}\ \ \mbox{\hyperlink{structvorbis__dsp__state_aecc3c42d23d876c8bfd396b5c2ac5eb6}{preextrapolate}};}
+\DoxyCodeLine{00070\ \ \ \textcolor{keywordtype}{int}\ \ \mbox{\hyperlink{structvorbis__dsp__state_af48b32e7555d54a5d18a24385f1296d0}{eofflag}};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{structvorbis__dsp__state_a7086b355f6ffe286f388e95df943cac0}{lW}};}
+\DoxyCodeLine{00073\ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{structvorbis__dsp__state_a1cc3a520dcf831fb967341e5095c7b38}{W}};}
+\DoxyCodeLine{00074\ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{structvorbis__dsp__state_a2ada93ee1004bcc0803238ee4416bc1e}{nW}};}
+\DoxyCodeLine{00075\ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{structvorbis__dsp__state_a241d3dc3b6c931e93ce53cbf69282350}{centerW}};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\_int64\_t}}\ \mbox{\hyperlink{structvorbis__dsp__state_af84a7a4855db2744d1ef73f48cb6b352}{granulepos}};}
+\DoxyCodeLine{00078\ \ \ \mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\_int64\_t}}\ \mbox{\hyperlink{structvorbis__dsp__state_a38a8b96daf9d16d8cce0522e203635a6}{sequence}};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\_int64\_t}}\ \mbox{\hyperlink{structvorbis__dsp__state_ae2d065c13e84870fd889c82cd2e7a04f}{glue\_bits}};}
+\DoxyCodeLine{00081\ \ \ \mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\_int64\_t}}\ \mbox{\hyperlink{structvorbis__dsp__state_adef49c2187f4ed3381973274e1b01151}{time\_bits}};}
+\DoxyCodeLine{00082\ \ \ \mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\_int64\_t}}\ \mbox{\hyperlink{structvorbis__dsp__state_a2913a4ebbbd6721c53264a2ca8466cea}{floor\_bits}};}
+\DoxyCodeLine{00083\ \ \ \mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\_int64\_t}}\ \mbox{\hyperlink{structvorbis__dsp__state_a3091c7fac6b57c54027c32931a7e6ee0}{res\_bits}};}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ *\mbox{\hyperlink{structvorbis__dsp__state_a97ff4df8d289e5e3968029e47d7f8162}{backend\_state}};}
+\DoxyCodeLine{00086\ \}\ \mbox{\hyperlink{codec_8h_a7d1df02911c98d6c497416d7a6db4918}{vorbis\_dsp\_state}};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structvorbis__block}{vorbis\_block}}\{}
+\DoxyCodeLine{00089\ \ \ \textcolor{comment}{/*\ necessary\ stream\ state\ for\ linking\ to\ the\ framing\ abstraction\ */}}
+\DoxyCodeLine{00090\ \ \ \textcolor{keywordtype}{float}\ \ **\mbox{\hyperlink{structvorbis__block_ac8312d70a6e63afc01d3df8a54ac6508}{pcm}};\ \ \ \ \ \ \ \textcolor{comment}{/*\ this\ is\ a\ pointer\ into\ local\ storage\ */}}
+\DoxyCodeLine{00091\ \ \ \mbox{\hyperlink{structoggpack__buffer}{oggpack\_buffer}}\ \mbox{\hyperlink{structvorbis__block_a43f1746974a729fa4e835ef995f9782a}{opb}};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \textcolor{keywordtype}{long}\ \ \mbox{\hyperlink{structvorbis__block_a97675088561ed9aa4559e869aafd1f2c}{lW}};}
+\DoxyCodeLine{00094\ \ \ \textcolor{keywordtype}{long}\ \ \mbox{\hyperlink{structvorbis__block_a1e420440dd6a5a39262c0fe7afa8435a}{W}};}
+\DoxyCodeLine{00095\ \ \ \textcolor{keywordtype}{long}\ \ \mbox{\hyperlink{structvorbis__block_a6fa002c8c36ad39c1c015cfa673dda28}{nW}};}
+\DoxyCodeLine{00096\ \ \ \textcolor{keywordtype}{int}\ \ \ \mbox{\hyperlink{structvorbis__block_a946562a7fdb80cabf6ee749bdce1a0ed}{pcmend}};}
+\DoxyCodeLine{00097\ \ \ \textcolor{keywordtype}{int}\ \ \ \mbox{\hyperlink{structvorbis__block_adab44bb8520c9d5daafee3f1a1bcf538}{mode}};}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structvorbis__block_a7bc1252bc17a2cd1ee2a4154fdd2617b}{eofflag}};}
+\DoxyCodeLine{00100\ \ \ \mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\_int64\_t}}\ \mbox{\hyperlink{structvorbis__block_a3dc7d5e474ae80ea641df91eba16b490}{granulepos}};}
+\DoxyCodeLine{00101\ \ \ \mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\_int64\_t}}\ \mbox{\hyperlink{structvorbis__block_a09e48c70ae79cae2d37a4e0e55f294ef}{sequence}};}
+\DoxyCodeLine{00102\ \ \ \mbox{\hyperlink{structvorbis__dsp__state}{vorbis\_dsp\_state}}\ *\mbox{\hyperlink{structvorbis__block_adefe79be61ef3631c18cd7b8afae31a2}{vd}};\ \textcolor{comment}{/*\ For\ read-\/only\ access\ of\ configuration\ */}}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ \textcolor{comment}{/*\ local\ storage\ to\ avoid\ remallocing;\ it's\ up\ to\ the\ mapping\ to}}
+\DoxyCodeLine{00105\ \textcolor{comment}{\ \ \ \ \ structure\ it\ */}}
+\DoxyCodeLine{00106\ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *\mbox{\hyperlink{structvorbis__block_a457093b574de4317ae1b2505a868a5fb}{localstore}};}
+\DoxyCodeLine{00107\ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structvorbis__block_a5d207139360d9fa6c825ebca553ae984}{localtop}};}
+\DoxyCodeLine{00108\ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structvorbis__block_a0bf878ef26f578abfd5c7974d8a09f7d}{localalloc}};}
+\DoxyCodeLine{00109\ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structvorbis__block_a24008023c086b4a0eb8b72761cfcf338}{totaluse}};}
+\DoxyCodeLine{00110\ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structalloc__chain}{alloc\_chain}}\ *\mbox{\hyperlink{structvorbis__block_a047afc2ab3e3936d86817ff45c0eecde}{reap}};}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \textcolor{comment}{/*\ bitmetrics\ for\ the\ frame\ */}}
+\DoxyCodeLine{00113\ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{structvorbis__block_ae1456c556d8365c41ec816956759074b}{glue\_bits}};}
+\DoxyCodeLine{00114\ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{structvorbis__block_ab92eba2cf1a653478630617ddad97f88}{time\_bits}};}
+\DoxyCodeLine{00115\ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{structvorbis__block_ac96102ac7115856ff07be7cebeb6de37}{floor\_bits}};}
+\DoxyCodeLine{00116\ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{structvorbis__block_a3c91d73c477db77f4b85ded0fdcb607c}{res\_bits}};}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{structvorbis__block_ab506fee4272b6e8c634516c1cbb1e638}{internal}};}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \}\ \mbox{\hyperlink{codec_8h_a0642c8e8f585a5556c0c74735cc9de8a}{vorbis\_block}};}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \textcolor{comment}{/*\ vorbis\_block\ is\ a\ single\ block\ of\ data\ to\ be\ processed\ as\ part\ of}}
+\DoxyCodeLine{00123\ \textcolor{comment}{the\ analysis/synthesis\ stream;\ it\ belongs\ to\ a\ specific\ logical}}
+\DoxyCodeLine{00124\ \textcolor{comment}{bitstream,\ but\ is\ independent\ from\ other\ vorbis\_blocks\ belonging\ to}}
+\DoxyCodeLine{00125\ \textcolor{comment}{that\ logical\ bitstream.\ *************************************************/}}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structalloc__chain}{alloc\_chain}}\{}
+\DoxyCodeLine{00128\ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{structalloc__chain_a564538413768f266bd5bda09d892e99d}{ptr}};}
+\DoxyCodeLine{00129\ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structalloc__chain}{alloc\_chain}}\ *\mbox{\hyperlink{structalloc__chain_a596f6605e59080015c3c6dfd07326c83}{next}};}
+\DoxyCodeLine{00130\ \};}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \textcolor{comment}{/*\ vorbis\_info\ contains\ all\ the\ setup\ information\ specific\ to\ the}}
+\DoxyCodeLine{00133\ \textcolor{comment}{\ \ \ specific\ compression/decompression\ mode\ in\ progress\ (eg,}}
+\DoxyCodeLine{00134\ \textcolor{comment}{\ \ \ psychoacoustic\ settings,\ channel\ setup,\ options,\ codebook}}
+\DoxyCodeLine{00135\ \textcolor{comment}{\ \ \ etc).\ vorbis\_info\ and\ substructures\ are\ in\ backends.h.}}
+\DoxyCodeLine{00136\ \textcolor{comment}{*********************************************************************/}}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \textcolor{comment}{/*\ the\ comments\ are\ not\ part\ of\ vorbis\_info\ so\ that\ vorbis\_info\ can\ be}}
+\DoxyCodeLine{00139\ \textcolor{comment}{\ \ \ static\ storage\ */}}
+\DoxyCodeLine{00140\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structvorbis__comment}{vorbis\_comment}}\{}
+\DoxyCodeLine{00141\ \ \ \textcolor{comment}{/*\ unlimited\ user\ comment\ fields.\ \ libvorbis\ writes\ 'libvorbis'}}
+\DoxyCodeLine{00142\ \textcolor{comment}{\ \ \ \ \ whatever\ vendor\ is\ set\ to\ in\ encode\ */}}
+\DoxyCodeLine{00143\ \ \ \textcolor{keywordtype}{char}\ **\mbox{\hyperlink{structvorbis__comment_ac45cb70542b0be5ce3e8d85db6df48ec}{user\_comments}};}
+\DoxyCodeLine{00144\ \ \ \textcolor{keywordtype}{int}\ \ \ *\mbox{\hyperlink{structvorbis__comment_a4698d400a859e9338a5828ead97cacdf}{comment\_lengths}};}
+\DoxyCodeLine{00145\ \ \ \textcolor{keywordtype}{int}\ \ \ \ \mbox{\hyperlink{structvorbis__comment_aa338208fb0f485b3818832a7d07dbe92}{comments}};}
+\DoxyCodeLine{00146\ \ \ \textcolor{keywordtype}{char}\ \ *\mbox{\hyperlink{structvorbis__comment_a1f25158a2c045a6dd8a13b33b34612d3}{vendor}};}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \}\ \mbox{\hyperlink{codec_8h_a86b64bad1e47f16f248d65e5e5459bcc}{vorbis\_comment}};}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \textcolor{comment}{/*\ libvorbis\ encodes\ in\ two\ abstraction\ layers;\ first\ we\ perform\ DSP}}
+\DoxyCodeLine{00152\ \textcolor{comment}{\ \ \ and\ produce\ a\ packet\ (see\ docs/analysis.txt).\ \ The\ packet\ is\ then}}
+\DoxyCodeLine{00153\ \textcolor{comment}{\ \ \ coded\ into\ a\ framed\ OggSquish\ bitstream\ by\ the\ second\ layer\ (see}}
+\DoxyCodeLine{00154\ \textcolor{comment}{\ \ \ docs/framing.txt).\ \ Decode\ is\ the\ reverse\ process;\ we\ sync/frame}}
+\DoxyCodeLine{00155\ \textcolor{comment}{\ \ \ the\ bitstream\ and\ extract\ individual\ packets,\ then\ decode\ the}}
+\DoxyCodeLine{00156\ \textcolor{comment}{\ \ \ packet\ back\ into\ PCM\ audio.}}
+\DoxyCodeLine{00157\ \textcolor{comment}{}}
+\DoxyCodeLine{00158\ \textcolor{comment}{\ \ \ The\ extra\ framing/packetizing\ is\ used\ in\ streaming\ formats,\ such\ as}}
+\DoxyCodeLine{00159\ \textcolor{comment}{\ \ \ files.\ \ Over\ the\ net\ (such\ as\ with\ UDP),\ the\ framing\ and}}
+\DoxyCodeLine{00160\ \textcolor{comment}{\ \ \ packetization\ aren't\ necessary\ as\ they're\ provided\ by\ the\ transport}}
+\DoxyCodeLine{00161\ \textcolor{comment}{\ \ \ and\ the\ streaming\ layer\ is\ not\ used\ */}}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \textcolor{comment}{/*\ Vorbis\ PRIMITIVES:\ general\ ***************************************/}}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00165\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \ \ \ \ \mbox{\hyperlink{codec_8h_af0ed4e74fe68802c7d337a2645e759d6}{vorbis\_info\_init}}(\mbox{\hyperlink{structvorbis__info}{vorbis\_info}}\ *vi);}
+\DoxyCodeLine{00166\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \ \ \ \ \mbox{\hyperlink{codec_8h_abaf171c1341b23e1c2eed7dab00d9f4a}{vorbis\_info\_clear}}(\mbox{\hyperlink{structvorbis__info}{vorbis\_info}}\ *vi);}
+\DoxyCodeLine{00167\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \mbox{\hyperlink{codec_8h_acb7d9b60b9c9f057e1bed14c76810ae5}{vorbis\_info\_blocksize}}(\mbox{\hyperlink{structvorbis__info}{vorbis\_info}}\ *vi,\textcolor{keywordtype}{int}\ zo);}
+\DoxyCodeLine{00168\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \ \ \ \ \mbox{\hyperlink{codec_8h_a0bab2093941e2bb89651d62ca5997676}{vorbis\_comment\_init}}(\mbox{\hyperlink{structvorbis__comment}{vorbis\_comment}}\ *vc);}
+\DoxyCodeLine{00169\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \ \ \ \ \mbox{\hyperlink{codec_8h_a0f1108d97f1be4d4740c060f32d78bf5}{vorbis\_comment\_add}}(\mbox{\hyperlink{structvorbis__comment}{vorbis\_comment}}\ *vc,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *comment);}
+\DoxyCodeLine{00170\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \ \ \ \ \mbox{\hyperlink{codec_8h_a0d0b69d0f7018455ad15ff735a6403fb}{vorbis\_comment\_add\_tag}}(\mbox{\hyperlink{structvorbis__comment}{vorbis\_comment}}\ *vc,}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *tag,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *contents);}
+\DoxyCodeLine{00172\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{char}\ \ \ \ *\mbox{\hyperlink{codec_8h_a1e644513d72244730f91c7859633cef9}{vorbis\_comment\_query}}(\mbox{\hyperlink{structvorbis__comment}{vorbis\_comment}}\ *vc,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *tag,\ \textcolor{keywordtype}{int}\ count);}
+\DoxyCodeLine{00173\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \mbox{\hyperlink{codec_8h_a2d2dca98f34a0fd124cd8f0dc3e243eb}{vorbis\_comment\_query\_count}}(\mbox{\hyperlink{structvorbis__comment}{vorbis\_comment}}\ *vc,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *tag);}
+\DoxyCodeLine{00174\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \ \ \ \ \mbox{\hyperlink{codec_8h_a2fd38dcf146b850e88f281978b580d3e}{vorbis\_comment\_clear}}(\mbox{\hyperlink{structvorbis__comment}{vorbis\_comment}}\ *vc);}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \mbox{\hyperlink{codec_8h_ab6d85544ab746e98fc63308f6bed27a0}{vorbis\_block\_init}}(\mbox{\hyperlink{structvorbis__dsp__state}{vorbis\_dsp\_state}}\ *v,\ \mbox{\hyperlink{structvorbis__block}{vorbis\_block}}\ *vb);}
+\DoxyCodeLine{00177\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \mbox{\hyperlink{codec_8h_a6a89cd06e8119b22a2d6a565e2d92c4e}{vorbis\_block\_clear}}(\mbox{\hyperlink{structvorbis__block}{vorbis\_block}}\ *vb);}
+\DoxyCodeLine{00178\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \ \ \ \ \mbox{\hyperlink{codec_8h_a3af19007415290a3f237e9a821bfe616}{vorbis\_dsp\_clear}}(\mbox{\hyperlink{structvorbis__dsp__state}{vorbis\_dsp\_state}}\ *v);}
+\DoxyCodeLine{00179\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{double}\ \ \ \mbox{\hyperlink{codec_8h_a33bdf9020eff4b7aebf05f206312b6d0}{vorbis\_granule\_time}}(\mbox{\hyperlink{structvorbis__dsp__state}{vorbis\_dsp\_state}}\ *v,}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\_int64\_t}}\ granulepos);}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{codec_8h_aa83766adc4fa30bc84e8caf90e3dac16}{vorbis\_version\_string}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00184\ \textcolor{comment}{/*\ Vorbis\ PRIMITIVES:\ analysis/DSP\ layer\ ****************************/}}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00186\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \mbox{\hyperlink{codec_8h_abdcd5ee6f4e60c13505170a0f0ec752c}{vorbis\_analysis\_init}}(\mbox{\hyperlink{structvorbis__dsp__state}{vorbis\_dsp\_state}}\ *v,\mbox{\hyperlink{structvorbis__info}{vorbis\_info}}\ *vi);}
+\DoxyCodeLine{00187\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \mbox{\hyperlink{codec_8h_ac031289d0c9856508b5bff3ffb992246}{vorbis\_commentheader\_out}}(\mbox{\hyperlink{structvorbis__comment}{vorbis\_comment}}\ *vc,\ \mbox{\hyperlink{structogg__packet}{ogg\_packet}}\ *op);}
+\DoxyCodeLine{00188\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \mbox{\hyperlink{codec_8h_a76b877e3ab680d7537ec58ebd7fa990a}{vorbis\_analysis\_headerout}}(\mbox{\hyperlink{structvorbis__dsp__state}{vorbis\_dsp\_state}}\ *v,}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structvorbis__comment}{vorbis\_comment}}\ *vc,}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structogg__packet}{ogg\_packet}}\ *op,}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structogg__packet}{ogg\_packet}}\ *op\_comm,}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structogg__packet}{ogg\_packet}}\ *op\_code);}
+\DoxyCodeLine{00193\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{float}\ \ **\mbox{\hyperlink{codec_8h_a67a3c3499ca30d668a50794d9f3494a9}{vorbis\_analysis\_buffer}}(\mbox{\hyperlink{structvorbis__dsp__state}{vorbis\_dsp\_state}}\ *v,\textcolor{keywordtype}{int}\ vals);}
+\DoxyCodeLine{00194\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \mbox{\hyperlink{codec_8h_ae527e6764c45e6e8a23c60d777496adf}{vorbis\_analysis\_wrote}}(\mbox{\hyperlink{structvorbis__dsp__state}{vorbis\_dsp\_state}}\ *v,\textcolor{keywordtype}{int}\ vals);}
+\DoxyCodeLine{00195\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \mbox{\hyperlink{codec_8h_a0c75b86b435cd45905ff62e2b9c93ab1}{vorbis\_analysis\_blockout}}(\mbox{\hyperlink{structvorbis__dsp__state}{vorbis\_dsp\_state}}\ *v,\mbox{\hyperlink{structvorbis__block}{vorbis\_block}}\ *vb);}
+\DoxyCodeLine{00196\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \mbox{\hyperlink{codec_8h_a3873974078caf99893e6268e5ce6d896}{vorbis\_analysis}}(\mbox{\hyperlink{structvorbis__block}{vorbis\_block}}\ *vb,\mbox{\hyperlink{structogg__packet}{ogg\_packet}}\ *op);}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00198\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \mbox{\hyperlink{codec_8h_a7efe5889f6919053b8ab8d69e61ac995}{vorbis\_bitrate\_addblock}}(\mbox{\hyperlink{structvorbis__block}{vorbis\_block}}\ *vb);}
+\DoxyCodeLine{00199\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \mbox{\hyperlink{codec_8h_a37418540741db649a608cac3d2be440f}{vorbis\_bitrate\_flushpacket}}(\mbox{\hyperlink{structvorbis__dsp__state}{vorbis\_dsp\_state}}\ *vd,}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structogg__packet}{ogg\_packet}}\ *op);}
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00202\ \textcolor{comment}{/*\ Vorbis\ PRIMITIVES:\ synthesis\ layer\ *******************************/}}
+\DoxyCodeLine{00203\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \mbox{\hyperlink{codec_8h_aded021367258095562dae4d0e150dd8a}{vorbis\_synthesis\_idheader}}(\mbox{\hyperlink{structogg__packet}{ogg\_packet}}\ *op);}
+\DoxyCodeLine{00204\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \mbox{\hyperlink{codec_8h_af1192fabbd28f89d048de1b381463219}{vorbis\_synthesis\_headerin}}(\mbox{\hyperlink{structvorbis__info}{vorbis\_info}}\ *vi,\mbox{\hyperlink{structvorbis__comment}{vorbis\_comment}}\ *vc,}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structogg__packet}{ogg\_packet}}\ *op);}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00207\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \mbox{\hyperlink{codec_8h_a44bb00553295f2a9088e169cf4a3eb07}{vorbis\_synthesis\_init}}(\mbox{\hyperlink{structvorbis__dsp__state}{vorbis\_dsp\_state}}\ *v,\mbox{\hyperlink{structvorbis__info}{vorbis\_info}}\ *vi);}
+\DoxyCodeLine{00208\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \mbox{\hyperlink{codec_8h_ad650e1f6753a2644d735f605164c40f3}{vorbis\_synthesis\_restart}}(\mbox{\hyperlink{structvorbis__dsp__state}{vorbis\_dsp\_state}}\ *v);}
+\DoxyCodeLine{00209\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \mbox{\hyperlink{codec_8h_ad74ed4c29400ef6d23b14846c8c4ccb4}{vorbis\_synthesis}}(\mbox{\hyperlink{structvorbis__block}{vorbis\_block}}\ *vb,\mbox{\hyperlink{structogg__packet}{ogg\_packet}}\ *op);}
+\DoxyCodeLine{00210\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \mbox{\hyperlink{codec_8h_a378e222706bd42aa1fa30924311bfa07}{vorbis\_synthesis\_trackonly}}(\mbox{\hyperlink{structvorbis__block}{vorbis\_block}}\ *vb,\mbox{\hyperlink{structogg__packet}{ogg\_packet}}\ *op);}
+\DoxyCodeLine{00211\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \mbox{\hyperlink{codec_8h_acbcda429474c093c54fd9e2ffaee2547}{vorbis\_synthesis\_blockin}}(\mbox{\hyperlink{structvorbis__dsp__state}{vorbis\_dsp\_state}}\ *v,\mbox{\hyperlink{structvorbis__block}{vorbis\_block}}\ *vb);}
+\DoxyCodeLine{00212\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \mbox{\hyperlink{codec_8h_ac8d21b854dbcb022dab0b46521e9de31}{vorbis\_synthesis\_pcmout}}(\mbox{\hyperlink{structvorbis__dsp__state}{vorbis\_dsp\_state}}\ *v,\textcolor{keywordtype}{float}\ ***pcm);}
+\DoxyCodeLine{00213\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \mbox{\hyperlink{codec_8h_a4e65e4bba683ae5bd185e2fcc24b3d94}{vorbis\_synthesis\_lapout}}(\mbox{\hyperlink{structvorbis__dsp__state}{vorbis\_dsp\_state}}\ *v,\textcolor{keywordtype}{float}\ ***pcm);}
+\DoxyCodeLine{00214\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \mbox{\hyperlink{codec_8h_a81b9782f945ca76509f79cdf5777b4cb}{vorbis\_synthesis\_read}}(\mbox{\hyperlink{structvorbis__dsp__state}{vorbis\_dsp\_state}}\ *v,\textcolor{keywordtype}{int}\ samples);}
+\DoxyCodeLine{00215\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{long}\ \ \ \ \ \mbox{\hyperlink{codec_8h_a5868aa9f561feefb7f613e9fa42967b8}{vorbis\_packet\_blocksize}}(\mbox{\hyperlink{structvorbis__info}{vorbis\_info}}\ *vi,\mbox{\hyperlink{structogg__packet}{ogg\_packet}}\ *op);}
+\DoxyCodeLine{00216\ }
+\DoxyCodeLine{00217\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \mbox{\hyperlink{codec_8h_a336af3b4f1fc15f9807351341ed87b13}{vorbis\_synthesis\_halfrate}}(\mbox{\hyperlink{structvorbis__info}{vorbis\_info}}\ *v,\textcolor{keywordtype}{int}\ flag);}
+\DoxyCodeLine{00218\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \mbox{\hyperlink{codec_8h_abd73dee048684f915c30fc04e8e8d331}{vorbis\_synthesis\_halfrate\_p}}(\mbox{\hyperlink{structvorbis__info}{vorbis\_info}}\ *v);}
+\DoxyCodeLine{00219\ }
+\DoxyCodeLine{00220\ \textcolor{comment}{/*\ Vorbis\ ERRORS\ and\ return\ codes\ ***********************************/}}
+\DoxyCodeLine{00221\ }
+\DoxyCodeLine{00222\ \textcolor{preprocessor}{\#define\ OV\_FALSE\ \ \ \ \ \ -\/1}}
+\DoxyCodeLine{00223\ \textcolor{preprocessor}{\#define\ OV\_EOF\ \ \ \ \ \ \ \ -\/2}}
+\DoxyCodeLine{00224\ \textcolor{preprocessor}{\#define\ OV\_HOLE\ \ \ \ \ \ \ -\/3}}
+\DoxyCodeLine{00225\ }
+\DoxyCodeLine{00226\ \textcolor{preprocessor}{\#define\ OV\_EREAD\ \ \ \ \ \ -\/128}}
+\DoxyCodeLine{00227\ \textcolor{preprocessor}{\#define\ OV\_EFAULT\ \ \ \ \ -\/129}}
+\DoxyCodeLine{00228\ \textcolor{preprocessor}{\#define\ OV\_EIMPL\ \ \ \ \ \ -\/130}}
+\DoxyCodeLine{00229\ \textcolor{preprocessor}{\#define\ OV\_EINVAL\ \ \ \ \ -\/131}}
+\DoxyCodeLine{00230\ \textcolor{preprocessor}{\#define\ OV\_ENOTVORBIS\ -\/132}}
+\DoxyCodeLine{00231\ \textcolor{preprocessor}{\#define\ OV\_EBADHEADER\ -\/133}}
+\DoxyCodeLine{00232\ \textcolor{preprocessor}{\#define\ OV\_EVERSION\ \ \ -\/134}}
+\DoxyCodeLine{00233\ \textcolor{preprocessor}{\#define\ OV\_ENOTAUDIO\ \ -\/135}}
+\DoxyCodeLine{00234\ \textcolor{preprocessor}{\#define\ OV\_EBADPACKET\ -\/136}}
+\DoxyCodeLine{00235\ \textcolor{preprocessor}{\#define\ OV\_EBADLINK\ \ \ -\/137}}
+\DoxyCodeLine{00236\ \textcolor{preprocessor}{\#define\ OV\_ENOSEEK\ \ \ \ -\/138}}
+\DoxyCodeLine{00237\ }
+\DoxyCodeLine{00238\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00239\ \}}
+\DoxyCodeLine{00240\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_cplusplus\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00241\ }
+\DoxyCodeLine{00242\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00243\ }
+
+\end{DoxyCode}

@@ -1,0 +1,300 @@
+\doxysection{Dokumentacja klasy sf\+::priv\+::Image\+Loader}
+\hypertarget{classsf_1_1priv_1_1_image_loader}{}\label{classsf_1_1priv_1_1_image_loader}\index{sf::priv::ImageLoader@{sf::priv::ImageLoader}}
+
+
+Load/save image files.  
+
+
+
+
+{\ttfamily \#include $<$Image\+Loader.\+hpp$>$}
+
+
+
+Diagram dziedziczenia dla sf\+::priv\+::Image\+Loader\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{classsf_1_1priv_1_1_image_loader__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagram współpracy dla sf\+::priv\+::Image\+Loader\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{classsf_1_1priv_1_1_image_loader__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_image_loader_a89932eef8900909459a5accf5717ee40}{load\+Image\+From\+File}} (const std\+::string \&filename, std\+::vector$<$ \mbox{\hyperlink{namespacesf_a4ef3d630785c4f296f9b4f274c33d78e}{Uint8}} $>$ \&pixels, \mbox{\hyperlink{namespacesf_aaa02ba42bf79b001a376fe9d79254cb3}{Vector2u}} \&size)
+\begin{DoxyCompactList}\small\item\em Load an image from a file on disk. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_image_loader_ac9bead2734cda5aed3c442873dc1d48d}{load\+Image\+From\+Memory}} (const void \texorpdfstring{$\ast$}{*}data, std\+::size\+\_\+t data\+Size, std\+::vector$<$ \mbox{\hyperlink{namespacesf_a4ef3d630785c4f296f9b4f274c33d78e}{Uint8}} $>$ \&pixels, \mbox{\hyperlink{namespacesf_aaa02ba42bf79b001a376fe9d79254cb3}{Vector2u}} \&size)
+\begin{DoxyCompactList}\small\item\em Load an image from a file in memory. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_image_loader_a56edaf446d5e450782f97bcde5e85d53}{load\+Image\+From\+Stream}} (\mbox{\hyperlink{classsf_1_1_input_stream}{Input\+Stream}} \&stream, std\+::vector$<$ \mbox{\hyperlink{namespacesf_a4ef3d630785c4f296f9b4f274c33d78e}{Uint8}} $>$ \&pixels, \mbox{\hyperlink{namespacesf_aaa02ba42bf79b001a376fe9d79254cb3}{Vector2u}} \&size)
+\begin{DoxyCompactList}\small\item\em Load an image from a custom stream. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_image_loader_a60d1030e999eec94d5893c684f73a586}{save\+Image\+To\+File}} (const std\+::string \&filename, const std\+::vector$<$ \mbox{\hyperlink{namespacesf_a4ef3d630785c4f296f9b4f274c33d78e}{Uint8}} $>$ \&pixels, const \mbox{\hyperlink{namespacesf_aaa02ba42bf79b001a376fe9d79254cb3}{Vector2u}} \&size)
+\begin{DoxyCompactList}\small\item\em Save an array of pixels as an image file. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_image_loader_a655c46d2c98d6217ca91582b87d4af91}{save\+Image\+To\+Memory}} (const std\+::string \&format, std\+::vector$<$ \mbox{\hyperlink{namespacesf_a4ef3d630785c4f296f9b4f274c33d78e}{sf\+::\+Uint8}} $>$ \&output, const std\+::vector$<$ \mbox{\hyperlink{namespacesf_a4ef3d630785c4f296f9b4f274c33d78e}{Uint8}} $>$ \&pixels, const \mbox{\hyperlink{namespacesf_aaa02ba42bf79b001a376fe9d79254cb3}{Vector2u}} \&size)
+\begin{DoxyCompactList}\small\item\em Save an array of pixels as an encoded image buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Statyczne metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classsf_1_1priv_1_1_image_loader}{Image\+Loader}} \& \mbox{\hyperlink{classsf_1_1priv_1_1_image_loader_ad04ce538a1318b130851f7d30ca01ae4}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Get the unique instance of the class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsf_1_1priv_1_1_image_loader_ac3455dd7977ce063b4bf1dcecc92383c}{Image\+Loader}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1priv_1_1_image_loader_afb1187e15be0a6340c11b1b39ec01a22}{\texorpdfstring{$\sim$}{\string~}\+Image\+Loader}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody prywatne dziedziczone z \mbox{\hyperlink{classsf_1_1_non_copyable}{sf\+::\+Non\+Copyable}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsf_1_1_non_copyable_a2110add170580fdb946f887719da6860}{Non\+Copyable}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1_non_copyable_a8274ffbf46014f5f7f364befb52c7728}{\texorpdfstring{$\sim$}{\string~}\+Non\+Copyable}} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Load/save image files. 
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{classsf_1_1priv_1_1_image_loader_ac3455dd7977ce063b4bf1dcecc92383c}\label{classsf_1_1priv_1_1_image_loader_ac3455dd7977ce063b4bf1dcecc92383c} 
+\index{sf::priv::ImageLoader@{sf::priv::ImageLoader}!ImageLoader@{ImageLoader}}
+\index{ImageLoader@{ImageLoader}!sf::priv::ImageLoader@{sf::priv::ImageLoader}}
+\doxysubsubsection{\texorpdfstring{ImageLoader()}{ImageLoader()}}
+{\footnotesize\ttfamily sf\+::priv\+::\+Image\+Loader\+::\+Image\+Loader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Default constructor. 
+
+\Hypertarget{classsf_1_1priv_1_1_image_loader_afb1187e15be0a6340c11b1b39ec01a22}\label{classsf_1_1priv_1_1_image_loader_afb1187e15be0a6340c11b1b39ec01a22} 
+\index{sf::priv::ImageLoader@{sf::priv::ImageLoader}!````~ImageLoader@{\texorpdfstring{$\sim$}{\string~}ImageLoader}}
+\index{````~ImageLoader@{\texorpdfstring{$\sim$}{\string~}ImageLoader}!sf::priv::ImageLoader@{sf::priv::ImageLoader}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ImageLoader()}{\string~ImageLoader()}}
+{\footnotesize\ttfamily sf\+::priv\+::\+Image\+Loader\+::\texorpdfstring{$\sim$}{\string~}\+Image\+Loader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Destructor. 
+
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{classsf_1_1priv_1_1_image_loader_ad04ce538a1318b130851f7d30ca01ae4}\label{classsf_1_1priv_1_1_image_loader_ad04ce538a1318b130851f7d30ca01ae4} 
+\index{sf::priv::ImageLoader@{sf::priv::ImageLoader}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!sf::priv::ImageLoader@{sf::priv::ImageLoader}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1priv_1_1_image_loader}{Image\+Loader}} \& sf\+::priv\+::\+Image\+Loader\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the unique instance of the class. 
+
+\begin{DoxyReturn}{Zwraca}
+Reference to the \doxylink{classsf_1_1priv_1_1_image_loader}{Image\+Loader} instance 
+\end{DoxyReturn}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_image_loader_ad04ce538a1318b130851f7d30ca01ae4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_image_loader_a89932eef8900909459a5accf5717ee40}\label{classsf_1_1priv_1_1_image_loader_a89932eef8900909459a5accf5717ee40} 
+\index{sf::priv::ImageLoader@{sf::priv::ImageLoader}!loadImageFromFile@{loadImageFromFile}}
+\index{loadImageFromFile@{loadImageFromFile}!sf::priv::ImageLoader@{sf::priv::ImageLoader}}
+\doxysubsubsection{\texorpdfstring{loadImageFromFile()}{loadImageFromFile()}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Image\+Loader\+::load\+Image\+From\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename,  }\item[{std\+::vector$<$ \mbox{\hyperlink{namespacesf_a4ef3d630785c4f296f9b4f274c33d78e}{Uint8}} $>$ \&}]{pixels,  }\item[{\mbox{\hyperlink{namespacesf_aaa02ba42bf79b001a376fe9d79254cb3}{Vector2u}} \&}]{size }\end{DoxyParamCaption})}
+
+
+
+Load an image from a file on disk. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em filename} & Path of image file to load \\
+\hline
+{\em pixels} & Array of pixels to fill with loaded image \\
+\hline
+{\em size} & Size of loaded image, in pixels\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True if loading was successful 
+\end{DoxyReturn}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{classsf_1_1priv_1_1_image_loader_a89932eef8900909459a5accf5717ee40_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_image_loader_a89932eef8900909459a5accf5717ee40_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_image_loader_ac9bead2734cda5aed3c442873dc1d48d}\label{classsf_1_1priv_1_1_image_loader_ac9bead2734cda5aed3c442873dc1d48d} 
+\index{sf::priv::ImageLoader@{sf::priv::ImageLoader}!loadImageFromMemory@{loadImageFromMemory}}
+\index{loadImageFromMemory@{loadImageFromMemory}!sf::priv::ImageLoader@{sf::priv::ImageLoader}}
+\doxysubsubsection{\texorpdfstring{loadImageFromMemory()}{loadImageFromMemory()}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Image\+Loader\+::load\+Image\+From\+Memory (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{data,  }\item[{std\+::size\+\_\+t}]{data\+Size,  }\item[{std\+::vector$<$ \mbox{\hyperlink{namespacesf_a4ef3d630785c4f296f9b4f274c33d78e}{Uint8}} $>$ \&}]{pixels,  }\item[{\mbox{\hyperlink{namespacesf_aaa02ba42bf79b001a376fe9d79254cb3}{Vector2u}} \&}]{size }\end{DoxyParamCaption})}
+
+
+
+Load an image from a file in memory. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em data} & Pointer to the file data in memory \\
+\hline
+{\em data\+Size} & Size of the data to load, in bytes \\
+\hline
+{\em pixels} & Array of pixels to fill with loaded image \\
+\hline
+{\em size} & Size of loaded image, in pixels\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True if loading was successful 
+\end{DoxyReturn}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_image_loader_ac9bead2734cda5aed3c442873dc1d48d_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_image_loader_ac9bead2734cda5aed3c442873dc1d48d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_image_loader_a56edaf446d5e450782f97bcde5e85d53}\label{classsf_1_1priv_1_1_image_loader_a56edaf446d5e450782f97bcde5e85d53} 
+\index{sf::priv::ImageLoader@{sf::priv::ImageLoader}!loadImageFromStream@{loadImageFromStream}}
+\index{loadImageFromStream@{loadImageFromStream}!sf::priv::ImageLoader@{sf::priv::ImageLoader}}
+\doxysubsubsection{\texorpdfstring{loadImageFromStream()}{loadImageFromStream()}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Image\+Loader\+::load\+Image\+From\+Stream (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_input_stream}{Input\+Stream}} \&}]{stream,  }\item[{std\+::vector$<$ \mbox{\hyperlink{namespacesf_a4ef3d630785c4f296f9b4f274c33d78e}{Uint8}} $>$ \&}]{pixels,  }\item[{\mbox{\hyperlink{namespacesf_aaa02ba42bf79b001a376fe9d79254cb3}{Vector2u}} \&}]{size }\end{DoxyParamCaption})}
+
+
+
+Load an image from a custom stream. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em stream} & Source stream to read from \\
+\hline
+{\em pixels} & Array of pixels to fill with loaded image \\
+\hline
+{\em size} & Size of loaded image, in pixels\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True if loading was successful 
+\end{DoxyReturn}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_image_loader_a56edaf446d5e450782f97bcde5e85d53_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_image_loader_a56edaf446d5e450782f97bcde5e85d53_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_image_loader_a60d1030e999eec94d5893c684f73a586}\label{classsf_1_1priv_1_1_image_loader_a60d1030e999eec94d5893c684f73a586} 
+\index{sf::priv::ImageLoader@{sf::priv::ImageLoader}!saveImageToFile@{saveImageToFile}}
+\index{saveImageToFile@{saveImageToFile}!sf::priv::ImageLoader@{sf::priv::ImageLoader}}
+\doxysubsubsection{\texorpdfstring{saveImageToFile()}{saveImageToFile()}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Image\+Loader\+::save\+Image\+To\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{namespacesf_a4ef3d630785c4f296f9b4f274c33d78e}{Uint8}} $>$ \&}]{pixels,  }\item[{const \mbox{\hyperlink{namespacesf_aaa02ba42bf79b001a376fe9d79254cb3}{Vector2u}} \&}]{size }\end{DoxyParamCaption})}
+
+
+
+Save an array of pixels as an image file. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em filename} & Path of image file to save \\
+\hline
+{\em pixels} & Array of pixels to save to image \\
+\hline
+{\em size} & Size of image to save, in pixels\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True if saving was successful 
+\end{DoxyReturn}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{classsf_1_1priv_1_1_image_loader_a60d1030e999eec94d5893c684f73a586_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{classsf_1_1priv_1_1_image_loader_a60d1030e999eec94d5893c684f73a586_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_image_loader_a655c46d2c98d6217ca91582b87d4af91}\label{classsf_1_1priv_1_1_image_loader_a655c46d2c98d6217ca91582b87d4af91} 
+\index{sf::priv::ImageLoader@{sf::priv::ImageLoader}!saveImageToMemory@{saveImageToMemory}}
+\index{saveImageToMemory@{saveImageToMemory}!sf::priv::ImageLoader@{sf::priv::ImageLoader}}
+\doxysubsubsection{\texorpdfstring{saveImageToMemory()}{saveImageToMemory()}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Image\+Loader\+::save\+Image\+To\+Memory (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{format,  }\item[{std\+::vector$<$ \mbox{\hyperlink{namespacesf_a4ef3d630785c4f296f9b4f274c33d78e}{sf\+::\+Uint8}} $>$ \&}]{output,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{namespacesf_a4ef3d630785c4f296f9b4f274c33d78e}{Uint8}} $>$ \&}]{pixels,  }\item[{const \mbox{\hyperlink{namespacesf_aaa02ba42bf79b001a376fe9d79254cb3}{Vector2u}} \&}]{size }\end{DoxyParamCaption})}
+
+
+
+Save an array of pixels as an encoded image buffer. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em format} & Must be "{}bmp"{}, "{}png"{}, "{}tga"{} or "{}jpg"{}/"{}jpeg"{}. \\
+\hline
+{\em output} & Buffer to fill with encoded data \\
+\hline
+{\em pixels} & Array of pixels to save to image \\
+\hline
+{\em size} & Size of image to save, in pixels\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True if saving was successful 
+\end{DoxyReturn}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_image_loader_a655c46d2c98d6217ca91582b87d4af91_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_image_loader_a655c46d2c98d6217ca91582b87d4af91_icgraph}
+\end{center}
+\end{figure}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Graphics/\mbox{\hyperlink{_image_loader_8hpp}{Image\+Loader.\+hpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Graphics/\mbox{\hyperlink{_image_loader_8cpp}{Image\+Loader.\+cpp}}\end{DoxyCompactItemize}

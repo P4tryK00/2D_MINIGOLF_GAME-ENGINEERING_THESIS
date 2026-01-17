@@ -1,0 +1,428 @@
+\doxysection{Dokumentacja pliku cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/extlibs/headers/vorbis/vorbisfile.h}
+\hypertarget{vorbisfile_8h}{}\label{vorbisfile_8h}\index{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/vorbis/vorbisfile.h@{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/vorbis/vorbisfile.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include "{}codec.\+h"{}}\newline
+Wykres zależności załączania dla vorbisfile.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{vorbisfile_8h__incl}
+\end{center}
+\end{figure}
+Ten wykres pokazuje, które pliki bezpośrednio lub pośrednio załączają ten plik\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{vorbisfile_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structov__callbacks}{ov\+\_\+callbacks}}
+\item 
+struct \mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Definicje}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{vorbisfile_8h_ad97e3a9c0388046f598f94de29d0d68f}{NOTOPEN}}~0
+\item 
+\#define \mbox{\hyperlink{vorbisfile_8h_a51c69eeb6e218f3b8d0bdab9a3932ba8}{PARTOPEN}}~1
+\item 
+\#define \mbox{\hyperlink{vorbisfile_8h_a0e70dc0c86732dbec5ed78a47da6c2b8}{OPENED}}~2
+\item 
+\#define \mbox{\hyperlink{vorbisfile_8h_a0ac82bfef0dad50267a005c7370e6801}{STREAMSET}}~3
+\item 
+\#define \mbox{\hyperlink{vorbisfile_8h_af11115d8a0493b58a416971c7cf7b324}{INITSET}}~4
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Definicje typów}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct Ogg\+Vorbis\+\_\+\+File \mbox{\hyperlink{vorbisfile_8h_a099d64124db8fe9fcf1507978c1f28fb}{Ogg\+Vorbis\+\_\+\+File}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{vorbisfile_8h_a3add994772dbc946a44909559ba3fdef}{ov\+\_\+clear}} (\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}vf)
+\item 
+int \mbox{\hyperlink{vorbisfile_8h_a5e3722741916a8ade9f821332b717713}{ov\+\_\+fopen}} (const char \texorpdfstring{$\ast$}{*}path, \mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}vf)
+\item 
+int \mbox{\hyperlink{vorbisfile_8h_aa02436897d5801847c11a9f27fc913f9}{ov\+\_\+open}} (FILE \texorpdfstring{$\ast$}{*}f, \mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}vf, const char \texorpdfstring{$\ast$}{*}initial, long ibytes)
+\item 
+int \mbox{\hyperlink{vorbisfile_8h_a30edd47cbc52fef162a7c7686af6416e}{ov\+\_\+open\+\_\+callbacks}} (void \texorpdfstring{$\ast$}{*}datasource, \mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}vf, const char \texorpdfstring{$\ast$}{*}initial, long ibytes, \mbox{\hyperlink{structov__callbacks}{ov\+\_\+callbacks}} callbacks)
+\item 
+int \mbox{\hyperlink{vorbisfile_8h_a453707c7ded56c5d421b01cc733e901e}{ov\+\_\+test}} (FILE \texorpdfstring{$\ast$}{*}f, \mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}vf, const char \texorpdfstring{$\ast$}{*}initial, long ibytes)
+\item 
+int \mbox{\hyperlink{vorbisfile_8h_acc51c4c9f6cc6ecff5b6a9c1b885752f}{ov\+\_\+test\+\_\+callbacks}} (void \texorpdfstring{$\ast$}{*}datasource, \mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}vf, const char \texorpdfstring{$\ast$}{*}initial, long ibytes, \mbox{\hyperlink{structov__callbacks}{ov\+\_\+callbacks}} callbacks)
+\item 
+int \mbox{\hyperlink{vorbisfile_8h_a876a2b5584ef4070e3b6fd4b79d20b49}{ov\+\_\+test\+\_\+open}} (\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}vf)
+\item 
+long \mbox{\hyperlink{vorbisfile_8h_af1456db1cb141046519ee6b4db0fcf3a}{ov\+\_\+bitrate}} (\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}vf, int i)
+\item 
+long \mbox{\hyperlink{vorbisfile_8h_abaab72dcf7bd5c2f4c20e39dc4d782d6}{ov\+\_\+bitrate\+\_\+instant}} (\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}vf)
+\item 
+long \mbox{\hyperlink{vorbisfile_8h_a6670a0d98e113d00f8501c512eb9154a}{ov\+\_\+streams}} (\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}vf)
+\item 
+long \mbox{\hyperlink{vorbisfile_8h_a5a62d840710076235d1cbab5318f6399}{ov\+\_\+seekable}} (\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}vf)
+\item 
+long \mbox{\hyperlink{vorbisfile_8h_a1f8e5bd99e125408a14c1bc654f92760}{ov\+\_\+serialnumber}} (\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}vf, int i)
+\item 
+\mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\+\_\+int64\+\_\+t}} \mbox{\hyperlink{vorbisfile_8h_a052f63d189dd8563022c1c1796b683a5}{ov\+\_\+raw\+\_\+total}} (\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}vf, int i)
+\item 
+\mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\+\_\+int64\+\_\+t}} \mbox{\hyperlink{vorbisfile_8h_a87bb18020fd1bb2916187d13d7652663}{ov\+\_\+pcm\+\_\+total}} (\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}vf, int i)
+\item 
+double \mbox{\hyperlink{vorbisfile_8h_a59a8e5db6c99b6b5b1157001cf854975}{ov\+\_\+time\+\_\+total}} (\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}vf, int i)
+\item 
+int \mbox{\hyperlink{vorbisfile_8h_ac7e8d23aa742cbff39425fa620f56f30}{ov\+\_\+raw\+\_\+seek}} (\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}vf, \mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\+\_\+int64\+\_\+t}} pos)
+\item 
+int \mbox{\hyperlink{vorbisfile_8h_a10f51fe54d7334136cca8927602ba277}{ov\+\_\+pcm\+\_\+seek}} (\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}vf, \mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\+\_\+int64\+\_\+t}} pos)
+\item 
+int \mbox{\hyperlink{vorbisfile_8h_a033abf32795dd65412acb65ec9813172}{ov\+\_\+pcm\+\_\+seek\+\_\+page}} (\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}vf, \mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\+\_\+int64\+\_\+t}} pos)
+\item 
+int \mbox{\hyperlink{vorbisfile_8h_acca7a3b0c08acd43a2d70a03591232ec}{ov\+\_\+time\+\_\+seek}} (\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}vf, double pos)
+\item 
+int \mbox{\hyperlink{vorbisfile_8h_a1bf7109c7770b54d73386678d08f600e}{ov\+\_\+time\+\_\+seek\+\_\+page}} (\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}vf, double pos)
+\item 
+int \mbox{\hyperlink{vorbisfile_8h_a53777ca05e1557139fa47693471fb531}{ov\+\_\+raw\+\_\+seek\+\_\+lap}} (\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}vf, \mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\+\_\+int64\+\_\+t}} pos)
+\item 
+int \mbox{\hyperlink{vorbisfile_8h_a88868174d5c99bbfea1ecf27b5987a1a}{ov\+\_\+pcm\+\_\+seek\+\_\+lap}} (\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}vf, \mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\+\_\+int64\+\_\+t}} pos)
+\item 
+int \mbox{\hyperlink{vorbisfile_8h_a991451d1859ba8b998db7e005cb3b87b}{ov\+\_\+pcm\+\_\+seek\+\_\+page\+\_\+lap}} (\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}vf, \mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\+\_\+int64\+\_\+t}} pos)
+\item 
+int \mbox{\hyperlink{vorbisfile_8h_ac6957ebd8b9d2477507eb1c23f904bec}{ov\+\_\+time\+\_\+seek\+\_\+lap}} (\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}vf, double pos)
+\item 
+int \mbox{\hyperlink{vorbisfile_8h_a48b714260279171536078483bbaee682}{ov\+\_\+time\+\_\+seek\+\_\+page\+\_\+lap}} (\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}vf, double pos)
+\item 
+\mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\+\_\+int64\+\_\+t}} \mbox{\hyperlink{vorbisfile_8h_ab9f8fc1f688c012349271253a9dd8c73}{ov\+\_\+raw\+\_\+tell}} (\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}vf)
+\item 
+\mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\+\_\+int64\+\_\+t}} \mbox{\hyperlink{vorbisfile_8h_a8ff88076c7b368ad976df08b7a08e693}{ov\+\_\+pcm\+\_\+tell}} (\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}vf)
+\item 
+double \mbox{\hyperlink{vorbisfile_8h_a1bfff60419c269f3131a8637534d148f}{ov\+\_\+time\+\_\+tell}} (\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}vf)
+\item 
+\mbox{\hyperlink{structvorbis__info}{vorbis\+\_\+info}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{vorbisfile_8h_a019c468e08ffd5c2386f6704848c6034}{ov\+\_\+info}} (\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}vf, int link)
+\item 
+\mbox{\hyperlink{structvorbis__comment}{vorbis\+\_\+comment}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{vorbisfile_8h_a2f34ac216327154f5da419d398191fdd}{ov\+\_\+comment}} (\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}vf, int link)
+\item 
+long \mbox{\hyperlink{vorbisfile_8h_a373af2a3d0353dd40e5ce5687859fdbd}{ov\+\_\+read\+\_\+float}} (\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}vf, float \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}pcm\+\_\+channels, int samples, int \texorpdfstring{$\ast$}{*}bitstream)
+\item 
+long \mbox{\hyperlink{vorbisfile_8h_a4d30c9fa8b330b75863c76cb4c20ee48}{ov\+\_\+read\+\_\+filter}} (\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}vf, char \texorpdfstring{$\ast$}{*}buffer, int length, int bigendianp, int word, int sgned, int \texorpdfstring{$\ast$}{*}bitstream, void(\texorpdfstring{$\ast$}{*}filter)(float \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}pcm, long channels, long samples, void \texorpdfstring{$\ast$}{*}filter\+\_\+param), void \texorpdfstring{$\ast$}{*}filter\+\_\+param)
+\item 
+long \mbox{\hyperlink{vorbisfile_8h_a208c65166b8d9c868167dc9d389fdba8}{ov\+\_\+read}} (\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}vf, char \texorpdfstring{$\ast$}{*}buffer, int length, int bigendianp, int word, int sgned, int \texorpdfstring{$\ast$}{*}bitstream)
+\item 
+int \mbox{\hyperlink{vorbisfile_8h_aebae91900bda92038fb9c14f3f6ec28c}{ov\+\_\+crosslap}} (\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}vf1, \mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}vf2)
+\item 
+int \mbox{\hyperlink{vorbisfile_8h_ace67cdf6531919e05b3bb164db45181a}{ov\+\_\+halfrate}} (\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}vf, int flag)
+\item 
+int \mbox{\hyperlink{vorbisfile_8h_adc4f36cb355bb7ab7a62c2133e315208}{ov\+\_\+halfrate\+\_\+p}} (\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}vf)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja definicji}
+\Hypertarget{vorbisfile_8h_af11115d8a0493b58a416971c7cf7b324}\label{vorbisfile_8h_af11115d8a0493b58a416971c7cf7b324} 
+\index{vorbisfile.h@{vorbisfile.h}!INITSET@{INITSET}}
+\index{INITSET@{INITSET}!vorbisfile.h@{vorbisfile.h}}
+\doxysubsubsection{\texorpdfstring{INITSET}{INITSET}}
+{\footnotesize\ttfamily \#define INITSET~4}
+
+\Hypertarget{vorbisfile_8h_ad97e3a9c0388046f598f94de29d0d68f}\label{vorbisfile_8h_ad97e3a9c0388046f598f94de29d0d68f} 
+\index{vorbisfile.h@{vorbisfile.h}!NOTOPEN@{NOTOPEN}}
+\index{NOTOPEN@{NOTOPEN}!vorbisfile.h@{vorbisfile.h}}
+\doxysubsubsection{\texorpdfstring{NOTOPEN}{NOTOPEN}}
+{\footnotesize\ttfamily \#define NOTOPEN~0}
+
+\Hypertarget{vorbisfile_8h_a0e70dc0c86732dbec5ed78a47da6c2b8}\label{vorbisfile_8h_a0e70dc0c86732dbec5ed78a47da6c2b8} 
+\index{vorbisfile.h@{vorbisfile.h}!OPENED@{OPENED}}
+\index{OPENED@{OPENED}!vorbisfile.h@{vorbisfile.h}}
+\doxysubsubsection{\texorpdfstring{OPENED}{OPENED}}
+{\footnotesize\ttfamily \#define OPENED~2}
+
+\Hypertarget{vorbisfile_8h_a51c69eeb6e218f3b8d0bdab9a3932ba8}\label{vorbisfile_8h_a51c69eeb6e218f3b8d0bdab9a3932ba8} 
+\index{vorbisfile.h@{vorbisfile.h}!PARTOPEN@{PARTOPEN}}
+\index{PARTOPEN@{PARTOPEN}!vorbisfile.h@{vorbisfile.h}}
+\doxysubsubsection{\texorpdfstring{PARTOPEN}{PARTOPEN}}
+{\footnotesize\ttfamily \#define PARTOPEN~1}
+
+\Hypertarget{vorbisfile_8h_a0ac82bfef0dad50267a005c7370e6801}\label{vorbisfile_8h_a0ac82bfef0dad50267a005c7370e6801} 
+\index{vorbisfile.h@{vorbisfile.h}!STREAMSET@{STREAMSET}}
+\index{STREAMSET@{STREAMSET}!vorbisfile.h@{vorbisfile.h}}
+\doxysubsubsection{\texorpdfstring{STREAMSET}{STREAMSET}}
+{\footnotesize\ttfamily \#define STREAMSET~3}
+
+
+
+\doxysubsection{Dokumentacja definicji typów}
+\Hypertarget{vorbisfile_8h_a099d64124db8fe9fcf1507978c1f28fb}\label{vorbisfile_8h_a099d64124db8fe9fcf1507978c1f28fb} 
+\index{vorbisfile.h@{vorbisfile.h}!OggVorbis\_File@{OggVorbis\_File}}
+\index{OggVorbis\_File@{OggVorbis\_File}!vorbisfile.h@{vorbisfile.h}}
+\doxysubsubsection{\texorpdfstring{OggVorbis\_File}{OggVorbis\_File}}
+{\footnotesize\ttfamily typedef struct Ogg\+Vorbis\+\_\+\+File Ogg\+Vorbis\+\_\+\+File}
+
+
+
+\doxysubsection{Dokumentacja funkcji}
+\Hypertarget{vorbisfile_8h_af1456db1cb141046519ee6b4db0fcf3a}\label{vorbisfile_8h_af1456db1cb141046519ee6b4db0fcf3a} 
+\index{vorbisfile.h@{vorbisfile.h}!ov\_bitrate@{ov\_bitrate}}
+\index{ov\_bitrate@{ov\_bitrate}!vorbisfile.h@{vorbisfile.h}}
+\doxysubsubsection{\texorpdfstring{ov\_bitrate()}{ov\_bitrate()}}
+{\footnotesize\ttfamily long ov\+\_\+bitrate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}}]{vf,  }\item[{int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{vorbisfile_8h_abaab72dcf7bd5c2f4c20e39dc4d782d6}\label{vorbisfile_8h_abaab72dcf7bd5c2f4c20e39dc4d782d6} 
+\index{vorbisfile.h@{vorbisfile.h}!ov\_bitrate\_instant@{ov\_bitrate\_instant}}
+\index{ov\_bitrate\_instant@{ov\_bitrate\_instant}!vorbisfile.h@{vorbisfile.h}}
+\doxysubsubsection{\texorpdfstring{ov\_bitrate\_instant()}{ov\_bitrate\_instant()}}
+{\footnotesize\ttfamily long ov\+\_\+bitrate\+\_\+instant (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}}]{vf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{vorbisfile_8h_a3add994772dbc946a44909559ba3fdef}\label{vorbisfile_8h_a3add994772dbc946a44909559ba3fdef} 
+\index{vorbisfile.h@{vorbisfile.h}!ov\_clear@{ov\_clear}}
+\index{ov\_clear@{ov\_clear}!vorbisfile.h@{vorbisfile.h}}
+\doxysubsubsection{\texorpdfstring{ov\_clear()}{ov\_clear()}}
+{\footnotesize\ttfamily int ov\+\_\+clear (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}}]{vf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{vorbisfile_8h_a3add994772dbc946a44909559ba3fdef_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vorbisfile_8h_a2f34ac216327154f5da419d398191fdd}\label{vorbisfile_8h_a2f34ac216327154f5da419d398191fdd} 
+\index{vorbisfile.h@{vorbisfile.h}!ov\_comment@{ov\_comment}}
+\index{ov\_comment@{ov\_comment}!vorbisfile.h@{vorbisfile.h}}
+\doxysubsubsection{\texorpdfstring{ov\_comment()}{ov\_comment()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structvorbis__comment}{vorbis\+\_\+comment}} \texorpdfstring{$\ast$}{*} ov\+\_\+comment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}}]{vf,  }\item[{int}]{link }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{vorbisfile_8h_aebae91900bda92038fb9c14f3f6ec28c}\label{vorbisfile_8h_aebae91900bda92038fb9c14f3f6ec28c} 
+\index{vorbisfile.h@{vorbisfile.h}!ov\_crosslap@{ov\_crosslap}}
+\index{ov\_crosslap@{ov\_crosslap}!vorbisfile.h@{vorbisfile.h}}
+\doxysubsubsection{\texorpdfstring{ov\_crosslap()}{ov\_crosslap()}}
+{\footnotesize\ttfamily int ov\+\_\+crosslap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}}]{vf1,  }\item[{\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}}]{vf2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{vorbisfile_8h_a5e3722741916a8ade9f821332b717713}\label{vorbisfile_8h_a5e3722741916a8ade9f821332b717713} 
+\index{vorbisfile.h@{vorbisfile.h}!ov\_fopen@{ov\_fopen}}
+\index{ov\_fopen@{ov\_fopen}!vorbisfile.h@{vorbisfile.h}}
+\doxysubsubsection{\texorpdfstring{ov\_fopen()}{ov\_fopen()}}
+{\footnotesize\ttfamily int ov\+\_\+fopen (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{path,  }\item[{\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}}]{vf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{vorbisfile_8h_ace67cdf6531919e05b3bb164db45181a}\label{vorbisfile_8h_ace67cdf6531919e05b3bb164db45181a} 
+\index{vorbisfile.h@{vorbisfile.h}!ov\_halfrate@{ov\_halfrate}}
+\index{ov\_halfrate@{ov\_halfrate}!vorbisfile.h@{vorbisfile.h}}
+\doxysubsubsection{\texorpdfstring{ov\_halfrate()}{ov\_halfrate()}}
+{\footnotesize\ttfamily int ov\+\_\+halfrate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}}]{vf,  }\item[{int}]{flag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{vorbisfile_8h_adc4f36cb355bb7ab7a62c2133e315208}\label{vorbisfile_8h_adc4f36cb355bb7ab7a62c2133e315208} 
+\index{vorbisfile.h@{vorbisfile.h}!ov\_halfrate\_p@{ov\_halfrate\_p}}
+\index{ov\_halfrate\_p@{ov\_halfrate\_p}!vorbisfile.h@{vorbisfile.h}}
+\doxysubsubsection{\texorpdfstring{ov\_halfrate\_p()}{ov\_halfrate\_p()}}
+{\footnotesize\ttfamily int ov\+\_\+halfrate\+\_\+p (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}}]{vf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{vorbisfile_8h_a019c468e08ffd5c2386f6704848c6034}\label{vorbisfile_8h_a019c468e08ffd5c2386f6704848c6034} 
+\index{vorbisfile.h@{vorbisfile.h}!ov\_info@{ov\_info}}
+\index{ov\_info@{ov\_info}!vorbisfile.h@{vorbisfile.h}}
+\doxysubsubsection{\texorpdfstring{ov\_info()}{ov\_info()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structvorbis__info}{vorbis\+\_\+info}} \texorpdfstring{$\ast$}{*} ov\+\_\+info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}}]{vf,  }\item[{int}]{link }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{vorbisfile_8h_a019c468e08ffd5c2386f6704848c6034_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vorbisfile_8h_aa02436897d5801847c11a9f27fc913f9}\label{vorbisfile_8h_aa02436897d5801847c11a9f27fc913f9} 
+\index{vorbisfile.h@{vorbisfile.h}!ov\_open@{ov\_open}}
+\index{ov\_open@{ov\_open}!vorbisfile.h@{vorbisfile.h}}
+\doxysubsubsection{\texorpdfstring{ov\_open()}{ov\_open()}}
+{\footnotesize\ttfamily int ov\+\_\+open (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{f,  }\item[{\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}}]{vf,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{initial,  }\item[{long}]{ibytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{vorbisfile_8h_a30edd47cbc52fef162a7c7686af6416e}\label{vorbisfile_8h_a30edd47cbc52fef162a7c7686af6416e} 
+\index{vorbisfile.h@{vorbisfile.h}!ov\_open\_callbacks@{ov\_open\_callbacks}}
+\index{ov\_open\_callbacks@{ov\_open\_callbacks}!vorbisfile.h@{vorbisfile.h}}
+\doxysubsubsection{\texorpdfstring{ov\_open\_callbacks()}{ov\_open\_callbacks()}}
+{\footnotesize\ttfamily int ov\+\_\+open\+\_\+callbacks (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{datasource,  }\item[{\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}}]{vf,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{initial,  }\item[{long}]{ibytes,  }\item[{\mbox{\hyperlink{structov__callbacks}{ov\+\_\+callbacks}}}]{callbacks }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{vorbisfile_8h_a30edd47cbc52fef162a7c7686af6416e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vorbisfile_8h_a10f51fe54d7334136cca8927602ba277}\label{vorbisfile_8h_a10f51fe54d7334136cca8927602ba277} 
+\index{vorbisfile.h@{vorbisfile.h}!ov\_pcm\_seek@{ov\_pcm\_seek}}
+\index{ov\_pcm\_seek@{ov\_pcm\_seek}!vorbisfile.h@{vorbisfile.h}}
+\doxysubsubsection{\texorpdfstring{ov\_pcm\_seek()}{ov\_pcm\_seek()}}
+{\footnotesize\ttfamily int ov\+\_\+pcm\+\_\+seek (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}}]{vf,  }\item[{\mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\+\_\+int64\+\_\+t}}}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{vorbisfile_8h_a10f51fe54d7334136cca8927602ba277_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vorbisfile_8h_a88868174d5c99bbfea1ecf27b5987a1a}\label{vorbisfile_8h_a88868174d5c99bbfea1ecf27b5987a1a} 
+\index{vorbisfile.h@{vorbisfile.h}!ov\_pcm\_seek\_lap@{ov\_pcm\_seek\_lap}}
+\index{ov\_pcm\_seek\_lap@{ov\_pcm\_seek\_lap}!vorbisfile.h@{vorbisfile.h}}
+\doxysubsubsection{\texorpdfstring{ov\_pcm\_seek\_lap()}{ov\_pcm\_seek\_lap()}}
+{\footnotesize\ttfamily int ov\+\_\+pcm\+\_\+seek\+\_\+lap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}}]{vf,  }\item[{\mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\+\_\+int64\+\_\+t}}}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{vorbisfile_8h_a033abf32795dd65412acb65ec9813172}\label{vorbisfile_8h_a033abf32795dd65412acb65ec9813172} 
+\index{vorbisfile.h@{vorbisfile.h}!ov\_pcm\_seek\_page@{ov\_pcm\_seek\_page}}
+\index{ov\_pcm\_seek\_page@{ov\_pcm\_seek\_page}!vorbisfile.h@{vorbisfile.h}}
+\doxysubsubsection{\texorpdfstring{ov\_pcm\_seek\_page()}{ov\_pcm\_seek\_page()}}
+{\footnotesize\ttfamily int ov\+\_\+pcm\+\_\+seek\+\_\+page (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}}]{vf,  }\item[{\mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\+\_\+int64\+\_\+t}}}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{vorbisfile_8h_a991451d1859ba8b998db7e005cb3b87b}\label{vorbisfile_8h_a991451d1859ba8b998db7e005cb3b87b} 
+\index{vorbisfile.h@{vorbisfile.h}!ov\_pcm\_seek\_page\_lap@{ov\_pcm\_seek\_page\_lap}}
+\index{ov\_pcm\_seek\_page\_lap@{ov\_pcm\_seek\_page\_lap}!vorbisfile.h@{vorbisfile.h}}
+\doxysubsubsection{\texorpdfstring{ov\_pcm\_seek\_page\_lap()}{ov\_pcm\_seek\_page\_lap()}}
+{\footnotesize\ttfamily int ov\+\_\+pcm\+\_\+seek\+\_\+page\+\_\+lap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}}]{vf,  }\item[{\mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\+\_\+int64\+\_\+t}}}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{vorbisfile_8h_a8ff88076c7b368ad976df08b7a08e693}\label{vorbisfile_8h_a8ff88076c7b368ad976df08b7a08e693} 
+\index{vorbisfile.h@{vorbisfile.h}!ov\_pcm\_tell@{ov\_pcm\_tell}}
+\index{ov\_pcm\_tell@{ov\_pcm\_tell}!vorbisfile.h@{vorbisfile.h}}
+\doxysubsubsection{\texorpdfstring{ov\_pcm\_tell()}{ov\_pcm\_tell()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\+\_\+int64\+\_\+t}} ov\+\_\+pcm\+\_\+tell (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}}]{vf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{vorbisfile_8h_a87bb18020fd1bb2916187d13d7652663}\label{vorbisfile_8h_a87bb18020fd1bb2916187d13d7652663} 
+\index{vorbisfile.h@{vorbisfile.h}!ov\_pcm\_total@{ov\_pcm\_total}}
+\index{ov\_pcm\_total@{ov\_pcm\_total}!vorbisfile.h@{vorbisfile.h}}
+\doxysubsubsection{\texorpdfstring{ov\_pcm\_total()}{ov\_pcm\_total()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\+\_\+int64\+\_\+t}} ov\+\_\+pcm\+\_\+total (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}}]{vf,  }\item[{int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{vorbisfile_8h_a87bb18020fd1bb2916187d13d7652663_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vorbisfile_8h_ac7e8d23aa742cbff39425fa620f56f30}\label{vorbisfile_8h_ac7e8d23aa742cbff39425fa620f56f30} 
+\index{vorbisfile.h@{vorbisfile.h}!ov\_raw\_seek@{ov\_raw\_seek}}
+\index{ov\_raw\_seek@{ov\_raw\_seek}!vorbisfile.h@{vorbisfile.h}}
+\doxysubsubsection{\texorpdfstring{ov\_raw\_seek()}{ov\_raw\_seek()}}
+{\footnotesize\ttfamily int ov\+\_\+raw\+\_\+seek (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}}]{vf,  }\item[{\mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\+\_\+int64\+\_\+t}}}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{vorbisfile_8h_a53777ca05e1557139fa47693471fb531}\label{vorbisfile_8h_a53777ca05e1557139fa47693471fb531} 
+\index{vorbisfile.h@{vorbisfile.h}!ov\_raw\_seek\_lap@{ov\_raw\_seek\_lap}}
+\index{ov\_raw\_seek\_lap@{ov\_raw\_seek\_lap}!vorbisfile.h@{vorbisfile.h}}
+\doxysubsubsection{\texorpdfstring{ov\_raw\_seek\_lap()}{ov\_raw\_seek\_lap()}}
+{\footnotesize\ttfamily int ov\+\_\+raw\+\_\+seek\+\_\+lap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}}]{vf,  }\item[{\mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\+\_\+int64\+\_\+t}}}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{vorbisfile_8h_ab9f8fc1f688c012349271253a9dd8c73}\label{vorbisfile_8h_ab9f8fc1f688c012349271253a9dd8c73} 
+\index{vorbisfile.h@{vorbisfile.h}!ov\_raw\_tell@{ov\_raw\_tell}}
+\index{ov\_raw\_tell@{ov\_raw\_tell}!vorbisfile.h@{vorbisfile.h}}
+\doxysubsubsection{\texorpdfstring{ov\_raw\_tell()}{ov\_raw\_tell()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\+\_\+int64\+\_\+t}} ov\+\_\+raw\+\_\+tell (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}}]{vf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{vorbisfile_8h_a052f63d189dd8563022c1c1796b683a5}\label{vorbisfile_8h_a052f63d189dd8563022c1c1796b683a5} 
+\index{vorbisfile.h@{vorbisfile.h}!ov\_raw\_total@{ov\_raw\_total}}
+\index{ov\_raw\_total@{ov\_raw\_total}!vorbisfile.h@{vorbisfile.h}}
+\doxysubsubsection{\texorpdfstring{ov\_raw\_total()}{ov\_raw\_total()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\+\_\+int64\+\_\+t}} ov\+\_\+raw\+\_\+total (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}}]{vf,  }\item[{int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{vorbisfile_8h_a208c65166b8d9c868167dc9d389fdba8}\label{vorbisfile_8h_a208c65166b8d9c868167dc9d389fdba8} 
+\index{vorbisfile.h@{vorbisfile.h}!ov\_read@{ov\_read}}
+\index{ov\_read@{ov\_read}!vorbisfile.h@{vorbisfile.h}}
+\doxysubsubsection{\texorpdfstring{ov\_read()}{ov\_read()}}
+{\footnotesize\ttfamily long ov\+\_\+read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}}]{vf,  }\item[{char \texorpdfstring{$\ast$}{*}}]{buffer,  }\item[{int}]{length,  }\item[{int}]{bigendianp,  }\item[{int}]{word,  }\item[{int}]{sgned,  }\item[{int \texorpdfstring{$\ast$}{*}}]{bitstream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{vorbisfile_8h_a208c65166b8d9c868167dc9d389fdba8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vorbisfile_8h_a4d30c9fa8b330b75863c76cb4c20ee48}\label{vorbisfile_8h_a4d30c9fa8b330b75863c76cb4c20ee48} 
+\index{vorbisfile.h@{vorbisfile.h}!ov\_read\_filter@{ov\_read\_filter}}
+\index{ov\_read\_filter@{ov\_read\_filter}!vorbisfile.h@{vorbisfile.h}}
+\doxysubsubsection{\texorpdfstring{ov\_read\_filter()}{ov\_read\_filter()}}
+{\footnotesize\ttfamily long ov\+\_\+read\+\_\+filter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}}]{vf,  }\item[{char \texorpdfstring{$\ast$}{*}}]{buffer,  }\item[{int}]{length,  }\item[{int}]{bigendianp,  }\item[{int}]{word,  }\item[{int}]{sgned,  }\item[{int \texorpdfstring{$\ast$}{*}}]{bitstream,  }\item[{void(\texorpdfstring{$\ast$}{*})(float \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}pcm, long channels, long samples, void \texorpdfstring{$\ast$}{*}filter\+\_\+param)}]{filter,  }\item[{void \texorpdfstring{$\ast$}{*}}]{filter\+\_\+param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{vorbisfile_8h_a373af2a3d0353dd40e5ce5687859fdbd}\label{vorbisfile_8h_a373af2a3d0353dd40e5ce5687859fdbd} 
+\index{vorbisfile.h@{vorbisfile.h}!ov\_read\_float@{ov\_read\_float}}
+\index{ov\_read\_float@{ov\_read\_float}!vorbisfile.h@{vorbisfile.h}}
+\doxysubsubsection{\texorpdfstring{ov\_read\_float()}{ov\_read\_float()}}
+{\footnotesize\ttfamily long ov\+\_\+read\+\_\+float (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}}]{vf,  }\item[{float \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{pcm\+\_\+channels,  }\item[{int}]{samples,  }\item[{int \texorpdfstring{$\ast$}{*}}]{bitstream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{vorbisfile_8h_a5a62d840710076235d1cbab5318f6399}\label{vorbisfile_8h_a5a62d840710076235d1cbab5318f6399} 
+\index{vorbisfile.h@{vorbisfile.h}!ov\_seekable@{ov\_seekable}}
+\index{ov\_seekable@{ov\_seekable}!vorbisfile.h@{vorbisfile.h}}
+\doxysubsubsection{\texorpdfstring{ov\_seekable()}{ov\_seekable()}}
+{\footnotesize\ttfamily long ov\+\_\+seekable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}}]{vf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{vorbisfile_8h_a1f8e5bd99e125408a14c1bc654f92760}\label{vorbisfile_8h_a1f8e5bd99e125408a14c1bc654f92760} 
+\index{vorbisfile.h@{vorbisfile.h}!ov\_serialnumber@{ov\_serialnumber}}
+\index{ov\_serialnumber@{ov\_serialnumber}!vorbisfile.h@{vorbisfile.h}}
+\doxysubsubsection{\texorpdfstring{ov\_serialnumber()}{ov\_serialnumber()}}
+{\footnotesize\ttfamily long ov\+\_\+serialnumber (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}}]{vf,  }\item[{int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{vorbisfile_8h_a6670a0d98e113d00f8501c512eb9154a}\label{vorbisfile_8h_a6670a0d98e113d00f8501c512eb9154a} 
+\index{vorbisfile.h@{vorbisfile.h}!ov\_streams@{ov\_streams}}
+\index{ov\_streams@{ov\_streams}!vorbisfile.h@{vorbisfile.h}}
+\doxysubsubsection{\texorpdfstring{ov\_streams()}{ov\_streams()}}
+{\footnotesize\ttfamily long ov\+\_\+streams (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}}]{vf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{vorbisfile_8h_a453707c7ded56c5d421b01cc733e901e}\label{vorbisfile_8h_a453707c7ded56c5d421b01cc733e901e} 
+\index{vorbisfile.h@{vorbisfile.h}!ov\_test@{ov\_test}}
+\index{ov\_test@{ov\_test}!vorbisfile.h@{vorbisfile.h}}
+\doxysubsubsection{\texorpdfstring{ov\_test()}{ov\_test()}}
+{\footnotesize\ttfamily int ov\+\_\+test (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{f,  }\item[{\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}}]{vf,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{initial,  }\item[{long}]{ibytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{vorbisfile_8h_acc51c4c9f6cc6ecff5b6a9c1b885752f}\label{vorbisfile_8h_acc51c4c9f6cc6ecff5b6a9c1b885752f} 
+\index{vorbisfile.h@{vorbisfile.h}!ov\_test\_callbacks@{ov\_test\_callbacks}}
+\index{ov\_test\_callbacks@{ov\_test\_callbacks}!vorbisfile.h@{vorbisfile.h}}
+\doxysubsubsection{\texorpdfstring{ov\_test\_callbacks()}{ov\_test\_callbacks()}}
+{\footnotesize\ttfamily int ov\+\_\+test\+\_\+callbacks (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{datasource,  }\item[{\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}}]{vf,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{initial,  }\item[{long}]{ibytes,  }\item[{\mbox{\hyperlink{structov__callbacks}{ov\+\_\+callbacks}}}]{callbacks }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{vorbisfile_8h_acc51c4c9f6cc6ecff5b6a9c1b885752f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vorbisfile_8h_a876a2b5584ef4070e3b6fd4b79d20b49}\label{vorbisfile_8h_a876a2b5584ef4070e3b6fd4b79d20b49} 
+\index{vorbisfile.h@{vorbisfile.h}!ov\_test\_open@{ov\_test\_open}}
+\index{ov\_test\_open@{ov\_test\_open}!vorbisfile.h@{vorbisfile.h}}
+\doxysubsubsection{\texorpdfstring{ov\_test\_open()}{ov\_test\_open()}}
+{\footnotesize\ttfamily int ov\+\_\+test\+\_\+open (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}}]{vf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{vorbisfile_8h_acca7a3b0c08acd43a2d70a03591232ec}\label{vorbisfile_8h_acca7a3b0c08acd43a2d70a03591232ec} 
+\index{vorbisfile.h@{vorbisfile.h}!ov\_time\_seek@{ov\_time\_seek}}
+\index{ov\_time\_seek@{ov\_time\_seek}!vorbisfile.h@{vorbisfile.h}}
+\doxysubsubsection{\texorpdfstring{ov\_time\_seek()}{ov\_time\_seek()}}
+{\footnotesize\ttfamily int ov\+\_\+time\+\_\+seek (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}}]{vf,  }\item[{double}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{vorbisfile_8h_ac6957ebd8b9d2477507eb1c23f904bec}\label{vorbisfile_8h_ac6957ebd8b9d2477507eb1c23f904bec} 
+\index{vorbisfile.h@{vorbisfile.h}!ov\_time\_seek\_lap@{ov\_time\_seek\_lap}}
+\index{ov\_time\_seek\_lap@{ov\_time\_seek\_lap}!vorbisfile.h@{vorbisfile.h}}
+\doxysubsubsection{\texorpdfstring{ov\_time\_seek\_lap()}{ov\_time\_seek\_lap()}}
+{\footnotesize\ttfamily int ov\+\_\+time\+\_\+seek\+\_\+lap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}}]{vf,  }\item[{double}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{vorbisfile_8h_a1bf7109c7770b54d73386678d08f600e}\label{vorbisfile_8h_a1bf7109c7770b54d73386678d08f600e} 
+\index{vorbisfile.h@{vorbisfile.h}!ov\_time\_seek\_page@{ov\_time\_seek\_page}}
+\index{ov\_time\_seek\_page@{ov\_time\_seek\_page}!vorbisfile.h@{vorbisfile.h}}
+\doxysubsubsection{\texorpdfstring{ov\_time\_seek\_page()}{ov\_time\_seek\_page()}}
+{\footnotesize\ttfamily int ov\+\_\+time\+\_\+seek\+\_\+page (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}}]{vf,  }\item[{double}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{vorbisfile_8h_a48b714260279171536078483bbaee682}\label{vorbisfile_8h_a48b714260279171536078483bbaee682} 
+\index{vorbisfile.h@{vorbisfile.h}!ov\_time\_seek\_page\_lap@{ov\_time\_seek\_page\_lap}}
+\index{ov\_time\_seek\_page\_lap@{ov\_time\_seek\_page\_lap}!vorbisfile.h@{vorbisfile.h}}
+\doxysubsubsection{\texorpdfstring{ov\_time\_seek\_page\_lap()}{ov\_time\_seek\_page\_lap()}}
+{\footnotesize\ttfamily int ov\+\_\+time\+\_\+seek\+\_\+page\+\_\+lap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}}]{vf,  }\item[{double}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{vorbisfile_8h_a1bfff60419c269f3131a8637534d148f}\label{vorbisfile_8h_a1bfff60419c269f3131a8637534d148f} 
+\index{vorbisfile.h@{vorbisfile.h}!ov\_time\_tell@{ov\_time\_tell}}
+\index{ov\_time\_tell@{ov\_time\_tell}!vorbisfile.h@{vorbisfile.h}}
+\doxysubsubsection{\texorpdfstring{ov\_time\_tell()}{ov\_time\_tell()}}
+{\footnotesize\ttfamily double ov\+\_\+time\+\_\+tell (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}}]{vf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{vorbisfile_8h_a59a8e5db6c99b6b5b1157001cf854975}\label{vorbisfile_8h_a59a8e5db6c99b6b5b1157001cf854975} 
+\index{vorbisfile.h@{vorbisfile.h}!ov\_time\_total@{ov\_time\_total}}
+\index{ov\_time\_total@{ov\_time\_total}!vorbisfile.h@{vorbisfile.h}}
+\doxysubsubsection{\texorpdfstring{ov\_time\_total()}{ov\_time\_total()}}
+{\footnotesize\ttfamily double ov\+\_\+time\+\_\+total (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ogg_vorbis___file}{Ogg\+Vorbis\+\_\+\+File}} \texorpdfstring{$\ast$}{*}}]{vf,  }\item[{int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+

@@ -1,0 +1,163 @@
+\doxysection{Dokumentacja klasy State}
+\hypertarget{class_state}{}\label{class_state}\index{State@{State}}
+
+
+Abstrakcyjna klasa bazowa reprezentująca pojedynczy stan gry (np. Menu, Gra, Pauza).  
+
+
+
+
+{\ttfamily \#include $<$State.\+h$>$}
+
+
+
+Diagram dziedziczenia dla State\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_state__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagram współpracy dla State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=154pt]{class_state__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_state_a9ddc1df6f998184d6477b48fab90281c}{\texorpdfstring{$\sim$}{\string~}\+State}} ()
+\begin{DoxyCompactList}\small\item\em Wirtualny destruktor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_state_a2ff5faa41a5811007e8d50542365640b}{init}} ()=0
+\begin{DoxyCompactList}\small\item\em Inicjalizuje zasoby i zmienne stanu. Wywoływana raz, gdy stan jest dodawany do State\+Managera. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_state_ad0fcf10830377a1f673a714aa3b7944d}{handle\+Input}} (sf\+::\+Event \&event)=0
+\begin{DoxyCompactList}\small\item\em Obsługuje wejście od użytkownika (klawiatura, mysz, zdarzenia okna). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_state_a07b507523aaffc4cf78f3dd3174a68ea}{update}} (float dt)=0
+\begin{DoxyCompactList}\small\item\em Aktualizuje logikę stanu (fizyka, animacje, reguły gry). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_state_a78efb743026712cbd78b8c07a45c2def}{draw}} (float dt)=0
+\begin{DoxyCompactList}\small\item\em Renderuje grafikę stanu na ekranie. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_state_abad223d1066e95bd1b70e1341fb72a88}{pause}} ()
+\begin{DoxyCompactList}\small\item\em Wywoływana, gdy stan jest pauzowany (np. inny stan jest nakładany na wierzch). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_state_a8ef6d305e962afe41b0629255f0f58f9}{resume}} ()
+\begin{DoxyCompactList}\small\item\em Wywoływana, gdy stan jest wznawiany (np. stan powyżej został zdjęty ze stosu). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Abstrakcyjna klasa bazowa reprezentująca pojedynczy stan gry (np. Menu, Gra, Pauza). 
+
+Klasa ta definiuje interfejs, który muszą zaimplementować wszystkie konkretne stany gry. Wykorzystuje wzorzec projektowy "{}\+Stan"{} (\doxylink{class_state}{State} Pattern), pozwalając State\+Managerowi na jednolite zarządzanie różnymi etapami rozgrywki. 
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{class_state_a9ddc1df6f998184d6477b48fab90281c}\label{class_state_a9ddc1df6f998184d6477b48fab90281c} 
+\index{State@{State}!````~State@{\texorpdfstring{$\sim$}{\string~}State}}
+\index{````~State@{\texorpdfstring{$\sim$}{\string~}State}!State@{State}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}State()}{\string~State()}}
+{\footnotesize\ttfamily virtual State\+::\texorpdfstring{$\sim$}{\string~}\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Wirtualny destruktor. 
+
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_state_a78efb743026712cbd78b8c07a45c2def}\label{class_state_a78efb743026712cbd78b8c07a45c2def} 
+\index{State@{State}!draw@{draw}}
+\index{draw@{draw}!State@{State}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily virtual void State\+::draw (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Renderuje grafikę stanu na ekranie. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em dt} & Współczynnik interpolacji (używany do płynnego renderowania między krokami fizyki). \\
+\hline
+\end{DoxyParams}
+
+
+Implementowany w \mbox{\hyperlink{class_game_over_state_a252770712abedb087220e04a09637eb4}{Game\+Over\+State}}, \mbox{\hyperlink{class_game_state_abdbfbc4986aa5ddc26c7f34e297c7884}{Game\+State}}, \mbox{\hyperlink{class_leaderboard_state_a8a686419a940b3e6d136e935df7e327c}{Leaderboard\+State}}, \mbox{\hyperlink{class_level_complete_state_a3392edc04ebe139f915dede0c65c973b}{Level\+Complete\+State}}, \mbox{\hyperlink{class_level_select_state_af24a821a37eb5f102e00479e358f7654}{Level\+Select\+State}}, \mbox{\hyperlink{class_main_menu_state_a250f1f2b49fea14497063ebac7e2c011}{Main\+Menu\+State}} i \mbox{\hyperlink{class_pause_menu_state_a56266153292c423cbaeebb372dbccd65}{Pause\+Menu\+State}}.
+
+\Hypertarget{class_state_ad0fcf10830377a1f673a714aa3b7944d}\label{class_state_ad0fcf10830377a1f673a714aa3b7944d} 
+\index{State@{State}!handleInput@{handleInput}}
+\index{handleInput@{handleInput}!State@{State}}
+\doxysubsubsection{\texorpdfstring{handleInput()}{handleInput()}}
+{\footnotesize\ttfamily virtual void State\+::handle\+Input (\begin{DoxyParamCaption}\item[{sf\+::\+Event \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Obsługuje wejście od użytkownika (klawiatura, mysz, zdarzenia okna). 
+
+
+\begin{DoxyParams}{Parametry}
+{\em event} & Zdarzenie SFML do przetworzenia. \\
+\hline
+\end{DoxyParams}
+
+
+Implementowany w \mbox{\hyperlink{class_game_over_state_ae843d2b5c19a4a3a89677e7bd62d92d8}{Game\+Over\+State}}, \mbox{\hyperlink{class_game_state_ab331bf3f5df91c89c2808a9ed6b6d868}{Game\+State}}, \mbox{\hyperlink{class_leaderboard_state_a7cb25b3cc24078d36015c866ed4ce7da}{Leaderboard\+State}}, \mbox{\hyperlink{class_level_complete_state_a8b7259ff7af836d78bbad919a0b0cbc6}{Level\+Complete\+State}}, \mbox{\hyperlink{class_level_select_state_ab1789928c6094d98fc5ca062ac566f69}{Level\+Select\+State}}, \mbox{\hyperlink{class_main_menu_state_acfe2c4d10154a431ef4801ff432cb602}{Main\+Menu\+State}} i \mbox{\hyperlink{class_pause_menu_state_a67edff37fa71fd5c748353e4e4e3f907}{Pause\+Menu\+State}}.
+
+\Hypertarget{class_state_a2ff5faa41a5811007e8d50542365640b}\label{class_state_a2ff5faa41a5811007e8d50542365640b} 
+\index{State@{State}!init@{init}}
+\index{init@{init}!State@{State}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily virtual void State\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Inicjalizuje zasoby i zmienne stanu. Wywoływana raz, gdy stan jest dodawany do State\+Managera. 
+
+
+
+Implementowany w \mbox{\hyperlink{class_game_over_state_a8c589247e135a5f8094187a6209cf4de}{Game\+Over\+State}}, \mbox{\hyperlink{class_game_state_afd5d789bd58cc26b4e59265e7448fe12}{Game\+State}}, \mbox{\hyperlink{class_leaderboard_state_a819338e9c0a2281d9a9197819c0bd0cf}{Leaderboard\+State}}, \mbox{\hyperlink{class_level_complete_state_a7579156258a6d750c59a43e8f4835e26}{Level\+Complete\+State}}, \mbox{\hyperlink{class_level_select_state_af9065488b5b59ac7ca5057a4b69ada1c}{Level\+Select\+State}}, \mbox{\hyperlink{class_main_menu_state_ae01bec9a0c013ab0986314f5b759581d}{Main\+Menu\+State}} i \mbox{\hyperlink{class_pause_menu_state_ac9e33247bd16b40459d14d67f0b862e1}{Pause\+Menu\+State}}.
+
+\Hypertarget{class_state_abad223d1066e95bd1b70e1341fb72a88}\label{class_state_abad223d1066e95bd1b70e1341fb72a88} 
+\index{State@{State}!pause@{pause}}
+\index{pause@{pause}!State@{State}}
+\doxysubsubsection{\texorpdfstring{pause()}{pause()}}
+{\footnotesize\ttfamily virtual void State\+::pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Wywoływana, gdy stan jest pauzowany (np. inny stan jest nakładany na wierzch). 
+
+\Hypertarget{class_state_a8ef6d305e962afe41b0629255f0f58f9}\label{class_state_a8ef6d305e962afe41b0629255f0f58f9} 
+\index{State@{State}!resume@{resume}}
+\index{resume@{resume}!State@{State}}
+\doxysubsubsection{\texorpdfstring{resume()}{resume()}}
+{\footnotesize\ttfamily virtual void State\+::resume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Wywoływana, gdy stan jest wznawiany (np. stan powyżej został zdjęty ze stosu). 
+
+\Hypertarget{class_state_a07b507523aaffc4cf78f3dd3174a68ea}\label{class_state_a07b507523aaffc4cf78f3dd3174a68ea} 
+\index{State@{State}!update@{update}}
+\index{update@{update}!State@{State}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily virtual void State\+::update (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Aktualizuje logikę stanu (fizyka, animacje, reguły gry). 
+
+
+\begin{DoxyParams}{Parametry}
+{\em dt} & Czas, który upłynął od ostatniej klatki (Delta Time) w sekundach. \\
+\hline
+\end{DoxyParams}
+
+
+Implementowany w \mbox{\hyperlink{class_game_over_state_aedf760fded2dd1e31c18dc0c9a848924}{Game\+Over\+State}}, \mbox{\hyperlink{class_game_state_a8f3d8828bc93b6df1c782cafc22316ef}{Game\+State}}, \mbox{\hyperlink{class_leaderboard_state_a5fc5b23370466e8eb3dcbf7579d843b9}{Leaderboard\+State}}, \mbox{\hyperlink{class_level_complete_state_a3029036bd75c66d7c7a52a13009946a5}{Level\+Complete\+State}}, \mbox{\hyperlink{class_level_select_state_a2336d977bf02e8d9acd81cd0214bc28a}{Level\+Select\+State}}, \mbox{\hyperlink{class_main_menu_state_ad427eeebf13b213067dab8add4cfe7ac}{Main\+Menu\+State}} i \mbox{\hyperlink{class_pause_menu_state_a61b3c3dd07f483c1556ccd8607f9244f}{Pause\+Menu\+State}}.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_state_8h}{State.\+h}}\end{DoxyCompactItemize}

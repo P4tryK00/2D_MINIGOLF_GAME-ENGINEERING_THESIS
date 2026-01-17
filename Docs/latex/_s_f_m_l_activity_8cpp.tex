@@ -1,0 +1,90 @@
+\doxysection{Dokumentacja pliku cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Main/\+SFMLActivity.cpp}
+\hypertarget{_s_f_m_l_activity_8cpp}{}\label{_s_f_m_l_activity_8cpp}\index{cmake-\/build-\/debug/\_deps/sfml-\/src/src/SFML/Main/SFMLActivity.cpp@{cmake-\/build-\/debug/\_deps/sfml-\/src/src/SFML/Main/SFMLActivity.cpp}}
+{\ttfamily \#include $<$SFML/\+Config.\+hpp$>$}\newline
+{\ttfamily \#include $<$android/native\+\_\+activity.\+h$>$}\newline
+{\ttfamily \#include $<$android/log.\+h$>$}\newline
+{\ttfamily \#include $<$dlfcn.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$jni.\+h$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+Wykres zależności załączania dla SFMLActivity.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_s_f_m_l_activity_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Definicje}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_s_f_m_l_activity_8cpp_ae02538a80ad5fc009caec73487d11a8d}{LOGE}}(...)~((void)\+\_\+\+\_\+android\+\_\+log\+\_\+print(ANDROID\+\_\+\+LOG\+\_\+\+INFO, "{}sfml-\/activity"{}, \+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+))
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_s_f_m_l_activity_8cpp_aa2ae77995f7d5d7b0c31e06118ab68f9}{get\+Library\+Name}} (JNIEnv \texorpdfstring{$\ast$}{*}l\+JNIEnv, jobject \&object\+Activity\+Info)
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_s_f_m_l_activity_8cpp_a287ed78bdd87b3d9d94d276456774a7f}{load\+Library}} (const char \texorpdfstring{$\ast$}{*}library\+Name, JNIEnv \texorpdfstring{$\ast$}{*}l\+JNIEnv, jobject \&Object\+Activity\+Info)
+\item 
+void \mbox{\hyperlink{_s_f_m_l_activity_8cpp_a75738c9cb247f1e6f57e58bdb99ef020}{ANative\+Activity\+\_\+on\+Create}} (ANative\+Activity \texorpdfstring{$\ast$}{*}activity, void \texorpdfstring{$\ast$}{*}saved\+State, size\+\_\+t saved\+State\+Size)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja definicji}
+\Hypertarget{_s_f_m_l_activity_8cpp_ae02538a80ad5fc009caec73487d11a8d}\label{_s_f_m_l_activity_8cpp_ae02538a80ad5fc009caec73487d11a8d} 
+\index{SFMLActivity.cpp@{SFMLActivity.cpp}!LOGE@{LOGE}}
+\index{LOGE@{LOGE}!SFMLActivity.cpp@{SFMLActivity.cpp}}
+\doxysubsubsection{\texorpdfstring{LOGE}{LOGE}}
+{\footnotesize\ttfamily \#define LOGE(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~((void)\+\_\+\+\_\+android\+\_\+log\+\_\+print(ANDROID\+\_\+\+LOG\+\_\+\+INFO, "{}sfml-\/activity"{}, \+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+))}
+
+
+
+\doxysubsection{Dokumentacja funkcji}
+\Hypertarget{_s_f_m_l_activity_8cpp_a75738c9cb247f1e6f57e58bdb99ef020}\label{_s_f_m_l_activity_8cpp_a75738c9cb247f1e6f57e58bdb99ef020} 
+\index{SFMLActivity.cpp@{SFMLActivity.cpp}!ANativeActivity\_onCreate@{ANativeActivity\_onCreate}}
+\index{ANativeActivity\_onCreate@{ANativeActivity\_onCreate}!SFMLActivity.cpp@{SFMLActivity.cpp}}
+\doxysubsubsection{\texorpdfstring{ANativeActivity\_onCreate()}{ANativeActivity\_onCreate()}}
+{\footnotesize\ttfamily void ANative\+Activity\+\_\+on\+Create (\begin{DoxyParamCaption}\item[{ANative\+Activity \texorpdfstring{$\ast$}{*}}]{activity,  }\item[{void \texorpdfstring{$\ast$}{*}}]{saved\+State,  }\item[{size\+\_\+t}]{saved\+State\+Size }\end{DoxyParamCaption})}
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{_s_f_m_l_activity_8cpp_a75738c9cb247f1e6f57e58bdb99ef020_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{_s_f_m_l_activity_8cpp_a75738c9cb247f1e6f57e58bdb99ef020_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_s_f_m_l_activity_8cpp_aa2ae77995f7d5d7b0c31e06118ab68f9}\label{_s_f_m_l_activity_8cpp_aa2ae77995f7d5d7b0c31e06118ab68f9} 
+\index{SFMLActivity.cpp@{SFMLActivity.cpp}!getLibraryName@{getLibraryName}}
+\index{getLibraryName@{getLibraryName}!SFMLActivity.cpp@{SFMLActivity.cpp}}
+\doxysubsubsection{\texorpdfstring{getLibraryName()}{getLibraryName()}}
+{\footnotesize\ttfamily const char \texorpdfstring{$\ast$}{*} get\+Library\+Name (\begin{DoxyParamCaption}\item[{JNIEnv \texorpdfstring{$\ast$}{*}}]{l\+JNIEnv,  }\item[{jobject \&}]{object\+Activity\+Info }\end{DoxyParamCaption})}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{_s_f_m_l_activity_8cpp_aa2ae77995f7d5d7b0c31e06118ab68f9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_s_f_m_l_activity_8cpp_a287ed78bdd87b3d9d94d276456774a7f}\label{_s_f_m_l_activity_8cpp_a287ed78bdd87b3d9d94d276456774a7f} 
+\index{SFMLActivity.cpp@{SFMLActivity.cpp}!loadLibrary@{loadLibrary}}
+\index{loadLibrary@{loadLibrary}!SFMLActivity.cpp@{SFMLActivity.cpp}}
+\doxysubsubsection{\texorpdfstring{loadLibrary()}{loadLibrary()}}
+{\footnotesize\ttfamily void \texorpdfstring{$\ast$}{*} load\+Library (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{library\+Name,  }\item[{JNIEnv \texorpdfstring{$\ast$}{*}}]{l\+JNIEnv,  }\item[{jobject \&}]{Object\+Activity\+Info }\end{DoxyParamCaption})}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{_s_f_m_l_activity_8cpp_a287ed78bdd87b3d9d94d276456774a7f_icgraph}
+\end{center}
+\end{figure}

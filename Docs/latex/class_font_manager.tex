@@ -1,0 +1,156 @@
+\doxysection{Dokumentacja klasy Font\+Manager}
+\hypertarget{class_font_manager}{}\label{class_font_manager}\index{FontManager@{FontManager}}
+
+
+Klasa statyczna zarządzająca zasobami czcionek w grze.  
+
+
+
+
+{\ttfamily \#include $<$Font\+Manager.\+h$>$}
+
+
+
+Diagram współpracy dla Font\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=161pt]{class_font_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_font_manager_a9f597ea5278f17da563b6f34c912256e}{Font\+Manager}} ()=delete
+\begin{DoxyCompactList}\small\item\em Konstruktor usunięty -\/ klasa jest w pełni statyczna. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Statyczne metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_font_manager_a6afe58dc69de55edf372f4ba181f6222}{load}} (const std\+::string \&key, const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Ładuje czcionkę z pliku i przypisuje ją do klucza. \end{DoxyCompactList}\item 
+static const sf\+::\+Font \& \mbox{\hyperlink{class_font_manager_a34308187010c70cc99543bbf0265d2ca}{get}} (const std\+::string \&key)
+\begin{DoxyCompactList}\small\item\em Pobiera załadowaną wcześniej czcionkę. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_font_manager_aeaac1f9d3809e2bee89be789415ca673}{cleanup}} ()
+\begin{DoxyCompactList}\small\item\em Usuwa wszystkie załadowane czcionki i zwalnia pamięć. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Statyczne atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::map$<$ std\+::string, sf\+::\+Font $>$ \mbox{\hyperlink{class_font_manager_a0c05546841a12cc8c9e41c0f0431e428}{m\+\_\+\+Font}}
+\begin{DoxyCompactList}\small\item\em Mapa przechowująca pary\+: nazwa czcionki -\/\texorpdfstring{$>$}{>} obiekt czcionki. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Klasa statyczna zarządzająca zasobami czcionek w grze. 
+
+Odpowiada za ładowanie, przechowywanie i udostępnianie obiektów sf\+::\+Font. Zapobiega wielokrotnemu ładowaniu tych samych plików z dysku. 
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{class_font_manager_a9f597ea5278f17da563b6f34c912256e}\label{class_font_manager_a9f597ea5278f17da563b6f34c912256e} 
+\index{FontManager@{FontManager}!FontManager@{FontManager}}
+\index{FontManager@{FontManager}!FontManager@{FontManager}}
+\doxysubsubsection{\texorpdfstring{FontManager()}{FontManager()}}
+{\footnotesize\ttfamily Font\+Manager\+::\+Font\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Konstruktor usunięty -\/ klasa jest w pełni statyczna. 
+
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_font_manager_aeaac1f9d3809e2bee89be789415ca673}\label{class_font_manager_aeaac1f9d3809e2bee89be789415ca673} 
+\index{FontManager@{FontManager}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!FontManager@{FontManager}}
+\doxysubsubsection{\texorpdfstring{cleanup()}{cleanup()}}
+{\footnotesize\ttfamily void Font\+Manager\+::cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Usuwa wszystkie załadowane czcionki i zwalnia pamięć. 
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_font_manager_aeaac1f9d3809e2bee89be789415ca673_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_font_manager_a34308187010c70cc99543bbf0265d2ca}\label{class_font_manager_a34308187010c70cc99543bbf0265d2ca} 
+\index{FontManager@{FontManager}!get@{get}}
+\index{get@{get}!FontManager@{FontManager}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily const sf\+::\+Font \& Font\+Manager\+::get (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Pobiera załadowaną wcześniej czcionkę. 
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parametry}
+{\em key} & Klucz pod którym czcionka została zapisana. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Stała referencja do obiektu sf\+::\+Font. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Wyjątki}
+{\em std\+::out\+\_\+of\+\_\+range} & Jeśli klucz nie istnieje w mapie. \\
+\hline
+\end{DoxyExceptions}
+
+\end{DoxyItemize}Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_font_manager_a34308187010c70cc99543bbf0265d2ca_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_font_manager_a6afe58dc69de55edf372f4ba181f6222}\label{class_font_manager_a6afe58dc69de55edf372f4ba181f6222} 
+\index{FontManager@{FontManager}!load@{load}}
+\index{load@{load}!FontManager@{FontManager}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily void Font\+Manager\+::load (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Ładuje czcionkę z pliku i przypisuje ją do klucza. 
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parametry}
+{\em key} & Unikalny identyfikator (nazwa) czcionki, np. "{}\+Main\+Font"{}. \\
+\hline
+{\em path} & Ścieżka do pliku czcionki (np. .ttf). \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_font_manager_a6afe58dc69de55edf372f4ba181f6222_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{class_font_manager_a0c05546841a12cc8c9e41c0f0431e428}\label{class_font_manager_a0c05546841a12cc8c9e41c0f0431e428} 
+\index{FontManager@{FontManager}!m\_Font@{m\_Font}}
+\index{m\_Font@{m\_Font}!FontManager@{FontManager}}
+\doxysubsubsection{\texorpdfstring{m\_Font}{m\_Font}}
+{\footnotesize\ttfamily std\+::map$<$ std\+::string, sf\+::\+Font $>$ Font\+Manager\+::m\+\_\+\+Font\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Mapa przechowująca pary\+: nazwa czcionki -\/\texorpdfstring{$>$}{>} obiekt czcionki. 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_font_manager_8h}{Font\+Manager.\+h}}\item 
+\mbox{\hyperlink{_font_manager_8cpp}{Font\+Manager.\+cpp}}\end{DoxyCompactItemize}

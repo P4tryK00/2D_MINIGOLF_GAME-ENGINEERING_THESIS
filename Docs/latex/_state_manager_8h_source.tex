@@ -1,0 +1,40 @@
+\doxysection{State\+Manager.\+h}
+\hypertarget{_state_manager_8h_source}{}\label{_state_manager_8h_source}\mbox{\hyperlink{_state_manager_8h}{Idź do dokumentacji tego pliku.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MINI\_GOLF\_STATEMANAGER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MINI\_GOLF\_STATEMANAGER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stack>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_state_8h}{State.h}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{typedef}\ std::unique\_ptr<State>\ \mbox{\hyperlink{_state_manager_8h_ac53aadfd741ef1c4ac570e3d21bfc7fa}{StateRef}};}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_state_manager}{StateManager}}\ \{}
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_state_manager_a3e2be96d935eb56813b096a885d58587}{StateManager}}()\ :\ \mbox{\hyperlink{class_state_manager_a53a1a6ae96583add27f8cd957ad1749d}{m\_isRemoving}}(false),\ \mbox{\hyperlink{class_state_manager_a386337e3dcf0351e7a1d08ccec327159}{m\_isAdding}}(false),\ \mbox{\hyperlink{class_state_manager_a6e578e1f69d111c992643c6afd27893f}{m\_isReplacing}}(false)\ \{\}}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_state_manager_a05a43504a033f1befad5c5118249ec6f}{\string~StateManager}}()\ \{\}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_state_manager_a2d41a7c9560d917b858195182dff6d8a}{addState}}(\mbox{\hyperlink{_state_manager_8h_ac53aadfd741ef1c4ac570e3d21bfc7fa}{StateRef}}\ newState,\ \textcolor{keywordtype}{bool}\ isReplacing\ =\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_state_manager_a2e5cc48a4a261823d027ad09b5b6a6b8}{removeState}}();}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_state_manager_a31590f9467b794161f6888da0523738b}{processStateChanges}}();}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_state_manager_a72f6daf6cbfaef0c9ea531864f40780f}{switchState}}(\mbox{\hyperlink{_state_manager_8h_ac53aadfd741ef1c4ac570e3d21bfc7fa}{StateRef}}\ newState);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00055\ \ \ \ \ \mbox{\hyperlink{_state_manager_8h_ac53aadfd741ef1c4ac570e3d21bfc7fa}{StateRef}}\&\ \mbox{\hyperlink{class_state_manager_a62f5a41ca8078e2b4a949891f361b6fe}{getActiveState}}();}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00058\ \ \ \ \ std::stack<StateRef>\ \mbox{\hyperlink{class_state_manager_acca68222c5fac8c2fd644859cccb6982}{m\_states}};\ }
+\DoxyCodeLine{00059\ \ \ \ \ \mbox{\hyperlink{_state_manager_8h_ac53aadfd741ef1c4ac570e3d21bfc7fa}{StateRef}}\ \mbox{\hyperlink{class_state_manager_a129090562f4bf421983dfdb93b6e4459}{m\_newState}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_state_manager_a53a1a6ae96583add27f8cd957ad1749d}{m\_isRemoving}};\ \ \ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_state_manager_a386337e3dcf0351e7a1d08ccec327159}{m\_isAdding}};\ \ \ \ \ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_state_manager_a6e578e1f69d111c992643c6afd27893f}{m\_isReplacing}};\ \ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_state_manager_a3fd47d3a88b6baafcda8bd8f3f51092a}{m\_isClearing}};\ \ \ }
+\DoxyCodeLine{00065\ \};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//MINI\_GOLF\_STATEMANAGER\_H}}
+
+\end{DoxyCode}

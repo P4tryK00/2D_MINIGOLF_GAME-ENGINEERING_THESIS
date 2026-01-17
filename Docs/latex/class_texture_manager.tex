@@ -1,0 +1,141 @@
+\doxysection{Dokumentacja klasy Texture\+Manager}
+\hypertarget{class_texture_manager}{}\label{class_texture_manager}\index{TextureManager@{TextureManager}}
+
+
+Statyczny menedżer zasobów dla tekstur SFML.  
+
+
+
+
+{\ttfamily \#include $<$Texture\+Manager.\+h$>$}
+
+
+
+Diagram współpracy dla Texture\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{class_texture_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_texture_manager_a379a79168e8481b70c188259e0672981}{Texture\+Manager}} ()=delete
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Statyczne metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_texture_manager_a62dafc4433e5ec6922e18828011cfd95}{load}} (const std\+::string \&key, const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Ładuje teksturę z pliku i zapisuje ją pod kluczem tekstowym. \end{DoxyCompactList}\item 
+static const sf\+::\+Texture \& \mbox{\hyperlink{class_texture_manager_aa0b6f677cfbe3f7314fe819372be4b65}{get}} (const std\+::string \&key)
+\begin{DoxyCompactList}\small\item\em Pobiera referencję do przechowywanej tekstury. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_texture_manager_a56f80424cfdb3a5d7cf93cfd415ea16c}{cleanup}} ()
+\begin{DoxyCompactList}\small\item\em Czyści wszystkie tekstury z pamięci. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Statyczne atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::map$<$ std\+::string, sf\+::\+Texture $>$ \mbox{\hyperlink{class_texture_manager_a6a02f32258adf67472832bb25f082c15}{m\+\_\+\+Textures}}
+\begin{DoxyCompactList}\small\item\em Kontener przechowujący tekstury. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Statyczny menedżer zasobów dla tekstur SFML. 
+
+Implementuje wzorzec Pyłek (Flyweight) poprzez przechowywanie załadowanych tekstur w mapie. Zapobiega to wielokrotnemu ładowaniu tego samego zasobu z dysku, oszczędzając pamięć. 
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{class_texture_manager_a379a79168e8481b70c188259e0672981}\label{class_texture_manager_a379a79168e8481b70c188259e0672981} 
+\index{TextureManager@{TextureManager}!TextureManager@{TextureManager}}
+\index{TextureManager@{TextureManager}!TextureManager@{TextureManager}}
+\doxysubsubsection{\texorpdfstring{TextureManager()}{TextureManager()}}
+{\footnotesize\ttfamily Texture\+Manager\+::\+Texture\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_texture_manager_a56f80424cfdb3a5d7cf93cfd415ea16c}\label{class_texture_manager_a56f80424cfdb3a5d7cf93cfd415ea16c} 
+\index{TextureManager@{TextureManager}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!TextureManager@{TextureManager}}
+\doxysubsubsection{\texorpdfstring{cleanup()}{cleanup()}}
+{\footnotesize\ttfamily void Texture\+Manager\+::cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Czyści wszystkie tekstury z pamięci. 
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_texture_manager_a56f80424cfdb3a5d7cf93cfd415ea16c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_texture_manager_aa0b6f677cfbe3f7314fe819372be4b65}\label{class_texture_manager_aa0b6f677cfbe3f7314fe819372be4b65} 
+\index{TextureManager@{TextureManager}!get@{get}}
+\index{get@{get}!TextureManager@{TextureManager}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily const sf\+::\+Texture \& Texture\+Manager\+::get (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Pobiera referencję do przechowywanej tekstury. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em key} & Identyfikator tekstury do pobrania. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Stała referencja do sf\+::\+Texture. 
+\end{DoxyReturn}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_texture_manager_aa0b6f677cfbe3f7314fe819372be4b65_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_texture_manager_a62dafc4433e5ec6922e18828011cfd95}\label{class_texture_manager_a62dafc4433e5ec6922e18828011cfd95} 
+\index{TextureManager@{TextureManager}!load@{load}}
+\index{load@{load}!TextureManager@{TextureManager}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily void Texture\+Manager\+::load (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Ładuje teksturę z pliku i zapisuje ją pod kluczem tekstowym. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em key} & Unikalny identyfikator tekstury. \\
+\hline
+{\em path} & Ścieżka do pliku graficznego. \\
+\hline
+\end{DoxyParams}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_texture_manager_a62dafc4433e5ec6922e18828011cfd95_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{class_texture_manager_a6a02f32258adf67472832bb25f082c15}\label{class_texture_manager_a6a02f32258adf67472832bb25f082c15} 
+\index{TextureManager@{TextureManager}!m\_Textures@{m\_Textures}}
+\index{m\_Textures@{m\_Textures}!TextureManager@{TextureManager}}
+\doxysubsubsection{\texorpdfstring{m\_Textures}{m\_Textures}}
+{\footnotesize\ttfamily std\+::map$<$ std\+::string, sf\+::\+Texture $>$ Texture\+Manager\+::m\+\_\+\+Textures\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Kontener przechowujący tekstury. 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_texture_manager_8h}{Texture\+Manager.\+h}}\item 
+\mbox{\hyperlink{_texture_manager_8cpp}{Texture\+Manager.\+cpp}}\end{DoxyCompactItemize}

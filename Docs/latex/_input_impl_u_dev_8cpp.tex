@@ -1,0 +1,78 @@
+\doxysection{Dokumentacja pliku cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+DRM/\+Input\+Impl\+UDev.cpp}
+\hypertarget{_input_impl_u_dev_8cpp}{}\label{_input_impl_u_dev_8cpp}\index{cmake-\/build-\/debug/\_deps/sfml-\/src/src/SFML/Window/DRM/InputImplUDev.cpp@{cmake-\/build-\/debug/\_deps/sfml-\/src/src/SFML/Window/DRM/InputImplUDev.cpp}}
+{\ttfamily \#include $<$SFML/\+Window/\+DRM/\+Input\+Impl\+UDev.\+hpp$>$}\newline
+{\ttfamily \#include $<$SFML/\+System/\+Err.\+hpp$>$}\newline
+{\ttfamily \#include $<$SFML/\+System/\+Lock.\+hpp$>$}\newline
+{\ttfamily \#include $<$SFML/\+System/\+Mutex.\+hpp$>$}\newline
+{\ttfamily \#include $<$cerrno$>$}\newline
+{\ttfamily \#include $<$cstdio$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$linux/input.\+h$>$}\newline
+{\ttfamily \#include $<$queue$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+{\ttfamily \#include $<$termios.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+Wykres zależności załączania dla Input\+Impl\+UDev.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_input_impl_u_dev_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Przestrzenie nazw}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacesf}{sf}}
+\begin{DoxyCompactList}\small\item\em Predefine some classes. \end{DoxyCompactList}\item 
+namespace \mbox{\hyperlink{namespacesf_1_1priv}{sf\+::priv}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Definicje}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_input_impl_u_dev_8cpp_a2f660aa23a5dbc0f4b8df48b4302b8c3}{BITS\+\_\+\+PER\+\_\+\+LONG}}~(sizeof(unsigned long) \texorpdfstring{$\ast$}{*} 8)
+\item 
+\#define \mbox{\hyperlink{_input_impl_u_dev_8cpp_a1f296f3f5ec473b603ee32e2f7577fcb}{NBITS}}(x)~(((x -\/ 1) / \mbox{\hyperlink{_input_impl_u_dev_8cpp_a2f660aa23a5dbc0f4b8df48b4302b8c3}{BITS\+\_\+\+PER\+\_\+\+LONG}}) + 1)
+\item 
+\#define \mbox{\hyperlink{_input_impl_u_dev_8cpp_a4521467edec9387fad3ae8761f0f4b1d}{OFF}}(x)~(x \% \mbox{\hyperlink{_input_impl_u_dev_8cpp_a2f660aa23a5dbc0f4b8df48b4302b8c3}{BITS\+\_\+\+PER\+\_\+\+LONG}})
+\item 
+\#define \mbox{\hyperlink{_input_impl_u_dev_8cpp_af647a68a4985fd16c40d533b0ab21bac}{LONG}}(x)~(x / \mbox{\hyperlink{_input_impl_u_dev_8cpp_a2f660aa23a5dbc0f4b8df48b4302b8c3}{BITS\+\_\+\+PER\+\_\+\+LONG}})
+\item 
+\#define \mbox{\hyperlink{_input_impl_u_dev_8cpp_a9c09f497f8c4278706e74240fa7f9405}{TEST\+\_\+\+BIT}}(bit,  array)~((array\mbox{[}\mbox{\hyperlink{_input_impl_u_dev_8cpp_af647a68a4985fd16c40d533b0ab21bac}{LONG}}(bit)\mbox{]} $>$$>$ \mbox{\hyperlink{_input_impl_u_dev_8cpp_a4521467edec9387fad3ae8761f0f4b1d}{OFF}}(bit)) \& 1)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja definicji}
+\Hypertarget{_input_impl_u_dev_8cpp_a2f660aa23a5dbc0f4b8df48b4302b8c3}\label{_input_impl_u_dev_8cpp_a2f660aa23a5dbc0f4b8df48b4302b8c3} 
+\index{InputImplUDev.cpp@{InputImplUDev.cpp}!BITS\_PER\_LONG@{BITS\_PER\_LONG}}
+\index{BITS\_PER\_LONG@{BITS\_PER\_LONG}!InputImplUDev.cpp@{InputImplUDev.cpp}}
+\doxysubsubsection{\texorpdfstring{BITS\_PER\_LONG}{BITS\_PER\_LONG}}
+{\footnotesize\ttfamily \#define BITS\+\_\+\+PER\+\_\+\+LONG~(sizeof(unsigned long) \texorpdfstring{$\ast$}{*} 8)}
+
+\Hypertarget{_input_impl_u_dev_8cpp_af647a68a4985fd16c40d533b0ab21bac}\label{_input_impl_u_dev_8cpp_af647a68a4985fd16c40d533b0ab21bac} 
+\index{InputImplUDev.cpp@{InputImplUDev.cpp}!LONG@{LONG}}
+\index{LONG@{LONG}!InputImplUDev.cpp@{InputImplUDev.cpp}}
+\doxysubsubsection{\texorpdfstring{LONG}{LONG}}
+{\footnotesize\ttfamily \#define LONG(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(x / \mbox{\hyperlink{_input_impl_u_dev_8cpp_a2f660aa23a5dbc0f4b8df48b4302b8c3}{BITS\+\_\+\+PER\+\_\+\+LONG}})}
+
+\Hypertarget{_input_impl_u_dev_8cpp_a1f296f3f5ec473b603ee32e2f7577fcb}\label{_input_impl_u_dev_8cpp_a1f296f3f5ec473b603ee32e2f7577fcb} 
+\index{InputImplUDev.cpp@{InputImplUDev.cpp}!NBITS@{NBITS}}
+\index{NBITS@{NBITS}!InputImplUDev.cpp@{InputImplUDev.cpp}}
+\doxysubsubsection{\texorpdfstring{NBITS}{NBITS}}
+{\footnotesize\ttfamily \#define NBITS(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((x -\/ 1) / \mbox{\hyperlink{_input_impl_u_dev_8cpp_a2f660aa23a5dbc0f4b8df48b4302b8c3}{BITS\+\_\+\+PER\+\_\+\+LONG}}) + 1)}
+
+\Hypertarget{_input_impl_u_dev_8cpp_a4521467edec9387fad3ae8761f0f4b1d}\label{_input_impl_u_dev_8cpp_a4521467edec9387fad3ae8761f0f4b1d} 
+\index{InputImplUDev.cpp@{InputImplUDev.cpp}!OFF@{OFF}}
+\index{OFF@{OFF}!InputImplUDev.cpp@{InputImplUDev.cpp}}
+\doxysubsubsection{\texorpdfstring{OFF}{OFF}}
+{\footnotesize\ttfamily \#define OFF(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(x \% \mbox{\hyperlink{_input_impl_u_dev_8cpp_a2f660aa23a5dbc0f4b8df48b4302b8c3}{BITS\+\_\+\+PER\+\_\+\+LONG}})}
+
+\Hypertarget{_input_impl_u_dev_8cpp_a9c09f497f8c4278706e74240fa7f9405}\label{_input_impl_u_dev_8cpp_a9c09f497f8c4278706e74240fa7f9405} 
+\index{InputImplUDev.cpp@{InputImplUDev.cpp}!TEST\_BIT@{TEST\_BIT}}
+\index{TEST\_BIT@{TEST\_BIT}!InputImplUDev.cpp@{InputImplUDev.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_BIT}{TEST\_BIT}}
+{\footnotesize\ttfamily \#define TEST\+\_\+\+BIT(\begin{DoxyParamCaption}\item[{}]{bit,  }\item[{}]{array }\end{DoxyParamCaption})~((array\mbox{[}\mbox{\hyperlink{_input_impl_u_dev_8cpp_af647a68a4985fd16c40d533b0ab21bac}{LONG}}(bit)\mbox{]} $>$$>$ \mbox{\hyperlink{_input_impl_u_dev_8cpp_a4521467edec9387fad3ae8761f0f4b1d}{OFF}}(bit)) \& 1)}
+

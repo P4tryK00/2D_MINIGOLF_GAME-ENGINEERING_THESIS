@@ -1,0 +1,44 @@
+\doxysection{Dokumentacja pliku cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+Android/\+Window\+Impl\+Android.cpp}
+\hypertarget{_window_impl_android_8cpp}{}\label{_window_impl_android_8cpp}\index{cmake-\/build-\/debug/\_deps/sfml-\/src/src/SFML/Window/Android/WindowImplAndroid.cpp@{cmake-\/build-\/debug/\_deps/sfml-\/src/src/SFML/Window/Android/WindowImplAndroid.cpp}}
+{\ttfamily \#include $<$SFML/\+Window/\+Window\+Style.\+hpp$>$}\newline
+{\ttfamily \#include $<$SFML/\+Window/\+Android/\+Window\+Impl\+Android.\+hpp$>$}\newline
+{\ttfamily \#include $<$SFML/\+Window/\+Event.\+hpp$>$}\newline
+{\ttfamily \#include $<$SFML/\+System/\+Lock.\+hpp$>$}\newline
+{\ttfamily \#include $<$SFML/\+System/\+Err.\+hpp$>$}\newline
+{\ttfamily \#include $<$android/looper.\+h$>$}\newline
+Wykres zależności załączania dla Window\+Impl\+Android.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_window_impl_android_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Przestrzenie nazw}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacesf}{sf}}
+\begin{DoxyCompactList}\small\item\em Predefine some classes. \end{DoxyCompactList}\item 
+namespace \mbox{\hyperlink{namespacesf_1_1priv}{sf\+::priv}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Definicje}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_window_impl_android_8cpp_a37fbc0c0a301beddfeefa05f6a3c2524}{AMOTION\+\_\+\+EVENT\+\_\+\+ACTION\+\_\+\+HOVER\+\_\+\+MOVE}}~0x00000007
+\item 
+\#define \mbox{\hyperlink{_window_impl_android_8cpp_a0b1621a8d67bbf2abf96309b1be77381}{AMOTION\+\_\+\+EVENT\+\_\+\+ACTION\+\_\+\+SCROLL}}~0x00000008
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja definicji}
+\Hypertarget{_window_impl_android_8cpp_a37fbc0c0a301beddfeefa05f6a3c2524}\label{_window_impl_android_8cpp_a37fbc0c0a301beddfeefa05f6a3c2524} 
+\index{WindowImplAndroid.cpp@{WindowImplAndroid.cpp}!AMOTION\_EVENT\_ACTION\_HOVER\_MOVE@{AMOTION\_EVENT\_ACTION\_HOVER\_MOVE}}
+\index{AMOTION\_EVENT\_ACTION\_HOVER\_MOVE@{AMOTION\_EVENT\_ACTION\_HOVER\_MOVE}!WindowImplAndroid.cpp@{WindowImplAndroid.cpp}}
+\doxysubsubsection{\texorpdfstring{AMOTION\_EVENT\_ACTION\_HOVER\_MOVE}{AMOTION\_EVENT\_ACTION\_HOVER\_MOVE}}
+{\footnotesize\ttfamily \#define AMOTION\+\_\+\+EVENT\+\_\+\+ACTION\+\_\+\+HOVER\+\_\+\+MOVE~0x00000007}
+
+\Hypertarget{_window_impl_android_8cpp_a0b1621a8d67bbf2abf96309b1be77381}\label{_window_impl_android_8cpp_a0b1621a8d67bbf2abf96309b1be77381} 
+\index{WindowImplAndroid.cpp@{WindowImplAndroid.cpp}!AMOTION\_EVENT\_ACTION\_SCROLL@{AMOTION\_EVENT\_ACTION\_SCROLL}}
+\index{AMOTION\_EVENT\_ACTION\_SCROLL@{AMOTION\_EVENT\_ACTION\_SCROLL}!WindowImplAndroid.cpp@{WindowImplAndroid.cpp}}
+\doxysubsubsection{\texorpdfstring{AMOTION\_EVENT\_ACTION\_SCROLL}{AMOTION\_EVENT\_ACTION\_SCROLL}}
+{\footnotesize\ttfamily \#define AMOTION\+\_\+\+EVENT\+\_\+\+ACTION\+\_\+\+SCROLL~0x00000008}
+

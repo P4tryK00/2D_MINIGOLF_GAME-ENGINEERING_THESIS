@@ -1,0 +1,46 @@
+\doxysection{Dokumentacja struktury FLAC\+\_\+\+\_\+\+Stream\+Metadata}
+\hypertarget{struct_f_l_a_c_____stream_metadata}{}\label{struct_f_l_a_c_____stream_metadata}\index{FLAC\_\_StreamMetadata@{FLAC\_\_StreamMetadata}}
+
+
+{\ttfamily \#include $<$format.\+h$>$}
+
+
+
+Diagram współpracy dla FLAC\+\_\+\+\_\+\+Stream\+Metadata\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_f_l_a_c_____stream_metadata__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__flac__format_gac71714ba8ddbbd66d26bb78a427fac01}{FLAC\+\_\+\+\_\+\+Metadata\+Type}} \mbox{\hyperlink{group__flac__format_ga39fd0655464f2cc7c9c37ae715088aec}{type}}
+\item 
+\mbox{\hyperlink{ordinals_8h_a95103469f1cbd78b8cf250194985b34e}{FLAC\+\_\+\+\_\+bool}} \mbox{\hyperlink{group__flac__format_gaef40bbf85abe12e035f66f2d54ed316c}{is\+\_\+last}}
+\item 
+unsigned \mbox{\hyperlink{group__flac__format_ga3fd615e41609837a5672f9081d9d2183}{length}}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>\mbox{\hyperlink{struct_f_l_a_c_____stream_metadata___stream_info}{FLAC\_\_StreamMetadata\_StreamInfo}} \mbox{\hyperlink{group__flac__format_ga827c8671721b01ed3007adbe81ae0c6b}{FLAC\_\_StreamMetadata::stream\_info}}\\
+\>\mbox{\hyperlink{struct_f_l_a_c_____stream_metadata___padding}{FLAC\_\_StreamMetadata\_Padding}} \mbox{\hyperlink{group__flac__format_ga202f0ed2fa1dae32893be6025838f651}{FLAC\_\_StreamMetadata::padding}}\\
+\>\mbox{\hyperlink{struct_f_l_a_c_____stream_metadata___application}{FLAC\_\_StreamMetadata\_Application}} \mbox{\hyperlink{group__flac__format_gaf16b029d4a476aeb46f9a215e2cce462}{FLAC\_\_StreamMetadata::application}}\\
+\>\mbox{\hyperlink{struct_f_l_a_c_____stream_metadata___seek_table}{FLAC\_\_StreamMetadata\_SeekTable}} \mbox{\hyperlink{group__flac__format_ga3d27e525001843d173f8c97987663aa7}{FLAC\_\_StreamMetadata::seek\_table}}\\
+\>\mbox{\hyperlink{struct_f_l_a_c_____stream_metadata___vorbis_comment}{FLAC\_\_StreamMetadata\_VorbisComment}} \mbox{\hyperlink{group__flac__format_ga02662cb0ff19e8229dcd2384f708bae0}{FLAC\_\_StreamMetadata::vorbis\_comment}}\\
+\>\mbox{\hyperlink{struct_f_l_a_c_____stream_metadata___cue_sheet}{FLAC\_\_StreamMetadata\_CueSheet}} \mbox{\hyperlink{group__flac__format_ga68e7d388eeb7e35076e016370a74e0ec}{FLAC\_\_StreamMetadata::cue\_sheet}}\\
+\>\mbox{\hyperlink{struct_f_l_a_c_____stream_metadata___picture}{FLAC\_\_StreamMetadata\_Picture}} \mbox{\hyperlink{group__flac__format_ga203cf5cce24097ef96efd5dd3bb7c8e7}{FLAC\_\_StreamMetadata::picture}}\\
+\>\mbox{\hyperlink{struct_f_l_a_c_____stream_metadata___unknown}{FLAC\_\_StreamMetadata\_Unknown}} \mbox{\hyperlink{group__flac__format_gac29528515ea884b108a813a6609515bd}{FLAC\_\_StreamMetadata::unknown}}\\
+\} \mbox{\hyperlink{group__flac__format_gaac425bcd2b574de4d6e38f20c9229c5d}{data}}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+FLAC metadata block structure. (c.\+f. \href{../format.html\#metadata_block}{\texttt{ format specification}}) 
+
+Dokumentacja dla tej struktury została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/extlibs/headers/\+FLAC/\mbox{\hyperlink{format_8h}{format.\+h}}\end{DoxyCompactItemize}

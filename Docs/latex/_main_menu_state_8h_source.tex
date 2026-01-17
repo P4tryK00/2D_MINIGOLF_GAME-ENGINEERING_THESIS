@@ -1,0 +1,45 @@
+\doxysection{Main\+Menu\+State.\+h}
+\hypertarget{_main_menu_state_8h_source}{}\label{_main_menu_state_8h_source}\mbox{\hyperlink{_main_menu_state_8h}{Idź do dokumentacji tego pliku.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MINI\_GOLF\_MAINMENUSTATE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MINI\_GOLF\_MAINMENUSTATE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_state_8h}{State.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_game_8h}{Game.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_level_select_state_8h}{LevelSelectState.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_save_manager_8h}{SaveManager.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_leader_board_state_8h}{LeaderBoardState.h}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_main_menu_state}{MainMenuState}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_state}{State}}\ \{}
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_main_menu_state_a8bf084041900c86967b51354fb26a230}{MainMenuState}}(\mbox{\hyperlink{_game_8h_ae7efd7ef77698f16206f5c66180a389f}{GameDataRef}}\ data);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_menu_state_ae01bec9a0c013ab0986314f5b759581d}{init}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_menu_state_acfe2c4d10154a431ef4801ff432cb602}{handleInput}}(sf::Event\&\ event)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_menu_state_ad427eeebf13b213067dab8add4cfe7ac}{update}}(\textcolor{keywordtype}{float}\ dt)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_menu_state_a250f1f2b49fea14497063ebac7e2c011}{draw}}(\textcolor{keywordtype}{float}\ dt)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{_game_8h_ae7efd7ef77698f16206f5c66180a389f}{GameDataRef}}\ \mbox{\hyperlink{class_main_menu_state_a01549df6f5e15047c22944ed054b35ab}{m\_data}};\ }
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ sf::Sprite\ \mbox{\hyperlink{class_main_menu_state_a3dad320c8db7592001f326d6c80dbafb}{m\_background}};\ }
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ sf::Text\ \mbox{\hyperlink{class_main_menu_state_acba2d89d700f75fc3887bfe33d042db0}{m\_title}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00058\ \ \ \ \ sf::Text\ \mbox{\hyperlink{class_main_menu_state_abd2b25d5d69de3bda77b8c269dfb8a42}{m\_playButton}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00059\ \ \ \ \ sf::Text\ \mbox{\hyperlink{class_main_menu_state_a344116097075318ccfaff9cb66c6d4fd}{m\_exitButton}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00060\ \ \ \ \ sf::Text\ \mbox{\hyperlink{class_main_menu_state_a960d49db1cab2eb5f6207dde45ef94cf}{m\_leaderboardButton}};\ }
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{comment}{//\ Zmienne\ do\ efektu\ przejścia\ (Fader)}}
+\DoxyCodeLine{00063\ \ \ \ \ sf::RectangleShape\ \mbox{\hyperlink{class_main_menu_state_acbf21aa61944e229f73088d6bf015d02}{m\_fadeRect}};\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_main_menu_state_ad56c21acdcae3f3b16e4456c109932e1}{m\_alpha}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_main_menu_state_a91a9ae14b1e133e8c47e2a396ada599d}{m\_isTransitioning}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_main_menu_state_af37e24c346ef81d5637c89ae4a32e871}{m\_isFadingIn}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_main_menu_state_a294bc80cb14aa689ff54b55a11e97df8}{m\_goToLeaderboard}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00068\ \};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//MINI\_GOLF\_MAINMENUSTATE\_H}}
+
+\end{DoxyCode}

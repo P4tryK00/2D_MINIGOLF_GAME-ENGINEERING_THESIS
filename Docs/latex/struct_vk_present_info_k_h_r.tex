@@ -1,0 +1,91 @@
+\doxysection{Dokumentacja struktury Vk\+Present\+Info\+KHR}
+\hypertarget{struct_vk_present_info_k_h_r}{}\label{struct_vk_present_info_k_h_r}\index{VkPresentInfoKHR@{VkPresentInfoKHR}}
+
+
+{\ttfamily \#include $<$vulkan.\+h$>$}
+
+
+
+Diagram współpracy dla Vk\+Present\+Info\+KHR\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{struct_vk_present_info_k_h_r__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{vulkan__core_8h_aff9f2b99398eb80a2b5a146bc5534ce8}{Vk\+Structure\+Type}} \mbox{\hyperlink{struct_vk_present_info_k_h_r_aca8bc80315c412aed81a8ca085c03a31}{s\+Type}}
+\item 
+const void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_vk_present_info_k_h_r_acdc417cd8ba87d33ea9ef59927ac2618}{p\+Next}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_vk_present_info_k_h_r_a08aee2329a7046b9df485bc0bff9f222}{wait\+Semaphore\+Count}}
+\item 
+const Vk\+Semaphore \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_vk_present_info_k_h_r_abca89bb4abe326113ee20d97041d72f6}{p\+Wait\+Semaphores}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_vk_present_info_k_h_r_a37a3f089773c0b2a6bc985892aa9cfe2}{swapchain\+Count}}
+\item 
+const Vk\+Swapchain\+KHR \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_vk_present_info_k_h_r_a2105203d11749c9a1534e76dd3874b14}{p\+Swapchains}}
+\item 
+const uint32\+\_\+t \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_vk_present_info_k_h_r_ab0d1337c6b1636d29c8e9e01a402af5f}{p\+Image\+Indices}}
+\item 
+\mbox{\hyperlink{vulkan__core_8h_abe3614d1bd40772bc2398a4a86ea4a45}{Vk\+Result}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_vk_present_info_k_h_r_a0aa3675bc82dec0ff8262580724a9c04}{p\+Results}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{struct_vk_present_info_k_h_r_ab0d1337c6b1636d29c8e9e01a402af5f}\label{struct_vk_present_info_k_h_r_ab0d1337c6b1636d29c8e9e01a402af5f} 
+\index{VkPresentInfoKHR@{VkPresentInfoKHR}!pImageIndices@{pImageIndices}}
+\index{pImageIndices@{pImageIndices}!VkPresentInfoKHR@{VkPresentInfoKHR}}
+\doxysubsubsection{\texorpdfstring{pImageIndices}{pImageIndices}}
+{\footnotesize\ttfamily const uint32\+\_\+t \texorpdfstring{$\ast$}{*} Vk\+Present\+Info\+KHR\+::p\+Image\+Indices}
+
+\Hypertarget{struct_vk_present_info_k_h_r_acdc417cd8ba87d33ea9ef59927ac2618}\label{struct_vk_present_info_k_h_r_acdc417cd8ba87d33ea9ef59927ac2618} 
+\index{VkPresentInfoKHR@{VkPresentInfoKHR}!pNext@{pNext}}
+\index{pNext@{pNext}!VkPresentInfoKHR@{VkPresentInfoKHR}}
+\doxysubsubsection{\texorpdfstring{pNext}{pNext}}
+{\footnotesize\ttfamily const void \texorpdfstring{$\ast$}{*} Vk\+Present\+Info\+KHR\+::p\+Next}
+
+\Hypertarget{struct_vk_present_info_k_h_r_a0aa3675bc82dec0ff8262580724a9c04}\label{struct_vk_present_info_k_h_r_a0aa3675bc82dec0ff8262580724a9c04} 
+\index{VkPresentInfoKHR@{VkPresentInfoKHR}!pResults@{pResults}}
+\index{pResults@{pResults}!VkPresentInfoKHR@{VkPresentInfoKHR}}
+\doxysubsubsection{\texorpdfstring{pResults}{pResults}}
+{\footnotesize\ttfamily \mbox{\hyperlink{vulkan__core_8h_abe3614d1bd40772bc2398a4a86ea4a45}{Vk\+Result}} \texorpdfstring{$\ast$}{*} Vk\+Present\+Info\+KHR\+::p\+Results}
+
+\Hypertarget{struct_vk_present_info_k_h_r_a2105203d11749c9a1534e76dd3874b14}\label{struct_vk_present_info_k_h_r_a2105203d11749c9a1534e76dd3874b14} 
+\index{VkPresentInfoKHR@{VkPresentInfoKHR}!pSwapchains@{pSwapchains}}
+\index{pSwapchains@{pSwapchains}!VkPresentInfoKHR@{VkPresentInfoKHR}}
+\doxysubsubsection{\texorpdfstring{pSwapchains}{pSwapchains}}
+{\footnotesize\ttfamily const Vk\+Swapchain\+KHR \texorpdfstring{$\ast$}{*} Vk\+Present\+Info\+KHR\+::p\+Swapchains}
+
+\Hypertarget{struct_vk_present_info_k_h_r_abca89bb4abe326113ee20d97041d72f6}\label{struct_vk_present_info_k_h_r_abca89bb4abe326113ee20d97041d72f6} 
+\index{VkPresentInfoKHR@{VkPresentInfoKHR}!pWaitSemaphores@{pWaitSemaphores}}
+\index{pWaitSemaphores@{pWaitSemaphores}!VkPresentInfoKHR@{VkPresentInfoKHR}}
+\doxysubsubsection{\texorpdfstring{pWaitSemaphores}{pWaitSemaphores}}
+{\footnotesize\ttfamily const Vk\+Semaphore \texorpdfstring{$\ast$}{*} Vk\+Present\+Info\+KHR\+::p\+Wait\+Semaphores}
+
+\Hypertarget{struct_vk_present_info_k_h_r_aca8bc80315c412aed81a8ca085c03a31}\label{struct_vk_present_info_k_h_r_aca8bc80315c412aed81a8ca085c03a31} 
+\index{VkPresentInfoKHR@{VkPresentInfoKHR}!sType@{sType}}
+\index{sType@{sType}!VkPresentInfoKHR@{VkPresentInfoKHR}}
+\doxysubsubsection{\texorpdfstring{sType}{sType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{vulkan__core_8h_aff9f2b99398eb80a2b5a146bc5534ce8}{Vk\+Structure\+Type}} Vk\+Present\+Info\+KHR\+::s\+Type}
+
+\Hypertarget{struct_vk_present_info_k_h_r_a37a3f089773c0b2a6bc985892aa9cfe2}\label{struct_vk_present_info_k_h_r_a37a3f089773c0b2a6bc985892aa9cfe2} 
+\index{VkPresentInfoKHR@{VkPresentInfoKHR}!swapchainCount@{swapchainCount}}
+\index{swapchainCount@{swapchainCount}!VkPresentInfoKHR@{VkPresentInfoKHR}}
+\doxysubsubsection{\texorpdfstring{swapchainCount}{swapchainCount}}
+{\footnotesize\ttfamily uint32\+\_\+t Vk\+Present\+Info\+KHR\+::swapchain\+Count}
+
+\Hypertarget{struct_vk_present_info_k_h_r_a08aee2329a7046b9df485bc0bff9f222}\label{struct_vk_present_info_k_h_r_a08aee2329a7046b9df485bc0bff9f222} 
+\index{VkPresentInfoKHR@{VkPresentInfoKHR}!waitSemaphoreCount@{waitSemaphoreCount}}
+\index{waitSemaphoreCount@{waitSemaphoreCount}!VkPresentInfoKHR@{VkPresentInfoKHR}}
+\doxysubsubsection{\texorpdfstring{waitSemaphoreCount}{waitSemaphoreCount}}
+{\footnotesize\ttfamily uint32\+\_\+t Vk\+Present\+Info\+KHR\+::wait\+Semaphore\+Count}
+
+
+
+Dokumentacja dla tej struktury została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/examples/vulkan/\mbox{\hyperlink{examples_2vulkan_2vulkan_8h}{vulkan.\+h}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/extlibs/headers/vulkan/\mbox{\hyperlink{vulkan__core_8h}{vulkan\+\_\+core.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,64 @@
+\doxysection{Dokumentacja pliku cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/extlibs/headers/freetype2/fterrors.h}
+\hypertarget{fterrors_8h}{}\label{fterrors_8h}\index{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/freetype2/fterrors.h@{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/freetype2/fterrors.h}}
+\doxysubsubsection*{Definicje}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{fterrors_8h_af0eb185e421716db7b56371e80dfcaa1}{FT\+\_\+\+ERR\+\_\+\+PREFIX}}~FT\+\_\+\+Err\+\_\+
+\item 
+\#define \mbox{\hyperlink{fterrors_8h_a708f62d5debdcba885a5368e44bad7ed}{FT\+\_\+\+ERR\+\_\+\+BASE}}~0
+\item 
+\#define \mbox{\hyperlink{fterrors_8h_a65a03bdb331ae978e63eeae1f1922e65}{FT\+\_\+\+ERRORDEF}}(e,  v,  s)~e = v,
+\item 
+\#define \mbox{\hyperlink{fterrors_8h_acdd2abea75f6319f8197e3f2675358ae}{FT\+\_\+\+ERROR\+\_\+\+START\+\_\+\+LIST}}~enum \{
+\item 
+\#define \mbox{\hyperlink{fterrors_8h_af38c09f62b94bff3bd2dd0ec17d280a0}{FT\+\_\+\+ERROR\+\_\+\+END\+\_\+\+LIST}}~\mbox{\hyperlink{fttypes_8h_a68551f6a26f7a08610c35fc8f0b6b8bc}{FT\+\_\+\+ERR\+\_\+\+CAT}}( \mbox{\hyperlink{fterrors_8h_af0eb185e421716db7b56371e80dfcaa1}{FT\+\_\+\+ERR\+\_\+\+PREFIX}}, Max ) \};
+\item 
+\#define \mbox{\hyperlink{fterrors_8h_a439ec9f420628098d7d874ef1b9cab49}{FT\+\_\+\+ERRORDEF\+\_\+}}(e,  v,  s)~          \mbox{\hyperlink{fterrors_8h_a65a03bdb331ae978e63eeae1f1922e65}{FT\+\_\+\+ERRORDEF}}( \mbox{\hyperlink{fttypes_8h_a68551f6a26f7a08610c35fc8f0b6b8bc}{FT\+\_\+\+ERR\+\_\+\+CAT}}( \mbox{\hyperlink{fterrors_8h_af0eb185e421716db7b56371e80dfcaa1}{FT\+\_\+\+ERR\+\_\+\+PREFIX}}, e ), v + \mbox{\hyperlink{fterrors_8h_a708f62d5debdcba885a5368e44bad7ed}{FT\+\_\+\+ERR\+\_\+\+BASE}}, s )
+\item 
+\#define \mbox{\hyperlink{fterrors_8h_a48f44adde7c075763aeba9d6efabcbd9}{FT\+\_\+\+NOERRORDEF\+\_\+}}(e,  v,  s)~          \mbox{\hyperlink{fterrors_8h_a65a03bdb331ae978e63eeae1f1922e65}{FT\+\_\+\+ERRORDEF}}( \mbox{\hyperlink{fttypes_8h_a68551f6a26f7a08610c35fc8f0b6b8bc}{FT\+\_\+\+ERR\+\_\+\+CAT}}( \mbox{\hyperlink{fterrors_8h_af0eb185e421716db7b56371e80dfcaa1}{FT\+\_\+\+ERR\+\_\+\+PREFIX}}, e ), v, s )
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja definicji}
+\Hypertarget{fterrors_8h_a708f62d5debdcba885a5368e44bad7ed}\label{fterrors_8h_a708f62d5debdcba885a5368e44bad7ed} 
+\index{fterrors.h@{fterrors.h}!FT\_ERR\_BASE@{FT\_ERR\_BASE}}
+\index{FT\_ERR\_BASE@{FT\_ERR\_BASE}!fterrors.h@{fterrors.h}}
+\doxysubsubsection{\texorpdfstring{FT\_ERR\_BASE}{FT\_ERR\_BASE}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+ERR\+\_\+\+BASE~0}
+
+\Hypertarget{fterrors_8h_af0eb185e421716db7b56371e80dfcaa1}\label{fterrors_8h_af0eb185e421716db7b56371e80dfcaa1} 
+\index{fterrors.h@{fterrors.h}!FT\_ERR\_PREFIX@{FT\_ERR\_PREFIX}}
+\index{FT\_ERR\_PREFIX@{FT\_ERR\_PREFIX}!fterrors.h@{fterrors.h}}
+\doxysubsubsection{\texorpdfstring{FT\_ERR\_PREFIX}{FT\_ERR\_PREFIX}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+ERR\+\_\+\+PREFIX~FT\+\_\+\+Err\+\_\+}
+
+\Hypertarget{fterrors_8h_af38c09f62b94bff3bd2dd0ec17d280a0}\label{fterrors_8h_af38c09f62b94bff3bd2dd0ec17d280a0} 
+\index{fterrors.h@{fterrors.h}!FT\_ERROR\_END\_LIST@{FT\_ERROR\_END\_LIST}}
+\index{FT\_ERROR\_END\_LIST@{FT\_ERROR\_END\_LIST}!fterrors.h@{fterrors.h}}
+\doxysubsubsection{\texorpdfstring{FT\_ERROR\_END\_LIST}{FT\_ERROR\_END\_LIST}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+ERROR\+\_\+\+END\+\_\+\+LIST~\mbox{\hyperlink{fttypes_8h_a68551f6a26f7a08610c35fc8f0b6b8bc}{FT\+\_\+\+ERR\+\_\+\+CAT}}( \mbox{\hyperlink{fterrors_8h_af0eb185e421716db7b56371e80dfcaa1}{FT\+\_\+\+ERR\+\_\+\+PREFIX}}, Max ) \};}
+
+\Hypertarget{fterrors_8h_acdd2abea75f6319f8197e3f2675358ae}\label{fterrors_8h_acdd2abea75f6319f8197e3f2675358ae} 
+\index{fterrors.h@{fterrors.h}!FT\_ERROR\_START\_LIST@{FT\_ERROR\_START\_LIST}}
+\index{FT\_ERROR\_START\_LIST@{FT\_ERROR\_START\_LIST}!fterrors.h@{fterrors.h}}
+\doxysubsubsection{\texorpdfstring{FT\_ERROR\_START\_LIST}{FT\_ERROR\_START\_LIST}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+ERROR\+\_\+\+START\+\_\+\+LIST~enum \{}
+
+\Hypertarget{fterrors_8h_a65a03bdb331ae978e63eeae1f1922e65}\label{fterrors_8h_a65a03bdb331ae978e63eeae1f1922e65} 
+\index{fterrors.h@{fterrors.h}!FT\_ERRORDEF@{FT\_ERRORDEF}}
+\index{FT\_ERRORDEF@{FT\_ERRORDEF}!fterrors.h@{fterrors.h}}
+\doxysubsubsection{\texorpdfstring{FT\_ERRORDEF}{FT\_ERRORDEF}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+ERRORDEF(\begin{DoxyParamCaption}\item[{}]{e,  }\item[{}]{v,  }\item[{}]{s }\end{DoxyParamCaption})~e = v,}
+
+\Hypertarget{fterrors_8h_a439ec9f420628098d7d874ef1b9cab49}\label{fterrors_8h_a439ec9f420628098d7d874ef1b9cab49} 
+\index{fterrors.h@{fterrors.h}!FT\_ERRORDEF\_@{FT\_ERRORDEF\_}}
+\index{FT\_ERRORDEF\_@{FT\_ERRORDEF\_}!fterrors.h@{fterrors.h}}
+\doxysubsubsection{\texorpdfstring{FT\_ERRORDEF\_}{FT\_ERRORDEF\_}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+ERRORDEF\+\_\+(\begin{DoxyParamCaption}\item[{}]{e,  }\item[{}]{v,  }\item[{}]{s }\end{DoxyParamCaption})~          \mbox{\hyperlink{fterrors_8h_a65a03bdb331ae978e63eeae1f1922e65}{FT\+\_\+\+ERRORDEF}}( \mbox{\hyperlink{fttypes_8h_a68551f6a26f7a08610c35fc8f0b6b8bc}{FT\+\_\+\+ERR\+\_\+\+CAT}}( \mbox{\hyperlink{fterrors_8h_af0eb185e421716db7b56371e80dfcaa1}{FT\+\_\+\+ERR\+\_\+\+PREFIX}}, e ), v + \mbox{\hyperlink{fterrors_8h_a708f62d5debdcba885a5368e44bad7ed}{FT\+\_\+\+ERR\+\_\+\+BASE}}, s )}
+
+\Hypertarget{fterrors_8h_a48f44adde7c075763aeba9d6efabcbd9}\label{fterrors_8h_a48f44adde7c075763aeba9d6efabcbd9} 
+\index{fterrors.h@{fterrors.h}!FT\_NOERRORDEF\_@{FT\_NOERRORDEF\_}}
+\index{FT\_NOERRORDEF\_@{FT\_NOERRORDEF\_}!fterrors.h@{fterrors.h}}
+\doxysubsubsection{\texorpdfstring{FT\_NOERRORDEF\_}{FT\_NOERRORDEF\_}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+NOERRORDEF\+\_\+(\begin{DoxyParamCaption}\item[{}]{e,  }\item[{}]{v,  }\item[{}]{s }\end{DoxyParamCaption})~          \mbox{\hyperlink{fterrors_8h_a65a03bdb331ae978e63eeae1f1922e65}{FT\+\_\+\+ERRORDEF}}( \mbox{\hyperlink{fttypes_8h_a68551f6a26f7a08610c35fc8f0b6b8bc}{FT\+\_\+\+ERR\+\_\+\+CAT}}( \mbox{\hyperlink{fterrors_8h_af0eb185e421716db7b56371e80dfcaa1}{FT\+\_\+\+ERR\+\_\+\+PREFIX}}, e ), v, s )}
+

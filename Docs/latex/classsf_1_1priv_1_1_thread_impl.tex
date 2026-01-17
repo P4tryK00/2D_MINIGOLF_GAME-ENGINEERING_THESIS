@@ -1,0 +1,285 @@
+\doxysection{Dokumentacja klasy sf\+::priv\+::Thread\+Impl}
+\hypertarget{classsf_1_1priv_1_1_thread_impl}{}\label{classsf_1_1priv_1_1_thread_impl}\index{sf::priv::ThreadImpl@{sf::priv::ThreadImpl}}
+
+
+Unix implementation of threads.  
+
+
+
+
+{\ttfamily \#include $<$Thread\+Impl.\+hpp$>$}
+
+
+
+Diagram dziedziczenia dla sf\+::priv\+::Thread\+Impl\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=173pt]{classsf_1_1priv_1_1_thread_impl__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagram współpracy dla sf\+::priv\+::Thread\+Impl\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=173pt]{classsf_1_1priv_1_1_thread_impl__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsf_1_1priv_1_1_thread_impl_a144fa094fcff93ec43fbfec2490f4d5d}{Thread\+Impl}} (\mbox{\hyperlink{classsf_1_1_thread}{Thread}} \texorpdfstring{$\ast$}{*}owner)
+\begin{DoxyCompactList}\small\item\em Default constructor, launch the thread. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_thread_impl_aae3396c2cdb6f03a502c537190848f4a}{wait}} ()
+\begin{DoxyCompactList}\small\item\em Wait until the thread finishes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_thread_impl_a7100154ef5be61e145f0c186f5ac87b5}{terminate}} ()
+\begin{DoxyCompactList}\small\item\em Terminate the thread. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1priv_1_1_thread_impl_a144fa094fcff93ec43fbfec2490f4d5d}{Thread\+Impl}} (\mbox{\hyperlink{classsf_1_1_thread}{Thread}} \texorpdfstring{$\ast$}{*}owner)
+\begin{DoxyCompactList}\small\item\em Default constructor, launch the thread. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1priv_1_1_thread_impl_a03cf2641cde82f77cdbd77cc7ce16a28}{\texorpdfstring{$\sim$}{\string~}\+Thread\+Impl}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_thread_impl_aae3396c2cdb6f03a502c537190848f4a}{wait}} ()
+\begin{DoxyCompactList}\small\item\em Wait until the thread finishes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_thread_impl_a7100154ef5be61e145f0c186f5ac87b5}{terminate}} ()
+\begin{DoxyCompactList}\small\item\em Terminate the thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Statyczne metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+static void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classsf_1_1priv_1_1_thread_impl_aa1e4ec1d69a78796c521b4d4f8af8a5c}{entry\+Point}} (void \texorpdfstring{$\ast$}{*}user\+Data)
+\begin{DoxyCompactList}\small\item\em Global entry point for all threads. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{_win32_2_thread_impl_8hpp_a37248792a3fa6655ffc87b8198c0c12c}{ALIGN\+\_\+\+STACK}} unsigned int \+\_\+\+\_\+stdcall \mbox{\hyperlink{classsf_1_1priv_1_1_thread_impl_afa2b14413df2639b845e0faf1714d179}{entry\+Point}} (void \texorpdfstring{$\ast$}{*}user\+Data)
+\begin{DoxyCompactList}\small\item\em Global entry point for all threads. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+pthread\+\_\+t \mbox{\hyperlink{classsf_1_1priv_1_1_thread_impl_ad6ccd17e80ff4c45f9e6b51ea63dbca1}{m\+\_\+thread}}
+\begin{DoxyCompactList}\small\item\em pthread thread instance \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_thread_impl_a5354880e2bb0b3f770e0a7700839e516}{m\+\_\+is\+Active}}
+\begin{DoxyCompactList}\small\item\em \doxylink{classsf_1_1_thread}{Thread} state (active or inactive) \end{DoxyCompactList}\item 
+HANDLE \mbox{\hyperlink{classsf_1_1priv_1_1_thread_impl_abad3b9615722e04f2384dc7905e0b5ac}{m\+\_\+thread}}
+\begin{DoxyCompactList}\small\item\em Win32 thread handle. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classsf_1_1priv_1_1_thread_impl_ae046e0623fb3e2418fc19fa217581d48}{m\+\_\+thread\+Id}}
+\begin{DoxyCompactList}\small\item\em Win32 thread identifier. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Dodatkowe Dziedziczone Składowe}
+\doxysubsection*{Metody prywatne dziedziczone z \mbox{\hyperlink{classsf_1_1_non_copyable}{sf\+::\+Non\+Copyable}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsf_1_1_non_copyable_a2110add170580fdb946f887719da6860}{Non\+Copyable}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1_non_copyable_a8274ffbf46014f5f7f364befb52c7728}{\texorpdfstring{$\sim$}{\string~}\+Non\+Copyable}} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Unix implementation of threads. 
+
+Windows implementation of threads. 
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{classsf_1_1priv_1_1_thread_impl_a144fa094fcff93ec43fbfec2490f4d5d}\label{classsf_1_1priv_1_1_thread_impl_a144fa094fcff93ec43fbfec2490f4d5d} 
+\index{sf::priv::ThreadImpl@{sf::priv::ThreadImpl}!ThreadImpl@{ThreadImpl}}
+\index{ThreadImpl@{ThreadImpl}!sf::priv::ThreadImpl@{sf::priv::ThreadImpl}}
+\doxysubsubsection{\texorpdfstring{ThreadImpl()}{ThreadImpl()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily sf\+::priv\+::\+Thread\+Impl\+::\+Thread\+Impl (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_thread}{Thread}} \texorpdfstring{$\ast$}{*}}]{owner }\end{DoxyParamCaption})}
+
+
+
+Default constructor, launch the thread. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em owner} & The \doxylink{classsf_1_1_thread}{Thread} instance to run \\
+\hline
+\end{DoxyParams}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_thread_impl_a144fa094fcff93ec43fbfec2490f4d5d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_thread_impl_a144fa094fcff93ec43fbfec2490f4d5d}\label{classsf_1_1priv_1_1_thread_impl_a144fa094fcff93ec43fbfec2490f4d5d} 
+\index{sf::priv::ThreadImpl@{sf::priv::ThreadImpl}!ThreadImpl@{ThreadImpl}}
+\index{ThreadImpl@{ThreadImpl}!sf::priv::ThreadImpl@{sf::priv::ThreadImpl}}
+\doxysubsubsection{\texorpdfstring{ThreadImpl()}{ThreadImpl()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily sf\+::priv\+::\+Thread\+Impl\+::\+Thread\+Impl (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_thread}{Thread}} \texorpdfstring{$\ast$}{*}}]{owner }\end{DoxyParamCaption})}
+
+
+
+Default constructor, launch the thread. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em owner} & The \doxylink{classsf_1_1_thread}{Thread} instance to run \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classsf_1_1priv_1_1_thread_impl_a03cf2641cde82f77cdbd77cc7ce16a28}\label{classsf_1_1priv_1_1_thread_impl_a03cf2641cde82f77cdbd77cc7ce16a28} 
+\index{sf::priv::ThreadImpl@{sf::priv::ThreadImpl}!````~ThreadImpl@{\texorpdfstring{$\sim$}{\string~}ThreadImpl}}
+\index{````~ThreadImpl@{\texorpdfstring{$\sim$}{\string~}ThreadImpl}!sf::priv::ThreadImpl@{sf::priv::ThreadImpl}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ThreadImpl()}{\string~ThreadImpl()}}
+{\footnotesize\ttfamily sf\+::priv\+::\+Thread\+Impl\+::\texorpdfstring{$\sim$}{\string~}\+Thread\+Impl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{classsf_1_1priv_1_1_thread_impl_aa1e4ec1d69a78796c521b4d4f8af8a5c}\label{classsf_1_1priv_1_1_thread_impl_aa1e4ec1d69a78796c521b4d4f8af8a5c} 
+\index{sf::priv::ThreadImpl@{sf::priv::ThreadImpl}!entryPoint@{entryPoint}}
+\index{entryPoint@{entryPoint}!sf::priv::ThreadImpl@{sf::priv::ThreadImpl}}
+\doxysubsubsection{\texorpdfstring{entryPoint()}{entryPoint()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily unsigned int \+\_\+\+\_\+stdcall sf\+::priv\+::\+Thread\+Impl\+::entry\+Point (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{user\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Global entry point for all threads. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em user\+Data} & User-\/defined data (contains the \doxylink{classsf_1_1_thread}{Thread} instance)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Os specific error code 
+\end{DoxyReturn}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_thread_impl_aa1e4ec1d69a78796c521b4d4f8af8a5c_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classsf_1_1priv_1_1_thread_impl_aa1e4ec1d69a78796c521b4d4f8af8a5c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_thread_impl_afa2b14413df2639b845e0faf1714d179}\label{classsf_1_1priv_1_1_thread_impl_afa2b14413df2639b845e0faf1714d179} 
+\index{sf::priv::ThreadImpl@{sf::priv::ThreadImpl}!entryPoint@{entryPoint}}
+\index{entryPoint@{entryPoint}!sf::priv::ThreadImpl@{sf::priv::ThreadImpl}}
+\doxysubsubsection{\texorpdfstring{entryPoint()}{entryPoint()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{_win32_2_thread_impl_8hpp_a37248792a3fa6655ffc87b8198c0c12c}{ALIGN\+\_\+\+STACK}} unsigned int \+\_\+\+\_\+stdcall sf\+::priv\+::\+Thread\+Impl\+::entry\+Point (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{user\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Global entry point for all threads. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em user\+Data} & User-\/defined data (contains the \doxylink{classsf_1_1_thread}{Thread} instance)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+OS specific error code 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_thread_impl_a7100154ef5be61e145f0c186f5ac87b5}\label{classsf_1_1priv_1_1_thread_impl_a7100154ef5be61e145f0c186f5ac87b5} 
+\index{sf::priv::ThreadImpl@{sf::priv::ThreadImpl}!terminate@{terminate}}
+\index{terminate@{terminate}!sf::priv::ThreadImpl@{sf::priv::ThreadImpl}}
+\doxysubsubsection{\texorpdfstring{terminate()}{terminate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Thread\+Impl\+::terminate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Terminate the thread. 
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{classsf_1_1priv_1_1_thread_impl_a7100154ef5be61e145f0c186f5ac87b5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_thread_impl_a7100154ef5be61e145f0c186f5ac87b5}\label{classsf_1_1priv_1_1_thread_impl_a7100154ef5be61e145f0c186f5ac87b5} 
+\index{sf::priv::ThreadImpl@{sf::priv::ThreadImpl}!terminate@{terminate}}
+\index{terminate@{terminate}!sf::priv::ThreadImpl@{sf::priv::ThreadImpl}}
+\doxysubsubsection{\texorpdfstring{terminate()}{terminate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Thread\+Impl\+::terminate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Terminate the thread. 
+
+\Hypertarget{classsf_1_1priv_1_1_thread_impl_aae3396c2cdb6f03a502c537190848f4a}\label{classsf_1_1priv_1_1_thread_impl_aae3396c2cdb6f03a502c537190848f4a} 
+\index{sf::priv::ThreadImpl@{sf::priv::ThreadImpl}!wait@{wait}}
+\index{wait@{wait}!sf::priv::ThreadImpl@{sf::priv::ThreadImpl}}
+\doxysubsubsection{\texorpdfstring{wait()}{wait()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Thread\+Impl\+::wait (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Wait until the thread finishes. 
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_thread_impl_aae3396c2cdb6f03a502c537190848f4a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_thread_impl_aae3396c2cdb6f03a502c537190848f4a}\label{classsf_1_1priv_1_1_thread_impl_aae3396c2cdb6f03a502c537190848f4a} 
+\index{sf::priv::ThreadImpl@{sf::priv::ThreadImpl}!wait@{wait}}
+\index{wait@{wait}!sf::priv::ThreadImpl@{sf::priv::ThreadImpl}}
+\doxysubsubsection{\texorpdfstring{wait()}{wait()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Thread\+Impl\+::wait (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Wait until the thread finishes. 
+
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{classsf_1_1priv_1_1_thread_impl_a5354880e2bb0b3f770e0a7700839e516}\label{classsf_1_1priv_1_1_thread_impl_a5354880e2bb0b3f770e0a7700839e516} 
+\index{sf::priv::ThreadImpl@{sf::priv::ThreadImpl}!m\_isActive@{m\_isActive}}
+\index{m\_isActive@{m\_isActive}!sf::priv::ThreadImpl@{sf::priv::ThreadImpl}}
+\doxysubsubsection{\texorpdfstring{m\_isActive}{m\_isActive}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Thread\+Impl\+::m\+\_\+is\+Active\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxylink{classsf_1_1_thread}{Thread} state (active or inactive) 
+
+\Hypertarget{classsf_1_1priv_1_1_thread_impl_ad6ccd17e80ff4c45f9e6b51ea63dbca1}\label{classsf_1_1priv_1_1_thread_impl_ad6ccd17e80ff4c45f9e6b51ea63dbca1} 
+\index{sf::priv::ThreadImpl@{sf::priv::ThreadImpl}!m\_thread@{m\_thread}}
+\index{m\_thread@{m\_thread}!sf::priv::ThreadImpl@{sf::priv::ThreadImpl}}
+\doxysubsubsection{\texorpdfstring{m\_thread}{m\_thread}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily pthread\+\_\+t sf\+::priv\+::\+Thread\+Impl\+::m\+\_\+thread\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+pthread thread instance 
+
+\Hypertarget{classsf_1_1priv_1_1_thread_impl_abad3b9615722e04f2384dc7905e0b5ac}\label{classsf_1_1priv_1_1_thread_impl_abad3b9615722e04f2384dc7905e0b5ac} 
+\index{sf::priv::ThreadImpl@{sf::priv::ThreadImpl}!m\_thread@{m\_thread}}
+\index{m\_thread@{m\_thread}!sf::priv::ThreadImpl@{sf::priv::ThreadImpl}}
+\doxysubsubsection{\texorpdfstring{m\_thread}{m\_thread}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily HANDLE sf\+::priv\+::\+Thread\+Impl\+::m\+\_\+thread\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Win32 thread handle. 
+
+\Hypertarget{classsf_1_1priv_1_1_thread_impl_ae046e0623fb3e2418fc19fa217581d48}\label{classsf_1_1priv_1_1_thread_impl_ae046e0623fb3e2418fc19fa217581d48} 
+\index{sf::priv::ThreadImpl@{sf::priv::ThreadImpl}!m\_threadId@{m\_threadId}}
+\index{m\_threadId@{m\_threadId}!sf::priv::ThreadImpl@{sf::priv::ThreadImpl}}
+\doxysubsubsection{\texorpdfstring{m\_threadId}{m\_threadId}}
+{\footnotesize\ttfamily unsigned int sf\+::priv\+::\+Thread\+Impl\+::m\+\_\+thread\+Id\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Win32 thread identifier. 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+System/\+Unix/\mbox{\hyperlink{_unix_2_thread_impl_8hpp}{Thread\+Impl.\+hpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+System/\+Win32/\mbox{\hyperlink{_win32_2_thread_impl_8hpp}{Thread\+Impl.\+hpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+System/\+Unix/\mbox{\hyperlink{_unix_2_thread_impl_8cpp}{Thread\+Impl.\+cpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+System/\+Win32/\mbox{\hyperlink{_win32_2_thread_impl_8cpp}{Thread\+Impl.\+cpp}}\end{DoxyCompactItemize}

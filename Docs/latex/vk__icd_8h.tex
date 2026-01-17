@@ -1,0 +1,144 @@
+\doxysection{Dokumentacja pliku cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/extlibs/headers/vulkan/vk\+\_\+icd.h}
+\hypertarget{vk__icd_8h}{}\label{vk__icd_8h}\index{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/vulkan/vk\_icd.h@{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/vulkan/vk\_icd.h}}
+{\ttfamily \#include "{}vulkan.\+h"{}}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+Wykres zależności załączania dla vk\+\_\+icd.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{vk__icd_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+union \mbox{\hyperlink{union_v_k___l_o_a_d_e_r___d_a_t_a}{VK\+\_\+\+LOADER\+\_\+\+DATA}}
+\item 
+struct \mbox{\hyperlink{struct_vk_icd_surface_base}{Vk\+Icd\+Surface\+Base}}
+\item 
+struct \mbox{\hyperlink{struct_vk_icd_surface_display}{Vk\+Icd\+Surface\+Display}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Definicje}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{vk__icd_8h_af1469393e852f31b39bd92743ef2e97c}{CURRENT\+\_\+\+LOADER\+\_\+\+ICD\+\_\+\+INTERFACE\+\_\+\+VERSION}}~5
+\item 
+\#define \mbox{\hyperlink{vk__icd_8h_a7b79e775341320ce5a0ad0d0bbdef015}{MIN\+\_\+\+SUPPORTED\+\_\+\+LOADER\+\_\+\+ICD\+\_\+\+INTERFACE\+\_\+\+VERSION}}~0
+\item 
+\#define \mbox{\hyperlink{vk__icd_8h_ad861143c09fe0ac8bbc7a6bc28cf57c1}{MIN\+\_\+\+PHYS\+\_\+\+DEV\+\_\+\+EXTENSION\+\_\+\+ICD\+\_\+\+INTERFACE\+\_\+\+VERSION}}~4
+\item 
+\#define \mbox{\hyperlink{vk__icd_8h_ac17f1610f710b0fe4c9de72be1c4616b}{ICD\+\_\+\+LOADER\+\_\+\+MAGIC}}~0x01\+CDC0\+DE
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Definicje typów}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{Vk\+Result}}(\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{vk__icd_8h_a02a376d16d93b31655b9b1343bd95d23}{PFN\+\_\+vk\+Negotiate\+Loader\+ICDInterface\+Version}}) (uint32\+\_\+t \texorpdfstring{$\ast$}{*}p\+Version)
+\item 
+typedef \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_ac604c97c18d2ad5be6edb8de8f31e7a1}{PFN\+\_\+vk\+Void\+Function}}(\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{vk__icd_8h_a78010facedd4c56be14502dc5ec5b1c1}{PFN\+\_\+\+Get\+Physical\+Device\+Proc\+Addr}}) (\mbox{\hyperlink{_vulkan_8hpp_a6d9f7e27148712f2c97db45ca6991547}{Vk\+Instance}} instance, const char \texorpdfstring{$\ast$}{*}p\+Name)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Wyliczenia}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{vk__icd_8h_af54e2eccd7be0f2d3cfa27fbe2eea481}{Vk\+Icd\+Wsi\+Platform}} \{ \newline
+\mbox{\hyperlink{vk__icd_8h_af54e2eccd7be0f2d3cfa27fbe2eea481aad42e8417ba18ff664f860ae0fa35101}{VK\+\_\+\+ICD\+\_\+\+WSI\+\_\+\+PLATFORM\+\_\+\+MIR}}
+, \mbox{\hyperlink{vk__icd_8h_af54e2eccd7be0f2d3cfa27fbe2eea481a424cc163a76c4d213a112d900712d2ec}{VK\+\_\+\+ICD\+\_\+\+WSI\+\_\+\+PLATFORM\+\_\+\+WAYLAND}}
+, \mbox{\hyperlink{vk__icd_8h_af54e2eccd7be0f2d3cfa27fbe2eea481a938acd8e658e56189298db97548ce565}{VK\+\_\+\+ICD\+\_\+\+WSI\+\_\+\+PLATFORM\+\_\+\+WIN32}}
+, \mbox{\hyperlink{vk__icd_8h_af54e2eccd7be0f2d3cfa27fbe2eea481a8df875d545ce438738366cc4ad95bd7c}{VK\+\_\+\+ICD\+\_\+\+WSI\+\_\+\+PLATFORM\+\_\+\+XCB}}
+, \newline
+\mbox{\hyperlink{vk__icd_8h_af54e2eccd7be0f2d3cfa27fbe2eea481a9164f7ebfe697ef4827fdb973e51a12c}{VK\+\_\+\+ICD\+\_\+\+WSI\+\_\+\+PLATFORM\+\_\+\+XLIB}}
+, \mbox{\hyperlink{vk__icd_8h_af54e2eccd7be0f2d3cfa27fbe2eea481ae3ee7ee3571e543c647dbd7e4ab989a7}{VK\+\_\+\+ICD\+\_\+\+WSI\+\_\+\+PLATFORM\+\_\+\+ANDROID}}
+, \mbox{\hyperlink{vk__icd_8h_af54e2eccd7be0f2d3cfa27fbe2eea481a24af20012d630f433d7c1f4230f42079}{VK\+\_\+\+ICD\+\_\+\+WSI\+\_\+\+PLATFORM\+\_\+\+MACOS}}
+, \mbox{\hyperlink{vk__icd_8h_af54e2eccd7be0f2d3cfa27fbe2eea481acc9b4aef8d4e0155804a8396b267f614}{VK\+\_\+\+ICD\+\_\+\+WSI\+\_\+\+PLATFORM\+\_\+\+IOS}}
+, \newline
+\mbox{\hyperlink{vk__icd_8h_af54e2eccd7be0f2d3cfa27fbe2eea481a38c2df0fba0bf214fc8948e475b88524}{VK\+\_\+\+ICD\+\_\+\+WSI\+\_\+\+PLATFORM\+\_\+\+DISPLAY}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja definicji}
+\Hypertarget{vk__icd_8h_af1469393e852f31b39bd92743ef2e97c}\label{vk__icd_8h_af1469393e852f31b39bd92743ef2e97c} 
+\index{vk\_icd.h@{vk\_icd.h}!CURRENT\_LOADER\_ICD\_INTERFACE\_VERSION@{CURRENT\_LOADER\_ICD\_INTERFACE\_VERSION}}
+\index{CURRENT\_LOADER\_ICD\_INTERFACE\_VERSION@{CURRENT\_LOADER\_ICD\_INTERFACE\_VERSION}!vk\_icd.h@{vk\_icd.h}}
+\doxysubsubsection{\texorpdfstring{CURRENT\_LOADER\_ICD\_INTERFACE\_VERSION}{CURRENT\_LOADER\_ICD\_INTERFACE\_VERSION}}
+{\footnotesize\ttfamily \#define CURRENT\+\_\+\+LOADER\+\_\+\+ICD\+\_\+\+INTERFACE\+\_\+\+VERSION~5}
+
+\Hypertarget{vk__icd_8h_ac17f1610f710b0fe4c9de72be1c4616b}\label{vk__icd_8h_ac17f1610f710b0fe4c9de72be1c4616b} 
+\index{vk\_icd.h@{vk\_icd.h}!ICD\_LOADER\_MAGIC@{ICD\_LOADER\_MAGIC}}
+\index{ICD\_LOADER\_MAGIC@{ICD\_LOADER\_MAGIC}!vk\_icd.h@{vk\_icd.h}}
+\doxysubsubsection{\texorpdfstring{ICD\_LOADER\_MAGIC}{ICD\_LOADER\_MAGIC}}
+{\footnotesize\ttfamily \#define ICD\+\_\+\+LOADER\+\_\+\+MAGIC~0x01\+CDC0\+DE}
+
+\Hypertarget{vk__icd_8h_ad861143c09fe0ac8bbc7a6bc28cf57c1}\label{vk__icd_8h_ad861143c09fe0ac8bbc7a6bc28cf57c1} 
+\index{vk\_icd.h@{vk\_icd.h}!MIN\_PHYS\_DEV\_EXTENSION\_ICD\_INTERFACE\_VERSION@{MIN\_PHYS\_DEV\_EXTENSION\_ICD\_INTERFACE\_VERSION}}
+\index{MIN\_PHYS\_DEV\_EXTENSION\_ICD\_INTERFACE\_VERSION@{MIN\_PHYS\_DEV\_EXTENSION\_ICD\_INTERFACE\_VERSION}!vk\_icd.h@{vk\_icd.h}}
+\doxysubsubsection{\texorpdfstring{MIN\_PHYS\_DEV\_EXTENSION\_ICD\_INTERFACE\_VERSION}{MIN\_PHYS\_DEV\_EXTENSION\_ICD\_INTERFACE\_VERSION}}
+{\footnotesize\ttfamily \#define MIN\+\_\+\+PHYS\+\_\+\+DEV\+\_\+\+EXTENSION\+\_\+\+ICD\+\_\+\+INTERFACE\+\_\+\+VERSION~4}
+
+\Hypertarget{vk__icd_8h_a7b79e775341320ce5a0ad0d0bbdef015}\label{vk__icd_8h_a7b79e775341320ce5a0ad0d0bbdef015} 
+\index{vk\_icd.h@{vk\_icd.h}!MIN\_SUPPORTED\_LOADER\_ICD\_INTERFACE\_VERSION@{MIN\_SUPPORTED\_LOADER\_ICD\_INTERFACE\_VERSION}}
+\index{MIN\_SUPPORTED\_LOADER\_ICD\_INTERFACE\_VERSION@{MIN\_SUPPORTED\_LOADER\_ICD\_INTERFACE\_VERSION}!vk\_icd.h@{vk\_icd.h}}
+\doxysubsubsection{\texorpdfstring{MIN\_SUPPORTED\_LOADER\_ICD\_INTERFACE\_VERSION}{MIN\_SUPPORTED\_LOADER\_ICD\_INTERFACE\_VERSION}}
+{\footnotesize\ttfamily \#define MIN\+\_\+\+SUPPORTED\+\_\+\+LOADER\+\_\+\+ICD\+\_\+\+INTERFACE\+\_\+\+VERSION~0}
+
+
+
+\doxysubsection{Dokumentacja definicji typów}
+\Hypertarget{vk__icd_8h_a78010facedd4c56be14502dc5ec5b1c1}\label{vk__icd_8h_a78010facedd4c56be14502dc5ec5b1c1} 
+\index{vk\_icd.h@{vk\_icd.h}!PFN\_GetPhysicalDeviceProcAddr@{PFN\_GetPhysicalDeviceProcAddr}}
+\index{PFN\_GetPhysicalDeviceProcAddr@{PFN\_GetPhysicalDeviceProcAddr}!vk\_icd.h@{vk\_icd.h}}
+\doxysubsubsection{\texorpdfstring{PFN\_GetPhysicalDeviceProcAddr}{PFN\_GetPhysicalDeviceProcAddr}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_ac604c97c18d2ad5be6edb8de8f31e7a1}{PFN\+\_\+vk\+Void\+Function}}(\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFN\+\_\+\+Get\+Physical\+Device\+Proc\+Addr) (\mbox{\hyperlink{_vulkan_8hpp_a6d9f7e27148712f2c97db45ca6991547}{Vk\+Instance}} instance, const char \texorpdfstring{$\ast$}{*}p\+Name)}
+
+\Hypertarget{vk__icd_8h_a02a376d16d93b31655b9b1343bd95d23}\label{vk__icd_8h_a02a376d16d93b31655b9b1343bd95d23} 
+\index{vk\_icd.h@{vk\_icd.h}!PFN\_vkNegotiateLoaderICDInterfaceVersion@{PFN\_vkNegotiateLoaderICDInterfaceVersion}}
+\index{PFN\_vkNegotiateLoaderICDInterfaceVersion@{PFN\_vkNegotiateLoaderICDInterfaceVersion}!vk\_icd.h@{vk\_icd.h}}
+\doxysubsubsection{\texorpdfstring{PFN\_vkNegotiateLoaderICDInterfaceVersion}{PFN\_vkNegotiateLoaderICDInterfaceVersion}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{Vk\+Result}}(\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFN\+\_\+vk\+Negotiate\+Loader\+ICDInterface\+Version) (uint32\+\_\+t \texorpdfstring{$\ast$}{*}p\+Version)}
+
+
+
+\doxysubsection{Dokumentacja typów wyliczanych}
+\Hypertarget{vk__icd_8h_af54e2eccd7be0f2d3cfa27fbe2eea481}\label{vk__icd_8h_af54e2eccd7be0f2d3cfa27fbe2eea481} 
+\index{vk\_icd.h@{vk\_icd.h}!VkIcdWsiPlatform@{VkIcdWsiPlatform}}
+\index{VkIcdWsiPlatform@{VkIcdWsiPlatform}!vk\_icd.h@{vk\_icd.h}}
+\doxysubsubsection{\texorpdfstring{VkIcdWsiPlatform}{VkIcdWsiPlatform}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{vk__icd_8h_af54e2eccd7be0f2d3cfa27fbe2eea481}{Vk\+Icd\+Wsi\+Platform}}}
+
+\begin{DoxyEnumFields}{Wartości wyliczeń}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VK\_ICD\_WSI\_PLATFORM\_MIR@{VK\_ICD\_WSI\_PLATFORM\_MIR}!vk\_icd.h@{vk\_icd.h}}\index{vk\_icd.h@{vk\_icd.h}!VK\_ICD\_WSI\_PLATFORM\_MIR@{VK\_ICD\_WSI\_PLATFORM\_MIR}}}\Hypertarget{vk__icd_8h_af54e2eccd7be0f2d3cfa27fbe2eea481aad42e8417ba18ff664f860ae0fa35101}\label{vk__icd_8h_af54e2eccd7be0f2d3cfa27fbe2eea481aad42e8417ba18ff664f860ae0fa35101} 
+VK\+\_\+\+ICD\+\_\+\+WSI\+\_\+\+PLATFORM\+\_\+\+MIR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VK\_ICD\_WSI\_PLATFORM\_WAYLAND@{VK\_ICD\_WSI\_PLATFORM\_WAYLAND}!vk\_icd.h@{vk\_icd.h}}\index{vk\_icd.h@{vk\_icd.h}!VK\_ICD\_WSI\_PLATFORM\_WAYLAND@{VK\_ICD\_WSI\_PLATFORM\_WAYLAND}}}\Hypertarget{vk__icd_8h_af54e2eccd7be0f2d3cfa27fbe2eea481a424cc163a76c4d213a112d900712d2ec}\label{vk__icd_8h_af54e2eccd7be0f2d3cfa27fbe2eea481a424cc163a76c4d213a112d900712d2ec} 
+VK\+\_\+\+ICD\+\_\+\+WSI\+\_\+\+PLATFORM\+\_\+\+WAYLAND&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VK\_ICD\_WSI\_PLATFORM\_WIN32@{VK\_ICD\_WSI\_PLATFORM\_WIN32}!vk\_icd.h@{vk\_icd.h}}\index{vk\_icd.h@{vk\_icd.h}!VK\_ICD\_WSI\_PLATFORM\_WIN32@{VK\_ICD\_WSI\_PLATFORM\_WIN32}}}\Hypertarget{vk__icd_8h_af54e2eccd7be0f2d3cfa27fbe2eea481a938acd8e658e56189298db97548ce565}\label{vk__icd_8h_af54e2eccd7be0f2d3cfa27fbe2eea481a938acd8e658e56189298db97548ce565} 
+VK\+\_\+\+ICD\+\_\+\+WSI\+\_\+\+PLATFORM\+\_\+\+WIN32&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VK\_ICD\_WSI\_PLATFORM\_XCB@{VK\_ICD\_WSI\_PLATFORM\_XCB}!vk\_icd.h@{vk\_icd.h}}\index{vk\_icd.h@{vk\_icd.h}!VK\_ICD\_WSI\_PLATFORM\_XCB@{VK\_ICD\_WSI\_PLATFORM\_XCB}}}\Hypertarget{vk__icd_8h_af54e2eccd7be0f2d3cfa27fbe2eea481a8df875d545ce438738366cc4ad95bd7c}\label{vk__icd_8h_af54e2eccd7be0f2d3cfa27fbe2eea481a8df875d545ce438738366cc4ad95bd7c} 
+VK\+\_\+\+ICD\+\_\+\+WSI\+\_\+\+PLATFORM\+\_\+\+XCB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VK\_ICD\_WSI\_PLATFORM\_XLIB@{VK\_ICD\_WSI\_PLATFORM\_XLIB}!vk\_icd.h@{vk\_icd.h}}\index{vk\_icd.h@{vk\_icd.h}!VK\_ICD\_WSI\_PLATFORM\_XLIB@{VK\_ICD\_WSI\_PLATFORM\_XLIB}}}\Hypertarget{vk__icd_8h_af54e2eccd7be0f2d3cfa27fbe2eea481a9164f7ebfe697ef4827fdb973e51a12c}\label{vk__icd_8h_af54e2eccd7be0f2d3cfa27fbe2eea481a9164f7ebfe697ef4827fdb973e51a12c} 
+VK\+\_\+\+ICD\+\_\+\+WSI\+\_\+\+PLATFORM\+\_\+\+XLIB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VK\_ICD\_WSI\_PLATFORM\_ANDROID@{VK\_ICD\_WSI\_PLATFORM\_ANDROID}!vk\_icd.h@{vk\_icd.h}}\index{vk\_icd.h@{vk\_icd.h}!VK\_ICD\_WSI\_PLATFORM\_ANDROID@{VK\_ICD\_WSI\_PLATFORM\_ANDROID}}}\Hypertarget{vk__icd_8h_af54e2eccd7be0f2d3cfa27fbe2eea481ae3ee7ee3571e543c647dbd7e4ab989a7}\label{vk__icd_8h_af54e2eccd7be0f2d3cfa27fbe2eea481ae3ee7ee3571e543c647dbd7e4ab989a7} 
+VK\+\_\+\+ICD\+\_\+\+WSI\+\_\+\+PLATFORM\+\_\+\+ANDROID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VK\_ICD\_WSI\_PLATFORM\_MACOS@{VK\_ICD\_WSI\_PLATFORM\_MACOS}!vk\_icd.h@{vk\_icd.h}}\index{vk\_icd.h@{vk\_icd.h}!VK\_ICD\_WSI\_PLATFORM\_MACOS@{VK\_ICD\_WSI\_PLATFORM\_MACOS}}}\Hypertarget{vk__icd_8h_af54e2eccd7be0f2d3cfa27fbe2eea481a24af20012d630f433d7c1f4230f42079}\label{vk__icd_8h_af54e2eccd7be0f2d3cfa27fbe2eea481a24af20012d630f433d7c1f4230f42079} 
+VK\+\_\+\+ICD\+\_\+\+WSI\+\_\+\+PLATFORM\+\_\+\+MACOS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VK\_ICD\_WSI\_PLATFORM\_IOS@{VK\_ICD\_WSI\_PLATFORM\_IOS}!vk\_icd.h@{vk\_icd.h}}\index{vk\_icd.h@{vk\_icd.h}!VK\_ICD\_WSI\_PLATFORM\_IOS@{VK\_ICD\_WSI\_PLATFORM\_IOS}}}\Hypertarget{vk__icd_8h_af54e2eccd7be0f2d3cfa27fbe2eea481acc9b4aef8d4e0155804a8396b267f614}\label{vk__icd_8h_af54e2eccd7be0f2d3cfa27fbe2eea481acc9b4aef8d4e0155804a8396b267f614} 
+VK\+\_\+\+ICD\+\_\+\+WSI\+\_\+\+PLATFORM\+\_\+\+IOS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VK\_ICD\_WSI\_PLATFORM\_DISPLAY@{VK\_ICD\_WSI\_PLATFORM\_DISPLAY}!vk\_icd.h@{vk\_icd.h}}\index{vk\_icd.h@{vk\_icd.h}!VK\_ICD\_WSI\_PLATFORM\_DISPLAY@{VK\_ICD\_WSI\_PLATFORM\_DISPLAY}}}\Hypertarget{vk__icd_8h_af54e2eccd7be0f2d3cfa27fbe2eea481a38c2df0fba0bf214fc8948e475b88524}\label{vk__icd_8h_af54e2eccd7be0f2d3cfa27fbe2eea481a38c2df0fba0bf214fc8948e475b88524} 
+VK\+\_\+\+ICD\+\_\+\+WSI\+\_\+\+PLATFORM\+\_\+\+DISPLAY&\\
+\hline
+
+\end{DoxyEnumFields}

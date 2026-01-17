@@ -1,0 +1,212 @@
+\doxysection{vorbisfile.\+h}
+\hypertarget{vorbisfile_8h_source}{}\label{vorbisfile_8h_source}\index{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/vorbis/vorbisfile.h@{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/vorbis/vorbisfile.h}}
+\mbox{\hyperlink{vorbisfile_8h}{Idź do dokumentacji tego pliku.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/********************************************************************}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ THIS\ FILE\ IS\ PART\ OF\ THE\ OggVorbis\ SOFTWARE\ CODEC\ SOURCE\ CODE.\ \ \ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ USE,\ DISTRIBUTION\ AND\ REPRODUCTION\ OF\ THIS\ LIBRARY\ SOURCE\ IS\ \ \ \ \ *}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ GOVERNED\ BY\ A\ BSD-\/STYLE\ SOURCE\ LICENSE\ INCLUDED\ WITH\ THIS\ SOURCE\ *}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ IN\ 'COPYING'.\ PLEASE\ READ\ THESE\ TERMS\ BEFORE\ DISTRIBUTING.\ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ THE\ OggVorbis\ SOURCE\ CODE\ IS\ (C)\ COPYRIGHT\ 1994-\/2007\ \ \ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ by\ the\ Xiph.Org\ Foundation\ http://www.xiph.org/\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ ********************************************************************}}
+\DoxyCodeLine{00012\ \textcolor{comment}{}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ function:\ stdio-\/based\ convenience\ library\ for\ opening/seeking/decoding}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ last\ mod:\ \$Id:\ vorbisfile.h\ 17182\ 2010-\/04-\/29\ 03:48:32Z\ xiphmont\ \$}}
+\DoxyCodeLine{00015\ \textcolor{comment}{}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ ********************************************************************/}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#ifndef\ \_OV\_FILE\_H\_}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ \_OV\_FILE\_H\_}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00022\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}}
+\DoxyCodeLine{00023\ \{}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_cplusplus\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{codec_8h}{codec.h}}"{}}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{comment}{/*\ The\ function\ prototypes\ for\ the\ callbacks\ are\ basically\ the\ same\ as\ for}}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ *\ the\ stdio\ functions\ fread,\ fseek,\ fclose,\ ftell.}}
+\DoxyCodeLine{00031\ \textcolor{comment}{\ *\ The\ one\ difference\ is\ that\ the\ FILE\ *\ arguments\ have\ been\ replaced\ with}}
+\DoxyCodeLine{00032\ \textcolor{comment}{\ *\ a\ void\ *\ -\/\ this\ is\ to\ be\ used\ as\ a\ pointer\ to\ whatever\ internal\ data\ these}}
+\DoxyCodeLine{00033\ \textcolor{comment}{\ *\ functions\ might\ need.\ In\ the\ stdio\ case,\ it's\ just\ a\ FILE\ *\ cast\ to\ a\ void\ *}}
+\DoxyCodeLine{00034\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00035\ \textcolor{comment}{\ *\ If\ you\ use\ other\ functions,\ check\ the\ docs\ for\ these\ functions\ and\ return}}
+\DoxyCodeLine{00036\ \textcolor{comment}{\ *\ the\ right\ values.\ For\ seek\_func(),\ you\ *MUST*\ return\ -\/1\ if\ the\ stream\ is}}
+\DoxyCodeLine{00037\ \textcolor{comment}{\ *\ unseekable}}
+\DoxyCodeLine{00038\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00039\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00040\ \ \ size\_t\ (*read\_func)\ \ (\textcolor{keywordtype}{void}\ *ptr,\ \textcolor{keywordtype}{size\_t}\ size,\ \textcolor{keywordtype}{size\_t}\ nmemb,\ \textcolor{keywordtype}{void}\ *datasource);}
+\DoxyCodeLine{00041\ \ \ int\ \ \ \ (*seek\_func)\ \ (\textcolor{keywordtype}{void}\ *datasource,\ \mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\_int64\_t}}\ offset,\ \textcolor{keywordtype}{int}\ whence);}
+\DoxyCodeLine{00042\ \ \ int\ \ \ \ (*close\_func)\ (\textcolor{keywordtype}{void}\ *datasource);}
+\DoxyCodeLine{00043\ \ \ long\ \ \ (*tell\_func)\ \ (\textcolor{keywordtype}{void}\ *datasource);}
+\DoxyCodeLine{00044\ \}\ \mbox{\hyperlink{structov__callbacks}{ov\_callbacks}};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#ifndef\ OV\_EXCLUDE\_STATIC\_CALLBACKS}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{comment}{/*\ a\ few\ sets\ of\ convenient\ callbacks,\ especially\ for\ use\ under}}
+\DoxyCodeLine{00049\ \textcolor{comment}{\ *\ Windows\ where\ ov\_open\_callbacks()\ should\ always\ be\ used\ instead\ of}}
+\DoxyCodeLine{00050\ \textcolor{comment}{\ *\ ov\_open()\ to\ avoid\ problems\ with\ incompatible\ crt.o\ version\ linking}}
+\DoxyCodeLine{00051\ \textcolor{comment}{\ *\ issues.\ */}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \_ov\_header\_fseek\_wrap(FILE\ *f,\mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\_int64\_t}}\ off,\textcolor{keywordtype}{int}\ whence)\{}
+\DoxyCodeLine{00054\ \ \ \textcolor{keywordflow}{if}(f==NULL)\textcolor{keywordflow}{return}(-\/1);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#ifdef\ \_\_MINGW32\_\_}}
+\DoxyCodeLine{00057\ \ \ \textcolor{keywordflow}{return}\ fseeko64(f,off,whence);}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#elif\ defined\ (\_WIN32)}}
+\DoxyCodeLine{00059\ \ \ \textcolor{keywordflow}{return}\ \_fseeki64(f,off,whence);}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00061\ \ \ \textcolor{keywordflow}{return}\ fseek(f,off,whence);}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00063\ \}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{comment}{/*\ These\ structs\ below\ (OV\_CALLBACKS\_DEFAULT\ etc)\ are\ defined\ here\ as}}
+\DoxyCodeLine{00066\ \textcolor{comment}{\ *\ static\ data.\ That\ means\ that\ every\ file\ which\ includes\ this\ header}}
+\DoxyCodeLine{00067\ \textcolor{comment}{\ *\ will\ get\ its\ own\ copy\ of\ these\ structs\ whether\ it\ uses\ them\ or}}
+\DoxyCodeLine{00068\ \textcolor{comment}{\ *\ not\ unless\ it\ \#defines\ OV\_EXCLUDE\_STATIC\_CALLBACKS.}}
+\DoxyCodeLine{00069\ \textcolor{comment}{\ *\ These\ static\ symbols\ are\ essential\ on\ platforms\ such\ as\ Windows\ on}}
+\DoxyCodeLine{00070\ \textcolor{comment}{\ *\ which\ several\ different\ versions\ of\ stdio\ support\ may\ be\ linked\ to}}
+\DoxyCodeLine{00071\ \textcolor{comment}{\ *\ by\ different\ DLLs,\ and\ we\ need\ to\ be\ certain\ we\ know\ which\ one}}
+\DoxyCodeLine{00072\ \textcolor{comment}{\ *\ we're\ using\ (the\ same\ one\ as\ the\ main\ application).}}
+\DoxyCodeLine{00073\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \textcolor{keyword}{static}\ \mbox{\hyperlink{structov__callbacks}{ov\_callbacks}}\ OV\_CALLBACKS\_DEFAULT\ =\ \{}
+\DoxyCodeLine{00076\ \ \ (size\_t\ (*)(\textcolor{keywordtype}{void}\ *,\ size\_t,\ size\_t,\ \textcolor{keywordtype}{void}\ *))\ \ fread,}
+\DoxyCodeLine{00077\ \ \ (int\ (*)(\textcolor{keywordtype}{void}\ *,\ \mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\_int64\_t}},\ int))\ \ \ \ \ \ \ \ \ \ \ \_ov\_header\_fseek\_wrap,}
+\DoxyCodeLine{00078\ \ \ (\textcolor{keywordtype}{int}\ (*)(\textcolor{keywordtype}{void}\ *))\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fclose,}
+\DoxyCodeLine{00079\ \ \ (\textcolor{keywordtype}{long}\ (*)(\textcolor{keywordtype}{void}\ *))\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ftell}
+\DoxyCodeLine{00080\ \};}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ static\ \mbox{\hyperlink{structov__callbacks}{ov\_callbacks}}\ OV\_CALLBACKS\_NOCLOSE\ =\ \{}
+\DoxyCodeLine{00083\ \ \ (size\_t\ (*)(\textcolor{keywordtype}{void}\ *,\ size\_t,\ size\_t,\ \textcolor{keywordtype}{void}\ *))\ \ fread,}
+\DoxyCodeLine{00084\ \ \ (int\ (*)(\textcolor{keywordtype}{void}\ *,\ \mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\_int64\_t}},\ int))\ \ \ \ \ \ \ \ \ \ \ \_ov\_header\_fseek\_wrap,}
+\DoxyCodeLine{00085\ \ \ (\textcolor{keywordtype}{int}\ (*)(\textcolor{keywordtype}{void}\ *))\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ NULL,}
+\DoxyCodeLine{00086\ \ \ (\textcolor{keywordtype}{long}\ (*)(\textcolor{keywordtype}{void}\ *))\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ftell}
+\DoxyCodeLine{00087\ \};}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ static\ \mbox{\hyperlink{structov__callbacks}{ov\_callbacks}}\ OV\_CALLBACKS\_STREAMONLY\ =\ \{}
+\DoxyCodeLine{00090\ \ \ (size\_t\ (*)(\textcolor{keywordtype}{void}\ *,\ size\_t,\ size\_t,\ \textcolor{keywordtype}{void}\ *))\ \ fread,}
+\DoxyCodeLine{00091\ \ \ (int\ (*)(\textcolor{keywordtype}{void}\ *,\ \mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\_int64\_t}},\ int))\ \ \ \ \ \ \ \ \ \ \ NULL,}
+\DoxyCodeLine{00092\ \ \ (\textcolor{keywordtype}{int}\ (*)(\textcolor{keywordtype}{void}\ *))\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fclose,}
+\DoxyCodeLine{00093\ \ \ (\textcolor{keywordtype}{long}\ (*)(\textcolor{keywordtype}{void}\ *))\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ NULL}
+\DoxyCodeLine{00094\ \};}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ static\ \mbox{\hyperlink{structov__callbacks}{ov\_callbacks}}\ OV\_CALLBACKS\_STREAMONLY\_NOCLOSE\ =\ \{}
+\DoxyCodeLine{00097\ \ \ (size\_t\ (*)(\textcolor{keywordtype}{void}\ *,\ size\_t,\ size\_t,\ \textcolor{keywordtype}{void}\ *))\ \ fread,}
+\DoxyCodeLine{00098\ \ \ (int\ (*)(\textcolor{keywordtype}{void}\ *,\ \mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\_int64\_t}},\ int))\ \ \ \ \ \ \ \ \ \ \ NULL,}
+\DoxyCodeLine{00099\ \ \ (\textcolor{keywordtype}{int}\ (*)(\textcolor{keywordtype}{void}\ *))\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ NULL,}
+\DoxyCodeLine{00100\ \ \ (\textcolor{keywordtype}{long}\ (*)(\textcolor{keywordtype}{void}\ *))\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ NULL}
+\DoxyCodeLine{00101\ \};}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \textcolor{preprocessor}{\#define\ \ NOTOPEN\ \ \ 0}}
+\DoxyCodeLine{00106\ \textcolor{preprocessor}{\#define\ \ PARTOPEN\ \ 1}}
+\DoxyCodeLine{00107\ \textcolor{preprocessor}{\#define\ \ OPENED\ \ \ \ 2}}
+\DoxyCodeLine{00108\ \textcolor{preprocessor}{\#define\ \ STREAMSET\ 3}}
+\DoxyCodeLine{00109\ \textcolor{preprocessor}{\#define\ \ INITSET\ \ \ 4}}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_ogg_vorbis___file}{OggVorbis\_File}}\ \{}
+\DoxyCodeLine{00112\ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ *\mbox{\hyperlink{struct_ogg_vorbis___file_a46afb3dcc7aac5917573e41d7504c0d6}{datasource}};\ \textcolor{comment}{/*\ Pointer\ to\ a\ FILE\ *,\ etc.\ */}}
+\DoxyCodeLine{00113\ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_ogg_vorbis___file_a2a390c4f15c0d1fe0cf9c90fd0bae087}{seekable}};}
+\DoxyCodeLine{00114\ \ \ \mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\_int64\_t}}\ \ \ \ \ \ \mbox{\hyperlink{struct_ogg_vorbis___file_a36f8f9f012cd2e7ab8cb395b787376cb}{offset}};}
+\DoxyCodeLine{00115\ \ \ \mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\_int64\_t}}\ \ \ \ \ \ \mbox{\hyperlink{struct_ogg_vorbis___file_ae56eb8bc78d2fc27c79d145a7c80a681}{end}};}
+\DoxyCodeLine{00116\ \ \ \mbox{\hyperlink{structogg__sync__state}{ogg\_sync\_state}}\ \ \ \mbox{\hyperlink{struct_ogg_vorbis___file_ae35fa1e6f99edcb104566301324ecf94}{oy}};}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \ \ \textcolor{comment}{/*\ If\ the\ FILE\ handle\ isn't\ seekable\ (eg,\ a\ pipe),\ only\ the\ current}}
+\DoxyCodeLine{00119\ \textcolor{comment}{\ \ \ \ \ stream\ appears\ */}}
+\DoxyCodeLine{00120\ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_ogg_vorbis___file_ad41f80ffaa6b48a14addef0a02639a87}{links}};}
+\DoxyCodeLine{00121\ \ \ \mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\_int64\_t}}\ \ \ \ \ *\mbox{\hyperlink{struct_ogg_vorbis___file_af9fe0ece4ff98e207682731b36951920}{offsets}};}
+\DoxyCodeLine{00122\ \ \ \mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\_int64\_t}}\ \ \ \ \ *\mbox{\hyperlink{struct_ogg_vorbis___file_af797824fb6e98c0248c19e6909dd680e}{dataoffsets}};}
+\DoxyCodeLine{00123\ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ *\mbox{\hyperlink{struct_ogg_vorbis___file_abd5a9adc78abd620ce2c63bd153df150}{serialnos}};}
+\DoxyCodeLine{00124\ \ \ \mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\_int64\_t}}\ \ \ \ \ *\mbox{\hyperlink{struct_ogg_vorbis___file_a88a4e6a4ec6c9837d44e6cc0c864679e}{pcmlengths}};\ \textcolor{comment}{/*\ overloaded\ to\ maintain\ binary}}
+\DoxyCodeLine{00125\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ compatibility;\ x2\ size,\ stores\ both}}
+\DoxyCodeLine{00126\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ beginning\ and\ end\ values\ */}}
+\DoxyCodeLine{00127\ \ \ \mbox{\hyperlink{structvorbis__info}{vorbis\_info}}\ \ \ \ \ *\mbox{\hyperlink{struct_ogg_vorbis___file_aa5586b939d7c31c8eec83cf1380b45a6}{vi}};}
+\DoxyCodeLine{00128\ \ \ \mbox{\hyperlink{structvorbis__comment}{vorbis\_comment}}\ \ *\mbox{\hyperlink{struct_ogg_vorbis___file_a4467850c72aed93fe0a70e8f1fd6f20e}{vc}};}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \ \ \textcolor{comment}{/*\ Decoding\ working\ state\ local\ storage\ */}}
+\DoxyCodeLine{00131\ \ \ \mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\_int64\_t}}\ \ \ \ \ \ \mbox{\hyperlink{struct_ogg_vorbis___file_a23d5ba7ca52640ceb6f633a46304cdc5}{pcm\_offset}};}
+\DoxyCodeLine{00132\ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_ogg_vorbis___file_ad304fe18bebc075c34f2e5ec7d1f2a99}{ready\_state}};}
+\DoxyCodeLine{00133\ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_ogg_vorbis___file_ad7545f86b92a6d66641f3d04a2497763}{current\_serialno}};}
+\DoxyCodeLine{00134\ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_ogg_vorbis___file_a9b2d64c3739364ac4c08070aac2e0588}{current\_link}};}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \ \ \textcolor{keywordtype}{double}\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_ogg_vorbis___file_aa72a11d9f154636d4dc9edac4c9eb843}{bittrack}};}
+\DoxyCodeLine{00137\ \ \ \textcolor{keywordtype}{double}\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_ogg_vorbis___file_a3fcbfeaad027ada99496dfcaf94866a9}{samptrack}};}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \ \ \mbox{\hyperlink{structogg__stream__state}{ogg\_stream\_state}}\ \mbox{\hyperlink{struct_ogg_vorbis___file_a8658f17a6f662a74f8763c47d560d712}{os}};\ \textcolor{comment}{/*\ take\ physical\ pages,\ weld\ into\ a\ logical}}
+\DoxyCodeLine{00140\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stream\ of\ packets\ */}}
+\DoxyCodeLine{00141\ \ \ \mbox{\hyperlink{structvorbis__dsp__state}{vorbis\_dsp\_state}}\ \mbox{\hyperlink{struct_ogg_vorbis___file_acb9d38719f54642d1a39f24203b466d6}{vd}};\ \textcolor{comment}{/*\ central\ working\ state\ for\ the\ packet-\/>PCM\ decoder\ */}}
+\DoxyCodeLine{00142\ \ \ \mbox{\hyperlink{structvorbis__block}{vorbis\_block}}\ \ \ \ \ \mbox{\hyperlink{struct_ogg_vorbis___file_a3201599977a781b7bf559167cd892638}{vb}};\ \textcolor{comment}{/*\ local\ working\ space\ for\ packet-\/>PCM\ decode\ */}}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00144\ \ \ \mbox{\hyperlink{structov__callbacks}{ov\_callbacks}}\ \mbox{\hyperlink{struct_ogg_vorbis___file_afb1474e24193f577dd21395a76199415}{callbacks}};}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \}\ \mbox{\hyperlink{vorbisfile_8h_a099d64124db8fe9fcf1507978c1f28fb}{OggVorbis\_File}};}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{vorbisfile_8h_a3add994772dbc946a44909559ba3fdef}{ov\_clear}}(\mbox{\hyperlink{struct_ogg_vorbis___file}{OggVorbis\_File}}\ *vf);}
+\DoxyCodeLine{00150\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{vorbisfile_8h_a5e3722741916a8ade9f821332b717713}{ov\_fopen}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *path,\mbox{\hyperlink{struct_ogg_vorbis___file}{OggVorbis\_File}}\ *vf);}
+\DoxyCodeLine{00151\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{vorbisfile_8h_aa02436897d5801847c11a9f27fc913f9}{ov\_open}}(FILE\ *f,\mbox{\hyperlink{struct_ogg_vorbis___file}{OggVorbis\_File}}\ *vf,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *initial,\textcolor{keywordtype}{long}\ ibytes);}
+\DoxyCodeLine{00152\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{vorbisfile_8h_a30edd47cbc52fef162a7c7686af6416e}{ov\_open\_callbacks}}(\textcolor{keywordtype}{void}\ *datasource,\ \mbox{\hyperlink{struct_ogg_vorbis___file}{OggVorbis\_File}}\ *vf,}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *initial,\ \textcolor{keywordtype}{long}\ ibytes,\ \mbox{\hyperlink{structov__callbacks}{ov\_callbacks}}\ callbacks);}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{vorbisfile_8h_a453707c7ded56c5d421b01cc733e901e}{ov\_test}}(FILE\ *f,\mbox{\hyperlink{struct_ogg_vorbis___file}{OggVorbis\_File}}\ *vf,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *initial,\textcolor{keywordtype}{long}\ ibytes);}
+\DoxyCodeLine{00156\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{vorbisfile_8h_acc51c4c9f6cc6ecff5b6a9c1b885752f}{ov\_test\_callbacks}}(\textcolor{keywordtype}{void}\ *datasource,\ \mbox{\hyperlink{struct_ogg_vorbis___file}{OggVorbis\_File}}\ *vf,}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *initial,\ \textcolor{keywordtype}{long}\ ibytes,\ \mbox{\hyperlink{structov__callbacks}{ov\_callbacks}}\ callbacks);}
+\DoxyCodeLine{00158\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{vorbisfile_8h_a876a2b5584ef4070e3b6fd4b79d20b49}{ov\_test\_open}}(\mbox{\hyperlink{struct_ogg_vorbis___file}{OggVorbis\_File}}\ *vf);}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00160\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{vorbisfile_8h_af1456db1cb141046519ee6b4db0fcf3a}{ov\_bitrate}}(\mbox{\hyperlink{struct_ogg_vorbis___file}{OggVorbis\_File}}\ *vf,\textcolor{keywordtype}{int}\ i);}
+\DoxyCodeLine{00161\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{vorbisfile_8h_abaab72dcf7bd5c2f4c20e39dc4d782d6}{ov\_bitrate\_instant}}(\mbox{\hyperlink{struct_ogg_vorbis___file}{OggVorbis\_File}}\ *vf);}
+\DoxyCodeLine{00162\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{vorbisfile_8h_a6670a0d98e113d00f8501c512eb9154a}{ov\_streams}}(\mbox{\hyperlink{struct_ogg_vorbis___file}{OggVorbis\_File}}\ *vf);}
+\DoxyCodeLine{00163\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{vorbisfile_8h_a5a62d840710076235d1cbab5318f6399}{ov\_seekable}}(\mbox{\hyperlink{struct_ogg_vorbis___file}{OggVorbis\_File}}\ *vf);}
+\DoxyCodeLine{00164\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{vorbisfile_8h_a1f8e5bd99e125408a14c1bc654f92760}{ov\_serialnumber}}(\mbox{\hyperlink{struct_ogg_vorbis___file}{OggVorbis\_File}}\ *vf,\textcolor{keywordtype}{int}\ i);}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\_int64\_t}}\ \mbox{\hyperlink{vorbisfile_8h_a052f63d189dd8563022c1c1796b683a5}{ov\_raw\_total}}(\mbox{\hyperlink{struct_ogg_vorbis___file}{OggVorbis\_File}}\ *vf,\textcolor{keywordtype}{int}\ i);}
+\DoxyCodeLine{00167\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\_int64\_t}}\ \mbox{\hyperlink{vorbisfile_8h_a87bb18020fd1bb2916187d13d7652663}{ov\_pcm\_total}}(\mbox{\hyperlink{struct_ogg_vorbis___file}{OggVorbis\_File}}\ *vf,\textcolor{keywordtype}{int}\ i);}
+\DoxyCodeLine{00168\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{vorbisfile_8h_a59a8e5db6c99b6b5b1157001cf854975}{ov\_time\_total}}(\mbox{\hyperlink{struct_ogg_vorbis___file}{OggVorbis\_File}}\ *vf,\textcolor{keywordtype}{int}\ i);}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{vorbisfile_8h_ac7e8d23aa742cbff39425fa620f56f30}{ov\_raw\_seek}}(\mbox{\hyperlink{struct_ogg_vorbis___file}{OggVorbis\_File}}\ *vf,\mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\_int64\_t}}\ pos);}
+\DoxyCodeLine{00171\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{vorbisfile_8h_a10f51fe54d7334136cca8927602ba277}{ov\_pcm\_seek}}(\mbox{\hyperlink{struct_ogg_vorbis___file}{OggVorbis\_File}}\ *vf,\mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\_int64\_t}}\ pos);}
+\DoxyCodeLine{00172\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{vorbisfile_8h_a033abf32795dd65412acb65ec9813172}{ov\_pcm\_seek\_page}}(\mbox{\hyperlink{struct_ogg_vorbis___file}{OggVorbis\_File}}\ *vf,\mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\_int64\_t}}\ pos);}
+\DoxyCodeLine{00173\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{vorbisfile_8h_acca7a3b0c08acd43a2d70a03591232ec}{ov\_time\_seek}}(\mbox{\hyperlink{struct_ogg_vorbis___file}{OggVorbis\_File}}\ *vf,\textcolor{keywordtype}{double}\ pos);}
+\DoxyCodeLine{00174\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{vorbisfile_8h_a1bf7109c7770b54d73386678d08f600e}{ov\_time\_seek\_page}}(\mbox{\hyperlink{struct_ogg_vorbis___file}{OggVorbis\_File}}\ *vf,\textcolor{keywordtype}{double}\ pos);}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{vorbisfile_8h_a53777ca05e1557139fa47693471fb531}{ov\_raw\_seek\_lap}}(\mbox{\hyperlink{struct_ogg_vorbis___file}{OggVorbis\_File}}\ *vf,\mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\_int64\_t}}\ pos);}
+\DoxyCodeLine{00177\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{vorbisfile_8h_a88868174d5c99bbfea1ecf27b5987a1a}{ov\_pcm\_seek\_lap}}(\mbox{\hyperlink{struct_ogg_vorbis___file}{OggVorbis\_File}}\ *vf,\mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\_int64\_t}}\ pos);}
+\DoxyCodeLine{00178\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{vorbisfile_8h_a991451d1859ba8b998db7e005cb3b87b}{ov\_pcm\_seek\_page\_lap}}(\mbox{\hyperlink{struct_ogg_vorbis___file}{OggVorbis\_File}}\ *vf,\mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\_int64\_t}}\ pos);}
+\DoxyCodeLine{00179\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{vorbisfile_8h_ac6957ebd8b9d2477507eb1c23f904bec}{ov\_time\_seek\_lap}}(\mbox{\hyperlink{struct_ogg_vorbis___file}{OggVorbis\_File}}\ *vf,\textcolor{keywordtype}{double}\ pos);}
+\DoxyCodeLine{00180\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{vorbisfile_8h_a48b714260279171536078483bbaee682}{ov\_time\_seek\_page\_lap}}(\mbox{\hyperlink{struct_ogg_vorbis___file}{OggVorbis\_File}}\ *vf,\textcolor{keywordtype}{double}\ pos);}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\_int64\_t}}\ \mbox{\hyperlink{vorbisfile_8h_ab9f8fc1f688c012349271253a9dd8c73}{ov\_raw\_tell}}(\mbox{\hyperlink{struct_ogg_vorbis___file}{OggVorbis\_File}}\ *vf);}
+\DoxyCodeLine{00183\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\_int64\_t}}\ \mbox{\hyperlink{vorbisfile_8h_a8ff88076c7b368ad976df08b7a08e693}{ov\_pcm\_tell}}(\mbox{\hyperlink{struct_ogg_vorbis___file}{OggVorbis\_File}}\ *vf);}
+\DoxyCodeLine{00184\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{vorbisfile_8h_a1bfff60419c269f3131a8637534d148f}{ov\_time\_tell}}(\mbox{\hyperlink{struct_ogg_vorbis___file}{OggVorbis\_File}}\ *vf);}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00186\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{structvorbis__info}{vorbis\_info}}\ *\mbox{\hyperlink{vorbisfile_8h_a019c468e08ffd5c2386f6704848c6034}{ov\_info}}(\mbox{\hyperlink{struct_ogg_vorbis___file}{OggVorbis\_File}}\ *vf,\textcolor{keywordtype}{int}\ link);}
+\DoxyCodeLine{00187\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{structvorbis__comment}{vorbis\_comment}}\ *\mbox{\hyperlink{vorbisfile_8h_a2f34ac216327154f5da419d398191fdd}{ov\_comment}}(\mbox{\hyperlink{struct_ogg_vorbis___file}{OggVorbis\_File}}\ *vf,\textcolor{keywordtype}{int}\ link);}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00189\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{vorbisfile_8h_a373af2a3d0353dd40e5ce5687859fdbd}{ov\_read\_float}}(\mbox{\hyperlink{struct_ogg_vorbis___file}{OggVorbis\_File}}\ *vf,\textcolor{keywordtype}{float}\ ***pcm\_channels,\textcolor{keywordtype}{int}\ samples,}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ *bitstream);}
+\DoxyCodeLine{00191\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{vorbisfile_8h_a4d30c9fa8b330b75863c76cb4c20ee48}{ov\_read\_filter}}(\mbox{\hyperlink{struct_ogg_vorbis___file}{OggVorbis\_File}}\ *vf,\textcolor{keywordtype}{char}\ *buffer,\textcolor{keywordtype}{int}\ length,}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ bigendianp,\textcolor{keywordtype}{int}\ word,\textcolor{keywordtype}{int}\ sgned,\textcolor{keywordtype}{int}\ *bitstream,}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ (*filter)(\textcolor{keywordtype}{float}\ **pcm,\textcolor{keywordtype}{long}\ channels,\textcolor{keywordtype}{long}\ samples,\textcolor{keywordtype}{void}\ *filter\_param),\textcolor{keywordtype}{void}\ *filter\_param);}
+\DoxyCodeLine{00194\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{vorbisfile_8h_a208c65166b8d9c868167dc9d389fdba8}{ov\_read}}(\mbox{\hyperlink{struct_ogg_vorbis___file}{OggVorbis\_File}}\ *vf,\textcolor{keywordtype}{char}\ *buffer,\textcolor{keywordtype}{int}\ length,}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ bigendianp,\textcolor{keywordtype}{int}\ word,\textcolor{keywordtype}{int}\ sgned,\textcolor{keywordtype}{int}\ *bitstream);}
+\DoxyCodeLine{00196\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{vorbisfile_8h_aebae91900bda92038fb9c14f3f6ec28c}{ov\_crosslap}}(\mbox{\hyperlink{struct_ogg_vorbis___file}{OggVorbis\_File}}\ *vf1,\mbox{\hyperlink{struct_ogg_vorbis___file}{OggVorbis\_File}}\ *vf2);}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00198\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{vorbisfile_8h_ace67cdf6531919e05b3bb164db45181a}{ov\_halfrate}}(\mbox{\hyperlink{struct_ogg_vorbis___file}{OggVorbis\_File}}\ *vf,\textcolor{keywordtype}{int}\ flag);}
+\DoxyCodeLine{00199\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{vorbisfile_8h_adc4f36cb355bb7ab7a62c2133e315208}{ov\_halfrate\_p}}(\mbox{\hyperlink{struct_ogg_vorbis___file}{OggVorbis\_File}}\ *vf);}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00201\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00202\ \}}
+\DoxyCodeLine{00203\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_cplusplus\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00205\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00206\ }
+
+\end{DoxyCode}

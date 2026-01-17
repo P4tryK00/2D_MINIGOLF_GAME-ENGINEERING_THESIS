@@ -1,0 +1,104 @@
+\doxysection{Dokumentacja klasy Resource\+Manager}
+\hypertarget{class_resource_manager}{}\label{class_resource_manager}\index{ResourceManager@{ResourceManager}}
+
+
+Fasada zarządzająca ładowaniem wszystkich zasobów aplikacji.  
+
+
+
+
+{\ttfamily \#include $<$Resource\+Manager.\+h$>$}
+
+
+
+Diagram współpracy dla Resource\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{class_resource_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_resource_manager_aef25bb48c1ff96b8179c9f9cbb547831}{Resource\+Manager}} ()=delete
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Statyczne metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_resource_manager_a71a01f351acfeea9b2bb309a43a75882}{load\+All\+Resources}} ()
+\begin{DoxyCompactList}\small\item\em Ładuje wszystkie tekstury, czcionki i dźwięki zdefiniowane w \doxylink{_d_e_f_i_n_i_t_i_o_n_s_8h}{DEFINITIONS.\+h}. Powinna być wywołana na początku funkcji \doxylink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_resource_manager_aba107c0366b865a997cce05a104b1d07}{clean\+Up\+All\+Resources}} ()
+\begin{DoxyCompactList}\small\item\em Czyści pamięć wszystkich menedżerów zasobów. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Fasada zarządzająca ładowaniem wszystkich zasobów aplikacji. 
+
+Klasa statyczna, która agreguje wywołania do poszczególnych menedżerów (Texture, Font, Sound) w celu jednorazowego załadowania lub zwolnienia wszystkich assetów gry. 
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{class_resource_manager_aef25bb48c1ff96b8179c9f9cbb547831}\label{class_resource_manager_aef25bb48c1ff96b8179c9f9cbb547831} 
+\index{ResourceManager@{ResourceManager}!ResourceManager@{ResourceManager}}
+\index{ResourceManager@{ResourceManager}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{ResourceManager()}{ResourceManager()}}
+{\footnotesize\ttfamily Resource\+Manager\+::\+Resource\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_resource_manager_aba107c0366b865a997cce05a104b1d07}\label{class_resource_manager_aba107c0366b865a997cce05a104b1d07} 
+\index{ResourceManager@{ResourceManager}!cleanUpAllResources@{cleanUpAllResources}}
+\index{cleanUpAllResources@{cleanUpAllResources}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{cleanUpAllResources()}{cleanUpAllResources()}}
+{\footnotesize\ttfamily void Resource\+Manager\+::clean\+Up\+All\+Resources (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Czyści pamięć wszystkich menedżerów zasobów. 
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_resource_manager_aba107c0366b865a997cce05a104b1d07_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{class_resource_manager_aba107c0366b865a997cce05a104b1d07_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_resource_manager_a71a01f351acfeea9b2bb309a43a75882}\label{class_resource_manager_a71a01f351acfeea9b2bb309a43a75882} 
+\index{ResourceManager@{ResourceManager}!loadAllResources@{loadAllResources}}
+\index{loadAllResources@{loadAllResources}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{loadAllResources()}{loadAllResources()}}
+{\footnotesize\ttfamily void Resource\+Manager\+::load\+All\+Resources (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Ładuje wszystkie tekstury, czcionki i dźwięki zdefiniowane w \doxylink{_d_e_f_i_n_i_t_i_o_n_s_8h}{DEFINITIONS.\+h}. Powinna być wywołana na początku funkcji \doxylink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}. 
+
+Oto graf wywołań dla tej funkcji\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_resource_manager_a71a01f351acfeea9b2bb309a43a75882_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{class_resource_manager_a71a01f351acfeea9b2bb309a43a75882_icgraph}
+\end{center}
+\end{figure}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_resource_manager_8h}{Resource\+Manager.\+h}}\item 
+\mbox{\hyperlink{_resource_manager_8cpp}{Resource\+Manager.\+cpp}}\end{DoxyCompactItemize}

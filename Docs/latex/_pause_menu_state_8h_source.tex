@@ -1,0 +1,44 @@
+\doxysection{Pause\+Menu\+State.\+h}
+\hypertarget{_pause_menu_state_8h_source}{}\label{_pause_menu_state_8h_source}\mbox{\hyperlink{_pause_menu_state_8h}{Idź do dokumentacji tego pliku.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MINI\_GOLF\_PAUSEMENUSTATE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MINI\_GOLF\_PAUSEMENUSTATE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_state_8h}{State.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_game_8h}{Game.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_pause_menu_state}{PauseMenuState}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_state}{State}}\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_pause_menu_state_ad8a8d140380f666c22e3db6886631bcf}{PauseMenuState}}(\mbox{\hyperlink{_game_8h_ae7efd7ef77698f16206f5c66180a389f}{GameDataRef}}\ data,\ sf::Sprite\ bgSprite,\ std::shared\_ptr<sf::Texture>\ bgTexture,\ \textcolor{keywordtype}{int}\ levelNumber);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pause_menu_state_ac9e33247bd16b40459d14d67f0b862e1}{init}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pause_menu_state_a67edff37fa71fd5c748353e4e4e3f907}{handleInput}}(sf::Event\&\ event)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pause_menu_state_a61b3c3dd07f483c1556ccd8607f9244f}{update}}(\textcolor{keywordtype}{float}\ dt)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pause_menu_state_a56266153292c423cbaeebb372dbccd65}{draw}}(\textcolor{keywordtype}{float}\ dt)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{_game_8h_ae7efd7ef77698f16206f5c66180a389f}{GameDataRef}}\ \mbox{\hyperlink{class_pause_menu_state_abee1810878d240e73ca40dcf2fdf0f8f}{m\_data}};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ std::shared\_ptr<sf::Texture>\ \mbox{\hyperlink{class_pause_menu_state_a74143d973666585912fd44934bf23f6d}{m\_bgTexture}};\ }
+\DoxyCodeLine{00054\ \ \ \ \ sf::Sprite\ \mbox{\hyperlink{class_pause_menu_state_a03830c6d1eeefd17f4e699bfa1fd6742}{m\_backgroundSprite}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00055\ \ \ \ \ sf::RectangleShape\ \mbox{\hyperlink{class_pause_menu_state_a738c9ed6287dbaa3a1febbed09327246}{m\_dimmer}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ sf::Text\ \mbox{\hyperlink{class_pause_menu_state_a79bf455d469491b7c86268f2dc2a1c37}{m\_pauseTitle}};}
+\DoxyCodeLine{00058\ \ \ \ \ sf::Text\ \mbox{\hyperlink{class_pause_menu_state_aa7ec6c29d7524f8a20b8a274ecbc74c6}{m\_resumeButton}};\ }
+\DoxyCodeLine{00059\ \ \ \ \ sf::Text\ \mbox{\hyperlink{class_pause_menu_state_ae03a2ba87ad147e85a6b45785d760b63}{m\_resetButton}};\ \ }
+\DoxyCodeLine{00060\ \ \ \ \ sf::Text\ \mbox{\hyperlink{class_pause_menu_state_aa3e7b4210229e4d885313a38dbd79430}{m\_menuButton}};\ \ \ }
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ sf::RectangleShape\ \mbox{\hyperlink{class_pause_menu_state_a63e7504e0f21eee24de240b13e0c34ee}{m\_fadeRect}};}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_pause_menu_state_a5b174449c8a5650dfaa179d46bd3bb04}{m\_alpha}};}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_pause_menu_state_af93b9f5e1406bf32fd051af71e3d54b7}{m\_isGoingToMenu}};}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_pause_menu_state_a8e76bc8976e929d65730b36ecabfb1dc}{m\_isReseting}};}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_pause_menu_state_a646a12d88a9a35d5d329170e88172892}{m\_currentLevel}};}
+\DoxyCodeLine{00067\ \};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//MINI\_GOLF\_PAUSEMENUSTATE\_H}}
+
+\end{DoxyCode}

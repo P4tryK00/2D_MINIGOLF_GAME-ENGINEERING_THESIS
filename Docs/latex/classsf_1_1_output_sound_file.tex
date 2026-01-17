@@ -1,0 +1,222 @@
+\doxysection{Dokumentacja klasy sf\+::Output\+Sound\+File}
+\hypertarget{classsf_1_1_output_sound_file}{}\label{classsf_1_1_output_sound_file}\index{sf::OutputSoundFile@{sf::OutputSoundFile}}
+
+
+Provide write access to sound files.  
+
+
+
+
+{\ttfamily \#include $<$Output\+Sound\+File.\+hpp$>$}
+
+
+
+Diagram dziedziczenia dla sf\+::Output\+Sound\+File\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=183pt]{classsf_1_1_output_sound_file__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagram współpracy dla sf\+::Output\+Sound\+File\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{classsf_1_1_output_sound_file__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsf_1_1_output_sound_file_a7ae9f2dbd0991fa9394726a3d58bb19e}{Output\+Sound\+File}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1_output_sound_file_a1492adbfef1f391d720afb56f068182e}{\texorpdfstring{$\sim$}{\string~}\+Output\+Sound\+File}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1_output_sound_file_ae5e55f01c53c1422c44eaed2eed67fce}{open\+From\+File}} (const std\+::string \&filename, unsigned int sample\+Rate, unsigned int channel\+Count)
+\begin{DoxyCompactList}\small\item\em Open the sound file from the disk for writing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1_output_sound_file_adfcf525fced71121f336fa89faac3d67}{write}} (const \mbox{\hyperlink{namespacesf_a3c8e10435e2a310a7741755e66b5c94e}{Int16}} \texorpdfstring{$\ast$}{*}samples, \mbox{\hyperlink{namespacesf_add9ac83466d96b9f50a009b9f4064266}{Uint64}} count)
+\begin{DoxyCompactList}\small\item\em Write audio samples to the file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1_output_sound_file_ad20c867d7e565d533da029f31ea5a337}{close}} ()
+\begin{DoxyCompactList}\small\item\em Close the current file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsf_1_1_sound_file_writer}{Sound\+File\+Writer}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classsf_1_1_output_sound_file_a0db66c6deffbbcbe3522750dbaae028e}{m\+\_\+writer}}
+\begin{DoxyCompactList}\small\item\em Writer that handles I/O on the file\textquotesingle{}s format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Dodatkowe Dziedziczone Składowe}
+\doxysubsection*{Metody prywatne dziedziczone z \mbox{\hyperlink{classsf_1_1_non_copyable}{sf\+::\+Non\+Copyable}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsf_1_1_non_copyable_a2110add170580fdb946f887719da6860}{Non\+Copyable}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1_non_copyable_a8274ffbf46014f5f7f364befb52c7728}{\texorpdfstring{$\sim$}{\string~}\+Non\+Copyable}} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Provide write access to sound files. 
+
+This class encodes audio samples to a sound file. It is used internally by higher-\/level classes such as \doxylink{classsf_1_1_sound_buffer}{sf\+::\+Sound\+Buffer}, but can also be useful if you want to create audio files from custom data sources, like generated audio samples.
+
+Usage example\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Create\ a\ sound\ file,\ ogg/vorbis\ format,\ 44100\ Hz,\ stereo}}
+\DoxyCodeLine{\mbox{\hyperlink{classsf_1_1_output_sound_file}{sf::OutputSoundFile}}\ file;}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (!file.\mbox{\hyperlink{classsf_1_1_output_sound_file_ae5e55f01c53c1422c44eaed2eed67fce}{openFromFile}}(\textcolor{stringliteral}{"{}music.ogg"{}},\ 44100,\ 2))}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{/*\ error\ */};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordflow}{while}\ (...)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Read\ or\ generate\ audio\ samples\ from\ your\ custom\ source}}
+\DoxyCodeLine{\ \ \ \ std::vector<sf::Int16>\ samples\ =\ ...;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Write\ them\ to\ the\ file}}
+\DoxyCodeLine{\ \ \ \ file.\mbox{\hyperlink{classsf_1_1_output_sound_file_adfcf525fced71121f336fa89faac3d67}{write}}(samples.data(),\ samples.size());}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{Zobacz również}
+\doxylink{classsf_1_1_sound_file_writer}{sf\+::\+Sound\+File\+Writer}, \doxylink{classsf_1_1_input_sound_file}{sf\+::\+Input\+Sound\+File} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{classsf_1_1_output_sound_file_a7ae9f2dbd0991fa9394726a3d58bb19e}\label{classsf_1_1_output_sound_file_a7ae9f2dbd0991fa9394726a3d58bb19e} 
+\index{sf::OutputSoundFile@{sf::OutputSoundFile}!OutputSoundFile@{OutputSoundFile}}
+\index{OutputSoundFile@{OutputSoundFile}!sf::OutputSoundFile@{sf::OutputSoundFile}}
+\doxysubsubsection{\texorpdfstring{OutputSoundFile()}{OutputSoundFile()}}
+{\footnotesize\ttfamily sf\+::\+Output\+Sound\+File\+::\+Output\+Sound\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+\Hypertarget{classsf_1_1_output_sound_file_a1492adbfef1f391d720afb56f068182e}\label{classsf_1_1_output_sound_file_a1492adbfef1f391d720afb56f068182e} 
+\index{sf::OutputSoundFile@{sf::OutputSoundFile}!````~OutputSoundFile@{\texorpdfstring{$\sim$}{\string~}OutputSoundFile}}
+\index{````~OutputSoundFile@{\texorpdfstring{$\sim$}{\string~}OutputSoundFile}!sf::OutputSoundFile@{sf::OutputSoundFile}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}OutputSoundFile()}{\string~OutputSoundFile()}}
+{\footnotesize\ttfamily sf\+::\+Output\+Sound\+File\+::\texorpdfstring{$\sim$}{\string~}\+Output\+Sound\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+Closes the file if it was still open. Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{classsf_1_1_output_sound_file_a1492adbfef1f391d720afb56f068182e_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{classsf_1_1_output_sound_file_ad20c867d7e565d533da029f31ea5a337}\label{classsf_1_1_output_sound_file_ad20c867d7e565d533da029f31ea5a337} 
+\index{sf::OutputSoundFile@{sf::OutputSoundFile}!close@{close}}
+\index{close@{close}!sf::OutputSoundFile@{sf::OutputSoundFile}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void sf\+::\+Output\+Sound\+File\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Close the current file. 
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1_output_sound_file_ad20c867d7e565d533da029f31ea5a337_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1_output_sound_file_ae5e55f01c53c1422c44eaed2eed67fce}\label{classsf_1_1_output_sound_file_ae5e55f01c53c1422c44eaed2eed67fce} 
+\index{sf::OutputSoundFile@{sf::OutputSoundFile}!openFromFile@{openFromFile}}
+\index{openFromFile@{openFromFile}!sf::OutputSoundFile@{sf::OutputSoundFile}}
+\doxysubsubsection{\texorpdfstring{openFromFile()}{openFromFile()}}
+{\footnotesize\ttfamily bool sf\+::\+Output\+Sound\+File\+::open\+From\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename,  }\item[{unsigned int}]{sample\+Rate,  }\item[{unsigned int}]{channel\+Count }\end{DoxyParamCaption})}
+
+
+
+Open the sound file from the disk for writing. 
+
+The supported audio formats are\+: WAV, OGG/\+Vorbis, FLAC.
+
+
+\begin{DoxyParams}{Parametry}
+{\em filename} & Path of the sound file to write \\
+\hline
+{\em sample\+Rate} & Sample rate of the sound \\
+\hline
+{\em channel\+Count} & Number of channels in the sound\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True if the file was successfully opened 
+\end{DoxyReturn}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1_output_sound_file_ae5e55f01c53c1422c44eaed2eed67fce_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1_output_sound_file_ae5e55f01c53c1422c44eaed2eed67fce_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1_output_sound_file_adfcf525fced71121f336fa89faac3d67}\label{classsf_1_1_output_sound_file_adfcf525fced71121f336fa89faac3d67} 
+\index{sf::OutputSoundFile@{sf::OutputSoundFile}!write@{write}}
+\index{write@{write}!sf::OutputSoundFile@{sf::OutputSoundFile}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void sf\+::\+Output\+Sound\+File\+::write (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacesf_a3c8e10435e2a310a7741755e66b5c94e}{Int16}} \texorpdfstring{$\ast$}{*}}]{samples,  }\item[{\mbox{\hyperlink{namespacesf_add9ac83466d96b9f50a009b9f4064266}{Uint64}}}]{count }\end{DoxyParamCaption})}
+
+
+
+Write audio samples to the file. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em samples} & Pointer to the sample array to write \\
+\hline
+{\em count} & Number of samples to write \\
+\hline
+\end{DoxyParams}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classsf_1_1_output_sound_file_adfcf525fced71121f336fa89faac3d67_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1_output_sound_file_adfcf525fced71121f336fa89faac3d67_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{classsf_1_1_output_sound_file_a0db66c6deffbbcbe3522750dbaae028e}\label{classsf_1_1_output_sound_file_a0db66c6deffbbcbe3522750dbaae028e} 
+\index{sf::OutputSoundFile@{sf::OutputSoundFile}!m\_writer@{m\_writer}}
+\index{m\_writer@{m\_writer}!sf::OutputSoundFile@{sf::OutputSoundFile}}
+\doxysubsubsection{\texorpdfstring{m\_writer}{m\_writer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1_sound_file_writer}{Sound\+File\+Writer}}\texorpdfstring{$\ast$}{*} sf\+::\+Output\+Sound\+File\+::m\+\_\+writer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Writer that handles I/O on the file\textquotesingle{}s format. 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/include/\+SFML/\+Audio/\mbox{\hyperlink{_output_sound_file_8hpp}{Output\+Sound\+File.\+hpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Audio/\mbox{\hyperlink{_output_sound_file_8cpp}{Output\+Sound\+File.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,93 @@
+\doxysection{Dokumentacja struktury Catch\+::IContext}
+\hypertarget{struct_catch_1_1_i_context}{}\label{struct_catch_1_1_i_context}\index{Catch::IContext@{Catch::IContext}}
+
+
+{\ttfamily \#include $<$catch.\+hpp$>$}
+
+
+
+Diagram dziedziczenia dla Catch\+::IContext\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{struct_catch_1_1_i_context__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagram współpracy dla Catch\+::IContext\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{struct_catch_1_1_i_context__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{struct_catch_1_1_i_context_aeb17355c1be6c2ced5407cad7202628d}{\texorpdfstring{$\sim$}{\string~}\+IContext}} ()
+\item 
+virtual \mbox{\hyperlink{struct_catch_1_1_i_result_capture}{IResult\+Capture}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_catch_1_1_i_context_a950f10a5f6d3c9385f9493ba6298b174}{get\+Result\+Capture}} ()=0
+\item 
+virtual \mbox{\hyperlink{struct_catch_1_1_i_runner}{IRunner}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_catch_1_1_i_context_ace6ece997b27c76d70563272f9e93f2f}{get\+Runner}} ()=0
+\item 
+virtual size\+\_\+t \mbox{\hyperlink{struct_catch_1_1_i_context_a43e07088db43299ba129fbe6d3106e95}{get\+Generator\+Index}} (std\+::string const \&file\+Info, size\+\_\+t total\+Size)=0
+\item 
+virtual bool \mbox{\hyperlink{struct_catch_1_1_i_context_a806f7c4ed24d51adae90418e661b24b7}{advance\+Generators\+For\+Current\+Test}} ()=0
+\item 
+virtual \mbox{\hyperlink{class_catch_1_1_ptr}{Ptr}}$<$ IConfig const $>$ \mbox{\hyperlink{struct_catch_1_1_i_context_aafdb3fc54906ee6164f28c247f057507}{get\+Config}} () const =0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{struct_catch_1_1_i_context_aeb17355c1be6c2ced5407cad7202628d}\label{struct_catch_1_1_i_context_aeb17355c1be6c2ced5407cad7202628d} 
+\index{Catch::IContext@{Catch::IContext}!````~IContext@{\texorpdfstring{$\sim$}{\string~}IContext}}
+\index{````~IContext@{\texorpdfstring{$\sim$}{\string~}IContext}!Catch::IContext@{Catch::IContext}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}IContext()}{\string~IContext()}}
+{\footnotesize\ttfamily virtual Catch\+::\+IContext\+::\texorpdfstring{$\sim$}{\string~}\+IContext (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{struct_catch_1_1_i_context_a806f7c4ed24d51adae90418e661b24b7}\label{struct_catch_1_1_i_context_a806f7c4ed24d51adae90418e661b24b7} 
+\index{Catch::IContext@{Catch::IContext}!advanceGeneratorsForCurrentTest@{advanceGeneratorsForCurrentTest}}
+\index{advanceGeneratorsForCurrentTest@{advanceGeneratorsForCurrentTest}!Catch::IContext@{Catch::IContext}}
+\doxysubsubsection{\texorpdfstring{advanceGeneratorsForCurrentTest()}{advanceGeneratorsForCurrentTest()}}
+{\footnotesize\ttfamily virtual bool Catch\+::\+IContext\+::advance\+Generators\+For\+Current\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\Hypertarget{struct_catch_1_1_i_context_aafdb3fc54906ee6164f28c247f057507}\label{struct_catch_1_1_i_context_aafdb3fc54906ee6164f28c247f057507} 
+\index{Catch::IContext@{Catch::IContext}!getConfig@{getConfig}}
+\index{getConfig@{getConfig}!Catch::IContext@{Catch::IContext}}
+\doxysubsubsection{\texorpdfstring{getConfig()}{getConfig()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_catch_1_1_ptr}{Ptr}}$<$ IConfig const  $>$ Catch\+::\+IContext\+::get\+Config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\Hypertarget{struct_catch_1_1_i_context_a43e07088db43299ba129fbe6d3106e95}\label{struct_catch_1_1_i_context_a43e07088db43299ba129fbe6d3106e95} 
+\index{Catch::IContext@{Catch::IContext}!getGeneratorIndex@{getGeneratorIndex}}
+\index{getGeneratorIndex@{getGeneratorIndex}!Catch::IContext@{Catch::IContext}}
+\doxysubsubsection{\texorpdfstring{getGeneratorIndex()}{getGeneratorIndex()}}
+{\footnotesize\ttfamily virtual size\+\_\+t Catch\+::\+IContext\+::get\+Generator\+Index (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{file\+Info,  }\item[{size\+\_\+t}]{total\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_catch_1_1_i_context_a43e07088db43299ba129fbe6d3106e95_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_catch_1_1_i_context_a950f10a5f6d3c9385f9493ba6298b174}\label{struct_catch_1_1_i_context_a950f10a5f6d3c9385f9493ba6298b174} 
+\index{Catch::IContext@{Catch::IContext}!getResultCapture@{getResultCapture}}
+\index{getResultCapture@{getResultCapture}!Catch::IContext@{Catch::IContext}}
+\doxysubsubsection{\texorpdfstring{getResultCapture()}{getResultCapture()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{struct_catch_1_1_i_result_capture}{IResult\+Capture}} \texorpdfstring{$\ast$}{*} Catch\+::\+IContext\+::get\+Result\+Capture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\Hypertarget{struct_catch_1_1_i_context_ace6ece997b27c76d70563272f9e93f2f}\label{struct_catch_1_1_i_context_ace6ece997b27c76d70563272f9e93f2f} 
+\index{Catch::IContext@{Catch::IContext}!getRunner@{getRunner}}
+\index{getRunner@{getRunner}!Catch::IContext@{Catch::IContext}}
+\doxysubsubsection{\texorpdfstring{getRunner()}{getRunner()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{struct_catch_1_1_i_runner}{IRunner}} \texorpdfstring{$\ast$}{*} Catch\+::\+IContext\+::get\+Runner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Dokumentacja dla tej struktury została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/extlibs/headers/\mbox{\hyperlink{catch_8hpp}{catch.\+hpp}}\end{DoxyCompactItemize}

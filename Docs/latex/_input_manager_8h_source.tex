@@ -1,0 +1,34 @@
+\doxysection{Input\+Manager.\+h}
+\hypertarget{_input_manager_8h_source}{}\label{_input_manager_8h_source}\mbox{\hyperlink{_input_manager_8h}{Idź do dokumentacji tego pliku.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ INPUTMANAGER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ INPUTMANAGER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_ball_8h}{Ball.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_input_manager}{InputManager}}\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_input_manager_a4feb188c43d85a81fc89c923edc8ddf9}{isGrabbed}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_input_manager_adb87560da2bdd6ea9fb822be139c334f}{ready}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00018\ \ \ \ \ sf::Vector2f\ \mbox{\hyperlink{class_input_manager_a0f0f456fd4a7cac0cd16c4ca77a67ba1}{ballStartPos}};\ \ }
+\DoxyCodeLine{00019\ \ \ \ \ sf::Vector2f\ \mbox{\hyperlink{class_input_manager_ab111f934ca0f84ec552f5269a17036a2}{currentMousePos}};\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_input_manager_a0ad9fd1453867e42597939308d7a15b3}{force}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_input_manager_a8be46886da639b26d67181c29dab6d6c}{InputManager}}();}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_input_manager_a805b33e09a29c48fd7e78a3e050a6f91}{handleEvent}}(\textcolor{keyword}{const}\ sf::Event\&\ event,\ \mbox{\hyperlink{class_ball}{Ball}}\&\ ball,\ sf::RenderWindow\&\ window);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_input_manager_a7f1b34f39c9a7f60810ad45dd097f96b}{isReady}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00055\ \ \ \ \ sf::Vector2f\ \mbox{\hyperlink{class_input_manager_a02da783e3d45711d73e81365659a7019}{getForceVector}}();}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00064\ \ \ \ \ sf::Vector2f\ \mbox{\hyperlink{class_input_manager_ae5f5740ae134b4f9c96b25bbe9e9854c}{getCurrentForce}}(\textcolor{keyword}{const}\ sf::RenderWindow\&\ window)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_input_manager_aa5bae5c37c4a7ca1e634d1f88d804742}{isDragging}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00071\ \};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ INPUTMANAGER\_H}}
+
+\end{DoxyCode}

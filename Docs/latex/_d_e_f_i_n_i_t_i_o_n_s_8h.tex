@@ -1,0 +1,540 @@
+\doxysection{Dokumentacja pliku DEFINITIONS.\+h}
+\hypertarget{_d_e_f_i_n_i_t_i_o_n_s_8h}{}\label{_d_e_f_i_n_i_t_i_o_n_s_8h}\index{DEFINITIONS.h@{DEFINITIONS.h}}
+
+
+Plik nagłówkowy zawierający globalne definicje, stałe oraz makra używane w projekcie.  
+
+
+{\ttfamily \#include "{}SFML/\+Graphics.\+hpp"{}}\newline
+Wykres zależności załączania dla DEFINITIONS.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=183pt]{_d_e_f_i_n_i_t_i_o_n_s_8h__incl}
+\end{center}
+\end{figure}
+Ten wykres pokazuje, które pliki bezpośrednio lub pośrednio załączają ten plik\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_d_e_f_i_n_i_t_i_o_n_s_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Definicje}
+\begin{Indent}\textbf{ Ustawienia Okna}\par
+{\em Podstawowe parametry okna aplikacji. }\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_d_e_f_i_n_i_t_i_o_n_s_8h_a2cd109632a6dcccaa80b43561b1ab700}{SCREEN\+\_\+\+WIDTH}}~600
+\begin{DoxyCompactList}\small\item\em Szerokość okna gry w pikselach. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_d_e_f_i_n_i_t_i_o_n_s_8h_a6974d08a74da681b3957b2fead2608b8}{SCREEN\+\_\+\+HEIGHT}}~800
+\begin{DoxyCompactList}\small\item\em Wysokość okna gry w pikselach. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_d_e_f_i_n_i_t_i_o_n_s_8h_a60a56c499875b57369f7ef3a5a227cb9}{TITLE}}~"{}Mini Golf by Patryk Jozwiak"{}
+\begin{DoxyCompactList}\small\item\em Tytuł wyświetlany na belce okna. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Ścieżki do Tekstur}\par
+{\em Lokalizacje plików graficznych. }\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_d_e_f_i_n_i_t_i_o_n_s_8h_a2a50b455800fca81f69856b630e1c729}{BALL\+\_\+\+TEXTURE\+\_\+\+PATH}}~"{}Resources/textures/ball.\+png"{}
+\item 
+\#define \mbox{\hyperlink{_d_e_f_i_n_i_t_i_o_n_s_8h_a7648c618733245ae243fc76af0aa311c}{TILESET\+\_\+\+PATH}}~"{}Resources/textures/tileset.\+png"{}
+\item 
+\#define \mbox{\hyperlink{_d_e_f_i_n_i_t_i_o_n_s_8h_a433703741658f2a020ea1d24bb85bbaa}{HEART\+\_\+\+WHITE\+\_\+\+PATH}}~"{}Resources/textures/heart\+\_\+white.\+png"{}
+\item 
+\#define \mbox{\hyperlink{_d_e_f_i_n_i_t_i_o_n_s_8h_ae265f40054c514e6fade35005b1f0124}{HEART\+\_\+\+PATH}}~"{}Resources/textures/heart.\+png"{}
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Ścieżki do Czcionek}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_d_e_f_i_n_i_t_i_o_n_s_8h_af326d9b4cced6fd44a9f9567dc666014}{FONT\+\_\+\+PATH}}~"{}Resources/font/Byte\+Bounce.\+ttf"{}
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Ścieżki do Dźwięków}\par
+{\em Lokalizacje efektów dźwiękowych. }\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_d_e_f_i_n_i_t_i_o_n_s_8h_a0cad84ceec92baf350299defafa7f03b}{WIN\+\_\+\+PATH}}~"{}Resources/sounds/win.\+wav"{}
+\item 
+\#define \mbox{\hyperlink{_d_e_f_i_n_i_t_i_o_n_s_8h_ae32ea3e859836ba11b09179e126a75de}{HIT\+\_\+\+PATH}}~"{}Resources/sounds/hit.\+wav"{}
+\item 
+\#define \mbox{\hyperlink{_d_e_f_i_n_i_t_i_o_n_s_8h_a3e2c710d2d81b3dbd5155266444ec933}{SPLASH\+\_\+\+PATH}}~"{}Resources/sounds/splash.\+wav"{}
+\item 
+\#define \mbox{\hyperlink{_d_e_f_i_n_i_t_i_o_n_s_8h_a1ac02e63944083943690964c328efdfd}{WALL\+\_\+\+HIT\+\_\+\+PATH}}~"{}Resources/sounds/wall\+\_\+hit.\+wav"{}
+\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsubsection*{Konfiguracja Poziomów}
+Stałe dotyczące siatki i kolorów używanych w Level\+Managerze. \begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_d_e_f_i_n_i_t_i_o_n_s_8h_a219cc98394ab36a78470c0627c4f8464}{LEVEL\+\_\+\+WIDTH}}~19
+\begin{DoxyCompactList}\small\item\em Szerokość poziomu w kafelkach. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_d_e_f_i_n_i_t_i_o_n_s_8h_a16621561d55e77faa59fbfdae692916f}{LEVEL\+\_\+\+HEIGHT}}~25
+\begin{DoxyCompactList}\small\item\em Wysokość poziomu w kafelkach. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_d_e_f_i_n_i_t_i_o_n_s_8h_a62ecd70800687eb2d625af180c4210d7}{TILE\+\_\+\+SIZE}}~sf\+::\+Vector2u(32, 32)
+\begin{DoxyCompactList}\small\item\em Rozmiar pojedynczego kafelka w pikselach. \end{DoxyCompactList}\item 
+const sf\+::\+Color \mbox{\hyperlink{_d_e_f_i_n_i_t_i_o_n_s_8h_a005a301f1d2914614a1105cea2e4356d}{COLOR\+\_\+\+BALL}} (255, 255, 255)
+\begin{DoxyCompactList}\small\item\em Kolor oznaczający pozycję startową piłki. \end{DoxyCompactList}\item 
+const sf\+::\+Color \mbox{\hyperlink{_d_e_f_i_n_i_t_i_o_n_s_8h_a33872096033d2e6cb3e7bd9f9c31365f}{COLOR\+\_\+\+GRASS}} (0, 255, 0)
+\begin{DoxyCompactList}\small\item\em Trawa (ID 0). \end{DoxyCompactList}\item 
+const sf\+::\+Color \mbox{\hyperlink{_d_e_f_i_n_i_t_i_o_n_s_8h_a87ea6f4ae532fe6fe8a44784bafb6bcc}{COLOR\+\_\+\+HOLE}} (255, 0, 0)
+\begin{DoxyCompactList}\small\item\em Dołek (ID 1). \end{DoxyCompactList}\item 
+const sf\+::\+Color \mbox{\hyperlink{_d_e_f_i_n_i_t_i_o_n_s_8h_abd05f830204105076f99518a618c7785}{COLOR\+\_\+\+SAND}} (255, 255, 0)
+\begin{DoxyCompactList}\small\item\em Piasek (ID 2). \end{DoxyCompactList}\item 
+const sf\+::\+Color \mbox{\hyperlink{_d_e_f_i_n_i_t_i_o_n_s_8h_a71b3142629d3a71c9a59b17f0a9b4245}{COLOR\+\_\+\+WALL\+\_\+L}} (0, 0, 0)
+\begin{DoxyCompactList}\small\item\em Ściana lewa (ID 3). \end{DoxyCompactList}\item 
+const sf\+::\+Color \mbox{\hyperlink{_d_e_f_i_n_i_t_i_o_n_s_8h_a20864c597919736f1db8f85e8a107ad9}{COLOR\+\_\+\+WALL\+\_\+R}} (2, 2, 2)
+\begin{DoxyCompactList}\small\item\em Ściana prawa (ID 4). \end{DoxyCompactList}\item 
+const sf\+::\+Color \mbox{\hyperlink{_d_e_f_i_n_i_t_i_o_n_s_8h_aaf354fb461ce78c08b4c33ee4319defa}{COLOR\+\_\+\+WALL\+\_\+\+UP}} (1, 1, 1)
+\begin{DoxyCompactList}\small\item\em Ściana górna (ID 5). \end{DoxyCompactList}\item 
+const sf\+::\+Color \mbox{\hyperlink{_d_e_f_i_n_i_t_i_o_n_s_8h_a47e227a6f3c90e8fce75ca7dae594ace}{COLOR\+\_\+\+WALL\+\_\+\+DOWN}} (3, 3, 3)
+\begin{DoxyCompactList}\small\item\em Ściana dolna (ID 6). \end{DoxyCompactList}\item 
+const sf\+::\+Color \mbox{\hyperlink{_d_e_f_i_n_i_t_i_o_n_s_8h_a73c3cee41687729b0e58e947a393758f}{COLOR\+\_\+\+CORNER\+\_\+\+LD}} (7, 7, 7)
+\begin{DoxyCompactList}\small\item\em Narożnik lewy-\/dół (ID 7). \end{DoxyCompactList}\item 
+const sf\+::\+Color \mbox{\hyperlink{_d_e_f_i_n_i_t_i_o_n_s_8h_a4a67e343eb835d9b967923d86b8c5a82}{COLOR\+\_\+\+CORNER\+\_\+\+RD}} (6, 6, 6)
+\begin{DoxyCompactList}\small\item\em Narożnik prawy-\/dół (ID 8). \end{DoxyCompactList}\item 
+const sf\+::\+Color \mbox{\hyperlink{_d_e_f_i_n_i_t_i_o_n_s_8h_a8a270779667629a54c7d012f2b3ff2d2}{COLOR\+\_\+\+CORNER\+\_\+\+LU}} (4, 4, 4)
+\begin{DoxyCompactList}\small\item\em Narożnik lewy-\/góra (ID 9). \end{DoxyCompactList}\item 
+const sf\+::\+Color \mbox{\hyperlink{_d_e_f_i_n_i_t_i_o_n_s_8h_a20889cd63280e2a79c17426387e5c1cc}{COLOR\+\_\+\+CORNER\+\_\+\+RU}} (5, 5, 5)
+\begin{DoxyCompactList}\small\item\em Narożnik prawy-\/góra (ID 10). \end{DoxyCompactList}\item 
+const sf\+::\+Color \mbox{\hyperlink{_d_e_f_i_n_i_t_i_o_n_s_8h_a2a5205cc0f104389a2114728f0473fe3}{COLOR\+\_\+\+WATER}} (0, 0, 255)
+\begin{DoxyCompactList}\small\item\em Woda (ID 11). \end{DoxyCompactList}\item 
+const sf\+::\+Color \mbox{\hyperlink{_d_e_f_i_n_i_t_i_o_n_s_8h_a83b35fda47067dba8b318fff35a241e6}{COLOR\+\_\+\+CONCRETE}} (128, 128, 128)
+\begin{DoxyCompactList}\small\item\em Beton (ID 12). \end{DoxyCompactList}\item 
+const sf\+::\+Color \mbox{\hyperlink{_d_e_f_i_n_i_t_i_o_n_s_8h_a19c8f77bff9e9b819b0de3ed3d44d670}{COLOR\+\_\+\+RAMP\+\_\+\+UP}} (25, 25, 25)
+\begin{DoxyCompactList}\small\item\em Rampa w górę (ID 13). \end{DoxyCompactList}\item 
+const sf\+::\+Color \mbox{\hyperlink{_d_e_f_i_n_i_t_i_o_n_s_8h_ae492a8679d6f0f3b75d7efd292fa886b}{COLOR\+\_\+\+RAMP\+\_\+\+DOWN}} (50, 50, 50)
+\begin{DoxyCompactList}\small\item\em Rampa w dół (ID 14). \end{DoxyCompactList}\item 
+const sf\+::\+Color \mbox{\hyperlink{_d_e_f_i_n_i_t_i_o_n_s_8h_a8a648ff1460ca8c60e58554ccb0333f5}{COLOR\+\_\+\+RAMP\+\_\+R}} (100, 100, 100)
+\begin{DoxyCompactList}\small\item\em Rampa w prawo (ID 15). \end{DoxyCompactList}\item 
+const sf\+::\+Color \mbox{\hyperlink{_d_e_f_i_n_i_t_i_o_n_s_8h_a4b88a3c65d718c40517fe0d400fb6da7}{COLOR\+\_\+\+RAMP\+\_\+L}} (150, 150, 150)
+\begin{DoxyCompactList}\small\item\em Rampa w lewo (ID 16). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Plik nagłówkowy zawierający globalne definicje, stałe oraz makra używane w projekcie. 
+
+Plik ten przechowuje ścieżki do zasobów, parametry okna oraz definicje kolorów używanych do mapowania poziomów z plików graficznych. 
+
+\doxysubsection{Dokumentacja definicji}
+\Hypertarget{_d_e_f_i_n_i_t_i_o_n_s_8h_a2a50b455800fca81f69856b630e1c729}\label{_d_e_f_i_n_i_t_i_o_n_s_8h_a2a50b455800fca81f69856b630e1c729} 
+\index{DEFINITIONS.h@{DEFINITIONS.h}!BALL\_TEXTURE\_PATH@{BALL\_TEXTURE\_PATH}}
+\index{BALL\_TEXTURE\_PATH@{BALL\_TEXTURE\_PATH}!DEFINITIONS.h@{DEFINITIONS.h}}
+\doxysubsubsection{\texorpdfstring{BALL\_TEXTURE\_PATH}{BALL\_TEXTURE\_PATH}}
+{\footnotesize\ttfamily \#define BALL\+\_\+\+TEXTURE\+\_\+\+PATH~"{}Resources/textures/ball.\+png"{}}
+
+\Hypertarget{_d_e_f_i_n_i_t_i_o_n_s_8h_af326d9b4cced6fd44a9f9567dc666014}\label{_d_e_f_i_n_i_t_i_o_n_s_8h_af326d9b4cced6fd44a9f9567dc666014} 
+\index{DEFINITIONS.h@{DEFINITIONS.h}!FONT\_PATH@{FONT\_PATH}}
+\index{FONT\_PATH@{FONT\_PATH}!DEFINITIONS.h@{DEFINITIONS.h}}
+\doxysubsubsection{\texorpdfstring{FONT\_PATH}{FONT\_PATH}}
+{\footnotesize\ttfamily \#define FONT\+\_\+\+PATH~"{}Resources/font/Byte\+Bounce.\+ttf"{}}
+
+\Hypertarget{_d_e_f_i_n_i_t_i_o_n_s_8h_ae265f40054c514e6fade35005b1f0124}\label{_d_e_f_i_n_i_t_i_o_n_s_8h_ae265f40054c514e6fade35005b1f0124} 
+\index{DEFINITIONS.h@{DEFINITIONS.h}!HEART\_PATH@{HEART\_PATH}}
+\index{HEART\_PATH@{HEART\_PATH}!DEFINITIONS.h@{DEFINITIONS.h}}
+\doxysubsubsection{\texorpdfstring{HEART\_PATH}{HEART\_PATH}}
+{\footnotesize\ttfamily \#define HEART\+\_\+\+PATH~"{}Resources/textures/heart.\+png"{}}
+
+\Hypertarget{_d_e_f_i_n_i_t_i_o_n_s_8h_a433703741658f2a020ea1d24bb85bbaa}\label{_d_e_f_i_n_i_t_i_o_n_s_8h_a433703741658f2a020ea1d24bb85bbaa} 
+\index{DEFINITIONS.h@{DEFINITIONS.h}!HEART\_WHITE\_PATH@{HEART\_WHITE\_PATH}}
+\index{HEART\_WHITE\_PATH@{HEART\_WHITE\_PATH}!DEFINITIONS.h@{DEFINITIONS.h}}
+\doxysubsubsection{\texorpdfstring{HEART\_WHITE\_PATH}{HEART\_WHITE\_PATH}}
+{\footnotesize\ttfamily \#define HEART\+\_\+\+WHITE\+\_\+\+PATH~"{}Resources/textures/heart\+\_\+white.\+png"{}}
+
+\Hypertarget{_d_e_f_i_n_i_t_i_o_n_s_8h_ae32ea3e859836ba11b09179e126a75de}\label{_d_e_f_i_n_i_t_i_o_n_s_8h_ae32ea3e859836ba11b09179e126a75de} 
+\index{DEFINITIONS.h@{DEFINITIONS.h}!HIT\_PATH@{HIT\_PATH}}
+\index{HIT\_PATH@{HIT\_PATH}!DEFINITIONS.h@{DEFINITIONS.h}}
+\doxysubsubsection{\texorpdfstring{HIT\_PATH}{HIT\_PATH}}
+{\footnotesize\ttfamily \#define HIT\+\_\+\+PATH~"{}Resources/sounds/hit.\+wav"{}}
+
+\Hypertarget{_d_e_f_i_n_i_t_i_o_n_s_8h_a16621561d55e77faa59fbfdae692916f}\label{_d_e_f_i_n_i_t_i_o_n_s_8h_a16621561d55e77faa59fbfdae692916f} 
+\index{DEFINITIONS.h@{DEFINITIONS.h}!LEVEL\_HEIGHT@{LEVEL\_HEIGHT}}
+\index{LEVEL\_HEIGHT@{LEVEL\_HEIGHT}!DEFINITIONS.h@{DEFINITIONS.h}}
+\doxysubsubsection{\texorpdfstring{LEVEL\_HEIGHT}{LEVEL\_HEIGHT}}
+{\footnotesize\ttfamily \#define LEVEL\+\_\+\+HEIGHT~25}
+
+
+
+Wysokość poziomu w kafelkach. 
+
+\Hypertarget{_d_e_f_i_n_i_t_i_o_n_s_8h_a219cc98394ab36a78470c0627c4f8464}\label{_d_e_f_i_n_i_t_i_o_n_s_8h_a219cc98394ab36a78470c0627c4f8464} 
+\index{DEFINITIONS.h@{DEFINITIONS.h}!LEVEL\_WIDTH@{LEVEL\_WIDTH}}
+\index{LEVEL\_WIDTH@{LEVEL\_WIDTH}!DEFINITIONS.h@{DEFINITIONS.h}}
+\doxysubsubsection{\texorpdfstring{LEVEL\_WIDTH}{LEVEL\_WIDTH}}
+{\footnotesize\ttfamily \#define LEVEL\+\_\+\+WIDTH~19}
+
+
+
+Szerokość poziomu w kafelkach. 
+
+\Hypertarget{_d_e_f_i_n_i_t_i_o_n_s_8h_a6974d08a74da681b3957b2fead2608b8}\label{_d_e_f_i_n_i_t_i_o_n_s_8h_a6974d08a74da681b3957b2fead2608b8} 
+\index{DEFINITIONS.h@{DEFINITIONS.h}!SCREEN\_HEIGHT@{SCREEN\_HEIGHT}}
+\index{SCREEN\_HEIGHT@{SCREEN\_HEIGHT}!DEFINITIONS.h@{DEFINITIONS.h}}
+\doxysubsubsection{\texorpdfstring{SCREEN\_HEIGHT}{SCREEN\_HEIGHT}}
+{\footnotesize\ttfamily \#define SCREEN\+\_\+\+HEIGHT~800}
+
+
+
+Wysokość okna gry w pikselach. 
+
+\Hypertarget{_d_e_f_i_n_i_t_i_o_n_s_8h_a2cd109632a6dcccaa80b43561b1ab700}\label{_d_e_f_i_n_i_t_i_o_n_s_8h_a2cd109632a6dcccaa80b43561b1ab700} 
+\index{DEFINITIONS.h@{DEFINITIONS.h}!SCREEN\_WIDTH@{SCREEN\_WIDTH}}
+\index{SCREEN\_WIDTH@{SCREEN\_WIDTH}!DEFINITIONS.h@{DEFINITIONS.h}}
+\doxysubsubsection{\texorpdfstring{SCREEN\_WIDTH}{SCREEN\_WIDTH}}
+{\footnotesize\ttfamily \#define SCREEN\+\_\+\+WIDTH~600}
+
+
+
+Szerokość okna gry w pikselach. 
+
+\Hypertarget{_d_e_f_i_n_i_t_i_o_n_s_8h_a3e2c710d2d81b3dbd5155266444ec933}\label{_d_e_f_i_n_i_t_i_o_n_s_8h_a3e2c710d2d81b3dbd5155266444ec933} 
+\index{DEFINITIONS.h@{DEFINITIONS.h}!SPLASH\_PATH@{SPLASH\_PATH}}
+\index{SPLASH\_PATH@{SPLASH\_PATH}!DEFINITIONS.h@{DEFINITIONS.h}}
+\doxysubsubsection{\texorpdfstring{SPLASH\_PATH}{SPLASH\_PATH}}
+{\footnotesize\ttfamily \#define SPLASH\+\_\+\+PATH~"{}Resources/sounds/splash.\+wav"{}}
+
+\Hypertarget{_d_e_f_i_n_i_t_i_o_n_s_8h_a62ecd70800687eb2d625af180c4210d7}\label{_d_e_f_i_n_i_t_i_o_n_s_8h_a62ecd70800687eb2d625af180c4210d7} 
+\index{DEFINITIONS.h@{DEFINITIONS.h}!TILE\_SIZE@{TILE\_SIZE}}
+\index{TILE\_SIZE@{TILE\_SIZE}!DEFINITIONS.h@{DEFINITIONS.h}}
+\doxysubsubsection{\texorpdfstring{TILE\_SIZE}{TILE\_SIZE}}
+{\footnotesize\ttfamily \#define TILE\+\_\+\+SIZE~sf\+::\+Vector2u(32, 32)}
+
+
+
+Rozmiar pojedynczego kafelka w pikselach. 
+
+\Hypertarget{_d_e_f_i_n_i_t_i_o_n_s_8h_a7648c618733245ae243fc76af0aa311c}\label{_d_e_f_i_n_i_t_i_o_n_s_8h_a7648c618733245ae243fc76af0aa311c} 
+\index{DEFINITIONS.h@{DEFINITIONS.h}!TILESET\_PATH@{TILESET\_PATH}}
+\index{TILESET\_PATH@{TILESET\_PATH}!DEFINITIONS.h@{DEFINITIONS.h}}
+\doxysubsubsection{\texorpdfstring{TILESET\_PATH}{TILESET\_PATH}}
+{\footnotesize\ttfamily \#define TILESET\+\_\+\+PATH~"{}Resources/textures/tileset.\+png"{}}
+
+\Hypertarget{_d_e_f_i_n_i_t_i_o_n_s_8h_a60a56c499875b57369f7ef3a5a227cb9}\label{_d_e_f_i_n_i_t_i_o_n_s_8h_a60a56c499875b57369f7ef3a5a227cb9} 
+\index{DEFINITIONS.h@{DEFINITIONS.h}!TITLE@{TITLE}}
+\index{TITLE@{TITLE}!DEFINITIONS.h@{DEFINITIONS.h}}
+\doxysubsubsection{\texorpdfstring{TITLE}{TITLE}}
+{\footnotesize\ttfamily \#define TITLE~"{}Mini Golf by Patryk Jozwiak"{}}
+
+
+
+Tytuł wyświetlany na belce okna. 
+
+\Hypertarget{_d_e_f_i_n_i_t_i_o_n_s_8h_a1ac02e63944083943690964c328efdfd}\label{_d_e_f_i_n_i_t_i_o_n_s_8h_a1ac02e63944083943690964c328efdfd} 
+\index{DEFINITIONS.h@{DEFINITIONS.h}!WALL\_HIT\_PATH@{WALL\_HIT\_PATH}}
+\index{WALL\_HIT\_PATH@{WALL\_HIT\_PATH}!DEFINITIONS.h@{DEFINITIONS.h}}
+\doxysubsubsection{\texorpdfstring{WALL\_HIT\_PATH}{WALL\_HIT\_PATH}}
+{\footnotesize\ttfamily \#define WALL\+\_\+\+HIT\+\_\+\+PATH~"{}Resources/sounds/wall\+\_\+hit.\+wav"{}}
+
+\Hypertarget{_d_e_f_i_n_i_t_i_o_n_s_8h_a0cad84ceec92baf350299defafa7f03b}\label{_d_e_f_i_n_i_t_i_o_n_s_8h_a0cad84ceec92baf350299defafa7f03b} 
+\index{DEFINITIONS.h@{DEFINITIONS.h}!WIN\_PATH@{WIN\_PATH}}
+\index{WIN\_PATH@{WIN\_PATH}!DEFINITIONS.h@{DEFINITIONS.h}}
+\doxysubsubsection{\texorpdfstring{WIN\_PATH}{WIN\_PATH}}
+{\footnotesize\ttfamily \#define WIN\+\_\+\+PATH~"{}Resources/sounds/win.\+wav"{}}
+
+
+
+\doxysubsection{Dokumentacja funkcji}
+\Hypertarget{_d_e_f_i_n_i_t_i_o_n_s_8h_a005a301f1d2914614a1105cea2e4356d}\label{_d_e_f_i_n_i_t_i_o_n_s_8h_a005a301f1d2914614a1105cea2e4356d} 
+\index{DEFINITIONS.h@{DEFINITIONS.h}!COLOR\_BALL@{COLOR\_BALL}}
+\index{COLOR\_BALL@{COLOR\_BALL}!DEFINITIONS.h@{DEFINITIONS.h}}
+\doxysubsubsection{\texorpdfstring{COLOR\_BALL()}{COLOR\_BALL()}}
+{\footnotesize\ttfamily const sf\+::\+Color COLOR\+\_\+\+BALL (\begin{DoxyParamCaption}\item[{255}]{,  }\item[{255}]{,  }\item[{255}]{ }\end{DoxyParamCaption})}
+
+
+
+Kolor oznaczający pozycję startową piłki. 
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_d_e_f_i_n_i_t_i_o_n_s_8h_a005a301f1d2914614a1105cea2e4356d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_d_e_f_i_n_i_t_i_o_n_s_8h_a83b35fda47067dba8b318fff35a241e6}\label{_d_e_f_i_n_i_t_i_o_n_s_8h_a83b35fda47067dba8b318fff35a241e6} 
+\index{DEFINITIONS.h@{DEFINITIONS.h}!COLOR\_CONCRETE@{COLOR\_CONCRETE}}
+\index{COLOR\_CONCRETE@{COLOR\_CONCRETE}!DEFINITIONS.h@{DEFINITIONS.h}}
+\doxysubsubsection{\texorpdfstring{COLOR\_CONCRETE()}{COLOR\_CONCRETE()}}
+{\footnotesize\ttfamily const sf\+::\+Color COLOR\+\_\+\+CONCRETE (\begin{DoxyParamCaption}\item[{128}]{,  }\item[{128}]{,  }\item[{128}]{ }\end{DoxyParamCaption})}
+
+
+
+Beton (ID 12). 
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_d_e_f_i_n_i_t_i_o_n_s_8h_a83b35fda47067dba8b318fff35a241e6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_d_e_f_i_n_i_t_i_o_n_s_8h_a73c3cee41687729b0e58e947a393758f}\label{_d_e_f_i_n_i_t_i_o_n_s_8h_a73c3cee41687729b0e58e947a393758f} 
+\index{DEFINITIONS.h@{DEFINITIONS.h}!COLOR\_CORNER\_LD@{COLOR\_CORNER\_LD}}
+\index{COLOR\_CORNER\_LD@{COLOR\_CORNER\_LD}!DEFINITIONS.h@{DEFINITIONS.h}}
+\doxysubsubsection{\texorpdfstring{COLOR\_CORNER\_LD()}{COLOR\_CORNER\_LD()}}
+{\footnotesize\ttfamily const sf\+::\+Color COLOR\+\_\+\+CORNER\+\_\+\+LD (\begin{DoxyParamCaption}\item[{7}]{,  }\item[{7}]{,  }\item[{7}]{ }\end{DoxyParamCaption})}
+
+
+
+Narożnik lewy-\/dół (ID 7). 
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_d_e_f_i_n_i_t_i_o_n_s_8h_a73c3cee41687729b0e58e947a393758f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_d_e_f_i_n_i_t_i_o_n_s_8h_a8a270779667629a54c7d012f2b3ff2d2}\label{_d_e_f_i_n_i_t_i_o_n_s_8h_a8a270779667629a54c7d012f2b3ff2d2} 
+\index{DEFINITIONS.h@{DEFINITIONS.h}!COLOR\_CORNER\_LU@{COLOR\_CORNER\_LU}}
+\index{COLOR\_CORNER\_LU@{COLOR\_CORNER\_LU}!DEFINITIONS.h@{DEFINITIONS.h}}
+\doxysubsubsection{\texorpdfstring{COLOR\_CORNER\_LU()}{COLOR\_CORNER\_LU()}}
+{\footnotesize\ttfamily const sf\+::\+Color COLOR\+\_\+\+CORNER\+\_\+\+LU (\begin{DoxyParamCaption}\item[{4}]{,  }\item[{4}]{,  }\item[{4}]{ }\end{DoxyParamCaption})}
+
+
+
+Narożnik lewy-\/góra (ID 9). 
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_d_e_f_i_n_i_t_i_o_n_s_8h_a8a270779667629a54c7d012f2b3ff2d2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_d_e_f_i_n_i_t_i_o_n_s_8h_a4a67e343eb835d9b967923d86b8c5a82}\label{_d_e_f_i_n_i_t_i_o_n_s_8h_a4a67e343eb835d9b967923d86b8c5a82} 
+\index{DEFINITIONS.h@{DEFINITIONS.h}!COLOR\_CORNER\_RD@{COLOR\_CORNER\_RD}}
+\index{COLOR\_CORNER\_RD@{COLOR\_CORNER\_RD}!DEFINITIONS.h@{DEFINITIONS.h}}
+\doxysubsubsection{\texorpdfstring{COLOR\_CORNER\_RD()}{COLOR\_CORNER\_RD()}}
+{\footnotesize\ttfamily const sf\+::\+Color COLOR\+\_\+\+CORNER\+\_\+\+RD (\begin{DoxyParamCaption}\item[{6}]{,  }\item[{6}]{,  }\item[{6}]{ }\end{DoxyParamCaption})}
+
+
+
+Narożnik prawy-\/dół (ID 8). 
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_d_e_f_i_n_i_t_i_o_n_s_8h_a4a67e343eb835d9b967923d86b8c5a82_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_d_e_f_i_n_i_t_i_o_n_s_8h_a20889cd63280e2a79c17426387e5c1cc}\label{_d_e_f_i_n_i_t_i_o_n_s_8h_a20889cd63280e2a79c17426387e5c1cc} 
+\index{DEFINITIONS.h@{DEFINITIONS.h}!COLOR\_CORNER\_RU@{COLOR\_CORNER\_RU}}
+\index{COLOR\_CORNER\_RU@{COLOR\_CORNER\_RU}!DEFINITIONS.h@{DEFINITIONS.h}}
+\doxysubsubsection{\texorpdfstring{COLOR\_CORNER\_RU()}{COLOR\_CORNER\_RU()}}
+{\footnotesize\ttfamily const sf\+::\+Color COLOR\+\_\+\+CORNER\+\_\+\+RU (\begin{DoxyParamCaption}\item[{5}]{,  }\item[{5}]{,  }\item[{5}]{ }\end{DoxyParamCaption})}
+
+
+
+Narożnik prawy-\/góra (ID 10). 
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_d_e_f_i_n_i_t_i_o_n_s_8h_a20889cd63280e2a79c17426387e5c1cc_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_d_e_f_i_n_i_t_i_o_n_s_8h_a33872096033d2e6cb3e7bd9f9c31365f}\label{_d_e_f_i_n_i_t_i_o_n_s_8h_a33872096033d2e6cb3e7bd9f9c31365f} 
+\index{DEFINITIONS.h@{DEFINITIONS.h}!COLOR\_GRASS@{COLOR\_GRASS}}
+\index{COLOR\_GRASS@{COLOR\_GRASS}!DEFINITIONS.h@{DEFINITIONS.h}}
+\doxysubsubsection{\texorpdfstring{COLOR\_GRASS()}{COLOR\_GRASS()}}
+{\footnotesize\ttfamily const sf\+::\+Color COLOR\+\_\+\+GRASS (\begin{DoxyParamCaption}\item[{0}]{,  }\item[{255}]{,  }\item[{0}]{ }\end{DoxyParamCaption})}
+
+
+
+Trawa (ID 0). 
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_d_e_f_i_n_i_t_i_o_n_s_8h_a33872096033d2e6cb3e7bd9f9c31365f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_d_e_f_i_n_i_t_i_o_n_s_8h_a87ea6f4ae532fe6fe8a44784bafb6bcc}\label{_d_e_f_i_n_i_t_i_o_n_s_8h_a87ea6f4ae532fe6fe8a44784bafb6bcc} 
+\index{DEFINITIONS.h@{DEFINITIONS.h}!COLOR\_HOLE@{COLOR\_HOLE}}
+\index{COLOR\_HOLE@{COLOR\_HOLE}!DEFINITIONS.h@{DEFINITIONS.h}}
+\doxysubsubsection{\texorpdfstring{COLOR\_HOLE()}{COLOR\_HOLE()}}
+{\footnotesize\ttfamily const sf\+::\+Color COLOR\+\_\+\+HOLE (\begin{DoxyParamCaption}\item[{255}]{,  }\item[{0}]{,  }\item[{0}]{ }\end{DoxyParamCaption})}
+
+
+
+Dołek (ID 1). 
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_d_e_f_i_n_i_t_i_o_n_s_8h_a87ea6f4ae532fe6fe8a44784bafb6bcc_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_d_e_f_i_n_i_t_i_o_n_s_8h_ae492a8679d6f0f3b75d7efd292fa886b}\label{_d_e_f_i_n_i_t_i_o_n_s_8h_ae492a8679d6f0f3b75d7efd292fa886b} 
+\index{DEFINITIONS.h@{DEFINITIONS.h}!COLOR\_RAMP\_DOWN@{COLOR\_RAMP\_DOWN}}
+\index{COLOR\_RAMP\_DOWN@{COLOR\_RAMP\_DOWN}!DEFINITIONS.h@{DEFINITIONS.h}}
+\doxysubsubsection{\texorpdfstring{COLOR\_RAMP\_DOWN()}{COLOR\_RAMP\_DOWN()}}
+{\footnotesize\ttfamily const sf\+::\+Color COLOR\+\_\+\+RAMP\+\_\+\+DOWN (\begin{DoxyParamCaption}\item[{50}]{,  }\item[{50}]{,  }\item[{50}]{ }\end{DoxyParamCaption})}
+
+
+
+Rampa w dół (ID 14). 
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_d_e_f_i_n_i_t_i_o_n_s_8h_ae492a8679d6f0f3b75d7efd292fa886b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_d_e_f_i_n_i_t_i_o_n_s_8h_a4b88a3c65d718c40517fe0d400fb6da7}\label{_d_e_f_i_n_i_t_i_o_n_s_8h_a4b88a3c65d718c40517fe0d400fb6da7} 
+\index{DEFINITIONS.h@{DEFINITIONS.h}!COLOR\_RAMP\_L@{COLOR\_RAMP\_L}}
+\index{COLOR\_RAMP\_L@{COLOR\_RAMP\_L}!DEFINITIONS.h@{DEFINITIONS.h}}
+\doxysubsubsection{\texorpdfstring{COLOR\_RAMP\_L()}{COLOR\_RAMP\_L()}}
+{\footnotesize\ttfamily const sf\+::\+Color COLOR\+\_\+\+RAMP\+\_\+L (\begin{DoxyParamCaption}\item[{150}]{,  }\item[{150}]{,  }\item[{150}]{ }\end{DoxyParamCaption})}
+
+
+
+Rampa w lewo (ID 16). 
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_d_e_f_i_n_i_t_i_o_n_s_8h_a4b88a3c65d718c40517fe0d400fb6da7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_d_e_f_i_n_i_t_i_o_n_s_8h_a8a648ff1460ca8c60e58554ccb0333f5}\label{_d_e_f_i_n_i_t_i_o_n_s_8h_a8a648ff1460ca8c60e58554ccb0333f5} 
+\index{DEFINITIONS.h@{DEFINITIONS.h}!COLOR\_RAMP\_R@{COLOR\_RAMP\_R}}
+\index{COLOR\_RAMP\_R@{COLOR\_RAMP\_R}!DEFINITIONS.h@{DEFINITIONS.h}}
+\doxysubsubsection{\texorpdfstring{COLOR\_RAMP\_R()}{COLOR\_RAMP\_R()}}
+{\footnotesize\ttfamily const sf\+::\+Color COLOR\+\_\+\+RAMP\+\_\+R (\begin{DoxyParamCaption}\item[{100}]{,  }\item[{100}]{,  }\item[{100}]{ }\end{DoxyParamCaption})}
+
+
+
+Rampa w prawo (ID 15). 
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_d_e_f_i_n_i_t_i_o_n_s_8h_a8a648ff1460ca8c60e58554ccb0333f5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_d_e_f_i_n_i_t_i_o_n_s_8h_a19c8f77bff9e9b819b0de3ed3d44d670}\label{_d_e_f_i_n_i_t_i_o_n_s_8h_a19c8f77bff9e9b819b0de3ed3d44d670} 
+\index{DEFINITIONS.h@{DEFINITIONS.h}!COLOR\_RAMP\_UP@{COLOR\_RAMP\_UP}}
+\index{COLOR\_RAMP\_UP@{COLOR\_RAMP\_UP}!DEFINITIONS.h@{DEFINITIONS.h}}
+\doxysubsubsection{\texorpdfstring{COLOR\_RAMP\_UP()}{COLOR\_RAMP\_UP()}}
+{\footnotesize\ttfamily const sf\+::\+Color COLOR\+\_\+\+RAMP\+\_\+\+UP (\begin{DoxyParamCaption}\item[{25}]{,  }\item[{25}]{,  }\item[{25}]{ }\end{DoxyParamCaption})}
+
+
+
+Rampa w górę (ID 13). 
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_d_e_f_i_n_i_t_i_o_n_s_8h_a19c8f77bff9e9b819b0de3ed3d44d670_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_d_e_f_i_n_i_t_i_o_n_s_8h_abd05f830204105076f99518a618c7785}\label{_d_e_f_i_n_i_t_i_o_n_s_8h_abd05f830204105076f99518a618c7785} 
+\index{DEFINITIONS.h@{DEFINITIONS.h}!COLOR\_SAND@{COLOR\_SAND}}
+\index{COLOR\_SAND@{COLOR\_SAND}!DEFINITIONS.h@{DEFINITIONS.h}}
+\doxysubsubsection{\texorpdfstring{COLOR\_SAND()}{COLOR\_SAND()}}
+{\footnotesize\ttfamily const sf\+::\+Color COLOR\+\_\+\+SAND (\begin{DoxyParamCaption}\item[{255}]{,  }\item[{255}]{,  }\item[{0}]{ }\end{DoxyParamCaption})}
+
+
+
+Piasek (ID 2). 
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_d_e_f_i_n_i_t_i_o_n_s_8h_abd05f830204105076f99518a618c7785_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_d_e_f_i_n_i_t_i_o_n_s_8h_a47e227a6f3c90e8fce75ca7dae594ace}\label{_d_e_f_i_n_i_t_i_o_n_s_8h_a47e227a6f3c90e8fce75ca7dae594ace} 
+\index{DEFINITIONS.h@{DEFINITIONS.h}!COLOR\_WALL\_DOWN@{COLOR\_WALL\_DOWN}}
+\index{COLOR\_WALL\_DOWN@{COLOR\_WALL\_DOWN}!DEFINITIONS.h@{DEFINITIONS.h}}
+\doxysubsubsection{\texorpdfstring{COLOR\_WALL\_DOWN()}{COLOR\_WALL\_DOWN()}}
+{\footnotesize\ttfamily const sf\+::\+Color COLOR\+\_\+\+WALL\+\_\+\+DOWN (\begin{DoxyParamCaption}\item[{3}]{,  }\item[{3}]{,  }\item[{3}]{ }\end{DoxyParamCaption})}
+
+
+
+Ściana dolna (ID 6). 
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_d_e_f_i_n_i_t_i_o_n_s_8h_a47e227a6f3c90e8fce75ca7dae594ace_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_d_e_f_i_n_i_t_i_o_n_s_8h_a71b3142629d3a71c9a59b17f0a9b4245}\label{_d_e_f_i_n_i_t_i_o_n_s_8h_a71b3142629d3a71c9a59b17f0a9b4245} 
+\index{DEFINITIONS.h@{DEFINITIONS.h}!COLOR\_WALL\_L@{COLOR\_WALL\_L}}
+\index{COLOR\_WALL\_L@{COLOR\_WALL\_L}!DEFINITIONS.h@{DEFINITIONS.h}}
+\doxysubsubsection{\texorpdfstring{COLOR\_WALL\_L()}{COLOR\_WALL\_L()}}
+{\footnotesize\ttfamily const sf\+::\+Color COLOR\+\_\+\+WALL\+\_\+L (\begin{DoxyParamCaption}\item[{0}]{,  }\item[{0}]{,  }\item[{0}]{ }\end{DoxyParamCaption})}
+
+
+
+Ściana lewa (ID 3). 
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_d_e_f_i_n_i_t_i_o_n_s_8h_a71b3142629d3a71c9a59b17f0a9b4245_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_d_e_f_i_n_i_t_i_o_n_s_8h_a20864c597919736f1db8f85e8a107ad9}\label{_d_e_f_i_n_i_t_i_o_n_s_8h_a20864c597919736f1db8f85e8a107ad9} 
+\index{DEFINITIONS.h@{DEFINITIONS.h}!COLOR\_WALL\_R@{COLOR\_WALL\_R}}
+\index{COLOR\_WALL\_R@{COLOR\_WALL\_R}!DEFINITIONS.h@{DEFINITIONS.h}}
+\doxysubsubsection{\texorpdfstring{COLOR\_WALL\_R()}{COLOR\_WALL\_R()}}
+{\footnotesize\ttfamily const sf\+::\+Color COLOR\+\_\+\+WALL\+\_\+R (\begin{DoxyParamCaption}\item[{2}]{,  }\item[{2}]{,  }\item[{2}]{ }\end{DoxyParamCaption})}
+
+
+
+Ściana prawa (ID 4). 
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_d_e_f_i_n_i_t_i_o_n_s_8h_a20864c597919736f1db8f85e8a107ad9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_d_e_f_i_n_i_t_i_o_n_s_8h_aaf354fb461ce78c08b4c33ee4319defa}\label{_d_e_f_i_n_i_t_i_o_n_s_8h_aaf354fb461ce78c08b4c33ee4319defa} 
+\index{DEFINITIONS.h@{DEFINITIONS.h}!COLOR\_WALL\_UP@{COLOR\_WALL\_UP}}
+\index{COLOR\_WALL\_UP@{COLOR\_WALL\_UP}!DEFINITIONS.h@{DEFINITIONS.h}}
+\doxysubsubsection{\texorpdfstring{COLOR\_WALL\_UP()}{COLOR\_WALL\_UP()}}
+{\footnotesize\ttfamily const sf\+::\+Color COLOR\+\_\+\+WALL\+\_\+\+UP (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{1}]{,  }\item[{1}]{ }\end{DoxyParamCaption})}
+
+
+
+Ściana górna (ID 5). 
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_d_e_f_i_n_i_t_i_o_n_s_8h_aaf354fb461ce78c08b4c33ee4319defa_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_d_e_f_i_n_i_t_i_o_n_s_8h_a2a5205cc0f104389a2114728f0473fe3}\label{_d_e_f_i_n_i_t_i_o_n_s_8h_a2a5205cc0f104389a2114728f0473fe3} 
+\index{DEFINITIONS.h@{DEFINITIONS.h}!COLOR\_WATER@{COLOR\_WATER}}
+\index{COLOR\_WATER@{COLOR\_WATER}!DEFINITIONS.h@{DEFINITIONS.h}}
+\doxysubsubsection{\texorpdfstring{COLOR\_WATER()}{COLOR\_WATER()}}
+{\footnotesize\ttfamily const sf\+::\+Color COLOR\+\_\+\+WATER (\begin{DoxyParamCaption}\item[{0}]{,  }\item[{0}]{,  }\item[{255}]{ }\end{DoxyParamCaption})}
+
+
+
+Woda (ID 11). 
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_d_e_f_i_n_i_t_i_o_n_s_8h_a2a5205cc0f104389a2114728f0473fe3_icgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,342 @@
+\doxysection{alext.\+h}
+\hypertarget{alext_8h_source}{}\label{alext_8h_source}\index{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/AL/alext.h@{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/AL/alext.h}}
+\mbox{\hyperlink{alext_8h}{Idź do dokumentacji tego pliku.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#ifndef\ AL\_ALEXT\_H}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ AL\_ALEXT\_H}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <stddef.h>}}
+\DoxyCodeLine{00025\ \textcolor{comment}{/*\ Define\ int64\_t\ and\ uint64\_t\ types\ */}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#if\ defined(\_\_STDC\_VERSION\_\_)\ \&\&\ \_\_STDC\_VERSION\_\_\ >=\ 199901L}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ <inttypes.h>}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#elif\ defined(\_WIN32)\ \&\&\ defined(\_\_GNUC\_\_)}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#elif\ defined(\_WIN32)}}
+\DoxyCodeLine{00031\ \textcolor{keyword}{typedef}\ \_\_int64\ int64\_t;}
+\DoxyCodeLine{00032\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{unsigned}\ \_\_int64\ uint64\_t;}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00034\ \textcolor{comment}{/*\ Fallback\ if\ nothing\ above\ works\ */}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#include\ <inttypes.h>}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{alc_8h}{alc.h}}"{}}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{al_8h}{al.h}}"{}}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00042\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#ifndef\ AL\_LOKI\_IMA\_ADPCM\_format}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#define\ AL\_LOKI\_IMA\_ADPCM\_format\ 1}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#define\ AL\_FORMAT\_IMA\_ADPCM\_MONO16\_EXT\ \ \ \ \ \ \ \ \ \ \ 0x10000}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#define\ AL\_FORMAT\_IMA\_ADPCM\_STEREO16\_EXT\ \ \ \ \ \ \ \ \ 0x10001}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#ifndef\ AL\_LOKI\_WAVE\_format}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#define\ AL\_LOKI\_WAVE\_format\ 1}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#define\ AL\_FORMAT\_WAVE\_EXT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x10002}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#ifndef\ AL\_EXT\_vorbis}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#define\ AL\_EXT\_vorbis\ 1}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ AL\_FORMAT\_VORBIS\_EXT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x10003}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#ifndef\ AL\_LOKI\_quadriphonic}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#define\ AL\_LOKI\_quadriphonic\ 1}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#define\ AL\_FORMAT\_QUAD8\_LOKI\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x10004}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#define\ AL\_FORMAT\_QUAD16\_LOKI\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x10005}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#ifndef\ AL\_EXT\_float32}}
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#define\ AL\_EXT\_float32\ 1}}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#define\ AL\_FORMAT\_MONO\_FLOAT32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x10010}}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#define\ AL\_FORMAT\_STEREO\_FLOAT32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x10011}}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#ifndef\ AL\_EXT\_double}}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#define\ AL\_EXT\_double\ 1}}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#define\ AL\_FORMAT\_MONO\_DOUBLE\_EXT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x10012}}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#define\ AL\_FORMAT\_STEREO\_DOUBLE\_EXT\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x10013}}
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#ifndef\ AL\_EXT\_MULAW}}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#define\ AL\_EXT\_MULAW\ 1}}
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#define\ AL\_FORMAT\_MONO\_MULAW\_EXT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x10014}}
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#define\ AL\_FORMAT\_STEREO\_MULAW\_EXT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x10015}}
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#ifndef\ AL\_EXT\_ALAW}}
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#define\ AL\_EXT\_ALAW\ 1}}
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#define\ AL\_FORMAT\_MONO\_ALAW\_EXT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x10016}}
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#define\ AL\_FORMAT\_STEREO\_ALAW\_EXT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x10017}}
+\DoxyCodeLine{00089\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#ifndef\ ALC\_LOKI\_audio\_channel}}
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#define\ ALC\_LOKI\_audio\_channel\ 1}}
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#define\ ALC\_CHAN\_MAIN\_LOKI\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x500001}}
+\DoxyCodeLine{00094\ \textcolor{preprocessor}{\#define\ ALC\_CHAN\_PCM\_LOKI\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x500002}}
+\DoxyCodeLine{00095\ \textcolor{preprocessor}{\#define\ ALC\_CHAN\_CD\_LOKI\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x500003}}
+\DoxyCodeLine{00096\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#ifndef\ AL\_EXT\_MCFORMATS}}
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#define\ AL\_EXT\_MCFORMATS\ 1}}
+\DoxyCodeLine{00100\ \textcolor{preprocessor}{\#define\ AL\_FORMAT\_QUAD8\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1204}}
+\DoxyCodeLine{00101\ \textcolor{preprocessor}{\#define\ AL\_FORMAT\_QUAD16\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1205}}
+\DoxyCodeLine{00102\ \textcolor{preprocessor}{\#define\ AL\_FORMAT\_QUAD32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1206}}
+\DoxyCodeLine{00103\ \textcolor{preprocessor}{\#define\ AL\_FORMAT\_REAR8\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1207}}
+\DoxyCodeLine{00104\ \textcolor{preprocessor}{\#define\ AL\_FORMAT\_REAR16\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1208}}
+\DoxyCodeLine{00105\ \textcolor{preprocessor}{\#define\ AL\_FORMAT\_REAR32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1209}}
+\DoxyCodeLine{00106\ \textcolor{preprocessor}{\#define\ AL\_FORMAT\_51CHN8\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x120A}}
+\DoxyCodeLine{00107\ \textcolor{preprocessor}{\#define\ AL\_FORMAT\_51CHN16\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x120B}}
+\DoxyCodeLine{00108\ \textcolor{preprocessor}{\#define\ AL\_FORMAT\_51CHN32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x120C}}
+\DoxyCodeLine{00109\ \textcolor{preprocessor}{\#define\ AL\_FORMAT\_61CHN8\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x120D}}
+\DoxyCodeLine{00110\ \textcolor{preprocessor}{\#define\ AL\_FORMAT\_61CHN16\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x120E}}
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\#define\ AL\_FORMAT\_61CHN32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x120F}}
+\DoxyCodeLine{00112\ \textcolor{preprocessor}{\#define\ AL\_FORMAT\_71CHN8\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1210}}
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\#define\ AL\_FORMAT\_71CHN16\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1211}}
+\DoxyCodeLine{00114\ \textcolor{preprocessor}{\#define\ AL\_FORMAT\_71CHN32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1212}}
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \textcolor{preprocessor}{\#ifndef\ AL\_EXT\_MULAW\_MCFORMATS}}
+\DoxyCodeLine{00118\ \textcolor{preprocessor}{\#define\ AL\_EXT\_MULAW\_MCFORMATS\ 1}}
+\DoxyCodeLine{00119\ \textcolor{preprocessor}{\#define\ AL\_FORMAT\_MONO\_MULAW\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x10014}}
+\DoxyCodeLine{00120\ \textcolor{preprocessor}{\#define\ AL\_FORMAT\_STEREO\_MULAW\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x10015}}
+\DoxyCodeLine{00121\ \textcolor{preprocessor}{\#define\ AL\_FORMAT\_QUAD\_MULAW\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x10021}}
+\DoxyCodeLine{00122\ \textcolor{preprocessor}{\#define\ AL\_FORMAT\_REAR\_MULAW\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x10022}}
+\DoxyCodeLine{00123\ \textcolor{preprocessor}{\#define\ AL\_FORMAT\_51CHN\_MULAW\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x10023}}
+\DoxyCodeLine{00124\ \textcolor{preprocessor}{\#define\ AL\_FORMAT\_61CHN\_MULAW\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x10024}}
+\DoxyCodeLine{00125\ \textcolor{preprocessor}{\#define\ AL\_FORMAT\_71CHN\_MULAW\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x10025}}
+\DoxyCodeLine{00126\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \textcolor{preprocessor}{\#ifndef\ AL\_EXT\_IMA4}}
+\DoxyCodeLine{00129\ \textcolor{preprocessor}{\#define\ AL\_EXT\_IMA4\ 1}}
+\DoxyCodeLine{00130\ \textcolor{preprocessor}{\#define\ AL\_FORMAT\_MONO\_IMA4\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1300}}
+\DoxyCodeLine{00131\ \textcolor{preprocessor}{\#define\ AL\_FORMAT\_STEREO\_IMA4\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1301}}
+\DoxyCodeLine{00132\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \textcolor{preprocessor}{\#ifndef\ AL\_EXT\_STATIC\_BUFFER}}
+\DoxyCodeLine{00135\ \textcolor{preprocessor}{\#define\ AL\_EXT\_STATIC\_BUFFER\ 1}}
+\DoxyCodeLine{00136\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{al_8h_a33f8bcbc68209e69bd2d597f0b5471d4}{ALvoid}}\ (\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\_APIENTRY}}*\mbox{\hyperlink{alext_8h_a8df6ceab1d78f8fbe93d76a2498b2867}{PFNALBUFFERDATASTATICPROC}})(\textcolor{keyword}{const}\ \mbox{\hyperlink{al_8h_a8e95e1bad09d820d882e1bff068a33ef}{ALint}},\mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}},\mbox{\hyperlink{al_8h_a33f8bcbc68209e69bd2d597f0b5471d4}{ALvoid}}*,\mbox{\hyperlink{al_8h_ab966c4d5d554fee3ae4e5c7774e83c7e}{ALsizei}},\mbox{\hyperlink{al_8h_ab966c4d5d554fee3ae4e5c7774e83c7e}{ALsizei}});}
+\DoxyCodeLine{00137\ \textcolor{preprocessor}{\#ifdef\ AL\_ALEXT\_PROTOTYPES}}
+\DoxyCodeLine{00138\ \mbox{\hyperlink{al_8h_ad82d3cfd60d672e4a9dbf26f3b5f99d8}{AL\_API}}\ \mbox{\hyperlink{al_8h_a33f8bcbc68209e69bd2d597f0b5471d4}{ALvoid}}\ \mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\_APIENTRY}}\ alBufferDataStatic(\textcolor{keyword}{const}\ \mbox{\hyperlink{al_8h_a8e95e1bad09d820d882e1bff068a33ef}{ALint}}\ buffer,\ \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}\ format,\ \mbox{\hyperlink{al_8h_a33f8bcbc68209e69bd2d597f0b5471d4}{ALvoid}}\ *data,\ \mbox{\hyperlink{al_8h_ab966c4d5d554fee3ae4e5c7774e83c7e}{ALsizei}}\ len,\ \mbox{\hyperlink{al_8h_ab966c4d5d554fee3ae4e5c7774e83c7e}{ALsizei}}\ freq);}
+\DoxyCodeLine{00139\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00140\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ \textcolor{preprocessor}{\#ifndef\ ALC\_EXT\_EFX}}
+\DoxyCodeLine{00143\ \textcolor{preprocessor}{\#define\ ALC\_EXT\_EFX\ 1}}
+\DoxyCodeLine{00144\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{efx_8h}{efx.h}}"{}}}
+\DoxyCodeLine{00145\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \textcolor{preprocessor}{\#ifndef\ ALC\_EXT\_disconnect}}
+\DoxyCodeLine{00148\ \textcolor{preprocessor}{\#define\ ALC\_EXT\_disconnect\ 1}}
+\DoxyCodeLine{00149\ \textcolor{preprocessor}{\#define\ ALC\_CONNECTED\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x313}}
+\DoxyCodeLine{00150\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \textcolor{preprocessor}{\#ifndef\ ALC\_EXT\_thread\_local\_context}}
+\DoxyCodeLine{00153\ \textcolor{preprocessor}{\#define\ ALC\_EXT\_thread\_local\_context\ 1}}
+\DoxyCodeLine{00154\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{alc_8h_ab3f76bbb16c17231a6b15f2caf769606}{ALCboolean}}\ \ (\mbox{\hyperlink{alc_8h_ad26234a076d29e819fa6654429bc8b35}{ALC\_APIENTRY}}*\mbox{\hyperlink{alext_8h_a4cb30011a8c41d0957dc86f9a450904d}{PFNALCSETTHREADCONTEXTPROC}})(\mbox{\hyperlink{alc_8h_ad085cf94ff96646b5a2b5401c4489e23}{ALCcontext}}\ *context);}
+\DoxyCodeLine{00155\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{alc_8h_ad085cf94ff96646b5a2b5401c4489e23}{ALCcontext}}*\ (\mbox{\hyperlink{alc_8h_ad26234a076d29e819fa6654429bc8b35}{ALC\_APIENTRY}}*\mbox{\hyperlink{alext_8h_a6163e5befcb30d690471041dc46966c0}{PFNALCGETTHREADCONTEXTPROC}})(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00156\ \textcolor{preprocessor}{\#ifdef\ AL\_ALEXT\_PROTOTYPES}}
+\DoxyCodeLine{00157\ \mbox{\hyperlink{alc_8h_ab33f56ca61b69d521b09d3e567dbabd2}{ALC\_API}}\ \mbox{\hyperlink{alc_8h_ab3f76bbb16c17231a6b15f2caf769606}{ALCboolean}}\ \ \mbox{\hyperlink{alc_8h_ad26234a076d29e819fa6654429bc8b35}{ALC\_APIENTRY}}\ alcSetThreadContext(\mbox{\hyperlink{alc_8h_ad085cf94ff96646b5a2b5401c4489e23}{ALCcontext}}\ *context);}
+\DoxyCodeLine{00158\ \mbox{\hyperlink{alc_8h_ab33f56ca61b69d521b09d3e567dbabd2}{ALC\_API}}\ \mbox{\hyperlink{alc_8h_ad085cf94ff96646b5a2b5401c4489e23}{ALCcontext}}*\ \mbox{\hyperlink{alc_8h_ad26234a076d29e819fa6654429bc8b35}{ALC\_APIENTRY}}\ alcGetThreadContext(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00159\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00160\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00162\ \textcolor{preprocessor}{\#ifndef\ AL\_EXT\_source\_distance\_model}}
+\DoxyCodeLine{00163\ \textcolor{preprocessor}{\#define\ AL\_EXT\_source\_distance\_model\ 1}}
+\DoxyCodeLine{00164\ \textcolor{preprocessor}{\#define\ AL\_SOURCE\_DISTANCE\_MODEL\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x200}}
+\DoxyCodeLine{00165\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ \textcolor{preprocessor}{\#ifndef\ AL\_SOFT\_buffer\_sub\_data}}
+\DoxyCodeLine{00168\ \textcolor{preprocessor}{\#define\ AL\_SOFT\_buffer\_sub\_data\ 1}}
+\DoxyCodeLine{00169\ \textcolor{preprocessor}{\#define\ AL\_BYTE\_RW\_OFFSETS\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1031}}
+\DoxyCodeLine{00170\ \textcolor{preprocessor}{\#define\ AL\_SAMPLE\_RW\_OFFSETS\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1032}}
+\DoxyCodeLine{00171\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{al_8h_a33f8bcbc68209e69bd2d597f0b5471d4}{ALvoid}}\ (\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\_APIENTRY}}*\mbox{\hyperlink{alext_8h_a3536e53fdc337e9242d52c37aecac1c8}{PFNALBUFFERSUBDATASOFTPROC}})(\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}},\mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}},\textcolor{keyword}{const}\ \mbox{\hyperlink{al_8h_a33f8bcbc68209e69bd2d597f0b5471d4}{ALvoid}}*,\mbox{\hyperlink{al_8h_ab966c4d5d554fee3ae4e5c7774e83c7e}{ALsizei}},\mbox{\hyperlink{al_8h_ab966c4d5d554fee3ae4e5c7774e83c7e}{ALsizei}});}
+\DoxyCodeLine{00172\ \textcolor{preprocessor}{\#ifdef\ AL\_ALEXT\_PROTOTYPES}}
+\DoxyCodeLine{00173\ \mbox{\hyperlink{al_8h_ad82d3cfd60d672e4a9dbf26f3b5f99d8}{AL\_API}}\ \mbox{\hyperlink{al_8h_a33f8bcbc68209e69bd2d597f0b5471d4}{ALvoid}}\ \mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\_APIENTRY}}\ alBufferSubDataSOFT(\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}\ buffer,\mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}\ format,\textcolor{keyword}{const}\ \mbox{\hyperlink{al_8h_a33f8bcbc68209e69bd2d597f0b5471d4}{ALvoid}}\ *data,\mbox{\hyperlink{al_8h_ab966c4d5d554fee3ae4e5c7774e83c7e}{ALsizei}}\ offset,\mbox{\hyperlink{al_8h_ab966c4d5d554fee3ae4e5c7774e83c7e}{ALsizei}}\ length);}
+\DoxyCodeLine{00174\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00175\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00177\ \textcolor{preprocessor}{\#ifndef\ AL\_SOFT\_loop\_points}}
+\DoxyCodeLine{00178\ \textcolor{preprocessor}{\#define\ AL\_SOFT\_loop\_points\ 1}}
+\DoxyCodeLine{00179\ \textcolor{preprocessor}{\#define\ AL\_LOOP\_POINTS\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x2015}}
+\DoxyCodeLine{00180\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ \textcolor{preprocessor}{\#ifndef\ AL\_EXT\_FOLDBACK}}
+\DoxyCodeLine{00183\ \textcolor{preprocessor}{\#define\ AL\_EXT\_FOLDBACK\ 1}}
+\DoxyCodeLine{00184\ \textcolor{preprocessor}{\#define\ AL\_EXT\_FOLDBACK\_NAME\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ "{}AL\_EXT\_FOLDBACK"{}}}
+\DoxyCodeLine{00185\ \textcolor{preprocessor}{\#define\ AL\_FOLDBACK\_EVENT\_BLOCK\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x4112}}
+\DoxyCodeLine{00186\ \textcolor{preprocessor}{\#define\ AL\_FOLDBACK\_EVENT\_START\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x4111}}
+\DoxyCodeLine{00187\ \textcolor{preprocessor}{\#define\ AL\_FOLDBACK\_EVENT\_STOP\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x4113}}
+\DoxyCodeLine{00188\ \textcolor{preprocessor}{\#define\ AL\_FOLDBACK\_MODE\_MONO\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x4101}}
+\DoxyCodeLine{00189\ \textcolor{preprocessor}{\#define\ AL\_FOLDBACK\_MODE\_STEREO\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x4102}}
+\DoxyCodeLine{00190\ \textcolor{keyword}{typedef}\ void\ (\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\_APIENTRY}}*\mbox{\hyperlink{alext_8h_a048aacbd107469034c4e8165b1c7ca64}{LPALFOLDBACKCALLBACK}})(\mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}},\mbox{\hyperlink{al_8h_ab966c4d5d554fee3ae4e5c7774e83c7e}{ALsizei}});}
+\DoxyCodeLine{00191\ \textcolor{keyword}{typedef}\ void\ (\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\_APIENTRY}}*\mbox{\hyperlink{alext_8h_aa4526ca7e63b1e041d19bd365d70aecd}{LPALREQUESTFOLDBACKSTART}})(\mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}},\mbox{\hyperlink{al_8h_ab966c4d5d554fee3ae4e5c7774e83c7e}{ALsizei}},\mbox{\hyperlink{al_8h_ab966c4d5d554fee3ae4e5c7774e83c7e}{ALsizei}},\mbox{\hyperlink{al_8h_abb26671ce5d302ed61a2e55256624169}{ALfloat}}*,\mbox{\hyperlink{alext_8h_a048aacbd107469034c4e8165b1c7ca64}{LPALFOLDBACKCALLBACK}});}
+\DoxyCodeLine{00192\ \textcolor{keyword}{typedef}\ void\ (\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\_APIENTRY}}*\mbox{\hyperlink{alext_8h_a7fc2caef45affea521a32d3853386fa3}{LPALREQUESTFOLDBACKSTOP}})(void);}
+\DoxyCodeLine{00193\ \textcolor{preprocessor}{\#ifdef\ AL\_ALEXT\_PROTOTYPES}}
+\DoxyCodeLine{00194\ \mbox{\hyperlink{al_8h_ad82d3cfd60d672e4a9dbf26f3b5f99d8}{AL\_API}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\_APIENTRY}}\ alRequestFoldbackStart(\mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}\ mode,\mbox{\hyperlink{al_8h_ab966c4d5d554fee3ae4e5c7774e83c7e}{ALsizei}}\ count,\mbox{\hyperlink{al_8h_ab966c4d5d554fee3ae4e5c7774e83c7e}{ALsizei}}\ length,\mbox{\hyperlink{al_8h_abb26671ce5d302ed61a2e55256624169}{ALfloat}}\ *mem,\mbox{\hyperlink{alext_8h_a048aacbd107469034c4e8165b1c7ca64}{LPALFOLDBACKCALLBACK}}\ callback);}
+\DoxyCodeLine{00195\ \mbox{\hyperlink{al_8h_ad82d3cfd60d672e4a9dbf26f3b5f99d8}{AL\_API}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\_APIENTRY}}\ alRequestFoldbackStop(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00196\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00197\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00199\ \textcolor{preprocessor}{\#ifndef\ ALC\_EXT\_DEDICATED}}
+\DoxyCodeLine{00200\ \textcolor{preprocessor}{\#define\ ALC\_EXT\_DEDICATED\ 1}}
+\DoxyCodeLine{00201\ \textcolor{preprocessor}{\#define\ AL\_DEDICATED\_GAIN\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x0001}}
+\DoxyCodeLine{00202\ \textcolor{preprocessor}{\#define\ AL\_EFFECT\_DEDICATED\_DIALOGUE\ \ \ \ \ \ \ \ \ \ \ \ \ 0x9001}}
+\DoxyCodeLine{00203\ \textcolor{preprocessor}{\#define\ AL\_EFFECT\_DEDICATED\_LOW\_FREQUENCY\_EFFECT\ 0x9000}}
+\DoxyCodeLine{00204\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00206\ \textcolor{preprocessor}{\#ifndef\ AL\_SOFT\_buffer\_samples}}
+\DoxyCodeLine{00207\ \textcolor{preprocessor}{\#define\ AL\_SOFT\_buffer\_samples\ 1}}
+\DoxyCodeLine{00208\ \textcolor{comment}{/*\ Channel\ configurations\ */}}
+\DoxyCodeLine{00209\ \textcolor{preprocessor}{\#define\ AL\_MONO\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1500}}
+\DoxyCodeLine{00210\ \textcolor{preprocessor}{\#define\ AL\_STEREO\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1501}}
+\DoxyCodeLine{00211\ \textcolor{preprocessor}{\#define\ AL\_REAR\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1502}}
+\DoxyCodeLine{00212\ \textcolor{preprocessor}{\#define\ AL\_QUAD\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1503}}
+\DoxyCodeLine{00213\ \textcolor{preprocessor}{\#define\ AL\_5POINT1\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1504}}
+\DoxyCodeLine{00214\ \textcolor{preprocessor}{\#define\ AL\_6POINT1\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1505}}
+\DoxyCodeLine{00215\ \textcolor{preprocessor}{\#define\ AL\_7POINT1\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1506}}
+\DoxyCodeLine{00216\ }
+\DoxyCodeLine{00217\ \textcolor{comment}{/*\ Sample\ types\ */}}
+\DoxyCodeLine{00218\ \textcolor{preprocessor}{\#define\ AL\_BYTE\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1400}}
+\DoxyCodeLine{00219\ \textcolor{preprocessor}{\#define\ AL\_UNSIGNED\_BYTE\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1401}}
+\DoxyCodeLine{00220\ \textcolor{preprocessor}{\#define\ AL\_SHORT\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1402}}
+\DoxyCodeLine{00221\ \textcolor{preprocessor}{\#define\ AL\_UNSIGNED\_SHORT\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1403}}
+\DoxyCodeLine{00222\ \textcolor{preprocessor}{\#define\ AL\_INT\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1404}}
+\DoxyCodeLine{00223\ \textcolor{preprocessor}{\#define\ AL\_UNSIGNED\_INT\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1405}}
+\DoxyCodeLine{00224\ \textcolor{preprocessor}{\#define\ AL\_FLOAT\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1406}}
+\DoxyCodeLine{00225\ \textcolor{preprocessor}{\#define\ AL\_DOUBLE\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1407}}
+\DoxyCodeLine{00226\ \textcolor{preprocessor}{\#define\ AL\_BYTE3\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1408}}
+\DoxyCodeLine{00227\ \textcolor{preprocessor}{\#define\ AL\_UNSIGNED\_BYTE3\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1409}}
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00229\ \textcolor{comment}{/*\ Storage\ formats\ */}}
+\DoxyCodeLine{00230\ \textcolor{preprocessor}{\#define\ AL\_MONO8\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1100}}
+\DoxyCodeLine{00231\ \textcolor{preprocessor}{\#define\ AL\_MONO16\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1101}}
+\DoxyCodeLine{00232\ \textcolor{preprocessor}{\#define\ AL\_MONO32F\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x10010}}
+\DoxyCodeLine{00233\ \textcolor{preprocessor}{\#define\ AL\_STEREO8\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1102}}
+\DoxyCodeLine{00234\ \textcolor{preprocessor}{\#define\ AL\_STEREO16\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1103}}
+\DoxyCodeLine{00235\ \textcolor{preprocessor}{\#define\ AL\_STEREO32F\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x10011}}
+\DoxyCodeLine{00236\ \textcolor{preprocessor}{\#define\ AL\_QUAD8\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1204}}
+\DoxyCodeLine{00237\ \textcolor{preprocessor}{\#define\ AL\_QUAD16\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1205}}
+\DoxyCodeLine{00238\ \textcolor{preprocessor}{\#define\ AL\_QUAD32F\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1206}}
+\DoxyCodeLine{00239\ \textcolor{preprocessor}{\#define\ AL\_REAR8\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1207}}
+\DoxyCodeLine{00240\ \textcolor{preprocessor}{\#define\ AL\_REAR16\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1208}}
+\DoxyCodeLine{00241\ \textcolor{preprocessor}{\#define\ AL\_REAR32F\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1209}}
+\DoxyCodeLine{00242\ \textcolor{preprocessor}{\#define\ AL\_5POINT1\_8\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x120A}}
+\DoxyCodeLine{00243\ \textcolor{preprocessor}{\#define\ AL\_5POINT1\_16\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x120B}}
+\DoxyCodeLine{00244\ \textcolor{preprocessor}{\#define\ AL\_5POINT1\_32F\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x120C}}
+\DoxyCodeLine{00245\ \textcolor{preprocessor}{\#define\ AL\_6POINT1\_8\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x120D}}
+\DoxyCodeLine{00246\ \textcolor{preprocessor}{\#define\ AL\_6POINT1\_16\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x120E}}
+\DoxyCodeLine{00247\ \textcolor{preprocessor}{\#define\ AL\_6POINT1\_32F\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x120F}}
+\DoxyCodeLine{00248\ \textcolor{preprocessor}{\#define\ AL\_7POINT1\_8\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1210}}
+\DoxyCodeLine{00249\ \textcolor{preprocessor}{\#define\ AL\_7POINT1\_16\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1211}}
+\DoxyCodeLine{00250\ \textcolor{preprocessor}{\#define\ AL\_7POINT1\_32F\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1212}}
+\DoxyCodeLine{00251\ }
+\DoxyCodeLine{00252\ \textcolor{comment}{/*\ Buffer\ attributes\ */}}
+\DoxyCodeLine{00253\ \textcolor{preprocessor}{\#define\ AL\_INTERNAL\_FORMAT\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x2008}}
+\DoxyCodeLine{00254\ \textcolor{preprocessor}{\#define\ AL\_BYTE\_LENGTH\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x2009}}
+\DoxyCodeLine{00255\ \textcolor{preprocessor}{\#define\ AL\_SAMPLE\_LENGTH\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x200A}}
+\DoxyCodeLine{00256\ \textcolor{preprocessor}{\#define\ AL\_SEC\_LENGTH\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x200B}}
+\DoxyCodeLine{00257\ }
+\DoxyCodeLine{00258\ \textcolor{keyword}{typedef}\ void\ (\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\_APIENTRY}}*\mbox{\hyperlink{alext_8h_a4f01085dc7535b5456e01ba9ba0330ff}{LPALBUFFERSAMPLESSOFT}})(\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}},\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}},\mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}},\mbox{\hyperlink{al_8h_ab966c4d5d554fee3ae4e5c7774e83c7e}{ALsizei}},\mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}},\mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}},\textcolor{keyword}{const}\ \mbox{\hyperlink{al_8h_a33f8bcbc68209e69bd2d597f0b5471d4}{ALvoid}}*);}
+\DoxyCodeLine{00259\ \textcolor{keyword}{typedef}\ void\ (\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\_APIENTRY}}*\mbox{\hyperlink{alext_8h_a4cc0d5bcd7385feeb73e80e261d6dcc3}{LPALBUFFERSUBSAMPLESSOFT}})(\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}},\mbox{\hyperlink{al_8h_ab966c4d5d554fee3ae4e5c7774e83c7e}{ALsizei}},\mbox{\hyperlink{al_8h_ab966c4d5d554fee3ae4e5c7774e83c7e}{ALsizei}},\mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}},\mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}},\textcolor{keyword}{const}\ \mbox{\hyperlink{al_8h_a33f8bcbc68209e69bd2d597f0b5471d4}{ALvoid}}*);}
+\DoxyCodeLine{00260\ \textcolor{keyword}{typedef}\ void\ (\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\_APIENTRY}}*\mbox{\hyperlink{alext_8h_ae2270321e66207a89be199fdd925056a}{LPALGETBUFFERSAMPLESSOFT}})(\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}},\mbox{\hyperlink{al_8h_ab966c4d5d554fee3ae4e5c7774e83c7e}{ALsizei}},\mbox{\hyperlink{al_8h_ab966c4d5d554fee3ae4e5c7774e83c7e}{ALsizei}},\mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}},\mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}},\mbox{\hyperlink{al_8h_a33f8bcbc68209e69bd2d597f0b5471d4}{ALvoid}}*);}
+\DoxyCodeLine{00261\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{al_8h_a87bd2b64b8ce719af42bf9dfd0cdf8fc}{ALboolean}}\ (\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\_APIENTRY}}*\mbox{\hyperlink{alext_8h_a5e5cbe126eda088547d956064aa1f680}{LPALISBUFFERFORMATSUPPORTEDSOFT}})(\mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}});}
+\DoxyCodeLine{00262\ \textcolor{preprocessor}{\#ifdef\ AL\_ALEXT\_PROTOTYPES}}
+\DoxyCodeLine{00263\ \mbox{\hyperlink{al_8h_ad82d3cfd60d672e4a9dbf26f3b5f99d8}{AL\_API}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\_APIENTRY}}\ alBufferSamplesSOFT(\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}\ buffer,\ \mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}\ samplerate,\ \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}\ internalformat,\ \mbox{\hyperlink{al_8h_ab966c4d5d554fee3ae4e5c7774e83c7e}{ALsizei}}\ samples,\ \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}\ channels,\ \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}\ type,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{al_8h_a33f8bcbc68209e69bd2d597f0b5471d4}{ALvoid}}\ *data);}
+\DoxyCodeLine{00264\ \mbox{\hyperlink{al_8h_ad82d3cfd60d672e4a9dbf26f3b5f99d8}{AL\_API}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\_APIENTRY}}\ alBufferSubSamplesSOFT(\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}\ buffer,\ \mbox{\hyperlink{al_8h_ab966c4d5d554fee3ae4e5c7774e83c7e}{ALsizei}}\ offset,\ \mbox{\hyperlink{al_8h_ab966c4d5d554fee3ae4e5c7774e83c7e}{ALsizei}}\ samples,\ \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}\ channels,\ \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}\ type,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{al_8h_a33f8bcbc68209e69bd2d597f0b5471d4}{ALvoid}}\ *data);}
+\DoxyCodeLine{00265\ \mbox{\hyperlink{al_8h_ad82d3cfd60d672e4a9dbf26f3b5f99d8}{AL\_API}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\_APIENTRY}}\ alGetBufferSamplesSOFT(\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}\ buffer,\ \mbox{\hyperlink{al_8h_ab966c4d5d554fee3ae4e5c7774e83c7e}{ALsizei}}\ offset,\ \mbox{\hyperlink{al_8h_ab966c4d5d554fee3ae4e5c7774e83c7e}{ALsizei}}\ samples,\ \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}\ channels,\ \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}\ type,\ \mbox{\hyperlink{al_8h_a33f8bcbc68209e69bd2d597f0b5471d4}{ALvoid}}\ *data);}
+\DoxyCodeLine{00266\ \mbox{\hyperlink{al_8h_ad82d3cfd60d672e4a9dbf26f3b5f99d8}{AL\_API}}\ \mbox{\hyperlink{al_8h_a87bd2b64b8ce719af42bf9dfd0cdf8fc}{ALboolean}}\ \mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\_APIENTRY}}\ alIsBufferFormatSupportedSOFT(\mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}\ format);}
+\DoxyCodeLine{00267\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00268\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00269\ }
+\DoxyCodeLine{00270\ \textcolor{preprocessor}{\#ifndef\ AL\_SOFT\_direct\_channels}}
+\DoxyCodeLine{00271\ \textcolor{preprocessor}{\#define\ AL\_SOFT\_direct\_channels\ 1}}
+\DoxyCodeLine{00272\ \textcolor{preprocessor}{\#define\ AL\_DIRECT\_CHANNELS\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1033}}
+\DoxyCodeLine{00273\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00274\ }
+\DoxyCodeLine{00275\ \textcolor{preprocessor}{\#ifndef\ ALC\_SOFT\_loopback}}
+\DoxyCodeLine{00276\ \textcolor{preprocessor}{\#define\ ALC\_SOFT\_loopback\ 1}}
+\DoxyCodeLine{00277\ \textcolor{preprocessor}{\#define\ ALC\_FORMAT\_CHANNELS\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1990}}
+\DoxyCodeLine{00278\ \textcolor{preprocessor}{\#define\ ALC\_FORMAT\_TYPE\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1991}}
+\DoxyCodeLine{00279\ }
+\DoxyCodeLine{00280\ \textcolor{comment}{/*\ Sample\ types\ */}}
+\DoxyCodeLine{00281\ \textcolor{preprocessor}{\#define\ ALC\_BYTE\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1400}}
+\DoxyCodeLine{00282\ \textcolor{preprocessor}{\#define\ ALC\_UNSIGNED\_BYTE\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1401}}
+\DoxyCodeLine{00283\ \textcolor{preprocessor}{\#define\ ALC\_SHORT\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1402}}
+\DoxyCodeLine{00284\ \textcolor{preprocessor}{\#define\ ALC\_UNSIGNED\_SHORT\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1403}}
+\DoxyCodeLine{00285\ \textcolor{preprocessor}{\#define\ ALC\_INT\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1404}}
+\DoxyCodeLine{00286\ \textcolor{preprocessor}{\#define\ ALC\_UNSIGNED\_INT\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1405}}
+\DoxyCodeLine{00287\ \textcolor{preprocessor}{\#define\ ALC\_FLOAT\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1406}}
+\DoxyCodeLine{00288\ }
+\DoxyCodeLine{00289\ \textcolor{comment}{/*\ Channel\ configurations\ */}}
+\DoxyCodeLine{00290\ \textcolor{preprocessor}{\#define\ ALC\_MONO\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1500}}
+\DoxyCodeLine{00291\ \textcolor{preprocessor}{\#define\ ALC\_STEREO\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1501}}
+\DoxyCodeLine{00292\ \textcolor{preprocessor}{\#define\ ALC\_QUAD\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1503}}
+\DoxyCodeLine{00293\ \textcolor{preprocessor}{\#define\ ALC\_5POINT1\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1504}}
+\DoxyCodeLine{00294\ \textcolor{preprocessor}{\#define\ ALC\_6POINT1\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1505}}
+\DoxyCodeLine{00295\ \textcolor{preprocessor}{\#define\ ALC\_7POINT1\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1506}}
+\DoxyCodeLine{00296\ }
+\DoxyCodeLine{00297\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{alc_8h_aba8742179fd52ef41c66adacdec5383e}{ALCdevice}}*\ (\mbox{\hyperlink{alc_8h_ad26234a076d29e819fa6654429bc8b35}{ALC\_APIENTRY}}*\mbox{\hyperlink{alext_8h_afd273f8537b4e335d9e0d86ba4cae2be}{LPALCLOOPBACKOPENDEVICESOFT}})(\textcolor{keyword}{const}\ \mbox{\hyperlink{alc_8h_a5ffdc2576482e1ff45cc0bbde7177a36}{ALCchar}}*);}
+\DoxyCodeLine{00298\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{alc_8h_ab3f76bbb16c17231a6b15f2caf769606}{ALCboolean}}\ (\mbox{\hyperlink{alc_8h_ad26234a076d29e819fa6654429bc8b35}{ALC\_APIENTRY}}*\mbox{\hyperlink{alext_8h_a5401325904bc481e92da4a658a4aaf0c}{LPALCISRENDERFORMATSUPPORTEDSOFT}})(\mbox{\hyperlink{alc_8h_aba8742179fd52ef41c66adacdec5383e}{ALCdevice}}*,\mbox{\hyperlink{alc_8h_a7041956d733b9affdb45d9b725e20156}{ALCsizei}},\mbox{\hyperlink{alc_8h_a6535508b0b689f249c8e99053d584a0f}{ALCenum}},\mbox{\hyperlink{alc_8h_a6535508b0b689f249c8e99053d584a0f}{ALCenum}});}
+\DoxyCodeLine{00299\ \textcolor{keyword}{typedef}\ void\ (\mbox{\hyperlink{alc_8h_ad26234a076d29e819fa6654429bc8b35}{ALC\_APIENTRY}}*\mbox{\hyperlink{alext_8h_a9bcaf2687eb497300935ccc8130df571}{LPALCRENDERSAMPLESSOFT}})(\mbox{\hyperlink{alc_8h_aba8742179fd52ef41c66adacdec5383e}{ALCdevice}}*,\mbox{\hyperlink{alc_8h_a03528d12ba43b25711e5d893da1b128c}{ALCvoid}}*,\mbox{\hyperlink{alc_8h_a7041956d733b9affdb45d9b725e20156}{ALCsizei}});}
+\DoxyCodeLine{00300\ \textcolor{preprocessor}{\#ifdef\ AL\_ALEXT\_PROTOTYPES}}
+\DoxyCodeLine{00301\ \mbox{\hyperlink{alc_8h_ab33f56ca61b69d521b09d3e567dbabd2}{ALC\_API}}\ \mbox{\hyperlink{alc_8h_aba8742179fd52ef41c66adacdec5383e}{ALCdevice}}*\ \mbox{\hyperlink{alc_8h_ad26234a076d29e819fa6654429bc8b35}{ALC\_APIENTRY}}\ alcLoopbackOpenDeviceSOFT(\textcolor{keyword}{const}\ \mbox{\hyperlink{alc_8h_a5ffdc2576482e1ff45cc0bbde7177a36}{ALCchar}}\ *deviceName);}
+\DoxyCodeLine{00302\ \mbox{\hyperlink{alc_8h_ab33f56ca61b69d521b09d3e567dbabd2}{ALC\_API}}\ \mbox{\hyperlink{alc_8h_ab3f76bbb16c17231a6b15f2caf769606}{ALCboolean}}\ \mbox{\hyperlink{alc_8h_ad26234a076d29e819fa6654429bc8b35}{ALC\_APIENTRY}}\ alcIsRenderFormatSupportedSOFT(\mbox{\hyperlink{alc_8h_aba8742179fd52ef41c66adacdec5383e}{ALCdevice}}\ *device,\ \mbox{\hyperlink{alc_8h_a7041956d733b9affdb45d9b725e20156}{ALCsizei}}\ freq,\ \mbox{\hyperlink{alc_8h_a6535508b0b689f249c8e99053d584a0f}{ALCenum}}\ channels,\ \mbox{\hyperlink{alc_8h_a6535508b0b689f249c8e99053d584a0f}{ALCenum}}\ type);}
+\DoxyCodeLine{00303\ \mbox{\hyperlink{alc_8h_ab33f56ca61b69d521b09d3e567dbabd2}{ALC\_API}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{alc_8h_ad26234a076d29e819fa6654429bc8b35}{ALC\_APIENTRY}}\ alcRenderSamplesSOFT(\mbox{\hyperlink{alc_8h_aba8742179fd52ef41c66adacdec5383e}{ALCdevice}}\ *device,\ \mbox{\hyperlink{alc_8h_a03528d12ba43b25711e5d893da1b128c}{ALCvoid}}\ *buffer,\ \mbox{\hyperlink{alc_8h_a7041956d733b9affdb45d9b725e20156}{ALCsizei}}\ samples);}
+\DoxyCodeLine{00304\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00305\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00306\ }
+\DoxyCodeLine{00307\ \textcolor{preprocessor}{\#ifndef\ AL\_EXT\_STEREO\_ANGLES}}
+\DoxyCodeLine{00308\ \textcolor{preprocessor}{\#define\ AL\_EXT\_STEREO\_ANGLES\ 1}}
+\DoxyCodeLine{00309\ \textcolor{preprocessor}{\#define\ AL\_STEREO\_ANGLES\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1030}}
+\DoxyCodeLine{00310\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00311\ }
+\DoxyCodeLine{00312\ \textcolor{preprocessor}{\#ifndef\ AL\_EXT\_SOURCE\_RADIUS}}
+\DoxyCodeLine{00313\ \textcolor{preprocessor}{\#define\ AL\_EXT\_SOURCE\_RADIUS\ 1}}
+\DoxyCodeLine{00314\ \textcolor{preprocessor}{\#define\ AL\_SOURCE\_RADIUS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1031}}
+\DoxyCodeLine{00315\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00316\ }
+\DoxyCodeLine{00317\ \textcolor{preprocessor}{\#ifndef\ AL\_SOFT\_source\_latency}}
+\DoxyCodeLine{00318\ \textcolor{preprocessor}{\#define\ AL\_SOFT\_source\_latency\ 1}}
+\DoxyCodeLine{00319\ \textcolor{preprocessor}{\#define\ AL\_SAMPLE\_OFFSET\_LATENCY\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ 0x1200}}
+\DoxyCodeLine{00320\ \textcolor{preprocessor}{\#define\ AL\_SEC\_OFFSET\_LATENCY\_SOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1201}}
+\DoxyCodeLine{00321\ \textcolor{keyword}{typedef}\ int64\_t\ \mbox{\hyperlink{alext_8h_abf19b4a82344c0d24d95347f0016d44b}{ALint64SOFT}};}
+\DoxyCodeLine{00322\ \textcolor{keyword}{typedef}\ uint64\_t\ \mbox{\hyperlink{alext_8h_a0429497eef92aee08e5a138f824d7d79}{ALuint64SOFT}};}
+\DoxyCodeLine{00323\ \textcolor{keyword}{typedef}\ void\ (\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\_APIENTRY}}*\mbox{\hyperlink{alext_8h_aaa36b138105888bfd9068305a547238d}{LPALSOURCEDSOFT}})(\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}},\mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}},\mbox{\hyperlink{al_8h_a3a8eb9c919d2266a4d1a4e38151eb946}{ALdouble}});}
+\DoxyCodeLine{00324\ \textcolor{keyword}{typedef}\ void\ (\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\_APIENTRY}}*\mbox{\hyperlink{alext_8h_afe994e847b058cf838e32f04cf14b0e4}{LPALSOURCE3DSOFT}})(\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}},\mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}},\mbox{\hyperlink{al_8h_a3a8eb9c919d2266a4d1a4e38151eb946}{ALdouble}},\mbox{\hyperlink{al_8h_a3a8eb9c919d2266a4d1a4e38151eb946}{ALdouble}},\mbox{\hyperlink{al_8h_a3a8eb9c919d2266a4d1a4e38151eb946}{ALdouble}});}
+\DoxyCodeLine{00325\ \textcolor{keyword}{typedef}\ void\ (\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\_APIENTRY}}*\mbox{\hyperlink{alext_8h_ac2cb03b7634a09f8da711ad64f70368a}{LPALSOURCEDVSOFT}})(\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}},\mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}},\textcolor{keyword}{const}\ \mbox{\hyperlink{al_8h_a3a8eb9c919d2266a4d1a4e38151eb946}{ALdouble}}*);}
+\DoxyCodeLine{00326\ \textcolor{keyword}{typedef}\ void\ (\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\_APIENTRY}}*\mbox{\hyperlink{alext_8h_aa48ee272a63dd701688f37d1e91e340c}{LPALGETSOURCEDSOFT}})(\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}},\mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}},\mbox{\hyperlink{al_8h_a3a8eb9c919d2266a4d1a4e38151eb946}{ALdouble}}*);}
+\DoxyCodeLine{00327\ \textcolor{keyword}{typedef}\ void\ (\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\_APIENTRY}}*\mbox{\hyperlink{alext_8h_a0df25cfd55b3a156de1a8d5b1d2e8aae}{LPALGETSOURCE3DSOFT}})(\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}},\mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}},\mbox{\hyperlink{al_8h_a3a8eb9c919d2266a4d1a4e38151eb946}{ALdouble}}*,\mbox{\hyperlink{al_8h_a3a8eb9c919d2266a4d1a4e38151eb946}{ALdouble}}*,\mbox{\hyperlink{al_8h_a3a8eb9c919d2266a4d1a4e38151eb946}{ALdouble}}*);}
+\DoxyCodeLine{00328\ \textcolor{keyword}{typedef}\ void\ (\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\_APIENTRY}}*\mbox{\hyperlink{alext_8h_a55b06021fb45ea298d73068c5efa9476}{LPALGETSOURCEDVSOFT}})(\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}},\mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}},\mbox{\hyperlink{al_8h_a3a8eb9c919d2266a4d1a4e38151eb946}{ALdouble}}*);}
+\DoxyCodeLine{00329\ \textcolor{keyword}{typedef}\ void\ (\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\_APIENTRY}}*\mbox{\hyperlink{alext_8h_ad4e70efb83446d5f77a968fd7b3d56cc}{LPALSOURCEI64SOFT}})(\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}},\mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}},\mbox{\hyperlink{alext_8h_abf19b4a82344c0d24d95347f0016d44b}{ALint64SOFT}});}
+\DoxyCodeLine{00330\ \textcolor{keyword}{typedef}\ void\ (\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\_APIENTRY}}*\mbox{\hyperlink{alext_8h_accbd03277395eaabdc94fcb9ccfbafbd}{LPALSOURCE3I64SOFT}})(\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}},\mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}},\mbox{\hyperlink{alext_8h_abf19b4a82344c0d24d95347f0016d44b}{ALint64SOFT}},\mbox{\hyperlink{alext_8h_abf19b4a82344c0d24d95347f0016d44b}{ALint64SOFT}},\mbox{\hyperlink{alext_8h_abf19b4a82344c0d24d95347f0016d44b}{ALint64SOFT}});}
+\DoxyCodeLine{00331\ \textcolor{keyword}{typedef}\ void\ (\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\_APIENTRY}}*\mbox{\hyperlink{alext_8h_ab006e7d5140c510e9c979b70c48f6d1d}{LPALSOURCEI64VSOFT}})(\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}},\mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}},\textcolor{keyword}{const}\ \mbox{\hyperlink{alext_8h_abf19b4a82344c0d24d95347f0016d44b}{ALint64SOFT}}*);}
+\DoxyCodeLine{00332\ \textcolor{keyword}{typedef}\ void\ (\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\_APIENTRY}}*\mbox{\hyperlink{alext_8h_a7734227b18d4e54f510ca1a87405f6bd}{LPALGETSOURCEI64SOFT}})(\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}},\mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}},\mbox{\hyperlink{alext_8h_abf19b4a82344c0d24d95347f0016d44b}{ALint64SOFT}}*);}
+\DoxyCodeLine{00333\ \textcolor{keyword}{typedef}\ void\ (\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\_APIENTRY}}*\mbox{\hyperlink{alext_8h_a778e8e7fe28b0aae63baa0d7dca4900b}{LPALGETSOURCE3I64SOFT}})(\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}},\mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}},\mbox{\hyperlink{alext_8h_abf19b4a82344c0d24d95347f0016d44b}{ALint64SOFT}}*,\mbox{\hyperlink{alext_8h_abf19b4a82344c0d24d95347f0016d44b}{ALint64SOFT}}*,\mbox{\hyperlink{alext_8h_abf19b4a82344c0d24d95347f0016d44b}{ALint64SOFT}}*);}
+\DoxyCodeLine{00334\ \textcolor{keyword}{typedef}\ void\ (\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\_APIENTRY}}*\mbox{\hyperlink{alext_8h_a6c6dbf72c11c0dabacd75f3047d084b2}{LPALGETSOURCEI64VSOFT}})(\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}},\mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}},\mbox{\hyperlink{alext_8h_abf19b4a82344c0d24d95347f0016d44b}{ALint64SOFT}}*);}
+\DoxyCodeLine{00335\ \textcolor{preprocessor}{\#ifdef\ AL\_ALEXT\_PROTOTYPES}}
+\DoxyCodeLine{00336\ \mbox{\hyperlink{al_8h_ad82d3cfd60d672e4a9dbf26f3b5f99d8}{AL\_API}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\_APIENTRY}}\ alSourcedSOFT(\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}\ source,\ \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}\ param,\ \mbox{\hyperlink{al_8h_a3a8eb9c919d2266a4d1a4e38151eb946}{ALdouble}}\ value);}
+\DoxyCodeLine{00337\ \mbox{\hyperlink{al_8h_ad82d3cfd60d672e4a9dbf26f3b5f99d8}{AL\_API}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\_APIENTRY}}\ alSource3dSOFT(\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}\ source,\ \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}\ param,\ \mbox{\hyperlink{al_8h_a3a8eb9c919d2266a4d1a4e38151eb946}{ALdouble}}\ value1,\ \mbox{\hyperlink{al_8h_a3a8eb9c919d2266a4d1a4e38151eb946}{ALdouble}}\ value2,\ \mbox{\hyperlink{al_8h_a3a8eb9c919d2266a4d1a4e38151eb946}{ALdouble}}\ value3);}
+\DoxyCodeLine{00338\ \mbox{\hyperlink{al_8h_ad82d3cfd60d672e4a9dbf26f3b5f99d8}{AL\_API}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\_APIENTRY}}\ alSourcedvSOFT(\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}\ source,\ \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}\ param,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{al_8h_a3a8eb9c919d2266a4d1a4e38151eb946}{ALdouble}}\ *values);}
+\DoxyCodeLine{00339\ \mbox{\hyperlink{al_8h_ad82d3cfd60d672e4a9dbf26f3b5f99d8}{AL\_API}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\_APIENTRY}}\ alGetSourcedSOFT(\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}\ source,\ \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}\ param,\ \mbox{\hyperlink{al_8h_a3a8eb9c919d2266a4d1a4e38151eb946}{ALdouble}}\ *value);}
+\DoxyCodeLine{00340\ \mbox{\hyperlink{al_8h_ad82d3cfd60d672e4a9dbf26f3b5f99d8}{AL\_API}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\_APIENTRY}}\ alGetSource3dSOFT(\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}\ source,\ \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}\ param,\ \mbox{\hyperlink{al_8h_a3a8eb9c919d2266a4d1a4e38151eb946}{ALdouble}}\ *value1,\ \mbox{\hyperlink{al_8h_a3a8eb9c919d2266a4d1a4e38151eb946}{ALdouble}}\ *value2,\ \mbox{\hyperlink{al_8h_a3a8eb9c919d2266a4d1a4e38151eb946}{ALdouble}}\ *value3);}
+\DoxyCodeLine{00341\ \mbox{\hyperlink{al_8h_ad82d3cfd60d672e4a9dbf26f3b5f99d8}{AL\_API}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\_APIENTRY}}\ alGetSourcedvSOFT(\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}\ source,\ \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}\ param,\ \mbox{\hyperlink{al_8h_a3a8eb9c919d2266a4d1a4e38151eb946}{ALdouble}}\ *values);}
+\DoxyCodeLine{00342\ \mbox{\hyperlink{al_8h_ad82d3cfd60d672e4a9dbf26f3b5f99d8}{AL\_API}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\_APIENTRY}}\ alSourcei64SOFT(\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}\ source,\ \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}\ param,\ \mbox{\hyperlink{alext_8h_abf19b4a82344c0d24d95347f0016d44b}{ALint64SOFT}}\ value);}
+\DoxyCodeLine{00343\ \mbox{\hyperlink{al_8h_ad82d3cfd60d672e4a9dbf26f3b5f99d8}{AL\_API}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\_APIENTRY}}\ alSource3i64SOFT(\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}\ source,\ \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}\ param,\ \mbox{\hyperlink{alext_8h_abf19b4a82344c0d24d95347f0016d44b}{ALint64SOFT}}\ value1,\ \mbox{\hyperlink{alext_8h_abf19b4a82344c0d24d95347f0016d44b}{ALint64SOFT}}\ value2,\ \mbox{\hyperlink{alext_8h_abf19b4a82344c0d24d95347f0016d44b}{ALint64SOFT}}\ value3);}
+\DoxyCodeLine{00344\ \mbox{\hyperlink{al_8h_ad82d3cfd60d672e4a9dbf26f3b5f99d8}{AL\_API}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\_APIENTRY}}\ alSourcei64vSOFT(\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}\ source,\ \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}\ param,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{alext_8h_abf19b4a82344c0d24d95347f0016d44b}{ALint64SOFT}}\ *values);}
+\DoxyCodeLine{00345\ \mbox{\hyperlink{al_8h_ad82d3cfd60d672e4a9dbf26f3b5f99d8}{AL\_API}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\_APIENTRY}}\ alGetSourcei64SOFT(\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}\ source,\ \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}\ param,\ \mbox{\hyperlink{alext_8h_abf19b4a82344c0d24d95347f0016d44b}{ALint64SOFT}}\ *value);}
+\DoxyCodeLine{00346\ \mbox{\hyperlink{al_8h_ad82d3cfd60d672e4a9dbf26f3b5f99d8}{AL\_API}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\_APIENTRY}}\ alGetSource3i64SOFT(\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}\ source,\ \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}\ param,\ \mbox{\hyperlink{alext_8h_abf19b4a82344c0d24d95347f0016d44b}{ALint64SOFT}}\ *value1,\ \mbox{\hyperlink{alext_8h_abf19b4a82344c0d24d95347f0016d44b}{ALint64SOFT}}\ *value2,\ \mbox{\hyperlink{alext_8h_abf19b4a82344c0d24d95347f0016d44b}{ALint64SOFT}}\ *value3);}
+\DoxyCodeLine{00347\ \mbox{\hyperlink{al_8h_ad82d3cfd60d672e4a9dbf26f3b5f99d8}{AL\_API}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\_APIENTRY}}\ alGetSourcei64vSOFT(\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}\ source,\ \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}\ param,\ \mbox{\hyperlink{alext_8h_abf19b4a82344c0d24d95347f0016d44b}{ALint64SOFT}}\ *values);}
+\DoxyCodeLine{00348\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00349\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00350\ }
+\DoxyCodeLine{00351\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00352\ \}}
+\DoxyCodeLine{00353\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00354\ }
+\DoxyCodeLine{00355\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

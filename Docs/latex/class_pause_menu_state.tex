@@ -1,0 +1,303 @@
+\doxysection{Dokumentacja klasy Pause\+Menu\+State}
+\hypertarget{class_pause_menu_state}{}\label{class_pause_menu_state}\index{PauseMenuState@{PauseMenuState}}
+
+
+Stan pauzy nakładany na stan gry.  
+
+
+
+
+{\ttfamily \#include $<$Pause\+Menu\+State.\+h$>$}
+
+
+
+Diagram dziedziczenia dla Pause\+Menu\+State\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_pause_menu_state__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagram współpracy dla Pause\+Menu\+State\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_pause_menu_state__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pause_menu_state_ad8a8d140380f666c22e3db6886631bcf}{Pause\+Menu\+State}} (\mbox{\hyperlink{_game_8h_ae7efd7ef77698f16206f5c66180a389f}{Game\+Data\+Ref}} data, sf\+::\+Sprite bg\+Sprite, std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$ bg\+Texture, int level\+Number)
+\begin{DoxyCompactList}\small\item\em Konstruktor stanu pauzy. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pause_menu_state_ac9e33247bd16b40459d14d67f0b862e1}{init}} () override
+\begin{DoxyCompactList}\small\item\em Inicjalizuje przyciski Resume, Reset, Menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pause_menu_state_a67edff37fa71fd5c748353e4e4e3f907}{handle\+Input}} (sf\+::\+Event \&event) override
+\begin{DoxyCompactList}\small\item\em Obsługuje kliknięcia w menu pauzy oraz klawisz ESC (wznowienie). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pause_menu_state_a61b3c3dd07f483c1556ccd8607f9244f}{update}} (float dt) override
+\begin{DoxyCompactList}\small\item\em Aktualizuje efekty wizualne przycisków. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pause_menu_state_a56266153292c423cbaeebb372dbccd65}{draw}} (float dt) override
+\begin{DoxyCompactList}\small\item\em Rysuje zamrożone tło gry, przyciemnienie i menu pauzy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{class_state}{State}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_state_a9ddc1df6f998184d6477b48fab90281c}{\texorpdfstring{$\sim$}{\string~}\+State}} ()
+\begin{DoxyCompactList}\small\item\em Wirtualny destruktor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_state_abad223d1066e95bd1b70e1341fb72a88}{pause}} ()
+\begin{DoxyCompactList}\small\item\em Wywoływana, gdy stan jest pauzowany (np. inny stan jest nakładany na wierzch). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_state_a8ef6d305e962afe41b0629255f0f58f9}{resume}} ()
+\begin{DoxyCompactList}\small\item\em Wywoływana, gdy stan jest wznawiany (np. stan powyżej został zdjęty ze stosu). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_game_8h_ae7efd7ef77698f16206f5c66180a389f}{Game\+Data\+Ref}} \mbox{\hyperlink{class_pause_menu_state_abee1810878d240e73ca40dcf2fdf0f8f}{m\+\_\+data}}
+\item 
+std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$ \mbox{\hyperlink{class_pause_menu_state_a74143d973666585912fd44934bf23f6d}{m\+\_\+bg\+Texture}}
+\begin{DoxyCompactList}\small\item\em Przechowywana tekstura tła. \end{DoxyCompactList}\item 
+sf\+::\+Sprite \mbox{\hyperlink{class_pause_menu_state_a03830c6d1eeefd17f4e699bfa1fd6742}{m\+\_\+background\+Sprite}}
+\begin{DoxyCompactList}\small\item\em Sprite tła (zamrożona gra). \end{DoxyCompactList}\item 
+sf\+::\+Rectangle\+Shape \mbox{\hyperlink{class_pause_menu_state_a738c9ed6287dbaa3a1febbed09327246}{m\+\_\+dimmer}}
+\begin{DoxyCompactList}\small\item\em Półprzezroczysty prostokąt przyciemniający. \end{DoxyCompactList}\item 
+sf\+::\+Text \mbox{\hyperlink{class_pause_menu_state_a79bf455d469491b7c86268f2dc2a1c37}{m\+\_\+pause\+Title}}
+\item 
+sf\+::\+Text \mbox{\hyperlink{class_pause_menu_state_aa7ec6c29d7524f8a20b8a274ecbc74c6}{m\+\_\+resume\+Button}}
+\begin{DoxyCompactList}\small\item\em Wznawia grę (dejmuje stan ze stosu). \end{DoxyCompactList}\item 
+sf\+::\+Text \mbox{\hyperlink{class_pause_menu_state_ae03a2ba87ad147e85a6b45785d760b63}{m\+\_\+reset\+Button}}
+\begin{DoxyCompactList}\small\item\em Resetuje poziom (podmienia stan gry). \end{DoxyCompactList}\item 
+sf\+::\+Text \mbox{\hyperlink{class_pause_menu_state_aa3e7b4210229e4d885313a38dbd79430}{m\+\_\+menu\+Button}}
+\begin{DoxyCompactList}\small\item\em Wraca do menu głównego. \end{DoxyCompactList}\item 
+sf\+::\+Rectangle\+Shape \mbox{\hyperlink{class_pause_menu_state_a63e7504e0f21eee24de240b13e0c34ee}{m\+\_\+fade\+Rect}}
+\item 
+float \mbox{\hyperlink{class_pause_menu_state_a5b174449c8a5650dfaa179d46bd3bb04}{m\+\_\+alpha}}
+\item 
+bool \mbox{\hyperlink{class_pause_menu_state_af93b9f5e1406bf32fd051af71e3d54b7}{m\+\_\+is\+Going\+To\+Menu}}
+\item 
+bool \mbox{\hyperlink{class_pause_menu_state_a8e76bc8976e929d65730b36ecabfb1dc}{m\+\_\+is\+Reseting}}
+\item 
+int \mbox{\hyperlink{class_pause_menu_state_a646a12d88a9a35d5d329170e88172892}{m\+\_\+current\+Level}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Stan pauzy nakładany na stan gry. 
+
+Jest to stan typu "{}overlay"{} (nakładka). Nie usuwa stanu gry ze stosu, lecz rysuje się "{}na nim"{}, wykorzystując zrzut ekranu jako tło. 
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{class_pause_menu_state_ad8a8d140380f666c22e3db6886631bcf}\label{class_pause_menu_state_ad8a8d140380f666c22e3db6886631bcf} 
+\index{PauseMenuState@{PauseMenuState}!PauseMenuState@{PauseMenuState}}
+\index{PauseMenuState@{PauseMenuState}!PauseMenuState@{PauseMenuState}}
+\doxysubsubsection{\texorpdfstring{PauseMenuState()}{PauseMenuState()}}
+{\footnotesize\ttfamily Pause\+Menu\+State\+::\+Pause\+Menu\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_game_8h_ae7efd7ef77698f16206f5c66180a389f}{Game\+Data\+Ref}}}]{data,  }\item[{sf\+::\+Sprite}]{bg\+Sprite,  }\item[{std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$}]{bg\+Texture,  }\item[{int}]{level\+Number }\end{DoxyParamCaption})}
+
+
+
+Konstruktor stanu pauzy. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em data} & Dane gry. \\
+\hline
+{\em bg\+Sprite} & Sprite ze zrzutem ekranu gry w momencie pauzy. \\
+\hline
+{\em bg\+Texture} & Wskaźnik do tekstury zrzutu (shared\+\_\+ptr zapewnia, że tekstura nie zostanie usunięta). \\
+\hline
+{\em level\+Number} & Numer aktualnego poziomu (potrzebny do opcji Restart). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_pause_menu_state_a56266153292c423cbaeebb372dbccd65}\label{class_pause_menu_state_a56266153292c423cbaeebb372dbccd65} 
+\index{PauseMenuState@{PauseMenuState}!draw@{draw}}
+\index{draw@{draw}!PauseMenuState@{PauseMenuState}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Pause\+Menu\+State\+::draw (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Rysuje zamrożone tło gry, przyciemnienie i menu pauzy. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em dt} & Interpolacja. \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \mbox{\hyperlink{class_state_a78efb743026712cbd78b8c07a45c2def}{State}}.
+
+\Hypertarget{class_pause_menu_state_a67edff37fa71fd5c748353e4e4e3f907}\label{class_pause_menu_state_a67edff37fa71fd5c748353e4e4e3f907} 
+\index{PauseMenuState@{PauseMenuState}!handleInput@{handleInput}}
+\index{handleInput@{handleInput}!PauseMenuState@{PauseMenuState}}
+\doxysubsubsection{\texorpdfstring{handleInput()}{handleInput()}}
+{\footnotesize\ttfamily void Pause\+Menu\+State\+::handle\+Input (\begin{DoxyParamCaption}\item[{sf\+::\+Event \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Obsługuje kliknięcia w menu pauzy oraz klawisz ESC (wznowienie). 
+
+
+\begin{DoxyParams}{Parametry}
+{\em event} & Zdarzenie SFML. \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \mbox{\hyperlink{class_state_ad0fcf10830377a1f673a714aa3b7944d}{State}}.
+
+\Hypertarget{class_pause_menu_state_ac9e33247bd16b40459d14d67f0b862e1}\label{class_pause_menu_state_ac9e33247bd16b40459d14d67f0b862e1} 
+\index{PauseMenuState@{PauseMenuState}!init@{init}}
+\index{init@{init}!PauseMenuState@{PauseMenuState}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Pause\+Menu\+State\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Inicjalizuje przyciski Resume, Reset, Menu. 
+
+
+
+Implementuje \mbox{\hyperlink{class_state_a2ff5faa41a5811007e8d50542365640b}{State}}.
+
+Oto graf wywołań dla tej funkcji\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{class_pause_menu_state_ac9e33247bd16b40459d14d67f0b862e1_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_pause_menu_state_a61b3c3dd07f483c1556ccd8607f9244f}\label{class_pause_menu_state_a61b3c3dd07f483c1556ccd8607f9244f} 
+\index{PauseMenuState@{PauseMenuState}!update@{update}}
+\index{update@{update}!PauseMenuState@{PauseMenuState}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Pause\+Menu\+State\+::update (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Aktualizuje efekty wizualne przycisków. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em dt} & Czas klatki. \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \mbox{\hyperlink{class_state_a07b507523aaffc4cf78f3dd3174a68ea}{State}}.
+
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{class_pause_menu_state_a5b174449c8a5650dfaa179d46bd3bb04}\label{class_pause_menu_state_a5b174449c8a5650dfaa179d46bd3bb04} 
+\index{PauseMenuState@{PauseMenuState}!m\_alpha@{m\_alpha}}
+\index{m\_alpha@{m\_alpha}!PauseMenuState@{PauseMenuState}}
+\doxysubsubsection{\texorpdfstring{m\_alpha}{m\_alpha}}
+{\footnotesize\ttfamily float Pause\+Menu\+State\+::m\+\_\+alpha\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_pause_menu_state_a03830c6d1eeefd17f4e699bfa1fd6742}\label{class_pause_menu_state_a03830c6d1eeefd17f4e699bfa1fd6742} 
+\index{PauseMenuState@{PauseMenuState}!m\_backgroundSprite@{m\_backgroundSprite}}
+\index{m\_backgroundSprite@{m\_backgroundSprite}!PauseMenuState@{PauseMenuState}}
+\doxysubsubsection{\texorpdfstring{m\_backgroundSprite}{m\_backgroundSprite}}
+{\footnotesize\ttfamily sf\+::\+Sprite Pause\+Menu\+State\+::m\+\_\+background\+Sprite\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Sprite tła (zamrożona gra). 
+
+\Hypertarget{class_pause_menu_state_a74143d973666585912fd44934bf23f6d}\label{class_pause_menu_state_a74143d973666585912fd44934bf23f6d} 
+\index{PauseMenuState@{PauseMenuState}!m\_bgTexture@{m\_bgTexture}}
+\index{m\_bgTexture@{m\_bgTexture}!PauseMenuState@{PauseMenuState}}
+\doxysubsubsection{\texorpdfstring{m\_bgTexture}{m\_bgTexture}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$sf\+::\+Texture$>$ Pause\+Menu\+State\+::m\+\_\+bg\+Texture\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Przechowywana tekstura tła. 
+
+\Hypertarget{class_pause_menu_state_a646a12d88a9a35d5d329170e88172892}\label{class_pause_menu_state_a646a12d88a9a35d5d329170e88172892} 
+\index{PauseMenuState@{PauseMenuState}!m\_currentLevel@{m\_currentLevel}}
+\index{m\_currentLevel@{m\_currentLevel}!PauseMenuState@{PauseMenuState}}
+\doxysubsubsection{\texorpdfstring{m\_currentLevel}{m\_currentLevel}}
+{\footnotesize\ttfamily int Pause\+Menu\+State\+::m\+\_\+current\+Level\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_pause_menu_state_abee1810878d240e73ca40dcf2fdf0f8f}\label{class_pause_menu_state_abee1810878d240e73ca40dcf2fdf0f8f} 
+\index{PauseMenuState@{PauseMenuState}!m\_data@{m\_data}}
+\index{m\_data@{m\_data}!PauseMenuState@{PauseMenuState}}
+\doxysubsubsection{\texorpdfstring{m\_data}{m\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_game_8h_ae7efd7ef77698f16206f5c66180a389f}{Game\+Data\+Ref}} Pause\+Menu\+State\+::m\+\_\+data\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_pause_menu_state_a738c9ed6287dbaa3a1febbed09327246}\label{class_pause_menu_state_a738c9ed6287dbaa3a1febbed09327246} 
+\index{PauseMenuState@{PauseMenuState}!m\_dimmer@{m\_dimmer}}
+\index{m\_dimmer@{m\_dimmer}!PauseMenuState@{PauseMenuState}}
+\doxysubsubsection{\texorpdfstring{m\_dimmer}{m\_dimmer}}
+{\footnotesize\ttfamily sf\+::\+Rectangle\+Shape Pause\+Menu\+State\+::m\+\_\+dimmer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Półprzezroczysty prostokąt przyciemniający. 
+
+\Hypertarget{class_pause_menu_state_a63e7504e0f21eee24de240b13e0c34ee}\label{class_pause_menu_state_a63e7504e0f21eee24de240b13e0c34ee} 
+\index{PauseMenuState@{PauseMenuState}!m\_fadeRect@{m\_fadeRect}}
+\index{m\_fadeRect@{m\_fadeRect}!PauseMenuState@{PauseMenuState}}
+\doxysubsubsection{\texorpdfstring{m\_fadeRect}{m\_fadeRect}}
+{\footnotesize\ttfamily sf\+::\+Rectangle\+Shape Pause\+Menu\+State\+::m\+\_\+fade\+Rect\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_pause_menu_state_af93b9f5e1406bf32fd051af71e3d54b7}\label{class_pause_menu_state_af93b9f5e1406bf32fd051af71e3d54b7} 
+\index{PauseMenuState@{PauseMenuState}!m\_isGoingToMenu@{m\_isGoingToMenu}}
+\index{m\_isGoingToMenu@{m\_isGoingToMenu}!PauseMenuState@{PauseMenuState}}
+\doxysubsubsection{\texorpdfstring{m\_isGoingToMenu}{m\_isGoingToMenu}}
+{\footnotesize\ttfamily bool Pause\+Menu\+State\+::m\+\_\+is\+Going\+To\+Menu\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_pause_menu_state_a8e76bc8976e929d65730b36ecabfb1dc}\label{class_pause_menu_state_a8e76bc8976e929d65730b36ecabfb1dc} 
+\index{PauseMenuState@{PauseMenuState}!m\_isReseting@{m\_isReseting}}
+\index{m\_isReseting@{m\_isReseting}!PauseMenuState@{PauseMenuState}}
+\doxysubsubsection{\texorpdfstring{m\_isReseting}{m\_isReseting}}
+{\footnotesize\ttfamily bool Pause\+Menu\+State\+::m\+\_\+is\+Reseting\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_pause_menu_state_aa3e7b4210229e4d885313a38dbd79430}\label{class_pause_menu_state_aa3e7b4210229e4d885313a38dbd79430} 
+\index{PauseMenuState@{PauseMenuState}!m\_menuButton@{m\_menuButton}}
+\index{m\_menuButton@{m\_menuButton}!PauseMenuState@{PauseMenuState}}
+\doxysubsubsection{\texorpdfstring{m\_menuButton}{m\_menuButton}}
+{\footnotesize\ttfamily sf\+::\+Text Pause\+Menu\+State\+::m\+\_\+menu\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Wraca do menu głównego. 
+
+\Hypertarget{class_pause_menu_state_a79bf455d469491b7c86268f2dc2a1c37}\label{class_pause_menu_state_a79bf455d469491b7c86268f2dc2a1c37} 
+\index{PauseMenuState@{PauseMenuState}!m\_pauseTitle@{m\_pauseTitle}}
+\index{m\_pauseTitle@{m\_pauseTitle}!PauseMenuState@{PauseMenuState}}
+\doxysubsubsection{\texorpdfstring{m\_pauseTitle}{m\_pauseTitle}}
+{\footnotesize\ttfamily sf\+::\+Text Pause\+Menu\+State\+::m\+\_\+pause\+Title\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_pause_menu_state_ae03a2ba87ad147e85a6b45785d760b63}\label{class_pause_menu_state_ae03a2ba87ad147e85a6b45785d760b63} 
+\index{PauseMenuState@{PauseMenuState}!m\_resetButton@{m\_resetButton}}
+\index{m\_resetButton@{m\_resetButton}!PauseMenuState@{PauseMenuState}}
+\doxysubsubsection{\texorpdfstring{m\_resetButton}{m\_resetButton}}
+{\footnotesize\ttfamily sf\+::\+Text Pause\+Menu\+State\+::m\+\_\+reset\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Resetuje poziom (podmienia stan gry). 
+
+\Hypertarget{class_pause_menu_state_aa7ec6c29d7524f8a20b8a274ecbc74c6}\label{class_pause_menu_state_aa7ec6c29d7524f8a20b8a274ecbc74c6} 
+\index{PauseMenuState@{PauseMenuState}!m\_resumeButton@{m\_resumeButton}}
+\index{m\_resumeButton@{m\_resumeButton}!PauseMenuState@{PauseMenuState}}
+\doxysubsubsection{\texorpdfstring{m\_resumeButton}{m\_resumeButton}}
+{\footnotesize\ttfamily sf\+::\+Text Pause\+Menu\+State\+::m\+\_\+resume\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Wznawia grę (dejmuje stan ze stosu). 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_pause_menu_state_8h}{Pause\+Menu\+State.\+h}}\item 
+\mbox{\hyperlink{_pause_menu_state_8cpp}{Pause\+Menu\+State.\+cpp}}\end{DoxyCompactItemize}

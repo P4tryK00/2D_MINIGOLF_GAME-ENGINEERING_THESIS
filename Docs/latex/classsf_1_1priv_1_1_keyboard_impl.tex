@@ -1,0 +1,204 @@
+\doxysection{Dokumentacja klasy sf\+::priv\+::Keyboard\+Impl}
+\hypertarget{classsf_1_1priv_1_1_keyboard_impl}{}\label{classsf_1_1priv_1_1_keyboard_impl}\index{sf::priv::KeyboardImpl@{sf::priv::KeyboardImpl}}
+
+
+\doxylink{classsf_1_1priv_1_1_keyboard_impl}{sf\+::priv\+::\+Keyboard\+Impl} helper  
+
+
+
+
+{\ttfamily \#include $<$Keyboard\+Impl.\+hpp$>$}
+
+
+
+Diagram współpracy dla sf\+::priv\+::Keyboard\+Impl\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{classsf_1_1priv_1_1_keyboard_impl__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Statyczne metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_keyboard_impl_ab44cbdd3f1e610de973d62429de0dd83}{is\+Key\+Pressed}} (\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} key)
+\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_keyboard_impl_a3115d5e548a5c03026358523d5ec9678}{is\+Key\+Pressed}} (\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} code)
+\item 
+static \mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} \mbox{\hyperlink{classsf_1_1priv_1_1_keyboard_impl_aea30ce310aadadd2d7193fbb6e4b8b87}{delocalize}} (\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} key)
+\begin{DoxyCompactList}\small\item\em Localize a physical key to a logical one.   \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} \mbox{\hyperlink{classsf_1_1priv_1_1_keyboard_impl_aa4034bec4c157a049dea9af13f1db4ce}{localize}} (\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} code)
+\begin{DoxyCompactList}\small\item\em Identify the physical key corresponding to a logical one.   \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classsf_1_1_string}{String}} \mbox{\hyperlink{classsf_1_1priv_1_1_keyboard_impl_a815d9dc9db93a9704c075897d5aa1ff0}{get\+Description}} (\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} code)
+\begin{DoxyCompactList}\small\item\em Provide a string representation for a given scancode.   \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} \mbox{\hyperlink{classsf_1_1priv_1_1_keyboard_impl_ae298d8605648fc3486550bb5eaafebb4}{get\+Key\+From\+Event}} (XKey\+Event \&event)
+\begin{DoxyCompactList}\small\item\em Get the \doxylink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{sf\+::\+Keyboard\+::\+Key} from XKey\+Event. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} \mbox{\hyperlink{classsf_1_1priv_1_1_keyboard_impl_ae0e648bb9bb3767acbb9a8049c4fa500}{get\+Scancode\+From\+Event}} (XKey\+Event \&event)
+\begin{DoxyCompactList}\small\item\em Get the \doxylink{classsf_1_1_keyboard_a9683c174456f62eb0faf3371c28f12d2}{sf\+::\+Keyboard\+::\+Scancode} from XKey\+Event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+\doxylink{classsf_1_1priv_1_1_keyboard_impl}{sf\+::priv\+::\+Keyboard\+Impl} helper 
+
+This class implements keyboard handling functions to help \doxylink{classsf_1_1priv_1_1_input_impl}{sf\+::priv\+::\+Input\+Impl} class. 
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{classsf_1_1priv_1_1_keyboard_impl_aea30ce310aadadd2d7193fbb6e4b8b87}\label{classsf_1_1priv_1_1_keyboard_impl_aea30ce310aadadd2d7193fbb6e4b8b87} 
+\index{sf::priv::KeyboardImpl@{sf::priv::KeyboardImpl}!delocalize@{delocalize}}
+\index{delocalize@{delocalize}!sf::priv::KeyboardImpl@{sf::priv::KeyboardImpl}}
+\doxysubsubsection{\texorpdfstring{delocalize()}{delocalize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} sf\+::priv\+::\+Keyboard\+Impl\+::delocalize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}}}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Localize a physical key to a logical one.   
+
+
+\begin{DoxyParams}{Parametry}
+{\em code} & Scancode to localize\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+The key corresponding to the scancode under the current keyboard layout used by the operating system, or \doxylink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a840c43fa8e05ff854f6fe9a86c7c939e}{sf\+::\+Keyboard\+::\+Unknown} when the scancode cannot be mapped to a Key.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{Zobacz również}
+\doxylink{classsf_1_1priv_1_1_keyboard_impl_aea30ce310aadadd2d7193fbb6e4b8b87}{delocalize}   
+\end{DoxySeeAlso}
+\Hypertarget{classsf_1_1priv_1_1_keyboard_impl_a815d9dc9db93a9704c075897d5aa1ff0}\label{classsf_1_1priv_1_1_keyboard_impl_a815d9dc9db93a9704c075897d5aa1ff0} 
+\index{sf::priv::KeyboardImpl@{sf::priv::KeyboardImpl}!getDescription@{getDescription}}
+\index{getDescription@{getDescription}!sf::priv::KeyboardImpl@{sf::priv::KeyboardImpl}}
+\doxysubsubsection{\texorpdfstring{getDescription()}{getDescription()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1_string}{String}} sf\+::priv\+::\+Keyboard\+Impl\+::get\+Description (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}}}]{code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Provide a string representation for a given scancode.   
+
+The returned string is a short, non-\/technical description of the key represented with the given scancode. Most effectively used in user interfaces, as the description for the key takes the users keyboard layout into consideration.
+
+\begin{DoxyWarning}{Ostrzeżenie}
+The result is OS-\/dependent\+: for example, \doxylink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875a5e1b12c4476475396c6f04eccbbf04f7}{sf\+::\+Keyboard\+::\+Scan\+::\+LSystem} is "{}\+Left Meta"{} on Linux, "{}\+Left Windows"{} on Windows and "{}\+Left Command"{} on mac\+OS.
+\end{DoxyWarning}
+The current keyboard layout set by the operating system is used to interpret the scancode\+: for example, \doxylink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142ab50635b9c913837d1bd4453eec7cb506}{sf\+::\+Keyboard\+::\+Semicolon} is mapped to "{};"{} for layout and to "{}é"{} for others.
+
+\begin{DoxyReturn}{Zwraca}
+The localized description of the code   
+\end{DoxyReturn}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_keyboard_impl_a815d9dc9db93a9704c075897d5aa1ff0_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_keyboard_impl_ae298d8605648fc3486550bb5eaafebb4}\label{classsf_1_1priv_1_1_keyboard_impl_ae298d8605648fc3486550bb5eaafebb4} 
+\index{sf::priv::KeyboardImpl@{sf::priv::KeyboardImpl}!getKeyFromEvent@{getKeyFromEvent}}
+\index{getKeyFromEvent@{getKeyFromEvent}!sf::priv::KeyboardImpl@{sf::priv::KeyboardImpl}}
+\doxysubsubsection{\texorpdfstring{getKeyFromEvent()}{getKeyFromEvent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} sf\+::priv\+::\+Keyboard\+Impl\+::get\+Key\+From\+Event (\begin{DoxyParamCaption}\item[{XKey\+Event \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the \doxylink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{sf\+::\+Keyboard\+::\+Key} from XKey\+Event. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em event} & \doxylink{classsf_1_1_event}{Event} from which key is gotten\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+A key being pressed or released 
+\end{DoxyReturn}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{classsf_1_1priv_1_1_keyboard_impl_ae298d8605648fc3486550bb5eaafebb4_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_keyboard_impl_ae298d8605648fc3486550bb5eaafebb4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_keyboard_impl_ae0e648bb9bb3767acbb9a8049c4fa500}\label{classsf_1_1priv_1_1_keyboard_impl_ae0e648bb9bb3767acbb9a8049c4fa500} 
+\index{sf::priv::KeyboardImpl@{sf::priv::KeyboardImpl}!getScancodeFromEvent@{getScancodeFromEvent}}
+\index{getScancodeFromEvent@{getScancodeFromEvent}!sf::priv::KeyboardImpl@{sf::priv::KeyboardImpl}}
+\doxysubsubsection{\texorpdfstring{getScancodeFromEvent()}{getScancodeFromEvent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} sf\+::priv\+::\+Keyboard\+Impl\+::get\+Scancode\+From\+Event (\begin{DoxyParamCaption}\item[{XKey\+Event \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the \doxylink{classsf_1_1_keyboard_a9683c174456f62eb0faf3371c28f12d2}{sf\+::\+Keyboard\+::\+Scancode} from XKey\+Event. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em event} & \doxylink{classsf_1_1_event}{Event} from which scancode is gotten\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+A scancode of a key being pressed or released 
+\end{DoxyReturn}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_keyboard_impl_ae0e648bb9bb3767acbb9a8049c4fa500_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_keyboard_impl_ab44cbdd3f1e610de973d62429de0dd83}\label{classsf_1_1priv_1_1_keyboard_impl_ab44cbdd3f1e610de973d62429de0dd83} 
+\index{sf::priv::KeyboardImpl@{sf::priv::KeyboardImpl}!isKeyPressed@{isKeyPressed}}
+\index{isKeyPressed@{isKeyPressed}!sf::priv::KeyboardImpl@{sf::priv::KeyboardImpl}}
+\doxysubsubsection{\texorpdfstring{isKeyPressed()}{isKeyPressed()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Keyboard\+Impl\+::is\+Key\+Pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}}}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+
+
+\Hypertarget{classsf_1_1priv_1_1_keyboard_impl_a3115d5e548a5c03026358523d5ec9678}\label{classsf_1_1priv_1_1_keyboard_impl_a3115d5e548a5c03026358523d5ec9678} 
+\index{sf::priv::KeyboardImpl@{sf::priv::KeyboardImpl}!isKeyPressed@{isKeyPressed}}
+\index{isKeyPressed@{isKeyPressed}!sf::priv::KeyboardImpl@{sf::priv::KeyboardImpl}}
+\doxysubsubsection{\texorpdfstring{isKeyPressed()}{isKeyPressed()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Keyboard\+Impl\+::is\+Key\+Pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}}}]{code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+
+
+\Hypertarget{classsf_1_1priv_1_1_keyboard_impl_aa4034bec4c157a049dea9af13f1db4ce}\label{classsf_1_1priv_1_1_keyboard_impl_aa4034bec4c157a049dea9af13f1db4ce} 
+\index{sf::priv::KeyboardImpl@{sf::priv::KeyboardImpl}!localize@{localize}}
+\index{localize@{localize}!sf::priv::KeyboardImpl@{sf::priv::KeyboardImpl}}
+\doxysubsubsection{\texorpdfstring{localize()}{localize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} sf\+::priv\+::\+Keyboard\+Impl\+::localize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}}}]{code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Identify the physical key corresponding to a logical one.   
+
+
+\begin{DoxyParams}{Parametry}
+{\em key} & Key to "{}delocalize"{}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+The scancode corresponding to the key under the current keyboard layout used by the operating system, or \doxylink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875af29c5f0133653ccd3cbc947b51e97895}{sf\+::\+Keyboard\+::\+Scan\+::\+Unknown} when the key cannot be mapped to a \doxylink{classsf_1_1_keyboard_a9683c174456f62eb0faf3371c28f12d2}{sf\+::\+Keyboard\+::\+Scancode}.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{Zobacz również}
+\doxylink{classsf_1_1priv_1_1_keyboard_impl_aa4034bec4c157a049dea9af13f1db4ce}{localize}   
+\end{DoxySeeAlso}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{classsf_1_1priv_1_1_keyboard_impl_aa4034bec4c157a049dea9af13f1db4ce_cgraph}
+\end{center}
+\end{figure}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+Unix/\mbox{\hyperlink{_keyboard_impl_8hpp}{Keyboard\+Impl.\+hpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+Unix/\mbox{\hyperlink{_keyboard_impl_8cpp}{Keyboard\+Impl.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,45 @@
+\doxysection{Game\+Over\+State.\+h}
+\hypertarget{_game_over_state_8h_source}{}\label{_game_over_state_8h_source}\mbox{\hyperlink{_game_over_state_8h}{Idź do dokumentacji tego pliku.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MINI\_GOLF\_GAMEOVERTSTATE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MINI\_GOLF\_GAMEOVERTSTATE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_state_8h}{State.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_game_8h}{Game.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_over_state}{GameOverState}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_state}{State}}\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_game_over_state_aad7c72f591488cba7d56c6c1180db103}{GameOverState}}(\mbox{\hyperlink{_game_8h_ae7efd7ef77698f16206f5c66180a389f}{GameDataRef}}\ data,\ sf::Sprite\ bgSprite,\ std::shared\_ptr<sf::Texture>\ bgTexture,\ \textcolor{keywordtype}{int}\ level);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_over_state_a8c589247e135a5f8094187a6209cf4de}{init}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_over_state_ae843d2b5c19a4a3a89677e7bd62d92d8}{handleInput}}(sf::Event\&\ event)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_over_state_aedf760fded2dd1e31c18dc0c9a848924}{update}}(\textcolor{keywordtype}{float}\ dt)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_over_state_a252770712abedb087220e04a09637eb4}{draw}}(\textcolor{keywordtype}{float}\ dt)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{_game_8h_ae7efd7ef77698f16206f5c66180a389f}{GameDataRef}}\ \mbox{\hyperlink{class_game_over_state_ae59cce00bdfca015d4d69f841e6f9e4d}{m\_data}};\ }
+\DoxyCodeLine{00051\ \ \ \ \ sf::Sprite\ \mbox{\hyperlink{class_game_over_state_a2b887f6608c004fe1aab63b153fae905}{m\_backgroundSprite}};\ }
+\DoxyCodeLine{00052\ \ \ \ \ std::shared\_ptr<sf::Texture>\ \mbox{\hyperlink{class_game_over_state_ae91803b157acba32784815e2c1f7cbdb}{m\_bgTexture}};\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_game_over_state_ae57e748b790cab0e272ea6b88876c88a}{m\_level}};\ }
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ sf::RectangleShape\ \mbox{\hyperlink{class_game_over_state_a27b2cdade4c9b85838100a56d578abac}{m\_dimmer}};\ }
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ sf::Text\ \mbox{\hyperlink{class_game_over_state_a7c85f0a9478f6a0aaf1c1b7a8d7cebe6}{m\_title}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00058\ \ \ \ \ sf::Text\ \mbox{\hyperlink{class_game_over_state_a37d8e97be31d99fa89b13c79003d0a0f}{m\_retryButton}};\ }
+\DoxyCodeLine{00059\ \ \ \ \ sf::Text\ \mbox{\hyperlink{class_game_over_state_a4c3e7c1bff619175d34a1e8b28419da0}{m\_menuButton}};\ \ }
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{comment}{//\ Zmienne\ do\ efektu\ przejścia\ (Fader)}}
+\DoxyCodeLine{00062\ \ \ \ \ sf::RectangleShape\ \mbox{\hyperlink{class_game_over_state_af50ebc9481c87043ec358dd10bf4a8f8}{m\_fadeRect}};\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_game_over_state_a4bf70c893738e38fa2b3e5e9f715f277}{m\_alpha}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_over_state_a3bd3c16c4f5a4d12c4e25a415eb198d0}{m\_isTransitioning}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_over_state_ac0333df959987c3816a5350a4c5fabb9}{m\_goToMenu}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_over_state_a915bfe2d31022de95069038223cda222}{m\_retryLevel}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00067\ \};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//MINI\_GOLF\_GAMEOVERTSTATE\_H}}
+
+\end{DoxyCode}

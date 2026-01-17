@@ -1,0 +1,27 @@
+\doxysection{Sound\+Manager.\+h}
+\hypertarget{_sound_manager_8h_source}{}\label{_sound_manager_8h_source}\mbox{\hyperlink{_sound_manager_8h}{Idź do dokumentacji tego pliku.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MINI\_GOLF\_SOUNDMANAGER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MINI\_GOLF\_SOUNDMANAGER\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}SFML/Audio.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_sound_manager}{SoundManager}}\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_sound_manager_a9a80176f87fc146c193c4f2de7b114aa}{SoundManager}}()\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sound_manager_a9c81ee7b0dc13c6af3e557bc3cd69941}{load}}(\textcolor{keyword}{const}\ std::string\&\ key,\ \textcolor{keyword}{const}\ std::string\&\ path);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ sf::SoundBuffer\&\ \mbox{\hyperlink{class_sound_manager_a664980ef8161f3ca2d515604b52912c2}{get}}(\textcolor{keyword}{const}\ std::string\&key);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sound_manager_a67ffa8733e649c42efa534e072ae6699}{cleanup}}();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{static}\ std::map<std::string,\ sf::SoundBuffer>\ \mbox{\hyperlink{class_sound_manager_aa0faaee02ad8452b4c9d3fc67660550f}{m\_Sounds}};}
+\DoxyCodeLine{00040\ \};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//MINI\_GOLF\_SOUNDMANAGER\_H}}
+
+\end{DoxyCode}

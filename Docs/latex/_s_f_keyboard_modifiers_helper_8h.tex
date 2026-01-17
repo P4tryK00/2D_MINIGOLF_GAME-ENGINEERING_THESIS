@@ -1,0 +1,98 @@
+\doxysection{Dokumentacja pliku cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+OSX/\+SFKeyboard\+Modifiers\+Helper.h}
+\hypertarget{_s_f_keyboard_modifiers_helper_8h}{}\label{_s_f_keyboard_modifiers_helper_8h}\index{cmake-\/build-\/debug/\_deps/sfml-\/src/src/SFML/Window/OSX/SFKeyboardModifiersHelper.h@{cmake-\/build-\/debug/\_deps/sfml-\/src/src/SFML/Window/OSX/SFKeyboardModifiersHelper.h}}
+{\ttfamily import $<$App\+Kit/\+App\+Kit.\+h$>$}\newline
+Wykres zależności załączania dla SFKeyboard\+Modifiers\+Helper.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{_s_f_keyboard_modifiers_helper_8h__incl}
+\end{center}
+\end{figure}
+Ten wykres pokazuje, które pliki bezpośrednio lub pośrednio załączają ten plik\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_s_f_keyboard_modifiers_helper_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Przestrzenie nazw}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacesf}{sf}}
+\begin{DoxyCompactList}\small\item\em Predefine some classes. \end{DoxyCompactList}\item 
+namespace \mbox{\hyperlink{namespacesf_1_1priv}{sf\+::priv}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_s_f_keyboard_modifiers_helper_8h_a2aa3750448340a670f6a02c10dc6e49a}{initialise\+Keyboard\+Helper}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the global state (only if needed) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsf_1_1_event_1_1_key_event}{sf\+::\+Event\+::\+Key\+Event}} \mbox{\hyperlink{_s_f_keyboard_modifiers_helper_8h_a4cc9527b90eafc0a9e2220e3527690c6}{key\+Event\+With\+Modifiers}} (NSUInteger modifiers, \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{sf\+::\+Keyboard\+::\+Key}} key, \mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{sf\+::\+Keyboard\+::\+Scancode}} code)
+\begin{DoxyCompactList}\small\item\em Set up a SFML key event based on the given modifiers flags and key code. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_s_f_keyboard_modifiers_helper_8h_a999eb9f0210b13362a0a04ed000341e5}{handle\+Modifiers\+Changed}} (NSUInteger modifiers, \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_cocoa}{sf\+::priv\+::\+Window\+Impl\+Cocoa}} \&requester)
+\begin{DoxyCompactList}\small\item\em Handle the state of modifiers keys. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja funkcji}
+\Hypertarget{_s_f_keyboard_modifiers_helper_8h_a999eb9f0210b13362a0a04ed000341e5}\label{_s_f_keyboard_modifiers_helper_8h_a999eb9f0210b13362a0a04ed000341e5} 
+\index{SFKeyboardModifiersHelper.h@{SFKeyboardModifiersHelper.h}!handleModifiersChanged@{handleModifiersChanged}}
+\index{handleModifiersChanged@{handleModifiersChanged}!SFKeyboardModifiersHelper.h@{SFKeyboardModifiersHelper.h}}
+\doxysubsubsection{\texorpdfstring{handleModifiersChanged()}{handleModifiersChanged()}}
+{\footnotesize\ttfamily void handle\+Modifiers\+Changed (\begin{DoxyParamCaption}\item[{NSUInteger}]{modifiers,  }\item[{\mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_cocoa}{sf\+::priv\+::\+Window\+Impl\+Cocoa}} \&}]{requester }\end{DoxyParamCaption})}
+
+
+
+Handle the state of modifiers keys. 
+
+Send key released \& pressed events to the requester. Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_s_f_keyboard_modifiers_helper_8h_a999eb9f0210b13362a0a04ed000341e5_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_s_f_keyboard_modifiers_helper_8h_a2aa3750448340a670f6a02c10dc6e49a}\label{_s_f_keyboard_modifiers_helper_8h_a2aa3750448340a670f6a02c10dc6e49a} 
+\index{SFKeyboardModifiersHelper.h@{SFKeyboardModifiersHelper.h}!initialiseKeyboardHelper@{initialiseKeyboardHelper}}
+\index{initialiseKeyboardHelper@{initialiseKeyboardHelper}!SFKeyboardModifiersHelper.h@{SFKeyboardModifiersHelper.h}}
+\doxysubsubsection{\texorpdfstring{initialiseKeyboardHelper()}{initialiseKeyboardHelper()}}
+{\footnotesize\ttfamily void initialise\+Keyboard\+Helper (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize the global state (only if needed) 
+
+Keyboard Modifiers Helper
+
+Handle left \& right modifiers (cmd, ctrl, alt, shift) events and send them back to the requester. 
+
+It needs to be called before any event, e.\+g. in the window constructor. Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{_s_f_keyboard_modifiers_helper_8h_a2aa3750448340a670f6a02c10dc6e49a_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_s_f_keyboard_modifiers_helper_8h_a2aa3750448340a670f6a02c10dc6e49a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_s_f_keyboard_modifiers_helper_8h_a4cc9527b90eafc0a9e2220e3527690c6}\label{_s_f_keyboard_modifiers_helper_8h_a4cc9527b90eafc0a9e2220e3527690c6} 
+\index{SFKeyboardModifiersHelper.h@{SFKeyboardModifiersHelper.h}!keyEventWithModifiers@{keyEventWithModifiers}}
+\index{keyEventWithModifiers@{keyEventWithModifiers}!SFKeyboardModifiersHelper.h@{SFKeyboardModifiersHelper.h}}
+\doxysubsubsection{\texorpdfstring{keyEventWithModifiers()}{keyEventWithModifiers()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsf_1_1_event_1_1_key_event}{sf\+::\+Event\+::\+Key\+Event}} key\+Event\+With\+Modifiers (\begin{DoxyParamCaption}\item[{NSUInteger}]{modifiers,  }\item[{\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{sf\+::\+Keyboard\+::\+Key}}}]{key,  }\item[{\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{sf\+::\+Keyboard\+::\+Scancode}}}]{code }\end{DoxyParamCaption})}
+
+
+
+Set up a SFML key event based on the given modifiers flags and key code. 
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_s_f_keyboard_modifiers_helper_8h_a4cc9527b90eafc0a9e2220e3527690c6_icgraph}
+\end{center}
+\end{figure}

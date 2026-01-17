@@ -1,0 +1,209 @@
+\doxysection{Dokumentacja klasy State\+Manager}
+\hypertarget{class_state_manager}{}\label{class_state_manager}\index{StateManager@{StateManager}}
+
+
+Zarządza stosem stanów gry.  
+
+
+
+
+{\ttfamily \#include $<$State\+Manager.\+h$>$}
+
+
+
+Diagram współpracy dla State\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{class_state_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_state_manager_a3e2be96d935eb56813b096a885d58587}{State\+Manager}} ()
+\item 
+\mbox{\hyperlink{class_state_manager_a05a43504a033f1befad5c5118249ec6f}{\texorpdfstring{$\sim$}{\string~}\+State\+Manager}} ()
+\item 
+void \mbox{\hyperlink{class_state_manager_a2d41a7c9560d917b858195182dff6d8a}{add\+State}} (\mbox{\hyperlink{_state_manager_8h_ac53aadfd741ef1c4ac570e3d21bfc7fa}{State\+Ref}} new\+State, bool is\+Replacing=true)
+\begin{DoxyCompactList}\small\item\em Planuje dodanie nowego stanu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_state_manager_a2e5cc48a4a261823d027ad09b5b6a6b8}{remove\+State}} ()
+\begin{DoxyCompactList}\small\item\em Planuje usunięcie obecnego górnego stanu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_state_manager_a31590f9467b794161f6888da0523738b}{process\+State\+Changes}} ()
+\begin{DoxyCompactList}\small\item\em Przetwarza oczekujące zmiany stanów (dodawanie, usuwanie). Powinna być wywoływana na początku głównej pętli gry. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_state_manager_a72f6daf6cbfaef0c9ea531864f40780f}{switch\+State}} (\mbox{\hyperlink{_state_manager_8h_ac53aadfd741ef1c4ac570e3d21bfc7fa}{State\+Ref}} new\+State)
+\begin{DoxyCompactList}\small\item\em Czyści cały stos i ustawia nowy stan (np. powrót do Menu Głównego). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_state_manager_8h_ac53aadfd741ef1c4ac570e3d21bfc7fa}{State\+Ref}} \& \mbox{\hyperlink{class_state_manager_a62f5a41ca8078e2b4a949891f361b6fe}{get\+Active\+State}} ()
+\begin{DoxyCompactList}\small\item\em Zwraca referencję do aktywnego (górnego) stanu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+std\+::stack$<$ \mbox{\hyperlink{_state_manager_8h_ac53aadfd741ef1c4ac570e3d21bfc7fa}{State\+Ref}} $>$ \mbox{\hyperlink{class_state_manager_acca68222c5fac8c2fd644859cccb6982}{m\+\_\+states}}
+\begin{DoxyCompactList}\small\item\em Stos stanów gry. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_state_manager_8h_ac53aadfd741ef1c4ac570e3d21bfc7fa}{State\+Ref}} \mbox{\hyperlink{class_state_manager_a129090562f4bf421983dfdb93b6e4459}{m\+\_\+new\+State}}
+\begin{DoxyCompactList}\small\item\em Tymczasowe przechowanie nowego stanu do dodania. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_state_manager_a53a1a6ae96583add27f8cd957ad1749d}{m\+\_\+is\+Removing}}
+\begin{DoxyCompactList}\small\item\em Flaga oznaczająca konieczność zdjęcia stanu ze stosu. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_state_manager_a386337e3dcf0351e7a1d08ccec327159}{m\+\_\+is\+Adding}}
+\begin{DoxyCompactList}\small\item\em Flaga oznaczająca konieczność dodania stanu na stos. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_state_manager_a6e578e1f69d111c992643c6afd27893f}{m\+\_\+is\+Replacing}}
+\begin{DoxyCompactList}\small\item\em Flaga oznaczająca, czy dodanie ma zastąpić obecny stan. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_state_manager_a3fd47d3a88b6baafcda8bd8f3f51092a}{m\+\_\+is\+Clearing}}
+\begin{DoxyCompactList}\small\item\em Flaga oznaczająca, czy stos ma zostać całkowicie wyczyszczony. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Zarządza stosem stanów gry. 
+
+Klasa odpowiedzialna za dodawanie, usuwanie i przełączanie między różnymi stanami gry. Obsługuje przejścia między stanami w bezpiecznym momencie (na początku pętli gry), aby uniknąć błędów pamięci podczas aktualizacji. 
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{class_state_manager_a3e2be96d935eb56813b096a885d58587}\label{class_state_manager_a3e2be96d935eb56813b096a885d58587} 
+\index{StateManager@{StateManager}!StateManager@{StateManager}}
+\index{StateManager@{StateManager}!StateManager@{StateManager}}
+\doxysubsubsection{\texorpdfstring{StateManager()}{StateManager()}}
+{\footnotesize\ttfamily State\+Manager\+::\+State\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_state_manager_a05a43504a033f1befad5c5118249ec6f}\label{class_state_manager_a05a43504a033f1befad5c5118249ec6f} 
+\index{StateManager@{StateManager}!````~StateManager@{\texorpdfstring{$\sim$}{\string~}StateManager}}
+\index{````~StateManager@{\texorpdfstring{$\sim$}{\string~}StateManager}!StateManager@{StateManager}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}StateManager()}{\string~StateManager()}}
+{\footnotesize\ttfamily State\+Manager\+::\texorpdfstring{$\sim$}{\string~}\+State\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_state_manager_a2d41a7c9560d917b858195182dff6d8a}\label{class_state_manager_a2d41a7c9560d917b858195182dff6d8a} 
+\index{StateManager@{StateManager}!addState@{addState}}
+\index{addState@{addState}!StateManager@{StateManager}}
+\doxysubsubsection{\texorpdfstring{addState()}{addState()}}
+{\footnotesize\ttfamily void State\+Manager\+::add\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_state_manager_8h_ac53aadfd741ef1c4ac570e3d21bfc7fa}{State\+Ref}}}]{new\+State,  }\item[{bool}]{is\+Replacing = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Planuje dodanie nowego stanu. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em new\+State} & Unikalny wskaźnik do nowego stanu. \\
+\hline
+{\em is\+Replacing} & Jeśli true, obecny górny stan zostanie usunięty przed dodaniem nowego. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_state_manager_a62f5a41ca8078e2b4a949891f361b6fe}\label{class_state_manager_a62f5a41ca8078e2b4a949891f361b6fe} 
+\index{StateManager@{StateManager}!getActiveState@{getActiveState}}
+\index{getActiveState@{getActiveState}!StateManager@{StateManager}}
+\doxysubsubsection{\texorpdfstring{getActiveState()}{getActiveState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_state_manager_8h_ac53aadfd741ef1c4ac570e3d21bfc7fa}{State\+Ref}} \& State\+Manager\+::get\+Active\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Zwraca referencję do aktywnego (górnego) stanu. 
+
+\begin{DoxyReturn}{Zwraca}
+Referencja do unikalnego wskaźnika obecnego stanu. 
+\end{DoxyReturn}
+\Hypertarget{class_state_manager_a31590f9467b794161f6888da0523738b}\label{class_state_manager_a31590f9467b794161f6888da0523738b} 
+\index{StateManager@{StateManager}!processStateChanges@{processStateChanges}}
+\index{processStateChanges@{processStateChanges}!StateManager@{StateManager}}
+\doxysubsubsection{\texorpdfstring{processStateChanges()}{processStateChanges()}}
+{\footnotesize\ttfamily void State\+Manager\+::process\+State\+Changes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Przetwarza oczekujące zmiany stanów (dodawanie, usuwanie). Powinna być wywoływana na początku głównej pętli gry. 
+
+\Hypertarget{class_state_manager_a2e5cc48a4a261823d027ad09b5b6a6b8}\label{class_state_manager_a2e5cc48a4a261823d027ad09b5b6a6b8} 
+\index{StateManager@{StateManager}!removeState@{removeState}}
+\index{removeState@{removeState}!StateManager@{StateManager}}
+\doxysubsubsection{\texorpdfstring{removeState()}{removeState()}}
+{\footnotesize\ttfamily void State\+Manager\+::remove\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Planuje usunięcie obecnego górnego stanu. 
+
+\Hypertarget{class_state_manager_a72f6daf6cbfaef0c9ea531864f40780f}\label{class_state_manager_a72f6daf6cbfaef0c9ea531864f40780f} 
+\index{StateManager@{StateManager}!switchState@{switchState}}
+\index{switchState@{switchState}!StateManager@{StateManager}}
+\doxysubsubsection{\texorpdfstring{switchState()}{switchState()}}
+{\footnotesize\ttfamily void State\+Manager\+::switch\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_state_manager_8h_ac53aadfd741ef1c4ac570e3d21bfc7fa}{State\+Ref}}}]{new\+State }\end{DoxyParamCaption})}
+
+
+
+Czyści cały stos i ustawia nowy stan (np. powrót do Menu Głównego). 
+
+
+\begin{DoxyParams}{Parametry}
+{\em new\+State} & Nowy stan bazowy. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{class_state_manager_a386337e3dcf0351e7a1d08ccec327159}\label{class_state_manager_a386337e3dcf0351e7a1d08ccec327159} 
+\index{StateManager@{StateManager}!m\_isAdding@{m\_isAdding}}
+\index{m\_isAdding@{m\_isAdding}!StateManager@{StateManager}}
+\doxysubsubsection{\texorpdfstring{m\_isAdding}{m\_isAdding}}
+{\footnotesize\ttfamily bool State\+Manager\+::m\+\_\+is\+Adding\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Flaga oznaczająca konieczność dodania stanu na stos. 
+
+\Hypertarget{class_state_manager_a3fd47d3a88b6baafcda8bd8f3f51092a}\label{class_state_manager_a3fd47d3a88b6baafcda8bd8f3f51092a} 
+\index{StateManager@{StateManager}!m\_isClearing@{m\_isClearing}}
+\index{m\_isClearing@{m\_isClearing}!StateManager@{StateManager}}
+\doxysubsubsection{\texorpdfstring{m\_isClearing}{m\_isClearing}}
+{\footnotesize\ttfamily bool State\+Manager\+::m\+\_\+is\+Clearing\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Flaga oznaczająca, czy stos ma zostać całkowicie wyczyszczony. 
+
+\Hypertarget{class_state_manager_a53a1a6ae96583add27f8cd957ad1749d}\label{class_state_manager_a53a1a6ae96583add27f8cd957ad1749d} 
+\index{StateManager@{StateManager}!m\_isRemoving@{m\_isRemoving}}
+\index{m\_isRemoving@{m\_isRemoving}!StateManager@{StateManager}}
+\doxysubsubsection{\texorpdfstring{m\_isRemoving}{m\_isRemoving}}
+{\footnotesize\ttfamily bool State\+Manager\+::m\+\_\+is\+Removing\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Flaga oznaczająca konieczność zdjęcia stanu ze stosu. 
+
+\Hypertarget{class_state_manager_a6e578e1f69d111c992643c6afd27893f}\label{class_state_manager_a6e578e1f69d111c992643c6afd27893f} 
+\index{StateManager@{StateManager}!m\_isReplacing@{m\_isReplacing}}
+\index{m\_isReplacing@{m\_isReplacing}!StateManager@{StateManager}}
+\doxysubsubsection{\texorpdfstring{m\_isReplacing}{m\_isReplacing}}
+{\footnotesize\ttfamily bool State\+Manager\+::m\+\_\+is\+Replacing\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Flaga oznaczająca, czy dodanie ma zastąpić obecny stan. 
+
+\Hypertarget{class_state_manager_a129090562f4bf421983dfdb93b6e4459}\label{class_state_manager_a129090562f4bf421983dfdb93b6e4459} 
+\index{StateManager@{StateManager}!m\_newState@{m\_newState}}
+\index{m\_newState@{m\_newState}!StateManager@{StateManager}}
+\doxysubsubsection{\texorpdfstring{m\_newState}{m\_newState}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_state_manager_8h_ac53aadfd741ef1c4ac570e3d21bfc7fa}{State\+Ref}} State\+Manager\+::m\+\_\+new\+State\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Tymczasowe przechowanie nowego stanu do dodania. 
+
+\Hypertarget{class_state_manager_acca68222c5fac8c2fd644859cccb6982}\label{class_state_manager_acca68222c5fac8c2fd644859cccb6982} 
+\index{StateManager@{StateManager}!m\_states@{m\_states}}
+\index{m\_states@{m\_states}!StateManager@{StateManager}}
+\doxysubsubsection{\texorpdfstring{m\_states}{m\_states}}
+{\footnotesize\ttfamily std\+::stack$<$\mbox{\hyperlink{_state_manager_8h_ac53aadfd741ef1c4ac570e3d21bfc7fa}{State\+Ref}}$>$ State\+Manager\+::m\+\_\+states\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Stos stanów gry. 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_state_manager_8h}{State\+Manager.\+h}}\item 
+\mbox{\hyperlink{_state_manager_8cpp}{State\+Manager.\+cpp}}\end{DoxyCompactItemize}

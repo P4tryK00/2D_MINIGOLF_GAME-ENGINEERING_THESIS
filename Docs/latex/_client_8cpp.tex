@@ -1,0 +1,67 @@
+\doxysection{Dokumentacja pliku cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/examples/voip/\+Client.cpp}
+\hypertarget{_client_8cpp}{}\label{_client_8cpp}\index{cmake-\/build-\/debug/\_deps/sfml-\/src/examples/voip/Client.cpp@{cmake-\/build-\/debug/\_deps/sfml-\/src/examples/voip/Client.cpp}}
+{\ttfamily \#include $<$SFML/\+Audio.\+hpp$>$}\newline
+{\ttfamily \#include $<$SFML/\+Network.\+hpp$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+Wykres zależności załączania dla Client.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_client_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_network_recorder}{Network\+Recorder}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_client_8cpp_af2fb0d243b0b7a8bcac7074dd83078c9}{do\+Client}} (unsigned short port)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Zmienne}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{namespacesf_a4ef3d630785c4f296f9b4f274c33d78e}{sf\+::\+Uint8}} \mbox{\hyperlink{_client_8cpp_a74a8f0c2d4489f4574115512e636ee5a}{client\+Audio\+Data}} = 1
+\item 
+const \mbox{\hyperlink{namespacesf_a4ef3d630785c4f296f9b4f274c33d78e}{sf\+::\+Uint8}} \mbox{\hyperlink{_client_8cpp_a6a84992b004bcd9409d148ee6de0bb50}{client\+End\+Of\+Stream}} = 2
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja funkcji}
+\Hypertarget{_client_8cpp_af2fb0d243b0b7a8bcac7074dd83078c9}\label{_client_8cpp_af2fb0d243b0b7a8bcac7074dd83078c9} 
+\index{Client.cpp@{Client.cpp}!doClient@{doClient}}
+\index{doClient@{doClient}!Client.cpp@{Client.cpp}}
+\doxysubsubsection{\texorpdfstring{doClient()}{doClient()}}
+{\footnotesize\ttfamily void do\+Client (\begin{DoxyParamCaption}\item[{unsigned short}]{port }\end{DoxyParamCaption})}
+
+Create a client, connect it to a running server and start sending him audio data Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_client_8cpp_af2fb0d243b0b7a8bcac7074dd83078c9_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{_client_8cpp_af2fb0d243b0b7a8bcac7074dd83078c9_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Dokumentacja zmiennych}
+\Hypertarget{_client_8cpp_a74a8f0c2d4489f4574115512e636ee5a}\label{_client_8cpp_a74a8f0c2d4489f4574115512e636ee5a} 
+\index{Client.cpp@{Client.cpp}!clientAudioData@{clientAudioData}}
+\index{clientAudioData@{clientAudioData}!Client.cpp@{Client.cpp}}
+\doxysubsubsection{\texorpdfstring{clientAudioData}{clientAudioData}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespacesf_a4ef3d630785c4f296f9b4f274c33d78e}{sf\+::\+Uint8}} client\+Audio\+Data = 1}
+
+\Hypertarget{_client_8cpp_a6a84992b004bcd9409d148ee6de0bb50}\label{_client_8cpp_a6a84992b004bcd9409d148ee6de0bb50} 
+\index{Client.cpp@{Client.cpp}!clientEndOfStream@{clientEndOfStream}}
+\index{clientEndOfStream@{clientEndOfStream}!Client.cpp@{Client.cpp}}
+\doxysubsubsection{\texorpdfstring{clientEndOfStream}{clientEndOfStream}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespacesf_a4ef3d630785c4f296f9b4f274c33d78e}{sf\+::\+Uint8}} client\+End\+Of\+Stream = 2}
+

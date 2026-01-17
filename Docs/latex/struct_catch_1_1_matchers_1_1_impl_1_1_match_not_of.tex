@@ -1,0 +1,114 @@
+\doxysection{Dokumentacja szablonu struktury Catch\+::Matchers\+::Impl\+::Match\+Not\+Of\texorpdfstring{$<$}{<} ArgT \texorpdfstring{$>$}{>}}
+\hypertarget{struct_catch_1_1_matchers_1_1_impl_1_1_match_not_of}{}\label{struct_catch_1_1_matchers_1_1_impl_1_1_match_not_of}\index{Catch::Matchers::Impl::MatchNotOf$<$ ArgT $>$@{Catch::Matchers::Impl::MatchNotOf$<$ ArgT $>$}}
+
+
+{\ttfamily \#include $<$catch.\+hpp$>$}
+
+
+
+Diagram dziedziczenia dla Catch\+::Matchers\+::Impl\+::Match\+Not\+Of\texorpdfstring{$<$}{<} ArgT \texorpdfstring{$>$}{>}\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_catch_1_1_matchers_1_1_impl_1_1_match_not_of__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagram współpracy dla Catch\+::Matchers\+::Impl\+::Match\+Not\+Of\texorpdfstring{$<$}{<} ArgT \texorpdfstring{$>$}{>}\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_catch_1_1_matchers_1_1_impl_1_1_match_not_of__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_catch_1_1_matchers_1_1_impl_1_1_match_not_of_a47afdd9e4c3354cef85adc3186097ae4}{Match\+Not\+Of}} (\mbox{\hyperlink{struct_catch_1_1_matchers_1_1_impl_1_1_matcher_base}{Matcher\+Base}}$<$ ArgT $>$ const \&underlying\+Matcher)
+\item 
+virtual bool \mbox{\hyperlink{struct_catch_1_1_matchers_1_1_impl_1_1_match_not_of_a1b9ad6566e4ab0f292d2903f557307cc}{match}} (ArgT const \&arg) const \mbox{\hyperlink{catch_8hpp_a8ecdce4d3f57835f707915ae831eb847}{CATCH\+\_\+\+OVERRIDE}}
+\item 
+virtual std\+::string \mbox{\hyperlink{struct_catch_1_1_matchers_1_1_impl_1_1_match_not_of_a62bdc7dcb9ff000438a4ed3d5483a248}{describe}} () const \mbox{\hyperlink{catch_8hpp_a8ecdce4d3f57835f707915ae831eb847}{CATCH\+\_\+\+OVERRIDE}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{struct_catch_1_1_matchers_1_1_impl_1_1_matcher_base}{Catch\+::\+Matchers\+::\+Impl\+::\+Matcher\+Base$<$ Arg\+T $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_catch_1_1_matchers_1_1_impl_1_1_match_all_of}{Match\+All\+Of}}$<$ ArgT $>$ \mbox{\hyperlink{struct_catch_1_1_matchers_1_1_impl_1_1_matcher_base_a980b4a7aa0d071a0c70d3da63349afcf}{operator\&\&}} (\mbox{\hyperlink{struct_catch_1_1_matchers_1_1_impl_1_1_matcher_base}{Matcher\+Base}} const \&other) const
+\item 
+\mbox{\hyperlink{struct_catch_1_1_matchers_1_1_impl_1_1_match_any_of}{Match\+Any\+Of}}$<$ ArgT $>$ \mbox{\hyperlink{struct_catch_1_1_matchers_1_1_impl_1_1_matcher_base_ae0345ee76d109ac6d0241be261450ebc}{operator\texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|}}} (\mbox{\hyperlink{struct_catch_1_1_matchers_1_1_impl_1_1_matcher_base}{Matcher\+Base}} const \&other) const
+\item 
+\mbox{\hyperlink{struct_catch_1_1_matchers_1_1_impl_1_1_match_not_of}{Match\+Not\+Of}}$<$ ArgT $>$ \mbox{\hyperlink{struct_catch_1_1_matchers_1_1_impl_1_1_matcher_base_a85174b5b27113f7bdc47c140c1c72602}{operator!}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{class_catch_1_1_matchers_1_1_impl_1_1_matcher_untyped_base}{Catch\+::\+Matchers\+::\+Impl\+::\+Matcher\+Untyped\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_catch_1_1_matchers_1_1_impl_1_1_matcher_untyped_base_a5982c7c80ca71dfe2298babadad7a453}{to\+String}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{struct_catch_1_1_matchers_1_1_impl_1_1_matcher_method}{Catch\+::\+Matchers\+::\+Impl\+::\+Matcher\+Method$<$ Object\+T $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{struct_catch_1_1_matchers_1_1_impl_1_1_matcher_method_ae0920ff9e817acf08e1bb0cbcb044e30}{match}} (ObjectT const \&arg) const =0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_catch_1_1_matchers_1_1_impl_1_1_matcher_base}{Matcher\+Base}}$<$ ArgT $>$ const  \& \mbox{\hyperlink{struct_catch_1_1_matchers_1_1_impl_1_1_match_not_of_af7ac67f112b0e93796b048a47329aad4}{m\+\_\+underlying\+Matcher}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Dodatkowe Dziedziczone Składowe}
+\doxysubsection*{Metody chronione dziedziczone z \mbox{\hyperlink{class_catch_1_1_matchers_1_1_impl_1_1_matcher_untyped_base}{Catch\+::\+Matchers\+::\+Impl\+::\+Matcher\+Untyped\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_catch_1_1_matchers_1_1_impl_1_1_matcher_untyped_base_a853be93ce33f71b5abede38081c79e9d}{\texorpdfstring{$\sim$}{\string~}\+Matcher\+Untyped\+Base}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty chronione dziedziczone z \mbox{\hyperlink{class_catch_1_1_matchers_1_1_impl_1_1_matcher_untyped_base}{Catch\+::\+Matchers\+::\+Impl\+::\+Matcher\+Untyped\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_catch_1_1_matchers_1_1_impl_1_1_matcher_untyped_base_a951095c462657e7097a9a6dc4dde813f}{m\+\_\+cached\+To\+String}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{struct_catch_1_1_matchers_1_1_impl_1_1_match_not_of_a47afdd9e4c3354cef85adc3186097ae4}\label{struct_catch_1_1_matchers_1_1_impl_1_1_match_not_of_a47afdd9e4c3354cef85adc3186097ae4} 
+\index{Catch::Matchers::Impl::MatchNotOf$<$ ArgT $>$@{Catch::Matchers::Impl::MatchNotOf$<$ ArgT $>$}!MatchNotOf@{MatchNotOf}}
+\index{MatchNotOf@{MatchNotOf}!Catch::Matchers::Impl::MatchNotOf$<$ ArgT $>$@{Catch::Matchers::Impl::MatchNotOf$<$ ArgT $>$}}
+\doxysubsubsection{\texorpdfstring{MatchNotOf()}{MatchNotOf()}}
+{\footnotesize\ttfamily template$<$typename ArgT $>$ \\
+\mbox{\hyperlink{struct_catch_1_1_matchers_1_1_impl_1_1_match_not_of}{Catch\+::\+Matchers\+::\+Impl\+::\+Match\+Not\+Of}}$<$ ArgT $>$\+::\+Match\+Not\+Of (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_catch_1_1_matchers_1_1_impl_1_1_matcher_base}{Matcher\+Base}}$<$ ArgT $>$ const \&}]{underlying\+Matcher }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{struct_catch_1_1_matchers_1_1_impl_1_1_match_not_of_a62bdc7dcb9ff000438a4ed3d5483a248}\label{struct_catch_1_1_matchers_1_1_impl_1_1_match_not_of_a62bdc7dcb9ff000438a4ed3d5483a248} 
+\index{Catch::Matchers::Impl::MatchNotOf$<$ ArgT $>$@{Catch::Matchers::Impl::MatchNotOf$<$ ArgT $>$}!describe@{describe}}
+\index{describe@{describe}!Catch::Matchers::Impl::MatchNotOf$<$ ArgT $>$@{Catch::Matchers::Impl::MatchNotOf$<$ ArgT $>$}}
+\doxysubsubsection{\texorpdfstring{describe()}{describe()}}
+{\footnotesize\ttfamily template$<$typename ArgT $>$ \\
+virtual std\+::string \mbox{\hyperlink{struct_catch_1_1_matchers_1_1_impl_1_1_match_not_of}{Catch\+::\+Matchers\+::\+Impl\+::\+Match\+Not\+Of}}$<$ ArgT $>$\+::describe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implementuje \mbox{\hyperlink{class_catch_1_1_matchers_1_1_impl_1_1_matcher_untyped_base_a91d3a907dbfcbb596077df24f6e11fe2}{Catch\+::\+Matchers\+::\+Impl\+::\+Matcher\+Untyped\+Base}}.
+
+\Hypertarget{struct_catch_1_1_matchers_1_1_impl_1_1_match_not_of_a1b9ad6566e4ab0f292d2903f557307cc}\label{struct_catch_1_1_matchers_1_1_impl_1_1_match_not_of_a1b9ad6566e4ab0f292d2903f557307cc} 
+\index{Catch::Matchers::Impl::MatchNotOf$<$ ArgT $>$@{Catch::Matchers::Impl::MatchNotOf$<$ ArgT $>$}!match@{match}}
+\index{match@{match}!Catch::Matchers::Impl::MatchNotOf$<$ ArgT $>$@{Catch::Matchers::Impl::MatchNotOf$<$ ArgT $>$}}
+\doxysubsubsection{\texorpdfstring{match()}{match()}}
+{\footnotesize\ttfamily template$<$typename ArgT $>$ \\
+virtual bool \mbox{\hyperlink{struct_catch_1_1_matchers_1_1_impl_1_1_match_not_of}{Catch\+::\+Matchers\+::\+Impl\+::\+Match\+Not\+Of}}$<$ ArgT $>$\+::match (\begin{DoxyParamCaption}\item[{ArgT const \&}]{arg }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{struct_catch_1_1_matchers_1_1_impl_1_1_match_not_of_af7ac67f112b0e93796b048a47329aad4}\label{struct_catch_1_1_matchers_1_1_impl_1_1_match_not_of_af7ac67f112b0e93796b048a47329aad4} 
+\index{Catch::Matchers::Impl::MatchNotOf$<$ ArgT $>$@{Catch::Matchers::Impl::MatchNotOf$<$ ArgT $>$}!m\_underlyingMatcher@{m\_underlyingMatcher}}
+\index{m\_underlyingMatcher@{m\_underlyingMatcher}!Catch::Matchers::Impl::MatchNotOf$<$ ArgT $>$@{Catch::Matchers::Impl::MatchNotOf$<$ ArgT $>$}}
+\doxysubsubsection{\texorpdfstring{m\_underlyingMatcher}{m\_underlyingMatcher}}
+{\footnotesize\ttfamily template$<$typename ArgT $>$ \\
+\mbox{\hyperlink{struct_catch_1_1_matchers_1_1_impl_1_1_matcher_base}{Matcher\+Base}}$<$ArgT$>$ const\& \mbox{\hyperlink{struct_catch_1_1_matchers_1_1_impl_1_1_match_not_of}{Catch\+::\+Matchers\+::\+Impl\+::\+Match\+Not\+Of}}$<$ ArgT $>$\+::m\+\_\+underlying\+Matcher}
+
+
+
+Dokumentacja dla tej struktury została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/extlibs/headers/\mbox{\hyperlink{catch_8hpp}{catch.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,181 @@
+\doxysection{Dokumentacja szablonu klasy Catch\+::Composite\+Generator\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}}
+\hypertarget{class_catch_1_1_composite_generator}{}\label{class_catch_1_1_composite_generator}\index{Catch::CompositeGenerator$<$ T $>$@{Catch::CompositeGenerator$<$ T $>$}}
+
+
+{\ttfamily \#include $<$catch.\+hpp$>$}
+
+
+
+Diagram współpracy dla Catch\+::Composite\+Generator\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{class_catch_1_1_composite_generator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_catch_1_1_composite_generator_a923398b140371d1783858766864a1af5}{Composite\+Generator}} ()
+\item 
+\mbox{\hyperlink{class_catch_1_1_composite_generator_a21a7070a00e4a6fe021294c356692692}{Composite\+Generator}} (\mbox{\hyperlink{class_catch_1_1_composite_generator}{Composite\+Generator}} \&other)
+\item 
+\mbox{\hyperlink{class_catch_1_1_composite_generator}{Composite\+Generator}} \& \mbox{\hyperlink{class_catch_1_1_composite_generator_a7f2cecb35b0e9aedabefdebfa330cf73}{set\+File\+Info}} (const char \texorpdfstring{$\ast$}{*}file\+Info)
+\item 
+\mbox{\hyperlink{class_catch_1_1_composite_generator_a5766205abd7004c508c20ddbb5e5555e}{\texorpdfstring{$\sim$}{\string~}\+Composite\+Generator}} ()
+\item 
+\mbox{\hyperlink{class_catch_1_1_composite_generator_a83d6c941e2e735b9528e6e832f7b76e7}{operator T}} () const
+\item 
+void \mbox{\hyperlink{class_catch_1_1_composite_generator_af3774d42ad2d3453d089ca599efe0517}{add}} (const \mbox{\hyperlink{struct_catch_1_1_i_generator}{IGenerator}}$<$ T $>$ \texorpdfstring{$\ast$}{*}generator)
+\item 
+\mbox{\hyperlink{class_catch_1_1_composite_generator}{Composite\+Generator}} \& \mbox{\hyperlink{class_catch_1_1_composite_generator_ac33d859dd087c23698168491d4576465}{then}} (\mbox{\hyperlink{class_catch_1_1_composite_generator}{Composite\+Generator}} \&other)
+\item 
+\mbox{\hyperlink{class_catch_1_1_composite_generator}{Composite\+Generator}} \& \mbox{\hyperlink{class_catch_1_1_composite_generator_a5eb501037b93684d1c9076383f775204}{then}} (T value)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_catch_1_1_composite_generator_afbc02d3f638a121a8ccd67f0c4498deb}{move}} (\mbox{\hyperlink{class_catch_1_1_composite_generator}{Composite\+Generator}} \&other)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ const \mbox{\hyperlink{struct_catch_1_1_i_generator}{IGenerator}}$<$ T $>$ \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_catch_1_1_composite_generator_a9491042c1e0fa20dd2ad652c4b6d1dfd}{m\+\_\+composed}}
+\item 
+std\+::string \mbox{\hyperlink{class_catch_1_1_composite_generator_aaaeb076065d0a9c8e30dfbe05ca493b6}{m\+\_\+file\+Info}}
+\item 
+size\+\_\+t \mbox{\hyperlink{class_catch_1_1_composite_generator_a73234ad81da793e83bb17b829523ef66}{m\+\_\+total\+Size}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{class_catch_1_1_composite_generator_a923398b140371d1783858766864a1af5}\label{class_catch_1_1_composite_generator_a923398b140371d1783858766864a1af5} 
+\index{Catch::CompositeGenerator$<$ T $>$@{Catch::CompositeGenerator$<$ T $>$}!CompositeGenerator@{CompositeGenerator}}
+\index{CompositeGenerator@{CompositeGenerator}!Catch::CompositeGenerator$<$ T $>$@{Catch::CompositeGenerator$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CompositeGenerator()}{CompositeGenerator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_catch_1_1_composite_generator}{Catch\+::\+Composite\+Generator}}$<$ T $>$\+::\+Composite\+Generator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_catch_1_1_composite_generator_a21a7070a00e4a6fe021294c356692692}\label{class_catch_1_1_composite_generator_a21a7070a00e4a6fe021294c356692692} 
+\index{Catch::CompositeGenerator$<$ T $>$@{Catch::CompositeGenerator$<$ T $>$}!CompositeGenerator@{CompositeGenerator}}
+\index{CompositeGenerator@{CompositeGenerator}!Catch::CompositeGenerator$<$ T $>$@{Catch::CompositeGenerator$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CompositeGenerator()}{CompositeGenerator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_catch_1_1_composite_generator}{Catch\+::\+Composite\+Generator}}$<$ T $>$\+::\+Composite\+Generator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_catch_1_1_composite_generator}{Composite\+Generator}}$<$ T $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_catch_1_1_composite_generator_a5766205abd7004c508c20ddbb5e5555e}\label{class_catch_1_1_composite_generator_a5766205abd7004c508c20ddbb5e5555e} 
+\index{Catch::CompositeGenerator$<$ T $>$@{Catch::CompositeGenerator$<$ T $>$}!````~CompositeGenerator@{\texorpdfstring{$\sim$}{\string~}CompositeGenerator}}
+\index{````~CompositeGenerator@{\texorpdfstring{$\sim$}{\string~}CompositeGenerator}!Catch::CompositeGenerator$<$ T $>$@{Catch::CompositeGenerator$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}CompositeGenerator()}{\string~CompositeGenerator()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_catch_1_1_composite_generator}{Catch\+::\+Composite\+Generator}}$<$ T $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{class_catch_1_1_composite_generator}{Composite\+Generator}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{class_catch_1_1_composite_generator_a5766205abd7004c508c20ddbb5e5555e_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_catch_1_1_composite_generator_af3774d42ad2d3453d089ca599efe0517}\label{class_catch_1_1_composite_generator_af3774d42ad2d3453d089ca599efe0517} 
+\index{Catch::CompositeGenerator$<$ T $>$@{Catch::CompositeGenerator$<$ T $>$}!add@{add}}
+\index{add@{add}!Catch::CompositeGenerator$<$ T $>$@{Catch::CompositeGenerator$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_catch_1_1_composite_generator}{Catch\+::\+Composite\+Generator}}$<$ T $>$\+::add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_catch_1_1_i_generator}{IGenerator}}$<$ T $>$ \texorpdfstring{$\ast$}{*}}]{generator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_catch_1_1_composite_generator_af3774d42ad2d3453d089ca599efe0517_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_catch_1_1_composite_generator_af3774d42ad2d3453d089ca599efe0517_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_catch_1_1_composite_generator_afbc02d3f638a121a8ccd67f0c4498deb}\label{class_catch_1_1_composite_generator_afbc02d3f638a121a8ccd67f0c4498deb} 
+\index{Catch::CompositeGenerator$<$ T $>$@{Catch::CompositeGenerator$<$ T $>$}!move@{move}}
+\index{move@{move}!Catch::CompositeGenerator$<$ T $>$@{Catch::CompositeGenerator$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_catch_1_1_composite_generator}{Catch\+::\+Composite\+Generator}}$<$ T $>$\+::move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_catch_1_1_composite_generator}{Composite\+Generator}}$<$ T $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_catch_1_1_composite_generator_a83d6c941e2e735b9528e6e832f7b76e7}\label{class_catch_1_1_composite_generator_a83d6c941e2e735b9528e6e832f7b76e7} 
+\index{Catch::CompositeGenerator$<$ T $>$@{Catch::CompositeGenerator$<$ T $>$}!operator T@{operator T}}
+\index{operator T@{operator T}!Catch::CompositeGenerator$<$ T $>$@{Catch::CompositeGenerator$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator T()}{operator T()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_catch_1_1_composite_generator}{Catch\+::\+Composite\+Generator}}$<$ T $>$\+::operator T (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_catch_1_1_composite_generator_a83d6c941e2e735b9528e6e832f7b76e7_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_catch_1_1_composite_generator_a7f2cecb35b0e9aedabefdebfa330cf73}\label{class_catch_1_1_composite_generator_a7f2cecb35b0e9aedabefdebfa330cf73} 
+\index{Catch::CompositeGenerator$<$ T $>$@{Catch::CompositeGenerator$<$ T $>$}!setFileInfo@{setFileInfo}}
+\index{setFileInfo@{setFileInfo}!Catch::CompositeGenerator$<$ T $>$@{Catch::CompositeGenerator$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{setFileInfo()}{setFileInfo()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_catch_1_1_composite_generator}{Composite\+Generator}} \& \mbox{\hyperlink{class_catch_1_1_composite_generator}{Catch\+::\+Composite\+Generator}}$<$ T $>$\+::set\+File\+Info (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{file\+Info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_catch_1_1_composite_generator_ac33d859dd087c23698168491d4576465}\label{class_catch_1_1_composite_generator_ac33d859dd087c23698168491d4576465} 
+\index{Catch::CompositeGenerator$<$ T $>$@{Catch::CompositeGenerator$<$ T $>$}!then@{then}}
+\index{then@{then}!Catch::CompositeGenerator$<$ T $>$@{Catch::CompositeGenerator$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{then()}{then()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_catch_1_1_composite_generator}{Composite\+Generator}} \& \mbox{\hyperlink{class_catch_1_1_composite_generator}{Catch\+::\+Composite\+Generator}}$<$ T $>$\+::then (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_catch_1_1_composite_generator}{Composite\+Generator}}$<$ T $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_catch_1_1_composite_generator_a5eb501037b93684d1c9076383f775204}\label{class_catch_1_1_composite_generator_a5eb501037b93684d1c9076383f775204} 
+\index{Catch::CompositeGenerator$<$ T $>$@{Catch::CompositeGenerator$<$ T $>$}!then@{then}}
+\index{then@{then}!Catch::CompositeGenerator$<$ T $>$@{Catch::CompositeGenerator$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{then()}{then()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_catch_1_1_composite_generator}{Composite\+Generator}} \& \mbox{\hyperlink{class_catch_1_1_composite_generator}{Catch\+::\+Composite\+Generator}}$<$ T $>$\+::then (\begin{DoxyParamCaption}\item[{T}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_catch_1_1_composite_generator_a5eb501037b93684d1c9076383f775204_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{class_catch_1_1_composite_generator_a9491042c1e0fa20dd2ad652c4b6d1dfd}\label{class_catch_1_1_composite_generator_a9491042c1e0fa20dd2ad652c4b6d1dfd} 
+\index{Catch::CompositeGenerator$<$ T $>$@{Catch::CompositeGenerator$<$ T $>$}!m\_composed@{m\_composed}}
+\index{m\_composed@{m\_composed}!Catch::CompositeGenerator$<$ T $>$@{Catch::CompositeGenerator$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{m\_composed}{m\_composed}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::vector$<$const \mbox{\hyperlink{struct_catch_1_1_i_generator}{IGenerator}}$<$T$>$\texorpdfstring{$\ast$}{*}$>$ \mbox{\hyperlink{class_catch_1_1_composite_generator}{Catch\+::\+Composite\+Generator}}$<$ T $>$\+::m\+\_\+composed\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_catch_1_1_composite_generator_aaaeb076065d0a9c8e30dfbe05ca493b6}\label{class_catch_1_1_composite_generator_aaaeb076065d0a9c8e30dfbe05ca493b6} 
+\index{Catch::CompositeGenerator$<$ T $>$@{Catch::CompositeGenerator$<$ T $>$}!m\_fileInfo@{m\_fileInfo}}
+\index{m\_fileInfo@{m\_fileInfo}!Catch::CompositeGenerator$<$ T $>$@{Catch::CompositeGenerator$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{m\_fileInfo}{m\_fileInfo}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::string \mbox{\hyperlink{class_catch_1_1_composite_generator}{Catch\+::\+Composite\+Generator}}$<$ T $>$\+::m\+\_\+file\+Info\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_catch_1_1_composite_generator_a73234ad81da793e83bb17b829523ef66}\label{class_catch_1_1_composite_generator_a73234ad81da793e83bb17b829523ef66} 
+\index{Catch::CompositeGenerator$<$ T $>$@{Catch::CompositeGenerator$<$ T $>$}!m\_totalSize@{m\_totalSize}}
+\index{m\_totalSize@{m\_totalSize}!Catch::CompositeGenerator$<$ T $>$@{Catch::CompositeGenerator$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{m\_totalSize}{m\_totalSize}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+size\+\_\+t \mbox{\hyperlink{class_catch_1_1_composite_generator}{Catch\+::\+Composite\+Generator}}$<$ T $>$\+::m\+\_\+total\+Size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/extlibs/headers/\mbox{\hyperlink{catch_8hpp}{catch.\+hpp}}\end{DoxyCompactItemize}

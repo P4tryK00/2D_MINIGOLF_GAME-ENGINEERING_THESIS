@@ -1,0 +1,374 @@
+\doxysection{Dokumentacja klasy Level\+Complete\+State}
+\hypertarget{class_level_complete_state}{}\label{class_level_complete_state}\index{LevelCompleteState@{LevelCompleteState}}
+
+
+Stan gry wyświetlany po pomyślnym ukończeniu poziomu.  
+
+
+
+
+{\ttfamily \#include $<$Level\+Complete\+State.\+h$>$}
+
+
+
+Diagram dziedziczenia dla Level\+Complete\+State\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{class_level_complete_state__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagram współpracy dla Level\+Complete\+State\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{class_level_complete_state__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_level_complete_state_a5b7ad62cac0c87551f06db77dead228d}{Level\+Complete\+State}} (\mbox{\hyperlink{_game_8h_ae7efd7ef77698f16206f5c66180a389f}{Game\+Data\+Ref}} data, sf\+::\+Sprite bg\+Sprite, std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$ bg\+Texture, int strokes, int current\+Level)
+\begin{DoxyCompactList}\small\item\em Konstruktor stanu ukończenia poziomu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_level_complete_state_a7579156258a6d750c59a43e8f4835e26}{init}} () override
+\begin{DoxyCompactList}\small\item\em Inicjalizuje elementy interfejsu (teksty, przyciski) oraz zapisuje wynik. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_level_complete_state_a8b7259ff7af836d78bbad919a0b0cbc6}{handle\+Input}} (sf\+::\+Event \&event) override
+\begin{DoxyCompactList}\small\item\em Obsługuje interakcję użytkownika z przyciskami (Next Level, Retry, Menu). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_level_complete_state_a3029036bd75c66d7c7a52a13009946a5}{update}} (float dt) override
+\begin{DoxyCompactList}\small\item\em Aktualizuje logikę stanu (animacje przycisków, efekt przejścia). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_level_complete_state_a3392edc04ebe139f915dede0c65c973b}{draw}} (float dt) override
+\begin{DoxyCompactList}\small\item\em Renderuje elementy stanu na ekranie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{class_state}{State}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_state_a9ddc1df6f998184d6477b48fab90281c}{\texorpdfstring{$\sim$}{\string~}\+State}} ()
+\begin{DoxyCompactList}\small\item\em Wirtualny destruktor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_state_abad223d1066e95bd1b70e1341fb72a88}{pause}} ()
+\begin{DoxyCompactList}\small\item\em Wywoływana, gdy stan jest pauzowany (np. inny stan jest nakładany na wierzch). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_state_a8ef6d305e962afe41b0629255f0f58f9}{resume}} ()
+\begin{DoxyCompactList}\small\item\em Wywoływana, gdy stan jest wznawiany (np. stan powyżej został zdjęty ze stosu). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_game_8h_ae7efd7ef77698f16206f5c66180a389f}{Game\+Data\+Ref}} \mbox{\hyperlink{class_level_complete_state_acace6bea55ac8a73415b627c02a4cf4b}{m\+\_\+data}}
+\begin{DoxyCompactList}\small\item\em Wskaźnik do danych gry. \end{DoxyCompactList}\item 
+sf\+::\+Sprite \mbox{\hyperlink{class_level_complete_state_ad6ffbcb042d824248d33f230436a4334}{m\+\_\+background\+Sprite}}
+\begin{DoxyCompactList}\small\item\em Tło (screenshot z gry). \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$ \mbox{\hyperlink{class_level_complete_state_ae2d4279d39615a2aecec1f4e121885a0}{m\+\_\+bg\+Texture}}
+\begin{DoxyCompactList}\small\item\em Tekstura tła. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_level_complete_state_ac51df803475baa6aee5216f10387d5a4}{m\+\_\+strokes}}
+\begin{DoxyCompactList}\small\item\em Wynik gracza. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_level_complete_state_aa27b8b044381286c07f36890e82f4b59}{m\+\_\+current\+Level}}
+\begin{DoxyCompactList}\small\item\em Numer ukończonego poziomu. \end{DoxyCompactList}\item 
+sf\+::\+Rectangle\+Shape \mbox{\hyperlink{class_level_complete_state_a3485560dac719d2f4722c0a62d1b9df6}{m\+\_\+dimmer}}
+\begin{DoxyCompactList}\small\item\em Prostokąt przyciemniający tło. \end{DoxyCompactList}\item 
+sf\+::\+Text \mbox{\hyperlink{class_level_complete_state_aa3b85392509cad5bfd0e93debb9cabb4}{m\+\_\+title}}
+\begin{DoxyCompactList}\small\item\em Nagłówek "{}\+LEVEL COMPLETE"{}. \end{DoxyCompactList}\item 
+sf\+::\+Text \mbox{\hyperlink{class_level_complete_state_a00d9cd9c76ed9eb763480944d857a28a}{m\+\_\+score\+Text}}
+\begin{DoxyCompactList}\small\item\em Tekst wyświetlający liczbę uderzeń. \end{DoxyCompactList}\item 
+sf\+::\+Text \mbox{\hyperlink{class_level_complete_state_a7df2951327d7fbb6a7d438322a0b54d7}{m\+\_\+next\+Level\+Button}}
+\begin{DoxyCompactList}\small\item\em Przycisk przejścia do kolejnego poziomu. \end{DoxyCompactList}\item 
+sf\+::\+Text \mbox{\hyperlink{class_level_complete_state_a7f491449bc96da75168630204f6e4f40}{m\+\_\+menu\+Button}}
+\begin{DoxyCompactList}\small\item\em Przycisk powrotu do menu. \end{DoxyCompactList}\item 
+sf\+::\+Text \mbox{\hyperlink{class_level_complete_state_aedec3247fac9d2aec06c72e9359c6b11}{m\+\_\+retry\+Button}}
+\begin{DoxyCompactList}\small\item\em Przycisk powtórzenia poziomu. \end{DoxyCompactList}\item 
+sf\+::\+Rectangle\+Shape \mbox{\hyperlink{class_level_complete_state_aa4e86ec21b1ac0aac5760a10ac951885}{m\+\_\+fade\+Rect}}
+\begin{DoxyCompactList}\small\item\em Prostokąt do efektu zanikania. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_level_complete_state_a48a1ae6396e87a65aa4248c347b1d433}{m\+\_\+alpha}}
+\begin{DoxyCompactList}\small\item\em Aktualna przezroczystość fadera. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_level_complete_state_afc584bc7d6cca8c6d8cf94b8c74f6773}{m\+\_\+is\+Transitioning}}
+\begin{DoxyCompactList}\small\item\em Flaga trwania animacji wyjścia. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_level_complete_state_a35a483f30f31ffc374d56c60fda3c387}{m\+\_\+go\+To\+Menu}}
+\begin{DoxyCompactList}\small\item\em Cel przejścia\+: Menu. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_level_complete_state_a37259da749a703885ac87a2eb134c393}{m\+\_\+retry\+Level}}
+\begin{DoxyCompactList}\small\item\em Cel przejścia\+: Restart. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Stan gry wyświetlany po pomyślnym ukończeniu poziomu. 
+
+Klasa ta odpowiada za\+:
+\begin{DoxyItemize}
+\item Wyświetlenie podsumowania poziomu (wynik/ilość uderzeń).
+\item Zapisanie postępów gracza (odblokowanie kolejnego poziomu).
+\item Nawigację do następnego poziomu, powtórzenia obecnego lub powrotu do menu. 
+\end{DoxyItemize}
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{class_level_complete_state_a5b7ad62cac0c87551f06db77dead228d}\label{class_level_complete_state_a5b7ad62cac0c87551f06db77dead228d} 
+\index{LevelCompleteState@{LevelCompleteState}!LevelCompleteState@{LevelCompleteState}}
+\index{LevelCompleteState@{LevelCompleteState}!LevelCompleteState@{LevelCompleteState}}
+\doxysubsubsection{\texorpdfstring{LevelCompleteState()}{LevelCompleteState()}}
+{\footnotesize\ttfamily Level\+Complete\+State\+::\+Level\+Complete\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_game_8h_ae7efd7ef77698f16206f5c66180a389f}{Game\+Data\+Ref}}}]{data,  }\item[{sf\+::\+Sprite}]{bg\+Sprite,  }\item[{std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$}]{bg\+Texture,  }\item[{int}]{strokes,  }\item[{int}]{current\+Level }\end{DoxyParamCaption})}
+
+
+
+Konstruktor stanu ukończenia poziomu. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em data} & Współdzielone dane gry (okno, maszyna stanów). \\
+\hline
+{\em bg\+Sprite} & Zrzut ekranu z gry (tło). \\
+\hline
+{\em bg\+Texture} & Tekstura zrzutu ekranu. \\
+\hline
+{\em strokes} & Liczba uderzeń wykonana w zakończonym poziomie. \\
+\hline
+{\em current\+Level} & Numer ukończonego poziomu. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_level_complete_state_a3392edc04ebe139f915dede0c65c973b}\label{class_level_complete_state_a3392edc04ebe139f915dede0c65c973b} 
+\index{LevelCompleteState@{LevelCompleteState}!draw@{draw}}
+\index{draw@{draw}!LevelCompleteState@{LevelCompleteState}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Level\+Complete\+State\+::draw (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Renderuje elementy stanu na ekranie. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em dt} & Interpolacja (nieużywana). \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \mbox{\hyperlink{class_state_a78efb743026712cbd78b8c07a45c2def}{State}}.
+
+\Hypertarget{class_level_complete_state_a8b7259ff7af836d78bbad919a0b0cbc6}\label{class_level_complete_state_a8b7259ff7af836d78bbad919a0b0cbc6} 
+\index{LevelCompleteState@{LevelCompleteState}!handleInput@{handleInput}}
+\index{handleInput@{handleInput}!LevelCompleteState@{LevelCompleteState}}
+\doxysubsubsection{\texorpdfstring{handleInput()}{handleInput()}}
+{\footnotesize\ttfamily void Level\+Complete\+State\+::handle\+Input (\begin{DoxyParamCaption}\item[{sf\+::\+Event \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Obsługuje interakcję użytkownika z przyciskami (Next Level, Retry, Menu). 
+
+
+\begin{DoxyParams}{Parametry}
+{\em event} & Zdarzenie SFML. \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \mbox{\hyperlink{class_state_ad0fcf10830377a1f673a714aa3b7944d}{State}}.
+
+\Hypertarget{class_level_complete_state_a7579156258a6d750c59a43e8f4835e26}\label{class_level_complete_state_a7579156258a6d750c59a43e8f4835e26} 
+\index{LevelCompleteState@{LevelCompleteState}!init@{init}}
+\index{init@{init}!LevelCompleteState@{LevelCompleteState}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Level\+Complete\+State\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Inicjalizuje elementy interfejsu (teksty, przyciski) oraz zapisuje wynik. 
+
+
+
+Implementuje \mbox{\hyperlink{class_state_a2ff5faa41a5811007e8d50542365640b}{State}}.
+
+Oto graf wywołań dla tej funkcji\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_level_complete_state_a7579156258a6d750c59a43e8f4835e26_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_level_complete_state_a3029036bd75c66d7c7a52a13009946a5}\label{class_level_complete_state_a3029036bd75c66d7c7a52a13009946a5} 
+\index{LevelCompleteState@{LevelCompleteState}!update@{update}}
+\index{update@{update}!LevelCompleteState@{LevelCompleteState}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Level\+Complete\+State\+::update (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Aktualizuje logikę stanu (animacje przycisków, efekt przejścia). 
+
+
+\begin{DoxyParams}{Parametry}
+{\em dt} & Czas klatki (Delta Time). \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \mbox{\hyperlink{class_state_a07b507523aaffc4cf78f3dd3174a68ea}{State}}.
+
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{class_level_complete_state_a48a1ae6396e87a65aa4248c347b1d433}\label{class_level_complete_state_a48a1ae6396e87a65aa4248c347b1d433} 
+\index{LevelCompleteState@{LevelCompleteState}!m\_alpha@{m\_alpha}}
+\index{m\_alpha@{m\_alpha}!LevelCompleteState@{LevelCompleteState}}
+\doxysubsubsection{\texorpdfstring{m\_alpha}{m\_alpha}}
+{\footnotesize\ttfamily float Level\+Complete\+State\+::m\+\_\+alpha\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Aktualna przezroczystość fadera. 
+
+\Hypertarget{class_level_complete_state_ad6ffbcb042d824248d33f230436a4334}\label{class_level_complete_state_ad6ffbcb042d824248d33f230436a4334} 
+\index{LevelCompleteState@{LevelCompleteState}!m\_backgroundSprite@{m\_backgroundSprite}}
+\index{m\_backgroundSprite@{m\_backgroundSprite}!LevelCompleteState@{LevelCompleteState}}
+\doxysubsubsection{\texorpdfstring{m\_backgroundSprite}{m\_backgroundSprite}}
+{\footnotesize\ttfamily sf\+::\+Sprite Level\+Complete\+State\+::m\+\_\+background\+Sprite\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Tło (screenshot z gry). 
+
+\Hypertarget{class_level_complete_state_ae2d4279d39615a2aecec1f4e121885a0}\label{class_level_complete_state_ae2d4279d39615a2aecec1f4e121885a0} 
+\index{LevelCompleteState@{LevelCompleteState}!m\_bgTexture@{m\_bgTexture}}
+\index{m\_bgTexture@{m\_bgTexture}!LevelCompleteState@{LevelCompleteState}}
+\doxysubsubsection{\texorpdfstring{m\_bgTexture}{m\_bgTexture}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$sf\+::\+Texture$>$ Level\+Complete\+State\+::m\+\_\+bg\+Texture\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Tekstura tła. 
+
+\Hypertarget{class_level_complete_state_aa27b8b044381286c07f36890e82f4b59}\label{class_level_complete_state_aa27b8b044381286c07f36890e82f4b59} 
+\index{LevelCompleteState@{LevelCompleteState}!m\_currentLevel@{m\_currentLevel}}
+\index{m\_currentLevel@{m\_currentLevel}!LevelCompleteState@{LevelCompleteState}}
+\doxysubsubsection{\texorpdfstring{m\_currentLevel}{m\_currentLevel}}
+{\footnotesize\ttfamily int Level\+Complete\+State\+::m\+\_\+current\+Level\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Numer ukończonego poziomu. 
+
+\Hypertarget{class_level_complete_state_acace6bea55ac8a73415b627c02a4cf4b}\label{class_level_complete_state_acace6bea55ac8a73415b627c02a4cf4b} 
+\index{LevelCompleteState@{LevelCompleteState}!m\_data@{m\_data}}
+\index{m\_data@{m\_data}!LevelCompleteState@{LevelCompleteState}}
+\doxysubsubsection{\texorpdfstring{m\_data}{m\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_game_8h_ae7efd7ef77698f16206f5c66180a389f}{Game\+Data\+Ref}} Level\+Complete\+State\+::m\+\_\+data\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Wskaźnik do danych gry. 
+
+\Hypertarget{class_level_complete_state_a3485560dac719d2f4722c0a62d1b9df6}\label{class_level_complete_state_a3485560dac719d2f4722c0a62d1b9df6} 
+\index{LevelCompleteState@{LevelCompleteState}!m\_dimmer@{m\_dimmer}}
+\index{m\_dimmer@{m\_dimmer}!LevelCompleteState@{LevelCompleteState}}
+\doxysubsubsection{\texorpdfstring{m\_dimmer}{m\_dimmer}}
+{\footnotesize\ttfamily sf\+::\+Rectangle\+Shape Level\+Complete\+State\+::m\+\_\+dimmer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Prostokąt przyciemniający tło. 
+
+\Hypertarget{class_level_complete_state_aa4e86ec21b1ac0aac5760a10ac951885}\label{class_level_complete_state_aa4e86ec21b1ac0aac5760a10ac951885} 
+\index{LevelCompleteState@{LevelCompleteState}!m\_fadeRect@{m\_fadeRect}}
+\index{m\_fadeRect@{m\_fadeRect}!LevelCompleteState@{LevelCompleteState}}
+\doxysubsubsection{\texorpdfstring{m\_fadeRect}{m\_fadeRect}}
+{\footnotesize\ttfamily sf\+::\+Rectangle\+Shape Level\+Complete\+State\+::m\+\_\+fade\+Rect\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Prostokąt do efektu zanikania. 
+
+\Hypertarget{class_level_complete_state_a35a483f30f31ffc374d56c60fda3c387}\label{class_level_complete_state_a35a483f30f31ffc374d56c60fda3c387} 
+\index{LevelCompleteState@{LevelCompleteState}!m\_goToMenu@{m\_goToMenu}}
+\index{m\_goToMenu@{m\_goToMenu}!LevelCompleteState@{LevelCompleteState}}
+\doxysubsubsection{\texorpdfstring{m\_goToMenu}{m\_goToMenu}}
+{\footnotesize\ttfamily bool Level\+Complete\+State\+::m\+\_\+go\+To\+Menu\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Cel przejścia\+: Menu. 
+
+\Hypertarget{class_level_complete_state_afc584bc7d6cca8c6d8cf94b8c74f6773}\label{class_level_complete_state_afc584bc7d6cca8c6d8cf94b8c74f6773} 
+\index{LevelCompleteState@{LevelCompleteState}!m\_isTransitioning@{m\_isTransitioning}}
+\index{m\_isTransitioning@{m\_isTransitioning}!LevelCompleteState@{LevelCompleteState}}
+\doxysubsubsection{\texorpdfstring{m\_isTransitioning}{m\_isTransitioning}}
+{\footnotesize\ttfamily bool Level\+Complete\+State\+::m\+\_\+is\+Transitioning\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Flaga trwania animacji wyjścia. 
+
+\Hypertarget{class_level_complete_state_a7f491449bc96da75168630204f6e4f40}\label{class_level_complete_state_a7f491449bc96da75168630204f6e4f40} 
+\index{LevelCompleteState@{LevelCompleteState}!m\_menuButton@{m\_menuButton}}
+\index{m\_menuButton@{m\_menuButton}!LevelCompleteState@{LevelCompleteState}}
+\doxysubsubsection{\texorpdfstring{m\_menuButton}{m\_menuButton}}
+{\footnotesize\ttfamily sf\+::\+Text Level\+Complete\+State\+::m\+\_\+menu\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Przycisk powrotu do menu. 
+
+\Hypertarget{class_level_complete_state_a7df2951327d7fbb6a7d438322a0b54d7}\label{class_level_complete_state_a7df2951327d7fbb6a7d438322a0b54d7} 
+\index{LevelCompleteState@{LevelCompleteState}!m\_nextLevelButton@{m\_nextLevelButton}}
+\index{m\_nextLevelButton@{m\_nextLevelButton}!LevelCompleteState@{LevelCompleteState}}
+\doxysubsubsection{\texorpdfstring{m\_nextLevelButton}{m\_nextLevelButton}}
+{\footnotesize\ttfamily sf\+::\+Text Level\+Complete\+State\+::m\+\_\+next\+Level\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Przycisk przejścia do kolejnego poziomu. 
+
+\Hypertarget{class_level_complete_state_aedec3247fac9d2aec06c72e9359c6b11}\label{class_level_complete_state_aedec3247fac9d2aec06c72e9359c6b11} 
+\index{LevelCompleteState@{LevelCompleteState}!m\_retryButton@{m\_retryButton}}
+\index{m\_retryButton@{m\_retryButton}!LevelCompleteState@{LevelCompleteState}}
+\doxysubsubsection{\texorpdfstring{m\_retryButton}{m\_retryButton}}
+{\footnotesize\ttfamily sf\+::\+Text Level\+Complete\+State\+::m\+\_\+retry\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Przycisk powtórzenia poziomu. 
+
+\Hypertarget{class_level_complete_state_a37259da749a703885ac87a2eb134c393}\label{class_level_complete_state_a37259da749a703885ac87a2eb134c393} 
+\index{LevelCompleteState@{LevelCompleteState}!m\_retryLevel@{m\_retryLevel}}
+\index{m\_retryLevel@{m\_retryLevel}!LevelCompleteState@{LevelCompleteState}}
+\doxysubsubsection{\texorpdfstring{m\_retryLevel}{m\_retryLevel}}
+{\footnotesize\ttfamily bool Level\+Complete\+State\+::m\+\_\+retry\+Level\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Cel przejścia\+: Restart. 
+
+\Hypertarget{class_level_complete_state_a00d9cd9c76ed9eb763480944d857a28a}\label{class_level_complete_state_a00d9cd9c76ed9eb763480944d857a28a} 
+\index{LevelCompleteState@{LevelCompleteState}!m\_scoreText@{m\_scoreText}}
+\index{m\_scoreText@{m\_scoreText}!LevelCompleteState@{LevelCompleteState}}
+\doxysubsubsection{\texorpdfstring{m\_scoreText}{m\_scoreText}}
+{\footnotesize\ttfamily sf\+::\+Text Level\+Complete\+State\+::m\+\_\+score\+Text\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Tekst wyświetlający liczbę uderzeń. 
+
+\Hypertarget{class_level_complete_state_ac51df803475baa6aee5216f10387d5a4}\label{class_level_complete_state_ac51df803475baa6aee5216f10387d5a4} 
+\index{LevelCompleteState@{LevelCompleteState}!m\_strokes@{m\_strokes}}
+\index{m\_strokes@{m\_strokes}!LevelCompleteState@{LevelCompleteState}}
+\doxysubsubsection{\texorpdfstring{m\_strokes}{m\_strokes}}
+{\footnotesize\ttfamily int Level\+Complete\+State\+::m\+\_\+strokes\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Wynik gracza. 
+
+\Hypertarget{class_level_complete_state_aa3b85392509cad5bfd0e93debb9cabb4}\label{class_level_complete_state_aa3b85392509cad5bfd0e93debb9cabb4} 
+\index{LevelCompleteState@{LevelCompleteState}!m\_title@{m\_title}}
+\index{m\_title@{m\_title}!LevelCompleteState@{LevelCompleteState}}
+\doxysubsubsection{\texorpdfstring{m\_title}{m\_title}}
+{\footnotesize\ttfamily sf\+::\+Text Level\+Complete\+State\+::m\+\_\+title\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Nagłówek "{}\+LEVEL COMPLETE"{}. 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_level_complete_state_8h}{Level\+Complete\+State.\+h}}\item 
+\mbox{\hyperlink{_level_complete_state_8cpp}{Level\+Complete\+State.\+cpp}}\end{DoxyCompactItemize}

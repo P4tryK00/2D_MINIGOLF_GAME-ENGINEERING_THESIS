@@ -1,0 +1,202 @@
+\doxysection{Dokumentacja struktury sf\+::priv\+::Activity\+States}
+\hypertarget{structsf_1_1priv_1_1_activity_states}{}\label{structsf_1_1priv_1_1_activity_states}\index{sf::priv::ActivityStates@{sf::priv::ActivityStates}}
+
+
+{\ttfamily \#include $<$Activity.\+hpp$>$}
+
+
+
+Diagram współpracy dla sf\+::priv\+::Activity\+States\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{structsf_1_1priv_1_1_activity_states__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+ANative\+Activity \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states_a01f1bfadecf18f23e2ab435d46ab16ef}{activity}}
+\item 
+ANative\+Window \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states_a7fa62f37d5583e681dfe1d77eb6b438b}{window}}
+\item 
+ALooper \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states_ab00f1e28ef63987f600e6981eb199fa6}{looper}}
+\item 
+AInput\+Queue \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states_ad9c8bc8ff659edfd0be52be1c37fd10e}{input\+Queue}}
+\item 
+AConfiguration \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states_a7efbaa390344b9dc83435eeff7aee321}{config}}
+\item 
+\mbox{\hyperlink{egl_8h_a87d55554aa13accdcb0e10eab910c72e}{EGLDisplay}} \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states_af07bc3cb25f963f7ad1610564bac1951}{display}}
+\item 
+\mbox{\hyperlink{classsf_1_1priv_1_1_egl_context}{Egl\+Context}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states_aeceb5405e1f1d6a5061dc17257adda18}{context}}
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states_a2186e1bdf225984b33a0b883f6310426}{saved\+State}}
+\item 
+size\+\_\+t \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states_a0b5468c1e67e96d47e60ca0be4ebd407}{saved\+State\+Size}}
+\item 
+\mbox{\hyperlink{classsf_1_1_mutex}{Mutex}} \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states_a696e95adcff618144c92950d7d23a426}{mutex}}
+\item 
+void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states_a064db4959ae5bcafe2f3d5994e89118e}{forward\+Event}} )(const \mbox{\hyperlink{classsf_1_1_event}{Event}} \&event)
+\item 
+int(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states_a28168946cc3f7678848141b9af732fcf}{process\+Event}} )(int fd, int events, void \texorpdfstring{$\ast$}{*}data)
+\item 
+std\+::map$<$ int, \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} $>$ \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states_a84b8c5251e9c1bc7bedb0a07c0db30f6}{touch\+Events}}
+\item 
+\mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states_a32ded3673dde802c16df4a4d5cb52fb6}{mouse\+Position}}
+\item 
+bool \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states_a624f8a598fd51108b95359dc0882a5b7}{is\+Button\+Pressed}} \mbox{[}\mbox{\hyperlink{classsf_1_1_mouse_a4fb128be433f9aafe66bc0c605daaa90a52a1d434289774240ddaa22496762402}{Mouse\+::\+Button\+Count}}\mbox{]}
+\item 
+bool \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states_aebdde944f4bd5a4dbaff0d61ce23d411}{main\+Over}}
+\item 
+\mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states_ac4574cfb981b7c22a2bf1a3c559e49b2}{screen\+Size}}
+\item 
+bool \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states_a02ee62adb122d5622f3c6bc2f68cd98b}{initialized}}
+\item 
+bool \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states_a289bd06c37641badf7fbf88c2bbc3fe6}{terminated}}
+\item 
+bool \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states_a168a93552991ec32e297a6b64a969332}{fullscreen}}
+\item 
+bool \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states_a6e0783c242f8d7113db4deb93386c5fb}{updated}}
+\item 
+\mbox{\hyperlink{class_logcat_stream}{Logcat\+Stream}} \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states_a689164e7ddd0e3ed18725398bcc27618}{logcat}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{structsf_1_1priv_1_1_activity_states_a01f1bfadecf18f23e2ab435d46ab16ef}\label{structsf_1_1priv_1_1_activity_states_a01f1bfadecf18f23e2ab435d46ab16ef} 
+\index{sf::priv::ActivityStates@{sf::priv::ActivityStates}!activity@{activity}}
+\index{activity@{activity}!sf::priv::ActivityStates@{sf::priv::ActivityStates}}
+\doxysubsubsection{\texorpdfstring{activity}{activity}}
+{\footnotesize\ttfamily ANative\+Activity\texorpdfstring{$\ast$}{*} sf\+::priv\+::\+Activity\+States\+::activity}
+
+\Hypertarget{structsf_1_1priv_1_1_activity_states_a7efbaa390344b9dc83435eeff7aee321}\label{structsf_1_1priv_1_1_activity_states_a7efbaa390344b9dc83435eeff7aee321} 
+\index{sf::priv::ActivityStates@{sf::priv::ActivityStates}!config@{config}}
+\index{config@{config}!sf::priv::ActivityStates@{sf::priv::ActivityStates}}
+\doxysubsubsection{\texorpdfstring{config}{config}}
+{\footnotesize\ttfamily AConfiguration\texorpdfstring{$\ast$}{*} sf\+::priv\+::\+Activity\+States\+::config}
+
+\Hypertarget{structsf_1_1priv_1_1_activity_states_aeceb5405e1f1d6a5061dc17257adda18}\label{structsf_1_1priv_1_1_activity_states_aeceb5405e1f1d6a5061dc17257adda18} 
+\index{sf::priv::ActivityStates@{sf::priv::ActivityStates}!context@{context}}
+\index{context@{context}!sf::priv::ActivityStates@{sf::priv::ActivityStates}}
+\doxysubsubsection{\texorpdfstring{context}{context}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1priv_1_1_egl_context}{Egl\+Context}}\texorpdfstring{$\ast$}{*} sf\+::priv\+::\+Activity\+States\+::context}
+
+\Hypertarget{structsf_1_1priv_1_1_activity_states_af07bc3cb25f963f7ad1610564bac1951}\label{structsf_1_1priv_1_1_activity_states_af07bc3cb25f963f7ad1610564bac1951} 
+\index{sf::priv::ActivityStates@{sf::priv::ActivityStates}!display@{display}}
+\index{display@{display}!sf::priv::ActivityStates@{sf::priv::ActivityStates}}
+\doxysubsubsection{\texorpdfstring{display}{display}}
+{\footnotesize\ttfamily \mbox{\hyperlink{egl_8h_a87d55554aa13accdcb0e10eab910c72e}{EGLDisplay}} sf\+::priv\+::\+Activity\+States\+::display}
+
+\Hypertarget{structsf_1_1priv_1_1_activity_states_a064db4959ae5bcafe2f3d5994e89118e}\label{structsf_1_1priv_1_1_activity_states_a064db4959ae5bcafe2f3d5994e89118e} 
+\index{sf::priv::ActivityStates@{sf::priv::ActivityStates}!forwardEvent@{forwardEvent}}
+\index{forwardEvent@{forwardEvent}!sf::priv::ActivityStates@{sf::priv::ActivityStates}}
+\doxysubsubsection{\texorpdfstring{forwardEvent}{forwardEvent}}
+{\footnotesize\ttfamily void(\texorpdfstring{$\ast$}{*} sf\+::priv\+::\+Activity\+States\+::forward\+Event) (const \mbox{\hyperlink{classsf_1_1_event}{Event}} \&event)}
+
+\Hypertarget{structsf_1_1priv_1_1_activity_states_a168a93552991ec32e297a6b64a969332}\label{structsf_1_1priv_1_1_activity_states_a168a93552991ec32e297a6b64a969332} 
+\index{sf::priv::ActivityStates@{sf::priv::ActivityStates}!fullscreen@{fullscreen}}
+\index{fullscreen@{fullscreen}!sf::priv::ActivityStates@{sf::priv::ActivityStates}}
+\doxysubsubsection{\texorpdfstring{fullscreen}{fullscreen}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Activity\+States\+::fullscreen}
+
+\Hypertarget{structsf_1_1priv_1_1_activity_states_a02ee62adb122d5622f3c6bc2f68cd98b}\label{structsf_1_1priv_1_1_activity_states_a02ee62adb122d5622f3c6bc2f68cd98b} 
+\index{sf::priv::ActivityStates@{sf::priv::ActivityStates}!initialized@{initialized}}
+\index{initialized@{initialized}!sf::priv::ActivityStates@{sf::priv::ActivityStates}}
+\doxysubsubsection{\texorpdfstring{initialized}{initialized}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Activity\+States\+::initialized}
+
+\Hypertarget{structsf_1_1priv_1_1_activity_states_ad9c8bc8ff659edfd0be52be1c37fd10e}\label{structsf_1_1priv_1_1_activity_states_ad9c8bc8ff659edfd0be52be1c37fd10e} 
+\index{sf::priv::ActivityStates@{sf::priv::ActivityStates}!inputQueue@{inputQueue}}
+\index{inputQueue@{inputQueue}!sf::priv::ActivityStates@{sf::priv::ActivityStates}}
+\doxysubsubsection{\texorpdfstring{inputQueue}{inputQueue}}
+{\footnotesize\ttfamily AInput\+Queue\texorpdfstring{$\ast$}{*} sf\+::priv\+::\+Activity\+States\+::input\+Queue}
+
+\Hypertarget{structsf_1_1priv_1_1_activity_states_a624f8a598fd51108b95359dc0882a5b7}\label{structsf_1_1priv_1_1_activity_states_a624f8a598fd51108b95359dc0882a5b7} 
+\index{sf::priv::ActivityStates@{sf::priv::ActivityStates}!isButtonPressed@{isButtonPressed}}
+\index{isButtonPressed@{isButtonPressed}!sf::priv::ActivityStates@{sf::priv::ActivityStates}}
+\doxysubsubsection{\texorpdfstring{isButtonPressed}{isButtonPressed}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Activity\+States\+::is\+Button\+Pressed\mbox{[}\mbox{\hyperlink{classsf_1_1_mouse_a4fb128be433f9aafe66bc0c605daaa90a52a1d434289774240ddaa22496762402}{Mouse\+::\+Button\+Count}}\mbox{]}}
+
+\Hypertarget{structsf_1_1priv_1_1_activity_states_a689164e7ddd0e3ed18725398bcc27618}\label{structsf_1_1priv_1_1_activity_states_a689164e7ddd0e3ed18725398bcc27618} 
+\index{sf::priv::ActivityStates@{sf::priv::ActivityStates}!logcat@{logcat}}
+\index{logcat@{logcat}!sf::priv::ActivityStates@{sf::priv::ActivityStates}}
+\doxysubsubsection{\texorpdfstring{logcat}{logcat}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_logcat_stream}{Logcat\+Stream}} sf\+::priv\+::\+Activity\+States\+::logcat}
+
+\Hypertarget{structsf_1_1priv_1_1_activity_states_ab00f1e28ef63987f600e6981eb199fa6}\label{structsf_1_1priv_1_1_activity_states_ab00f1e28ef63987f600e6981eb199fa6} 
+\index{sf::priv::ActivityStates@{sf::priv::ActivityStates}!looper@{looper}}
+\index{looper@{looper}!sf::priv::ActivityStates@{sf::priv::ActivityStates}}
+\doxysubsubsection{\texorpdfstring{looper}{looper}}
+{\footnotesize\ttfamily ALooper\texorpdfstring{$\ast$}{*} sf\+::priv\+::\+Activity\+States\+::looper}
+
+\Hypertarget{structsf_1_1priv_1_1_activity_states_aebdde944f4bd5a4dbaff0d61ce23d411}\label{structsf_1_1priv_1_1_activity_states_aebdde944f4bd5a4dbaff0d61ce23d411} 
+\index{sf::priv::ActivityStates@{sf::priv::ActivityStates}!mainOver@{mainOver}}
+\index{mainOver@{mainOver}!sf::priv::ActivityStates@{sf::priv::ActivityStates}}
+\doxysubsubsection{\texorpdfstring{mainOver}{mainOver}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Activity\+States\+::main\+Over}
+
+\Hypertarget{structsf_1_1priv_1_1_activity_states_a32ded3673dde802c16df4a4d5cb52fb6}\label{structsf_1_1priv_1_1_activity_states_a32ded3673dde802c16df4a4d5cb52fb6} 
+\index{sf::priv::ActivityStates@{sf::priv::ActivityStates}!mousePosition@{mousePosition}}
+\index{mousePosition@{mousePosition}!sf::priv::ActivityStates@{sf::priv::ActivityStates}}
+\doxysubsubsection{\texorpdfstring{mousePosition}{mousePosition}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} sf\+::priv\+::\+Activity\+States\+::mouse\+Position}
+
+\Hypertarget{structsf_1_1priv_1_1_activity_states_a696e95adcff618144c92950d7d23a426}\label{structsf_1_1priv_1_1_activity_states_a696e95adcff618144c92950d7d23a426} 
+\index{sf::priv::ActivityStates@{sf::priv::ActivityStates}!mutex@{mutex}}
+\index{mutex@{mutex}!sf::priv::ActivityStates@{sf::priv::ActivityStates}}
+\doxysubsubsection{\texorpdfstring{mutex}{mutex}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1_mutex}{Mutex}} sf\+::priv\+::\+Activity\+States\+::mutex}
+
+\Hypertarget{structsf_1_1priv_1_1_activity_states_a28168946cc3f7678848141b9af732fcf}\label{structsf_1_1priv_1_1_activity_states_a28168946cc3f7678848141b9af732fcf} 
+\index{sf::priv::ActivityStates@{sf::priv::ActivityStates}!processEvent@{processEvent}}
+\index{processEvent@{processEvent}!sf::priv::ActivityStates@{sf::priv::ActivityStates}}
+\doxysubsubsection{\texorpdfstring{processEvent}{processEvent}}
+{\footnotesize\ttfamily int(\texorpdfstring{$\ast$}{*} sf\+::priv\+::\+Activity\+States\+::process\+Event) (int fd, int events, void \texorpdfstring{$\ast$}{*}data)}
+
+\Hypertarget{structsf_1_1priv_1_1_activity_states_a2186e1bdf225984b33a0b883f6310426}\label{structsf_1_1priv_1_1_activity_states_a2186e1bdf225984b33a0b883f6310426} 
+\index{sf::priv::ActivityStates@{sf::priv::ActivityStates}!savedState@{savedState}}
+\index{savedState@{savedState}!sf::priv::ActivityStates@{sf::priv::ActivityStates}}
+\doxysubsubsection{\texorpdfstring{savedState}{savedState}}
+{\footnotesize\ttfamily void\texorpdfstring{$\ast$}{*} sf\+::priv\+::\+Activity\+States\+::saved\+State}
+
+\Hypertarget{structsf_1_1priv_1_1_activity_states_a0b5468c1e67e96d47e60ca0be4ebd407}\label{structsf_1_1priv_1_1_activity_states_a0b5468c1e67e96d47e60ca0be4ebd407} 
+\index{sf::priv::ActivityStates@{sf::priv::ActivityStates}!savedStateSize@{savedStateSize}}
+\index{savedStateSize@{savedStateSize}!sf::priv::ActivityStates@{sf::priv::ActivityStates}}
+\doxysubsubsection{\texorpdfstring{savedStateSize}{savedStateSize}}
+{\footnotesize\ttfamily size\+\_\+t sf\+::priv\+::\+Activity\+States\+::saved\+State\+Size}
+
+\Hypertarget{structsf_1_1priv_1_1_activity_states_ac4574cfb981b7c22a2bf1a3c559e49b2}\label{structsf_1_1priv_1_1_activity_states_ac4574cfb981b7c22a2bf1a3c559e49b2} 
+\index{sf::priv::ActivityStates@{sf::priv::ActivityStates}!screenSize@{screenSize}}
+\index{screenSize@{screenSize}!sf::priv::ActivityStates@{sf::priv::ActivityStates}}
+\doxysubsubsection{\texorpdfstring{screenSize}{screenSize}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} sf\+::priv\+::\+Activity\+States\+::screen\+Size}
+
+\Hypertarget{structsf_1_1priv_1_1_activity_states_a289bd06c37641badf7fbf88c2bbc3fe6}\label{structsf_1_1priv_1_1_activity_states_a289bd06c37641badf7fbf88c2bbc3fe6} 
+\index{sf::priv::ActivityStates@{sf::priv::ActivityStates}!terminated@{terminated}}
+\index{terminated@{terminated}!sf::priv::ActivityStates@{sf::priv::ActivityStates}}
+\doxysubsubsection{\texorpdfstring{terminated}{terminated}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Activity\+States\+::terminated}
+
+\Hypertarget{structsf_1_1priv_1_1_activity_states_a84b8c5251e9c1bc7bedb0a07c0db30f6}\label{structsf_1_1priv_1_1_activity_states_a84b8c5251e9c1bc7bedb0a07c0db30f6} 
+\index{sf::priv::ActivityStates@{sf::priv::ActivityStates}!touchEvents@{touchEvents}}
+\index{touchEvents@{touchEvents}!sf::priv::ActivityStates@{sf::priv::ActivityStates}}
+\doxysubsubsection{\texorpdfstring{touchEvents}{touchEvents}}
+{\footnotesize\ttfamily std\+::map$<$int, \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}}$>$ sf\+::priv\+::\+Activity\+States\+::touch\+Events}
+
+\Hypertarget{structsf_1_1priv_1_1_activity_states_a6e0783c242f8d7113db4deb93386c5fb}\label{structsf_1_1priv_1_1_activity_states_a6e0783c242f8d7113db4deb93386c5fb} 
+\index{sf::priv::ActivityStates@{sf::priv::ActivityStates}!updated@{updated}}
+\index{updated@{updated}!sf::priv::ActivityStates@{sf::priv::ActivityStates}}
+\doxysubsubsection{\texorpdfstring{updated}{updated}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Activity\+States\+::updated}
+
+\Hypertarget{structsf_1_1priv_1_1_activity_states_a7fa62f37d5583e681dfe1d77eb6b438b}\label{structsf_1_1priv_1_1_activity_states_a7fa62f37d5583e681dfe1d77eb6b438b} 
+\index{sf::priv::ActivityStates@{sf::priv::ActivityStates}!window@{window}}
+\index{window@{window}!sf::priv::ActivityStates@{sf::priv::ActivityStates}}
+\doxysubsubsection{\texorpdfstring{window}{window}}
+{\footnotesize\ttfamily ANative\+Window\texorpdfstring{$\ast$}{*} sf\+::priv\+::\+Activity\+States\+::window}
+
+
+
+Dokumentacja dla tej struktury została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+System/\+Android/\mbox{\hyperlink{_activity_8hpp}{Activity.\+hpp}}\end{DoxyCompactItemize}

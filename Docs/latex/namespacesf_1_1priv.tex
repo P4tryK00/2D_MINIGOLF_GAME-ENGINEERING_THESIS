@@ -1,0 +1,1040 @@
+\doxysection{Dokumentacja przestrzeni nazw sf\+::priv}
+\hypertarget{namespacesf_1_1priv}{}\label{namespacesf_1_1priv}\index{sf::priv@{sf::priv}}
+\doxysubsubsection*{Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states}{Activity\+States}}
+\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_audio_device}{Audio\+Device}}
+\begin{DoxyCompactList}\small\item\em High-\/level wrapper around the audio API, it manages the creation and destruction of the audio device and context and stores the device capabilities. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_clipboard_impl}{Clipboard\+Impl}}
+\begin{DoxyCompactList}\small\item\em Give access to the system clipboard. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_clock_impl}{Clock\+Impl}}
+\begin{DoxyCompactList}\small\item\em Unix implementation of \doxylink{classsf_1_1_clock}{sf\+::\+Clock}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_cursor_impl}{Cursor\+Impl}}
+\begin{DoxyCompactList}\small\item\em Android implementation of \doxylink{classsf_1_1_cursor}{Cursor}. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structsf_1_1priv_1_1_drm}{Drm}}
+\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_d_r_m_context}{DRMContext}}
+\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_eagl_context}{Eagl\+Context}}
+\begin{DoxyCompactList}\small\item\em i\+OS (EAGL) implementation of Open\+GL contexts \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_egl_context}{Egl\+Context}}
+\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context}{Gl\+Context}}
+\begin{DoxyCompactList}\small\item\em Abstract class representing an Open\+GL context. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_glx_context}{Glx\+Context}}
+\begin{DoxyCompactList}\small\item\em Linux (GLX) implementation of Open\+GL contexts. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_h_i_d_input_manager}{HIDInput\+Manager}}
+\begin{DoxyCompactList}\small\item\em \doxylink{classsf_1_1priv_1_1_input_impl}{sf\+::priv\+::\+Input\+Impl} helper \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_h_i_d_joystick_manager}{HIDJoystick\+Manager}}
+\begin{DoxyCompactList}\small\item\em \doxylink{classsf_1_1priv_1_1_input_impl}{sf\+::priv\+::\+Input\+Impl} helper \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_image_loader}{Image\+Loader}}
+\begin{DoxyCompactList}\small\item\em Load/save image files. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl}{Input\+Impl}}
+\begin{DoxyCompactList}\small\item\em i\+OS implementation of inputs (keyboard + mouse) \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structsf_1_1priv_1_1_joystick_caps}{Joystick\+Caps}}
+\begin{DoxyCompactList}\small\item\em Structure holding a joystick\textquotesingle{}s information. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl}{Joystick\+Impl}}
+\begin{DoxyCompactList}\small\item\em Android implementation of joysticks. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_manager}{Joystick\+Manager}}
+\begin{DoxyCompactList}\small\item\em Global joystick manager. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structsf_1_1priv_1_1_joystick_state}{Joystick\+State}}
+\begin{DoxyCompactList}\small\item\em Structure holding a joystick\textquotesingle{}s state. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_keyboard_impl}{Keyboard\+Impl}}
+\begin{DoxyCompactList}\small\item\em \doxylink{classsf_1_1priv_1_1_keyboard_impl}{sf\+::priv\+::\+Keyboard\+Impl} helper \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structsf_1_1priv_1_1_matrix}{Matrix}}
+\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_mutex_impl}{Mutex\+Impl}}
+\begin{DoxyCompactList}\small\item\em Unix implementation of mutexes. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_render_texture_impl}{Render\+Texture\+Impl}}
+\begin{DoxyCompactList}\small\item\em Abstract base class for render-\/texture implementations. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_render_texture_impl_default}{Render\+Texture\+Impl\+Default}}
+\begin{DoxyCompactList}\small\item\em Default specialization of \doxylink{classsf_1_1priv_1_1_render_texture_impl}{Render\+Texture\+Impl}, using an in-\/memory context. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_render_texture_impl_f_b_o}{Render\+Texture\+Impl\+FBO}}
+\begin{DoxyCompactList}\small\item\em Specialization of \doxylink{classsf_1_1priv_1_1_render_texture_impl}{Render\+Texture\+Impl} using the Frame\+Buffer Object Open\+GL extension. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_resource_stream}{Resource\+Stream}}
+\begin{DoxyCompactList}\small\item\em Read from Android asset files. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_impl}{Sensor\+Impl}}
+\begin{DoxyCompactList}\small\item\em Android implementation of sensors. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_manager}{Sensor\+Manager}}
+\begin{DoxyCompactList}\small\item\em Global sensor manager. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_s_f_context}{SFContext}}
+\begin{DoxyCompactList}\small\item\em OSX (Cocoa) implementation of Open\+GL contexts. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_socket_impl}{Socket\+Impl}}
+\begin{DoxyCompactList}\small\item\em Helper class implementing all the non-\/portable socket stuff; this is the Unix version. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structsf_1_1priv_1_1_socket_initializer}{Socket\+Initializer}}
+\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_sound_file_reader_flac}{Sound\+File\+Reader\+Flac}}
+\begin{DoxyCompactList}\small\item\em Implementation of sound file reader that handles FLAC files. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_sound_file_reader_mp3}{Sound\+File\+Reader\+Mp3}}
+\begin{DoxyCompactList}\small\item\em Implementation of sound file reader that handles MP3 files. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_sound_file_reader_ogg}{Sound\+File\+Reader\+Ogg}}
+\begin{DoxyCompactList}\small\item\em Implementation of sound file reader that handles OGG/\+Vorbis files. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_sound_file_reader_wav}{Sound\+File\+Reader\+Wav}}
+\begin{DoxyCompactList}\small\item\em Implementation of sound file reader that handles wav files. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_sound_file_writer_flac}{Sound\+File\+Writer\+Flac}}
+\begin{DoxyCompactList}\small\item\em Implementation of sound file writer that handles FLAC files. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_sound_file_writer_ogg}{Sound\+File\+Writer\+Ogg}}
+\begin{DoxyCompactList}\small\item\em Implementation of sound file writer that handles OGG/\+Vorbis files. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_sound_file_writer_wav}{Sound\+File\+Writer\+Wav}}
+\begin{DoxyCompactList}\small\item\em Implementation of sound file writer that handles wav files. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_texture_saver}{Texture\+Saver}}
+\begin{DoxyCompactList}\small\item\em Automatic wrapper for saving and restoring the current texture binding. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_thread_impl}{Thread\+Impl}}
+\begin{DoxyCompactList}\small\item\em Unix implementation of threads. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_thread_local_impl}{Thread\+Local\+Impl}}
+\begin{DoxyCompactList}\small\item\em Unix implementation of thread-\/local storage. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structsf_1_1priv_1_1_vector4}{Vector4}}
+\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_video_mode_impl}{Video\+Mode\+Impl}}
+\begin{DoxyCompactList}\small\item\em OS-\/specific implementation of video modes functions. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_vulkan_impl_win32}{Vulkan\+Impl\+Win32}}
+\begin{DoxyCompactList}\small\item\em Windows implementation of \doxylink{classsf_1_1_vulkan}{Vulkan}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_vulkan_impl_x11}{Vulkan\+Impl\+X11}}
+\begin{DoxyCompactList}\small\item\em Linux (X11) implementation of \doxylink{classsf_1_1_vulkan}{Vulkan}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_wgl_context}{Wgl\+Context}}
+\begin{DoxyCompactList}\small\item\em Windows (WGL) implementation of Open\+GL contexts. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl}{Window\+Impl}}
+\begin{DoxyCompactList}\small\item\em Abstract base class for OS-\/specific window implementation. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_android}{Window\+Impl\+Android}}
+\begin{DoxyCompactList}\small\item\em Android implementation of \doxylink{classsf_1_1priv_1_1_window_impl}{Window\+Impl}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_cocoa}{Window\+Impl\+Cocoa}}
+\begin{DoxyCompactList}\small\item\em Mac OS X (Cocoa) implementation of \doxylink{classsf_1_1priv_1_1_window_impl}{Window\+Impl}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_d_r_m}{Window\+Impl\+DRM}}
+\begin{DoxyCompactList}\small\item\em DRM implementation of \doxylink{classsf_1_1priv_1_1_window_impl}{Window\+Impl}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_u_i_kit}{Window\+Impl\+UIKit}}
+\begin{DoxyCompactList}\small\item\em i\+OS (UIKit) implementation of \doxylink{classsf_1_1priv_1_1_window_impl}{Window\+Impl} \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_win32}{Window\+Impl\+Win32}}
+\begin{DoxyCompactList}\small\item\em Windows implementation of \doxylink{classsf_1_1priv_1_1_window_impl}{Window\+Impl}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_x11}{Window\+Impl\+X11}}
+\begin{DoxyCompactList}\small\item\em Linux (X11) implementation of \doxylink{classsf_1_1priv_1_1_window_impl}{Window\+Impl}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Definicje typów}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::vector$<$ IOHIDElement\+Ref $>$ \mbox{\hyperlink{namespacesf_1_1priv_ad383d5fea6fe254916a6f69cf53dcb95}{IOHIDElements}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classsf_1_1_sound_file_reader}{Sound\+File\+Reader}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespacesf_1_1priv_aca30ad5e6ee22353d72145af1af53b78}{create\+Reader}} ()
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classsf_1_1_sound_file_writer}{Sound\+File\+Writer}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespacesf_1_1priv_aaa8b548de29fc4570064f372b4df8df0}{create\+Writer}} ()
+\item 
+void \mbox{\hyperlink{namespacesf_1_1priv_abd2d24de883f92e3a43d1925a09094d8}{al\+Check\+Error}} (const char \texorpdfstring{$\ast$}{*}file, unsigned int line, const char \texorpdfstring{$\ast$}{*}expression)
+\item 
+void \mbox{\hyperlink{namespacesf_1_1priv_a76dced3d47126fb5cab824ad83cb296a}{gl\+Check\+Error}} (const char \texorpdfstring{$\ast$}{*}file, unsigned int line, const char \texorpdfstring{$\ast$}{*}expression)
+\begin{DoxyCompactList}\small\item\em Check the last Open\+GL error. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacesf_1_1priv_a9c62becb069e8be5cb06669b86f16b98}{ensure\+Extensions\+Init}} ()
+\begin{DoxyCompactList}\small\item\em Make sure that extensions are initialized. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacesf_1_1priv_a3711f4d0b11f07fddaee5e9ab442de82}{copy\+Matrix}} (const \mbox{\hyperlink{classsf_1_1_transform}{Transform}} \&source, \mbox{\hyperlink{structsf_1_1priv_1_1_matrix}{Matrix}}$<$ 3, 3 $>$ \&dest)
+\item 
+void \mbox{\hyperlink{namespacesf_1_1priv_a9f95b349856fb731fc6b21207079472b}{copy\+Matrix}} (const \mbox{\hyperlink{classsf_1_1_transform}{Transform}} \&source, \mbox{\hyperlink{structsf_1_1priv_1_1_matrix}{Matrix}}$<$ 4, 4 $>$ \&dest)
+\item 
+void \mbox{\hyperlink{namespacesf_1_1priv_ab22990303e720502e7d0d8b2a70b2762}{copy\+Matrix}} (const float \texorpdfstring{$\ast$}{*}source, std\+::size\+\_\+t elements, float \texorpdfstring{$\ast$}{*}dest)
+\item 
+void \mbox{\hyperlink{namespacesf_1_1priv_a55480dd3179d00c74aceda3838a6cc16}{copy\+Vector}} (const \mbox{\hyperlink{classsf_1_1_color}{Color}} \&source, \mbox{\hyperlink{structsf_1_1priv_1_1_vector4}{Vector4}}$<$ float $>$ \&dest)
+\item 
+void \mbox{\hyperlink{namespacesf_1_1priv_a02c97ee59fb74fa3d920c434d645dd2e}{copy\+Vector}} (const \mbox{\hyperlink{classsf_1_1_color}{Color}} \&source, \mbox{\hyperlink{structsf_1_1priv_1_1_vector4}{Vector4}}$<$ int $>$ \&dest)
+\item 
+\mbox{\hyperlink{structsf_1_1priv_1_1_activity_states}{Activity\+States}} \texorpdfstring{$\ast$}{*}\& \mbox{\hyperlink{namespacesf_1_1priv_a82677e5663a38d124a86a49455dd6b29}{get\+Activity\+States\+Ptr}} ()
+\item 
+void \mbox{\hyperlink{namespacesf_1_1priv_af2530d4821c6e4dc30445b60a95e4cd3}{reset\+Activity}} (\mbox{\hyperlink{structsf_1_1priv_1_1_activity_states}{Activity\+States}} \texorpdfstring{$\ast$}{*}initialized\+States)
+\item 
+\mbox{\hyperlink{structsf_1_1priv_1_1_activity_states}{Activity\+States}} \& \mbox{\hyperlink{namespacesf_1_1priv_a2b5832cc441beb17d16925723306050c}{get\+Activity}} ()
+\item 
+void \mbox{\hyperlink{namespacesf_1_1priv_a4cd77531723a4a146de82366f3caec9a}{sleep\+Impl}} (\mbox{\hyperlink{classsf_1_1_time}{Time}} time)
+\begin{DoxyCompactList}\small\item\em Unix implementation of sf\+::\+Sleep. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacesf_1_1priv_a747456281a06926dd05760ba605c3025}{egl\+Check\+Error}} (const char \texorpdfstring{$\ast$}{*}file, unsigned int line, const char \texorpdfstring{$\ast$}{*}expression)
+\begin{DoxyCompactList}\small\item\em Check the last EGL error. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{namespacesf_1_1priv_ab1e2ca20858b4ae87555255076e19779}{mode\+Bits\+Per\+Pixel}} (CGDisplay\+Mode\+Ref mode)
+\begin{DoxyCompactList}\small\item\em Get bpp of a video mode for OS 10.\+6 or later. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{namespacesf_1_1priv_ab964573a1d817f62a0d92b831c311a47}{display\+Bits\+Per\+Pixel}} (CGDirect\+Display\+ID display\+Id)
+\begin{DoxyCompactList}\small\item\em Get bpp for all OS X version. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1_video_mode}{Video\+Mode}} \mbox{\hyperlink{namespacesf_1_1priv_a80f5129e2dc0706114ea6856a1af462f}{convert\+CGMode\+To\+SFMode}} (CGDisplay\+Mode\+Ref cgmode)
+\begin{DoxyCompactList}\small\item\em Convert a Quartz video mode into a \doxylink{classsf_1_1_video_mode}{sf\+::\+Video\+Mode} object. \end{DoxyCompactList}\item 
+CGDisplay\+Mode\+Ref \mbox{\hyperlink{namespacesf_1_1priv_a2bb3cb645151d9ca1520acb08a707228}{convert\+SFMode\+To\+CGMode}} (\mbox{\hyperlink{classsf_1_1_video_mode}{Video\+Mode}} sfmode)
+\begin{DoxyCompactList}\small\item\em Convert a \doxylink{classsf_1_1_video_mode}{sf\+::\+Video\+Mode} object into a Quartz video mode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_s_f_open_g_l_view}{SFOpen\+GLView}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespacesf_1_1priv_aa8f1ab52b7e8c109084bc8e42fafccc2}{get\+SFOpen\+GLView\+From\+SFMLWindow}} (const \mbox{\hyperlink{classsf_1_1_window_base}{Window\+Base}} \&window)
+\begin{DoxyCompactList}\small\item\em Extract the dedicated \doxylink{interface_s_f_open_g_l_view}{SFOpen\+GLView} from the SFML window. \end{DoxyCompactList}\item 
+CGFloat \mbox{\hyperlink{namespacesf_1_1priv_a70e6697d1a2f244b46177090393aa100}{get\+Default\+Scale\+Factor}} ()
+\begin{DoxyCompactList}\small\item\em Get the scale factor of the main screen. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\void \mbox{\hyperlink{namespacesf_1_1priv_ae1111165ab0c6fef7faf8325ba0ae8ea}{scale\+In}} (T \&in, id$<$ \mbox{\hyperlink{protocol_window_impl_delegate_protocol-p}{Window\+Impl\+Delegate\+Protocol}} $>$ delegate)
+\begin{DoxyCompactList}\small\item\em Scale SFML coordinates to backing coordinates. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\void \mbox{\hyperlink{namespacesf_1_1priv_a505f95f3a8f80b5f45696139072b3d53}{scale\+In\+Width\+Height}} (T \&in, id$<$ \mbox{\hyperlink{protocol_window_impl_delegate_protocol-p}{Window\+Impl\+Delegate\+Protocol}} $>$ delegate)
+\item 
+{\footnotesize template$<$class T $>$ }\\void \mbox{\hyperlink{namespacesf_1_1priv_a156207a15a28f14c31e464f8491a470a}{scale\+In\+XY}} (T \&in, id$<$ \mbox{\hyperlink{protocol_window_impl_delegate_protocol-p}{Window\+Impl\+Delegate\+Protocol}} $>$ delegate)
+\item 
+{\footnotesize template$<$class T $>$ }\\void \mbox{\hyperlink{namespacesf_1_1priv_ae43144ac55ab0ccb71f35a9be2fe95b1}{scale\+Out}} (T \&out, id$<$ \mbox{\hyperlink{protocol_window_impl_delegate_protocol-p}{Window\+Impl\+Delegate\+Protocol}} $>$ delegate)
+\begin{DoxyCompactList}\small\item\em Scale backing coordinates to SFML coordinates. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\void \mbox{\hyperlink{namespacesf_1_1priv_ad00abf8ef496870f2f72679d3509fccb}{scale\+Out\+Width\+Height}} (T \&out, id$<$ \mbox{\hyperlink{protocol_window_impl_delegate_protocol-p}{Window\+Impl\+Delegate\+Protocol}} $>$ delegate)
+\item 
+{\footnotesize template$<$class T $>$ }\\void \mbox{\hyperlink{namespacesf_1_1priv_aa6501d418505c263e13a6f582862a71e}{scale\+Out\+XY}} (T \&out, id$<$ \mbox{\hyperlink{protocol_window_impl_delegate_protocol-p}{Window\+Impl\+Delegate\+Protocol}} $>$ delegate)
+\item 
+void \mbox{\hyperlink{namespacesf_1_1priv_ad7f4558bead1aab68cd09534db02b8c9}{hide\+Mouse\+Cursor}} ()
+\item 
+void \mbox{\hyperlink{namespacesf_1_1priv_a186e1f9b55d54b4b1549ec551d0d023a}{show\+Mouse\+Cursor}} ()
+\item 
+Display \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespacesf_1_1priv_aa1e0c37c2896b83ea77fe38a0564e0b1}{Open\+Display}} ()
+\begin{DoxyCompactList}\small\item\em Get the shared Display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacesf_1_1priv_a1bba7378bd254853ba428683b043c40c}{Close\+Display}} (Display \texorpdfstring{$\ast$}{*}display)
+\begin{DoxyCompactList}\small\item\em Release a reference to the shared display. \end{DoxyCompactList}\item 
+XIM \mbox{\hyperlink{namespacesf_1_1priv_a186a95a76d838bc257beab8cf50be9fd}{Open\+XIM}} ()
+\begin{DoxyCompactList}\small\item\em Get the shared XIM context for the Display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacesf_1_1priv_aea0a744b1b7d72cd02f725beb264d5a7}{Close\+XIM}} (XIM xim)
+\begin{DoxyCompactList}\small\item\em Release a reference to the shared XIM context. \end{DoxyCompactList}\item 
+Atom \mbox{\hyperlink{namespacesf_1_1priv_a7c937896c5eb626480939b2eac279b79}{get\+Atom}} (const std\+::string \&name, bool only\+If\+Exists=\mbox{\hyperlink{ordinals_8h_a65e9886d74aaee76545e83dd09011727}{false}})
+\begin{DoxyCompactList}\small\item\em Get the atom with the specified name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} \mbox{\hyperlink{namespacesf_1_1priv_a79b078345ccb8b3324b105ec5eb28a9c}{key\+Sym\+To\+Key}} (Key\+Sym symbol)
+\begin{DoxyCompactList}\small\item\em Convert X11 Key\+Sym to \doxylink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{sf\+::\+Keyboard\+::\+Key}. \end{DoxyCompactList}\item 
+Key\+Sym \mbox{\hyperlink{namespacesf_1_1priv_acbc29d05b62eec96856f8eb6acb1ed1d}{key\+To\+Key\+Sym}} (\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} key)
+\begin{DoxyCompactList}\small\item\em Convert \doxylink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{sf\+::\+Keyboard\+::\+Key} to X11 Key\+Sym. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacesf_aa746fb1ddef4410bddf198ebb27e727c}{Uint32}} \mbox{\hyperlink{namespacesf_1_1priv_a5aa25c6a88db1a5c4207678d1c775283}{keysym\+To\+Unicode}} (Key\+Sym keysym)
+\begin{DoxyCompactList}\small\item\em Converts a Key\+Sym to UTF-\/32. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} \mbox{\hyperlink{namespacesf_1_1priv_a60b18fa5b6ed86ee9c8153931df5c9c0}{virtual\+Key\+To\+Sf\+Key}} (UINT virtual\+Key)
+\item 
+int \mbox{\hyperlink{namespacesf_1_1priv_a0e06465ac59b5a098761e3ff27c6e395}{sf\+Key\+To\+Virtual\+Key}} (\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} key)
+\item 
+WORD \mbox{\hyperlink{namespacesf_1_1priv_ab0fa519041a7fce0453456c12117a7ee}{sf\+Scan\+To\+Win\+Scan}} (\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} code)
+\item 
+WORD \mbox{\hyperlink{namespacesf_1_1priv_a3696410688dd4c0db77549382291667a}{sf\+Scan\+To\+Win\+Scan\+Extended}} (\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} code)
+\item 
+UINT \mbox{\hyperlink{namespacesf_1_1priv_a6b5607e9c839e16c40e2ddf04e543f07}{sf\+Scan\+To\+Virtual\+Key}} (\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} code)
+\item 
+bool \mbox{\hyperlink{namespacesf_1_1priv_a0c8c0a5c0225d23a49218e90d5946d5e}{is\+Valid\+Scancode}} (\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} code)
+\item 
+bool \mbox{\hyperlink{namespacesf_1_1priv_ad95feb6f80bc7b6bb47e5dbc3d38af27}{is\+Valid\+Key}} (\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} key)
+\item 
+\mbox{\hyperlink{classsf_1_1_string}{String}} \mbox{\hyperlink{namespacesf_1_1priv_a39f159b5829a53eae5219b5bf8c78251}{get\+Error\+String}} (DWORD error\+Code)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Zmienne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsf_1_1priv_1_1_socket_initializer}{Socket\+Initializer}} \mbox{\hyperlink{namespacesf_1_1priv_a99f9b70b5d0027ba499e3345e0d04340}{global\+Initializer}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja definicji typów}
+\Hypertarget{namespacesf_1_1priv_ad383d5fea6fe254916a6f69cf53dcb95}\label{namespacesf_1_1priv_ad383d5fea6fe254916a6f69cf53dcb95} 
+\index{sf::priv@{sf::priv}!IOHIDElements@{IOHIDElements}}
+\index{IOHIDElements@{IOHIDElements}!sf::priv@{sf::priv}}
+\doxysubsubsection{\texorpdfstring{IOHIDElements}{IOHIDElements}}
+{\footnotesize\ttfamily typedef std\+::vector$<$IOHIDElement\+Ref$>$ \mbox{\hyperlink{namespacesf_1_1priv_ad383d5fea6fe254916a6f69cf53dcb95}{sf\+::priv\+::\+IOHIDElements}}}
+
+
+
+\doxysubsection{Dokumentacja funkcji}
+\Hypertarget{namespacesf_1_1priv_abd2d24de883f92e3a43d1925a09094d8}\label{namespacesf_1_1priv_abd2d24de883f92e3a43d1925a09094d8} 
+\index{sf::priv@{sf::priv}!alCheckError@{alCheckError}}
+\index{alCheckError@{alCheckError}!sf::priv@{sf::priv}}
+\doxysubsubsection{\texorpdfstring{alCheckError()}{alCheckError()}}
+{\footnotesize\ttfamily void sf\+::priv\+::al\+Check\+Error (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{file,  }\item[{unsigned int}]{line,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{expression }\end{DoxyParamCaption})}
+
+Check the last Open\+AL error
+
+
+\begin{DoxyParams}{Parametry}
+{\em file} & Source file where the call is located \\
+\hline
+{\em line} & Line number of the source file where the call is located \\
+\hline
+{\em expression} & The evaluated expression as a string \\
+\hline
+\end{DoxyParams}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{namespacesf_1_1priv_abd2d24de883f92e3a43d1925a09094d8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacesf_1_1priv_a1bba7378bd254853ba428683b043c40c}\label{namespacesf_1_1priv_a1bba7378bd254853ba428683b043c40c} 
+\index{sf::priv@{sf::priv}!CloseDisplay@{CloseDisplay}}
+\index{CloseDisplay@{CloseDisplay}!sf::priv@{sf::priv}}
+\doxysubsubsection{\texorpdfstring{CloseDisplay()}{CloseDisplay()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Close\+Display (\begin{DoxyParamCaption}\item[{Display \texorpdfstring{$\ast$}{*}}]{display }\end{DoxyParamCaption})}
+
+
+
+Release a reference to the shared display. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em display} & Display to release \\
+\hline
+\end{DoxyParams}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacesf_1_1priv_a1bba7378bd254853ba428683b043c40c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacesf_1_1priv_aea0a744b1b7d72cd02f725beb264d5a7}\label{namespacesf_1_1priv_aea0a744b1b7d72cd02f725beb264d5a7} 
+\index{sf::priv@{sf::priv}!CloseXIM@{CloseXIM}}
+\index{CloseXIM@{CloseXIM}!sf::priv@{sf::priv}}
+\doxysubsubsection{\texorpdfstring{CloseXIM()}{CloseXIM()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Close\+XIM (\begin{DoxyParamCaption}\item[{XIM}]{xim }\end{DoxyParamCaption})}
+
+
+
+Release a reference to the shared XIM context. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em xim} & XIM context to release \\
+\hline
+\end{DoxyParams}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{namespacesf_1_1priv_aea0a744b1b7d72cd02f725beb264d5a7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacesf_1_1priv_a80f5129e2dc0706114ea6856a1af462f}\label{namespacesf_1_1priv_a80f5129e2dc0706114ea6856a1af462f} 
+\index{sf::priv@{sf::priv}!convertCGModeToSFMode@{convertCGModeToSFMode}}
+\index{convertCGModeToSFMode@{convertCGModeToSFMode}!sf::priv@{sf::priv}}
+\doxysubsubsection{\texorpdfstring{convertCGModeToSFMode()}{convertCGModeToSFMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1_video_mode}{Video\+Mode}} sf\+::priv\+::convert\+CGMode\+To\+SFMode (\begin{DoxyParamCaption}\item[{CGDisplay\+Mode\+Ref}]{cgmode }\end{DoxyParamCaption})}
+
+
+
+Convert a Quartz video mode into a \doxylink{classsf_1_1_video_mode}{sf\+::\+Video\+Mode} object. 
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacesf_1_1priv_a80f5129e2dc0706114ea6856a1af462f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacesf_1_1priv_a2bb3cb645151d9ca1520acb08a707228}\label{namespacesf_1_1priv_a2bb3cb645151d9ca1520acb08a707228} 
+\index{sf::priv@{sf::priv}!convertSFModeToCGMode@{convertSFModeToCGMode}}
+\index{convertSFModeToCGMode@{convertSFModeToCGMode}!sf::priv@{sf::priv}}
+\doxysubsubsection{\texorpdfstring{convertSFModeToCGMode()}{convertSFModeToCGMode()}}
+{\footnotesize\ttfamily CGDisplay\+Mode\+Ref sf\+::priv\+::convert\+SFMode\+To\+CGMode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_video_mode}{Video\+Mode}}}]{sfmode }\end{DoxyParamCaption})}
+
+
+
+Convert a \doxylink{classsf_1_1_video_mode}{sf\+::\+Video\+Mode} object into a Quartz video mode. 
+
+\Hypertarget{namespacesf_1_1priv_ab22990303e720502e7d0d8b2a70b2762}\label{namespacesf_1_1priv_ab22990303e720502e7d0d8b2a70b2762} 
+\index{sf::priv@{sf::priv}!copyMatrix@{copyMatrix}}
+\index{copyMatrix@{copyMatrix}!sf::priv@{sf::priv}}
+\doxysubsubsection{\texorpdfstring{copyMatrix()}{copyMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void sf\+::priv\+::copy\+Matrix (\begin{DoxyParamCaption}\item[{const float \texorpdfstring{$\ast$}{*}}]{source,  }\item[{std\+::size\+\_\+t}]{elements,  }\item[{float \texorpdfstring{$\ast$}{*}}]{dest }\end{DoxyParamCaption})}
+
+\Hypertarget{namespacesf_1_1priv_a3711f4d0b11f07fddaee5e9ab442de82}\label{namespacesf_1_1priv_a3711f4d0b11f07fddaee5e9ab442de82} 
+\index{sf::priv@{sf::priv}!copyMatrix@{copyMatrix}}
+\index{copyMatrix@{copyMatrix}!sf::priv@{sf::priv}}
+\doxysubsubsection{\texorpdfstring{copyMatrix()}{copyMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void sf\+::priv\+::copy\+Matrix (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsf_1_1_transform}{Transform}} \&}]{source,  }\item[{\mbox{\hyperlink{structsf_1_1priv_1_1_matrix}{Matrix}}$<$ 3, 3 $>$ \&}]{dest }\end{DoxyParamCaption})}
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{namespacesf_1_1priv_a3711f4d0b11f07fddaee5e9ab442de82_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacesf_1_1priv_a3711f4d0b11f07fddaee5e9ab442de82_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacesf_1_1priv_a9f95b349856fb731fc6b21207079472b}\label{namespacesf_1_1priv_a9f95b349856fb731fc6b21207079472b} 
+\index{sf::priv@{sf::priv}!copyMatrix@{copyMatrix}}
+\index{copyMatrix@{copyMatrix}!sf::priv@{sf::priv}}
+\doxysubsubsection{\texorpdfstring{copyMatrix()}{copyMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void sf\+::priv\+::copy\+Matrix (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsf_1_1_transform}{Transform}} \&}]{source,  }\item[{\mbox{\hyperlink{structsf_1_1priv_1_1_matrix}{Matrix}}$<$ 4, 4 $>$ \&}]{dest }\end{DoxyParamCaption})}
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacesf_1_1priv_a9f95b349856fb731fc6b21207079472b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacesf_1_1priv_a55480dd3179d00c74aceda3838a6cc16}\label{namespacesf_1_1priv_a55480dd3179d00c74aceda3838a6cc16} 
+\index{sf::priv@{sf::priv}!copyVector@{copyVector}}
+\index{copyVector@{copyVector}!sf::priv@{sf::priv}}
+\doxysubsubsection{\texorpdfstring{copyVector()}{copyVector()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void sf\+::priv\+::copy\+Vector (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsf_1_1_color}{Color}} \&}]{source,  }\item[{\mbox{\hyperlink{structsf_1_1priv_1_1_vector4}{Vector4}}$<$ float $>$ \&}]{dest }\end{DoxyParamCaption})}
+
+\Hypertarget{namespacesf_1_1priv_a02c97ee59fb74fa3d920c434d645dd2e}\label{namespacesf_1_1priv_a02c97ee59fb74fa3d920c434d645dd2e} 
+\index{sf::priv@{sf::priv}!copyVector@{copyVector}}
+\index{copyVector@{copyVector}!sf::priv@{sf::priv}}
+\doxysubsubsection{\texorpdfstring{copyVector()}{copyVector()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void sf\+::priv\+::copy\+Vector (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsf_1_1_color}{Color}} \&}]{source,  }\item[{\mbox{\hyperlink{structsf_1_1priv_1_1_vector4}{Vector4}}$<$ int $>$ \&}]{dest }\end{DoxyParamCaption})}
+
+\Hypertarget{namespacesf_1_1priv_aca30ad5e6ee22353d72145af1af53b78}\label{namespacesf_1_1priv_aca30ad5e6ee22353d72145af1af53b78} 
+\index{sf::priv@{sf::priv}!createReader@{createReader}}
+\index{createReader@{createReader}!sf::priv@{sf::priv}}
+\doxysubsubsection{\texorpdfstring{createReader()}{createReader()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classsf_1_1_sound_file_reader}{Sound\+File\+Reader}} \texorpdfstring{$\ast$}{*} sf\+::priv\+::create\+Reader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{namespacesf_1_1priv_aaa8b548de29fc4570064f372b4df8df0}\label{namespacesf_1_1priv_aaa8b548de29fc4570064f372b4df8df0} 
+\index{sf::priv@{sf::priv}!createWriter@{createWriter}}
+\index{createWriter@{createWriter}!sf::priv@{sf::priv}}
+\doxysubsubsection{\texorpdfstring{createWriter()}{createWriter()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classsf_1_1_sound_file_writer}{Sound\+File\+Writer}} \texorpdfstring{$\ast$}{*} sf\+::priv\+::create\+Writer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{namespacesf_1_1priv_ab964573a1d817f62a0d92b831c311a47}\label{namespacesf_1_1priv_ab964573a1d817f62a0d92b831c311a47} 
+\index{sf::priv@{sf::priv}!displayBitsPerPixel@{displayBitsPerPixel}}
+\index{displayBitsPerPixel@{displayBitsPerPixel}!sf::priv@{sf::priv}}
+\doxysubsubsection{\texorpdfstring{displayBitsPerPixel()}{displayBitsPerPixel()}}
+{\footnotesize\ttfamily size\+\_\+t sf\+::priv\+::display\+Bits\+Per\+Pixel (\begin{DoxyParamCaption}\item[{CGDirect\+Display\+ID}]{display\+Id }\end{DoxyParamCaption})}
+
+
+
+Get bpp for all OS X version. 
+
+This function use only non-\/deprecated way to get the display bits per pixel information for a given display id. Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacesf_1_1priv_ab964573a1d817f62a0d92b831c311a47_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacesf_1_1priv_a747456281a06926dd05760ba605c3025}\label{namespacesf_1_1priv_a747456281a06926dd05760ba605c3025} 
+\index{sf::priv@{sf::priv}!eglCheckError@{eglCheckError}}
+\index{eglCheckError@{eglCheckError}!sf::priv@{sf::priv}}
+\doxysubsubsection{\texorpdfstring{eglCheckError()}{eglCheckError()}}
+{\footnotesize\ttfamily void sf\+::priv\+::egl\+Check\+Error (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{file,  }\item[{unsigned int}]{line,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{expression }\end{DoxyParamCaption})}
+
+
+
+Check the last EGL error. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em file} & Source file where the call is located \\
+\hline
+{\em line} & Line number of the source file where the call is located \\
+\hline
+{\em expression} & The evaluated expression as a string \\
+\hline
+\end{DoxyParams}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{namespacesf_1_1priv_a747456281a06926dd05760ba605c3025_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacesf_1_1priv_a9c62becb069e8be5cb06669b86f16b98}\label{namespacesf_1_1priv_a9c62becb069e8be5cb06669b86f16b98} 
+\index{sf::priv@{sf::priv}!ensureExtensionsInit@{ensureExtensionsInit}}
+\index{ensureExtensionsInit@{ensureExtensionsInit}!sf::priv@{sf::priv}}
+\doxysubsubsection{\texorpdfstring{ensureExtensionsInit()}{ensureExtensionsInit()}}
+{\footnotesize\ttfamily void sf\+::priv\+::ensure\+Extensions\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Make sure that extensions are initialized. 
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacesf_1_1priv_a9c62becb069e8be5cb06669b86f16b98_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacesf_1_1priv_a9c62becb069e8be5cb06669b86f16b98_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacesf_1_1priv_a2b5832cc441beb17d16925723306050c}\label{namespacesf_1_1priv_a2b5832cc441beb17d16925723306050c} 
+\index{sf::priv@{sf::priv}!getActivity@{getActivity}}
+\index{getActivity@{getActivity}!sf::priv@{sf::priv}}
+\doxysubsubsection{\texorpdfstring{getActivity()}{getActivity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_system_2_export_8hpp_a6476c9e422606477a4c23d92b1d79a1f}{SFML\+\_\+\+SYSTEM\+\_\+\+API}} \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states}{Activity\+States}} \& sf\+::priv\+::get\+Activity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacesf_1_1priv_a2b5832cc441beb17d16925723306050c_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacesf_1_1priv_a2b5832cc441beb17d16925723306050c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacesf_1_1priv_a82677e5663a38d124a86a49455dd6b29}\label{namespacesf_1_1priv_a82677e5663a38d124a86a49455dd6b29} 
+\index{sf::priv@{sf::priv}!getActivityStatesPtr@{getActivityStatesPtr}}
+\index{getActivityStatesPtr@{getActivityStatesPtr}!sf::priv@{sf::priv}}
+\doxysubsubsection{\texorpdfstring{getActivityStatesPtr()}{getActivityStatesPtr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_system_2_export_8hpp_a6476c9e422606477a4c23d92b1d79a1f}{SFML\+\_\+\+SYSTEM\+\_\+\+API}} \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states}{Activity\+States}} \texorpdfstring{$\ast$}{*}\& sf\+::priv\+::get\+Activity\+States\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacesf_1_1priv_a82677e5663a38d124a86a49455dd6b29_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacesf_1_1priv_a7c937896c5eb626480939b2eac279b79}\label{namespacesf_1_1priv_a7c937896c5eb626480939b2eac279b79} 
+\index{sf::priv@{sf::priv}!getAtom@{getAtom}}
+\index{getAtom@{getAtom}!sf::priv@{sf::priv}}
+\doxysubsubsection{\texorpdfstring{getAtom()}{getAtom()}}
+{\footnotesize\ttfamily Atom sf\+::priv\+::get\+Atom (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{bool}]{only\+If\+Exists = {\ttfamily \mbox{\hyperlink{ordinals_8h_a65e9886d74aaee76545e83dd09011727}{false}}} }\end{DoxyParamCaption})}
+
+
+
+Get the atom with the specified name. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em name} & Name of the atom \\
+\hline
+{\em only\+If\+Exists} & Don\textquotesingle{}t try to create the atom if it doesn\textquotesingle{}t already exist\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Atom if it exists or None (0) if it doesn\textquotesingle{}t 
+\end{DoxyReturn}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacesf_1_1priv_a7c937896c5eb626480939b2eac279b79_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacesf_1_1priv_a7c937896c5eb626480939b2eac279b79_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacesf_1_1priv_a70e6697d1a2f244b46177090393aa100}\label{namespacesf_1_1priv_a70e6697d1a2f244b46177090393aa100} 
+\index{sf::priv@{sf::priv}!getDefaultScaleFactor@{getDefaultScaleFactor}}
+\index{getDefaultScaleFactor@{getDefaultScaleFactor}!sf::priv@{sf::priv}}
+\doxysubsubsection{\texorpdfstring{getDefaultScaleFactor()}{getDefaultScaleFactor()}}
+{\footnotesize\ttfamily CGFloat sf\+::priv\+::get\+Default\+Scale\+Factor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the scale factor of the main screen. 
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacesf_1_1priv_a70e6697d1a2f244b46177090393aa100_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacesf_1_1priv_a39f159b5829a53eae5219b5bf8c78251}\label{namespacesf_1_1priv_a39f159b5829a53eae5219b5bf8c78251} 
+\index{sf::priv@{sf::priv}!getErrorString@{getErrorString}}
+\index{getErrorString@{getErrorString}!sf::priv@{sf::priv}}
+\doxysubsubsection{\texorpdfstring{getErrorString()}{getErrorString()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1_string}{String}} sf\+::priv\+::get\+Error\+String (\begin{DoxyParamCaption}\item[{DWORD}]{error\+Code }\end{DoxyParamCaption})}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacesf_1_1priv_a39f159b5829a53eae5219b5bf8c78251_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacesf_1_1priv_aa8f1ab52b7e8c109084bc8e42fafccc2}\label{namespacesf_1_1priv_aa8f1ab52b7e8c109084bc8e42fafccc2} 
+\index{sf::priv@{sf::priv}!getSFOpenGLViewFromSFMLWindow@{getSFOpenGLViewFromSFMLWindow}}
+\index{getSFOpenGLViewFromSFMLWindow@{getSFOpenGLViewFromSFMLWindow}!sf::priv@{sf::priv}}
+\doxysubsubsection{\texorpdfstring{getSFOpenGLViewFromSFMLWindow()}{getSFOpenGLViewFromSFMLWindow()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_s_f_open_g_l_view}{SFOpen\+GLView}} \texorpdfstring{$\ast$}{*} sf\+::priv\+::get\+SFOpen\+GLView\+From\+SFMLWindow (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsf_1_1_window_base}{Window\+Base}} \&}]{window }\end{DoxyParamCaption})}
+
+
+
+Extract the dedicated \doxylink{interface_s_f_open_g_l_view}{SFOpen\+GLView} from the SFML window. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em window} & a SFML window \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+nil if something went wrong or a SFOpen\+GLView\texorpdfstring{$\ast$}{*}. 
+\end{DoxyReturn}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacesf_1_1priv_aa8f1ab52b7e8c109084bc8e42fafccc2_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacesf_1_1priv_a76dced3d47126fb5cab824ad83cb296a}\label{namespacesf_1_1priv_a76dced3d47126fb5cab824ad83cb296a} 
+\index{sf::priv@{sf::priv}!glCheckError@{glCheckError}}
+\index{glCheckError@{glCheckError}!sf::priv@{sf::priv}}
+\doxysubsubsection{\texorpdfstring{glCheckError()}{glCheckError()}}
+{\footnotesize\ttfamily void sf\+::priv\+::gl\+Check\+Error (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{file,  }\item[{unsigned int}]{line,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{expression }\end{DoxyParamCaption})}
+
+
+
+Check the last Open\+GL error. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em file} & Source file where the call is located \\
+\hline
+{\em line} & Line number of the source file where the call is located \\
+\hline
+{\em expression} & The evaluated expression as a string \\
+\hline
+\end{DoxyParams}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{namespacesf_1_1priv_a76dced3d47126fb5cab824ad83cb296a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacesf_1_1priv_ad7f4558bead1aab68cd09534db02b8c9}\label{namespacesf_1_1priv_ad7f4558bead1aab68cd09534db02b8c9} 
+\index{sf::priv@{sf::priv}!hideMouseCursor@{hideMouseCursor}}
+\index{hideMouseCursor@{hideMouseCursor}!sf::priv@{sf::priv}}
+\doxysubsubsection{\texorpdfstring{hideMouseCursor()}{hideMouseCursor()}}
+{\footnotesize\ttfamily void sf\+::priv\+::hide\+Mouse\+Cursor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacesf_1_1priv_ad7f4558bead1aab68cd09534db02b8c9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacesf_1_1priv_ad95feb6f80bc7b6bb47e5dbc3d38af27}\label{namespacesf_1_1priv_ad95feb6f80bc7b6bb47e5dbc3d38af27} 
+\index{sf::priv@{sf::priv}!isValidKey@{isValidKey}}
+\index{isValidKey@{isValidKey}!sf::priv@{sf::priv}}
+\doxysubsubsection{\texorpdfstring{isValidKey()}{isValidKey()}}
+{\footnotesize\ttfamily bool sf\+::priv\+::is\+Valid\+Key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}}}]{key }\end{DoxyParamCaption})}
+
+\Hypertarget{namespacesf_1_1priv_a0c8c0a5c0225d23a49218e90d5946d5e}\label{namespacesf_1_1priv_a0c8c0a5c0225d23a49218e90d5946d5e} 
+\index{sf::priv@{sf::priv}!isValidScancode@{isValidScancode}}
+\index{isValidScancode@{isValidScancode}!sf::priv@{sf::priv}}
+\doxysubsubsection{\texorpdfstring{isValidScancode()}{isValidScancode()}}
+{\footnotesize\ttfamily bool sf\+::priv\+::is\+Valid\+Scancode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}}}]{code }\end{DoxyParamCaption})}
+
+\Hypertarget{namespacesf_1_1priv_a79b078345ccb8b3324b105ec5eb28a9c}\label{namespacesf_1_1priv_a79b078345ccb8b3324b105ec5eb28a9c} 
+\index{sf::priv@{sf::priv}!keySymToKey@{keySymToKey}}
+\index{keySymToKey@{keySymToKey}!sf::priv@{sf::priv}}
+\doxysubsubsection{\texorpdfstring{keySymToKey()}{keySymToKey()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} sf\+::priv\+::key\+Sym\+To\+Key (\begin{DoxyParamCaption}\item[{Key\+Sym}]{symbol }\end{DoxyParamCaption})}
+
+
+
+Convert X11 Key\+Sym to \doxylink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{sf\+::\+Keyboard\+::\+Key}. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em symbol} & X11 Key\+Sym\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+The corresponding \doxylink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{sf\+::\+Keyboard\+::\+Key} 
+\end{DoxyReturn}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacesf_1_1priv_a79b078345ccb8b3324b105ec5eb28a9c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacesf_1_1priv_a5aa25c6a88db1a5c4207678d1c775283}\label{namespacesf_1_1priv_a5aa25c6a88db1a5c4207678d1c775283} 
+\index{sf::priv@{sf::priv}!keysymToUnicode@{keysymToUnicode}}
+\index{keysymToUnicode@{keysymToUnicode}!sf::priv@{sf::priv}}
+\doxysubsubsection{\texorpdfstring{keysymToUnicode()}{keysymToUnicode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesf_aa746fb1ddef4410bddf198ebb27e727c}{Uint32}} sf\+::priv\+::keysym\+To\+Unicode (\begin{DoxyParamCaption}\item[{Key\+Sym}]{keysym }\end{DoxyParamCaption})}
+
+
+
+Converts a Key\+Sym to UTF-\/32. 
+
+This code was autogenerated from the following table\+: \href{https://www.cl.cam.ac.uk/~mgk25/ucs/keysyms.txt}{\texttt{ https\+://www.\+cl.\+cam.\+ac.\+uk/\texorpdfstring{$\sim$}{\string~}mgk25/ucs/keysyms.\+txt}}
+
+The generated table was edited so that dead keys are mapped to non-\/combining characters instead of combining diacritical marks because is it more suitable to describe those keys in user interfaces.
+
+
+\begin{DoxyParams}{Parametry}
+{\em keysym} & keysym to be converted\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+corresponding UTF-\/32 
+\end{DoxyReturn}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacesf_1_1priv_a5aa25c6a88db1a5c4207678d1c775283_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacesf_1_1priv_acbc29d05b62eec96856f8eb6acb1ed1d}\label{namespacesf_1_1priv_acbc29d05b62eec96856f8eb6acb1ed1d} 
+\index{sf::priv@{sf::priv}!keyToKeySym@{keyToKeySym}}
+\index{keyToKeySym@{keyToKeySym}!sf::priv@{sf::priv}}
+\doxysubsubsection{\texorpdfstring{keyToKeySym()}{keyToKeySym()}}
+{\footnotesize\ttfamily Key\+Sym sf\+::priv\+::key\+To\+Key\+Sym (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}}}]{key }\end{DoxyParamCaption})}
+
+
+
+Convert \doxylink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{sf\+::\+Keyboard\+::\+Key} to X11 Key\+Sym. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em key} & X11 \doxylink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{sf\+::\+Keyboard\+::\+Key}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+The corresponding X11 Key\+Sym 
+\end{DoxyReturn}
+\Hypertarget{namespacesf_1_1priv_ab1e2ca20858b4ae87555255076e19779}\label{namespacesf_1_1priv_ab1e2ca20858b4ae87555255076e19779} 
+\index{sf::priv@{sf::priv}!modeBitsPerPixel@{modeBitsPerPixel}}
+\index{modeBitsPerPixel@{modeBitsPerPixel}!sf::priv@{sf::priv}}
+\doxysubsubsection{\texorpdfstring{modeBitsPerPixel()}{modeBitsPerPixel()}}
+{\footnotesize\ttfamily size\+\_\+t sf\+::priv\+::mode\+Bits\+Per\+Pixel (\begin{DoxyParamCaption}\item[{CGDisplay\+Mode\+Ref}]{mode }\end{DoxyParamCaption})}
+
+
+
+Get bpp of a video mode for OS 10.\+6 or later. 
+
+With OS 10.\+6 and later, Quartz doesn\textquotesingle{}t use dictionaries any more to represent video mode. Instead it uses a CGDisplay\+Mode opaque type. Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacesf_1_1priv_ab1e2ca20858b4ae87555255076e19779_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacesf_1_1priv_aa1e0c37c2896b83ea77fe38a0564e0b1}\label{namespacesf_1_1priv_aa1e0c37c2896b83ea77fe38a0564e0b1} 
+\index{sf::priv@{sf::priv}!OpenDisplay@{OpenDisplay}}
+\index{OpenDisplay@{OpenDisplay}!sf::priv@{sf::priv}}
+\doxysubsubsection{\texorpdfstring{OpenDisplay()}{OpenDisplay()}}
+{\footnotesize\ttfamily Display \texorpdfstring{$\ast$}{*} sf\+::priv\+::\+Open\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the shared Display. 
+
+This function increments the reference count of the display, it must be matched with a call to Close\+Display.
+
+\begin{DoxyReturn}{Zwraca}
+Pointer to the shared display 
+\end{DoxyReturn}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{namespacesf_1_1priv_aa1e0c37c2896b83ea77fe38a0564e0b1_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacesf_1_1priv_aa1e0c37c2896b83ea77fe38a0564e0b1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacesf_1_1priv_a186a95a76d838bc257beab8cf50be9fd}\label{namespacesf_1_1priv_a186a95a76d838bc257beab8cf50be9fd} 
+\index{sf::priv@{sf::priv}!OpenXIM@{OpenXIM}}
+\index{OpenXIM@{OpenXIM}!sf::priv@{sf::priv}}
+\doxysubsubsection{\texorpdfstring{OpenXIM()}{OpenXIM()}}
+{\footnotesize\ttfamily XIM sf\+::priv\+::\+Open\+XIM (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the shared XIM context for the Display. 
+
+This function increments the reference count of the XIM context, it must be matched with a call to Close\+XIM.
+
+It must be called with a display already opened.
+
+\begin{DoxyReturn}{Zwraca}
+XIM handle (a pointer) of the context 
+\end{DoxyReturn}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacesf_1_1priv_a186a95a76d838bc257beab8cf50be9fd_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacesf_1_1priv_af2530d4821c6e4dc30445b60a95e4cd3}\label{namespacesf_1_1priv_af2530d4821c6e4dc30445b60a95e4cd3} 
+\index{sf::priv@{sf::priv}!resetActivity@{resetActivity}}
+\index{resetActivity@{resetActivity}!sf::priv@{sf::priv}}
+\doxysubsubsection{\texorpdfstring{resetActivity()}{resetActivity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_system_2_export_8hpp_a6476c9e422606477a4c23d92b1d79a1f}{SFML\+\_\+\+SYSTEM\+\_\+\+API}} void sf\+::priv\+::reset\+Activity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf_1_1priv_1_1_activity_states}{Activity\+States}} \texorpdfstring{$\ast$}{*}}]{initialized\+States }\end{DoxyParamCaption})}
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacesf_1_1priv_af2530d4821c6e4dc30445b60a95e4cd3_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacesf_1_1priv_ae1111165ab0c6fef7faf8325ba0ae8ea}\label{namespacesf_1_1priv_ae1111165ab0c6fef7faf8325ba0ae8ea} 
+\index{sf::priv@{sf::priv}!scaleIn@{scaleIn}}
+\index{scaleIn@{scaleIn}!sf::priv@{sf::priv}}
+\doxysubsubsection{\texorpdfstring{scaleIn()}{scaleIn()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void sf\+::priv\+::scale\+In (\begin{DoxyParamCaption}\item[{T \&}]{in,  }\item[{id$<$ \mbox{\hyperlink{protocol_window_impl_delegate_protocol-p}{Window\+Impl\+Delegate\+Protocol}} $>$}]{delegate }\end{DoxyParamCaption})}
+
+
+
+Scale SFML coordinates to backing coordinates. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em in} & SFML coordinates to be converted \\
+\hline
+{\em delegate} & an object implementing \doxylink{protocol_window_impl_delegate_protocol-p}{Window\+Impl\+Delegate\+Protocol}, or nil for default scale \\
+\hline
+\end{DoxyParams}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{namespacesf_1_1priv_ae1111165ab0c6fef7faf8325ba0ae8ea_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacesf_1_1priv_ae1111165ab0c6fef7faf8325ba0ae8ea_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacesf_1_1priv_a505f95f3a8f80b5f45696139072b3d53}\label{namespacesf_1_1priv_a505f95f3a8f80b5f45696139072b3d53} 
+\index{sf::priv@{sf::priv}!scaleInWidthHeight@{scaleInWidthHeight}}
+\index{scaleInWidthHeight@{scaleInWidthHeight}!sf::priv@{sf::priv}}
+\doxysubsubsection{\texorpdfstring{scaleInWidthHeight()}{scaleInWidthHeight()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void sf\+::priv\+::scale\+In\+Width\+Height (\begin{DoxyParamCaption}\item[{T \&}]{in,  }\item[{id$<$ \mbox{\hyperlink{protocol_window_impl_delegate_protocol-p}{Window\+Impl\+Delegate\+Protocol}} $>$}]{delegate }\end{DoxyParamCaption})}
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacesf_1_1priv_a505f95f3a8f80b5f45696139072b3d53_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacesf_1_1priv_a156207a15a28f14c31e464f8491a470a}\label{namespacesf_1_1priv_a156207a15a28f14c31e464f8491a470a} 
+\index{sf::priv@{sf::priv}!scaleInXY@{scaleInXY}}
+\index{scaleInXY@{scaleInXY}!sf::priv@{sf::priv}}
+\doxysubsubsection{\texorpdfstring{scaleInXY()}{scaleInXY()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void sf\+::priv\+::scale\+In\+XY (\begin{DoxyParamCaption}\item[{T \&}]{in,  }\item[{id$<$ \mbox{\hyperlink{protocol_window_impl_delegate_protocol-p}{Window\+Impl\+Delegate\+Protocol}} $>$}]{delegate }\end{DoxyParamCaption})}
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacesf_1_1priv_a156207a15a28f14c31e464f8491a470a_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{namespacesf_1_1priv_a156207a15a28f14c31e464f8491a470a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacesf_1_1priv_ae43144ac55ab0ccb71f35a9be2fe95b1}\label{namespacesf_1_1priv_ae43144ac55ab0ccb71f35a9be2fe95b1} 
+\index{sf::priv@{sf::priv}!scaleOut@{scaleOut}}
+\index{scaleOut@{scaleOut}!sf::priv@{sf::priv}}
+\doxysubsubsection{\texorpdfstring{scaleOut()}{scaleOut()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void sf\+::priv\+::scale\+Out (\begin{DoxyParamCaption}\item[{T \&}]{out,  }\item[{id$<$ \mbox{\hyperlink{protocol_window_impl_delegate_protocol-p}{Window\+Impl\+Delegate\+Protocol}} $>$}]{delegate }\end{DoxyParamCaption})}
+
+
+
+Scale backing coordinates to SFML coordinates. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em out} & backing coordinates to be converted \\
+\hline
+{\em delegate} & an object implementing \doxylink{protocol_window_impl_delegate_protocol-p}{Window\+Impl\+Delegate\+Protocol}, or nil for default scale \\
+\hline
+\end{DoxyParams}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=329pt]{namespacesf_1_1priv_ae43144ac55ab0ccb71f35a9be2fe95b1_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacesf_1_1priv_ae43144ac55ab0ccb71f35a9be2fe95b1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacesf_1_1priv_ad00abf8ef496870f2f72679d3509fccb}\label{namespacesf_1_1priv_ad00abf8ef496870f2f72679d3509fccb} 
+\index{sf::priv@{sf::priv}!scaleOutWidthHeight@{scaleOutWidthHeight}}
+\index{scaleOutWidthHeight@{scaleOutWidthHeight}!sf::priv@{sf::priv}}
+\doxysubsubsection{\texorpdfstring{scaleOutWidthHeight()}{scaleOutWidthHeight()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void sf\+::priv\+::scale\+Out\+Width\+Height (\begin{DoxyParamCaption}\item[{T \&}]{out,  }\item[{id$<$ \mbox{\hyperlink{protocol_window_impl_delegate_protocol-p}{Window\+Impl\+Delegate\+Protocol}} $>$}]{delegate }\end{DoxyParamCaption})}
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacesf_1_1priv_ad00abf8ef496870f2f72679d3509fccb_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacesf_1_1priv_ad00abf8ef496870f2f72679d3509fccb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacesf_1_1priv_aa6501d418505c263e13a6f582862a71e}\label{namespacesf_1_1priv_aa6501d418505c263e13a6f582862a71e} 
+\index{sf::priv@{sf::priv}!scaleOutXY@{scaleOutXY}}
+\index{scaleOutXY@{scaleOutXY}!sf::priv@{sf::priv}}
+\doxysubsubsection{\texorpdfstring{scaleOutXY()}{scaleOutXY()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void sf\+::priv\+::scale\+Out\+XY (\begin{DoxyParamCaption}\item[{T \&}]{out,  }\item[{id$<$ \mbox{\hyperlink{protocol_window_impl_delegate_protocol-p}{Window\+Impl\+Delegate\+Protocol}} $>$}]{delegate }\end{DoxyParamCaption})}
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacesf_1_1priv_aa6501d418505c263e13a6f582862a71e_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacesf_1_1priv_aa6501d418505c263e13a6f582862a71e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacesf_1_1priv_a0e06465ac59b5a098761e3ff27c6e395}\label{namespacesf_1_1priv_a0e06465ac59b5a098761e3ff27c6e395} 
+\index{sf::priv@{sf::priv}!sfKeyToVirtualKey@{sfKeyToVirtualKey}}
+\index{sfKeyToVirtualKey@{sfKeyToVirtualKey}!sf::priv@{sf::priv}}
+\doxysubsubsection{\texorpdfstring{sfKeyToVirtualKey()}{sfKeyToVirtualKey()}}
+{\footnotesize\ttfamily int sf\+::priv\+::sf\+Key\+To\+Virtual\+Key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}}}]{key }\end{DoxyParamCaption})}
+
+\Hypertarget{namespacesf_1_1priv_a6b5607e9c839e16c40e2ddf04e543f07}\label{namespacesf_1_1priv_a6b5607e9c839e16c40e2ddf04e543f07} 
+\index{sf::priv@{sf::priv}!sfScanToVirtualKey@{sfScanToVirtualKey}}
+\index{sfScanToVirtualKey@{sfScanToVirtualKey}!sf::priv@{sf::priv}}
+\doxysubsubsection{\texorpdfstring{sfScanToVirtualKey()}{sfScanToVirtualKey()}}
+{\footnotesize\ttfamily UINT sf\+::priv\+::sf\+Scan\+To\+Virtual\+Key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}}}]{code }\end{DoxyParamCaption})}
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacesf_1_1priv_a6b5607e9c839e16c40e2ddf04e543f07_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{namespacesf_1_1priv_a6b5607e9c839e16c40e2ddf04e543f07_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacesf_1_1priv_ab0fa519041a7fce0453456c12117a7ee}\label{namespacesf_1_1priv_ab0fa519041a7fce0453456c12117a7ee} 
+\index{sf::priv@{sf::priv}!sfScanToWinScan@{sfScanToWinScan}}
+\index{sfScanToWinScan@{sfScanToWinScan}!sf::priv@{sf::priv}}
+\doxysubsubsection{\texorpdfstring{sfScanToWinScan()}{sfScanToWinScan()}}
+{\footnotesize\ttfamily WORD sf\+::priv\+::sf\+Scan\+To\+Win\+Scan (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}}}]{code }\end{DoxyParamCaption})}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacesf_1_1priv_ab0fa519041a7fce0453456c12117a7ee_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacesf_1_1priv_a3696410688dd4c0db77549382291667a}\label{namespacesf_1_1priv_a3696410688dd4c0db77549382291667a} 
+\index{sf::priv@{sf::priv}!sfScanToWinScanExtended@{sfScanToWinScanExtended}}
+\index{sfScanToWinScanExtended@{sfScanToWinScanExtended}!sf::priv@{sf::priv}}
+\doxysubsubsection{\texorpdfstring{sfScanToWinScanExtended()}{sfScanToWinScanExtended()}}
+{\footnotesize\ttfamily WORD sf\+::priv\+::sf\+Scan\+To\+Win\+Scan\+Extended (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}}}]{code }\end{DoxyParamCaption})}
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacesf_1_1priv_a3696410688dd4c0db77549382291667a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacesf_1_1priv_a186e1f9b55d54b4b1549ec551d0d023a}\label{namespacesf_1_1priv_a186e1f9b55d54b4b1549ec551d0d023a} 
+\index{sf::priv@{sf::priv}!showMouseCursor@{showMouseCursor}}
+\index{showMouseCursor@{showMouseCursor}!sf::priv@{sf::priv}}
+\doxysubsubsection{\texorpdfstring{showMouseCursor()}{showMouseCursor()}}
+{\footnotesize\ttfamily void sf\+::priv\+::show\+Mouse\+Cursor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacesf_1_1priv_a186e1f9b55d54b4b1549ec551d0d023a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacesf_1_1priv_a4cd77531723a4a146de82366f3caec9a}\label{namespacesf_1_1priv_a4cd77531723a4a146de82366f3caec9a} 
+\index{sf::priv@{sf::priv}!sleepImpl@{sleepImpl}}
+\index{sleepImpl@{sleepImpl}!sf::priv@{sf::priv}}
+\doxysubsubsection{\texorpdfstring{sleepImpl()}{sleepImpl()}}
+{\footnotesize\ttfamily void sf\+::priv\+::sleep\+Impl (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_time}{Time}}}]{time }\end{DoxyParamCaption})}
+
+
+
+Unix implementation of sf\+::\+Sleep. 
+
+Windows implementation of sf\+::\+Sleep.
+
+
+\begin{DoxyParams}{Parametry}
+{\em time} & \doxylink{classsf_1_1_time}{Time} to sleep \\
+\hline
+\end{DoxyParams}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{namespacesf_1_1priv_a4cd77531723a4a146de82366f3caec9a_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacesf_1_1priv_a4cd77531723a4a146de82366f3caec9a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacesf_1_1priv_a60b18fa5b6ed86ee9c8153931df5c9c0}\label{namespacesf_1_1priv_a60b18fa5b6ed86ee9c8153931df5c9c0} 
+\index{sf::priv@{sf::priv}!virtualKeyToSfKey@{virtualKeyToSfKey}}
+\index{virtualKeyToSfKey@{virtualKeyToSfKey}!sf::priv@{sf::priv}}
+\doxysubsubsection{\texorpdfstring{virtualKeyToSfKey()}{virtualKeyToSfKey()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} sf\+::priv\+::virtual\+Key\+To\+Sf\+Key (\begin{DoxyParamCaption}\item[{UINT}]{virtual\+Key }\end{DoxyParamCaption})}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{namespacesf_1_1priv_a60b18fa5b6ed86ee9c8153931df5c9c0_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Dokumentacja zmiennych}
+\Hypertarget{namespacesf_1_1priv_a99f9b70b5d0027ba499e3345e0d04340}\label{namespacesf_1_1priv_a99f9b70b5d0027ba499e3345e0d04340} 
+\index{sf::priv@{sf::priv}!globalInitializer@{globalInitializer}}
+\index{globalInitializer@{globalInitializer}!sf::priv@{sf::priv}}
+\doxysubsubsection{\texorpdfstring{globalInitializer}{globalInitializer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsf_1_1priv_1_1_socket_initializer}{Socket\+Initializer}} sf\+::priv\+::global\+Initializer}
+

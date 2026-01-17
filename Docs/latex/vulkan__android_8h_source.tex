@@ -1,0 +1,132 @@
+\doxysection{vulkan\+\_\+android.\+h}
+\hypertarget{vulkan__android_8h_source}{}\label{vulkan__android_8h_source}\index{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/vulkan/vulkan\_android.h@{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/vulkan/vulkan\_android.h}}
+\mbox{\hyperlink{vulkan__android_8h}{Idź do dokumentacji tego pliku.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ VULKAN\_ANDROID\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ VULKAN\_ANDROID\_H\_\ 1}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00005\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00009\ \textcolor{comment}{**\ Copyright\ (c)\ 2015-\/2018\ The\ Khronos\ Group\ Inc.}}
+\DoxyCodeLine{00010\ \textcolor{comment}{**}}
+\DoxyCodeLine{00011\ \textcolor{comment}{**\ Licensed\ under\ the\ Apache\ License,\ Version\ 2.0\ (the\ "{}License"{});}}
+\DoxyCodeLine{00012\ \textcolor{comment}{**\ you\ may\ not\ use\ this\ file\ except\ in\ compliance\ with\ the\ License.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{**\ You\ may\ obtain\ a\ copy\ of\ the\ License\ at}}
+\DoxyCodeLine{00014\ \textcolor{comment}{**}}
+\DoxyCodeLine{00015\ \textcolor{comment}{**\ \ \ \ \ http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{00016\ \textcolor{comment}{**}}
+\DoxyCodeLine{00017\ \textcolor{comment}{**\ Unless\ required\ by\ applicable\ law\ or\ agreed\ to\ in\ writing,\ software}}
+\DoxyCodeLine{00018\ \textcolor{comment}{**\ distributed\ under\ the\ License\ is\ distributed\ on\ an\ "{}AS\ IS"{}\ BASIS,}}
+\DoxyCodeLine{00019\ \textcolor{comment}{**\ WITHOUT\ WARRANTIES\ OR\ CONDITIONS\ OF\ ANY\ KIND,\ either\ express\ or\ implied.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{**\ See\ the\ License\ for\ the\ specific\ language\ governing\ permissions\ and}}
+\DoxyCodeLine{00021\ \textcolor{comment}{**\ limitations\ under\ the\ License.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00025\ \textcolor{comment}{**\ This\ header\ is\ generated\ from\ the\ Khronos\ Vulkan\ XML\ API\ Registry.}}
+\DoxyCodeLine{00026\ \textcolor{comment}{**}}
+\DoxyCodeLine{00027\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ VK\_KHR\_android\_surface\ 1}}
+\DoxyCodeLine{00031\ \textcolor{keyword}{struct\ }ANativeWindow;}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ VK\_KHR\_ANDROID\_SURFACE\_SPEC\_VERSION\ 6}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ VK\_KHR\_ANDROID\_SURFACE\_EXTENSION\_NAME\ "{}VK\_KHR\_android\_surface"{}}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abb605a7700670dd8420cc3841b939444}{VkFlags}}\ \mbox{\hyperlink{vulkan__android_8h_a8357b4da4795568f3b14949192d568d3}{VkAndroidSurfaceCreateFlagsKHR}};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vk_android_surface_create_info_k_h_r}{VkAndroidSurfaceCreateInfoKHR}}\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_aff9f2b99398eb80a2b5a146bc5534ce8}{VkStructureType}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_android_surface_create_info_k_h_r_a9ad59fc4ee3b06957a9290d063045ded}{sType}};}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_android_surface_create_info_k_h_r_a4748fd9da31de037533a21f9d6c1b117}{pNext}};}
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{vulkan__android_8h_a8357b4da4795568f3b14949192d568d3}{VkAndroidSurfaceCreateFlagsKHR}}\ \ \ \ \mbox{\hyperlink{struct_vk_android_surface_create_info_k_h_r_add702fbdab72db7746fe6485b340f36b}{flags}};}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{struct\ }ANativeWindow*\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_android_surface_create_info_k_h_r_a318999bc2837b7291c89be12489a2474}{window}};}
+\DoxyCodeLine{00043\ \}\ \mbox{\hyperlink{vulkan__android_8h_a29379a826ae2fe9138cdc278cc6f2dea}{VkAndroidSurfaceCreateInfoKHR}};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{VkResult}}\ (\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\_PTR}}\ *\mbox{\hyperlink{vulkan__android_8h_af7675143219d58c3132985bf7e0d2f6f}{PFN\_vkCreateAndroidSurfaceKHR}})(\mbox{\hyperlink{_vulkan_8hpp_a6d9f7e27148712f2c97db45ca6991547}{VkInstance}}\ instance,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_vk_android_surface_create_info_k_h_r}{VkAndroidSurfaceCreateInfoKHR}}*\ pCreateInfo,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_vk_allocation_callbacks}{VkAllocationCallbacks}}*\ pAllocator,\ \mbox{\hyperlink{_vulkan_8hpp_a09787d7da5f3146095ed80ceccc2d794}{VkSurfaceKHR}}*\ pSurface);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#ifndef\ VK\_NO\_PROTOTYPES}}
+\DoxyCodeLine{00049\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a4394dd2421147ed91e838b086be25512}{VKAPI\_ATTR}}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{VkResult}}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a3856c7761d8b7260870053d0f03a0a49}{VKAPI\_CALL}}\ \mbox{\hyperlink{vulkan__android_8h_a37ec84b45220516e0868517a3103d7ab}{vkCreateAndroidSurfaceKHR}}(}
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{_vulkan_8hpp_a6d9f7e27148712f2c97db45ca6991547}{VkInstance}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ instance,}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_vk_android_surface_create_info_k_h_r}{VkAndroidSurfaceCreateInfoKHR}}*\ \ \ \ \ \ \ \ pCreateInfo,}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_vk_allocation_callbacks}{VkAllocationCallbacks}}*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pAllocator,}
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{_vulkan_8hpp_a09787d7da5f3146095ed80ceccc2d794}{VkSurfaceKHR}}*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pSurface);}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#define\ VK\_ANDROID\_external\_memory\_android\_hardware\_buffer\ 1}}
+\DoxyCodeLine{00057\ \textcolor{keyword}{struct\ }AHardwareBuffer;}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#define\ VK\_ANDROID\_EXTERNAL\_MEMORY\_ANDROID\_HARDWARE\_BUFFER\_SPEC\_VERSION\ 3}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#define\ VK\_ANDROID\_EXTERNAL\_MEMORY\_ANDROID\_HARDWARE\_BUFFER\_EXTENSION\_NAME\ "{}VK\_ANDROID\_external\_memory\_android\_hardware\_buffer"{}}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vk_android_hardware_buffer_usage_a_n_d_r_o_i_d}{VkAndroidHardwareBufferUsageANDROID}}\ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_aff9f2b99398eb80a2b5a146bc5534ce8}{VkStructureType}}\ \ \ \ \mbox{\hyperlink{struct_vk_android_hardware_buffer_usage_a_n_d_r_o_i_d_aea4022430156269a8940da13a48826e0}{sType}};}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_android_hardware_buffer_usage_a_n_d_r_o_i_d_a49985a3e3a0ee7bd38915eae85683a1b}{pNext}};}
+\DoxyCodeLine{00065\ \ \ \ \ uint64\_t\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_android_hardware_buffer_usage_a_n_d_r_o_i_d_a4a579c7b89c4604ea7a339aa948b4c45}{androidHardwareBufferUsage}};}
+\DoxyCodeLine{00066\ \}\ \mbox{\hyperlink{vulkan__android_8h_a52cd0eb0642e5352b19bb40344507df5}{VkAndroidHardwareBufferUsageANDROID}};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vk_android_hardware_buffer_properties_a_n_d_r_o_i_d}{VkAndroidHardwareBufferPropertiesANDROID}}\ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_aff9f2b99398eb80a2b5a146bc5534ce8}{VkStructureType}}\ \ \ \ \mbox{\hyperlink{struct_vk_android_hardware_buffer_properties_a_n_d_r_o_i_d_aaba64c27ffddd645fb0c751a05bcc66b}{sType}};}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_android_hardware_buffer_properties_a_n_d_r_o_i_d_a032de278d4c9517860e0171115af923c}{pNext}};}
+\DoxyCodeLine{00071\ \ \ \ \ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a459be4b1b89c972b0d6018bc483be9cc}{VkDeviceSize}}\ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_android_hardware_buffer_properties_a_n_d_r_o_i_d_ad6fca6dd8c78407fc15ef242c46960f6}{allocationSize}};}
+\DoxyCodeLine{00072\ \ \ \ \ uint32\_t\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_android_hardware_buffer_properties_a_n_d_r_o_i_d_a56a142dbe715df2ad42e808b83a6ded8}{memoryTypeBits}};}
+\DoxyCodeLine{00073\ \}\ \mbox{\hyperlink{vulkan__android_8h_a92d4d64a4653fad5c4eaa867cc67221e}{VkAndroidHardwareBufferPropertiesANDROID}};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vk_android_hardware_buffer_format_properties_a_n_d_r_o_i_d}{VkAndroidHardwareBufferFormatPropertiesANDROID}}\ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_aff9f2b99398eb80a2b5a146bc5534ce8}{VkStructureType}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_android_hardware_buffer_format_properties_a_n_d_r_o_i_d_a1507a725fb78adc7ed287c01ba8803f7}{sType}};}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_android_hardware_buffer_format_properties_a_n_d_r_o_i_d_a407ab0fda0c8752c8df5ff4d894038e9}{pNext}};}
+\DoxyCodeLine{00078\ \ \ \ \ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_ad61b5b94a526d0f9ae0db97072cf6b3f}{VkFormat}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_android_hardware_buffer_format_properties_a_n_d_r_o_i_d_a139930431a335bce4d1ad50ca8b25962}{format}};}
+\DoxyCodeLine{00079\ \ \ \ \ uint64\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_android_hardware_buffer_format_properties_a_n_d_r_o_i_d_a98cf407214ab9481b6654c3ae857e402}{externalFormat}};}
+\DoxyCodeLine{00080\ \ \ \ \ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a8f6c3cb203ed2eabe1f2093bf9c6352a}{VkFormatFeatureFlags}}\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_android_hardware_buffer_format_properties_a_n_d_r_o_i_d_a330bd97bc573ef90ebeb1c1678bec1a1}{formatFeatures}};}
+\DoxyCodeLine{00081\ \ \ \ \ \mbox{\hyperlink{struct_vk_component_mapping}{VkComponentMapping}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_android_hardware_buffer_format_properties_a_n_d_r_o_i_d_a6637567a9dc87caf86db2c232b745874}{samplerYcbcrConversionComponents}};}
+\DoxyCodeLine{00082\ \ \ \ \ \mbox{\hyperlink{vulkan__core_8h_a7b769c8a02186469b21e19c121a5072d}{VkSamplerYcbcrModelConversion}}\ \ \ \ \mbox{\hyperlink{struct_vk_android_hardware_buffer_format_properties_a_n_d_r_o_i_d_a3f1f034b5dd39e3d85cf3d875fc255d2}{suggestedYcbcrModel}};}
+\DoxyCodeLine{00083\ \ \ \ \ \mbox{\hyperlink{vulkan__core_8h_aa8510a2dd3e5e7261f53d65bf6b37b98}{VkSamplerYcbcrRange}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_android_hardware_buffer_format_properties_a_n_d_r_o_i_d_a07e70d10af0b11367facaa395cec37ff}{suggestedYcbcrRange}};}
+\DoxyCodeLine{00084\ \ \ \ \ \mbox{\hyperlink{vulkan__core_8h_a7f4a25c6813ae572511caf4560f45b4a}{VkChromaLocation}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_android_hardware_buffer_format_properties_a_n_d_r_o_i_d_af753243a669de0d8074a25d60b03a602}{suggestedXChromaOffset}};}
+\DoxyCodeLine{00085\ \ \ \ \ \mbox{\hyperlink{vulkan__core_8h_a7f4a25c6813ae572511caf4560f45b4a}{VkChromaLocation}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_android_hardware_buffer_format_properties_a_n_d_r_o_i_d_adb6157fa22baaf6724c69ef3b3d4ae48}{suggestedYChromaOffset}};}
+\DoxyCodeLine{00086\ \}\ \mbox{\hyperlink{vulkan__android_8h_a2d0516c8ecc4aac2ba4ff66ee55f763c}{VkAndroidHardwareBufferFormatPropertiesANDROID}};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vk_import_android_hardware_buffer_info_a_n_d_r_o_i_d}{VkImportAndroidHardwareBufferInfoANDROID}}\ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_aff9f2b99398eb80a2b5a146bc5534ce8}{VkStructureType}}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_import_android_hardware_buffer_info_a_n_d_r_o_i_d_af4317b8e2da204b63898cbd058acb711}{sType}};}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_import_android_hardware_buffer_info_a_n_d_r_o_i_d_ab84b299f96a5592cc81cf02ac4daf8ee}{pNext}};}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keyword}{struct\ }AHardwareBuffer*\ \ \ \ \mbox{\hyperlink{struct_vk_import_android_hardware_buffer_info_a_n_d_r_o_i_d_a51fed20a2e91377d336cc101f9b9bf8b}{buffer}};}
+\DoxyCodeLine{00092\ \}\ \mbox{\hyperlink{vulkan__android_8h_a6704bf20019893e7386ec652c0fa5ccb}{VkImportAndroidHardwareBufferInfoANDROID}};}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vk_memory_get_android_hardware_buffer_info_a_n_d_r_o_i_d}{VkMemoryGetAndroidHardwareBufferInfoANDROID}}\ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_aff9f2b99398eb80a2b5a146bc5534ce8}{VkStructureType}}\ \ \ \ \mbox{\hyperlink{struct_vk_memory_get_android_hardware_buffer_info_a_n_d_r_o_i_d_a1c6b861ce9e41e2e206d79f89a8fd7e9}{sType}};}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_memory_get_android_hardware_buffer_info_a_n_d_r_o_i_d_a8cee734a67233cc7399edd7332d88721}{pNext}};}
+\DoxyCodeLine{00097\ \ \ \ \ VkDeviceMemory\ \ \ \ \ \mbox{\hyperlink{struct_vk_memory_get_android_hardware_buffer_info_a_n_d_r_o_i_d_a8bdf169872332a74256ed47769b87a57}{memory}};}
+\DoxyCodeLine{00098\ \}\ \mbox{\hyperlink{vulkan__android_8h_aebe33f508588cd6ef8ea385b72885b7b}{VkMemoryGetAndroidHardwareBufferInfoANDROID}};}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vk_external_format_a_n_d_r_o_i_d}{VkExternalFormatANDROID}}\ \{}
+\DoxyCodeLine{00101\ \ \ \ \ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_aff9f2b99398eb80a2b5a146bc5534ce8}{VkStructureType}}\ \ \ \ \mbox{\hyperlink{struct_vk_external_format_a_n_d_r_o_i_d_a99bab528549a100f2813d573ad44a839}{sType}};}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_external_format_a_n_d_r_o_i_d_a9652f3dbc4377f1c413f889c691b9a64}{pNext}};}
+\DoxyCodeLine{00103\ \ \ \ \ uint64\_t\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_external_format_a_n_d_r_o_i_d_a31f0a950e98e271d40969c62ced81fb1}{externalFormat}};}
+\DoxyCodeLine{00104\ \}\ \mbox{\hyperlink{vulkan__android_8h_a7275af2eb030bce8de7e406aab445fa5}{VkExternalFormatANDROID}};}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{VkResult}}\ (\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\_PTR}}\ *\mbox{\hyperlink{vulkan__android_8h_a1a8201f39f76caad097eeb9181e3db84}{PFN\_vkGetAndroidHardwareBufferPropertiesANDROID}})(VkDevice\ device,\ \textcolor{keyword}{const}\ \textcolor{keyword}{struct\ }AHardwareBuffer*\ buffer,\ \mbox{\hyperlink{struct_vk_android_hardware_buffer_properties_a_n_d_r_o_i_d}{VkAndroidHardwareBufferPropertiesANDROID}}*\ pProperties);}
+\DoxyCodeLine{00108\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{VkResult}}\ (\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\_PTR}}\ *\mbox{\hyperlink{vulkan__android_8h_a4a7c226c4588226d8981be0a7fa4cc09}{PFN\_vkGetMemoryAndroidHardwareBufferANDROID}})(VkDevice\ device,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_vk_memory_get_android_hardware_buffer_info_a_n_d_r_o_i_d}{VkMemoryGetAndroidHardwareBufferInfoANDROID}}*\ pInfo,\ \textcolor{keyword}{struct\ }AHardwareBuffer**\ pBuffer);}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \textcolor{preprocessor}{\#ifndef\ VK\_NO\_PROTOTYPES}}
+\DoxyCodeLine{00111\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a4394dd2421147ed91e838b086be25512}{VKAPI\_ATTR}}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{VkResult}}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a3856c7761d8b7260870053d0f03a0a49}{VKAPI\_CALL}}\ \mbox{\hyperlink{vulkan__android_8h_ae25dfbee3929ba43b8c3dea84a5b0996}{vkGetAndroidHardwareBufferPropertiesANDROID}}(}
+\DoxyCodeLine{00112\ \ \ \ \ VkDevice\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ device,}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{struct}\ AHardwareBuffer*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ buffer,}
+\DoxyCodeLine{00114\ \ \ \ \ \mbox{\hyperlink{struct_vk_android_hardware_buffer_properties_a_n_d_r_o_i_d}{VkAndroidHardwareBufferPropertiesANDROID}}*\ \ \ pProperties);}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a4394dd2421147ed91e838b086be25512}{VKAPI\_ATTR}}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{VkResult}}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a3856c7761d8b7260870053d0f03a0a49}{VKAPI\_CALL}}\ \mbox{\hyperlink{vulkan__android_8h_af821ec3622cc838c55fc3a7533d8460e}{vkGetMemoryAndroidHardwareBufferANDROID}}(}
+\DoxyCodeLine{00117\ \ \ \ \ VkDevice\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ device,}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_vk_memory_get_android_hardware_buffer_info_a_n_d_r_o_i_d}{VkMemoryGetAndroidHardwareBufferInfoANDROID}}*\ pInfo,}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keyword}{struct}\ AHardwareBuffer**\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pBuffer);}
+\DoxyCodeLine{00120\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00123\ \}}
+\DoxyCodeLine{00124\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

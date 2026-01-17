@@ -1,0 +1,231 @@
+\doxysection{Dokumentacja pliku cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+OSX/\+SFKeyboard\+Modifiers\+Helper.mm}
+\hypertarget{_s_f_keyboard_modifiers_helper_8mm}{}\label{_s_f_keyboard_modifiers_helper_8mm}\index{cmake-\/build-\/debug/\_deps/sfml-\/src/src/SFML/Window/OSX/SFKeyboardModifiersHelper.mm@{cmake-\/build-\/debug/\_deps/sfml-\/src/src/SFML/Window/OSX/SFKeyboardModifiersHelper.mm}}
+{\ttfamily \#include $<$SFML/\+Window/\+OSX/\+Window\+Impl\+Cocoa.\+hpp$>$}\newline
+{\ttfamily import $<$SFML/\+Window/\+OSX/\+SFKeyboard\+Modifiers\+Helper.\+h$>$}\newline
+Wykres zależności załączania dla SFKeyboard\+Modifiers\+Helper.\+mm\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_s_f_keyboard_modifiers_helper_8mm__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_modifiers_state}{Modifiers\+State}}
+\begin{DoxyCompactList}\small\item\em Modifiers states. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Definicje}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_s_f_keyboard_modifiers_helper_8mm_a07751066fe6653878a3e02afe490ce25}{NSRight\+Shift\+Key\+Mask}}~0x020004
+\item 
+\#define \mbox{\hyperlink{_s_f_keyboard_modifiers_helper_8mm_a9fb0f634fa5073ac33483d396e3208cc}{NSLeft\+Shift\+Key\+Mask}}~0x020002
+\item 
+\#define \mbox{\hyperlink{_s_f_keyboard_modifiers_helper_8mm_a77d80be2962934f52dd8df08887b3ee5}{NSRight\+Command\+Key\+Mask}}~0x100010
+\item 
+\#define \mbox{\hyperlink{_s_f_keyboard_modifiers_helper_8mm_a5b025e7b949ed92f17785e75949dcf9d}{NSLeft\+Command\+Key\+Mask}}~0x100008
+\item 
+\#define \mbox{\hyperlink{_s_f_keyboard_modifiers_helper_8mm_af6ac45fd84d50e54ee3ce42d91634f78}{NSRight\+Alternate\+Key\+Mask}}~0x080040
+\item 
+\#define \mbox{\hyperlink{_s_f_keyboard_modifiers_helper_8mm_a6d8b063473a124bc65eff0d2339341db}{NSLeft\+Alternate\+Key\+Mask}}~0x080020
+\item 
+\#define \mbox{\hyperlink{_s_f_keyboard_modifiers_helper_8mm_a5c2fda0f081abe2b88e28b0aa48e3738}{NSRight\+Control\+Key\+Mask}}~0x042000
+\item 
+\#define \mbox{\hyperlink{_s_f_keyboard_modifiers_helper_8mm_aee35eb8301f75af785293ad2c5689a0b}{NSLeft\+Control\+Key\+Mask}}~0x040001
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+BOOL \mbox{\hyperlink{_s_f_keyboard_modifiers_helper_8mm_a337153ebce3f60d02d20e834ccf528ee}{is\+Key\+Mask\+Active}} (NSUInteger modifiers, NSUInteger mask)
+\begin{DoxyCompactList}\small\item\em Carefully observe if the key mask is on in the modifiers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_s_f_keyboard_modifiers_helper_8mm_a09de0c600760004e57b7f8fd93f059bb}{process\+One\+Modifier}} (NSUInteger modifiers, NSUInteger mask, BOOL \&was\+Down, \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{sf\+::\+Keyboard\+::\+Key}} key, \mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{sf\+::\+Keyboard\+::\+Scancode}} code, \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_cocoa}{sf\+::priv\+::\+Window\+Impl\+Cocoa}} \&requester)
+\begin{DoxyCompactList}\small\item\em Handle one modifier key mask. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_s_f_keyboard_modifiers_helper_8mm_a54c84697acd95a904c495b5bfd091dfd}{process\+Left\+Right\+Modifiers}} (NSUInteger modifiers, NSUInteger left\+Mask, NSUInteger right\+Mask, BOOL \&left\+Was\+Down, BOOL \&right\+Was\+Down, \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{sf\+::\+Keyboard\+::\+Key}} left\+Key, \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{sf\+::\+Keyboard\+::\+Key}} right\+Key, \mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{sf\+::\+Keyboard\+::\+Scancode}} left\+Code, \mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{sf\+::\+Keyboard\+::\+Scancode}} right\+Code, \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_cocoa}{sf\+::priv\+::\+Window\+Impl\+Cocoa}} \&requester)
+\begin{DoxyCompactList}\small\item\em Handle left \& right modifier keys. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_s_f_keyboard_modifiers_helper_8mm_a2aa3750448340a670f6a02c10dc6e49a}{initialise\+Keyboard\+Helper}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the global state (only if needed) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsf_1_1_event_1_1_key_event}{sf\+::\+Event\+::\+Key\+Event}} \mbox{\hyperlink{_s_f_keyboard_modifiers_helper_8mm_a4cc9527b90eafc0a9e2220e3527690c6}{key\+Event\+With\+Modifiers}} (NSUInteger modifiers, \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{sf\+::\+Keyboard\+::\+Key}} key, \mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{sf\+::\+Keyboard\+::\+Scancode}} code)
+\begin{DoxyCompactList}\small\item\em Set up a SFML key event based on the given modifiers flags and key code. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_s_f_keyboard_modifiers_helper_8mm_a999eb9f0210b13362a0a04ed000341e5}{handle\+Modifiers\+Changed}} (NSUInteger modifiers, \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_cocoa}{sf\+::priv\+::\+Window\+Impl\+Cocoa}} \&requester)
+\begin{DoxyCompactList}\small\item\em Handle the state of modifiers keys. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja definicji}
+\Hypertarget{_s_f_keyboard_modifiers_helper_8mm_a6d8b063473a124bc65eff0d2339341db}\label{_s_f_keyboard_modifiers_helper_8mm_a6d8b063473a124bc65eff0d2339341db} 
+\index{SFKeyboardModifiersHelper.mm@{SFKeyboardModifiersHelper.mm}!NSLeftAlternateKeyMask@{NSLeftAlternateKeyMask}}
+\index{NSLeftAlternateKeyMask@{NSLeftAlternateKeyMask}!SFKeyboardModifiersHelper.mm@{SFKeyboardModifiersHelper.mm}}
+\doxysubsubsection{\texorpdfstring{NSLeftAlternateKeyMask}{NSLeftAlternateKeyMask}}
+{\footnotesize\ttfamily \#define NSLeft\+Alternate\+Key\+Mask~0x080020}
+
+\Hypertarget{_s_f_keyboard_modifiers_helper_8mm_a5b025e7b949ed92f17785e75949dcf9d}\label{_s_f_keyboard_modifiers_helper_8mm_a5b025e7b949ed92f17785e75949dcf9d} 
+\index{SFKeyboardModifiersHelper.mm@{SFKeyboardModifiersHelper.mm}!NSLeftCommandKeyMask@{NSLeftCommandKeyMask}}
+\index{NSLeftCommandKeyMask@{NSLeftCommandKeyMask}!SFKeyboardModifiersHelper.mm@{SFKeyboardModifiersHelper.mm}}
+\doxysubsubsection{\texorpdfstring{NSLeftCommandKeyMask}{NSLeftCommandKeyMask}}
+{\footnotesize\ttfamily \#define NSLeft\+Command\+Key\+Mask~0x100008}
+
+\Hypertarget{_s_f_keyboard_modifiers_helper_8mm_aee35eb8301f75af785293ad2c5689a0b}\label{_s_f_keyboard_modifiers_helper_8mm_aee35eb8301f75af785293ad2c5689a0b} 
+\index{SFKeyboardModifiersHelper.mm@{SFKeyboardModifiersHelper.mm}!NSLeftControlKeyMask@{NSLeftControlKeyMask}}
+\index{NSLeftControlKeyMask@{NSLeftControlKeyMask}!SFKeyboardModifiersHelper.mm@{SFKeyboardModifiersHelper.mm}}
+\doxysubsubsection{\texorpdfstring{NSLeftControlKeyMask}{NSLeftControlKeyMask}}
+{\footnotesize\ttfamily \#define NSLeft\+Control\+Key\+Mask~0x040001}
+
+\Hypertarget{_s_f_keyboard_modifiers_helper_8mm_a9fb0f634fa5073ac33483d396e3208cc}\label{_s_f_keyboard_modifiers_helper_8mm_a9fb0f634fa5073ac33483d396e3208cc} 
+\index{SFKeyboardModifiersHelper.mm@{SFKeyboardModifiersHelper.mm}!NSLeftShiftKeyMask@{NSLeftShiftKeyMask}}
+\index{NSLeftShiftKeyMask@{NSLeftShiftKeyMask}!SFKeyboardModifiersHelper.mm@{SFKeyboardModifiersHelper.mm}}
+\doxysubsubsection{\texorpdfstring{NSLeftShiftKeyMask}{NSLeftShiftKeyMask}}
+{\footnotesize\ttfamily \#define NSLeft\+Shift\+Key\+Mask~0x020002}
+
+\Hypertarget{_s_f_keyboard_modifiers_helper_8mm_af6ac45fd84d50e54ee3ce42d91634f78}\label{_s_f_keyboard_modifiers_helper_8mm_af6ac45fd84d50e54ee3ce42d91634f78} 
+\index{SFKeyboardModifiersHelper.mm@{SFKeyboardModifiersHelper.mm}!NSRightAlternateKeyMask@{NSRightAlternateKeyMask}}
+\index{NSRightAlternateKeyMask@{NSRightAlternateKeyMask}!SFKeyboardModifiersHelper.mm@{SFKeyboardModifiersHelper.mm}}
+\doxysubsubsection{\texorpdfstring{NSRightAlternateKeyMask}{NSRightAlternateKeyMask}}
+{\footnotesize\ttfamily \#define NSRight\+Alternate\+Key\+Mask~0x080040}
+
+\Hypertarget{_s_f_keyboard_modifiers_helper_8mm_a77d80be2962934f52dd8df08887b3ee5}\label{_s_f_keyboard_modifiers_helper_8mm_a77d80be2962934f52dd8df08887b3ee5} 
+\index{SFKeyboardModifiersHelper.mm@{SFKeyboardModifiersHelper.mm}!NSRightCommandKeyMask@{NSRightCommandKeyMask}}
+\index{NSRightCommandKeyMask@{NSRightCommandKeyMask}!SFKeyboardModifiersHelper.mm@{SFKeyboardModifiersHelper.mm}}
+\doxysubsubsection{\texorpdfstring{NSRightCommandKeyMask}{NSRightCommandKeyMask}}
+{\footnotesize\ttfamily \#define NSRight\+Command\+Key\+Mask~0x100010}
+
+\Hypertarget{_s_f_keyboard_modifiers_helper_8mm_a5c2fda0f081abe2b88e28b0aa48e3738}\label{_s_f_keyboard_modifiers_helper_8mm_a5c2fda0f081abe2b88e28b0aa48e3738} 
+\index{SFKeyboardModifiersHelper.mm@{SFKeyboardModifiersHelper.mm}!NSRightControlKeyMask@{NSRightControlKeyMask}}
+\index{NSRightControlKeyMask@{NSRightControlKeyMask}!SFKeyboardModifiersHelper.mm@{SFKeyboardModifiersHelper.mm}}
+\doxysubsubsection{\texorpdfstring{NSRightControlKeyMask}{NSRightControlKeyMask}}
+{\footnotesize\ttfamily \#define NSRight\+Control\+Key\+Mask~0x042000}
+
+\Hypertarget{_s_f_keyboard_modifiers_helper_8mm_a07751066fe6653878a3e02afe490ce25}\label{_s_f_keyboard_modifiers_helper_8mm_a07751066fe6653878a3e02afe490ce25} 
+\index{SFKeyboardModifiersHelper.mm@{SFKeyboardModifiersHelper.mm}!NSRightShiftKeyMask@{NSRightShiftKeyMask}}
+\index{NSRightShiftKeyMask@{NSRightShiftKeyMask}!SFKeyboardModifiersHelper.mm@{SFKeyboardModifiersHelper.mm}}
+\doxysubsubsection{\texorpdfstring{NSRightShiftKeyMask}{NSRightShiftKeyMask}}
+{\footnotesize\ttfamily \#define NSRight\+Shift\+Key\+Mask~0x020004}
+
+Here are define the mask value for the \textquotesingle{}modifiers\textquotesingle{} keys (cmd, ctrl, alt, shift) 
+
+\doxysubsection{Dokumentacja funkcji}
+\Hypertarget{_s_f_keyboard_modifiers_helper_8mm_a999eb9f0210b13362a0a04ed000341e5}\label{_s_f_keyboard_modifiers_helper_8mm_a999eb9f0210b13362a0a04ed000341e5} 
+\index{SFKeyboardModifiersHelper.mm@{SFKeyboardModifiersHelper.mm}!handleModifiersChanged@{handleModifiersChanged}}
+\index{handleModifiersChanged@{handleModifiersChanged}!SFKeyboardModifiersHelper.mm@{SFKeyboardModifiersHelper.mm}}
+\doxysubsubsection{\texorpdfstring{handleModifiersChanged()}{handleModifiersChanged()}}
+{\footnotesize\ttfamily void handle\+Modifiers\+Changed (\begin{DoxyParamCaption}\item[{NSUInteger}]{modifiers,  }\item[{\mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_cocoa}{sf\+::priv\+::\+Window\+Impl\+Cocoa}} \&}]{requester }\end{DoxyParamCaption})}
+
+
+
+Handle the state of modifiers keys. 
+
+Send key released \& pressed events to the requester. Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_s_f_keyboard_modifiers_helper_8mm_a999eb9f0210b13362a0a04ed000341e5_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_s_f_keyboard_modifiers_helper_8mm_a2aa3750448340a670f6a02c10dc6e49a}\label{_s_f_keyboard_modifiers_helper_8mm_a2aa3750448340a670f6a02c10dc6e49a} 
+\index{SFKeyboardModifiersHelper.mm@{SFKeyboardModifiersHelper.mm}!initialiseKeyboardHelper@{initialiseKeyboardHelper}}
+\index{initialiseKeyboardHelper@{initialiseKeyboardHelper}!SFKeyboardModifiersHelper.mm@{SFKeyboardModifiersHelper.mm}}
+\doxysubsubsection{\texorpdfstring{initialiseKeyboardHelper()}{initialiseKeyboardHelper()}}
+{\footnotesize\ttfamily void initialise\+Keyboard\+Helper (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize the global state (only if needed) 
+
+Keyboard Modifiers Helper
+
+Handle left \& right modifiers (cmd, ctrl, alt, shift) events and send them back to the requester. 
+
+It needs to be called before any event, e.\+g. in the window constructor. Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{_s_f_keyboard_modifiers_helper_8mm_a2aa3750448340a670f6a02c10dc6e49a_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_s_f_keyboard_modifiers_helper_8mm_a2aa3750448340a670f6a02c10dc6e49a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_s_f_keyboard_modifiers_helper_8mm_a337153ebce3f60d02d20e834ccf528ee}\label{_s_f_keyboard_modifiers_helper_8mm_a337153ebce3f60d02d20e834ccf528ee} 
+\index{SFKeyboardModifiersHelper.mm@{SFKeyboardModifiersHelper.mm}!isKeyMaskActive@{isKeyMaskActive}}
+\index{isKeyMaskActive@{isKeyMaskActive}!SFKeyboardModifiersHelper.mm@{SFKeyboardModifiersHelper.mm}}
+\doxysubsubsection{\texorpdfstring{isKeyMaskActive()}{isKeyMaskActive()}}
+{\footnotesize\ttfamily BOOL is\+Key\+Mask\+Active (\begin{DoxyParamCaption}\item[{NSUInteger}]{modifiers,  }\item[{NSUInteger}]{mask }\end{DoxyParamCaption})}
+
+
+
+Carefully observe if the key mask is on in the modifiers. 
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_s_f_keyboard_modifiers_helper_8mm_a337153ebce3f60d02d20e834ccf528ee_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_s_f_keyboard_modifiers_helper_8mm_a4cc9527b90eafc0a9e2220e3527690c6}\label{_s_f_keyboard_modifiers_helper_8mm_a4cc9527b90eafc0a9e2220e3527690c6} 
+\index{SFKeyboardModifiersHelper.mm@{SFKeyboardModifiersHelper.mm}!keyEventWithModifiers@{keyEventWithModifiers}}
+\index{keyEventWithModifiers@{keyEventWithModifiers}!SFKeyboardModifiersHelper.mm@{SFKeyboardModifiersHelper.mm}}
+\doxysubsubsection{\texorpdfstring{keyEventWithModifiers()}{keyEventWithModifiers()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsf_1_1_event_1_1_key_event}{sf\+::\+Event\+::\+Key\+Event}} key\+Event\+With\+Modifiers (\begin{DoxyParamCaption}\item[{NSUInteger}]{modifiers,  }\item[{\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{sf\+::\+Keyboard\+::\+Key}}}]{key,  }\item[{\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{sf\+::\+Keyboard\+::\+Scancode}}}]{code }\end{DoxyParamCaption})}
+
+
+
+Set up a SFML key event based on the given modifiers flags and key code. 
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_s_f_keyboard_modifiers_helper_8mm_a4cc9527b90eafc0a9e2220e3527690c6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_s_f_keyboard_modifiers_helper_8mm_a54c84697acd95a904c495b5bfd091dfd}\label{_s_f_keyboard_modifiers_helper_8mm_a54c84697acd95a904c495b5bfd091dfd} 
+\index{SFKeyboardModifiersHelper.mm@{SFKeyboardModifiersHelper.mm}!processLeftRightModifiers@{processLeftRightModifiers}}
+\index{processLeftRightModifiers@{processLeftRightModifiers}!SFKeyboardModifiersHelper.mm@{SFKeyboardModifiersHelper.mm}}
+\doxysubsubsection{\texorpdfstring{processLeftRightModifiers()}{processLeftRightModifiers()}}
+{\footnotesize\ttfamily void process\+Left\+Right\+Modifiers (\begin{DoxyParamCaption}\item[{NSUInteger}]{modifiers,  }\item[{NSUInteger}]{left\+Mask,  }\item[{NSUInteger}]{right\+Mask,  }\item[{BOOL \&}]{left\+Was\+Down,  }\item[{BOOL \&}]{right\+Was\+Down,  }\item[{\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{sf\+::\+Keyboard\+::\+Key}}}]{left\+Key,  }\item[{\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{sf\+::\+Keyboard\+::\+Key}}}]{right\+Key,  }\item[{\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{sf\+::\+Keyboard\+::\+Scancode}}}]{left\+Code,  }\item[{\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{sf\+::\+Keyboard\+::\+Scancode}}}]{right\+Code,  }\item[{\mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_cocoa}{sf\+::priv\+::\+Window\+Impl\+Cocoa}} \&}]{requester }\end{DoxyParamCaption})}
+
+
+
+Handle left \& right modifier keys. 
+
+Update the keys state and send events to the requester Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_s_f_keyboard_modifiers_helper_8mm_a54c84697acd95a904c495b5bfd091dfd_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_s_f_keyboard_modifiers_helper_8mm_a54c84697acd95a904c495b5bfd091dfd_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_s_f_keyboard_modifiers_helper_8mm_a09de0c600760004e57b7f8fd93f059bb}\label{_s_f_keyboard_modifiers_helper_8mm_a09de0c600760004e57b7f8fd93f059bb} 
+\index{SFKeyboardModifiersHelper.mm@{SFKeyboardModifiersHelper.mm}!processOneModifier@{processOneModifier}}
+\index{processOneModifier@{processOneModifier}!SFKeyboardModifiersHelper.mm@{SFKeyboardModifiersHelper.mm}}
+\doxysubsubsection{\texorpdfstring{processOneModifier()}{processOneModifier()}}
+{\footnotesize\ttfamily void process\+One\+Modifier (\begin{DoxyParamCaption}\item[{NSUInteger}]{modifiers,  }\item[{NSUInteger}]{mask,  }\item[{BOOL \&}]{was\+Down,  }\item[{\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{sf\+::\+Keyboard\+::\+Key}}}]{key,  }\item[{\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{sf\+::\+Keyboard\+::\+Scancode}}}]{code,  }\item[{\mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_cocoa}{sf\+::priv\+::\+Window\+Impl\+Cocoa}} \&}]{requester }\end{DoxyParamCaption})}
+
+
+
+Handle one modifier key mask. 
+
+Update the key state and send events to the requester Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_s_f_keyboard_modifiers_helper_8mm_a09de0c600760004e57b7f8fd93f059bb_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_s_f_keyboard_modifiers_helper_8mm_a09de0c600760004e57b7f8fd93f059bb_icgraph}
+\end{center}
+\end{figure}

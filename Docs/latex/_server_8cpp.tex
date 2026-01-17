@@ -1,0 +1,70 @@
+\doxysection{Dokumentacja pliku cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/examples/voip/\+Server.cpp}
+\hypertarget{_server_8cpp}{}\label{_server_8cpp}\index{cmake-\/build-\/debug/\_deps/sfml-\/src/examples/voip/Server.cpp@{cmake-\/build-\/debug/\_deps/sfml-\/src/examples/voip/Server.cpp}}
+{\ttfamily \#include $<$SFML/\+Audio.\+hpp$>$}\newline
+{\ttfamily \#include $<$SFML/\+Network.\+hpp$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$iterator$>$}\newline
+Wykres zależności załączania dla Server.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_server_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_network_audio_stream}{Network\+Audio\+Stream}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_server_8cpp_a0d60c59dae5c971031d008a6b81afff3}{do\+Server}} (unsigned short port)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Zmienne}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{namespacesf_a4ef3d630785c4f296f9b4f274c33d78e}{sf\+::\+Uint8}} \mbox{\hyperlink{_server_8cpp_a73c20d05337e00719712c5ed6d5d8c12}{server\+Audio\+Data}} = 1
+\item 
+const \mbox{\hyperlink{namespacesf_a4ef3d630785c4f296f9b4f274c33d78e}{sf\+::\+Uint8}} \mbox{\hyperlink{_server_8cpp_a9124e06a88fe18eba8cfc90c1ea88f54}{server\+End\+Of\+Stream}} = 2
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja funkcji}
+\Hypertarget{_server_8cpp_a0d60c59dae5c971031d008a6b81afff3}\label{_server_8cpp_a0d60c59dae5c971031d008a6b81afff3} 
+\index{Server.cpp@{Server.cpp}!doServer@{doServer}}
+\index{doServer@{doServer}!Server.cpp@{Server.cpp}}
+\doxysubsubsection{\texorpdfstring{doServer()}{doServer()}}
+{\footnotesize\ttfamily void do\+Server (\begin{DoxyParamCaption}\item[{unsigned short}]{port }\end{DoxyParamCaption})}
+
+Launch a server and wait for incoming audio data from a connected client Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_server_8cpp_a0d60c59dae5c971031d008a6b81afff3_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{_server_8cpp_a0d60c59dae5c971031d008a6b81afff3_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Dokumentacja zmiennych}
+\Hypertarget{_server_8cpp_a73c20d05337e00719712c5ed6d5d8c12}\label{_server_8cpp_a73c20d05337e00719712c5ed6d5d8c12} 
+\index{Server.cpp@{Server.cpp}!serverAudioData@{serverAudioData}}
+\index{serverAudioData@{serverAudioData}!Server.cpp@{Server.cpp}}
+\doxysubsubsection{\texorpdfstring{serverAudioData}{serverAudioData}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespacesf_a4ef3d630785c4f296f9b4f274c33d78e}{sf\+::\+Uint8}} server\+Audio\+Data = 1}
+
+\Hypertarget{_server_8cpp_a9124e06a88fe18eba8cfc90c1ea88f54}\label{_server_8cpp_a9124e06a88fe18eba8cfc90c1ea88f54} 
+\index{Server.cpp@{Server.cpp}!serverEndOfStream@{serverEndOfStream}}
+\index{serverEndOfStream@{serverEndOfStream}!Server.cpp@{Server.cpp}}
+\doxysubsubsection{\texorpdfstring{serverEndOfStream}{serverEndOfStream}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespacesf_a4ef3d630785c4f296f9b4f274c33d78e}{sf\+::\+Uint8}} server\+End\+Of\+Stream = 2}
+

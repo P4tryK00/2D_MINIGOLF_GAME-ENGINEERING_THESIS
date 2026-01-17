@@ -1,0 +1,77 @@
+\doxysection{Dokumentacja klasy sf\+::Autorelease\+Pool}
+\hypertarget{classsf_1_1_autorelease_pool}{}\label{classsf_1_1_autorelease_pool}\index{sf::AutoreleasePool@{sf::AutoreleasePool}}
+
+
+Wraps an NSAutorelease\+Pool that is created when the object is constructed and is drained when the object is destroyed.  
+
+
+
+
+{\ttfamily \#include $<$Autorelease\+Pool\+Wrapper.\+hpp$>$}
+
+
+
+Diagram współpracy dla sf\+::Autorelease\+Pool\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{classsf_1_1_autorelease_pool__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsf_1_1_autorelease_pool_ad7d49c278165f1e7a8d926ee7bcf5bf6}{Autorelease\+Pool}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new NSAutorelease\+Pool. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1_autorelease_pool_a982ea174ef6fc9827b8688dcb30df562}{\texorpdfstring{$\sim$}{\string~}\+Autorelease\+Pool}} ()
+\begin{DoxyCompactList}\small\item\em Drain the autorelease pool. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_autorelease_pool_wrapper_8hpp_a61f6fbbc7dd56eea049d6dac58cc76c5}{NSAutorelease\+Pool\+Ref}} \mbox{\hyperlink{classsf_1_1_autorelease_pool_ac385e9c1e21b72f38b587327af81b39c}{pool}}
+\begin{DoxyCompactList}\small\item\em The autorelease pool. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Wraps an NSAutorelease\+Pool that is created when the object is constructed and is drained when the object is destroyed. 
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{classsf_1_1_autorelease_pool_ad7d49c278165f1e7a8d926ee7bcf5bf6}\label{classsf_1_1_autorelease_pool_ad7d49c278165f1e7a8d926ee7bcf5bf6} 
+\index{sf::AutoreleasePool@{sf::AutoreleasePool}!AutoreleasePool@{AutoreleasePool}}
+\index{AutoreleasePool@{AutoreleasePool}!sf::AutoreleasePool@{sf::AutoreleasePool}}
+\doxysubsubsection{\texorpdfstring{AutoreleasePool()}{AutoreleasePool()}}
+{\footnotesize\ttfamily sf\+::\+Autorelease\+Pool\+::\+Autorelease\+Pool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new NSAutorelease\+Pool. 
+
+\Hypertarget{classsf_1_1_autorelease_pool_a982ea174ef6fc9827b8688dcb30df562}\label{classsf_1_1_autorelease_pool_a982ea174ef6fc9827b8688dcb30df562} 
+\index{sf::AutoreleasePool@{sf::AutoreleasePool}!````~AutoreleasePool@{\texorpdfstring{$\sim$}{\string~}AutoreleasePool}}
+\index{````~AutoreleasePool@{\texorpdfstring{$\sim$}{\string~}AutoreleasePool}!sf::AutoreleasePool@{sf::AutoreleasePool}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}AutoreleasePool()}{\string~AutoreleasePool()}}
+{\footnotesize\ttfamily sf\+::\+Autorelease\+Pool\+::\texorpdfstring{$\sim$}{\string~}\+Autorelease\+Pool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Drain the autorelease pool. 
+
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{classsf_1_1_autorelease_pool_ac385e9c1e21b72f38b587327af81b39c}\label{classsf_1_1_autorelease_pool_ac385e9c1e21b72f38b587327af81b39c} 
+\index{sf::AutoreleasePool@{sf::AutoreleasePool}!pool@{pool}}
+\index{pool@{pool}!sf::AutoreleasePool@{sf::AutoreleasePool}}
+\doxysubsubsection{\texorpdfstring{pool}{pool}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_autorelease_pool_wrapper_8hpp_a61f6fbbc7dd56eea049d6dac58cc76c5}{NSAutorelease\+Pool\+Ref}} sf\+::\+Autorelease\+Pool\+::pool\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The autorelease pool. 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+OSX/\mbox{\hyperlink{_autorelease_pool_wrapper_8hpp}{Autorelease\+Pool\+Wrapper.\+hpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+OSX/\mbox{\hyperlink{_autorelease_pool_wrapper_8mm}{Autorelease\+Pool\+Wrapper.\+mm}}\end{DoxyCompactItemize}

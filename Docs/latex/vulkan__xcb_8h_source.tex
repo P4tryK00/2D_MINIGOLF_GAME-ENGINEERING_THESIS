@@ -1,0 +1,72 @@
+\doxysection{vulkan\+\_\+xcb.\+h}
+\hypertarget{vulkan__xcb_8h_source}{}\label{vulkan__xcb_8h_source}\index{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/vulkan/vulkan\_xcb.h@{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/vulkan/vulkan\_xcb.h}}
+\mbox{\hyperlink{vulkan__xcb_8h}{Idź do dokumentacji tego pliku.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ VULKAN\_XCB\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ VULKAN\_XCB\_H\_\ 1}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00005\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00009\ \textcolor{comment}{**\ Copyright\ (c)\ 2015-\/2018\ The\ Khronos\ Group\ Inc.}}
+\DoxyCodeLine{00010\ \textcolor{comment}{**}}
+\DoxyCodeLine{00011\ \textcolor{comment}{**\ Licensed\ under\ the\ Apache\ License,\ Version\ 2.0\ (the\ "{}License"{});}}
+\DoxyCodeLine{00012\ \textcolor{comment}{**\ you\ may\ not\ use\ this\ file\ except\ in\ compliance\ with\ the\ License.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{**\ You\ may\ obtain\ a\ copy\ of\ the\ License\ at}}
+\DoxyCodeLine{00014\ \textcolor{comment}{**}}
+\DoxyCodeLine{00015\ \textcolor{comment}{**\ \ \ \ \ http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{00016\ \textcolor{comment}{**}}
+\DoxyCodeLine{00017\ \textcolor{comment}{**\ Unless\ required\ by\ applicable\ law\ or\ agreed\ to\ in\ writing,\ software}}
+\DoxyCodeLine{00018\ \textcolor{comment}{**\ distributed\ under\ the\ License\ is\ distributed\ on\ an\ "{}AS\ IS"{}\ BASIS,}}
+\DoxyCodeLine{00019\ \textcolor{comment}{**\ WITHOUT\ WARRANTIES\ OR\ CONDITIONS\ OF\ ANY\ KIND,\ either\ express\ or\ implied.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{**\ See\ the\ License\ for\ the\ specific\ language\ governing\ permissions\ and}}
+\DoxyCodeLine{00021\ \textcolor{comment}{**\ limitations\ under\ the\ License.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00025\ \textcolor{comment}{**\ This\ header\ is\ generated\ from\ the\ Khronos\ Vulkan\ XML\ API\ Registry.}}
+\DoxyCodeLine{00026\ \textcolor{comment}{**}}
+\DoxyCodeLine{00027\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ VK\_KHR\_xcb\_surface\ 1}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#define\ VK\_KHR\_XCB\_SURFACE\_SPEC\_VERSION\ \ \ 6}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ VK\_KHR\_XCB\_SURFACE\_EXTENSION\_NAME\ "{}VK\_KHR\_xcb\_surface"{}}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abb605a7700670dd8420cc3841b939444}{VkFlags}}\ \mbox{\hyperlink{vulkan__xcb_8h_aac3138396859e048e8d4b3a81c39f981}{VkXcbSurfaceCreateFlagsKHR}};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vk_xcb_surface_create_info_k_h_r}{VkXcbSurfaceCreateInfoKHR}}\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_aff9f2b99398eb80a2b5a146bc5534ce8}{VkStructureType}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_xcb_surface_create_info_k_h_r_a5c9a823be63cf4cbf7def3effe50dde7}{sType}};}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_xcb_surface_create_info_k_h_r_a0f9ca853448da619194b84051970d4ed}{pNext}};}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{vulkan__xcb_8h_aac3138396859e048e8d4b3a81c39f981}{VkXcbSurfaceCreateFlagsKHR}}\ \ \ \ \mbox{\hyperlink{struct_vk_xcb_surface_create_info_k_h_r_ad766d93140f69d2174f03905afdfc92f}{flags}};}
+\DoxyCodeLine{00040\ \ \ \ \ xcb\_connection\_t*\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_xcb_surface_create_info_k_h_r_ae6ddcad90726fafe890f466f887e5749}{connection}};}
+\DoxyCodeLine{00041\ \ \ \ \ xcb\_window\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_xcb_surface_create_info_k_h_r_a0e60aca7a0cba6946076b0e6322e78aa}{window}};}
+\DoxyCodeLine{00042\ \}\ \mbox{\hyperlink{vulkan__xcb_8h_abf8f0a95f974c56d8080dd0d31cc045b}{VkXcbSurfaceCreateInfoKHR}};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{VkResult}}\ (\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\_PTR}}\ *\mbox{\hyperlink{vulkan__xcb_8h_a3301a5942056bbffb1bf86b74e3d439c}{PFN\_vkCreateXcbSurfaceKHR}})(\mbox{\hyperlink{_vulkan_8hpp_a6d9f7e27148712f2c97db45ca6991547}{VkInstance}}\ instance,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_vk_xcb_surface_create_info_k_h_r}{VkXcbSurfaceCreateInfoKHR}}*\ pCreateInfo,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_vk_allocation_callbacks}{VkAllocationCallbacks}}*\ pAllocator,\ \mbox{\hyperlink{_vulkan_8hpp_a09787d7da5f3146095ed80ceccc2d794}{VkSurfaceKHR}}*\ pSurface);}
+\DoxyCodeLine{00046\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_ae5d9faf75f583010e32ee49087a15326}{VkBool32}}\ (\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\_PTR}}\ *\mbox{\hyperlink{vulkan__xcb_8h_aae44bd32347d2b42e0f021fe3951c2b7}{PFN\_vkGetPhysicalDeviceXcbPresentationSupportKHR}})(VkPhysicalDevice\ physicalDevice,\ uint32\_t\ queueFamilyIndex,\ xcb\_connection\_t*\ connection,\ xcb\_visualid\_t\ visual\_id);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#ifndef\ VK\_NO\_PROTOTYPES}}
+\DoxyCodeLine{00049\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a4394dd2421147ed91e838b086be25512}{VKAPI\_ATTR}}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{VkResult}}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a3856c7761d8b7260870053d0f03a0a49}{VKAPI\_CALL}}\ \mbox{\hyperlink{vulkan__xcb_8h_a256dacebaff1ec217f3409aa44cac64a}{vkCreateXcbSurfaceKHR}}(}
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{_vulkan_8hpp_a6d9f7e27148712f2c97db45ca6991547}{VkInstance}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ instance,}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_vk_xcb_surface_create_info_k_h_r}{VkXcbSurfaceCreateInfoKHR}}*\ \ \ \ \ \ \ \ \ \ \ \ pCreateInfo,}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_vk_allocation_callbacks}{VkAllocationCallbacks}}*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pAllocator,}
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{_vulkan_8hpp_a09787d7da5f3146095ed80ceccc2d794}{VkSurfaceKHR}}*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pSurface);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a4394dd2421147ed91e838b086be25512}{VKAPI\_ATTR}}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_ae5d9faf75f583010e32ee49087a15326}{VkBool32}}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a3856c7761d8b7260870053d0f03a0a49}{VKAPI\_CALL}}\ \mbox{\hyperlink{vulkan__xcb_8h_a347112716bd1c76ff69eb86d5fde540b}{vkGetPhysicalDeviceXcbPresentationSupportKHR}}(}
+\DoxyCodeLine{00056\ \ \ \ \ VkPhysicalDevice\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ physicalDevice,}
+\DoxyCodeLine{00057\ \ \ \ \ uint32\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ queueFamilyIndex,}
+\DoxyCodeLine{00058\ \ \ \ \ xcb\_connection\_t*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ connection,}
+\DoxyCodeLine{00059\ \ \ \ \ xcb\_visualid\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ visual\_id);}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00063\ \}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

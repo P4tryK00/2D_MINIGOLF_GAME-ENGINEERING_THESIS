@@ -1,0 +1,104 @@
+\doxysection{Dokumentacja pliku cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/extlibs/headers/vulkan/vulkan\+\_\+xlib.h}
+\hypertarget{vulkan__xlib_8h}{}\label{vulkan__xlib_8h}\index{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/vulkan/vulkan\_xlib.h@{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/vulkan/vulkan\_xlib.h}}
+\doxysubsubsection*{Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_vk_xlib_surface_create_info_k_h_r}{Vk\+Xlib\+Surface\+Create\+Info\+KHR}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Definicje}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{vulkan__xlib_8h_a0ea3ae5971955754857b5ce918b32d91}{VK\+\_\+\+KHR\+\_\+xlib\+\_\+surface}}~1
+\item 
+\#define \mbox{\hyperlink{vulkan__xlib_8h_ae383edf95dd95b0389693f8ab8be9786}{VK\+\_\+\+KHR\+\_\+\+XLIB\+\_\+\+SURFACE\+\_\+\+SPEC\+\_\+\+VERSION}}~6
+\item 
+\#define \mbox{\hyperlink{vulkan__xlib_8h_a0e1ed5c74c59f734916e0433228aaff8}{VK\+\_\+\+KHR\+\_\+\+XLIB\+\_\+\+SURFACE\+\_\+\+EXTENSION\+\_\+\+NAME}}~"{}VK\+\_\+\+KHR\+\_\+xlib\+\_\+surface"{}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Definicje typów}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abb605a7700670dd8420cc3841b939444}{Vk\+Flags}} \mbox{\hyperlink{vulkan__xlib_8h_ad3ff3a7be86a32d13ce27a63ecd07914}{Vk\+Xlib\+Surface\+Create\+Flags\+KHR}}
+\item 
+typedef struct Vk\+Xlib\+Surface\+Create\+Info\+KHR \mbox{\hyperlink{vulkan__xlib_8h_ae8e567d87ea093db76ef6378fb205f9b}{Vk\+Xlib\+Surface\+Create\+Info\+KHR}}
+\item 
+typedef \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{Vk\+Result}}(\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{vulkan__xlib_8h_a20bf476ede7c2c3de4630ea2f7915a8f}{PFN\+\_\+vk\+Create\+Xlib\+Surface\+KHR}}) (\mbox{\hyperlink{_vulkan_8hpp_a6d9f7e27148712f2c97db45ca6991547}{Vk\+Instance}} instance, const \mbox{\hyperlink{struct_vk_xlib_surface_create_info_k_h_r}{Vk\+Xlib\+Surface\+Create\+Info\+KHR}} \texorpdfstring{$\ast$}{*}p\+Create\+Info, const \mbox{\hyperlink{struct_vk_allocation_callbacks}{Vk\+Allocation\+Callbacks}} \texorpdfstring{$\ast$}{*}p\+Allocator, \mbox{\hyperlink{_vulkan_8hpp_a09787d7da5f3146095ed80ceccc2d794}{Vk\+Surface\+KHR}} \texorpdfstring{$\ast$}{*}p\+Surface)
+\item 
+typedef \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_ae5d9faf75f583010e32ee49087a15326}{Vk\+Bool32}}(\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{vulkan__xlib_8h_a893e3011ef8728281b95efc969714d56}{PFN\+\_\+vk\+Get\+Physical\+Device\+Xlib\+Presentation\+Support\+KHR}}) (Vk\+Physical\+Device physical\+Device, uint32\+\_\+t queue\+Family\+Index, Display \texorpdfstring{$\ast$}{*}dpy, Visual\+ID visual\+ID)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a4394dd2421147ed91e838b086be25512}{VKAPI\+\_\+\+ATTR}} \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{Vk\+Result}} \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a3856c7761d8b7260870053d0f03a0a49}{VKAPI\+\_\+\+CALL}} \mbox{\hyperlink{vulkan__xlib_8h_abf6ded33d51fb42afe9a0aefa757d192}{vk\+Create\+Xlib\+Surface\+KHR}} (\mbox{\hyperlink{_vulkan_8hpp_a6d9f7e27148712f2c97db45ca6991547}{Vk\+Instance}} instance, const \mbox{\hyperlink{struct_vk_xlib_surface_create_info_k_h_r}{Vk\+Xlib\+Surface\+Create\+Info\+KHR}} \texorpdfstring{$\ast$}{*}p\+Create\+Info, const \mbox{\hyperlink{struct_vk_allocation_callbacks}{Vk\+Allocation\+Callbacks}} \texorpdfstring{$\ast$}{*}p\+Allocator, \mbox{\hyperlink{_vulkan_8hpp_a09787d7da5f3146095ed80ceccc2d794}{Vk\+Surface\+KHR}} \texorpdfstring{$\ast$}{*}p\+Surface)
+\item 
+\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a4394dd2421147ed91e838b086be25512}{VKAPI\+\_\+\+ATTR}} \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_ae5d9faf75f583010e32ee49087a15326}{Vk\+Bool32}} \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a3856c7761d8b7260870053d0f03a0a49}{VKAPI\+\_\+\+CALL}} \mbox{\hyperlink{vulkan__xlib_8h_afe1109c728acd8f45cc8bf034045890f}{vk\+Get\+Physical\+Device\+Xlib\+Presentation\+Support\+KHR}} (Vk\+Physical\+Device physical\+Device, uint32\+\_\+t queue\+Family\+Index, Display \texorpdfstring{$\ast$}{*}dpy, Visual\+ID visual\+ID)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja definicji}
+\Hypertarget{vulkan__xlib_8h_a0ea3ae5971955754857b5ce918b32d91}\label{vulkan__xlib_8h_a0ea3ae5971955754857b5ce918b32d91} 
+\index{vulkan\_xlib.h@{vulkan\_xlib.h}!VK\_KHR\_xlib\_surface@{VK\_KHR\_xlib\_surface}}
+\index{VK\_KHR\_xlib\_surface@{VK\_KHR\_xlib\_surface}!vulkan\_xlib.h@{vulkan\_xlib.h}}
+\doxysubsubsection{\texorpdfstring{VK\_KHR\_xlib\_surface}{VK\_KHR\_xlib\_surface}}
+{\footnotesize\ttfamily \#define VK\+\_\+\+KHR\+\_\+xlib\+\_\+surface~1}
+
+\Hypertarget{vulkan__xlib_8h_a0e1ed5c74c59f734916e0433228aaff8}\label{vulkan__xlib_8h_a0e1ed5c74c59f734916e0433228aaff8} 
+\index{vulkan\_xlib.h@{vulkan\_xlib.h}!VK\_KHR\_XLIB\_SURFACE\_EXTENSION\_NAME@{VK\_KHR\_XLIB\_SURFACE\_EXTENSION\_NAME}}
+\index{VK\_KHR\_XLIB\_SURFACE\_EXTENSION\_NAME@{VK\_KHR\_XLIB\_SURFACE\_EXTENSION\_NAME}!vulkan\_xlib.h@{vulkan\_xlib.h}}
+\doxysubsubsection{\texorpdfstring{VK\_KHR\_XLIB\_SURFACE\_EXTENSION\_NAME}{VK\_KHR\_XLIB\_SURFACE\_EXTENSION\_NAME}}
+{\footnotesize\ttfamily \#define VK\+\_\+\+KHR\+\_\+\+XLIB\+\_\+\+SURFACE\+\_\+\+EXTENSION\+\_\+\+NAME~"{}VK\+\_\+\+KHR\+\_\+xlib\+\_\+surface"{}}
+
+\Hypertarget{vulkan__xlib_8h_ae383edf95dd95b0389693f8ab8be9786}\label{vulkan__xlib_8h_ae383edf95dd95b0389693f8ab8be9786} 
+\index{vulkan\_xlib.h@{vulkan\_xlib.h}!VK\_KHR\_XLIB\_SURFACE\_SPEC\_VERSION@{VK\_KHR\_XLIB\_SURFACE\_SPEC\_VERSION}}
+\index{VK\_KHR\_XLIB\_SURFACE\_SPEC\_VERSION@{VK\_KHR\_XLIB\_SURFACE\_SPEC\_VERSION}!vulkan\_xlib.h@{vulkan\_xlib.h}}
+\doxysubsubsection{\texorpdfstring{VK\_KHR\_XLIB\_SURFACE\_SPEC\_VERSION}{VK\_KHR\_XLIB\_SURFACE\_SPEC\_VERSION}}
+{\footnotesize\ttfamily \#define VK\+\_\+\+KHR\+\_\+\+XLIB\+\_\+\+SURFACE\+\_\+\+SPEC\+\_\+\+VERSION~6}
+
+
+
+\doxysubsection{Dokumentacja definicji typów}
+\Hypertarget{vulkan__xlib_8h_a20bf476ede7c2c3de4630ea2f7915a8f}\label{vulkan__xlib_8h_a20bf476ede7c2c3de4630ea2f7915a8f} 
+\index{vulkan\_xlib.h@{vulkan\_xlib.h}!PFN\_vkCreateXlibSurfaceKHR@{PFN\_vkCreateXlibSurfaceKHR}}
+\index{PFN\_vkCreateXlibSurfaceKHR@{PFN\_vkCreateXlibSurfaceKHR}!vulkan\_xlib.h@{vulkan\_xlib.h}}
+\doxysubsubsection{\texorpdfstring{PFN\_vkCreateXlibSurfaceKHR}{PFN\_vkCreateXlibSurfaceKHR}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{Vk\+Result}}(\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFN\+\_\+vk\+Create\+Xlib\+Surface\+KHR) (\mbox{\hyperlink{_vulkan_8hpp_a6d9f7e27148712f2c97db45ca6991547}{Vk\+Instance}} instance, const \mbox{\hyperlink{struct_vk_xlib_surface_create_info_k_h_r}{Vk\+Xlib\+Surface\+Create\+Info\+KHR}} \texorpdfstring{$\ast$}{*}p\+Create\+Info, const \mbox{\hyperlink{struct_vk_allocation_callbacks}{Vk\+Allocation\+Callbacks}} \texorpdfstring{$\ast$}{*}p\+Allocator, \mbox{\hyperlink{_vulkan_8hpp_a09787d7da5f3146095ed80ceccc2d794}{Vk\+Surface\+KHR}} \texorpdfstring{$\ast$}{*}p\+Surface)}
+
+\Hypertarget{vulkan__xlib_8h_a893e3011ef8728281b95efc969714d56}\label{vulkan__xlib_8h_a893e3011ef8728281b95efc969714d56} 
+\index{vulkan\_xlib.h@{vulkan\_xlib.h}!PFN\_vkGetPhysicalDeviceXlibPresentationSupportKHR@{PFN\_vkGetPhysicalDeviceXlibPresentationSupportKHR}}
+\index{PFN\_vkGetPhysicalDeviceXlibPresentationSupportKHR@{PFN\_vkGetPhysicalDeviceXlibPresentationSupportKHR}!vulkan\_xlib.h@{vulkan\_xlib.h}}
+\doxysubsubsection{\texorpdfstring{PFN\_vkGetPhysicalDeviceXlibPresentationSupportKHR}{PFN\_vkGetPhysicalDeviceXlibPresentationSupportKHR}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_ae5d9faf75f583010e32ee49087a15326}{Vk\+Bool32}}(\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFN\+\_\+vk\+Get\+Physical\+Device\+Xlib\+Presentation\+Support\+KHR) (Vk\+Physical\+Device physical\+Device, uint32\+\_\+t queue\+Family\+Index, Display \texorpdfstring{$\ast$}{*}dpy, Visual\+ID visual\+ID)}
+
+\Hypertarget{vulkan__xlib_8h_ad3ff3a7be86a32d13ce27a63ecd07914}\label{vulkan__xlib_8h_ad3ff3a7be86a32d13ce27a63ecd07914} 
+\index{vulkan\_xlib.h@{vulkan\_xlib.h}!VkXlibSurfaceCreateFlagsKHR@{VkXlibSurfaceCreateFlagsKHR}}
+\index{VkXlibSurfaceCreateFlagsKHR@{VkXlibSurfaceCreateFlagsKHR}!vulkan\_xlib.h@{vulkan\_xlib.h}}
+\doxysubsubsection{\texorpdfstring{VkXlibSurfaceCreateFlagsKHR}{VkXlibSurfaceCreateFlagsKHR}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abb605a7700670dd8420cc3841b939444}{Vk\+Flags}} \mbox{\hyperlink{vulkan__xlib_8h_ad3ff3a7be86a32d13ce27a63ecd07914}{Vk\+Xlib\+Surface\+Create\+Flags\+KHR}}}
+
+\Hypertarget{vulkan__xlib_8h_ae8e567d87ea093db76ef6378fb205f9b}\label{vulkan__xlib_8h_ae8e567d87ea093db76ef6378fb205f9b} 
+\index{vulkan\_xlib.h@{vulkan\_xlib.h}!VkXlibSurfaceCreateInfoKHR@{VkXlibSurfaceCreateInfoKHR}}
+\index{VkXlibSurfaceCreateInfoKHR@{VkXlibSurfaceCreateInfoKHR}!vulkan\_xlib.h@{vulkan\_xlib.h}}
+\doxysubsubsection{\texorpdfstring{VkXlibSurfaceCreateInfoKHR}{VkXlibSurfaceCreateInfoKHR}}
+{\footnotesize\ttfamily typedef struct Vk\+Xlib\+Surface\+Create\+Info\+KHR Vk\+Xlib\+Surface\+Create\+Info\+KHR}
+
+
+
+\doxysubsection{Dokumentacja funkcji}
+\Hypertarget{vulkan__xlib_8h_abf6ded33d51fb42afe9a0aefa757d192}\label{vulkan__xlib_8h_abf6ded33d51fb42afe9a0aefa757d192} 
+\index{vulkan\_xlib.h@{vulkan\_xlib.h}!vkCreateXlibSurfaceKHR@{vkCreateXlibSurfaceKHR}}
+\index{vkCreateXlibSurfaceKHR@{vkCreateXlibSurfaceKHR}!vulkan\_xlib.h@{vulkan\_xlib.h}}
+\doxysubsubsection{\texorpdfstring{vkCreateXlibSurfaceKHR()}{vkCreateXlibSurfaceKHR()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a4394dd2421147ed91e838b086be25512}{VKAPI\+\_\+\+ATTR}} \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{Vk\+Result}} \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a3856c7761d8b7260870053d0f03a0a49}{VKAPI\+\_\+\+CALL}} vk\+Create\+Xlib\+Surface\+KHR (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_vulkan_8hpp_a6d9f7e27148712f2c97db45ca6991547}{Vk\+Instance}}}]{instance,  }\item[{const \mbox{\hyperlink{struct_vk_xlib_surface_create_info_k_h_r}{Vk\+Xlib\+Surface\+Create\+Info\+KHR}} \texorpdfstring{$\ast$}{*}}]{p\+Create\+Info,  }\item[{const \mbox{\hyperlink{struct_vk_allocation_callbacks}{Vk\+Allocation\+Callbacks}} \texorpdfstring{$\ast$}{*}}]{p\+Allocator,  }\item[{\mbox{\hyperlink{_vulkan_8hpp_a09787d7da5f3146095ed80ceccc2d794}{Vk\+Surface\+KHR}} \texorpdfstring{$\ast$}{*}}]{p\+Surface }\end{DoxyParamCaption})}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{vulkan__xlib_8h_abf6ded33d51fb42afe9a0aefa757d192_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vulkan__xlib_8h_afe1109c728acd8f45cc8bf034045890f}\label{vulkan__xlib_8h_afe1109c728acd8f45cc8bf034045890f} 
+\index{vulkan\_xlib.h@{vulkan\_xlib.h}!vkGetPhysicalDeviceXlibPresentationSupportKHR@{vkGetPhysicalDeviceXlibPresentationSupportKHR}}
+\index{vkGetPhysicalDeviceXlibPresentationSupportKHR@{vkGetPhysicalDeviceXlibPresentationSupportKHR}!vulkan\_xlib.h@{vulkan\_xlib.h}}
+\doxysubsubsection{\texorpdfstring{vkGetPhysicalDeviceXlibPresentationSupportKHR()}{vkGetPhysicalDeviceXlibPresentationSupportKHR()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a4394dd2421147ed91e838b086be25512}{VKAPI\+\_\+\+ATTR}} \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_ae5d9faf75f583010e32ee49087a15326}{Vk\+Bool32}} \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a3856c7761d8b7260870053d0f03a0a49}{VKAPI\+\_\+\+CALL}} vk\+Get\+Physical\+Device\+Xlib\+Presentation\+Support\+KHR (\begin{DoxyParamCaption}\item[{Vk\+Physical\+Device}]{physical\+Device,  }\item[{uint32\+\_\+t}]{queue\+Family\+Index,  }\item[{Display \texorpdfstring{$\ast$}{*}}]{dpy,  }\item[{Visual\+ID}]{visual\+ID }\end{DoxyParamCaption})}
+

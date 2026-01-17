@@ -1,0 +1,208 @@
+\doxysection{Dokumentacja klasy sf\+::priv\+::Resource\+Stream}
+\hypertarget{classsf_1_1priv_1_1_resource_stream}{}\label{classsf_1_1priv_1_1_resource_stream}\index{sf::priv::ResourceStream@{sf::priv::ResourceStream}}
+
+
+Read from Android asset files.  
+
+
+
+
+{\ttfamily \#include $<$Resource\+Stream.\+hpp$>$}
+
+
+
+Diagram dziedziczenia dla sf\+::priv\+::Resource\+Stream\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{classsf_1_1priv_1_1_resource_stream__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagram współpracy dla sf\+::priv\+::Resource\+Stream\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{classsf_1_1priv_1_1_resource_stream__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsf_1_1priv_1_1_resource_stream_af12381a283530e59a5989a66fdad6da7}{Resource\+Stream}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1priv_1_1_resource_stream_a83684ee309e49dca5465b0673f47479d}{\texorpdfstring{$\sim$}{\string~}\+Resource\+Stream}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacesf_a2840579fed3494d9f330baf7a5a19903}{Int64}} \mbox{\hyperlink{classsf_1_1priv_1_1_resource_stream_a02d2d794e1daf75e79a7483b9fda1e59}{read}} (void \texorpdfstring{$\ast$}{*}data, \mbox{\hyperlink{namespacesf_a2840579fed3494d9f330baf7a5a19903}{Int64}} size)
+\begin{DoxyCompactList}\small\item\em Read data from the asset. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacesf_a2840579fed3494d9f330baf7a5a19903}{Int64}} \mbox{\hyperlink{classsf_1_1priv_1_1_resource_stream_a2f2656123b573d9efb3011025294cc86}{seek}} (\mbox{\hyperlink{namespacesf_a2840579fed3494d9f330baf7a5a19903}{Int64}} position)
+\begin{DoxyCompactList}\small\item\em Change the current reading position in the asset file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacesf_a2840579fed3494d9f330baf7a5a19903}{Int64}} \mbox{\hyperlink{classsf_1_1priv_1_1_resource_stream_ab2d7ae30e8819ec4fcf18111c8007e50}{tell}} ()
+\begin{DoxyCompactList}\small\item\em Get the current reading position in the asset file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacesf_a2840579fed3494d9f330baf7a5a19903}{Int64}} \mbox{\hyperlink{classsf_1_1priv_1_1_resource_stream_a7dd4c11eae39b3aa118b49fb0bb053cd}{get\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Return the size of the asset file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{classsf_1_1_input_stream}{sf\+::\+Input\+Stream}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classsf_1_1_input_stream_a4b2eb0f92323e630bd0542bc6191682e}{\texorpdfstring{$\sim$}{\string~}\+Input\+Stream}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+AAsset \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classsf_1_1priv_1_1_resource_stream_a163e206e27fb5097d4015a78e878a667}{m\+\_\+file}}
+\begin{DoxyCompactList}\small\item\em The asset file to read. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Read from Android asset files. 
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{classsf_1_1priv_1_1_resource_stream_af12381a283530e59a5989a66fdad6da7}\label{classsf_1_1priv_1_1_resource_stream_af12381a283530e59a5989a66fdad6da7} 
+\index{sf::priv::ResourceStream@{sf::priv::ResourceStream}!ResourceStream@{ResourceStream}}
+\index{ResourceStream@{ResourceStream}!sf::priv::ResourceStream@{sf::priv::ResourceStream}}
+\doxysubsubsection{\texorpdfstring{ResourceStream()}{ResourceStream()}}
+{\footnotesize\ttfamily sf\+::priv\+::\+Resource\+Stream\+::\+Resource\+Stream (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em filename} & Filename of the asset \\
+\hline
+\end{DoxyParams}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_resource_stream_af12381a283530e59a5989a66fdad6da7_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_resource_stream_a83684ee309e49dca5465b0673f47479d}\label{classsf_1_1priv_1_1_resource_stream_a83684ee309e49dca5465b0673f47479d} 
+\index{sf::priv::ResourceStream@{sf::priv::ResourceStream}!````~ResourceStream@{\texorpdfstring{$\sim$}{\string~}ResourceStream}}
+\index{````~ResourceStream@{\texorpdfstring{$\sim$}{\string~}ResourceStream}!sf::priv::ResourceStream@{sf::priv::ResourceStream}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ResourceStream()}{\string~ResourceStream()}}
+{\footnotesize\ttfamily sf\+::priv\+::\+Resource\+Stream\+::\texorpdfstring{$\sim$}{\string~}\+Resource\+Stream (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{classsf_1_1priv_1_1_resource_stream_a7dd4c11eae39b3aa118b49fb0bb053cd}\label{classsf_1_1priv_1_1_resource_stream_a7dd4c11eae39b3aa118b49fb0bb053cd} 
+\index{sf::priv::ResourceStream@{sf::priv::ResourceStream}!getSize@{getSize}}
+\index{getSize@{getSize}!sf::priv::ResourceStream@{sf::priv::ResourceStream}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesf_a2840579fed3494d9f330baf7a5a19903}{Int64}} sf\+::priv\+::\+Resource\+Stream\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Return the size of the asset file. 
+
+\begin{DoxyReturn}{Zwraca}
+The total number of bytes available in the asset, or -\/1 on error 
+\end{DoxyReturn}
+
+
+Implementuje \mbox{\hyperlink{classsf_1_1_input_stream_a311eaaaa65d636728e5153b574b72d5d}{sf\+::\+Input\+Stream}}.
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_resource_stream_a7dd4c11eae39b3aa118b49fb0bb053cd_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_resource_stream_a02d2d794e1daf75e79a7483b9fda1e59}\label{classsf_1_1priv_1_1_resource_stream_a02d2d794e1daf75e79a7483b9fda1e59} 
+\index{sf::priv::ResourceStream@{sf::priv::ResourceStream}!read@{read}}
+\index{read@{read}!sf::priv::ResourceStream@{sf::priv::ResourceStream}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesf_a2840579fed3494d9f330baf7a5a19903}{Int64}} sf\+::priv\+::\+Resource\+Stream\+::read (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{data,  }\item[{\mbox{\hyperlink{namespacesf_a2840579fed3494d9f330baf7a5a19903}{Int64}}}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Read data from the asset. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em data} & Buffer where the asset data is copied \\
+\hline
+{\em size} & Number of bytes read\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+The number of bytes actually read, or -\/1 on error 
+\end{DoxyReturn}
+
+
+Implementuje \mbox{\hyperlink{classsf_1_1_input_stream_a8dd89c74c1acb693203f50e750c6ae53}{sf\+::\+Input\+Stream}}.
+
+\Hypertarget{classsf_1_1priv_1_1_resource_stream_a2f2656123b573d9efb3011025294cc86}\label{classsf_1_1priv_1_1_resource_stream_a2f2656123b573d9efb3011025294cc86} 
+\index{sf::priv::ResourceStream@{sf::priv::ResourceStream}!seek@{seek}}
+\index{seek@{seek}!sf::priv::ResourceStream@{sf::priv::ResourceStream}}
+\doxysubsubsection{\texorpdfstring{seek()}{seek()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesf_a2840579fed3494d9f330baf7a5a19903}{Int64}} sf\+::priv\+::\+Resource\+Stream\+::seek (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesf_a2840579fed3494d9f330baf7a5a19903}{Int64}}}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Change the current reading position in the asset file. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em position} & The position to seek to, from the beginning\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+The position actually sought to, or -\/1 on error 
+\end{DoxyReturn}
+
+
+Implementuje \mbox{\hyperlink{classsf_1_1_input_stream_a76aba8e5d5cf9b1c5902d5e04f7864fc}{sf\+::\+Input\+Stream}}.
+
+\Hypertarget{classsf_1_1priv_1_1_resource_stream_ab2d7ae30e8819ec4fcf18111c8007e50}\label{classsf_1_1priv_1_1_resource_stream_ab2d7ae30e8819ec4fcf18111c8007e50} 
+\index{sf::priv::ResourceStream@{sf::priv::ResourceStream}!tell@{tell}}
+\index{tell@{tell}!sf::priv::ResourceStream@{sf::priv::ResourceStream}}
+\doxysubsubsection{\texorpdfstring{tell()}{tell()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesf_a2840579fed3494d9f330baf7a5a19903}{Int64}} sf\+::priv\+::\+Resource\+Stream\+::tell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the current reading position in the asset file. 
+
+\begin{DoxyReturn}{Zwraca}
+The current position, or -\/1 on error. 
+\end{DoxyReturn}
+
+
+Implementuje \mbox{\hyperlink{classsf_1_1_input_stream_a599515b9ccdbddb6fef5a98424fd559c}{sf\+::\+Input\+Stream}}.
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_resource_stream_ab2d7ae30e8819ec4fcf18111c8007e50_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{classsf_1_1priv_1_1_resource_stream_a163e206e27fb5097d4015a78e878a667}\label{classsf_1_1priv_1_1_resource_stream_a163e206e27fb5097d4015a78e878a667} 
+\index{sf::priv::ResourceStream@{sf::priv::ResourceStream}!m\_file@{m\_file}}
+\index{m\_file@{m\_file}!sf::priv::ResourceStream@{sf::priv::ResourceStream}}
+\doxysubsubsection{\texorpdfstring{m\_file}{m\_file}}
+{\footnotesize\ttfamily AAsset\texorpdfstring{$\ast$}{*} sf\+::priv\+::\+Resource\+Stream\+::m\+\_\+file\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The asset file to read. 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+System/\+Android/\mbox{\hyperlink{_resource_stream_8hpp}{Resource\+Stream.\+hpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+System/\+Android/\mbox{\hyperlink{_resource_stream_8cpp}{Resource\+Stream.\+cpp}}\end{DoxyCompactItemize}

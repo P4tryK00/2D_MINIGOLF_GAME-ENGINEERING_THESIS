@@ -1,0 +1,306 @@
+\doxysection{Dokumentacja klasy Main\+Menu\+State}
+\hypertarget{class_main_menu_state}{}\label{class_main_menu_state}\index{MainMenuState@{MainMenuState}}
+
+
+Stan początkowy gry (Menu Główne).  
+
+
+
+
+{\ttfamily \#include $<$Main\+Menu\+State.\+h$>$}
+
+
+
+Diagram dziedziczenia dla Main\+Menu\+State\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{class_main_menu_state__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagram współpracy dla Main\+Menu\+State\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{class_main_menu_state__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_main_menu_state_a8bf084041900c86967b51354fb26a230}{Main\+Menu\+State}} (\mbox{\hyperlink{_game_8h_ae7efd7ef77698f16206f5c66180a389f}{Game\+Data\+Ref}} data)
+\begin{DoxyCompactList}\small\item\em Konstruktor stanu Menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_menu_state_ae01bec9a0c013ab0986314f5b759581d}{init}} () override
+\begin{DoxyCompactList}\small\item\em Inicjalizuje widok menu, ładuje czcionki i ustawia pozycje przycisków. Inicjalizuje również system zapisu (\doxylink{class_save_manager}{Save\+Manager}). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_menu_state_acfe2c4d10154a431ef4801ff432cb602}{handle\+Input}} (sf\+::\+Event \&event) override
+\begin{DoxyCompactList}\small\item\em Obsługuje kliknięcia w przyciski menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_menu_state_ad427eeebf13b213067dab8add4cfe7ac}{update}} (float dt) override
+\begin{DoxyCompactList}\small\item\em Aktualizuje efekty wizualne (podświetlenie przycisków, animacje wejścia/wyjścia). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_menu_state_a250f1f2b49fea14497063ebac7e2c011}{draw}} (float dt) override
+\begin{DoxyCompactList}\small\item\em Rysuje interfejs menu na ekranie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{class_state}{State}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_state_a9ddc1df6f998184d6477b48fab90281c}{\texorpdfstring{$\sim$}{\string~}\+State}} ()
+\begin{DoxyCompactList}\small\item\em Wirtualny destruktor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_state_abad223d1066e95bd1b70e1341fb72a88}{pause}} ()
+\begin{DoxyCompactList}\small\item\em Wywoływana, gdy stan jest pauzowany (np. inny stan jest nakładany na wierzch). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_state_a8ef6d305e962afe41b0629255f0f58f9}{resume}} ()
+\begin{DoxyCompactList}\small\item\em Wywoływana, gdy stan jest wznawiany (np. stan powyżej został zdjęty ze stosu). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_game_8h_ae7efd7ef77698f16206f5c66180a389f}{Game\+Data\+Ref}} \mbox{\hyperlink{class_main_menu_state_a01549df6f5e15047c22944ed054b35ab}{m\+\_\+data}}
+\begin{DoxyCompactList}\small\item\em Dane gry. \end{DoxyCompactList}\item 
+sf\+::\+Sprite \mbox{\hyperlink{class_main_menu_state_a3dad320c8db7592001f326d6c80dbafb}{m\+\_\+background}}
+\begin{DoxyCompactList}\small\item\em Tło menu (opcjonalne, w kodzie .cpp używany jest jednolity kolor). \end{DoxyCompactList}\item 
+sf\+::\+Text \mbox{\hyperlink{class_main_menu_state_acba2d89d700f75fc3887bfe33d042db0}{m\+\_\+title}}
+\begin{DoxyCompactList}\small\item\em Tytuł gry "{}\+MINI GOLF"{}. \end{DoxyCompactList}\item 
+sf\+::\+Text \mbox{\hyperlink{class_main_menu_state_abd2b25d5d69de3bda77b8c269dfb8a42}{m\+\_\+play\+Button}}
+\begin{DoxyCompactList}\small\item\em Przycisk "{}\+PLAY"{}. \end{DoxyCompactList}\item 
+sf\+::\+Text \mbox{\hyperlink{class_main_menu_state_a344116097075318ccfaff9cb66c6d4fd}{m\+\_\+exit\+Button}}
+\begin{DoxyCompactList}\small\item\em Przycisk "{}\+EXIT"{}. \end{DoxyCompactList}\item 
+sf\+::\+Text \mbox{\hyperlink{class_main_menu_state_a960d49db1cab2eb5f6207dde45ef94cf}{m\+\_\+leaderboard\+Button}}
+\begin{DoxyCompactList}\small\item\em Przycisk "{}\+LEADERBOARD"{}. \end{DoxyCompactList}\item 
+sf\+::\+Rectangle\+Shape \mbox{\hyperlink{class_main_menu_state_acbf21aa61944e229f73088d6bf015d02}{m\+\_\+fade\+Rect}}
+\begin{DoxyCompactList}\small\item\em Prostokąt przyciemniający ekran. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_main_menu_state_ad56c21acdcae3f3b16e4456c109932e1}{m\+\_\+alpha}}
+\begin{DoxyCompactList}\small\item\em Kanał alpha dla efektu fade. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_main_menu_state_a91a9ae14b1e133e8c47e2a396ada599d}{m\+\_\+is\+Transitioning}}
+\begin{DoxyCompactList}\small\item\em Czy trwa animacja wyjścia do innego stanu. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_main_menu_state_af37e24c346ef81d5637c89ae4a32e871}{m\+\_\+is\+Fading\+In}}
+\begin{DoxyCompactList}\small\item\em Czy trwa animacja wejścia (rozjaśnianie). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_main_menu_state_a294bc80cb14aa689ff54b55a11e97df8}{m\+\_\+go\+To\+Leaderboard}}
+\begin{DoxyCompactList}\small\item\em Flaga decydująca o celu przejścia (Leaderboard vs Level\+Select). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Stan początkowy gry (Menu Główne). 
+
+Klasa odpowiada za wyświetlenie głównego interfejsu użytkownika po uruchomieniu aplikacji. Umożliwia nawigację do\+:
+\begin{DoxyItemize}
+\item Wyboru poziomów (Play).
+\item Tabeli wyników (Leaderboard).
+\item Wyjścia z aplikacji (Exit). 
+\end{DoxyItemize}
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{class_main_menu_state_a8bf084041900c86967b51354fb26a230}\label{class_main_menu_state_a8bf084041900c86967b51354fb26a230} 
+\index{MainMenuState@{MainMenuState}!MainMenuState@{MainMenuState}}
+\index{MainMenuState@{MainMenuState}!MainMenuState@{MainMenuState}}
+\doxysubsubsection{\texorpdfstring{MainMenuState()}{MainMenuState()}}
+{\footnotesize\ttfamily Main\+Menu\+State\+::\+Main\+Menu\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_game_8h_ae7efd7ef77698f16206f5c66180a389f}{Game\+Data\+Ref}}}]{data }\end{DoxyParamCaption})}
+
+
+
+Konstruktor stanu Menu. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em data} & Współdzielone dane gry. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_main_menu_state_a250f1f2b49fea14497063ebac7e2c011}\label{class_main_menu_state_a250f1f2b49fea14497063ebac7e2c011} 
+\index{MainMenuState@{MainMenuState}!draw@{draw}}
+\index{draw@{draw}!MainMenuState@{MainMenuState}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Main\+Menu\+State\+::draw (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Rysuje interfejs menu na ekranie. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em dt} & Interpolacja (nieużywana). \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \mbox{\hyperlink{class_state_a78efb743026712cbd78b8c07a45c2def}{State}}.
+
+\Hypertarget{class_main_menu_state_acfe2c4d10154a431ef4801ff432cb602}\label{class_main_menu_state_acfe2c4d10154a431ef4801ff432cb602} 
+\index{MainMenuState@{MainMenuState}!handleInput@{handleInput}}
+\index{handleInput@{handleInput}!MainMenuState@{MainMenuState}}
+\doxysubsubsection{\texorpdfstring{handleInput()}{handleInput()}}
+{\footnotesize\ttfamily void Main\+Menu\+State\+::handle\+Input (\begin{DoxyParamCaption}\item[{sf\+::\+Event \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Obsługuje kliknięcia w przyciski menu. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em event} & Zdarzenie SFML. \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \mbox{\hyperlink{class_state_ad0fcf10830377a1f673a714aa3b7944d}{State}}.
+
+\Hypertarget{class_main_menu_state_ae01bec9a0c013ab0986314f5b759581d}\label{class_main_menu_state_ae01bec9a0c013ab0986314f5b759581d} 
+\index{MainMenuState@{MainMenuState}!init@{init}}
+\index{init@{init}!MainMenuState@{MainMenuState}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Main\+Menu\+State\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Inicjalizuje widok menu, ładuje czcionki i ustawia pozycje przycisków. Inicjalizuje również system zapisu (\doxylink{class_save_manager}{Save\+Manager}). 
+
+
+
+Implementuje \mbox{\hyperlink{class_state_a2ff5faa41a5811007e8d50542365640b}{State}}.
+
+Oto graf wywołań dla tej funkcji\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_menu_state_ae01bec9a0c013ab0986314f5b759581d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_main_menu_state_ad427eeebf13b213067dab8add4cfe7ac}\label{class_main_menu_state_ad427eeebf13b213067dab8add4cfe7ac} 
+\index{MainMenuState@{MainMenuState}!update@{update}}
+\index{update@{update}!MainMenuState@{MainMenuState}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Main\+Menu\+State\+::update (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Aktualizuje efekty wizualne (podświetlenie przycisków, animacje wejścia/wyjścia). 
+
+
+\begin{DoxyParams}{Parametry}
+{\em dt} & Czas klatki (Delta Time). \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \mbox{\hyperlink{class_state_a07b507523aaffc4cf78f3dd3174a68ea}{State}}.
+
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{class_main_menu_state_ad56c21acdcae3f3b16e4456c109932e1}\label{class_main_menu_state_ad56c21acdcae3f3b16e4456c109932e1} 
+\index{MainMenuState@{MainMenuState}!m\_alpha@{m\_alpha}}
+\index{m\_alpha@{m\_alpha}!MainMenuState@{MainMenuState}}
+\doxysubsubsection{\texorpdfstring{m\_alpha}{m\_alpha}}
+{\footnotesize\ttfamily float Main\+Menu\+State\+::m\+\_\+alpha\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Kanał alpha dla efektu fade. 
+
+\Hypertarget{class_main_menu_state_a3dad320c8db7592001f326d6c80dbafb}\label{class_main_menu_state_a3dad320c8db7592001f326d6c80dbafb} 
+\index{MainMenuState@{MainMenuState}!m\_background@{m\_background}}
+\index{m\_background@{m\_background}!MainMenuState@{MainMenuState}}
+\doxysubsubsection{\texorpdfstring{m\_background}{m\_background}}
+{\footnotesize\ttfamily sf\+::\+Sprite Main\+Menu\+State\+::m\+\_\+background\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Tło menu (opcjonalne, w kodzie .cpp używany jest jednolity kolor). 
+
+\Hypertarget{class_main_menu_state_a01549df6f5e15047c22944ed054b35ab}\label{class_main_menu_state_a01549df6f5e15047c22944ed054b35ab} 
+\index{MainMenuState@{MainMenuState}!m\_data@{m\_data}}
+\index{m\_data@{m\_data}!MainMenuState@{MainMenuState}}
+\doxysubsubsection{\texorpdfstring{m\_data}{m\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_game_8h_ae7efd7ef77698f16206f5c66180a389f}{Game\+Data\+Ref}} Main\+Menu\+State\+::m\+\_\+data\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Dane gry. 
+
+\Hypertarget{class_main_menu_state_a344116097075318ccfaff9cb66c6d4fd}\label{class_main_menu_state_a344116097075318ccfaff9cb66c6d4fd} 
+\index{MainMenuState@{MainMenuState}!m\_exitButton@{m\_exitButton}}
+\index{m\_exitButton@{m\_exitButton}!MainMenuState@{MainMenuState}}
+\doxysubsubsection{\texorpdfstring{m\_exitButton}{m\_exitButton}}
+{\footnotesize\ttfamily sf\+::\+Text Main\+Menu\+State\+::m\+\_\+exit\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Przycisk "{}\+EXIT"{}. 
+
+\Hypertarget{class_main_menu_state_acbf21aa61944e229f73088d6bf015d02}\label{class_main_menu_state_acbf21aa61944e229f73088d6bf015d02} 
+\index{MainMenuState@{MainMenuState}!m\_fadeRect@{m\_fadeRect}}
+\index{m\_fadeRect@{m\_fadeRect}!MainMenuState@{MainMenuState}}
+\doxysubsubsection{\texorpdfstring{m\_fadeRect}{m\_fadeRect}}
+{\footnotesize\ttfamily sf\+::\+Rectangle\+Shape Main\+Menu\+State\+::m\+\_\+fade\+Rect\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Prostokąt przyciemniający ekran. 
+
+\Hypertarget{class_main_menu_state_a294bc80cb14aa689ff54b55a11e97df8}\label{class_main_menu_state_a294bc80cb14aa689ff54b55a11e97df8} 
+\index{MainMenuState@{MainMenuState}!m\_goToLeaderboard@{m\_goToLeaderboard}}
+\index{m\_goToLeaderboard@{m\_goToLeaderboard}!MainMenuState@{MainMenuState}}
+\doxysubsubsection{\texorpdfstring{m\_goToLeaderboard}{m\_goToLeaderboard}}
+{\footnotesize\ttfamily bool Main\+Menu\+State\+::m\+\_\+go\+To\+Leaderboard\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Flaga decydująca o celu przejścia (Leaderboard vs Level\+Select). 
+
+\Hypertarget{class_main_menu_state_af37e24c346ef81d5637c89ae4a32e871}\label{class_main_menu_state_af37e24c346ef81d5637c89ae4a32e871} 
+\index{MainMenuState@{MainMenuState}!m\_isFadingIn@{m\_isFadingIn}}
+\index{m\_isFadingIn@{m\_isFadingIn}!MainMenuState@{MainMenuState}}
+\doxysubsubsection{\texorpdfstring{m\_isFadingIn}{m\_isFadingIn}}
+{\footnotesize\ttfamily bool Main\+Menu\+State\+::m\+\_\+is\+Fading\+In\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Czy trwa animacja wejścia (rozjaśnianie). 
+
+\Hypertarget{class_main_menu_state_a91a9ae14b1e133e8c47e2a396ada599d}\label{class_main_menu_state_a91a9ae14b1e133e8c47e2a396ada599d} 
+\index{MainMenuState@{MainMenuState}!m\_isTransitioning@{m\_isTransitioning}}
+\index{m\_isTransitioning@{m\_isTransitioning}!MainMenuState@{MainMenuState}}
+\doxysubsubsection{\texorpdfstring{m\_isTransitioning}{m\_isTransitioning}}
+{\footnotesize\ttfamily bool Main\+Menu\+State\+::m\+\_\+is\+Transitioning\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Czy trwa animacja wyjścia do innego stanu. 
+
+\Hypertarget{class_main_menu_state_a960d49db1cab2eb5f6207dde45ef94cf}\label{class_main_menu_state_a960d49db1cab2eb5f6207dde45ef94cf} 
+\index{MainMenuState@{MainMenuState}!m\_leaderboardButton@{m\_leaderboardButton}}
+\index{m\_leaderboardButton@{m\_leaderboardButton}!MainMenuState@{MainMenuState}}
+\doxysubsubsection{\texorpdfstring{m\_leaderboardButton}{m\_leaderboardButton}}
+{\footnotesize\ttfamily sf\+::\+Text Main\+Menu\+State\+::m\+\_\+leaderboard\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Przycisk "{}\+LEADERBOARD"{}. 
+
+\Hypertarget{class_main_menu_state_abd2b25d5d69de3bda77b8c269dfb8a42}\label{class_main_menu_state_abd2b25d5d69de3bda77b8c269dfb8a42} 
+\index{MainMenuState@{MainMenuState}!m\_playButton@{m\_playButton}}
+\index{m\_playButton@{m\_playButton}!MainMenuState@{MainMenuState}}
+\doxysubsubsection{\texorpdfstring{m\_playButton}{m\_playButton}}
+{\footnotesize\ttfamily sf\+::\+Text Main\+Menu\+State\+::m\+\_\+play\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Przycisk "{}\+PLAY"{}. 
+
+\Hypertarget{class_main_menu_state_acba2d89d700f75fc3887bfe33d042db0}\label{class_main_menu_state_acba2d89d700f75fc3887bfe33d042db0} 
+\index{MainMenuState@{MainMenuState}!m\_title@{m\_title}}
+\index{m\_title@{m\_title}!MainMenuState@{MainMenuState}}
+\doxysubsubsection{\texorpdfstring{m\_title}{m\_title}}
+{\footnotesize\ttfamily sf\+::\+Text Main\+Menu\+State\+::m\+\_\+title\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Tytuł gry "{}\+MINI GOLF"{}. 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_main_menu_state_8h}{Main\+Menu\+State.\+h}}\item 
+\mbox{\hyperlink{_main_menu_state_8cpp}{Main\+Menu\+State.\+cpp}}\end{DoxyCompactItemize}

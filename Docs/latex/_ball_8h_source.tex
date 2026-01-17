@@ -1,0 +1,49 @@
+\doxysection{Ball.\+h}
+\hypertarget{_ball_8h_source}{}\label{_ball_8h_source}\mbox{\hyperlink{_ball_8h}{Idź do dokumentacji tego pliku.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ BALL\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ BALL\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_d_e_f_i_n_i_t_i_o_n_s_8h}{DEFINITIONS.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_resource_manager_8h}{ResourceManager.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ball}{Ball}}\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00018\ \ \ \ \ sf::Sprite\ \mbox{\hyperlink{class_ball_ab1dab247bd5dd7103fe6c18d13b3ccfb}{player}};\ \ \ \ }
+\DoxyCodeLine{00019\ \ \ \ \ sf::Vector2f\ \mbox{\hyperlink{class_ball_a8ab4e883d502142a717ad5ca9543dec4}{velocity}};\ }
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_ball_a86a144d3dad6c953e422e32435923bbb}{Ball}}();}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ball_a1bb0bbf31a2abebdcccaf61a3f30337d}{update}}(\textcolor{keywordtype}{float}\ dt,\ \textcolor{keywordtype}{float}\ friction);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ball_ada0736d899918581fb4fe0bcffbbca85}{draw}}(sf::RenderWindow\&\ window);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ball_a72ef793126ac61ded2fdc0132f022fcd}{applyImpulse}}(\textcolor{keyword}{const}\ sf::Vector2f\&\ impulse);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_ball_a3540a4ad1a9ea3bf0015bba2533867f9}{contains}}(\textcolor{keyword}{const}\ sf::Vector2f\&\ point)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00057\ \ \ \ \ sf::Vector2f\ \mbox{\hyperlink{class_ball_ad6ef89d51219c18ca49d774fed666b43}{getPosition}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ball_aa6adf1f827ad57dde0f7946a5b811e8d}{setPosition}}(\textcolor{keyword}{const}\ sf::Vector2f\&\ pos);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ball_ada66b93ed25e35a2a2f06d3a3bb11656}{stop}}();}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00074\ \ \ \ \ sf::Vector2f\ \mbox{\hyperlink{class_ball_a7a9eedf60466395b70c33e2a1cc0b558}{getScale}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_ball_ab1dab247bd5dd7103fe6c18d13b3ccfb}{player}}.getScale();\ \}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ball_a86e9c9d82f097eb26379d2e5263a5969}{bounceX}}();}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ball_a75d9ccb97de1b65c047b31a09a30d9cb}{bounceY}}();}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ball_a6136426a795d806848fa2370b2ebb7b9}{invertVelocity}}();}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00097\ \ \ \ \ sf::Vector2f\ \mbox{\hyperlink{class_ball_a0f45fdcf740f894ddcf0c1a8614d9a4f}{getVelocity}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ball_a920b6aa4df14d49895e5e0da571586d6}{setScale}}(\textcolor{keywordtype}{float}\ factor);}
+\DoxyCodeLine{00104\ \};}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ BALL\_H}}
+
+\end{DoxyCode}

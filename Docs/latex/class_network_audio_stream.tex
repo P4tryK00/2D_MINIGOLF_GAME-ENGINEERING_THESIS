@@ -1,0 +1,295 @@
+\doxysection{Dokumentacja klasy Network\+Audio\+Stream}
+\hypertarget{class_network_audio_stream}{}\label{class_network_audio_stream}\index{NetworkAudioStream@{NetworkAudioStream}}
+
+
+Diagram dziedziczenia dla Network\+Audio\+Stream\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_network_audio_stream__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagram współpracy dla Network\+Audio\+Stream\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_network_audio_stream__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_network_audio_stream_a16b7eba2911135401c404d67035206a8}{Network\+Audio\+Stream}} ()
+\item 
+void \mbox{\hyperlink{class_network_audio_stream_a5c698fc66d35fe30ae5e0148c03766e3}{start}} (unsigned short port)
+\end{DoxyCompactItemize}
+\doxysubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{classsf_1_1_sound_stream}{sf\+::\+Sound\+Stream}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classsf_1_1_sound_stream_a5b14ec6669440e4dbd5650f0fb6b0674}{\texorpdfstring{$\sim$}{\string~}\+Sound\+Stream}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1_sound_stream_afdc08b69cab5f243d9324940a85a1144}{play}} ()
+\begin{DoxyCompactList}\small\item\em Start or resume playing the audio stream. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1_sound_stream_a932ff181e661503cad288b4bb6fe45ca}{pause}} ()
+\begin{DoxyCompactList}\small\item\em Pause the audio stream. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1_sound_stream_a16cc6a0404b32e42c4dce184bb94d0f4}{stop}} ()
+\begin{DoxyCompactList}\small\item\em Stop playing the audio stream. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classsf_1_1_sound_stream_a1f70933912dd9498f4dc99feefed27f3}{get\+Channel\+Count}} () const
+\begin{DoxyCompactList}\small\item\em Return the number of channels of the stream. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classsf_1_1_sound_stream_a7da448dc40d81a33b8dc555fbf0d3fbf}{get\+Sample\+Rate}} () const
+\begin{DoxyCompactList}\small\item\em Get the stream sample rate of the stream. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1_sound_source_ac43af72c98c077500b239bc75b812f03}{Status}} \mbox{\hyperlink{classsf_1_1_sound_stream_acd9a7514033ae00213c49793da700734}{get\+Status}} () const
+\begin{DoxyCompactList}\small\item\em Get the current status of the stream (stopped, paused, playing) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1_sound_stream_af416a5f84c8750d2acb9821d78bc8646}{set\+Playing\+Offset}} (\mbox{\hyperlink{classsf_1_1_time}{Time}} time\+Offset)
+\begin{DoxyCompactList}\small\item\em Change the current playing position of the stream. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1_time}{Time}} \mbox{\hyperlink{classsf_1_1_sound_stream_ae288f3c72edbad9cc7ee938ce5b907c1}{get\+Playing\+Offset}} () const
+\begin{DoxyCompactList}\small\item\em Get the current playing position of the stream. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1_sound_stream_a43fade018ffba7e4f847a9f00b353f3d}{set\+Loop}} (bool loop)
+\begin{DoxyCompactList}\small\item\em Set whether or not the stream should loop after reaching the end. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1_sound_stream_a49d263f9bbaefec4b019bd05fda59b25}{get\+Loop}} () const
+\begin{DoxyCompactList}\small\item\em Tell whether or not the stream is in loop mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{classsf_1_1_sound_source}{sf\+::\+Sound\+Source}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsf_1_1_sound_source_ae0c7728c1449fdebe65749ab6fcb3170}{Sound\+Source}} (const \mbox{\hyperlink{classsf_1_1_sound_source}{Sound\+Source}} \&copy)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classsf_1_1_sound_source_ab51c41d5886ea8850042f0144ba5fc79}{\texorpdfstring{$\sim$}{\string~}\+Sound\+Source}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1_sound_source_a72a13695ed48b7f7b55e7cd4431f4bb6}{set\+Pitch}} (float pitch)
+\begin{DoxyCompactList}\small\item\em Set the pitch of the sound. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1_sound_source_a2f192f2b49fb8e2b82f3498d3663fcc2}{set\+Volume}} (float volume)
+\begin{DoxyCompactList}\small\item\em Set the volume of the sound. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1_sound_source_a0480257ea25d986eba6cc3c1a6f8d7c2}{set\+Position}} (float x, float y, float z)
+\begin{DoxyCompactList}\small\item\em Set the 3D position of the sound in the audio scene. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1_sound_source_a17ba9ed01925395652181a7b2a7d3aef}{set\+Position}} (const \mbox{\hyperlink{namespacesf_af97357d7d32e7d6a700d03be2f3b4811}{Vector3f}} \&position)
+\begin{DoxyCompactList}\small\item\em Set the 3D position of the sound in the audio scene. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1_sound_source_ac478a8b813faf7dd575635b102081d0d}{set\+Relative\+To\+Listener}} (bool relative)
+\begin{DoxyCompactList}\small\item\em Make the sound\textquotesingle{}s position relative to the listener or absolute. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1_sound_source_a75bbc2c34addc8b25a14edb908508afe}{set\+Min\+Distance}} (float distance)
+\begin{DoxyCompactList}\small\item\em Set the minimum distance of the sound. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1_sound_source_aa2adff44cd2f8b4e3c7315d7c2a45626}{set\+Attenuation}} (float attenuation)
+\begin{DoxyCompactList}\small\item\em Set the attenuation factor of the sound. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classsf_1_1_sound_source_a4736acc2c802f927544c9ce52a44a9e4}{get\+Pitch}} () const
+\begin{DoxyCompactList}\small\item\em Get the pitch of the sound. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classsf_1_1_sound_source_a04243fb5edf64561689b1d58953fc4ce}{get\+Volume}} () const
+\begin{DoxyCompactList}\small\item\em Get the volume of the sound. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacesf_af97357d7d32e7d6a700d03be2f3b4811}{Vector3f}} \mbox{\hyperlink{classsf_1_1_sound_source_a8d199521f55550c7a3b2b0f6950dffa1}{get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Get the 3D position of the sound in the audio scene. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1_sound_source_adcdb4ef32c2f4481d34aff0b5c31534b}{is\+Relative\+To\+Listener}} () const
+\begin{DoxyCompactList}\small\item\em Tell whether the sound\textquotesingle{}s position is relative to the listener or is absolute. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classsf_1_1_sound_source_a605ca7f359ec1c36fcccdcd4696562ac}{get\+Min\+Distance}} () const
+\begin{DoxyCompactList}\small\item\em Get the minimum distance of the sound. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classsf_1_1_sound_source_a8ad7dafb4f1b4afbc638cebe24f48cc9}{get\+Attenuation}} () const
+\begin{DoxyCompactList}\small\item\em Get the attenuation factor of the sound. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1_sound_source}{Sound\+Source}} \& \mbox{\hyperlink{classsf_1_1_sound_source_a4b494e4a0b819bae9cd99b43e2f3f59d}{operator=}} (const \mbox{\hyperlink{classsf_1_1_sound_source}{Sound\+Source}} \&right)
+\begin{DoxyCompactList}\small\item\em Overload of assignment operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{class_network_audio_stream_a7a2a574aec42b199788346ad6acd7914}{on\+Get\+Data}} (\mbox{\hyperlink{structsf_1_1_sound_stream_1_1_chunk}{sf\+::\+Sound\+Stream\+::\+Chunk}} \&data)
+\item 
+virtual void \mbox{\hyperlink{class_network_audio_stream_adab7ec817f075ee5c9d403d641ab5c78}{on\+Seek}} (\mbox{\hyperlink{classsf_1_1_time}{sf\+::\+Time}} time\+Offset)
+\item 
+void \mbox{\hyperlink{class_network_audio_stream_a2b9ef1966a48b1b63af77e759b41d37e}{receive\+Loop}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsf_1_1_tcp_listener}{sf\+::\+Tcp\+Listener}} \mbox{\hyperlink{class_network_audio_stream_a047ee9c1b8f162cd6a4f6c329aad8955}{m\+\_\+listener}}
+\item 
+\mbox{\hyperlink{classsf_1_1_tcp_socket}{sf\+::\+Tcp\+Socket}} \mbox{\hyperlink{class_network_audio_stream_a19d8783e7d3e4ca5b7e504eebac01402}{m\+\_\+client}}
+\item 
+\mbox{\hyperlink{classsf_1_1_mutex}{sf\+::\+Mutex}} \mbox{\hyperlink{class_network_audio_stream_aec34e0d6d55c2ca64009362f4ab301a2}{m\+\_\+mutex}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{namespacesf_a3c8e10435e2a310a7741755e66b5c94e}{sf\+::\+Int16}} $>$ \mbox{\hyperlink{class_network_audio_stream_abd6b5eb8b3981c0fb9ea6b789c683224}{m\+\_\+samples}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{namespacesf_a3c8e10435e2a310a7741755e66b5c94e}{sf\+::\+Int16}} $>$ \mbox{\hyperlink{class_network_audio_stream_ae6f04cba40f8f475eab222888cce812c}{m\+\_\+temp\+Buffer}}
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{class_network_audio_stream_aa68563c14d3976a7272f3bb86ef8313a}{m\+\_\+offset}}
+\item 
+bool \mbox{\hyperlink{class_network_audio_stream_af50dfbf591997fe64fbb67022c490824}{m\+\_\+has\+Finished}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Dodatkowe Dziedziczone Składowe}
+\doxysubsection*{Typy publiczne dziedziczone z \mbox{\hyperlink{classsf_1_1_sound_source}{sf\+::\+Sound\+Source}}}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classsf_1_1_sound_source_ac43af72c98c077500b239bc75b812f03}{Status}} \{ \mbox{\hyperlink{classsf_1_1_sound_source_ac43af72c98c077500b239bc75b812f03adabb01e8aa85b2f54b344890addf764a}{Stopped}}
+, \mbox{\hyperlink{classsf_1_1_sound_source_ac43af72c98c077500b239bc75b812f03ac3ca1fcc0394267c9bdbe3dc0a8a7e41}{Paused}}
+, \mbox{\hyperlink{classsf_1_1_sound_source_ac43af72c98c077500b239bc75b812f03af07bdea9f70ef7606dfc9f955beeee18}{Playing}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration of the sound source states. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typy chronione dziedziczone z \mbox{\hyperlink{classsf_1_1_sound_stream}{sf\+::\+Sound\+Stream}}}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \mbox{\hyperlink{classsf_1_1_sound_stream_a47af95b3695c5bc7dbe44deb8b35e36ca2f2c638731fdff0d6fe4e3e82b6f6146}{No\+Loop}} = -\/1
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Metody chronione dziedziczone z \mbox{\hyperlink{classsf_1_1_sound_stream}{sf\+::\+Sound\+Stream}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsf_1_1_sound_stream_a769d08f4c3c6b4340ef3a838329d2e5c}{Sound\+Stream}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1_sound_stream_a9c351711198ee1aa77c2fefd3ced4d2c}{initialize}} (unsigned int channel\+Count, unsigned int sample\+Rate)
+\begin{DoxyCompactList}\small\item\em Define the audio stream parameters. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacesf_a2840579fed3494d9f330baf7a5a19903}{Int64}} \mbox{\hyperlink{classsf_1_1_sound_stream_a77d8fa90f6e415e7f6e6861404a40a92}{on\+Loop}} ()
+\begin{DoxyCompactList}\small\item\em Change the current playing position in the stream source to the beginning of the loop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1_sound_stream_a3a38d317279163f3766da2e538fbde93}{set\+Processing\+Interval}} (\mbox{\hyperlink{classsf_1_1_time}{Time}} interval)
+\begin{DoxyCompactList}\small\item\em Set the processing interval. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody chronione dziedziczone z \mbox{\hyperlink{classsf_1_1_sound_source}{sf\+::\+Sound\+Source}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsf_1_1_sound_source_aefa4bd4460f387d81a0637d293979436}{Sound\+Source}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty chronione dziedziczone z \mbox{\hyperlink{classsf_1_1_sound_source}{sf\+::\+Sound\+Source}}}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{classsf_1_1_sound_source_a0223cef4b1c587e6e1e17b4c92c4479c}{m\+\_\+source}}
+\begin{DoxyCompactList}\small\item\em Open\+AL source identifier. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Customized sound stream for acquiring audio data from the network 
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{class_network_audio_stream_a16b7eba2911135401c404d67035206a8}\label{class_network_audio_stream_a16b7eba2911135401c404d67035206a8} 
+\index{NetworkAudioStream@{NetworkAudioStream}!NetworkAudioStream@{NetworkAudioStream}}
+\index{NetworkAudioStream@{NetworkAudioStream}!NetworkAudioStream@{NetworkAudioStream}}
+\doxysubsubsection{\texorpdfstring{NetworkAudioStream()}{NetworkAudioStream()}}
+{\footnotesize\ttfamily Network\+Audio\+Stream\+::\+Network\+Audio\+Stream (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Default constructor Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_audio_stream_a16b7eba2911135401c404d67035206a8_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_network_audio_stream_a7a2a574aec42b199788346ad6acd7914}\label{class_network_audio_stream_a7a2a574aec42b199788346ad6acd7914} 
+\index{NetworkAudioStream@{NetworkAudioStream}!onGetData@{onGetData}}
+\index{onGetData@{onGetData}!NetworkAudioStream@{NetworkAudioStream}}
+\doxysubsubsection{\texorpdfstring{onGetData()}{onGetData()}}
+{\footnotesize\ttfamily virtual bool Network\+Audio\+Stream\+::on\+Get\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf_1_1_sound_stream_1_1_chunk}{sf\+::\+Sound\+Stream\+::\+Chunk}} \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+/see Sound\+Stream\+::\+On\+Get\+Data 
+
+Implementuje \mbox{\hyperlink{classsf_1_1_sound_stream_a968ec024a6e45490962c8a1121cb7c5f}{sf\+::\+Sound\+Stream}}.
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_audio_stream_a7a2a574aec42b199788346ad6acd7914_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_network_audio_stream_adab7ec817f075ee5c9d403d641ab5c78}\label{class_network_audio_stream_adab7ec817f075ee5c9d403d641ab5c78} 
+\index{NetworkAudioStream@{NetworkAudioStream}!onSeek@{onSeek}}
+\index{onSeek@{onSeek}!NetworkAudioStream@{NetworkAudioStream}}
+\doxysubsubsection{\texorpdfstring{onSeek()}{onSeek()}}
+{\footnotesize\ttfamily virtual void Network\+Audio\+Stream\+::on\+Seek (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_time}{sf\+::\+Time}}}]{time\+Offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+/see Sound\+Stream\+::\+On\+Seek 
+
+Implementuje \mbox{\hyperlink{classsf_1_1_sound_stream_a907036dd2ca7d3af5ead316e54b75997}{sf\+::\+Sound\+Stream}}.
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_audio_stream_adab7ec817f075ee5c9d403d641ab5c78_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_network_audio_stream_a2b9ef1966a48b1b63af77e759b41d37e}\label{class_network_audio_stream_a2b9ef1966a48b1b63af77e759b41d37e} 
+\index{NetworkAudioStream@{NetworkAudioStream}!receiveLoop@{receiveLoop}}
+\index{receiveLoop@{receiveLoop}!NetworkAudioStream@{NetworkAudioStream}}
+\doxysubsubsection{\texorpdfstring{receiveLoop()}{receiveLoop()}}
+{\footnotesize\ttfamily void Network\+Audio\+Stream\+::receive\+Loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Get audio data from the client until playback is stopped Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_audio_stream_a2b9ef1966a48b1b63af77e759b41d37e_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_audio_stream_a2b9ef1966a48b1b63af77e759b41d37e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_network_audio_stream_a5c698fc66d35fe30ae5e0148c03766e3}\label{class_network_audio_stream_a5c698fc66d35fe30ae5e0148c03766e3} 
+\index{NetworkAudioStream@{NetworkAudioStream}!start@{start}}
+\index{start@{start}!NetworkAudioStream@{NetworkAudioStream}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void Network\+Audio\+Stream\+::start (\begin{DoxyParamCaption}\item[{unsigned short}]{port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Run the server, stream audio data from the client Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_audio_stream_a5c698fc66d35fe30ae5e0148c03766e3_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_audio_stream_a5c698fc66d35fe30ae5e0148c03766e3_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{class_network_audio_stream_a19d8783e7d3e4ca5b7e504eebac01402}\label{class_network_audio_stream_a19d8783e7d3e4ca5b7e504eebac01402} 
+\index{NetworkAudioStream@{NetworkAudioStream}!m\_client@{m\_client}}
+\index{m\_client@{m\_client}!NetworkAudioStream@{NetworkAudioStream}}
+\doxysubsubsection{\texorpdfstring{m\_client}{m\_client}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1_tcp_socket}{sf\+::\+Tcp\+Socket}} Network\+Audio\+Stream\+::m\+\_\+client\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_network_audio_stream_af50dfbf591997fe64fbb67022c490824}\label{class_network_audio_stream_af50dfbf591997fe64fbb67022c490824} 
+\index{NetworkAudioStream@{NetworkAudioStream}!m\_hasFinished@{m\_hasFinished}}
+\index{m\_hasFinished@{m\_hasFinished}!NetworkAudioStream@{NetworkAudioStream}}
+\doxysubsubsection{\texorpdfstring{m\_hasFinished}{m\_hasFinished}}
+{\footnotesize\ttfamily bool Network\+Audio\+Stream\+::m\+\_\+has\+Finished\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_network_audio_stream_a047ee9c1b8f162cd6a4f6c329aad8955}\label{class_network_audio_stream_a047ee9c1b8f162cd6a4f6c329aad8955} 
+\index{NetworkAudioStream@{NetworkAudioStream}!m\_listener@{m\_listener}}
+\index{m\_listener@{m\_listener}!NetworkAudioStream@{NetworkAudioStream}}
+\doxysubsubsection{\texorpdfstring{m\_listener}{m\_listener}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1_tcp_listener}{sf\+::\+Tcp\+Listener}} Network\+Audio\+Stream\+::m\+\_\+listener\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_network_audio_stream_aec34e0d6d55c2ca64009362f4ab301a2}\label{class_network_audio_stream_aec34e0d6d55c2ca64009362f4ab301a2} 
+\index{NetworkAudioStream@{NetworkAudioStream}!m\_mutex@{m\_mutex}}
+\index{m\_mutex@{m\_mutex}!NetworkAudioStream@{NetworkAudioStream}}
+\doxysubsubsection{\texorpdfstring{m\_mutex}{m\_mutex}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1_mutex}{sf\+::\+Mutex}} Network\+Audio\+Stream\+::m\+\_\+mutex\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_network_audio_stream_aa68563c14d3976a7272f3bb86ef8313a}\label{class_network_audio_stream_aa68563c14d3976a7272f3bb86ef8313a} 
+\index{NetworkAudioStream@{NetworkAudioStream}!m\_offset@{m\_offset}}
+\index{m\_offset@{m\_offset}!NetworkAudioStream@{NetworkAudioStream}}
+\doxysubsubsection{\texorpdfstring{m\_offset}{m\_offset}}
+{\footnotesize\ttfamily std\+::size\+\_\+t Network\+Audio\+Stream\+::m\+\_\+offset\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_network_audio_stream_abd6b5eb8b3981c0fb9ea6b789c683224}\label{class_network_audio_stream_abd6b5eb8b3981c0fb9ea6b789c683224} 
+\index{NetworkAudioStream@{NetworkAudioStream}!m\_samples@{m\_samples}}
+\index{m\_samples@{m\_samples}!NetworkAudioStream@{NetworkAudioStream}}
+\doxysubsubsection{\texorpdfstring{m\_samples}{m\_samples}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{namespacesf_a3c8e10435e2a310a7741755e66b5c94e}{sf\+::\+Int16}}$>$ Network\+Audio\+Stream\+::m\+\_\+samples\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_network_audio_stream_ae6f04cba40f8f475eab222888cce812c}\label{class_network_audio_stream_ae6f04cba40f8f475eab222888cce812c} 
+\index{NetworkAudioStream@{NetworkAudioStream}!m\_tempBuffer@{m\_tempBuffer}}
+\index{m\_tempBuffer@{m\_tempBuffer}!NetworkAudioStream@{NetworkAudioStream}}
+\doxysubsubsection{\texorpdfstring{m\_tempBuffer}{m\_tempBuffer}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{namespacesf_a3c8e10435e2a310a7741755e66b5c94e}{sf\+::\+Int16}}$>$ Network\+Audio\+Stream\+::m\+\_\+temp\+Buffer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/examples/voip/\mbox{\hyperlink{_server_8cpp}{Server.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,314 @@
+\doxysection{Dokumentacja pliku cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/extlibs/headers/freetype2/ftstroke.h}
+\hypertarget{ftstroke_8h}{}\label{ftstroke_8h}\index{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/freetype2/ftstroke.h@{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/freetype2/ftstroke.h}}
+{\ttfamily \#include $<$ft2build.\+h$>$}\newline
+Wykres zależności załączania dla ftstroke.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{ftstroke_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Definicje typów}
+\begin{DoxyCompactItemize}
+\item 
+typedef typedef\+FT\+\_\+\+BEGIN\+\_\+\+HEADER struct FT\+\_\+\+Stroker\+Rec\+\_\+ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{ftstroke_8h_ac10d5f2301e83538779af9f59d630827}{FT\+\_\+\+Stroker}}
+\item 
+typedef enum \mbox{\hyperlink{ftstroke_8h_a4f7903e8a82442fcf9e9bc22a45598d6}{FT\+\_\+\+Stroker\+\_\+\+Line\+Join\+\_\+}} \mbox{\hyperlink{ftstroke_8h_ad88789e609530e9364391b86a7adfc00}{FT\+\_\+\+Stroker\+\_\+\+Line\+Join}}
+\item 
+typedef enum \mbox{\hyperlink{ftstroke_8h_a08e4f487ed8345fb0bbeeb953729d8d1}{FT\+\_\+\+Stroker\+\_\+\+Line\+Cap\+\_\+}} \mbox{\hyperlink{ftstroke_8h_a4123f98d748be9084e10fd2f0bf5fd39}{FT\+\_\+\+Stroker\+\_\+\+Line\+Cap}}
+\item 
+typedef enum \mbox{\hyperlink{ftstroke_8h_a361e8f43ea3b0861e52e603c7d0a83b6}{FT\+\_\+\+Stroker\+Border\+\_\+}} \mbox{\hyperlink{ftstroke_8h_abe99a5a670b9d468a050974aa4b10557}{FT\+\_\+\+Stroker\+Border}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Wyliczenia}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{ftstroke_8h_a4f7903e8a82442fcf9e9bc22a45598d6}{FT\+\_\+\+Stroker\+\_\+\+Line\+Join\+\_\+}} \{ \newline
+\mbox{\hyperlink{ftstroke_8h_a4f7903e8a82442fcf9e9bc22a45598d6ad13e974cada297192e460f14d9f0ba6b}{FT\+\_\+\+STROKER\+\_\+\+LINEJOIN\+\_\+\+ROUND}} = 0
+, \mbox{\hyperlink{ftstroke_8h_a4f7903e8a82442fcf9e9bc22a45598d6aa875a789dd55495ef7d9214eacc0bdc2}{FT\+\_\+\+STROKER\+\_\+\+LINEJOIN\+\_\+\+BEVEL}} = 1
+, \mbox{\hyperlink{ftstroke_8h_a4f7903e8a82442fcf9e9bc22a45598d6acb76f61066e44a130d206d2066add1e4}{FT\+\_\+\+STROKER\+\_\+\+LINEJOIN\+\_\+\+MITER\+\_\+\+VARIABLE}} = 2
+, \mbox{\hyperlink{ftstroke_8h_a4f7903e8a82442fcf9e9bc22a45598d6a38d166d5cf959f5f433e4259d0fe7f88}{FT\+\_\+\+STROKER\+\_\+\+LINEJOIN\+\_\+\+MITER}} = FT\+\_\+\+STROKER\+\_\+\+LINEJOIN\+\_\+\+MITER\+\_\+\+VARIABLE
+, \newline
+\mbox{\hyperlink{ftstroke_8h_a4f7903e8a82442fcf9e9bc22a45598d6a75d091d7418b2669c9cfaa4027ff7e82}{FT\+\_\+\+STROKER\+\_\+\+LINEJOIN\+\_\+\+MITER\+\_\+\+FIXED}} = 3
+ \}
+\item 
+enum \mbox{\hyperlink{ftstroke_8h_a08e4f487ed8345fb0bbeeb953729d8d1}{FT\+\_\+\+Stroker\+\_\+\+Line\+Cap\+\_\+}} \{ \mbox{\hyperlink{ftstroke_8h_a08e4f487ed8345fb0bbeeb953729d8d1a4fcfe731e3c1efe39d4dcf19edd7e1ce}{FT\+\_\+\+STROKER\+\_\+\+LINECAP\+\_\+\+BUTT}} = 0
+, \mbox{\hyperlink{ftstroke_8h_a08e4f487ed8345fb0bbeeb953729d8d1a0417f93b0d7fea22cd20124a40479c1f}{FT\+\_\+\+STROKER\+\_\+\+LINECAP\+\_\+\+ROUND}}
+, \mbox{\hyperlink{ftstroke_8h_a08e4f487ed8345fb0bbeeb953729d8d1a7cd7d3e711ed2072567c0f51fecb4a86}{FT\+\_\+\+STROKER\+\_\+\+LINECAP\+\_\+\+SQUARE}}
+ \}
+\item 
+enum \mbox{\hyperlink{ftstroke_8h_a361e8f43ea3b0861e52e603c7d0a83b6}{FT\+\_\+\+Stroker\+Border\+\_\+}} \{ \mbox{\hyperlink{ftstroke_8h_a361e8f43ea3b0861e52e603c7d0a83b6ab5a331ec4a5a9da353de29c578fb2d6d}{FT\+\_\+\+STROKER\+\_\+\+BORDER\+\_\+\+LEFT}} = 0
+, \mbox{\hyperlink{ftstroke_8h_a361e8f43ea3b0861e52e603c7d0a83b6a60213f0f00e84979c5e4fc4e0857f994}{FT\+\_\+\+STROKER\+\_\+\+BORDER\+\_\+\+RIGHT}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ftstroke_8h_a140debddc87985f3fd2e610eda00cb4a}{FT\+\_\+\+Outline\+\_\+\+Get\+Inside\+Border}} (\mbox{\hyperlink{ftimage_8h_a6b64eb35252e8829024c12c98cce37d4}{FT\+\_\+\+Outline}} \texorpdfstring{$\ast$}{*}outline)
+\item 
+\mbox{\hyperlink{ftstroke_8h_a6a2dd261ba2617bdac0cc3ec28ecf137}{FT\+\_\+\+Outline\+\_\+\+Get\+Outside\+Border}} (\mbox{\hyperlink{ftimage_8h_a6b64eb35252e8829024c12c98cce37d4}{FT\+\_\+\+Outline}} \texorpdfstring{$\ast$}{*}outline)
+\item 
+\mbox{\hyperlink{ftstroke_8h_a81bf87929ccbc0d2604fb0e48277a7c8}{FT\+\_\+\+Stroker\+\_\+\+New}} (\mbox{\hyperlink{freetype_8h_a92857f8bf079b7b9ef5d3ce74cf89ef5}{FT\+\_\+\+Library}} library, \mbox{\hyperlink{ftstroke_8h_ac10d5f2301e83538779af9f59d630827}{FT\+\_\+\+Stroker}} \texorpdfstring{$\ast$}{*}astroker)
+\item 
+\mbox{\hyperlink{ftstroke_8h_af0be981947c3636d7bb1ddcf432c613f}{FT\+\_\+\+Stroker\+\_\+\+Set}} (\mbox{\hyperlink{ftstroke_8h_ac10d5f2301e83538779af9f59d630827}{FT\+\_\+\+Stroker}} stroker, \mbox{\hyperlink{fttypes_8h_a5f5a679cc09f758efdd0d1c5feed3c3d}{FT\+\_\+\+Fixed}} radius, \mbox{\hyperlink{ftstroke_8h_a4123f98d748be9084e10fd2f0bf5fd39}{FT\+\_\+\+Stroker\+\_\+\+Line\+Cap}} line\+\_\+cap, \mbox{\hyperlink{ftstroke_8h_ad88789e609530e9364391b86a7adfc00}{FT\+\_\+\+Stroker\+\_\+\+Line\+Join}} line\+\_\+join, \mbox{\hyperlink{fttypes_8h_a5f5a679cc09f758efdd0d1c5feed3c3d}{FT\+\_\+\+Fixed}} miter\+\_\+limit)
+\item 
+\mbox{\hyperlink{ftstroke_8h_a10f92fc5c5c968c4f720825bb2940bfb}{FT\+\_\+\+Stroker\+\_\+\+Rewind}} (\mbox{\hyperlink{ftstroke_8h_ac10d5f2301e83538779af9f59d630827}{FT\+\_\+\+Stroker}} stroker)
+\item 
+\mbox{\hyperlink{ftstroke_8h_aac413eee959667991ec337765215c501}{FT\+\_\+\+Stroker\+\_\+\+Parse\+Outline}} (\mbox{\hyperlink{ftstroke_8h_ac10d5f2301e83538779af9f59d630827}{FT\+\_\+\+Stroker}} stroker, \mbox{\hyperlink{ftimage_8h_a6b64eb35252e8829024c12c98cce37d4}{FT\+\_\+\+Outline}} \texorpdfstring{$\ast$}{*}outline, \mbox{\hyperlink{fttypes_8h_a1a832a256bb5a7e6e884afaa1a07f3ae}{FT\+\_\+\+Bool}} opened)
+\item 
+\mbox{\hyperlink{ftstroke_8h_a843508f735e0f169b6d00d91510ac000}{FT\+\_\+\+Stroker\+\_\+\+Begin\+Sub\+Path}} (\mbox{\hyperlink{ftstroke_8h_ac10d5f2301e83538779af9f59d630827}{FT\+\_\+\+Stroker}} stroker, \mbox{\hyperlink{ftimage_8h_abfcb941b4b81f3a922d4ae57c620db27}{FT\+\_\+\+Vector}} \texorpdfstring{$\ast$}{*}to, \mbox{\hyperlink{fttypes_8h_a1a832a256bb5a7e6e884afaa1a07f3ae}{FT\+\_\+\+Bool}} open)
+\item 
+\mbox{\hyperlink{ftstroke_8h_a954981a224366dcb418122e9ac1ef314}{FT\+\_\+\+Stroker\+\_\+\+End\+Sub\+Path}} (\mbox{\hyperlink{ftstroke_8h_ac10d5f2301e83538779af9f59d630827}{FT\+\_\+\+Stroker}} stroker)
+\item 
+\mbox{\hyperlink{ftstroke_8h_a09c014bb4f39ab1d8aa04d3f652b5ab2}{FT\+\_\+\+Stroker\+\_\+\+Line\+To}} (\mbox{\hyperlink{ftstroke_8h_ac10d5f2301e83538779af9f59d630827}{FT\+\_\+\+Stroker}} stroker, \mbox{\hyperlink{ftimage_8h_abfcb941b4b81f3a922d4ae57c620db27}{FT\+\_\+\+Vector}} \texorpdfstring{$\ast$}{*}to)
+\item 
+\mbox{\hyperlink{ftstroke_8h_a907808cc2cee0c659100dbc10560e8db}{FT\+\_\+\+Stroker\+\_\+\+Conic\+To}} (\mbox{\hyperlink{ftstroke_8h_ac10d5f2301e83538779af9f59d630827}{FT\+\_\+\+Stroker}} stroker, \mbox{\hyperlink{ftimage_8h_abfcb941b4b81f3a922d4ae57c620db27}{FT\+\_\+\+Vector}} \texorpdfstring{$\ast$}{*}control, \mbox{\hyperlink{ftimage_8h_abfcb941b4b81f3a922d4ae57c620db27}{FT\+\_\+\+Vector}} \texorpdfstring{$\ast$}{*}to)
+\item 
+\mbox{\hyperlink{ftstroke_8h_a6463e08d4f40c63cb109dfcd04afb60f}{FT\+\_\+\+Stroker\+\_\+\+Cubic\+To}} (\mbox{\hyperlink{ftstroke_8h_ac10d5f2301e83538779af9f59d630827}{FT\+\_\+\+Stroker}} stroker, \mbox{\hyperlink{ftimage_8h_abfcb941b4b81f3a922d4ae57c620db27}{FT\+\_\+\+Vector}} \texorpdfstring{$\ast$}{*}control1, \mbox{\hyperlink{ftimage_8h_abfcb941b4b81f3a922d4ae57c620db27}{FT\+\_\+\+Vector}} \texorpdfstring{$\ast$}{*}control2, \mbox{\hyperlink{ftimage_8h_abfcb941b4b81f3a922d4ae57c620db27}{FT\+\_\+\+Vector}} \texorpdfstring{$\ast$}{*}to)
+\item 
+\mbox{\hyperlink{ftstroke_8h_a21503fee2c6c57376d98885ac3e54910}{FT\+\_\+\+Stroker\+\_\+\+Get\+Border\+Counts}} (\mbox{\hyperlink{ftstroke_8h_ac10d5f2301e83538779af9f59d630827}{FT\+\_\+\+Stroker}} stroker, \mbox{\hyperlink{ftstroke_8h_abe99a5a670b9d468a050974aa4b10557}{FT\+\_\+\+Stroker\+Border}} border, \mbox{\hyperlink{fttypes_8h_abcb8db4dbf35d2b55a9e8c7b0926dc52}{FT\+\_\+\+UInt}} \texorpdfstring{$\ast$}{*}anum\+\_\+points, \mbox{\hyperlink{fttypes_8h_abcb8db4dbf35d2b55a9e8c7b0926dc52}{FT\+\_\+\+UInt}} \texorpdfstring{$\ast$}{*}anum\+\_\+contours)
+\item 
+\mbox{\hyperlink{ftstroke_8h_af4b54d6a127efb98084b11394077539a}{FT\+\_\+\+Stroker\+\_\+\+Export\+Border}} (\mbox{\hyperlink{ftstroke_8h_ac10d5f2301e83538779af9f59d630827}{FT\+\_\+\+Stroker}} stroker, \mbox{\hyperlink{ftstroke_8h_abe99a5a670b9d468a050974aa4b10557}{FT\+\_\+\+Stroker\+Border}} border, \mbox{\hyperlink{ftimage_8h_a6b64eb35252e8829024c12c98cce37d4}{FT\+\_\+\+Outline}} \texorpdfstring{$\ast$}{*}outline)
+\item 
+\mbox{\hyperlink{ftstroke_8h_a2ec913491a0b5226367d3a6dbaaf1c18}{FT\+\_\+\+Stroker\+\_\+\+Get\+Counts}} (\mbox{\hyperlink{ftstroke_8h_ac10d5f2301e83538779af9f59d630827}{FT\+\_\+\+Stroker}} stroker, \mbox{\hyperlink{fttypes_8h_abcb8db4dbf35d2b55a9e8c7b0926dc52}{FT\+\_\+\+UInt}} \texorpdfstring{$\ast$}{*}anum\+\_\+points, \mbox{\hyperlink{fttypes_8h_abcb8db4dbf35d2b55a9e8c7b0926dc52}{FT\+\_\+\+UInt}} \texorpdfstring{$\ast$}{*}anum\+\_\+contours)
+\item 
+\mbox{\hyperlink{ftstroke_8h_a025959ebc066c402fbfa8450a66e6aa8}{FT\+\_\+\+Stroker\+\_\+\+Export}} (\mbox{\hyperlink{ftstroke_8h_ac10d5f2301e83538779af9f59d630827}{FT\+\_\+\+Stroker}} stroker, \mbox{\hyperlink{ftimage_8h_a6b64eb35252e8829024c12c98cce37d4}{FT\+\_\+\+Outline}} \texorpdfstring{$\ast$}{*}outline)
+\item 
+\mbox{\hyperlink{ftstroke_8h_a42e650e0dd4bbccfc1c32118c6ee524b}{FT\+\_\+\+Stroker\+\_\+\+Done}} (\mbox{\hyperlink{ftstroke_8h_ac10d5f2301e83538779af9f59d630827}{FT\+\_\+\+Stroker}} stroker)
+\item 
+\mbox{\hyperlink{ftstroke_8h_a976fc8903ea898e41e377a1de447743c}{FT\+\_\+\+Glyph\+\_\+\+Stroke}} (\mbox{\hyperlink{ftglyph_8h_aeb217021e2817832b003c325b185e003}{FT\+\_\+\+Glyph}} \texorpdfstring{$\ast$}{*}pglyph, \mbox{\hyperlink{ftstroke_8h_ac10d5f2301e83538779af9f59d630827}{FT\+\_\+\+Stroker}} stroker, \mbox{\hyperlink{fttypes_8h_a1a832a256bb5a7e6e884afaa1a07f3ae}{FT\+\_\+\+Bool}} destroy)
+\item 
+\mbox{\hyperlink{ftstroke_8h_abd8c1ca959e22145072cd14a12c08479}{FT\+\_\+\+Glyph\+\_\+\+Stroke\+Border}} (\mbox{\hyperlink{ftglyph_8h_aeb217021e2817832b003c325b185e003}{FT\+\_\+\+Glyph}} \texorpdfstring{$\ast$}{*}pglyph, \mbox{\hyperlink{ftstroke_8h_ac10d5f2301e83538779af9f59d630827}{FT\+\_\+\+Stroker}} stroker, \mbox{\hyperlink{fttypes_8h_a1a832a256bb5a7e6e884afaa1a07f3ae}{FT\+\_\+\+Bool}} inside, \mbox{\hyperlink{fttypes_8h_a1a832a256bb5a7e6e884afaa1a07f3ae}{FT\+\_\+\+Bool}} destroy)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja definicji typów}
+\Hypertarget{ftstroke_8h_ac10d5f2301e83538779af9f59d630827}\label{ftstroke_8h_ac10d5f2301e83538779af9f59d630827} 
+\index{ftstroke.h@{ftstroke.h}!FT\_Stroker@{FT\_Stroker}}
+\index{FT\_Stroker@{FT\_Stroker}!ftstroke.h@{ftstroke.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Stroker}{FT\_Stroker}}
+{\footnotesize\ttfamily typedef typedef\+FT\+\_\+\+BEGIN\+\_\+\+HEADER struct FT\+\_\+\+Stroker\+Rec\+\_\+\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{ftstroke_8h_ac10d5f2301e83538779af9f59d630827}{FT\+\_\+\+Stroker}}}
+
+\Hypertarget{ftstroke_8h_a4123f98d748be9084e10fd2f0bf5fd39}\label{ftstroke_8h_a4123f98d748be9084e10fd2f0bf5fd39} 
+\index{ftstroke.h@{ftstroke.h}!FT\_Stroker\_LineCap@{FT\_Stroker\_LineCap}}
+\index{FT\_Stroker\_LineCap@{FT\_Stroker\_LineCap}!ftstroke.h@{ftstroke.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Stroker\_LineCap}{FT\_Stroker\_LineCap}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{ftstroke_8h_a08e4f487ed8345fb0bbeeb953729d8d1}{FT\+\_\+\+Stroker\+\_\+\+Line\+Cap\+\_\+}} \mbox{\hyperlink{ftstroke_8h_a4123f98d748be9084e10fd2f0bf5fd39}{FT\+\_\+\+Stroker\+\_\+\+Line\+Cap}}}
+
+\Hypertarget{ftstroke_8h_ad88789e609530e9364391b86a7adfc00}\label{ftstroke_8h_ad88789e609530e9364391b86a7adfc00} 
+\index{ftstroke.h@{ftstroke.h}!FT\_Stroker\_LineJoin@{FT\_Stroker\_LineJoin}}
+\index{FT\_Stroker\_LineJoin@{FT\_Stroker\_LineJoin}!ftstroke.h@{ftstroke.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Stroker\_LineJoin}{FT\_Stroker\_LineJoin}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{ftstroke_8h_a4f7903e8a82442fcf9e9bc22a45598d6}{FT\+\_\+\+Stroker\+\_\+\+Line\+Join\+\_\+}} \mbox{\hyperlink{ftstroke_8h_ad88789e609530e9364391b86a7adfc00}{FT\+\_\+\+Stroker\+\_\+\+Line\+Join}}}
+
+\Hypertarget{ftstroke_8h_abe99a5a670b9d468a050974aa4b10557}\label{ftstroke_8h_abe99a5a670b9d468a050974aa4b10557} 
+\index{ftstroke.h@{ftstroke.h}!FT\_StrokerBorder@{FT\_StrokerBorder}}
+\index{FT\_StrokerBorder@{FT\_StrokerBorder}!ftstroke.h@{ftstroke.h}}
+\doxysubsubsection{\texorpdfstring{FT\_StrokerBorder}{FT\_StrokerBorder}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{ftstroke_8h_a361e8f43ea3b0861e52e603c7d0a83b6}{FT\+\_\+\+Stroker\+Border\+\_\+}} \mbox{\hyperlink{ftstroke_8h_abe99a5a670b9d468a050974aa4b10557}{FT\+\_\+\+Stroker\+Border}}}
+
+
+
+\doxysubsection{Dokumentacja typów wyliczanych}
+\Hypertarget{ftstroke_8h_a08e4f487ed8345fb0bbeeb953729d8d1}\label{ftstroke_8h_a08e4f487ed8345fb0bbeeb953729d8d1} 
+\index{ftstroke.h@{ftstroke.h}!FT\_Stroker\_LineCap\_@{FT\_Stroker\_LineCap\_}}
+\index{FT\_Stroker\_LineCap\_@{FT\_Stroker\_LineCap\_}!ftstroke.h@{ftstroke.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Stroker\_LineCap\_}{FT\_Stroker\_LineCap\_}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ftstroke_8h_a08e4f487ed8345fb0bbeeb953729d8d1}{FT\+\_\+\+Stroker\+\_\+\+Line\+Cap\+\_\+}}}
+
+\begin{DoxyEnumFields}{Wartości wyliczeń}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FT\_STROKER\_LINECAP\_BUTT@{FT\_STROKER\_LINECAP\_BUTT}!ftstroke.h@{ftstroke.h}}\index{ftstroke.h@{ftstroke.h}!FT\_STROKER\_LINECAP\_BUTT@{FT\_STROKER\_LINECAP\_BUTT}}}\Hypertarget{ftstroke_8h_a08e4f487ed8345fb0bbeeb953729d8d1a4fcfe731e3c1efe39d4dcf19edd7e1ce}\label{ftstroke_8h_a08e4f487ed8345fb0bbeeb953729d8d1a4fcfe731e3c1efe39d4dcf19edd7e1ce} 
+FT\+\_\+\+STROKER\+\_\+\+LINECAP\+\_\+\+BUTT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FT\_STROKER\_LINECAP\_ROUND@{FT\_STROKER\_LINECAP\_ROUND}!ftstroke.h@{ftstroke.h}}\index{ftstroke.h@{ftstroke.h}!FT\_STROKER\_LINECAP\_ROUND@{FT\_STROKER\_LINECAP\_ROUND}}}\Hypertarget{ftstroke_8h_a08e4f487ed8345fb0bbeeb953729d8d1a0417f93b0d7fea22cd20124a40479c1f}\label{ftstroke_8h_a08e4f487ed8345fb0bbeeb953729d8d1a0417f93b0d7fea22cd20124a40479c1f} 
+FT\+\_\+\+STROKER\+\_\+\+LINECAP\+\_\+\+ROUND&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FT\_STROKER\_LINECAP\_SQUARE@{FT\_STROKER\_LINECAP\_SQUARE}!ftstroke.h@{ftstroke.h}}\index{ftstroke.h@{ftstroke.h}!FT\_STROKER\_LINECAP\_SQUARE@{FT\_STROKER\_LINECAP\_SQUARE}}}\Hypertarget{ftstroke_8h_a08e4f487ed8345fb0bbeeb953729d8d1a7cd7d3e711ed2072567c0f51fecb4a86}\label{ftstroke_8h_a08e4f487ed8345fb0bbeeb953729d8d1a7cd7d3e711ed2072567c0f51fecb4a86} 
+FT\+\_\+\+STROKER\+\_\+\+LINECAP\+\_\+\+SQUARE&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{ftstroke_8h_a4f7903e8a82442fcf9e9bc22a45598d6}\label{ftstroke_8h_a4f7903e8a82442fcf9e9bc22a45598d6} 
+\index{ftstroke.h@{ftstroke.h}!FT\_Stroker\_LineJoin\_@{FT\_Stroker\_LineJoin\_}}
+\index{FT\_Stroker\_LineJoin\_@{FT\_Stroker\_LineJoin\_}!ftstroke.h@{ftstroke.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Stroker\_LineJoin\_}{FT\_Stroker\_LineJoin\_}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ftstroke_8h_a4f7903e8a82442fcf9e9bc22a45598d6}{FT\+\_\+\+Stroker\+\_\+\+Line\+Join\+\_\+}}}
+
+\begin{DoxyEnumFields}{Wartości wyliczeń}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FT\_STROKER\_LINEJOIN\_ROUND@{FT\_STROKER\_LINEJOIN\_ROUND}!ftstroke.h@{ftstroke.h}}\index{ftstroke.h@{ftstroke.h}!FT\_STROKER\_LINEJOIN\_ROUND@{FT\_STROKER\_LINEJOIN\_ROUND}}}\Hypertarget{ftstroke_8h_a4f7903e8a82442fcf9e9bc22a45598d6ad13e974cada297192e460f14d9f0ba6b}\label{ftstroke_8h_a4f7903e8a82442fcf9e9bc22a45598d6ad13e974cada297192e460f14d9f0ba6b} 
+FT\+\_\+\+STROKER\+\_\+\+LINEJOIN\+\_\+\+ROUND&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FT\_STROKER\_LINEJOIN\_BEVEL@{FT\_STROKER\_LINEJOIN\_BEVEL}!ftstroke.h@{ftstroke.h}}\index{ftstroke.h@{ftstroke.h}!FT\_STROKER\_LINEJOIN\_BEVEL@{FT\_STROKER\_LINEJOIN\_BEVEL}}}\Hypertarget{ftstroke_8h_a4f7903e8a82442fcf9e9bc22a45598d6aa875a789dd55495ef7d9214eacc0bdc2}\label{ftstroke_8h_a4f7903e8a82442fcf9e9bc22a45598d6aa875a789dd55495ef7d9214eacc0bdc2} 
+FT\+\_\+\+STROKER\+\_\+\+LINEJOIN\+\_\+\+BEVEL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FT\_STROKER\_LINEJOIN\_MITER\_VARIABLE@{FT\_STROKER\_LINEJOIN\_MITER\_VARIABLE}!ftstroke.h@{ftstroke.h}}\index{ftstroke.h@{ftstroke.h}!FT\_STROKER\_LINEJOIN\_MITER\_VARIABLE@{FT\_STROKER\_LINEJOIN\_MITER\_VARIABLE}}}\Hypertarget{ftstroke_8h_a4f7903e8a82442fcf9e9bc22a45598d6acb76f61066e44a130d206d2066add1e4}\label{ftstroke_8h_a4f7903e8a82442fcf9e9bc22a45598d6acb76f61066e44a130d206d2066add1e4} 
+FT\+\_\+\+STROKER\+\_\+\+LINEJOIN\+\_\+\+MITER\+\_\+\+VARIABLE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FT\_STROKER\_LINEJOIN\_MITER@{FT\_STROKER\_LINEJOIN\_MITER}!ftstroke.h@{ftstroke.h}}\index{ftstroke.h@{ftstroke.h}!FT\_STROKER\_LINEJOIN\_MITER@{FT\_STROKER\_LINEJOIN\_MITER}}}\Hypertarget{ftstroke_8h_a4f7903e8a82442fcf9e9bc22a45598d6a38d166d5cf959f5f433e4259d0fe7f88}\label{ftstroke_8h_a4f7903e8a82442fcf9e9bc22a45598d6a38d166d5cf959f5f433e4259d0fe7f88} 
+FT\+\_\+\+STROKER\+\_\+\+LINEJOIN\+\_\+\+MITER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FT\_STROKER\_LINEJOIN\_MITER\_FIXED@{FT\_STROKER\_LINEJOIN\_MITER\_FIXED}!ftstroke.h@{ftstroke.h}}\index{ftstroke.h@{ftstroke.h}!FT\_STROKER\_LINEJOIN\_MITER\_FIXED@{FT\_STROKER\_LINEJOIN\_MITER\_FIXED}}}\Hypertarget{ftstroke_8h_a4f7903e8a82442fcf9e9bc22a45598d6a75d091d7418b2669c9cfaa4027ff7e82}\label{ftstroke_8h_a4f7903e8a82442fcf9e9bc22a45598d6a75d091d7418b2669c9cfaa4027ff7e82} 
+FT\+\_\+\+STROKER\+\_\+\+LINEJOIN\+\_\+\+MITER\+\_\+\+FIXED&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{ftstroke_8h_a361e8f43ea3b0861e52e603c7d0a83b6}\label{ftstroke_8h_a361e8f43ea3b0861e52e603c7d0a83b6} 
+\index{ftstroke.h@{ftstroke.h}!FT\_StrokerBorder\_@{FT\_StrokerBorder\_}}
+\index{FT\_StrokerBorder\_@{FT\_StrokerBorder\_}!ftstroke.h@{ftstroke.h}}
+\doxysubsubsection{\texorpdfstring{FT\_StrokerBorder\_}{FT\_StrokerBorder\_}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ftstroke_8h_a361e8f43ea3b0861e52e603c7d0a83b6}{FT\+\_\+\+Stroker\+Border\+\_\+}}}
+
+\begin{DoxyEnumFields}{Wartości wyliczeń}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FT\_STROKER\_BORDER\_LEFT@{FT\_STROKER\_BORDER\_LEFT}!ftstroke.h@{ftstroke.h}}\index{ftstroke.h@{ftstroke.h}!FT\_STROKER\_BORDER\_LEFT@{FT\_STROKER\_BORDER\_LEFT}}}\Hypertarget{ftstroke_8h_a361e8f43ea3b0861e52e603c7d0a83b6ab5a331ec4a5a9da353de29c578fb2d6d}\label{ftstroke_8h_a361e8f43ea3b0861e52e603c7d0a83b6ab5a331ec4a5a9da353de29c578fb2d6d} 
+FT\+\_\+\+STROKER\+\_\+\+BORDER\+\_\+\+LEFT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FT\_STROKER\_BORDER\_RIGHT@{FT\_STROKER\_BORDER\_RIGHT}!ftstroke.h@{ftstroke.h}}\index{ftstroke.h@{ftstroke.h}!FT\_STROKER\_BORDER\_RIGHT@{FT\_STROKER\_BORDER\_RIGHT}}}\Hypertarget{ftstroke_8h_a361e8f43ea3b0861e52e603c7d0a83b6a60213f0f00e84979c5e4fc4e0857f994}\label{ftstroke_8h_a361e8f43ea3b0861e52e603c7d0a83b6a60213f0f00e84979c5e4fc4e0857f994} 
+FT\+\_\+\+STROKER\+\_\+\+BORDER\+\_\+\+RIGHT&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Dokumentacja funkcji}
+\Hypertarget{ftstroke_8h_a976fc8903ea898e41e377a1de447743c}\label{ftstroke_8h_a976fc8903ea898e41e377a1de447743c} 
+\index{ftstroke.h@{ftstroke.h}!FT\_Glyph\_Stroke@{FT\_Glyph\_Stroke}}
+\index{FT\_Glyph\_Stroke@{FT\_Glyph\_Stroke}!ftstroke.h@{ftstroke.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Glyph\_Stroke()}{FT\_Glyph\_Stroke()}}
+{\footnotesize\ttfamily FT\+\_\+\+Glyph\+\_\+\+Stroke (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ftglyph_8h_aeb217021e2817832b003c325b185e003}{FT\+\_\+\+Glyph}} \texorpdfstring{$\ast$}{*}}]{pglyph,  }\item[{\mbox{\hyperlink{ftstroke_8h_ac10d5f2301e83538779af9f59d630827}{FT\+\_\+\+Stroker}}}]{stroker,  }\item[{\mbox{\hyperlink{fttypes_8h_a1a832a256bb5a7e6e884afaa1a07f3ae}{FT\+\_\+\+Bool}}}]{destroy }\end{DoxyParamCaption})}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ftstroke_8h_a976fc8903ea898e41e377a1de447743c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{ftstroke_8h_abd8c1ca959e22145072cd14a12c08479}\label{ftstroke_8h_abd8c1ca959e22145072cd14a12c08479} 
+\index{ftstroke.h@{ftstroke.h}!FT\_Glyph\_StrokeBorder@{FT\_Glyph\_StrokeBorder}}
+\index{FT\_Glyph\_StrokeBorder@{FT\_Glyph\_StrokeBorder}!ftstroke.h@{ftstroke.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Glyph\_StrokeBorder()}{FT\_Glyph\_StrokeBorder()}}
+{\footnotesize\ttfamily FT\+\_\+\+Glyph\+\_\+\+Stroke\+Border (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ftglyph_8h_aeb217021e2817832b003c325b185e003}{FT\+\_\+\+Glyph}} \texorpdfstring{$\ast$}{*}}]{pglyph,  }\item[{\mbox{\hyperlink{ftstroke_8h_ac10d5f2301e83538779af9f59d630827}{FT\+\_\+\+Stroker}}}]{stroker,  }\item[{\mbox{\hyperlink{fttypes_8h_a1a832a256bb5a7e6e884afaa1a07f3ae}{FT\+\_\+\+Bool}}}]{inside,  }\item[{\mbox{\hyperlink{fttypes_8h_a1a832a256bb5a7e6e884afaa1a07f3ae}{FT\+\_\+\+Bool}}}]{destroy }\end{DoxyParamCaption})}
+
+\Hypertarget{ftstroke_8h_a140debddc87985f3fd2e610eda00cb4a}\label{ftstroke_8h_a140debddc87985f3fd2e610eda00cb4a} 
+\index{ftstroke.h@{ftstroke.h}!FT\_Outline\_GetInsideBorder@{FT\_Outline\_GetInsideBorder}}
+\index{FT\_Outline\_GetInsideBorder@{FT\_Outline\_GetInsideBorder}!ftstroke.h@{ftstroke.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Outline\_GetInsideBorder()}{FT\_Outline\_GetInsideBorder()}}
+{\footnotesize\ttfamily FT\+\_\+\+Outline\+\_\+\+Get\+Inside\+Border (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ftimage_8h_a6b64eb35252e8829024c12c98cce37d4}{FT\+\_\+\+Outline}} \texorpdfstring{$\ast$}{*}}]{outline }\end{DoxyParamCaption})}
+
+\Hypertarget{ftstroke_8h_a6a2dd261ba2617bdac0cc3ec28ecf137}\label{ftstroke_8h_a6a2dd261ba2617bdac0cc3ec28ecf137} 
+\index{ftstroke.h@{ftstroke.h}!FT\_Outline\_GetOutsideBorder@{FT\_Outline\_GetOutsideBorder}}
+\index{FT\_Outline\_GetOutsideBorder@{FT\_Outline\_GetOutsideBorder}!ftstroke.h@{ftstroke.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Outline\_GetOutsideBorder()}{FT\_Outline\_GetOutsideBorder()}}
+{\footnotesize\ttfamily FT\+\_\+\+Outline\+\_\+\+Get\+Outside\+Border (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ftimage_8h_a6b64eb35252e8829024c12c98cce37d4}{FT\+\_\+\+Outline}} \texorpdfstring{$\ast$}{*}}]{outline }\end{DoxyParamCaption})}
+
+\Hypertarget{ftstroke_8h_a843508f735e0f169b6d00d91510ac000}\label{ftstroke_8h_a843508f735e0f169b6d00d91510ac000} 
+\index{ftstroke.h@{ftstroke.h}!FT\_Stroker\_BeginSubPath@{FT\_Stroker\_BeginSubPath}}
+\index{FT\_Stroker\_BeginSubPath@{FT\_Stroker\_BeginSubPath}!ftstroke.h@{ftstroke.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Stroker\_BeginSubPath()}{FT\_Stroker\_BeginSubPath()}}
+{\footnotesize\ttfamily FT\+\_\+\+Stroker\+\_\+\+Begin\+Sub\+Path (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ftstroke_8h_ac10d5f2301e83538779af9f59d630827}{FT\+\_\+\+Stroker}}}]{stroker,  }\item[{\mbox{\hyperlink{ftimage_8h_abfcb941b4b81f3a922d4ae57c620db27}{FT\+\_\+\+Vector}} \texorpdfstring{$\ast$}{*}}]{to,  }\item[{\mbox{\hyperlink{fttypes_8h_a1a832a256bb5a7e6e884afaa1a07f3ae}{FT\+\_\+\+Bool}}}]{open }\end{DoxyParamCaption})}
+
+\Hypertarget{ftstroke_8h_a907808cc2cee0c659100dbc10560e8db}\label{ftstroke_8h_a907808cc2cee0c659100dbc10560e8db} 
+\index{ftstroke.h@{ftstroke.h}!FT\_Stroker\_ConicTo@{FT\_Stroker\_ConicTo}}
+\index{FT\_Stroker\_ConicTo@{FT\_Stroker\_ConicTo}!ftstroke.h@{ftstroke.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Stroker\_ConicTo()}{FT\_Stroker\_ConicTo()}}
+{\footnotesize\ttfamily FT\+\_\+\+Stroker\+\_\+\+Conic\+To (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ftstroke_8h_ac10d5f2301e83538779af9f59d630827}{FT\+\_\+\+Stroker}}}]{stroker,  }\item[{\mbox{\hyperlink{ftimage_8h_abfcb941b4b81f3a922d4ae57c620db27}{FT\+\_\+\+Vector}} \texorpdfstring{$\ast$}{*}}]{control,  }\item[{\mbox{\hyperlink{ftimage_8h_abfcb941b4b81f3a922d4ae57c620db27}{FT\+\_\+\+Vector}} \texorpdfstring{$\ast$}{*}}]{to }\end{DoxyParamCaption})}
+
+\Hypertarget{ftstroke_8h_a6463e08d4f40c63cb109dfcd04afb60f}\label{ftstroke_8h_a6463e08d4f40c63cb109dfcd04afb60f} 
+\index{ftstroke.h@{ftstroke.h}!FT\_Stroker\_CubicTo@{FT\_Stroker\_CubicTo}}
+\index{FT\_Stroker\_CubicTo@{FT\_Stroker\_CubicTo}!ftstroke.h@{ftstroke.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Stroker\_CubicTo()}{FT\_Stroker\_CubicTo()}}
+{\footnotesize\ttfamily FT\+\_\+\+Stroker\+\_\+\+Cubic\+To (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ftstroke_8h_ac10d5f2301e83538779af9f59d630827}{FT\+\_\+\+Stroker}}}]{stroker,  }\item[{\mbox{\hyperlink{ftimage_8h_abfcb941b4b81f3a922d4ae57c620db27}{FT\+\_\+\+Vector}} \texorpdfstring{$\ast$}{*}}]{control1,  }\item[{\mbox{\hyperlink{ftimage_8h_abfcb941b4b81f3a922d4ae57c620db27}{FT\+\_\+\+Vector}} \texorpdfstring{$\ast$}{*}}]{control2,  }\item[{\mbox{\hyperlink{ftimage_8h_abfcb941b4b81f3a922d4ae57c620db27}{FT\+\_\+\+Vector}} \texorpdfstring{$\ast$}{*}}]{to }\end{DoxyParamCaption})}
+
+\Hypertarget{ftstroke_8h_a42e650e0dd4bbccfc1c32118c6ee524b}\label{ftstroke_8h_a42e650e0dd4bbccfc1c32118c6ee524b} 
+\index{ftstroke.h@{ftstroke.h}!FT\_Stroker\_Done@{FT\_Stroker\_Done}}
+\index{FT\_Stroker\_Done@{FT\_Stroker\_Done}!ftstroke.h@{ftstroke.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Stroker\_Done()}{FT\_Stroker\_Done()}}
+{\footnotesize\ttfamily FT\+\_\+\+Stroker\+\_\+\+Done (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ftstroke_8h_ac10d5f2301e83538779af9f59d630827}{FT\+\_\+\+Stroker}}}]{stroker }\end{DoxyParamCaption})}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ftstroke_8h_a42e650e0dd4bbccfc1c32118c6ee524b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{ftstroke_8h_a954981a224366dcb418122e9ac1ef314}\label{ftstroke_8h_a954981a224366dcb418122e9ac1ef314} 
+\index{ftstroke.h@{ftstroke.h}!FT\_Stroker\_EndSubPath@{FT\_Stroker\_EndSubPath}}
+\index{FT\_Stroker\_EndSubPath@{FT\_Stroker\_EndSubPath}!ftstroke.h@{ftstroke.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Stroker\_EndSubPath()}{FT\_Stroker\_EndSubPath()}}
+{\footnotesize\ttfamily FT\+\_\+\+Stroker\+\_\+\+End\+Sub\+Path (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ftstroke_8h_ac10d5f2301e83538779af9f59d630827}{FT\+\_\+\+Stroker}}}]{stroker }\end{DoxyParamCaption})}
+
+\Hypertarget{ftstroke_8h_a025959ebc066c402fbfa8450a66e6aa8}\label{ftstroke_8h_a025959ebc066c402fbfa8450a66e6aa8} 
+\index{ftstroke.h@{ftstroke.h}!FT\_Stroker\_Export@{FT\_Stroker\_Export}}
+\index{FT\_Stroker\_Export@{FT\_Stroker\_Export}!ftstroke.h@{ftstroke.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Stroker\_Export()}{FT\_Stroker\_Export()}}
+{\footnotesize\ttfamily FT\+\_\+\+Stroker\+\_\+\+Export (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ftstroke_8h_ac10d5f2301e83538779af9f59d630827}{FT\+\_\+\+Stroker}}}]{stroker,  }\item[{\mbox{\hyperlink{ftimage_8h_a6b64eb35252e8829024c12c98cce37d4}{FT\+\_\+\+Outline}} \texorpdfstring{$\ast$}{*}}]{outline }\end{DoxyParamCaption})}
+
+\Hypertarget{ftstroke_8h_af4b54d6a127efb98084b11394077539a}\label{ftstroke_8h_af4b54d6a127efb98084b11394077539a} 
+\index{ftstroke.h@{ftstroke.h}!FT\_Stroker\_ExportBorder@{FT\_Stroker\_ExportBorder}}
+\index{FT\_Stroker\_ExportBorder@{FT\_Stroker\_ExportBorder}!ftstroke.h@{ftstroke.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Stroker\_ExportBorder()}{FT\_Stroker\_ExportBorder()}}
+{\footnotesize\ttfamily FT\+\_\+\+Stroker\+\_\+\+Export\+Border (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ftstroke_8h_ac10d5f2301e83538779af9f59d630827}{FT\+\_\+\+Stroker}}}]{stroker,  }\item[{\mbox{\hyperlink{ftstroke_8h_abe99a5a670b9d468a050974aa4b10557}{FT\+\_\+\+Stroker\+Border}}}]{border,  }\item[{\mbox{\hyperlink{ftimage_8h_a6b64eb35252e8829024c12c98cce37d4}{FT\+\_\+\+Outline}} \texorpdfstring{$\ast$}{*}}]{outline }\end{DoxyParamCaption})}
+
+\Hypertarget{ftstroke_8h_a21503fee2c6c57376d98885ac3e54910}\label{ftstroke_8h_a21503fee2c6c57376d98885ac3e54910} 
+\index{ftstroke.h@{ftstroke.h}!FT\_Stroker\_GetBorderCounts@{FT\_Stroker\_GetBorderCounts}}
+\index{FT\_Stroker\_GetBorderCounts@{FT\_Stroker\_GetBorderCounts}!ftstroke.h@{ftstroke.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Stroker\_GetBorderCounts()}{FT\_Stroker\_GetBorderCounts()}}
+{\footnotesize\ttfamily FT\+\_\+\+Stroker\+\_\+\+Get\+Border\+Counts (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ftstroke_8h_ac10d5f2301e83538779af9f59d630827}{FT\+\_\+\+Stroker}}}]{stroker,  }\item[{\mbox{\hyperlink{ftstroke_8h_abe99a5a670b9d468a050974aa4b10557}{FT\+\_\+\+Stroker\+Border}}}]{border,  }\item[{\mbox{\hyperlink{fttypes_8h_abcb8db4dbf35d2b55a9e8c7b0926dc52}{FT\+\_\+\+UInt}} \texorpdfstring{$\ast$}{*}}]{anum\+\_\+points,  }\item[{\mbox{\hyperlink{fttypes_8h_abcb8db4dbf35d2b55a9e8c7b0926dc52}{FT\+\_\+\+UInt}} \texorpdfstring{$\ast$}{*}}]{anum\+\_\+contours }\end{DoxyParamCaption})}
+
+\Hypertarget{ftstroke_8h_a2ec913491a0b5226367d3a6dbaaf1c18}\label{ftstroke_8h_a2ec913491a0b5226367d3a6dbaaf1c18} 
+\index{ftstroke.h@{ftstroke.h}!FT\_Stroker\_GetCounts@{FT\_Stroker\_GetCounts}}
+\index{FT\_Stroker\_GetCounts@{FT\_Stroker\_GetCounts}!ftstroke.h@{ftstroke.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Stroker\_GetCounts()}{FT\_Stroker\_GetCounts()}}
+{\footnotesize\ttfamily FT\+\_\+\+Stroker\+\_\+\+Get\+Counts (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ftstroke_8h_ac10d5f2301e83538779af9f59d630827}{FT\+\_\+\+Stroker}}}]{stroker,  }\item[{\mbox{\hyperlink{fttypes_8h_abcb8db4dbf35d2b55a9e8c7b0926dc52}{FT\+\_\+\+UInt}} \texorpdfstring{$\ast$}{*}}]{anum\+\_\+points,  }\item[{\mbox{\hyperlink{fttypes_8h_abcb8db4dbf35d2b55a9e8c7b0926dc52}{FT\+\_\+\+UInt}} \texorpdfstring{$\ast$}{*}}]{anum\+\_\+contours }\end{DoxyParamCaption})}
+
+\Hypertarget{ftstroke_8h_a09c014bb4f39ab1d8aa04d3f652b5ab2}\label{ftstroke_8h_a09c014bb4f39ab1d8aa04d3f652b5ab2} 
+\index{ftstroke.h@{ftstroke.h}!FT\_Stroker\_LineTo@{FT\_Stroker\_LineTo}}
+\index{FT\_Stroker\_LineTo@{FT\_Stroker\_LineTo}!ftstroke.h@{ftstroke.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Stroker\_LineTo()}{FT\_Stroker\_LineTo()}}
+{\footnotesize\ttfamily FT\+\_\+\+Stroker\+\_\+\+Line\+To (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ftstroke_8h_ac10d5f2301e83538779af9f59d630827}{FT\+\_\+\+Stroker}}}]{stroker,  }\item[{\mbox{\hyperlink{ftimage_8h_abfcb941b4b81f3a922d4ae57c620db27}{FT\+\_\+\+Vector}} \texorpdfstring{$\ast$}{*}}]{to }\end{DoxyParamCaption})}
+
+\Hypertarget{ftstroke_8h_a81bf87929ccbc0d2604fb0e48277a7c8}\label{ftstroke_8h_a81bf87929ccbc0d2604fb0e48277a7c8} 
+\index{ftstroke.h@{ftstroke.h}!FT\_Stroker\_New@{FT\_Stroker\_New}}
+\index{FT\_Stroker\_New@{FT\_Stroker\_New}!ftstroke.h@{ftstroke.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Stroker\_New()}{FT\_Stroker\_New()}}
+{\footnotesize\ttfamily FT\+\_\+\+Stroker\+\_\+\+New (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{freetype_8h_a92857f8bf079b7b9ef5d3ce74cf89ef5}{FT\+\_\+\+Library}}}]{library,  }\item[{\mbox{\hyperlink{ftstroke_8h_ac10d5f2301e83538779af9f59d630827}{FT\+\_\+\+Stroker}} \texorpdfstring{$\ast$}{*}}]{astroker }\end{DoxyParamCaption})}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ftstroke_8h_a81bf87929ccbc0d2604fb0e48277a7c8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{ftstroke_8h_aac413eee959667991ec337765215c501}\label{ftstroke_8h_aac413eee959667991ec337765215c501} 
+\index{ftstroke.h@{ftstroke.h}!FT\_Stroker\_ParseOutline@{FT\_Stroker\_ParseOutline}}
+\index{FT\_Stroker\_ParseOutline@{FT\_Stroker\_ParseOutline}!ftstroke.h@{ftstroke.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Stroker\_ParseOutline()}{FT\_Stroker\_ParseOutline()}}
+{\footnotesize\ttfamily FT\+\_\+\+Stroker\+\_\+\+Parse\+Outline (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ftstroke_8h_ac10d5f2301e83538779af9f59d630827}{FT\+\_\+\+Stroker}}}]{stroker,  }\item[{\mbox{\hyperlink{ftimage_8h_a6b64eb35252e8829024c12c98cce37d4}{FT\+\_\+\+Outline}} \texorpdfstring{$\ast$}{*}}]{outline,  }\item[{\mbox{\hyperlink{fttypes_8h_a1a832a256bb5a7e6e884afaa1a07f3ae}{FT\+\_\+\+Bool}}}]{opened }\end{DoxyParamCaption})}
+
+\Hypertarget{ftstroke_8h_a10f92fc5c5c968c4f720825bb2940bfb}\label{ftstroke_8h_a10f92fc5c5c968c4f720825bb2940bfb} 
+\index{ftstroke.h@{ftstroke.h}!FT\_Stroker\_Rewind@{FT\_Stroker\_Rewind}}
+\index{FT\_Stroker\_Rewind@{FT\_Stroker\_Rewind}!ftstroke.h@{ftstroke.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Stroker\_Rewind()}{FT\_Stroker\_Rewind()}}
+{\footnotesize\ttfamily FT\+\_\+\+Stroker\+\_\+\+Rewind (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ftstroke_8h_ac10d5f2301e83538779af9f59d630827}{FT\+\_\+\+Stroker}}}]{stroker }\end{DoxyParamCaption})}
+
+\Hypertarget{ftstroke_8h_af0be981947c3636d7bb1ddcf432c613f}\label{ftstroke_8h_af0be981947c3636d7bb1ddcf432c613f} 
+\index{ftstroke.h@{ftstroke.h}!FT\_Stroker\_Set@{FT\_Stroker\_Set}}
+\index{FT\_Stroker\_Set@{FT\_Stroker\_Set}!ftstroke.h@{ftstroke.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Stroker\_Set()}{FT\_Stroker\_Set()}}
+{\footnotesize\ttfamily FT\+\_\+\+Stroker\+\_\+\+Set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ftstroke_8h_ac10d5f2301e83538779af9f59d630827}{FT\+\_\+\+Stroker}}}]{stroker,  }\item[{\mbox{\hyperlink{fttypes_8h_a5f5a679cc09f758efdd0d1c5feed3c3d}{FT\+\_\+\+Fixed}}}]{radius,  }\item[{\mbox{\hyperlink{ftstroke_8h_a4123f98d748be9084e10fd2f0bf5fd39}{FT\+\_\+\+Stroker\+\_\+\+Line\+Cap}}}]{line\+\_\+cap,  }\item[{\mbox{\hyperlink{ftstroke_8h_ad88789e609530e9364391b86a7adfc00}{FT\+\_\+\+Stroker\+\_\+\+Line\+Join}}}]{line\+\_\+join,  }\item[{\mbox{\hyperlink{fttypes_8h_a5f5a679cc09f758efdd0d1c5feed3c3d}{FT\+\_\+\+Fixed}}}]{miter\+\_\+limit }\end{DoxyParamCaption})}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ftstroke_8h_af0be981947c3636d7bb1ddcf432c613f_icgraph}
+\end{center}
+\end{figure}

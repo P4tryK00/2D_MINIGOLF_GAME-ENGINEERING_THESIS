@@ -1,0 +1,114 @@
+\doxysection{Dokumentacja struktury Vk\+Render\+Pass\+Create\+Info2\+KHR}
+\hypertarget{struct_vk_render_pass_create_info2_k_h_r}{}\label{struct_vk_render_pass_create_info2_k_h_r}\index{VkRenderPassCreateInfo2KHR@{VkRenderPassCreateInfo2KHR}}
+
+
+{\ttfamily \#include $<$vulkan\+\_\+core.\+h$>$}
+
+
+
+Diagram współpracy dla Vk\+Render\+Pass\+Create\+Info2\+KHR\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_vk_render_pass_create_info2_k_h_r__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{vulkan__core_8h_aff9f2b99398eb80a2b5a146bc5534ce8}{Vk\+Structure\+Type}} \mbox{\hyperlink{struct_vk_render_pass_create_info2_k_h_r_a3644ab05172a2a4b2b3d84643bcea9fb}{s\+Type}}
+\item 
+const void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_vk_render_pass_create_info2_k_h_r_ad674f8a1481d4c4645e446825f7e2874}{p\+Next}}
+\item 
+\mbox{\hyperlink{vulkan__core_8h_abce1519ca9b3f2e4f157dbe8d3e36549}{Vk\+Render\+Pass\+Create\+Flags}} \mbox{\hyperlink{struct_vk_render_pass_create_info2_k_h_r_adf1745263cb5c18ff82089e16b24c9ce}{flags}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_vk_render_pass_create_info2_k_h_r_a46c7f17124daf03a174ec1f1eb6b989c}{attachment\+Count}}
+\item 
+const \mbox{\hyperlink{struct_vk_attachment_description2_k_h_r}{Vk\+Attachment\+Description2\+KHR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_vk_render_pass_create_info2_k_h_r_a3481d986016652767768299947902a1c}{p\+Attachments}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_vk_render_pass_create_info2_k_h_r_a927300baee2c654a9f565ea1fb9ddba8}{subpass\+Count}}
+\item 
+const \mbox{\hyperlink{struct_vk_subpass_description2_k_h_r}{Vk\+Subpass\+Description2\+KHR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_vk_render_pass_create_info2_k_h_r_abc762de13a31014633ad9529a2bbe0bd}{p\+Subpasses}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_vk_render_pass_create_info2_k_h_r_a15490aa7b6da10faa3ca9670dcc87a9f}{dependency\+Count}}
+\item 
+const \mbox{\hyperlink{struct_vk_subpass_dependency2_k_h_r}{Vk\+Subpass\+Dependency2\+KHR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_vk_render_pass_create_info2_k_h_r_af4e539eadc8f156fe0e19a1c043e3c8d}{p\+Dependencies}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_vk_render_pass_create_info2_k_h_r_ad0b406420674486df9c2b8cae2a122e0}{correlated\+View\+Mask\+Count}}
+\item 
+const uint32\+\_\+t \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_vk_render_pass_create_info2_k_h_r_a6dde0b3e6d7a875fafb4d9b9c3c8bb06}{p\+Correlated\+View\+Masks}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{struct_vk_render_pass_create_info2_k_h_r_a46c7f17124daf03a174ec1f1eb6b989c}\label{struct_vk_render_pass_create_info2_k_h_r_a46c7f17124daf03a174ec1f1eb6b989c} 
+\index{VkRenderPassCreateInfo2KHR@{VkRenderPassCreateInfo2KHR}!attachmentCount@{attachmentCount}}
+\index{attachmentCount@{attachmentCount}!VkRenderPassCreateInfo2KHR@{VkRenderPassCreateInfo2KHR}}
+\doxysubsubsection{\texorpdfstring{attachmentCount}{attachmentCount}}
+{\footnotesize\ttfamily uint32\+\_\+t Vk\+Render\+Pass\+Create\+Info2\+KHR\+::attachment\+Count}
+
+\Hypertarget{struct_vk_render_pass_create_info2_k_h_r_ad0b406420674486df9c2b8cae2a122e0}\label{struct_vk_render_pass_create_info2_k_h_r_ad0b406420674486df9c2b8cae2a122e0} 
+\index{VkRenderPassCreateInfo2KHR@{VkRenderPassCreateInfo2KHR}!correlatedViewMaskCount@{correlatedViewMaskCount}}
+\index{correlatedViewMaskCount@{correlatedViewMaskCount}!VkRenderPassCreateInfo2KHR@{VkRenderPassCreateInfo2KHR}}
+\doxysubsubsection{\texorpdfstring{correlatedViewMaskCount}{correlatedViewMaskCount}}
+{\footnotesize\ttfamily uint32\+\_\+t Vk\+Render\+Pass\+Create\+Info2\+KHR\+::correlated\+View\+Mask\+Count}
+
+\Hypertarget{struct_vk_render_pass_create_info2_k_h_r_a15490aa7b6da10faa3ca9670dcc87a9f}\label{struct_vk_render_pass_create_info2_k_h_r_a15490aa7b6da10faa3ca9670dcc87a9f} 
+\index{VkRenderPassCreateInfo2KHR@{VkRenderPassCreateInfo2KHR}!dependencyCount@{dependencyCount}}
+\index{dependencyCount@{dependencyCount}!VkRenderPassCreateInfo2KHR@{VkRenderPassCreateInfo2KHR}}
+\doxysubsubsection{\texorpdfstring{dependencyCount}{dependencyCount}}
+{\footnotesize\ttfamily uint32\+\_\+t Vk\+Render\+Pass\+Create\+Info2\+KHR\+::dependency\+Count}
+
+\Hypertarget{struct_vk_render_pass_create_info2_k_h_r_adf1745263cb5c18ff82089e16b24c9ce}\label{struct_vk_render_pass_create_info2_k_h_r_adf1745263cb5c18ff82089e16b24c9ce} 
+\index{VkRenderPassCreateInfo2KHR@{VkRenderPassCreateInfo2KHR}!flags@{flags}}
+\index{flags@{flags}!VkRenderPassCreateInfo2KHR@{VkRenderPassCreateInfo2KHR}}
+\doxysubsubsection{\texorpdfstring{flags}{flags}}
+{\footnotesize\ttfamily \mbox{\hyperlink{vulkan__core_8h_abce1519ca9b3f2e4f157dbe8d3e36549}{Vk\+Render\+Pass\+Create\+Flags}} Vk\+Render\+Pass\+Create\+Info2\+KHR\+::flags}
+
+\Hypertarget{struct_vk_render_pass_create_info2_k_h_r_a3481d986016652767768299947902a1c}\label{struct_vk_render_pass_create_info2_k_h_r_a3481d986016652767768299947902a1c} 
+\index{VkRenderPassCreateInfo2KHR@{VkRenderPassCreateInfo2KHR}!pAttachments@{pAttachments}}
+\index{pAttachments@{pAttachments}!VkRenderPassCreateInfo2KHR@{VkRenderPassCreateInfo2KHR}}
+\doxysubsubsection{\texorpdfstring{pAttachments}{pAttachments}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_vk_attachment_description2_k_h_r}{Vk\+Attachment\+Description2\+KHR}}\texorpdfstring{$\ast$}{*} Vk\+Render\+Pass\+Create\+Info2\+KHR\+::p\+Attachments}
+
+\Hypertarget{struct_vk_render_pass_create_info2_k_h_r_a6dde0b3e6d7a875fafb4d9b9c3c8bb06}\label{struct_vk_render_pass_create_info2_k_h_r_a6dde0b3e6d7a875fafb4d9b9c3c8bb06} 
+\index{VkRenderPassCreateInfo2KHR@{VkRenderPassCreateInfo2KHR}!pCorrelatedViewMasks@{pCorrelatedViewMasks}}
+\index{pCorrelatedViewMasks@{pCorrelatedViewMasks}!VkRenderPassCreateInfo2KHR@{VkRenderPassCreateInfo2KHR}}
+\doxysubsubsection{\texorpdfstring{pCorrelatedViewMasks}{pCorrelatedViewMasks}}
+{\footnotesize\ttfamily const uint32\+\_\+t\texorpdfstring{$\ast$}{*} Vk\+Render\+Pass\+Create\+Info2\+KHR\+::p\+Correlated\+View\+Masks}
+
+\Hypertarget{struct_vk_render_pass_create_info2_k_h_r_af4e539eadc8f156fe0e19a1c043e3c8d}\label{struct_vk_render_pass_create_info2_k_h_r_af4e539eadc8f156fe0e19a1c043e3c8d} 
+\index{VkRenderPassCreateInfo2KHR@{VkRenderPassCreateInfo2KHR}!pDependencies@{pDependencies}}
+\index{pDependencies@{pDependencies}!VkRenderPassCreateInfo2KHR@{VkRenderPassCreateInfo2KHR}}
+\doxysubsubsection{\texorpdfstring{pDependencies}{pDependencies}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_vk_subpass_dependency2_k_h_r}{Vk\+Subpass\+Dependency2\+KHR}}\texorpdfstring{$\ast$}{*} Vk\+Render\+Pass\+Create\+Info2\+KHR\+::p\+Dependencies}
+
+\Hypertarget{struct_vk_render_pass_create_info2_k_h_r_ad674f8a1481d4c4645e446825f7e2874}\label{struct_vk_render_pass_create_info2_k_h_r_ad674f8a1481d4c4645e446825f7e2874} 
+\index{VkRenderPassCreateInfo2KHR@{VkRenderPassCreateInfo2KHR}!pNext@{pNext}}
+\index{pNext@{pNext}!VkRenderPassCreateInfo2KHR@{VkRenderPassCreateInfo2KHR}}
+\doxysubsubsection{\texorpdfstring{pNext}{pNext}}
+{\footnotesize\ttfamily const void\texorpdfstring{$\ast$}{*} Vk\+Render\+Pass\+Create\+Info2\+KHR\+::p\+Next}
+
+\Hypertarget{struct_vk_render_pass_create_info2_k_h_r_abc762de13a31014633ad9529a2bbe0bd}\label{struct_vk_render_pass_create_info2_k_h_r_abc762de13a31014633ad9529a2bbe0bd} 
+\index{VkRenderPassCreateInfo2KHR@{VkRenderPassCreateInfo2KHR}!pSubpasses@{pSubpasses}}
+\index{pSubpasses@{pSubpasses}!VkRenderPassCreateInfo2KHR@{VkRenderPassCreateInfo2KHR}}
+\doxysubsubsection{\texorpdfstring{pSubpasses}{pSubpasses}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_vk_subpass_description2_k_h_r}{Vk\+Subpass\+Description2\+KHR}}\texorpdfstring{$\ast$}{*} Vk\+Render\+Pass\+Create\+Info2\+KHR\+::p\+Subpasses}
+
+\Hypertarget{struct_vk_render_pass_create_info2_k_h_r_a3644ab05172a2a4b2b3d84643bcea9fb}\label{struct_vk_render_pass_create_info2_k_h_r_a3644ab05172a2a4b2b3d84643bcea9fb} 
+\index{VkRenderPassCreateInfo2KHR@{VkRenderPassCreateInfo2KHR}!sType@{sType}}
+\index{sType@{sType}!VkRenderPassCreateInfo2KHR@{VkRenderPassCreateInfo2KHR}}
+\doxysubsubsection{\texorpdfstring{sType}{sType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{vulkan__core_8h_aff9f2b99398eb80a2b5a146bc5534ce8}{Vk\+Structure\+Type}} Vk\+Render\+Pass\+Create\+Info2\+KHR\+::s\+Type}
+
+\Hypertarget{struct_vk_render_pass_create_info2_k_h_r_a927300baee2c654a9f565ea1fb9ddba8}\label{struct_vk_render_pass_create_info2_k_h_r_a927300baee2c654a9f565ea1fb9ddba8} 
+\index{VkRenderPassCreateInfo2KHR@{VkRenderPassCreateInfo2KHR}!subpassCount@{subpassCount}}
+\index{subpassCount@{subpassCount}!VkRenderPassCreateInfo2KHR@{VkRenderPassCreateInfo2KHR}}
+\doxysubsubsection{\texorpdfstring{subpassCount}{subpassCount}}
+{\footnotesize\ttfamily uint32\+\_\+t Vk\+Render\+Pass\+Create\+Info2\+KHR\+::subpass\+Count}
+
+
+
+Dokumentacja dla tej struktury została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/extlibs/headers/vulkan/\mbox{\hyperlink{vulkan__core_8h}{vulkan\+\_\+core.\+h}}\end{DoxyCompactItemize}

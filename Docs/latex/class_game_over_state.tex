@@ -1,0 +1,334 @@
+\doxysection{Dokumentacja klasy Game\+Over\+State}
+\hypertarget{class_game_over_state}{}\label{class_game_over_state}\index{GameOverState@{GameOverState}}
+
+
+Stan gry wyświetlany po przegranej (\doxylink{class_game}{Game} Over).  
+
+
+
+
+{\ttfamily \#include $<$Game\+Over\+State.\+h$>$}
+
+
+
+Diagram dziedziczenia dla Game\+Over\+State\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_game_over_state__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagram współpracy dla Game\+Over\+State\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_game_over_state__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_over_state_aad7c72f591488cba7d56c6c1180db103}{Game\+Over\+State}} (\mbox{\hyperlink{_game_8h_ae7efd7ef77698f16206f5c66180a389f}{Game\+Data\+Ref}} data, sf\+::\+Sprite bg\+Sprite, std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$ bg\+Texture, int level)
+\begin{DoxyCompactList}\small\item\em Konstruktor stanu Game\+Over. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_over_state_a8c589247e135a5f8094187a6209cf4de}{init}} () override
+\begin{DoxyCompactList}\small\item\em Inicjalizuje elementy interfejsu (teksty, przyciski, tło). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_over_state_ae843d2b5c19a4a3a89677e7bd62d92d8}{handle\+Input}} (sf\+::\+Event \&event) override
+\begin{DoxyCompactList}\small\item\em Obsługuje wejście od użytkownika (kliknięcia myszką). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_over_state_aedf760fded2dd1e31c18dc0c9a848924}{update}} (float dt) override
+\begin{DoxyCompactList}\small\item\em Aktualizuje logikę stanu (np. animacje przycisków, efekt fade-\/in). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_over_state_a252770712abedb087220e04a09637eb4}{draw}} (float dt) override
+\begin{DoxyCompactList}\small\item\em Rysuje wszystkie elementy stanu na ekranie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{class_state}{State}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_state_a9ddc1df6f998184d6477b48fab90281c}{\texorpdfstring{$\sim$}{\string~}\+State}} ()
+\begin{DoxyCompactList}\small\item\em Wirtualny destruktor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_state_abad223d1066e95bd1b70e1341fb72a88}{pause}} ()
+\begin{DoxyCompactList}\small\item\em Wywoływana, gdy stan jest pauzowany (np. inny stan jest nakładany na wierzch). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_state_a8ef6d305e962afe41b0629255f0f58f9}{resume}} ()
+\begin{DoxyCompactList}\small\item\em Wywoływana, gdy stan jest wznawiany (np. stan powyżej został zdjęty ze stosu). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_game_8h_ae7efd7ef77698f16206f5c66180a389f}{Game\+Data\+Ref}} \mbox{\hyperlink{class_game_over_state_ae59cce00bdfca015d4d69f841e6f9e4d}{m\+\_\+data}}
+\begin{DoxyCompactList}\small\item\em Wskaźnik do danych gry. \end{DoxyCompactList}\item 
+sf\+::\+Sprite \mbox{\hyperlink{class_game_over_state_a2b887f6608c004fe1aab63b153fae905}{m\+\_\+background\+Sprite}}
+\begin{DoxyCompactList}\small\item\em Sprite tła (screenshot gry). \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$ \mbox{\hyperlink{class_game_over_state_ae91803b157acba32784815e2c1f7cbdb}{m\+\_\+bg\+Texture}}
+\begin{DoxyCompactList}\small\item\em Tekstura tła. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_game_over_state_ae57e748b790cab0e272ea6b88876c88a}{m\+\_\+level}}
+\begin{DoxyCompactList}\small\item\em Numer poziomu do ewentualnego restartu. \end{DoxyCompactList}\item 
+sf\+::\+Rectangle\+Shape \mbox{\hyperlink{class_game_over_state_a27b2cdade4c9b85838100a56d578abac}{m\+\_\+dimmer}}
+\begin{DoxyCompactList}\small\item\em Prostokąt przyciemniający tło. \end{DoxyCompactList}\item 
+sf\+::\+Text \mbox{\hyperlink{class_game_over_state_a7c85f0a9478f6a0aaf1c1b7a8d7cebe6}{m\+\_\+title}}
+\begin{DoxyCompactList}\small\item\em Tekst "{}\+GAME OVER"{}. \end{DoxyCompactList}\item 
+sf\+::\+Text \mbox{\hyperlink{class_game_over_state_a37d8e97be31d99fa89b13c79003d0a0f}{m\+\_\+retry\+Button}}
+\begin{DoxyCompactList}\small\item\em Przycisk "{}\+TRY AGAIN"{}. \end{DoxyCompactList}\item 
+sf\+::\+Text \mbox{\hyperlink{class_game_over_state_a4c3e7c1bff619175d34a1e8b28419da0}{m\+\_\+menu\+Button}}
+\begin{DoxyCompactList}\small\item\em Przycisk "{}\+MAIN MENU"{}. \end{DoxyCompactList}\item 
+sf\+::\+Rectangle\+Shape \mbox{\hyperlink{class_game_over_state_af50ebc9481c87043ec358dd10bf4a8f8}{m\+\_\+fade\+Rect}}
+\begin{DoxyCompactList}\small\item\em Prostokąt do efektu zanikania/pojawiania. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_game_over_state_a4bf70c893738e38fa2b3e5e9f715f277}{m\+\_\+alpha}}
+\begin{DoxyCompactList}\small\item\em Aktualna przezroczystość fadera. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_over_state_a3bd3c16c4f5a4d12c4e25a415eb198d0}{m\+\_\+is\+Transitioning}}
+\begin{DoxyCompactList}\small\item\em Flaga czy trwa przejście między stanami. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_over_state_ac0333df959987c3816a5350a4c5fabb9}{m\+\_\+go\+To\+Menu}}
+\begin{DoxyCompactList}\small\item\em Flaga wyboru powrotu do menu. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_over_state_a915bfe2d31022de95069038223cda222}{m\+\_\+retry\+Level}}
+\begin{DoxyCompactList}\small\item\em Flaga wyboru restartu poziomu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Stan gry wyświetlany po przegranej (\doxylink{class_game}{Game} Over). 
+
+Klasa dziedzicząca po \doxylink{class_state}{State}. Wyświetla komunikat o końcu gry, przyciemnia tło i pozwala na restart poziomu lub powrót do menu. 
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{class_game_over_state_aad7c72f591488cba7d56c6c1180db103}\label{class_game_over_state_aad7c72f591488cba7d56c6c1180db103} 
+\index{GameOverState@{GameOverState}!GameOverState@{GameOverState}}
+\index{GameOverState@{GameOverState}!GameOverState@{GameOverState}}
+\doxysubsubsection{\texorpdfstring{GameOverState()}{GameOverState()}}
+{\footnotesize\ttfamily Game\+Over\+State\+::\+Game\+Over\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_game_8h_ae7efd7ef77698f16206f5c66180a389f}{Game\+Data\+Ref}}}]{data,  }\item[{sf\+::\+Sprite}]{bg\+Sprite,  }\item[{std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$}]{bg\+Texture,  }\item[{int}]{level }\end{DoxyParamCaption})}
+
+
+
+Konstruktor stanu Game\+Over. 
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parametry}
+{\em data} & Współdzielone dane gry. \\
+\hline
+{\em bg\+Sprite} & Zrzut ekranu z momentu przegranej (tło). \\
+\hline
+{\em bg\+Texture} & Tekstura tła (przechowywana, aby wskaźnik był ważny). \\
+\hline
+{\em level} & Numer poziomu, na którym nastąpiła przegrana (do restartu). \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_game_over_state_a252770712abedb087220e04a09637eb4}\label{class_game_over_state_a252770712abedb087220e04a09637eb4} 
+\index{GameOverState@{GameOverState}!draw@{draw}}
+\index{draw@{draw}!GameOverState@{GameOverState}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Game\+Over\+State\+::draw (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Rysuje wszystkie elementy stanu na ekranie. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em dt} & Interpolacja klatki (nieużywana w tym stanie, ale wymagana przez interfejs). \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \mbox{\hyperlink{class_state_a78efb743026712cbd78b8c07a45c2def}{State}}.
+
+\Hypertarget{class_game_over_state_ae843d2b5c19a4a3a89677e7bd62d92d8}\label{class_game_over_state_ae843d2b5c19a4a3a89677e7bd62d92d8} 
+\index{GameOverState@{GameOverState}!handleInput@{handleInput}}
+\index{handleInput@{handleInput}!GameOverState@{GameOverState}}
+\doxysubsubsection{\texorpdfstring{handleInput()}{handleInput()}}
+{\footnotesize\ttfamily void Game\+Over\+State\+::handle\+Input (\begin{DoxyParamCaption}\item[{sf\+::\+Event \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Obsługuje wejście od użytkownika (kliknięcia myszką). 
+
+
+\begin{DoxyParams}{Parametry}
+{\em event} & Zdarzenie SFML. \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \mbox{\hyperlink{class_state_ad0fcf10830377a1f673a714aa3b7944d}{State}}.
+
+\Hypertarget{class_game_over_state_a8c589247e135a5f8094187a6209cf4de}\label{class_game_over_state_a8c589247e135a5f8094187a6209cf4de} 
+\index{GameOverState@{GameOverState}!init@{init}}
+\index{init@{init}!GameOverState@{GameOverState}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Game\+Over\+State\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Inicjalizuje elementy interfejsu (teksty, przyciski, tło). 
+
+
+
+Implementuje \mbox{\hyperlink{class_state_a2ff5faa41a5811007e8d50542365640b}{State}}.
+
+Oto graf wywołań dla tej funkcji\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{class_game_over_state_a8c589247e135a5f8094187a6209cf4de_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_game_over_state_aedf760fded2dd1e31c18dc0c9a848924}\label{class_game_over_state_aedf760fded2dd1e31c18dc0c9a848924} 
+\index{GameOverState@{GameOverState}!update@{update}}
+\index{update@{update}!GameOverState@{GameOverState}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Game\+Over\+State\+::update (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Aktualizuje logikę stanu (np. animacje przycisków, efekt fade-\/in). 
+
+
+\begin{DoxyParams}{Parametry}
+{\em dt} & Czas klatki (Delta Time). \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \mbox{\hyperlink{class_state_a07b507523aaffc4cf78f3dd3174a68ea}{State}}.
+
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{class_game_over_state_a4bf70c893738e38fa2b3e5e9f715f277}\label{class_game_over_state_a4bf70c893738e38fa2b3e5e9f715f277} 
+\index{GameOverState@{GameOverState}!m\_alpha@{m\_alpha}}
+\index{m\_alpha@{m\_alpha}!GameOverState@{GameOverState}}
+\doxysubsubsection{\texorpdfstring{m\_alpha}{m\_alpha}}
+{\footnotesize\ttfamily float Game\+Over\+State\+::m\+\_\+alpha\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Aktualna przezroczystość fadera. 
+
+\Hypertarget{class_game_over_state_a2b887f6608c004fe1aab63b153fae905}\label{class_game_over_state_a2b887f6608c004fe1aab63b153fae905} 
+\index{GameOverState@{GameOverState}!m\_backgroundSprite@{m\_backgroundSprite}}
+\index{m\_backgroundSprite@{m\_backgroundSprite}!GameOverState@{GameOverState}}
+\doxysubsubsection{\texorpdfstring{m\_backgroundSprite}{m\_backgroundSprite}}
+{\footnotesize\ttfamily sf\+::\+Sprite Game\+Over\+State\+::m\+\_\+background\+Sprite\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Sprite tła (screenshot gry). 
+
+\Hypertarget{class_game_over_state_ae91803b157acba32784815e2c1f7cbdb}\label{class_game_over_state_ae91803b157acba32784815e2c1f7cbdb} 
+\index{GameOverState@{GameOverState}!m\_bgTexture@{m\_bgTexture}}
+\index{m\_bgTexture@{m\_bgTexture}!GameOverState@{GameOverState}}
+\doxysubsubsection{\texorpdfstring{m\_bgTexture}{m\_bgTexture}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$sf\+::\+Texture$>$ Game\+Over\+State\+::m\+\_\+bg\+Texture\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Tekstura tła. 
+
+\Hypertarget{class_game_over_state_ae59cce00bdfca015d4d69f841e6f9e4d}\label{class_game_over_state_ae59cce00bdfca015d4d69f841e6f9e4d} 
+\index{GameOverState@{GameOverState}!m\_data@{m\_data}}
+\index{m\_data@{m\_data}!GameOverState@{GameOverState}}
+\doxysubsubsection{\texorpdfstring{m\_data}{m\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_game_8h_ae7efd7ef77698f16206f5c66180a389f}{Game\+Data\+Ref}} Game\+Over\+State\+::m\+\_\+data\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Wskaźnik do danych gry. 
+
+\Hypertarget{class_game_over_state_a27b2cdade4c9b85838100a56d578abac}\label{class_game_over_state_a27b2cdade4c9b85838100a56d578abac} 
+\index{GameOverState@{GameOverState}!m\_dimmer@{m\_dimmer}}
+\index{m\_dimmer@{m\_dimmer}!GameOverState@{GameOverState}}
+\doxysubsubsection{\texorpdfstring{m\_dimmer}{m\_dimmer}}
+{\footnotesize\ttfamily sf\+::\+Rectangle\+Shape Game\+Over\+State\+::m\+\_\+dimmer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Prostokąt przyciemniający tło. 
+
+\Hypertarget{class_game_over_state_af50ebc9481c87043ec358dd10bf4a8f8}\label{class_game_over_state_af50ebc9481c87043ec358dd10bf4a8f8} 
+\index{GameOverState@{GameOverState}!m\_fadeRect@{m\_fadeRect}}
+\index{m\_fadeRect@{m\_fadeRect}!GameOverState@{GameOverState}}
+\doxysubsubsection{\texorpdfstring{m\_fadeRect}{m\_fadeRect}}
+{\footnotesize\ttfamily sf\+::\+Rectangle\+Shape Game\+Over\+State\+::m\+\_\+fade\+Rect\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Prostokąt do efektu zanikania/pojawiania. 
+
+\Hypertarget{class_game_over_state_ac0333df959987c3816a5350a4c5fabb9}\label{class_game_over_state_ac0333df959987c3816a5350a4c5fabb9} 
+\index{GameOverState@{GameOverState}!m\_goToMenu@{m\_goToMenu}}
+\index{m\_goToMenu@{m\_goToMenu}!GameOverState@{GameOverState}}
+\doxysubsubsection{\texorpdfstring{m\_goToMenu}{m\_goToMenu}}
+{\footnotesize\ttfamily bool Game\+Over\+State\+::m\+\_\+go\+To\+Menu\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Flaga wyboru powrotu do menu. 
+
+\Hypertarget{class_game_over_state_a3bd3c16c4f5a4d12c4e25a415eb198d0}\label{class_game_over_state_a3bd3c16c4f5a4d12c4e25a415eb198d0} 
+\index{GameOverState@{GameOverState}!m\_isTransitioning@{m\_isTransitioning}}
+\index{m\_isTransitioning@{m\_isTransitioning}!GameOverState@{GameOverState}}
+\doxysubsubsection{\texorpdfstring{m\_isTransitioning}{m\_isTransitioning}}
+{\footnotesize\ttfamily bool Game\+Over\+State\+::m\+\_\+is\+Transitioning\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Flaga czy trwa przejście między stanami. 
+
+\Hypertarget{class_game_over_state_ae57e748b790cab0e272ea6b88876c88a}\label{class_game_over_state_ae57e748b790cab0e272ea6b88876c88a} 
+\index{GameOverState@{GameOverState}!m\_level@{m\_level}}
+\index{m\_level@{m\_level}!GameOverState@{GameOverState}}
+\doxysubsubsection{\texorpdfstring{m\_level}{m\_level}}
+{\footnotesize\ttfamily int Game\+Over\+State\+::m\+\_\+level\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Numer poziomu do ewentualnego restartu. 
+
+\Hypertarget{class_game_over_state_a4c3e7c1bff619175d34a1e8b28419da0}\label{class_game_over_state_a4c3e7c1bff619175d34a1e8b28419da0} 
+\index{GameOverState@{GameOverState}!m\_menuButton@{m\_menuButton}}
+\index{m\_menuButton@{m\_menuButton}!GameOverState@{GameOverState}}
+\doxysubsubsection{\texorpdfstring{m\_menuButton}{m\_menuButton}}
+{\footnotesize\ttfamily sf\+::\+Text Game\+Over\+State\+::m\+\_\+menu\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Przycisk "{}\+MAIN MENU"{}. 
+
+\Hypertarget{class_game_over_state_a37d8e97be31d99fa89b13c79003d0a0f}\label{class_game_over_state_a37d8e97be31d99fa89b13c79003d0a0f} 
+\index{GameOverState@{GameOverState}!m\_retryButton@{m\_retryButton}}
+\index{m\_retryButton@{m\_retryButton}!GameOverState@{GameOverState}}
+\doxysubsubsection{\texorpdfstring{m\_retryButton}{m\_retryButton}}
+{\footnotesize\ttfamily sf\+::\+Text Game\+Over\+State\+::m\+\_\+retry\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Przycisk "{}\+TRY AGAIN"{}. 
+
+\Hypertarget{class_game_over_state_a915bfe2d31022de95069038223cda222}\label{class_game_over_state_a915bfe2d31022de95069038223cda222} 
+\index{GameOverState@{GameOverState}!m\_retryLevel@{m\_retryLevel}}
+\index{m\_retryLevel@{m\_retryLevel}!GameOverState@{GameOverState}}
+\doxysubsubsection{\texorpdfstring{m\_retryLevel}{m\_retryLevel}}
+{\footnotesize\ttfamily bool Game\+Over\+State\+::m\+\_\+retry\+Level\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Flaga wyboru restartu poziomu. 
+
+\Hypertarget{class_game_over_state_a7c85f0a9478f6a0aaf1c1b7a8d7cebe6}\label{class_game_over_state_a7c85f0a9478f6a0aaf1c1b7a8d7cebe6} 
+\index{GameOverState@{GameOverState}!m\_title@{m\_title}}
+\index{m\_title@{m\_title}!GameOverState@{GameOverState}}
+\doxysubsubsection{\texorpdfstring{m\_title}{m\_title}}
+{\footnotesize\ttfamily sf\+::\+Text Game\+Over\+State\+::m\+\_\+title\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Tekst "{}\+GAME OVER"{}. 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_game_over_state_8h}{Game\+Over\+State.\+h}}\item 
+\mbox{\hyperlink{_game_over_state_8cpp}{Game\+Over\+State.\+cpp}}\end{DoxyCompactItemize}

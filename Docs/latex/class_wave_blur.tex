@@ -1,0 +1,155 @@
+\doxysection{Dokumentacja klasy Wave\+Blur}
+\hypertarget{class_wave_blur}{}\label{class_wave_blur}\index{WaveBlur@{WaveBlur}}
+
+
+Diagram dziedziczenia dla Wave\+Blur\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_wave_blur__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagram współpracy dla Wave\+Blur\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_wave_blur__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_wave_blur_ad66678786f597687d92a0c476b62ec31}{Wave\+Blur}} ()
+\item 
+bool \mbox{\hyperlink{class_wave_blur_a7fea002e212a7bb88126b25b6bd57396}{on\+Load}} ()
+\item 
+void \mbox{\hyperlink{class_wave_blur_afbc71110feb1a9638b15be91bffd9ec6}{on\+Update}} (float time, float x, float y)
+\item 
+void \mbox{\hyperlink{class_wave_blur_a49f4365ad9b266513aa82f39628ea2ef}{on\+Draw}} (\mbox{\hyperlink{classsf_1_1_render_target}{sf\+::\+Render\+Target}} \&target, \mbox{\hyperlink{classsf_1_1_render_states}{sf\+::\+Render\+States}} states) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{class_effect}{Effect}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_effect_ab0f471df484d3ef351b704fef39a7072}{\texorpdfstring{$\sim$}{\string~}\+Effect}} ()
+\item 
+const std\+::string \& \mbox{\hyperlink{class_effect_a409291db11c835d76ee94a2abfc90983}{get\+Name}} () const
+\item 
+void \mbox{\hyperlink{class_effect_a7f926c8c6b21664461745f4c62cf7d0b}{load}} ()
+\item 
+void \mbox{\hyperlink{class_effect_a857a5b45439813ecc71e8e931c98f6a2}{update}} (float time, float x, float y)
+\item 
+void \mbox{\hyperlink{class_effect_a6a3a393e127581c7f84e1278b5be0438}{draw}} (\mbox{\hyperlink{classsf_1_1_render_target}{sf\+::\+Render\+Target}} \&target, \mbox{\hyperlink{classsf_1_1_render_states}{sf\+::\+Render\+States}} states) const
+\begin{DoxyCompactList}\small\item\em Draw the object to a render target. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{classsf_1_1_drawable}{sf\+::\+Drawable}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classsf_1_1_drawable_a906002f2df7beb5edbddf5bbef96f120}{\texorpdfstring{$\sim$}{\string~}\+Drawable}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsf_1_1_text}{sf\+::\+Text}} \mbox{\hyperlink{class_wave_blur_abff668dacacbe804edb845695ca7ce5a}{m\+\_\+text}}
+\item 
+\mbox{\hyperlink{classsf_1_1_shader}{sf\+::\+Shader}} \mbox{\hyperlink{class_wave_blur_a7ec5eadae30f3a7cb96214e9f6c18aba}{m\+\_\+shader}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Dodatkowe Dziedziczone Składowe}
+\doxysubsection*{Statyczne metody publiczne dziedziczone z \mbox{\hyperlink{class_effect}{Effect}}}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_effect_a2a4eaf667af8ea6498b77fe532c5a43d}{set\+Font}} (const \mbox{\hyperlink{classsf_1_1_font}{sf\+::\+Font}} \&font)
+\end{DoxyCompactItemize}
+\doxysubsection*{Metody chronione dziedziczone z \mbox{\hyperlink{class_effect}{Effect}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_effect_a6c1c4ec803a1aa5dcbd34a6cf92fd8d5}{Effect}} (const std\+::string \&name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Statyczne metody chronione dziedziczone z \mbox{\hyperlink{class_effect}{Effect}}}
+\begin{DoxyCompactItemize}
+\item 
+static const \mbox{\hyperlink{classsf_1_1_font}{sf\+::\+Font}} \& \mbox{\hyperlink{class_effect_aa66af317229f52d12619b7e720c500d3}{get\+Font}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{class_wave_blur_ad66678786f597687d92a0c476b62ec31}\label{class_wave_blur_ad66678786f597687d92a0c476b62ec31} 
+\index{WaveBlur@{WaveBlur}!WaveBlur@{WaveBlur}}
+\index{WaveBlur@{WaveBlur}!WaveBlur@{WaveBlur}}
+\doxysubsubsection{\texorpdfstring{WaveBlur()}{WaveBlur()}}
+{\footnotesize\ttfamily Wave\+Blur\+::\+Wave\+Blur (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_wave_blur_a49f4365ad9b266513aa82f39628ea2ef}\label{class_wave_blur_a49f4365ad9b266513aa82f39628ea2ef} 
+\index{WaveBlur@{WaveBlur}!onDraw@{onDraw}}
+\index{onDraw@{onDraw}!WaveBlur@{WaveBlur}}
+\doxysubsubsection{\texorpdfstring{onDraw()}{onDraw()}}
+{\footnotesize\ttfamily void Wave\+Blur\+::on\+Draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_render_target}{sf\+::\+Render\+Target}} \&}]{target,  }\item[{\mbox{\hyperlink{classsf_1_1_render_states}{sf\+::\+Render\+States}}}]{states }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implementuje \mbox{\hyperlink{class_effect_abb5811a89ac41358261e658f6682516a}{Effect}}.
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_wave_blur_a49f4365ad9b266513aa82f39628ea2ef_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_wave_blur_a7fea002e212a7bb88126b25b6bd57396}\label{class_wave_blur_a7fea002e212a7bb88126b25b6bd57396} 
+\index{WaveBlur@{WaveBlur}!onLoad@{onLoad}}
+\index{onLoad@{onLoad}!WaveBlur@{WaveBlur}}
+\doxysubsubsection{\texorpdfstring{onLoad()}{onLoad()}}
+{\footnotesize\ttfamily bool Wave\+Blur\+::on\+Load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implementuje \mbox{\hyperlink{class_effect_a43713a92e87e731ddfebdfa18996baaa}{Effect}}.
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_wave_blur_a7fea002e212a7bb88126b25b6bd57396_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_wave_blur_afbc71110feb1a9638b15be91bffd9ec6}\label{class_wave_blur_afbc71110feb1a9638b15be91bffd9ec6} 
+\index{WaveBlur@{WaveBlur}!onUpdate@{onUpdate}}
+\index{onUpdate@{onUpdate}!WaveBlur@{WaveBlur}}
+\doxysubsubsection{\texorpdfstring{onUpdate()}{onUpdate()}}
+{\footnotesize\ttfamily void Wave\+Blur\+::on\+Update (\begin{DoxyParamCaption}\item[{float}]{time,  }\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implementuje \mbox{\hyperlink{class_effect_a2e33e1902383f350a873f61d0fb67c4e}{Effect}}.
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{class_wave_blur_afbc71110feb1a9638b15be91bffd9ec6_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{class_wave_blur_a7ec5eadae30f3a7cb96214e9f6c18aba}\label{class_wave_blur_a7ec5eadae30f3a7cb96214e9f6c18aba} 
+\index{WaveBlur@{WaveBlur}!m\_shader@{m\_shader}}
+\index{m\_shader@{m\_shader}!WaveBlur@{WaveBlur}}
+\doxysubsubsection{\texorpdfstring{m\_shader}{m\_shader}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1_shader}{sf\+::\+Shader}} Wave\+Blur\+::m\+\_\+shader\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_wave_blur_abff668dacacbe804edb845695ca7ce5a}\label{class_wave_blur_abff668dacacbe804edb845695ca7ce5a} 
+\index{WaveBlur@{WaveBlur}!m\_text@{m\_text}}
+\index{m\_text@{m\_text}!WaveBlur@{WaveBlur}}
+\doxysubsubsection{\texorpdfstring{m\_text}{m\_text}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1_text}{sf\+::\+Text}} Wave\+Blur\+::m\+\_\+text\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/examples/shader/\mbox{\hyperlink{examples_2shader_2_shader_8cpp}{Shader.\+cpp}}\end{DoxyCompactItemize}

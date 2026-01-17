@@ -1,0 +1,242 @@
+\doxysection{Dokumentacja klasy Save\+Manager}
+\hypertarget{class_save_manager}{}\label{class_save_manager}\index{SaveManager@{SaveManager}}
+
+
+Klasa statyczna obsługująca trwałość danych gry (system zapisu/odczytu).  
+
+
+
+
+{\ttfamily \#include $<$Save\+Manager.\+h$>$}
+
+
+
+Diagram współpracy dla Save\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{class_save_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Statyczne metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_save_manager_abd27374d78d301996c97596115e6f918}{init}} ()
+\begin{DoxyCompactList}\small\item\em Inicjalizuje system zapisu. Sprawdza, czy plik zapisu istnieje; jeśli nie, tworzy domyślny. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{class_save_manager_a715b806bb960263067e4127b30bf321c}{get\+Unlocked\+Level}} ()
+\begin{DoxyCompactList}\small\item\em Pobiera numer najwyższego odblokowanego poziomu przez gracza. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{class_save_manager_a754a97aa5a82eeb4285c59194fe117a2}{get\+Best\+Score}} (int level)
+\begin{DoxyCompactList}\small\item\em Pobiera najlepszy wynik (najniższa liczba uderzeń) dla danego poziomu. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_save_manager_a45976462fb4b88d38743bd9b44df1dfe}{submit\+Score}} (int level, int score)
+\begin{DoxyCompactList}\small\item\em Przesyła nowy wynik ukończenia poziomu. Aktualizuje najlepszy wynik, jeśli nowy jest lepszy, oraz odblokowuje kolejny poziom. Automatycznie zapisuje zmiany na dysku. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Statyczne metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_save_manager_a29d7514c18f7a66cfbb37998499a9d63}{save}} ()
+\begin{DoxyCompactList}\small\item\em Zapisuje bieżące dane do pliku. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_save_manager_abc9a37974b05b890b61a4f87c076b381}{load}} ()
+\begin{DoxyCompactList}\small\item\em Wczytuje dane z pliku do pamięci. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Statyczne atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{class_save_manager_a21f5f8bb2552a6f57567844966c4fad6}{file\+Name}} = "{}savegame.\+txt"{}
+\begin{DoxyCompactList}\small\item\em Nazwa pliku zapisu. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{class_save_manager_aa9dac6f7cafb6437eaf861d37777cc35}{unlocked\+Level}} = 1
+\begin{DoxyCompactList}\small\item\em Indeks aktualnie odblokowanego poziomu. \end{DoxyCompactList}\item 
+static std\+::vector$<$ int $>$ \mbox{\hyperlink{class_save_manager_a0ea66c8edcdd119b7a502524911b6278}{best\+Scores}} = \{0, 0, 0, 0, 0\}
+\begin{DoxyCompactList}\small\item\em Lista najlepszych wyników dla każdego poziomu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Klasa statyczna obsługująca trwałość danych gry (system zapisu/odczytu). 
+
+Zarządza odczytem i zapisem postępów gracza (odblokowane poziomy, najlepsze wyniki) do lokalnego pliku tekstowego. 
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_save_manager_a754a97aa5a82eeb4285c59194fe117a2}\label{class_save_manager_a754a97aa5a82eeb4285c59194fe117a2} 
+\index{SaveManager@{SaveManager}!getBestScore@{getBestScore}}
+\index{getBestScore@{getBestScore}!SaveManager@{SaveManager}}
+\doxysubsubsection{\texorpdfstring{getBestScore()}{getBestScore()}}
+{\footnotesize\ttfamily int Save\+Manager\+::get\+Best\+Score (\begin{DoxyParamCaption}\item[{int}]{level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Pobiera najlepszy wynik (najniższa liczba uderzeń) dla danego poziomu. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em level} & Numer poziomu do sprawdzenia. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Najlepszy wynik lub 0, jeśli brak zapisu. 
+\end{DoxyReturn}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_save_manager_a754a97aa5a82eeb4285c59194fe117a2_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_save_manager_a754a97aa5a82eeb4285c59194fe117a2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_save_manager_a715b806bb960263067e4127b30bf321c}\label{class_save_manager_a715b806bb960263067e4127b30bf321c} 
+\index{SaveManager@{SaveManager}!getUnlockedLevel@{getUnlockedLevel}}
+\index{getUnlockedLevel@{getUnlockedLevel}!SaveManager@{SaveManager}}
+\doxysubsubsection{\texorpdfstring{getUnlockedLevel()}{getUnlockedLevel()}}
+{\footnotesize\ttfamily int Save\+Manager\+::get\+Unlocked\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Pobiera numer najwyższego odblokowanego poziomu przez gracza. 
+
+\begin{DoxyReturn}{Zwraca}
+Numer poziomu (1-\/5). 
+\end{DoxyReturn}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_save_manager_a715b806bb960263067e4127b30bf321c_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_save_manager_a715b806bb960263067e4127b30bf321c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_save_manager_abd27374d78d301996c97596115e6f918}\label{class_save_manager_abd27374d78d301996c97596115e6f918} 
+\index{SaveManager@{SaveManager}!init@{init}}
+\index{init@{init}!SaveManager@{SaveManager}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Save\+Manager\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Inicjalizuje system zapisu. Sprawdza, czy plik zapisu istnieje; jeśli nie, tworzy domyślny. 
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{class_save_manager_abd27374d78d301996c97596115e6f918_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{class_save_manager_abd27374d78d301996c97596115e6f918_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_save_manager_abc9a37974b05b890b61a4f87c076b381}\label{class_save_manager_abc9a37974b05b890b61a4f87c076b381} 
+\index{SaveManager@{SaveManager}!load@{load}}
+\index{load@{load}!SaveManager@{SaveManager}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily void Save\+Manager\+::load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Wczytuje dane z pliku do pamięci. 
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_save_manager_abc9a37974b05b890b61a4f87c076b381_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_save_manager_a29d7514c18f7a66cfbb37998499a9d63}\label{class_save_manager_a29d7514c18f7a66cfbb37998499a9d63} 
+\index{SaveManager@{SaveManager}!save@{save}}
+\index{save@{save}!SaveManager@{SaveManager}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void Save\+Manager\+::save (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Zapisuje bieżące dane do pliku. 
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_save_manager_a29d7514c18f7a66cfbb37998499a9d63_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_save_manager_a45976462fb4b88d38743bd9b44df1dfe}\label{class_save_manager_a45976462fb4b88d38743bd9b44df1dfe} 
+\index{SaveManager@{SaveManager}!submitScore@{submitScore}}
+\index{submitScore@{submitScore}!SaveManager@{SaveManager}}
+\doxysubsubsection{\texorpdfstring{submitScore()}{submitScore()}}
+{\footnotesize\ttfamily void Save\+Manager\+::submit\+Score (\begin{DoxyParamCaption}\item[{int}]{level,  }\item[{int}]{score }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Przesyła nowy wynik ukończenia poziomu. Aktualizuje najlepszy wynik, jeśli nowy jest lepszy, oraz odblokowuje kolejny poziom. Automatycznie zapisuje zmiany na dysku. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em level} & Numer ukończonego poziomu. \\
+\hline
+{\em score} & Liczba wykonanych uderzeń. \\
+\hline
+\end{DoxyParams}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_save_manager_a45976462fb4b88d38743bd9b44df1dfe_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_save_manager_a45976462fb4b88d38743bd9b44df1dfe_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{class_save_manager_a0ea66c8edcdd119b7a502524911b6278}\label{class_save_manager_a0ea66c8edcdd119b7a502524911b6278} 
+\index{SaveManager@{SaveManager}!bestScores@{bestScores}}
+\index{bestScores@{bestScores}!SaveManager@{SaveManager}}
+\doxysubsubsection{\texorpdfstring{bestScores}{bestScores}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ Save\+Manager\+::best\+Scores = \{0, 0, 0, 0, 0\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Lista najlepszych wyników dla każdego poziomu. 
+
+\Hypertarget{class_save_manager_a21f5f8bb2552a6f57567844966c4fad6}\label{class_save_manager_a21f5f8bb2552a6f57567844966c4fad6} 
+\index{SaveManager@{SaveManager}!fileName@{fileName}}
+\index{fileName@{fileName}!SaveManager@{SaveManager}}
+\doxysubsubsection{\texorpdfstring{fileName}{fileName}}
+{\footnotesize\ttfamily std\+::string Save\+Manager\+::file\+Name = "{}savegame.\+txt"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Nazwa pliku zapisu. 
+
+\Hypertarget{class_save_manager_aa9dac6f7cafb6437eaf861d37777cc35}\label{class_save_manager_aa9dac6f7cafb6437eaf861d37777cc35} 
+\index{SaveManager@{SaveManager}!unlockedLevel@{unlockedLevel}}
+\index{unlockedLevel@{unlockedLevel}!SaveManager@{SaveManager}}
+\doxysubsubsection{\texorpdfstring{unlockedLevel}{unlockedLevel}}
+{\footnotesize\ttfamily int Save\+Manager\+::unlocked\+Level = 1\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Indeks aktualnie odblokowanego poziomu. 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_save_manager_8h}{Save\+Manager.\+h}}\item 
+\mbox{\hyperlink{_save_manager_8cpp}{Save\+Manager.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,713 @@
+\doxysection{Dokumentacja klasy sf\+::priv\+::Window\+Impl\+Android}
+\hypertarget{classsf_1_1priv_1_1_window_impl_android}{}\label{classsf_1_1priv_1_1_window_impl_android}\index{sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}}
+
+
+Android implementation of \doxylink{classsf_1_1priv_1_1_window_impl}{Window\+Impl}.  
+
+
+
+
+{\ttfamily \#include $<$Window\+Impl\+Android.\+hpp$>$}
+
+
+
+Diagram dziedziczenia dla sf\+::priv\+::Window\+Impl\+Android\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classsf_1_1priv_1_1_window_impl_android__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagram współpracy dla sf\+::priv\+::Window\+Impl\+Android\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classsf_1_1priv_1_1_window_impl_android__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_android_a175929da972d0f04e1b5862bcbaf50ae}{Window\+Impl\+Android}} (Window\+Handle handle)
+\begin{DoxyCompactList}\small\item\em Construct the window implementation from an existing control. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_android_afd3df432984c227f684438d518437445}{Window\+Impl\+Android}} (\mbox{\hyperlink{classsf_1_1_video_mode}{Video\+Mode}} mode, const \mbox{\hyperlink{classsf_1_1_string}{String}} \&title, unsigned long style, const \mbox{\hyperlink{structsf_1_1_context_settings}{Context\+Settings}} \&settings)
+\begin{DoxyCompactList}\small\item\em Create the window implementation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_android_aef4ee40308d85ca94c5da20e2b0bb859}{\texorpdfstring{$\sim$}{\string~}\+Window\+Impl\+Android}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual Window\+Handle \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_android_a7607d89eb692d80775f011a2353fb33e}{get\+System\+Handle}} () const
+\begin{DoxyCompactList}\small\item\em Get the OS-\/specific handle of the window. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_android_a36ec6e28a583857392dc9799a3d4a26f}{get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Get the position of the window. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_android_a0daea0eab271a7b243a761446bf747c5}{set\+Position}} (const \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \&position)
+\begin{DoxyCompactList}\small\item\em Change the position of the window on screen. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacesf_aaa02ba42bf79b001a376fe9d79254cb3}{Vector2u}} \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_android_a356f9df712fa20fbb01bafa3443e90e8}{get\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Get the client size of the window. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_android_a7aebc44196507808f6efa47daa6b94a8}{set\+Size}} (const \mbox{\hyperlink{namespacesf_aaa02ba42bf79b001a376fe9d79254cb3}{Vector2u}} \&size)
+\begin{DoxyCompactList}\small\item\em Change the size of the rendering region of the window. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_android_a157957c9aa8ca29921654f5c2269d7f9}{set\+Title}} (const \mbox{\hyperlink{classsf_1_1_string}{String}} \&title)
+\begin{DoxyCompactList}\small\item\em Change the title of the window. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_android_abcd56572bd41a1952936258073144a18}{set\+Icon}} (unsigned int width, unsigned int height, const \mbox{\hyperlink{namespacesf_a4ef3d630785c4f296f9b4f274c33d78e}{Uint8}} \texorpdfstring{$\ast$}{*}pixels)
+\begin{DoxyCompactList}\small\item\em Change the window\textquotesingle{}s icon. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_android_a1f1e319ea866e11317b9ecb1ca7a90ac}{set\+Visible}} (bool visible)
+\begin{DoxyCompactList}\small\item\em Show or hide the window. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_android_a99da9bb9e5975ed92f4901553201fbcb}{set\+Mouse\+Cursor\+Visible}} (bool visible)
+\begin{DoxyCompactList}\small\item\em Show or hide the mouse cursor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_android_aa4f30e633f8dd989ebd5a9bc90cc3206}{set\+Mouse\+Cursor\+Grabbed}} (bool grabbed)
+\begin{DoxyCompactList}\small\item\em Clips or releases the mouse cursor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_android_ad0a1972316ed15fce906c5202fbf4502}{set\+Mouse\+Cursor}} (const \mbox{\hyperlink{classsf_1_1priv_1_1_cursor_impl}{Cursor\+Impl}} \&cursor)
+\begin{DoxyCompactList}\small\item\em Set the displayed cursor to a native system cursor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_android_a5f90931938eae80611c1abdfe0a09082}{set\+Key\+Repeat\+Enabled}} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Enable or disable automatic key-\/repeat. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_android_a8be55f63c7a507ae565f1d029be4bee9}{request\+Focus}} ()
+\begin{DoxyCompactList}\small\item\em Request the current window to be made the active foreground window. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_android_a0023e2c8cedce7184383708b9fa197ec}{has\+Focus}} () const
+\begin{DoxyCompactList}\small\item\em Check whether the window has the input focus. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl}{sf\+::priv\+::\+Window\+Impl}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a2a9935230eb4898324701cedf14dd307}{\texorpdfstring{$\sim$}{\string~}\+Window\+Impl}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_ad63050d99580126233581cbd013527ef}{set\+Joystick\+Threshold}} (float threshold)
+\begin{DoxyCompactList}\small\item\em Change the joystick threshold, i.\+e. the value below which no move event will be generated. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_ac03b5e66fbf0b64d00f28dfb06f25a94}{pop\+Event}} (\mbox{\hyperlink{classsf_1_1_event}{Event}} \&event, bool block)
+\begin{DoxyCompactList}\small\item\em Return the next window event available. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_aa34c17d9a20afe522b3d70b81947dcbf}{create\+Vulkan\+Surface}} (const \mbox{\hyperlink{_vulkan_8hpp_a6d9f7e27148712f2c97db45ca6991547}{Vk\+Instance}} \&instance, \mbox{\hyperlink{_vulkan_8hpp_a09787d7da5f3146095ed80ceccc2d794}{Vk\+Surface\+KHR}} \&surface, const \mbox{\hyperlink{struct_vk_allocation_callbacks}{Vk\+Allocation\+Callbacks}} \texorpdfstring{$\ast$}{*}allocator)
+\begin{DoxyCompactList}\small\item\em Create a \doxylink{classsf_1_1_vulkan}{Vulkan} rendering surface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Statyczne metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_android_a42d877828b89f52feffb9eabc14c2706}{forward\+Event}} (const \mbox{\hyperlink{classsf_1_1_event}{Event}} \&event)
+\end{DoxyCompactItemize}
+\doxysubsection*{Statyczne metody publiczne dziedziczone z \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl}{sf\+::priv\+::\+Window\+Impl}}}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl}{Window\+Impl}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a070ce3d5db3b9bd99ec61e3526e2a077}{create}} (\mbox{\hyperlink{classsf_1_1_video_mode}{Video\+Mode}} mode, const \mbox{\hyperlink{classsf_1_1_string}{String}} \&title, \mbox{\hyperlink{namespacesf_aa746fb1ddef4410bddf198ebb27e727c}{Uint32}} style, const \mbox{\hyperlink{structsf_1_1_context_settings}{Context\+Settings}} \&settings)
+\begin{DoxyCompactList}\small\item\em Create a new window depending on the current OS. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl}{Window\+Impl}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a2d0dd44bbf2ec974217f1f5da038ead6}{create}} (Window\+Handle handle)
+\begin{DoxyCompactList}\small\item\em Create a new window depending on to the current OS. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Statyczne atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_android}{Window\+Impl\+Android}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_android_aef1a0f3f72122e2888a3997b999616be}{single\+Instance}} = NULL
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Metody chronione}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_android_a5720dcff276ef1fe39f2c5b37321d709}{process\+Events}} ()
+\begin{DoxyCompactList}\small\item\em Process incoming events from the operating system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody chronione dziedziczone z \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl}{sf\+::priv\+::\+Window\+Impl}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a1328634be04374d905e1f68d0688b30a}{Window\+Impl}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a9b540a7c8b1b782d771e8fdf8f451837}{push\+Event}} (const \mbox{\hyperlink{classsf_1_1_event}{Event}} \&event)
+\begin{DoxyCompactList}\small\item\em Push a new event into the event queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Statyczne metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_android_aa52ae45734d9d85440af6a006ad453ea}{process\+Event}} (int fd, int events, void \texorpdfstring{$\ast$}{*}data)
+\begin{DoxyCompactList}\small\item\em Process messages from the looper associated with the main thread. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_android_a019095e0e54238fc554f496b6c5f960a}{process\+Scroll\+Event}} (AInput\+Event \texorpdfstring{$\ast$}{*}\+\_\+event, \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states}{Activity\+States}} \&states)
+\item 
+static int \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_android_a4b5930b1866c1b36e2f7830d0abd32dc}{process\+Key\+Event}} (AInput\+Event \texorpdfstring{$\ast$}{*}\+\_\+event, \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states}{Activity\+States}} \&states)
+\item 
+static int \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_android_af1ebbfe33beee0c3d2aac60f1713b134}{process\+Motion\+Event}} (AInput\+Event \texorpdfstring{$\ast$}{*}\+\_\+event, \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states}{Activity\+States}} \&states)
+\item 
+static int \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_android_a0072aca230e9284a84b333ae3f39c81e}{process\+Pointer\+Event}} (bool is\+Down, AInput\+Event \texorpdfstring{$\ast$}{*}event, \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states}{Activity\+States}} \&states)
+\item 
+static \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_android_a3265e24183203ae4480022f039150259}{android\+Key\+To\+SF}} (int32\+\_\+t key)
+\begin{DoxyCompactList}\small\item\em Convert a Android key to SFML key code. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_android_afecdc1287631868c2ccaff6b88507a2b}{get\+Unicode}} (AInput\+Event \texorpdfstring{$\ast$}{*}event)
+\begin{DoxyCompactList}\small\item\em Get Unicode decoded from the input event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacesf_aaa02ba42bf79b001a376fe9d79254cb3}{Vector2u}} \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_android_a24abef2df6b57b1a335917447aa57286}{m\+\_\+size}}
+\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_android_aa1705383c988321a599c2e2b3d8b9533}{m\+\_\+window\+Being\+Created}}
+\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_android_a8b1d5bc991c69d14f381535782495956}{m\+\_\+window\+Being\+Destroyed}}
+\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_android_a52e22aa4469053521cd30cb0ac1fad22}{m\+\_\+has\+Focus}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Android implementation of \doxylink{classsf_1_1priv_1_1_window_impl}{Window\+Impl}. 
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{classsf_1_1priv_1_1_window_impl_android_a175929da972d0f04e1b5862bcbaf50ae}\label{classsf_1_1priv_1_1_window_impl_android_a175929da972d0f04e1b5862bcbaf50ae} 
+\index{sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}!WindowImplAndroid@{WindowImplAndroid}}
+\index{WindowImplAndroid@{WindowImplAndroid}!sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}}
+\doxysubsubsection{\texorpdfstring{WindowImplAndroid()}{WindowImplAndroid()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily sf\+::priv\+::\+Window\+Impl\+Android\+::\+Window\+Impl\+Android (\begin{DoxyParamCaption}\item[{Window\+Handle}]{handle }\end{DoxyParamCaption})}
+
+
+
+Construct the window implementation from an existing control. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em handle} & Platform-\/specific handle of the control \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classsf_1_1priv_1_1_window_impl_android_afd3df432984c227f684438d518437445}\label{classsf_1_1priv_1_1_window_impl_android_afd3df432984c227f684438d518437445} 
+\index{sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}!WindowImplAndroid@{WindowImplAndroid}}
+\index{WindowImplAndroid@{WindowImplAndroid}!sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}}
+\doxysubsubsection{\texorpdfstring{WindowImplAndroid()}{WindowImplAndroid()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily sf\+::priv\+::\+Window\+Impl\+Android\+::\+Window\+Impl\+Android (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_video_mode}{Video\+Mode}}}]{mode,  }\item[{const \mbox{\hyperlink{classsf_1_1_string}{String}} \&}]{title,  }\item[{unsigned long}]{style,  }\item[{const \mbox{\hyperlink{structsf_1_1_context_settings}{Context\+Settings}} \&}]{settings }\end{DoxyParamCaption})}
+
+
+
+Create the window implementation. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em mode} & Video mode to use \\
+\hline
+{\em title} & Title of the window \\
+\hline
+{\em style} & \doxylink{classsf_1_1_window}{Window} style (resizable, fixed, or fullscren) \\
+\hline
+{\em settings} & Additional settings for the underlying Open\+GL context \\
+\hline
+\end{DoxyParams}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_window_impl_android_afd3df432984c227f684438d518437445_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_window_impl_android_aef4ee40308d85ca94c5da20e2b0bb859}\label{classsf_1_1priv_1_1_window_impl_android_aef4ee40308d85ca94c5da20e2b0bb859} 
+\index{sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}!````~WindowImplAndroid@{\texorpdfstring{$\sim$}{\string~}WindowImplAndroid}}
+\index{````~WindowImplAndroid@{\texorpdfstring{$\sim$}{\string~}WindowImplAndroid}!sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}WindowImplAndroid()}{\string~WindowImplAndroid()}}
+{\footnotesize\ttfamily sf\+::priv\+::\+Window\+Impl\+Android\+::\texorpdfstring{$\sim$}{\string~}\+Window\+Impl\+Android (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{classsf_1_1priv_1_1_window_impl_android_a3265e24183203ae4480022f039150259}\label{classsf_1_1priv_1_1_window_impl_android_a3265e24183203ae4480022f039150259} 
+\index{sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}!androidKeyToSF@{androidKeyToSF}}
+\index{androidKeyToSF@{androidKeyToSF}!sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}}
+\doxysubsubsection{\texorpdfstring{androidKeyToSF()}{androidKeyToSF()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} sf\+::priv\+::\+Window\+Impl\+Android\+::android\+Key\+To\+SF (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Convert a Android key to SFML key code. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em symbol} & Android key to convert\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Corresponding SFML key code 
+\end{DoxyReturn}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_window_impl_android_a3265e24183203ae4480022f039150259_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_window_impl_android_a42d877828b89f52feffb9eabc14c2706}\label{classsf_1_1priv_1_1_window_impl_android_a42d877828b89f52feffb9eabc14c2706} 
+\index{sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}!forwardEvent@{forwardEvent}}
+\index{forwardEvent@{forwardEvent}!sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}}
+\doxysubsubsection{\texorpdfstring{forwardEvent()}{forwardEvent()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Window\+Impl\+Android\+::forward\+Event (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsf_1_1_event}{Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_window_impl_android_a42d877828b89f52feffb9eabc14c2706_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_window_impl_android_a42d877828b89f52feffb9eabc14c2706_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_window_impl_android_a36ec6e28a583857392dc9799a3d4a26f}\label{classsf_1_1priv_1_1_window_impl_android_a36ec6e28a583857392dc9799a3d4a26f} 
+\index{sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} sf\+::priv\+::\+Window\+Impl\+Android\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the position of the window. 
+
+\begin{DoxyReturn}{Zwraca}
+Position of the window, in pixels 
+\end{DoxyReturn}
+
+
+Implementuje \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a2d824d8166f5f5a2d5554eb3d7244066}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_android_a356f9df712fa20fbb01bafa3443e90e8}\label{classsf_1_1priv_1_1_window_impl_android_a356f9df712fa20fbb01bafa3443e90e8} 
+\index{sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}!getSize@{getSize}}
+\index{getSize@{getSize}!sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesf_aaa02ba42bf79b001a376fe9d79254cb3}{Vector2u}} sf\+::priv\+::\+Window\+Impl\+Android\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the client size of the window. 
+
+\begin{DoxyReturn}{Zwraca}
+Size of the window, in pixels 
+\end{DoxyReturn}
+
+
+Implementuje \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a2bc72a00e9960e7b4ae2d61865667c3f}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_android_a7607d89eb692d80775f011a2353fb33e}\label{classsf_1_1priv_1_1_window_impl_android_a7607d89eb692d80775f011a2353fb33e} 
+\index{sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}!getSystemHandle@{getSystemHandle}}
+\index{getSystemHandle@{getSystemHandle}!sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}}
+\doxysubsubsection{\texorpdfstring{getSystemHandle()}{getSystemHandle()}}
+{\footnotesize\ttfamily Window\+Handle sf\+::priv\+::\+Window\+Impl\+Android\+::get\+System\+Handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the OS-\/specific handle of the window. 
+
+\begin{DoxyReturn}{Zwraca}
+Handle of the window 
+\end{DoxyReturn}
+
+
+Implementuje \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a9d6b9ab4c233daf333429b3e7ee77403}{sf\+::priv\+::\+Window\+Impl}}.
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_window_impl_android_a7607d89eb692d80775f011a2353fb33e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_window_impl_android_afecdc1287631868c2ccaff6b88507a2b}\label{classsf_1_1priv_1_1_window_impl_android_afecdc1287631868c2ccaff6b88507a2b} 
+\index{sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}!getUnicode@{getUnicode}}
+\index{getUnicode@{getUnicode}!sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}}
+\doxysubsubsection{\texorpdfstring{getUnicode()}{getUnicode()}}
+{\footnotesize\ttfamily int sf\+::priv\+::\+Window\+Impl\+Android\+::get\+Unicode (\begin{DoxyParamCaption}\item[{AInput\+Event \texorpdfstring{$\ast$}{*}}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Get Unicode decoded from the input event. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em \doxylink{classsf_1_1_event}{Event}} & Input event\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+The Unicode value 
+\end{DoxyReturn}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_window_impl_android_afecdc1287631868c2ccaff6b88507a2b_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_window_impl_android_afecdc1287631868c2ccaff6b88507a2b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_window_impl_android_a0023e2c8cedce7184383708b9fa197ec}\label{classsf_1_1priv_1_1_window_impl_android_a0023e2c8cedce7184383708b9fa197ec} 
+\index{sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}!hasFocus@{hasFocus}}
+\index{hasFocus@{hasFocus}!sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}}
+\doxysubsubsection{\texorpdfstring{hasFocus()}{hasFocus()}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Window\+Impl\+Android\+::has\+Focus (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Check whether the window has the input focus. 
+
+\begin{DoxyReturn}{Zwraca}
+True if window has focus, false otherwise 
+\end{DoxyReturn}
+
+
+Implementuje \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_ac5c0f4a801bb04de673a476ceafcd704}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_android_aa52ae45734d9d85440af6a006ad453ea}\label{classsf_1_1priv_1_1_window_impl_android_aa52ae45734d9d85440af6a006ad453ea} 
+\index{sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}!processEvent@{processEvent}}
+\index{processEvent@{processEvent}!sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}}
+\doxysubsubsection{\texorpdfstring{processEvent()}{processEvent()}}
+{\footnotesize\ttfamily int sf\+::priv\+::\+Window\+Impl\+Android\+::process\+Event (\begin{DoxyParamCaption}\item[{int}]{fd,  }\item[{int}]{events,  }\item[{void \texorpdfstring{$\ast$}{*}}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Process messages from the looper associated with the main thread. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em fd} & File descriptor \\
+\hline
+{\em events} & Bitmask of the poll events that were triggered \\
+\hline
+{\em data} & Data pointer supplied\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Whether it should continue (1) or unregister the callback (0) 
+\end{DoxyReturn}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_window_impl_android_aa52ae45734d9d85440af6a006ad453ea_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_window_impl_android_aa52ae45734d9d85440af6a006ad453ea_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_window_impl_android_a5720dcff276ef1fe39f2c5b37321d709}\label{classsf_1_1priv_1_1_window_impl_android_a5720dcff276ef1fe39f2c5b37321d709} 
+\index{sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}!processEvents@{processEvents}}
+\index{processEvents@{processEvents}!sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}}
+\doxysubsubsection{\texorpdfstring{processEvents()}{processEvents()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Window\+Impl\+Android\+::process\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Process incoming events from the operating system. 
+
+
+
+Implementuje \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a3e91b707ca4b995fabd71b7bd031530a}{sf\+::priv\+::\+Window\+Impl}}.
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_window_impl_android_a5720dcff276ef1fe39f2c5b37321d709_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_window_impl_android_a4b5930b1866c1b36e2f7830d0abd32dc}\label{classsf_1_1priv_1_1_window_impl_android_a4b5930b1866c1b36e2f7830d0abd32dc} 
+\index{sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}!processKeyEvent@{processKeyEvent}}
+\index{processKeyEvent@{processKeyEvent}!sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}}
+\doxysubsubsection{\texorpdfstring{processKeyEvent()}{processKeyEvent()}}
+{\footnotesize\ttfamily int sf\+::priv\+::\+Window\+Impl\+Android\+::process\+Key\+Event (\begin{DoxyParamCaption}\item[{AInput\+Event \texorpdfstring{$\ast$}{*}}]{\+\_\+event,  }\item[{\mbox{\hyperlink{structsf_1_1priv_1_1_activity_states}{Activity\+States}} \&}]{states }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_window_impl_android_a4b5930b1866c1b36e2f7830d0abd32dc_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_window_impl_android_a4b5930b1866c1b36e2f7830d0abd32dc_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_window_impl_android_af1ebbfe33beee0c3d2aac60f1713b134}\label{classsf_1_1priv_1_1_window_impl_android_af1ebbfe33beee0c3d2aac60f1713b134} 
+\index{sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}!processMotionEvent@{processMotionEvent}}
+\index{processMotionEvent@{processMotionEvent}!sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}}
+\doxysubsubsection{\texorpdfstring{processMotionEvent()}{processMotionEvent()}}
+{\footnotesize\ttfamily int sf\+::priv\+::\+Window\+Impl\+Android\+::process\+Motion\+Event (\begin{DoxyParamCaption}\item[{AInput\+Event \texorpdfstring{$\ast$}{*}}]{\+\_\+event,  }\item[{\mbox{\hyperlink{structsf_1_1priv_1_1_activity_states}{Activity\+States}} \&}]{states }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_window_impl_android_af1ebbfe33beee0c3d2aac60f1713b134_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_window_impl_android_af1ebbfe33beee0c3d2aac60f1713b134_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_window_impl_android_a0072aca230e9284a84b333ae3f39c81e}\label{classsf_1_1priv_1_1_window_impl_android_a0072aca230e9284a84b333ae3f39c81e} 
+\index{sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}!processPointerEvent@{processPointerEvent}}
+\index{processPointerEvent@{processPointerEvent}!sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}}
+\doxysubsubsection{\texorpdfstring{processPointerEvent()}{processPointerEvent()}}
+{\footnotesize\ttfamily int sf\+::priv\+::\+Window\+Impl\+Android\+::process\+Pointer\+Event (\begin{DoxyParamCaption}\item[{bool}]{is\+Down,  }\item[{AInput\+Event \texorpdfstring{$\ast$}{*}}]{event,  }\item[{\mbox{\hyperlink{structsf_1_1priv_1_1_activity_states}{Activity\+States}} \&}]{states }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_window_impl_android_a0072aca230e9284a84b333ae3f39c81e_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_window_impl_android_a0072aca230e9284a84b333ae3f39c81e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_window_impl_android_a019095e0e54238fc554f496b6c5f960a}\label{classsf_1_1priv_1_1_window_impl_android_a019095e0e54238fc554f496b6c5f960a} 
+\index{sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}!processScrollEvent@{processScrollEvent}}
+\index{processScrollEvent@{processScrollEvent}!sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}}
+\doxysubsubsection{\texorpdfstring{processScrollEvent()}{processScrollEvent()}}
+{\footnotesize\ttfamily int sf\+::priv\+::\+Window\+Impl\+Android\+::process\+Scroll\+Event (\begin{DoxyParamCaption}\item[{AInput\+Event \texorpdfstring{$\ast$}{*}}]{\+\_\+event,  }\item[{\mbox{\hyperlink{structsf_1_1priv_1_1_activity_states}{Activity\+States}} \&}]{states }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_window_impl_android_a019095e0e54238fc554f496b6c5f960a_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_window_impl_android_a019095e0e54238fc554f496b6c5f960a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_window_impl_android_a8be55f63c7a507ae565f1d029be4bee9}\label{classsf_1_1priv_1_1_window_impl_android_a8be55f63c7a507ae565f1d029be4bee9} 
+\index{sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}!requestFocus@{requestFocus}}
+\index{requestFocus@{requestFocus}!sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}}
+\doxysubsubsection{\texorpdfstring{requestFocus()}{requestFocus()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Window\+Impl\+Android\+::request\+Focus (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Request the current window to be made the active foreground window. 
+
+
+
+Implementuje \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_afe73f678b6a53b2a231f8044663d1fca}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_android_abcd56572bd41a1952936258073144a18}\label{classsf_1_1priv_1_1_window_impl_android_abcd56572bd41a1952936258073144a18} 
+\index{sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}!setIcon@{setIcon}}
+\index{setIcon@{setIcon}!sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}}
+\doxysubsubsection{\texorpdfstring{setIcon()}{setIcon()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Window\+Impl\+Android\+::set\+Icon (\begin{DoxyParamCaption}\item[{unsigned int}]{width,  }\item[{unsigned int}]{height,  }\item[{const \mbox{\hyperlink{namespacesf_a4ef3d630785c4f296f9b4f274c33d78e}{Uint8}} \texorpdfstring{$\ast$}{*}}]{pixels }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Change the window\textquotesingle{}s icon. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em width} & Icon\textquotesingle{}s width, in pixels \\
+\hline
+{\em height} & Icon\textquotesingle{}s height, in pixels \\
+\hline
+{\em pixels} & Pointer to the pixels in memory, format must be RGBA 32 bits \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a08c9d33b1a059b3825bb71e255f4dab8}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_android_a5f90931938eae80611c1abdfe0a09082}\label{classsf_1_1priv_1_1_window_impl_android_a5f90931938eae80611c1abdfe0a09082} 
+\index{sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}!setKeyRepeatEnabled@{setKeyRepeatEnabled}}
+\index{setKeyRepeatEnabled@{setKeyRepeatEnabled}!sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}}
+\doxysubsubsection{\texorpdfstring{setKeyRepeatEnabled()}{setKeyRepeatEnabled()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Window\+Impl\+Android\+::set\+Key\+Repeat\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Enable or disable automatic key-\/repeat. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em enabled} & True to enable, false to disable \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a367e5c89de51decd13444ddce3265b18}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_android_ad0a1972316ed15fce906c5202fbf4502}\label{classsf_1_1priv_1_1_window_impl_android_ad0a1972316ed15fce906c5202fbf4502} 
+\index{sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}!setMouseCursor@{setMouseCursor}}
+\index{setMouseCursor@{setMouseCursor}!sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}}
+\doxysubsubsection{\texorpdfstring{setMouseCursor()}{setMouseCursor()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Window\+Impl\+Android\+::set\+Mouse\+Cursor (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsf_1_1priv_1_1_cursor_impl}{Cursor\+Impl}} \&}]{cursor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Set the displayed cursor to a native system cursor. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em cursor} & Native system cursor type to display \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_afad987ac0e04ffb10643d7a41e008207}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_android_aa4f30e633f8dd989ebd5a9bc90cc3206}\label{classsf_1_1priv_1_1_window_impl_android_aa4f30e633f8dd989ebd5a9bc90cc3206} 
+\index{sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}!setMouseCursorGrabbed@{setMouseCursorGrabbed}}
+\index{setMouseCursorGrabbed@{setMouseCursorGrabbed}!sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}}
+\doxysubsubsection{\texorpdfstring{setMouseCursorGrabbed()}{setMouseCursorGrabbed()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Window\+Impl\+Android\+::set\+Mouse\+Cursor\+Grabbed (\begin{DoxyParamCaption}\item[{bool}]{grabbed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Clips or releases the mouse cursor. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em grabbed} & True to enable, false to disable \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a608f2da781271c3b305bb7a6e72d71b2}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_android_a99da9bb9e5975ed92f4901553201fbcb}\label{classsf_1_1priv_1_1_window_impl_android_a99da9bb9e5975ed92f4901553201fbcb} 
+\index{sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}!setMouseCursorVisible@{setMouseCursorVisible}}
+\index{setMouseCursorVisible@{setMouseCursorVisible}!sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}}
+\doxysubsubsection{\texorpdfstring{setMouseCursorVisible()}{setMouseCursorVisible()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Window\+Impl\+Android\+::set\+Mouse\+Cursor\+Visible (\begin{DoxyParamCaption}\item[{bool}]{visible }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Show or hide the mouse cursor. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em visible} & True to show, false to hide \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_ae04d680901e8c302a92ef879966d752b}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_android_a0daea0eab271a7b243a761446bf747c5}\label{classsf_1_1priv_1_1_window_impl_android_a0daea0eab271a7b243a761446bf747c5} 
+\index{sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Window\+Impl\+Android\+::set\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \&}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Change the position of the window on screen. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em position} & New position of the window, in pixels \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a6f2513c0a97af5311a81744a9448c57e}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_android_a7aebc44196507808f6efa47daa6b94a8}\label{classsf_1_1priv_1_1_window_impl_android_a7aebc44196507808f6efa47daa6b94a8} 
+\index{sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}!setSize@{setSize}}
+\index{setSize@{setSize}!sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}}
+\doxysubsubsection{\texorpdfstring{setSize()}{setSize()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Window\+Impl\+Android\+::set\+Size (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacesf_aaa02ba42bf79b001a376fe9d79254cb3}{Vector2u}} \&}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Change the size of the rendering region of the window. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em size} & New size, in pixels \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a7a6c2bbc383a912213ce8ec1bffe8954}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_android_a157957c9aa8ca29921654f5c2269d7f9}\label{classsf_1_1priv_1_1_window_impl_android_a157957c9aa8ca29921654f5c2269d7f9} 
+\index{sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}!setTitle@{setTitle}}
+\index{setTitle@{setTitle}!sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}}
+\doxysubsubsection{\texorpdfstring{setTitle()}{setTitle()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Window\+Impl\+Android\+::set\+Title (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsf_1_1_string}{String}} \&}]{title }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Change the title of the window. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em title} & New title \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a5548a506ce7a5cb9c6c7f92fcdd7689a}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_android_a1f1e319ea866e11317b9ecb1ca7a90ac}\label{classsf_1_1priv_1_1_window_impl_android_a1f1e319ea866e11317b9ecb1ca7a90ac} 
+\index{sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}!setVisible@{setVisible}}
+\index{setVisible@{setVisible}!sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}}
+\doxysubsubsection{\texorpdfstring{setVisible()}{setVisible()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Window\+Impl\+Android\+::set\+Visible (\begin{DoxyParamCaption}\item[{bool}]{visible }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Show or hide the window. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em visible} & True to show, false to hide \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a9119bdb8b8413c1dbfb06aa4ad78c7b5}{sf\+::priv\+::\+Window\+Impl}}.
+
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{classsf_1_1priv_1_1_window_impl_android_a52e22aa4469053521cd30cb0ac1fad22}\label{classsf_1_1priv_1_1_window_impl_android_a52e22aa4469053521cd30cb0ac1fad22} 
+\index{sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}!m\_hasFocus@{m\_hasFocus}}
+\index{m\_hasFocus@{m\_hasFocus}!sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}}
+\doxysubsubsection{\texorpdfstring{m\_hasFocus}{m\_hasFocus}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Window\+Impl\+Android\+::m\+\_\+has\+Focus\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_android_a24abef2df6b57b1a335917447aa57286}\label{classsf_1_1priv_1_1_window_impl_android_a24abef2df6b57b1a335917447aa57286} 
+\index{sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}!m\_size@{m\_size}}
+\index{m\_size@{m\_size}!sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}}
+\doxysubsubsection{\texorpdfstring{m\_size}{m\_size}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesf_aaa02ba42bf79b001a376fe9d79254cb3}{Vector2u}} sf\+::priv\+::\+Window\+Impl\+Android\+::m\+\_\+size\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_android_aa1705383c988321a599c2e2b3d8b9533}\label{classsf_1_1priv_1_1_window_impl_android_aa1705383c988321a599c2e2b3d8b9533} 
+\index{sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}!m\_windowBeingCreated@{m\_windowBeingCreated}}
+\index{m\_windowBeingCreated@{m\_windowBeingCreated}!sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}}
+\doxysubsubsection{\texorpdfstring{m\_windowBeingCreated}{m\_windowBeingCreated}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Window\+Impl\+Android\+::m\+\_\+window\+Being\+Created\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_android_a8b1d5bc991c69d14f381535782495956}\label{classsf_1_1priv_1_1_window_impl_android_a8b1d5bc991c69d14f381535782495956} 
+\index{sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}!m\_windowBeingDestroyed@{m\_windowBeingDestroyed}}
+\index{m\_windowBeingDestroyed@{m\_windowBeingDestroyed}!sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}}
+\doxysubsubsection{\texorpdfstring{m\_windowBeingDestroyed}{m\_windowBeingDestroyed}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Window\+Impl\+Android\+::m\+\_\+window\+Being\+Destroyed\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_android_aef1a0f3f72122e2888a3997b999616be}\label{classsf_1_1priv_1_1_window_impl_android_aef1a0f3f72122e2888a3997b999616be} 
+\index{sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}!singleInstance@{singleInstance}}
+\index{singleInstance@{singleInstance}!sf::priv::WindowImplAndroid@{sf::priv::WindowImplAndroid}}
+\doxysubsubsection{\texorpdfstring{singleInstance}{singleInstance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_android}{Window\+Impl\+Android}} \texorpdfstring{$\ast$}{*} sf\+::priv\+::\+Window\+Impl\+Android\+::single\+Instance = NULL\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+Android/\mbox{\hyperlink{_window_impl_android_8hpp}{Window\+Impl\+Android.\+hpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+Android/\mbox{\hyperlink{_window_impl_android_8cpp}{Window\+Impl\+Android.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,84 @@
+\doxysection{Dokumentacja struktury sf\+::priv\+::Joystick\+State}
+\hypertarget{structsf_1_1priv_1_1_joystick_state}{}\label{structsf_1_1priv_1_1_joystick_state}\index{sf::priv::JoystickState@{sf::priv::JoystickState}}
+
+
+Structure holding a joystick\textquotesingle{}s state.  
+
+
+
+
+{\ttfamily \#include $<$Joystick\+Impl.\+hpp$>$}
+
+
+
+Diagram współpracy dla sf\+::priv\+::Joystick\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{structsf_1_1priv_1_1_joystick_state__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsf_1_1priv_1_1_joystick_state_a104948b17f0973cb888c258376a2e662}{Joystick\+State}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structsf_1_1priv_1_1_joystick_state_a16a4532e7a32b69372e0f53fb919902c}{connected}}
+\begin{DoxyCompactList}\small\item\em Is the joystick currently connected? \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{structsf_1_1priv_1_1_joystick_state_af9087001cfdb672566e5499d02bbce45}{axes}} \mbox{[}\mbox{\hyperlink{classsf_1_1_joystick_ab2f321679e29b742f24eb0de91f30149accf3e487c9f6ee2f384351323626a42c}{Joystick\+::\+Axis\+Count}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Position of each axis, in range \mbox{[}-\/100, 100\mbox{]}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structsf_1_1priv_1_1_joystick_state_aeead12919cdd978ec915ac010091577f}{buttons}} \mbox{[}\mbox{\hyperlink{classsf_1_1_joystick_ab2f321679e29b742f24eb0de91f30149a2f1b8a0a59f2c12a4775c0e1e69e1816}{Joystick\+::\+Button\+Count}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Status of each button (true = pressed) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Structure holding a joystick\textquotesingle{}s state. 
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{structsf_1_1priv_1_1_joystick_state_a104948b17f0973cb888c258376a2e662}\label{structsf_1_1priv_1_1_joystick_state_a104948b17f0973cb888c258376a2e662} 
+\index{sf::priv::JoystickState@{sf::priv::JoystickState}!JoystickState@{JoystickState}}
+\index{JoystickState@{JoystickState}!sf::priv::JoystickState@{sf::priv::JoystickState}}
+\doxysubsubsection{\texorpdfstring{JoystickState()}{JoystickState()}}
+{\footnotesize\ttfamily sf\+::priv\+::\+Joystick\+State\+::\+Joystick\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{structsf_1_1priv_1_1_joystick_state_af9087001cfdb672566e5499d02bbce45}\label{structsf_1_1priv_1_1_joystick_state_af9087001cfdb672566e5499d02bbce45} 
+\index{sf::priv::JoystickState@{sf::priv::JoystickState}!axes@{axes}}
+\index{axes@{axes}!sf::priv::JoystickState@{sf::priv::JoystickState}}
+\doxysubsubsection{\texorpdfstring{axes}{axes}}
+{\footnotesize\ttfamily float sf\+::priv\+::\+Joystick\+State\+::axes\mbox{[}\mbox{\hyperlink{classsf_1_1_joystick_ab2f321679e29b742f24eb0de91f30149accf3e487c9f6ee2f384351323626a42c}{Joystick\+::\+Axis\+Count}}\mbox{]}}
+
+
+
+Position of each axis, in range \mbox{[}-\/100, 100\mbox{]}. 
+
+\Hypertarget{structsf_1_1priv_1_1_joystick_state_aeead12919cdd978ec915ac010091577f}\label{structsf_1_1priv_1_1_joystick_state_aeead12919cdd978ec915ac010091577f} 
+\index{sf::priv::JoystickState@{sf::priv::JoystickState}!buttons@{buttons}}
+\index{buttons@{buttons}!sf::priv::JoystickState@{sf::priv::JoystickState}}
+\doxysubsubsection{\texorpdfstring{buttons}{buttons}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Joystick\+State\+::buttons\mbox{[}\mbox{\hyperlink{classsf_1_1_joystick_ab2f321679e29b742f24eb0de91f30149a2f1b8a0a59f2c12a4775c0e1e69e1816}{Joystick\+::\+Button\+Count}}\mbox{]}}
+
+
+
+Status of each button (true = pressed) 
+
+\Hypertarget{structsf_1_1priv_1_1_joystick_state_a16a4532e7a32b69372e0f53fb919902c}\label{structsf_1_1priv_1_1_joystick_state_a16a4532e7a32b69372e0f53fb919902c} 
+\index{sf::priv::JoystickState@{sf::priv::JoystickState}!connected@{connected}}
+\index{connected@{connected}!sf::priv::JoystickState@{sf::priv::JoystickState}}
+\doxysubsubsection{\texorpdfstring{connected}{connected}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Joystick\+State\+::connected}
+
+
+
+Is the joystick currently connected? 
+
+
+
+Dokumentacja dla tej struktury została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\mbox{\hyperlink{_joystick_impl_8hpp}{Joystick\+Impl.\+hpp}}\end{DoxyCompactItemize}

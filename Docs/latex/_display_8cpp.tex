@@ -1,0 +1,37 @@
+\doxysection{Dokumentacja pliku cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+Unix/\+Display.cpp}
+\hypertarget{_display_8cpp}{}\label{_display_8cpp}\index{cmake-\/build-\/debug/\_deps/sfml-\/src/src/SFML/Window/Unix/Display.cpp@{cmake-\/build-\/debug/\_deps/sfml-\/src/src/SFML/Window/Unix/Display.cpp}}
+{\ttfamily \#include $<$SFML/\+System/\+Err.\+hpp$>$}\newline
+{\ttfamily \#include $<$SFML/\+System/\+Mutex.\+hpp$>$}\newline
+{\ttfamily \#include $<$SFML/\+System/\+Lock.\+hpp$>$}\newline
+{\ttfamily \#include $<$SFML/\+Window/\+Unix/\+Display.\+hpp$>$}\newline
+{\ttfamily \#include $<$X11/keysym.\+h$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+Wykres zależności załączania dla Display.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_display_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Przestrzenie nazw}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacesf}{sf}}
+\begin{DoxyCompactList}\small\item\em Predefine some classes. \end{DoxyCompactList}\item 
+namespace \mbox{\hyperlink{namespacesf_1_1priv}{sf\+::priv}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+Display \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespacesf_1_1priv_aa1e0c37c2896b83ea77fe38a0564e0b1}{sf\+::priv\+::\+Open\+Display}} ()
+\begin{DoxyCompactList}\small\item\em Get the shared Display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacesf_1_1priv_a1bba7378bd254853ba428683b043c40c}{sf\+::priv\+::\+Close\+Display}} (Display \texorpdfstring{$\ast$}{*}display)
+\begin{DoxyCompactList}\small\item\em Release a reference to the shared display. \end{DoxyCompactList}\item 
+XIM \mbox{\hyperlink{namespacesf_1_1priv_a186a95a76d838bc257beab8cf50be9fd}{sf\+::priv\+::\+Open\+XIM}} ()
+\begin{DoxyCompactList}\small\item\em Get the shared XIM context for the Display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacesf_1_1priv_aea0a744b1b7d72cd02f725beb264d5a7}{sf\+::priv\+::\+Close\+XIM}} (XIM xim)
+\begin{DoxyCompactList}\small\item\em Release a reference to the shared XIM context. \end{DoxyCompactList}\item 
+Atom \mbox{\hyperlink{namespacesf_1_1priv_a7c937896c5eb626480939b2eac279b79}{sf\+::priv\+::get\+Atom}} (const std\+::string \&name, bool only\+If\+Exists=\mbox{\hyperlink{ordinals_8h_a65e9886d74aaee76545e83dd09011727}{false}})
+\begin{DoxyCompactList}\small\item\em Get the atom with the specified name. \end{DoxyCompactList}\end{DoxyCompactItemize}

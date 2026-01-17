@@ -1,0 +1,717 @@
+\doxysection{Dokumentacja klasy sf\+::priv\+::HIDInput\+Manager}
+\hypertarget{classsf_1_1priv_1_1_h_i_d_input_manager}{}\label{classsf_1_1priv_1_1_h_i_d_input_manager}\index{sf::priv::HIDInputManager@{sf::priv::HIDInputManager}}
+
+
+\doxylink{classsf_1_1priv_1_1_input_impl}{sf\+::priv\+::\+Input\+Impl} helper  
+
+
+
+
+{\ttfamily \#include $<$HIDInput\+Manager.\+hpp$>$}
+
+
+
+Diagram dziedziczenia dla sf\+::priv\+::HIDInput\+Manager\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classsf_1_1priv_1_1_h_i_d_input_manager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagram współpracy dla sf\+::priv\+::HIDInput\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classsf_1_1priv_1_1_h_i_d_input_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_h_i_d_input_manager_a17fc2ce10d0a1a24948b941460e5b94e}{is\+Key\+Pressed}} (\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} key)
+\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_h_i_d_input_manager_a33a7867c603a27d6e864ea0dc6832f1e}{is\+Key\+Pressed}} (\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} code)
+\item 
+\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} \mbox{\hyperlink{classsf_1_1priv_1_1_h_i_d_input_manager_a560425b2ec37c943cd91e59d8510df59}{localize}} (\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} code)
+\begin{DoxyCompactList}\small\item\em Localize a physical key to a logical one.   \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} \mbox{\hyperlink{classsf_1_1priv_1_1_h_i_d_input_manager_ad1ccfcd06cabc35efd4072ebef1cd91f}{delocalize}} (\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} key)
+\begin{DoxyCompactList}\small\item\em Identify the physical key corresponding to a logical one.   \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1_string}{String}} \mbox{\hyperlink{classsf_1_1priv_1_1_h_i_d_input_manager_a4617eb342c62a0ae5be04d0d1d4e15e5}{get\+Description}} (\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} code)
+\begin{DoxyCompactList}\small\item\em Provide a string representation for a given scancode.   \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Statyczne metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classsf_1_1priv_1_1_h_i_d_input_manager}{HIDInput\+Manager}} \& \mbox{\hyperlink{classsf_1_1priv_1_1_h_i_d_input_manager_a1fa701041e916a3dae97e45d85ee37b5}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Get the unique instance of the class. \end{DoxyCompactList}\item 
+static long \mbox{\hyperlink{classsf_1_1priv_1_1_h_i_d_input_manager_a8f2bf16875b43cc8155502fb50c62eb9}{get\+Location\+ID}} (IOHIDDevice\+Ref device)
+\begin{DoxyCompactList}\small\item\em Get the usb location ID of a given device. \end{DoxyCompactList}\item 
+static CFDictionary\+Ref \mbox{\hyperlink{classsf_1_1priv_1_1_h_i_d_input_manager_ac732d0f7c0d767b23b69bf34942e2993}{copy\+Devices\+Mask}} (UInt32 page, UInt32 usage)
+\begin{DoxyCompactList}\small\item\em Create a mask (dictionary) for an IOHIDManager. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} \mbox{\hyperlink{classsf_1_1priv_1_1_h_i_d_input_manager_a7b1243b400de5c7670818755cfd3fdaa}{localized\+Key}} (Uni\+Char ch)
+\begin{DoxyCompactList}\small\item\em Try to convert a character into a SFML key code. \end{DoxyCompactList}\item 
+static Uni\+Char \mbox{\hyperlink{classsf_1_1priv_1_1_h_i_d_input_manager_a930c847add8cac68eac89b46c146cb5a}{to\+Unicode}} (\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} key)
+\begin{DoxyCompactList}\small\item\em Opposite transformation as localized\+Keys. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} \mbox{\hyperlink{classsf_1_1priv_1_1_h_i_d_input_manager_afe4a2bc0118e860f6ef57cd8d7a701f5}{non\+Localized\+Key}} (Uni\+Char virtual\+Keycode)
+\begin{DoxyCompactList}\small\item\em Try to convert a virtual keycode (HID level) into a SFML scancode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsf_1_1priv_1_1_h_i_d_input_manager_adb2ca9321a6cbc5eb5a8a21df254336f}{HIDInput\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1priv_1_1_h_i_d_input_manager_a00abea31fe22619edd6be0d8d0b4c62b}{\texorpdfstring{$\sim$}{\string~}\+HIDInput\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_h_i_d_input_manager_aab0f2e85ea8f507f615fdd36cb20c6a4}{initialize\+Keyboard}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the keyboard part of this class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_h_i_d_input_manager_aefe10b57d6f2cacc5372dc9e72a2d695}{load\+Keyboard}} (IOHIDDevice\+Ref keyboard)
+\begin{DoxyCompactList}\small\item\em Load the given keyboard into m\+\_\+keys. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_h_i_d_input_manager_a3f134d1fc0315b5c80c7fba875908f9d}{load\+Key}} (IOHIDElement\+Ref key)
+\begin{DoxyCompactList}\small\item\em Load the given key into m\+\_\+keys. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_h_i_d_input_manager_af1d25db6671b2c59e1698358d692453b}{build\+Mappings}} ()
+\begin{DoxyCompactList}\small\item\em Regenerate the mappings from/to Key and Scancode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_h_i_d_input_manager_a758786ce836476b4ee3e07dbd702e3bf}{free\+Up}} ()
+\begin{DoxyCompactList}\small\item\em Release all resources. \end{DoxyCompactList}\item 
+CFSet\+Ref \mbox{\hyperlink{classsf_1_1priv_1_1_h_i_d_input_manager_a2bd162a19048a0e2a4659dd8b7dfc26f}{copy\+Devices}} (UInt32 page, UInt32 usage)
+\begin{DoxyCompactList}\small\item\em Filter the devices and return them. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_h_i_d_input_manager_a277387dba3aaad61fd8daa9f45f521db}{is\+Pressed}} (\mbox{\hyperlink{namespacesf_1_1priv_ad383d5fea6fe254916a6f69cf53dcb95}{IOHIDElements}} \&elements)
+\begin{DoxyCompactList}\small\item\em Check if a key is pressed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody prywatne dziedziczone z \mbox{\hyperlink{classsf_1_1_non_copyable}{sf\+::\+Non\+Copyable}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsf_1_1_non_copyable_a2110add170580fdb946f887719da6860}{Non\+Copyable}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1_non_copyable_a8274ffbf46014f5f7f364befb52c7728}{\texorpdfstring{$\sim$}{\string~}\+Non\+Copyable}} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Statyczne metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_h_i_d_input_manager_a6fb65142a1c63f16a8e24627bd4341e8}{keyboard\+Changed}} (CFNotification\+Center\+Ref, void \texorpdfstring{$\ast$}{*}observer, CFString\+Ref, const void \texorpdfstring{$\ast$}{*}, CFDictionary\+Ref)
+\begin{DoxyCompactList}\small\item\em Callback to regenerate mappings from/to Key and Scancode when there\textquotesingle{}s a keyboard layout change. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} \mbox{\hyperlink{classsf_1_1priv_1_1_h_i_d_input_manager_aeb23c6b41eb54603d2dd77b94e948d2e}{usage\+To\+Scancode}} (UInt32 usage)
+\begin{DoxyCompactList}\small\item\em Convert a HID key usage to its corresponding scancode. \end{DoxyCompactList}\item 
+static UInt8 \mbox{\hyperlink{classsf_1_1priv_1_1_h_i_d_input_manager_aab6b252774b0626481efa660b4bb14bc}{scan\+To\+Virtual\+Code}} (\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} code)
+\item 
+static \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} \mbox{\hyperlink{classsf_1_1priv_1_1_h_i_d_input_manager_ac89ccbc12c73facaf6c3d20a1138fc96}{localized\+Key\+Fallback}} (\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} code)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+IOHIDManager\+Ref \mbox{\hyperlink{classsf_1_1priv_1_1_h_i_d_input_manager_a1e33b7ef4d49d8354df47f12c2760c47}{m\+\_\+manager}}
+\begin{DoxyCompactList}\small\item\em Underlying HID Manager. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacesf_1_1priv_ad383d5fea6fe254916a6f69cf53dcb95}{IOHIDElements}} \mbox{\hyperlink{classsf_1_1priv_1_1_h_i_d_input_manager_a534c0577aae0e024ac55c109c71e92a9}{m\+\_\+keys}} \mbox{[}\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875a28c5ad8524e1e653b43440e660d441d0}{Keyboard\+::\+Scan\+::\+Scancode\+Count}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em All the keys on any connected keyboard. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} \mbox{\hyperlink{classsf_1_1priv_1_1_h_i_d_input_manager_ab7ab13e09a1e566853c84c171e9757c3}{m\+\_\+key\+To\+Scancode\+Mapping}} \mbox{[}\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a93e6ffa0320fe9b2f29aec14a58be36b}{Keyboard\+::\+Key\+Count}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Mapping from Key to Scancode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} \mbox{\hyperlink{classsf_1_1priv_1_1_h_i_d_input_manager_af69f4e6bcacd4ef5b245cc15263d3fac}{m\+\_\+scancode\+To\+Key\+Mapping}} \mbox{[}\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875a28c5ad8524e1e653b43440e660d441d0}{Keyboard\+::\+Scan\+::\+Scancode\+Count}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Mapping from Scancode to Key. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+\doxylink{classsf_1_1priv_1_1_input_impl}{sf\+::priv\+::\+Input\+Impl} helper 
+
+This class manage as a singleton instance the keyboard state. Its purpose is to help \doxylink{classsf_1_1priv_1_1_input_impl}{sf\+::priv\+::\+Input\+Impl} class. 
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{classsf_1_1priv_1_1_h_i_d_input_manager_adb2ca9321a6cbc5eb5a8a21df254336f}\label{classsf_1_1priv_1_1_h_i_d_input_manager_adb2ca9321a6cbc5eb5a8a21df254336f} 
+\index{sf::priv::HIDInputManager@{sf::priv::HIDInputManager}!HIDInputManager@{HIDInputManager}}
+\index{HIDInputManager@{HIDInputManager}!sf::priv::HIDInputManager@{sf::priv::HIDInputManager}}
+\doxysubsubsection{\texorpdfstring{HIDInputManager()}{HIDInputManager()}}
+{\footnotesize\ttfamily sf\+::priv\+::\+HIDInput\+Manager\+::\+HIDInput\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Default constructor. 
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_h_i_d_input_manager_adb2ca9321a6cbc5eb5a8a21df254336f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_h_i_d_input_manager_a00abea31fe22619edd6be0d8d0b4c62b}\label{classsf_1_1priv_1_1_h_i_d_input_manager_a00abea31fe22619edd6be0d8d0b4c62b} 
+\index{sf::priv::HIDInputManager@{sf::priv::HIDInputManager}!````~HIDInputManager@{\texorpdfstring{$\sim$}{\string~}HIDInputManager}}
+\index{````~HIDInputManager@{\texorpdfstring{$\sim$}{\string~}HIDInputManager}!sf::priv::HIDInputManager@{sf::priv::HIDInputManager}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}HIDInputManager()}{\string~HIDInputManager()}}
+{\footnotesize\ttfamily sf\+::priv\+::\+HIDInput\+Manager\+::\texorpdfstring{$\sim$}{\string~}\+HIDInput\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Destructor. 
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_h_i_d_input_manager_a00abea31fe22619edd6be0d8d0b4c62b_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{classsf_1_1priv_1_1_h_i_d_input_manager_af1d25db6671b2c59e1698358d692453b}\label{classsf_1_1priv_1_1_h_i_d_input_manager_af1d25db6671b2c59e1698358d692453b} 
+\index{sf::priv::HIDInputManager@{sf::priv::HIDInputManager}!buildMappings@{buildMappings}}
+\index{buildMappings@{buildMappings}!sf::priv::HIDInputManager@{sf::priv::HIDInputManager}}
+\doxysubsubsection{\texorpdfstring{buildMappings()}{buildMappings()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+HIDInput\+Manager\+::build\+Mappings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Regenerate the mappings from/to Key and Scancode. 
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_h_i_d_input_manager_af1d25db6671b2c59e1698358d692453b_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_h_i_d_input_manager_af1d25db6671b2c59e1698358d692453b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_h_i_d_input_manager_a2bd162a19048a0e2a4659dd8b7dfc26f}\label{classsf_1_1priv_1_1_h_i_d_input_manager_a2bd162a19048a0e2a4659dd8b7dfc26f} 
+\index{sf::priv::HIDInputManager@{sf::priv::HIDInputManager}!copyDevices@{copyDevices}}
+\index{copyDevices@{copyDevices}!sf::priv::HIDInputManager@{sf::priv::HIDInputManager}}
+\doxysubsubsection{\texorpdfstring{copyDevices()}{copyDevices()}}
+{\footnotesize\ttfamily CFSet\+Ref sf\+::priv\+::\+HIDInput\+Manager\+::copy\+Devices (\begin{DoxyParamCaption}\item[{UInt32}]{page,  }\item[{UInt32}]{usage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Filter the devices and return them. 
+
+On error, free\+Up is {\itshape not} called by this function.
+
+
+\begin{DoxyParams}{Parametry}
+{\em page} & HID page like k\+HIDPage\+\_\+\+Generic\+Desktop \\
+\hline
+{\em usage} & HID usage page like k\+HIDUsage\+\_\+\+GD\+\_\+\+Keyboard or k\+HIDUsage\+\_\+\+GD\+\_\+\+Mouse \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+a retained, non-\/empty CFSet\+Ref of IOHIDDevice\+Ref or NULL 
+\end{DoxyReturn}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_h_i_d_input_manager_a2bd162a19048a0e2a4659dd8b7dfc26f_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_h_i_d_input_manager_a2bd162a19048a0e2a4659dd8b7dfc26f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_h_i_d_input_manager_ac732d0f7c0d767b23b69bf34942e2993}\label{classsf_1_1priv_1_1_h_i_d_input_manager_ac732d0f7c0d767b23b69bf34942e2993} 
+\index{sf::priv::HIDInputManager@{sf::priv::HIDInputManager}!copyDevicesMask@{copyDevicesMask}}
+\index{copyDevicesMask@{copyDevicesMask}!sf::priv::HIDInputManager@{sf::priv::HIDInputManager}}
+\doxysubsubsection{\texorpdfstring{copyDevicesMask()}{copyDevicesMask()}}
+{\footnotesize\ttfamily CFDictionary\+Ref sf\+::priv\+::\+HIDInput\+Manager\+::copy\+Devices\+Mask (\begin{DoxyParamCaption}\item[{UInt32}]{page,  }\item[{UInt32}]{usage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create a mask (dictionary) for an IOHIDManager. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em page} & HID page \\
+\hline
+{\em usage} & HID usage page \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+a retained CFDictionary\+Ref 
+\end{DoxyReturn}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_h_i_d_input_manager_ac732d0f7c0d767b23b69bf34942e2993_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_h_i_d_input_manager_ad1ccfcd06cabc35efd4072ebef1cd91f}\label{classsf_1_1priv_1_1_h_i_d_input_manager_ad1ccfcd06cabc35efd4072ebef1cd91f} 
+\index{sf::priv::HIDInputManager@{sf::priv::HIDInputManager}!delocalize@{delocalize}}
+\index{delocalize@{delocalize}!sf::priv::HIDInputManager@{sf::priv::HIDInputManager}}
+\doxysubsubsection{\texorpdfstring{delocalize()}{delocalize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} sf\+::priv\+::\+HIDInput\+Manager\+::delocalize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}}}]{key }\end{DoxyParamCaption})}
+
+
+
+Identify the physical key corresponding to a logical one.   
+
+
+\begin{DoxyParams}{Parametry}
+{\em key} & Key to "{}delocalize"{}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+The scancode corresponding to the key under the current keyboard layout used by the operating system, or \doxylink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875af29c5f0133653ccd3cbc947b51e97895}{sf\+::\+Keyboard\+::\+Scan\+::\+Unknown} when the key cannot be mapped to a \doxylink{classsf_1_1_keyboard_a9683c174456f62eb0faf3371c28f12d2}{sf\+::\+Keyboard\+::\+Scancode}.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{Zobacz również}
+\doxylink{classsf_1_1priv_1_1_h_i_d_input_manager_a560425b2ec37c943cd91e59d8510df59}{localize}   
+\end{DoxySeeAlso}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_h_i_d_input_manager_ad1ccfcd06cabc35efd4072ebef1cd91f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_h_i_d_input_manager_a758786ce836476b4ee3e07dbd702e3bf}\label{classsf_1_1priv_1_1_h_i_d_input_manager_a758786ce836476b4ee3e07dbd702e3bf} 
+\index{sf::priv::HIDInputManager@{sf::priv::HIDInputManager}!freeUp@{freeUp}}
+\index{freeUp@{freeUp}!sf::priv::HIDInputManager@{sf::priv::HIDInputManager}}
+\doxysubsubsection{\texorpdfstring{freeUp()}{freeUp()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+HIDInput\+Manager\+::free\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Release all resources. 
+
+Close all connections to any devices.
+
+\begin{DoxySeeAlso}{Zobacz również}
+\doxylink{classsf_1_1priv_1_1_h_i_d_input_manager_aab0f2e85ea8f507f615fdd36cb20c6a4}{initialize\+Keyboard} 
+\end{DoxySeeAlso}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_h_i_d_input_manager_a758786ce836476b4ee3e07dbd702e3bf_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_h_i_d_input_manager_a4617eb342c62a0ae5be04d0d1d4e15e5}\label{classsf_1_1priv_1_1_h_i_d_input_manager_a4617eb342c62a0ae5be04d0d1d4e15e5} 
+\index{sf::priv::HIDInputManager@{sf::priv::HIDInputManager}!getDescription@{getDescription}}
+\index{getDescription@{getDescription}!sf::priv::HIDInputManager@{sf::priv::HIDInputManager}}
+\doxysubsubsection{\texorpdfstring{getDescription()}{getDescription()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1_string}{String}} sf\+::priv\+::\+HIDInput\+Manager\+::get\+Description (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}}}]{code }\end{DoxyParamCaption})}
+
+
+
+Provide a string representation for a given scancode.   
+
+The returned string is a short, non-\/technical description of the key represented with the given scancode. Most effectively used in user interfaces, as the description for the key takes the users keyboard layout into consideration.
+
+\begin{DoxyWarning}{Ostrzeżenie}
+The result is OS-\/dependent\+: for example, \doxylink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875a5e1b12c4476475396c6f04eccbbf04f7}{sf\+::\+Keyboard\+::\+Scan\+::\+LSystem} is "{}\+Left Meta"{} on Linux, "{}\+Left Windows"{} on Windows and "{}\+Left Command"{} on mac\+OS.
+\end{DoxyWarning}
+The current keyboard layout set by the operating system is used to interpret the scancode\+: for example, \doxylink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142ab50635b9c913837d1bd4453eec7cb506}{sf\+::\+Keyboard\+::\+Semicolon} is mapped to "{};"{} for layout and to "{}é"{} for others.
+
+\begin{DoxyReturn}{Zwraca}
+The localized description of the code   
+\end{DoxyReturn}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_h_i_d_input_manager_a4617eb342c62a0ae5be04d0d1d4e15e5_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_h_i_d_input_manager_a1fa701041e916a3dae97e45d85ee37b5}\label{classsf_1_1priv_1_1_h_i_d_input_manager_a1fa701041e916a3dae97e45d85ee37b5} 
+\index{sf::priv::HIDInputManager@{sf::priv::HIDInputManager}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!sf::priv::HIDInputManager@{sf::priv::HIDInputManager}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1priv_1_1_h_i_d_input_manager}{HIDInput\+Manager}} \& sf\+::priv\+::\+HIDInput\+Manager\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the unique instance of the class. 
+
+\begin{DoxyNote}{Nota}
+Private use only
+\end{DoxyNote}
+\begin{DoxyReturn}{Zwraca}
+Reference to the \doxylink{classsf_1_1priv_1_1_h_i_d_input_manager}{HIDInput\+Manager} instance 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_h_i_d_input_manager_a8f2bf16875b43cc8155502fb50c62eb9}\label{classsf_1_1priv_1_1_h_i_d_input_manager_a8f2bf16875b43cc8155502fb50c62eb9} 
+\index{sf::priv::HIDInputManager@{sf::priv::HIDInputManager}!getLocationID@{getLocationID}}
+\index{getLocationID@{getLocationID}!sf::priv::HIDInputManager@{sf::priv::HIDInputManager}}
+\doxysubsubsection{\texorpdfstring{getLocationID()}{getLocationID()}}
+{\footnotesize\ttfamily long sf\+::priv\+::\+HIDInput\+Manager\+::get\+Location\+ID (\begin{DoxyParamCaption}\item[{IOHIDDevice\+Ref}]{device }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the usb location ID of a given device. 
+
+This location ID is unique and can be used a usb port identifier
+
+
+\begin{DoxyParams}{Parametry}
+{\em device} & HID device to query \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+the device\textquotesingle{}s location ID or 0 if something went wrong 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_h_i_d_input_manager_aab0f2e85ea8f507f615fdd36cb20c6a4}\label{classsf_1_1priv_1_1_h_i_d_input_manager_aab0f2e85ea8f507f615fdd36cb20c6a4} 
+\index{sf::priv::HIDInputManager@{sf::priv::HIDInputManager}!initializeKeyboard@{initializeKeyboard}}
+\index{initializeKeyboard@{initializeKeyboard}!sf::priv::HIDInputManager@{sf::priv::HIDInputManager}}
+\doxysubsubsection{\texorpdfstring{initializeKeyboard()}{initializeKeyboard()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+HIDInput\+Manager\+::initialize\+Keyboard (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Initialize the keyboard part of this class. 
+
+If something went wrong free\+Up is called.
+
+In a nutshell, this function does this\+: \begin{DoxyVerb}for each connected keyboard kb:
+  for each key k of kb:
+    memorize k -> scancode mapping
+\end{DoxyVerb}
+ Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_h_i_d_input_manager_aab0f2e85ea8f507f615fdd36cb20c6a4_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_h_i_d_input_manager_aab0f2e85ea8f507f615fdd36cb20c6a4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_h_i_d_input_manager_a17fc2ce10d0a1a24948b941460e5b94e}\label{classsf_1_1priv_1_1_h_i_d_input_manager_a17fc2ce10d0a1a24948b941460e5b94e} 
+\index{sf::priv::HIDInputManager@{sf::priv::HIDInputManager}!isKeyPressed@{isKeyPressed}}
+\index{isKeyPressed@{isKeyPressed}!sf::priv::HIDInputManager@{sf::priv::HIDInputManager}}
+\doxysubsubsection{\texorpdfstring{isKeyPressed()}{isKeyPressed()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+HIDInput\+Manager\+::is\+Key\+Pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}}}]{key }\end{DoxyParamCaption})}
+
+
+
+
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_h_i_d_input_manager_a17fc2ce10d0a1a24948b941460e5b94e_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{classsf_1_1priv_1_1_h_i_d_input_manager_a17fc2ce10d0a1a24948b941460e5b94e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_h_i_d_input_manager_a33a7867c603a27d6e864ea0dc6832f1e}\label{classsf_1_1priv_1_1_h_i_d_input_manager_a33a7867c603a27d6e864ea0dc6832f1e} 
+\index{sf::priv::HIDInputManager@{sf::priv::HIDInputManager}!isKeyPressed@{isKeyPressed}}
+\index{isKeyPressed@{isKeyPressed}!sf::priv::HIDInputManager@{sf::priv::HIDInputManager}}
+\doxysubsubsection{\texorpdfstring{isKeyPressed()}{isKeyPressed()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+HIDInput\+Manager\+::is\+Key\+Pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}}}]{code }\end{DoxyParamCaption})}
+
+
+
+
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_h_i_d_input_manager_a33a7867c603a27d6e864ea0dc6832f1e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_h_i_d_input_manager_a277387dba3aaad61fd8daa9f45f521db}\label{classsf_1_1priv_1_1_h_i_d_input_manager_a277387dba3aaad61fd8daa9f45f521db} 
+\index{sf::priv::HIDInputManager@{sf::priv::HIDInputManager}!isPressed@{isPressed}}
+\index{isPressed@{isPressed}!sf::priv::HIDInputManager@{sf::priv::HIDInputManager}}
+\doxysubsubsection{\texorpdfstring{isPressed()}{isPressed()}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+HIDInput\+Manager\+::is\+Pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesf_1_1priv_ad383d5fea6fe254916a6f69cf53dcb95}{IOHIDElements}} \&}]{elements }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Check if a key is pressed. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em elements} & HID elements mapping to this key\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True if the key is pressed, false otherwise
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{Zobacz również}
+\doxylink{classsf_1_1priv_1_1_h_i_d_input_manager_a17fc2ce10d0a1a24948b941460e5b94e}{is\+Key\+Pressed}, is\+Mouse\+Button\+Pressed 
+\end{DoxySeeAlso}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_h_i_d_input_manager_a277387dba3aaad61fd8daa9f45f521db_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_h_i_d_input_manager_a6fb65142a1c63f16a8e24627bd4341e8}\label{classsf_1_1priv_1_1_h_i_d_input_manager_a6fb65142a1c63f16a8e24627bd4341e8} 
+\index{sf::priv::HIDInputManager@{sf::priv::HIDInputManager}!keyboardChanged@{keyboardChanged}}
+\index{keyboardChanged@{keyboardChanged}!sf::priv::HIDInputManager@{sf::priv::HIDInputManager}}
+\doxysubsubsection{\texorpdfstring{keyboardChanged()}{keyboardChanged()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+HIDInput\+Manager\+::keyboard\+Changed (\begin{DoxyParamCaption}\item[{CFNotification\+Center\+Ref}]{,  }\item[{void \texorpdfstring{$\ast$}{*}}]{observer,  }\item[{CFString\+Ref}]{,  }\item[{const void \texorpdfstring{$\ast$}{*}}]{,  }\item[{CFDictionary\+Ref}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Callback to regenerate mappings from/to Key and Scancode when there\textquotesingle{}s a keyboard layout change. 
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_h_i_d_input_manager_a6fb65142a1c63f16a8e24627bd4341e8_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_h_i_d_input_manager_a6fb65142a1c63f16a8e24627bd4341e8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_h_i_d_input_manager_a3f134d1fc0315b5c80c7fba875908f9d}\label{classsf_1_1priv_1_1_h_i_d_input_manager_a3f134d1fc0315b5c80c7fba875908f9d} 
+\index{sf::priv::HIDInputManager@{sf::priv::HIDInputManager}!loadKey@{loadKey}}
+\index{loadKey@{loadKey}!sf::priv::HIDInputManager@{sf::priv::HIDInputManager}}
+\doxysubsubsection{\texorpdfstring{loadKey()}{loadKey()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+HIDInput\+Manager\+::load\+Key (\begin{DoxyParamCaption}\item[{IOHIDElement\+Ref}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Load the given key into m\+\_\+keys. 
+
+On error, free\+Up is {\itshape not} called by this function.
+
+
+\begin{DoxyParams}{Parametry}
+{\em key} & Key to load\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{Zobacz również}
+\doxylink{classsf_1_1priv_1_1_h_i_d_input_manager_aab0f2e85ea8f507f615fdd36cb20c6a4}{initialize\+Keyboard} 
+\end{DoxySeeAlso}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_h_i_d_input_manager_a3f134d1fc0315b5c80c7fba875908f9d_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_h_i_d_input_manager_a3f134d1fc0315b5c80c7fba875908f9d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_h_i_d_input_manager_aefe10b57d6f2cacc5372dc9e72a2d695}\label{classsf_1_1priv_1_1_h_i_d_input_manager_aefe10b57d6f2cacc5372dc9e72a2d695} 
+\index{sf::priv::HIDInputManager@{sf::priv::HIDInputManager}!loadKeyboard@{loadKeyboard}}
+\index{loadKeyboard@{loadKeyboard}!sf::priv::HIDInputManager@{sf::priv::HIDInputManager}}
+\doxysubsubsection{\texorpdfstring{loadKeyboard()}{loadKeyboard()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+HIDInput\+Manager\+::load\+Keyboard (\begin{DoxyParamCaption}\item[{IOHIDDevice\+Ref}]{keyboard }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Load the given keyboard into m\+\_\+keys. 
+
+If the given keyboard has no key this function simply returns without calling free\+Up because this is not fatal.
+
+
+\begin{DoxyParams}{Parametry}
+{\em keyboard} & \doxylink{classsf_1_1_keyboard}{Keyboard} to load\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{Zobacz również}
+\doxylink{classsf_1_1priv_1_1_h_i_d_input_manager_aab0f2e85ea8f507f615fdd36cb20c6a4}{initialize\+Keyboard} 
+\end{DoxySeeAlso}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_h_i_d_input_manager_aefe10b57d6f2cacc5372dc9e72a2d695_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_h_i_d_input_manager_aefe10b57d6f2cacc5372dc9e72a2d695_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_h_i_d_input_manager_a560425b2ec37c943cd91e59d8510df59}\label{classsf_1_1priv_1_1_h_i_d_input_manager_a560425b2ec37c943cd91e59d8510df59} 
+\index{sf::priv::HIDInputManager@{sf::priv::HIDInputManager}!localize@{localize}}
+\index{localize@{localize}!sf::priv::HIDInputManager@{sf::priv::HIDInputManager}}
+\doxysubsubsection{\texorpdfstring{localize()}{localize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} sf\+::priv\+::\+HIDInput\+Manager\+::localize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}}}]{code }\end{DoxyParamCaption})}
+
+
+
+Localize a physical key to a logical one.   
+
+
+\begin{DoxyParams}{Parametry}
+{\em code} & Scancode to localize\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+The key corresponding to the scancode under the current keyboard layout used by the operating system, or \doxylink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a840c43fa8e05ff854f6fe9a86c7c939e}{sf\+::\+Keyboard\+::\+Unknown} when the scancode cannot be mapped to a Key.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{Zobacz również}
+\doxylink{classsf_1_1priv_1_1_h_i_d_input_manager_ad1ccfcd06cabc35efd4072ebef1cd91f}{delocalize}   
+\end{DoxySeeAlso}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_h_i_d_input_manager_a560425b2ec37c943cd91e59d8510df59_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_h_i_d_input_manager_a7b1243b400de5c7670818755cfd3fdaa}\label{classsf_1_1priv_1_1_h_i_d_input_manager_a7b1243b400de5c7670818755cfd3fdaa} 
+\index{sf::priv::HIDInputManager@{sf::priv::HIDInputManager}!localizedKey@{localizedKey}}
+\index{localizedKey@{localizedKey}!sf::priv::HIDInputManager@{sf::priv::HIDInputManager}}
+\doxysubsubsection{\texorpdfstring{localizedKey()}{localizedKey()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} sf\+::priv\+::\+HIDInput\+Manager\+::localized\+Key (\begin{DoxyParamCaption}\item[{Uni\+Char}]{ch }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Try to convert a character into a SFML key code. 
+
+Return \doxylink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a840c43fa8e05ff854f6fe9a86c7c939e}{sf\+::\+Keyboard\+::\+Unknown} if it doesn\textquotesingle{}t match any \textquotesingle{}localized\textquotesingle{} keys.
+
+By \textquotesingle{}localized\textquotesingle{} we mean keys that depend on the keyboard layout and might not be the same as the US keycode for some countries (e.\+g. the keys \textquotesingle{}Y\textquotesingle{} and \textquotesingle{}Z\textquotesingle{} are swapped on QWERTZ keyboard and US keyboard layouts.) Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_h_i_d_input_manager_a7b1243b400de5c7670818755cfd3fdaa_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_h_i_d_input_manager_ac89ccbc12c73facaf6c3d20a1138fc96}\label{classsf_1_1priv_1_1_h_i_d_input_manager_ac89ccbc12c73facaf6c3d20a1138fc96} 
+\index{sf::priv::HIDInputManager@{sf::priv::HIDInputManager}!localizedKeyFallback@{localizedKeyFallback}}
+\index{localizedKeyFallback@{localizedKeyFallback}!sf::priv::HIDInputManager@{sf::priv::HIDInputManager}}
+\doxysubsubsection{\texorpdfstring{localizedKeyFallback()}{localizedKeyFallback()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} sf\+::priv\+::\+HIDInput\+Manager\+::localized\+Key\+Fallback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}}}]{code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Fallback convertion for keys which aren\textquotesingle{}t expected to be impacted by the layout. Can return Unknown. Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_h_i_d_input_manager_ac89ccbc12c73facaf6c3d20a1138fc96_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_h_i_d_input_manager_afe4a2bc0118e860f6ef57cd8d7a701f5}\label{classsf_1_1priv_1_1_h_i_d_input_manager_afe4a2bc0118e860f6ef57cd8d7a701f5} 
+\index{sf::priv::HIDInputManager@{sf::priv::HIDInputManager}!nonLocalizedKey@{nonLocalizedKey}}
+\index{nonLocalizedKey@{nonLocalizedKey}!sf::priv::HIDInputManager@{sf::priv::HIDInputManager}}
+\doxysubsubsection{\texorpdfstring{nonLocalizedKey()}{nonLocalizedKey()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} sf\+::priv\+::\+HIDInput\+Manager\+::non\+Localized\+Key (\begin{DoxyParamCaption}\item[{Uni\+Char}]{virtual\+Keycode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Try to convert a virtual keycode (HID level) into a SFML scancode. 
+
+Return \doxylink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875af29c5f0133653ccd3cbc947b51e97895}{sf\+::\+Keyboard\+::\+Scan\+::\+Unknown} if the keycode is unknown. \Hypertarget{classsf_1_1priv_1_1_h_i_d_input_manager_aab6b252774b0626481efa660b4bb14bc}\label{classsf_1_1priv_1_1_h_i_d_input_manager_aab6b252774b0626481efa660b4bb14bc} 
+\index{sf::priv::HIDInputManager@{sf::priv::HIDInputManager}!scanToVirtualCode@{scanToVirtualCode}}
+\index{scanToVirtualCode@{scanToVirtualCode}!sf::priv::HIDInputManager@{sf::priv::HIDInputManager}}
+\doxysubsubsection{\texorpdfstring{scanToVirtualCode()}{scanToVirtualCode()}}
+{\footnotesize\ttfamily UInt8 sf\+::priv\+::\+HIDInput\+Manager\+::scan\+To\+Virtual\+Code (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}}}]{code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Convert the scancode to the expected virtual code. Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_h_i_d_input_manager_aab6b252774b0626481efa660b4bb14bc_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_h_i_d_input_manager_a930c847add8cac68eac89b46c146cb5a}\label{classsf_1_1priv_1_1_h_i_d_input_manager_a930c847add8cac68eac89b46c146cb5a} 
+\index{sf::priv::HIDInputManager@{sf::priv::HIDInputManager}!toUnicode@{toUnicode}}
+\index{toUnicode@{toUnicode}!sf::priv::HIDInputManager@{sf::priv::HIDInputManager}}
+\doxysubsubsection{\texorpdfstring{toUnicode()}{toUnicode()}}
+{\footnotesize\ttfamily Uni\+Char sf\+::priv\+::\+HIDInput\+Manager\+::to\+Unicode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}}}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Opposite transformation as localized\+Keys. 
+
+Return 0x00 (NULL) for non-\/convertible keys/numpad numbers. For letters, uppercase codes are returned. Some returned value are specific to mac\+OS. Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_h_i_d_input_manager_a930c847add8cac68eac89b46c146cb5a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_h_i_d_input_manager_aeb23c6b41eb54603d2dd77b94e948d2e}\label{classsf_1_1priv_1_1_h_i_d_input_manager_aeb23c6b41eb54603d2dd77b94e948d2e} 
+\index{sf::priv::HIDInputManager@{sf::priv::HIDInputManager}!usageToScancode@{usageToScancode}}
+\index{usageToScancode@{usageToScancode}!sf::priv::HIDInputManager@{sf::priv::HIDInputManager}}
+\doxysubsubsection{\texorpdfstring{usageToScancode()}{usageToScancode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} sf\+::priv\+::\+HIDInput\+Manager\+::usage\+To\+Scancode (\begin{DoxyParamCaption}\item[{UInt32}]{usage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Convert a HID key usage to its corresponding scancode. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em usage} & Any k\+HIDUsage\+\_\+\+Keyboard\texorpdfstring{$\ast$}{*} usage \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+the scancode associated with the given HID key usage or Scan\+::\+Unknown if it is associated with no scancode. 
+\end{DoxyReturn}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_h_i_d_input_manager_aeb23c6b41eb54603d2dd77b94e948d2e_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{classsf_1_1priv_1_1_h_i_d_input_manager_a534c0577aae0e024ac55c109c71e92a9}\label{classsf_1_1priv_1_1_h_i_d_input_manager_a534c0577aae0e024ac55c109c71e92a9} 
+\index{sf::priv::HIDInputManager@{sf::priv::HIDInputManager}!m\_keys@{m\_keys}}
+\index{m\_keys@{m\_keys}!sf::priv::HIDInputManager@{sf::priv::HIDInputManager}}
+\doxysubsubsection{\texorpdfstring{m\_keys}{m\_keys}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesf_1_1priv_ad383d5fea6fe254916a6f69cf53dcb95}{IOHIDElements}} sf\+::priv\+::\+HIDInput\+Manager\+::m\+\_\+keys\mbox{[}\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875a28c5ad8524e1e653b43440e660d441d0}{Keyboard\+::\+Scan\+::\+Scancode\+Count}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+All the keys on any connected keyboard. 
+
+\Hypertarget{classsf_1_1priv_1_1_h_i_d_input_manager_ab7ab13e09a1e566853c84c171e9757c3}\label{classsf_1_1priv_1_1_h_i_d_input_manager_ab7ab13e09a1e566853c84c171e9757c3} 
+\index{sf::priv::HIDInputManager@{sf::priv::HIDInputManager}!m\_keyToScancodeMapping@{m\_keyToScancodeMapping}}
+\index{m\_keyToScancodeMapping@{m\_keyToScancodeMapping}!sf::priv::HIDInputManager@{sf::priv::HIDInputManager}}
+\doxysubsubsection{\texorpdfstring{m\_keyToScancodeMapping}{m\_keyToScancodeMapping}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} sf\+::priv\+::\+HIDInput\+Manager\+::m\+\_\+key\+To\+Scancode\+Mapping\mbox{[}\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a93e6ffa0320fe9b2f29aec14a58be36b}{Keyboard\+::\+Key\+Count}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Mapping from Key to Scancode. 
+
+\Hypertarget{classsf_1_1priv_1_1_h_i_d_input_manager_a1e33b7ef4d49d8354df47f12c2760c47}\label{classsf_1_1priv_1_1_h_i_d_input_manager_a1e33b7ef4d49d8354df47f12c2760c47} 
+\index{sf::priv::HIDInputManager@{sf::priv::HIDInputManager}!m\_manager@{m\_manager}}
+\index{m\_manager@{m\_manager}!sf::priv::HIDInputManager@{sf::priv::HIDInputManager}}
+\doxysubsubsection{\texorpdfstring{m\_manager}{m\_manager}}
+{\footnotesize\ttfamily IOHIDManager\+Ref sf\+::priv\+::\+HIDInput\+Manager\+::m\+\_\+manager\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Underlying HID Manager. 
+
+\Hypertarget{classsf_1_1priv_1_1_h_i_d_input_manager_af69f4e6bcacd4ef5b245cc15263d3fac}\label{classsf_1_1priv_1_1_h_i_d_input_manager_af69f4e6bcacd4ef5b245cc15263d3fac} 
+\index{sf::priv::HIDInputManager@{sf::priv::HIDInputManager}!m\_scancodeToKeyMapping@{m\_scancodeToKeyMapping}}
+\index{m\_scancodeToKeyMapping@{m\_scancodeToKeyMapping}!sf::priv::HIDInputManager@{sf::priv::HIDInputManager}}
+\doxysubsubsection{\texorpdfstring{m\_scancodeToKeyMapping}{m\_scancodeToKeyMapping}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} sf\+::priv\+::\+HIDInput\+Manager\+::m\+\_\+scancode\+To\+Key\+Mapping\mbox{[}\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875a28c5ad8524e1e653b43440e660d441d0}{Keyboard\+::\+Scan\+::\+Scancode\+Count}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Mapping from Scancode to Key. 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+OSX/\mbox{\hyperlink{_h_i_d_input_manager_8hpp}{HIDInput\+Manager.\+hpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+OSX/\mbox{\hyperlink{_h_i_d_input_manager_8mm}{HIDInput\+Manager.\+mm}}\end{DoxyCompactItemize}

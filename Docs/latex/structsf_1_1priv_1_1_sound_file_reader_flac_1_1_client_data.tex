@@ -1,0 +1,82 @@
+\doxysection{Dokumentacja struktury sf\+::priv\+::Sound\+File\+Reader\+Flac\+::Client\+Data}
+\hypertarget{structsf_1_1priv_1_1_sound_file_reader_flac_1_1_client_data}{}\label{structsf_1_1priv_1_1_sound_file_reader_flac_1_1_client_data}\index{sf::priv::SoundFileReaderFlac::ClientData@{sf::priv::SoundFileReaderFlac::ClientData}}
+
+
+Hold the state that is passed to the decoder callbacks.  
+
+
+
+
+{\ttfamily \#include $<$Sound\+File\+Reader\+Flac.\+hpp$>$}
+
+
+
+Diagram współpracy dla sf\+::priv\+::Sound\+File\+Reader\+Flac\+::Client\+Data\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{structsf_1_1priv_1_1_sound_file_reader_flac_1_1_client_data__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsf_1_1_input_stream}{Input\+Stream}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structsf_1_1priv_1_1_sound_file_reader_flac_1_1_client_data_a245f2fe8769f7c5713731fe2e98adf94}{stream}}
+\item 
+\mbox{\hyperlink{structsf_1_1_sound_file_reader_1_1_info}{Sound\+File\+Reader\+::\+Info}} \mbox{\hyperlink{structsf_1_1priv_1_1_sound_file_reader_flac_1_1_client_data_a2a6d312a7b356635b6b7d6e532e39af5}{info}}
+\item 
+\mbox{\hyperlink{namespacesf_a3c8e10435e2a310a7741755e66b5c94e}{Int16}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structsf_1_1priv_1_1_sound_file_reader_flac_1_1_client_data_aeb496c4fb74ed434e50688db6b8ab231}{buffer}}
+\item 
+\mbox{\hyperlink{namespacesf_add9ac83466d96b9f50a009b9f4064266}{Uint64}} \mbox{\hyperlink{structsf_1_1priv_1_1_sound_file_reader_flac_1_1_client_data_ac1f4a9319f41e9073b4334a53dacd9be}{remaining}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{namespacesf_a3c8e10435e2a310a7741755e66b5c94e}{Int16}} $>$ \mbox{\hyperlink{structsf_1_1priv_1_1_sound_file_reader_flac_1_1_client_data_a0d7b7690554dc39660eda528fd7ee183}{leftovers}}
+\item 
+bool \mbox{\hyperlink{structsf_1_1priv_1_1_sound_file_reader_flac_1_1_client_data_a82195b6884724b54f8cedfe2c6c32010}{error}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Hold the state that is passed to the decoder callbacks. 
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{structsf_1_1priv_1_1_sound_file_reader_flac_1_1_client_data_aeb496c4fb74ed434e50688db6b8ab231}\label{structsf_1_1priv_1_1_sound_file_reader_flac_1_1_client_data_aeb496c4fb74ed434e50688db6b8ab231} 
+\index{sf::priv::SoundFileReaderFlac::ClientData@{sf::priv::SoundFileReaderFlac::ClientData}!buffer@{buffer}}
+\index{buffer@{buffer}!sf::priv::SoundFileReaderFlac::ClientData@{sf::priv::SoundFileReaderFlac::ClientData}}
+\doxysubsubsection{\texorpdfstring{buffer}{buffer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesf_a3c8e10435e2a310a7741755e66b5c94e}{Int16}}\texorpdfstring{$\ast$}{*} sf\+::priv\+::\+Sound\+File\+Reader\+Flac\+::\+Client\+Data\+::buffer}
+
+\Hypertarget{structsf_1_1priv_1_1_sound_file_reader_flac_1_1_client_data_a82195b6884724b54f8cedfe2c6c32010}\label{structsf_1_1priv_1_1_sound_file_reader_flac_1_1_client_data_a82195b6884724b54f8cedfe2c6c32010} 
+\index{sf::priv::SoundFileReaderFlac::ClientData@{sf::priv::SoundFileReaderFlac::ClientData}!error@{error}}
+\index{error@{error}!sf::priv::SoundFileReaderFlac::ClientData@{sf::priv::SoundFileReaderFlac::ClientData}}
+\doxysubsubsection{\texorpdfstring{error}{error}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Sound\+File\+Reader\+Flac\+::\+Client\+Data\+::error}
+
+\Hypertarget{structsf_1_1priv_1_1_sound_file_reader_flac_1_1_client_data_a2a6d312a7b356635b6b7d6e532e39af5}\label{structsf_1_1priv_1_1_sound_file_reader_flac_1_1_client_data_a2a6d312a7b356635b6b7d6e532e39af5} 
+\index{sf::priv::SoundFileReaderFlac::ClientData@{sf::priv::SoundFileReaderFlac::ClientData}!info@{info}}
+\index{info@{info}!sf::priv::SoundFileReaderFlac::ClientData@{sf::priv::SoundFileReaderFlac::ClientData}}
+\doxysubsubsection{\texorpdfstring{info}{info}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsf_1_1_sound_file_reader_1_1_info}{Sound\+File\+Reader\+::\+Info}} sf\+::priv\+::\+Sound\+File\+Reader\+Flac\+::\+Client\+Data\+::info}
+
+\Hypertarget{structsf_1_1priv_1_1_sound_file_reader_flac_1_1_client_data_a0d7b7690554dc39660eda528fd7ee183}\label{structsf_1_1priv_1_1_sound_file_reader_flac_1_1_client_data_a0d7b7690554dc39660eda528fd7ee183} 
+\index{sf::priv::SoundFileReaderFlac::ClientData@{sf::priv::SoundFileReaderFlac::ClientData}!leftovers@{leftovers}}
+\index{leftovers@{leftovers}!sf::priv::SoundFileReaderFlac::ClientData@{sf::priv::SoundFileReaderFlac::ClientData}}
+\doxysubsubsection{\texorpdfstring{leftovers}{leftovers}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{namespacesf_a3c8e10435e2a310a7741755e66b5c94e}{Int16}}$>$ sf\+::priv\+::\+Sound\+File\+Reader\+Flac\+::\+Client\+Data\+::leftovers}
+
+\Hypertarget{structsf_1_1priv_1_1_sound_file_reader_flac_1_1_client_data_ac1f4a9319f41e9073b4334a53dacd9be}\label{structsf_1_1priv_1_1_sound_file_reader_flac_1_1_client_data_ac1f4a9319f41e9073b4334a53dacd9be} 
+\index{sf::priv::SoundFileReaderFlac::ClientData@{sf::priv::SoundFileReaderFlac::ClientData}!remaining@{remaining}}
+\index{remaining@{remaining}!sf::priv::SoundFileReaderFlac::ClientData@{sf::priv::SoundFileReaderFlac::ClientData}}
+\doxysubsubsection{\texorpdfstring{remaining}{remaining}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesf_add9ac83466d96b9f50a009b9f4064266}{Uint64}} sf\+::priv\+::\+Sound\+File\+Reader\+Flac\+::\+Client\+Data\+::remaining}
+
+\Hypertarget{structsf_1_1priv_1_1_sound_file_reader_flac_1_1_client_data_a245f2fe8769f7c5713731fe2e98adf94}\label{structsf_1_1priv_1_1_sound_file_reader_flac_1_1_client_data_a245f2fe8769f7c5713731fe2e98adf94} 
+\index{sf::priv::SoundFileReaderFlac::ClientData@{sf::priv::SoundFileReaderFlac::ClientData}!stream@{stream}}
+\index{stream@{stream}!sf::priv::SoundFileReaderFlac::ClientData@{sf::priv::SoundFileReaderFlac::ClientData}}
+\doxysubsubsection{\texorpdfstring{stream}{stream}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1_input_stream}{Input\+Stream}}\texorpdfstring{$\ast$}{*} sf\+::priv\+::\+Sound\+File\+Reader\+Flac\+::\+Client\+Data\+::stream}
+
+
+
+Dokumentacja dla tej struktury została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Audio/\mbox{\hyperlink{_sound_file_reader_flac_8hpp}{Sound\+File\+Reader\+Flac.\+hpp}}\end{DoxyCompactItemize}

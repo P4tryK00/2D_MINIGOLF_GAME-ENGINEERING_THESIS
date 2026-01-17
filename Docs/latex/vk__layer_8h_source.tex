@@ -1,0 +1,201 @@
+\doxysection{vk\+\_\+layer.\+h}
+\hypertarget{vk__layer_8h_source}{}\label{vk__layer_8h_source}\index{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/vulkan/vk\_layer.h@{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/vulkan/vk\_layer.h}}
+\mbox{\hyperlink{vk__layer_8h}{Idź do dokumentacji tego pliku.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ File:\ vk\_layer.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ Copyright\ (c)\ 2015-\/2017\ The\ Khronos\ Group\ Inc.}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ Copyright\ (c)\ 2015-\/2017\ Valve\ Corporation}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *\ Copyright\ (c)\ 2015-\/2017\ LunarG,\ Inc.}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ Licensed\ under\ the\ Apache\ License,\ Version\ 2.0\ (the\ "{}License"{});}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ you\ may\ not\ use\ this\ file\ except\ in\ compliance\ with\ the\ License.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ You\ may\ obtain\ a\ copy\ of\ the\ License\ at}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ \ \ \ \ http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ Unless\ required\ by\ applicable\ law\ or\ agreed\ to\ in\ writing,\ software}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ distributed\ under\ the\ License\ is\ distributed\ on\ an\ "{}AS\ IS"{}\ BASIS,}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *\ WITHOUT\ WARRANTIES\ OR\ CONDITIONS\ OF\ ANY\ KIND,\ either\ express\ or\ implied.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *\ See\ the\ License\ for\ the\ specific\ language\ governing\ permissions\ and}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ limitations\ under\ the\ License.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{comment}{/*\ Need\ to\ define\ dispatch\ table}}
+\DoxyCodeLine{00024\ \textcolor{comment}{\ *\ Core\ struct\ can\ then\ have\ ptr\ to\ dispatch\ table\ at\ the\ top}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ *\ Along\ with\ object\ ptrs\ for\ current\ and\ next\ OBJ}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{extlibs_2headers_2vulkan_2vulkan_8h}{vulkan.h}}"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#if\ defined(\_\_GNUC\_\_)\ \&\&\ \_\_GNUC\_\_\ >=\ 4}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#define\ VK\_LAYER\_EXPORT\ \_\_attribute\_\_((visibility("{}default"{})))}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#elif\ defined(\_\_SUNPRO\_C)\ \&\&\ (\_\_SUNPRO\_C\ >=\ 0x590)}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ VK\_LAYER\_EXPORT\ \_\_attribute\_\_((visibility("{}default"{})))}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#define\ VK\_LAYER\_EXPORT}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#define\ MAX\_NUM\_UNKNOWN\_EXTS\ 250}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \textcolor{comment}{//\ Loader-\/Layer\ version\ negotiation\ API.\ \ Versions\ add\ the\ following\ features:}}
+\DoxyCodeLine{00041\ \ \textcolor{comment}{//\ \ \ Versions\ 0/1\ -\/\ Initial.\ \ Doesn't\ support\ vk\_layerGetPhysicalDeviceProcAddr}}
+\DoxyCodeLine{00042\ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ or\ vk\_icdNegotiateLoaderLayerInterfaceVersion.}}
+\DoxyCodeLine{00043\ \ \textcolor{comment}{//\ \ \ Version\ 2\ \ \ \ -\/\ Add\ support\ for\ vk\_layerGetPhysicalDeviceProcAddr\ and}}
+\DoxyCodeLine{00044\ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vk\_icdNegotiateLoaderLayerInterfaceVersion.}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#define\ CURRENT\_LOADER\_LAYER\_INTERFACE\_VERSION\ 2}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#define\ MIN\_SUPPORTED\_LOADER\_LAYER\_INTERFACE\_VERSION\ 1}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#define\ VK\_CURRENT\_CHAIN\_VERSION\ 1}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{comment}{//\ Typedef\ for\ use\ in\ the\ interfaces\ below}}
+\DoxyCodeLine{00051\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_ac604c97c18d2ad5be6edb8de8f31e7a1}{PFN\_vkVoidFunction}}\ (\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\_PTR}}\ *\mbox{\hyperlink{vk__layer_8h_a78010facedd4c56be14502dc5ec5b1c1}{PFN\_GetPhysicalDeviceProcAddr}})(\mbox{\hyperlink{_vulkan_8hpp_a6d9f7e27148712f2c97db45ca6991547}{VkInstance}}\ instance,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ pName);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{comment}{//\ Version\ negotiation\ values}}
+\DoxyCodeLine{00054\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{vk__layer_8h_a849621b540e5e25e6d32d448e28c6563}{VkNegotiateLayerStructType}}\ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \mbox{\hyperlink{vk__layer_8h_a849621b540e5e25e6d32d448e28c6563aae793c267586f651cf33fa7ad354ef6a}{LAYER\_NEGOTIATE\_UNINTIALIZED}}\ =\ 0,}
+\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{vk__layer_8h_a849621b540e5e25e6d32d448e28c6563a12d24eb0fa770572a8b183712af8b918}{LAYER\_NEGOTIATE\_INTERFACE\_STRUCT}}\ =\ 1,}
+\DoxyCodeLine{00057\ \}\ \mbox{\hyperlink{vk__layer_8h_a849621b540e5e25e6d32d448e28c6563}{VkNegotiateLayerStructType}};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{comment}{//\ Version\ negotiation\ structures}}
+\DoxyCodeLine{00060\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vk_negotiate_layer_interface}{VkNegotiateLayerInterface}}\ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \mbox{\hyperlink{vk__layer_8h_a849621b540e5e25e6d32d448e28c6563}{VkNegotiateLayerStructType}}\ \mbox{\hyperlink{struct_vk_negotiate_layer_interface_a1140bdc7f6d459ed96798362c8c84be6}{sType}};}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{struct_vk_negotiate_layer_interface_a0b417b39be7653bdb30394acb256f417}{pNext}};}
+\DoxyCodeLine{00063\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{struct_vk_negotiate_layer_interface_a164d080f305e3ac300a58dad16e19cd6}{loaderLayerInterfaceVersion}};}
+\DoxyCodeLine{00064\ \ \ \ \ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a646be9b04ac763b5d4b7263756237906}{PFN\_vkGetInstanceProcAddr}}\ \mbox{\hyperlink{struct_vk_negotiate_layer_interface_ad6e4d23b19b0c625c9318ca3b7a3ec25}{pfnGetInstanceProcAddr}};}
+\DoxyCodeLine{00065\ \ \ \ \ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_aa4959e0564d6e486d19974a30aca323d}{PFN\_vkGetDeviceProcAddr}}\ \mbox{\hyperlink{struct_vk_negotiate_layer_interface_a80557768d844fdbf4404089924e8e3e5}{pfnGetDeviceProcAddr}};}
+\DoxyCodeLine{00066\ \ \ \ \ \mbox{\hyperlink{vk__layer_8h_a78010facedd4c56be14502dc5ec5b1c1}{PFN\_GetPhysicalDeviceProcAddr}}\ \mbox{\hyperlink{struct_vk_negotiate_layer_interface_ab1aa8e068a023fe782f55a4f702eec23}{pfnGetPhysicalDeviceProcAddr}};}
+\DoxyCodeLine{00067\ \}\ \mbox{\hyperlink{vk__layer_8h_a7316be887f4d72dc4895400a1913184f}{VkNegotiateLayerInterface}};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{comment}{//\ Version\ negotiation\ functions}}
+\DoxyCodeLine{00070\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{VkResult}}\ (\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\_PTR}}\ *\mbox{\hyperlink{vk__layer_8h_a7f669fe20558f92c2154f3ced9fb8dc9}{PFN\_vkNegotiateLoaderLayerInterfaceVersion}})(\mbox{\hyperlink{struct_vk_negotiate_layer_interface}{VkNegotiateLayerInterface}}\ *pVersionStruct);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{comment}{//\ Function\ prototype\ for\ unknown\ physical\ device\ extension\ command}}
+\DoxyCodeLine{00073\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{VkResult}}(\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\_PTR}}\ *\mbox{\hyperlink{vk__layer_8h_a42d8e7a487b2fe7e49a58f1f96dc9f5e}{PFN\_PhysDevExt}})(VkPhysicalDevice\ phys\_device);}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00076\ \textcolor{comment}{//\ CreateInstance\ and\ CreateDevice\ support\ structures}}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \textcolor{comment}{/*\ Sub\ type\ of\ structure\ for\ instance\ and\ device\ loader\ ext\ of\ CreateInfo.}}
+\DoxyCodeLine{00079\ \textcolor{comment}{\ *\ When\ sType\ ==\ VK\_STRUCTURE\_TYPE\_LOADER\_INSTANCE\_CREATE\_INFO}}
+\DoxyCodeLine{00080\ \textcolor{comment}{\ *\ or\ sType\ ==\ VK\_STRUCTURE\_TYPE\_LOADER\_DEVICE\_CREATE\_INFO}}
+\DoxyCodeLine{00081\ \textcolor{comment}{\ *\ then\ VkLayerFunction\ indicates\ struct\ type\ pointed\ to\ by\ pNext}}
+\DoxyCodeLine{00082\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00083\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{vk__layer_8h_ab270d1bd32a4500763cc09043100dc88}{VkLayerFunction\_}}\ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \mbox{\hyperlink{vk__layer_8h_ab270d1bd32a4500763cc09043100dc88a3fda55cea8ac5712172f0e6ada2805ab}{VK\_LAYER\_LINK\_INFO}}\ =\ 0,}
+\DoxyCodeLine{00085\ \ \ \ \ \mbox{\hyperlink{vk__layer_8h_ab270d1bd32a4500763cc09043100dc88a87224e10fecf68e6bbbd5e4adbadd45f}{VK\_LOADER\_DATA\_CALLBACK}}\ =\ 1}
+\DoxyCodeLine{00086\ \}\ \mbox{\hyperlink{vk__layer_8h_adcd2ac904ad4273a84dc18f78f4b3a26}{VkLayerFunction}};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vk_layer_instance_link__}{VkLayerInstanceLink\_}}\ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vk_layer_instance_link__}{VkLayerInstanceLink\_}}\ *\mbox{\hyperlink{struct_vk_layer_instance_link___ad515b6aaae1f5af9f9362e86acc06639}{pNext}};}
+\DoxyCodeLine{00090\ \ \ \ \ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a646be9b04ac763b5d4b7263756237906}{PFN\_vkGetInstanceProcAddr}}\ \mbox{\hyperlink{struct_vk_layer_instance_link___a5f77290312cccf4a12d6721016d38e0f}{pfnNextGetInstanceProcAddr}};}
+\DoxyCodeLine{00091\ \ \ \ \ \mbox{\hyperlink{vk__layer_8h_a78010facedd4c56be14502dc5ec5b1c1}{PFN\_GetPhysicalDeviceProcAddr}}\ \mbox{\hyperlink{struct_vk_layer_instance_link___a960f15aec9e6a620482730afa97aada8}{pfnNextGetPhysicalDeviceProcAddr}};}
+\DoxyCodeLine{00092\ \}\ \mbox{\hyperlink{vk__layer_8h_aa2fdd080aa99903bb337384ef9d94279}{VkLayerInstanceLink}};}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00095\ \textcolor{comment}{\ *\ When\ creating\ the\ device\ chain\ the\ loader\ needs\ to\ pass}}
+\DoxyCodeLine{00096\ \textcolor{comment}{\ *\ down\ information\ about\ it's\ device\ structure\ needed\ at}}
+\DoxyCodeLine{00097\ \textcolor{comment}{\ *\ the\ end\ of\ the\ chain.\ Passing\ the\ data\ via\ the}}
+\DoxyCodeLine{00098\ \textcolor{comment}{\ *\ VkLayerDeviceInfo\ avoids\ issues\ with\ finding\ the}}
+\DoxyCodeLine{00099\ \textcolor{comment}{\ *\ exact\ instance\ being\ used.}}
+\DoxyCodeLine{00100\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00101\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vk_layer_device_info__}{VkLayerDeviceInfo\_}}\ \{}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{struct_vk_layer_device_info___a208b8f7deef1a27e00d8352885069abc}{device\_info}};}
+\DoxyCodeLine{00103\ \ \ \ \ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a646be9b04ac763b5d4b7263756237906}{PFN\_vkGetInstanceProcAddr}}\ \mbox{\hyperlink{struct_vk_layer_device_info___a84b9549a77f68740cd2c6c0a49e6a8bd}{pfnNextGetInstanceProcAddr}};}
+\DoxyCodeLine{00104\ \}\ \mbox{\hyperlink{vk__layer_8h_a2355db6c36658ef2e8297019b61a585c}{VkLayerDeviceInfo}};}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{VkResult}}\ (\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\_PTR}}\ *\mbox{\hyperlink{vk__layer_8h_a77b3020dd97e8355e1eb34047bbc8dae}{PFN\_vkSetInstanceLoaderData}})(\mbox{\hyperlink{_vulkan_8hpp_a6d9f7e27148712f2c97db45ca6991547}{VkInstance}}\ instance,}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ *object);}
+\DoxyCodeLine{00108\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{VkResult}}\ (\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\_PTR}}\ *\mbox{\hyperlink{vk__layer_8h_a095137e225a0b60b7f88a937b3d44079}{PFN\_vkSetDeviceLoaderData}})(VkDevice\ device,}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ *object);}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00112\ \ \ \ \ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_aff9f2b99398eb80a2b5a146bc5534ce8}{VkStructureType}}\ \mbox{\hyperlink{struct_vk_layer_instance_create_info_aacd450d8cf7fc46b3b57020a6a6236d0}{sType}};\ \textcolor{comment}{//\ VK\_STRUCTURE\_TYPE\_LOADER\_INSTANCE\_CREATE\_INFO}}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{struct_vk_layer_instance_create_info_a164a8a1e9f0324808ed3028f3ef2cf38}{pNext}};}
+\DoxyCodeLine{00114\ \ \ \ \ \mbox{\hyperlink{vk__layer_8h_adcd2ac904ad4273a84dc18f78f4b3a26}{VkLayerFunction}}\ \mbox{\hyperlink{struct_vk_layer_instance_create_info_aef662eecc6b19cd73f6cc566f645a67d}{function}};}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keyword}{union\ }\{}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_layer_instance_link__}{VkLayerInstanceLink}}\ *\mbox{\hyperlink{struct_vk_layer_instance_create_info_a3a0e89b7f9d0b58a052233492201484e}{pLayerInfo}};}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{vk__layer_8h_a77b3020dd97e8355e1eb34047bbc8dae}{PFN\_vkSetInstanceLoaderData}}\ \mbox{\hyperlink{struct_vk_layer_instance_create_info_a76817879c5d947c0ddbc8445290f4d96}{pfnSetInstanceLoaderData}};}
+\DoxyCodeLine{00118\ \ \ \ \ \}\ u;}
+\DoxyCodeLine{00119\ \}\ \mbox{\hyperlink{struct_vk_layer_instance_create_info}{VkLayerInstanceCreateInfo}};}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vk_layer_device_link__}{VkLayerDeviceLink\_}}\ \{}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vk_layer_device_link__}{VkLayerDeviceLink\_}}\ *\mbox{\hyperlink{struct_vk_layer_device_link___abf08a090508d476ab14d20dc7f783469}{pNext}};}
+\DoxyCodeLine{00123\ \ \ \ \ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a646be9b04ac763b5d4b7263756237906}{PFN\_vkGetInstanceProcAddr}}\ \mbox{\hyperlink{struct_vk_layer_device_link___a99881fc99365673fa8c793bdf1c28843}{pfnNextGetInstanceProcAddr}};}
+\DoxyCodeLine{00124\ \ \ \ \ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_aa4959e0564d6e486d19974a30aca323d}{PFN\_vkGetDeviceProcAddr}}\ \mbox{\hyperlink{struct_vk_layer_device_link___a6d6e71539380118d29336fa148902c9d}{pfnNextGetDeviceProcAddr}};}
+\DoxyCodeLine{00125\ \}\ \mbox{\hyperlink{vk__layer_8h_adf176deef20502590e6cfe34ca000795}{VkLayerDeviceLink}};}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00128\ \ \ \ \ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_aff9f2b99398eb80a2b5a146bc5534ce8}{VkStructureType}}\ \mbox{\hyperlink{struct_vk_layer_device_create_info_a31c746675dababc89b870316f418da12}{sType}};\ \textcolor{comment}{//\ VK\_STRUCTURE\_TYPE\_LOADER\_DEVICE\_CREATE\_INFO}}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{struct_vk_layer_device_create_info_abce97bd48685a1f5842e9067094eff69}{pNext}};}
+\DoxyCodeLine{00130\ \ \ \ \ \mbox{\hyperlink{vk__layer_8h_adcd2ac904ad4273a84dc18f78f4b3a26}{VkLayerFunction}}\ \mbox{\hyperlink{struct_vk_layer_device_create_info_a953107e482af15d412504ff3b4a46248}{function}};}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keyword}{union\ }\{}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_layer_device_link__}{VkLayerDeviceLink}}\ *\mbox{\hyperlink{struct_vk_layer_device_create_info_a913a920fae8d0a0b54a7d26c0af76180}{pLayerInfo}};}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{vk__layer_8h_a095137e225a0b60b7f88a937b3d44079}{PFN\_vkSetDeviceLoaderData}}\ \mbox{\hyperlink{struct_vk_layer_device_create_info_ab813f6b4a84a234e2dbefc565780ff4f}{pfnSetDeviceLoaderData}};}
+\DoxyCodeLine{00134\ \ \ \ \ \}\ u;}
+\DoxyCodeLine{00135\ \}\ \mbox{\hyperlink{struct_vk_layer_device_create_info}{VkLayerDeviceCreateInfo}};}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00138\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00139\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a4394dd2421147ed91e838b086be25512}{VKAPI\_ATTR}}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{VkResult}}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a3856c7761d8b7260870053d0f03a0a49}{VKAPI\_CALL}}\ \mbox{\hyperlink{vk__layer_8h_a0946d1803d036247a9fc2465d06735ad}{vkNegotiateLoaderLayerInterfaceVersion}}(\mbox{\hyperlink{struct_vk_negotiate_layer_interface}{VkNegotiateLayerInterface}}\ *pVersionStruct);}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{vk__layer_8h_a4c0023d4d744805af0711caf714d02eb}{VkChainType}}\ \{}
+\DoxyCodeLine{00144\ \ \ \ \ \mbox{\hyperlink{vk__layer_8h_a4c0023d4d744805af0711caf714d02eba0e9c6520fa8a7fd6de4a607bcf363f26}{VK\_CHAIN\_TYPE\_UNKNOWN}}\ =\ 0,}
+\DoxyCodeLine{00145\ \ \ \ \ \mbox{\hyperlink{vk__layer_8h_a4c0023d4d744805af0711caf714d02ebadab96836c0cfc22bbcf4895bb9787bc4}{VK\_CHAIN\_TYPE\_ENUMERATE\_INSTANCE\_EXTENSION\_PROPERTIES}}\ =\ 1,}
+\DoxyCodeLine{00146\ \ \ \ \ \mbox{\hyperlink{vk__layer_8h_a4c0023d4d744805af0711caf714d02ebaa266b55a5feb75febfe0c03f916c9b9a}{VK\_CHAIN\_TYPE\_ENUMERATE\_INSTANCE\_LAYER\_PROPERTIES}}\ =\ 2,}
+\DoxyCodeLine{00147\ \ \ \ \ \mbox{\hyperlink{vk__layer_8h_a4c0023d4d744805af0711caf714d02eba237e9516c88632c2626b84053a5408c4}{VK\_CHAIN\_TYPE\_ENUMERATE\_INSTANCE\_VERSION}}\ =\ 3,}
+\DoxyCodeLine{00148\ \}\ \mbox{\hyperlink{vk__layer_8h_a4c0023d4d744805af0711caf714d02eb}{VkChainType}};}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vk_chain_header}{VkChainHeader}}\ \{}
+\DoxyCodeLine{00151\ \ \ \ \ \mbox{\hyperlink{vk__layer_8h_a4c0023d4d744805af0711caf714d02eb}{VkChainType}}\ \mbox{\hyperlink{struct_vk_chain_header_af8b491efc09c8725a6e46c57a7bcac9a}{type}};}
+\DoxyCodeLine{00152\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{struct_vk_chain_header_aff8da9770afc1f6a7109b9c2008d8acf}{version}};}
+\DoxyCodeLine{00153\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{struct_vk_chain_header_acff504e0a1181c3d19390d0d13c6b243}{size}};}
+\DoxyCodeLine{00154\ \}\ \mbox{\hyperlink{vk__layer_8h_a2a63fda3b658440b4fa7a6e74b291fd2}{VkChainHeader}};}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vk_enumerate_instance_extension_properties_chain}{VkEnumerateInstanceExtensionPropertiesChain}}\ \{}
+\DoxyCodeLine{00157\ \ \ \ \ \mbox{\hyperlink{struct_vk_chain_header}{VkChainHeader}}\ \mbox{\hyperlink{struct_vk_enumerate_instance_extension_properties_chain_af866d428979cfc42b5fcc715208ac260}{header}};}
+\DoxyCodeLine{00158\ \ \ \ \ \mbox{\hyperlink{struct_vk_enumerate_instance_extension_properties_chain_aeec27f4b97161a9b2f56ca0ffed819f5}{VkResult}}(\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\_PTR}}\ *pfnNextLayer)(\textcolor{keyword}{const}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vk_enumerate_instance_extension_properties_chain}{VkEnumerateInstanceExtensionPropertiesChain}}\ *,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *,\ uint32\_t\ *,}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_extension_properties}{VkExtensionProperties}}\ *);}
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vk_enumerate_instance_extension_properties_chain}{VkEnumerateInstanceExtensionPropertiesChain}}\ *\mbox{\hyperlink{struct_vk_enumerate_instance_extension_properties_chain_ac46068b424b824a9a24095984f3b2a2c}{pNextLink}};}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00162\ \textcolor{preprocessor}{\#if\ defined(\_\_cplusplus)}}
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keyword}{inline}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{VkResult}}\ CallDown(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *pLayerName,\ uint32\_t\ *pPropertyCount,\ \mbox{\hyperlink{struct_vk_extension_properties}{VkExtensionProperties}}\ *pProperties)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ pfnNextLayer(\mbox{\hyperlink{struct_vk_enumerate_instance_extension_properties_chain_ac46068b424b824a9a24095984f3b2a2c}{pNextLink}},\ pLayerName,\ pPropertyCount,\ pProperties);}
+\DoxyCodeLine{00165\ \ \ \ \ \}}
+\DoxyCodeLine{00166\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00167\ \}\ \mbox{\hyperlink{vk__layer_8h_a606a7ddad3317c788dc9cfff0fe60385}{VkEnumerateInstanceExtensionPropertiesChain}};}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00169\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vk_enumerate_instance_layer_properties_chain}{VkEnumerateInstanceLayerPropertiesChain}}\ \{}
+\DoxyCodeLine{00170\ \ \ \ \ \mbox{\hyperlink{struct_vk_chain_header}{VkChainHeader}}\ \mbox{\hyperlink{struct_vk_enumerate_instance_layer_properties_chain_aaa736f71bf641ab1e5bf1ffeb4ead525}{header}};}
+\DoxyCodeLine{00171\ \ \ \ \ \mbox{\hyperlink{struct_vk_enumerate_instance_layer_properties_chain_a1a617e639429326d5563cd220ca1a32f}{VkResult}}(\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\_PTR}}\ *pfnNextLayer)(\textcolor{keyword}{const}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vk_enumerate_instance_layer_properties_chain}{VkEnumerateInstanceLayerPropertiesChain}}\ *,\ uint32\_t\ *,\ \mbox{\hyperlink{struct_vk_layer_properties}{VkLayerProperties}}\ *);}
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vk_enumerate_instance_layer_properties_chain}{VkEnumerateInstanceLayerPropertiesChain}}\ *\mbox{\hyperlink{struct_vk_enumerate_instance_layer_properties_chain_ae504e8e9e7bda4cc79a5305b36fb544d}{pNextLink}};}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00174\ \textcolor{preprocessor}{\#if\ defined(\_\_cplusplus)}}
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keyword}{inline}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{VkResult}}\ CallDown(uint32\_t\ *pPropertyCount,\ \mbox{\hyperlink{struct_vk_layer_properties}{VkLayerProperties}}\ *pProperties)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ pfnNextLayer(\mbox{\hyperlink{struct_vk_enumerate_instance_layer_properties_chain_ae504e8e9e7bda4cc79a5305b36fb544d}{pNextLink}},\ pPropertyCount,\ pProperties);}
+\DoxyCodeLine{00177\ \ \ \ \ \}}
+\DoxyCodeLine{00178\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00179\ \}\ \mbox{\hyperlink{vk__layer_8h_aab5262e4537bb96c2bccd7fee8d5c4e4}{VkEnumerateInstanceLayerPropertiesChain}};}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vk_enumerate_instance_version_chain}{VkEnumerateInstanceVersionChain}}\ \{}
+\DoxyCodeLine{00182\ \ \ \ \ \mbox{\hyperlink{struct_vk_chain_header}{VkChainHeader}}\ \mbox{\hyperlink{struct_vk_enumerate_instance_version_chain_a641b2d4eece7d8d9200b0c94eda36b47}{header}};}
+\DoxyCodeLine{00183\ \ \ \ \ \mbox{\hyperlink{struct_vk_enumerate_instance_version_chain_a0d087691572857989da2e9e4c047ed2f}{VkResult}}(\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\_PTR}}\ *pfnNextLayer)(\textcolor{keyword}{const}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vk_enumerate_instance_version_chain}{VkEnumerateInstanceVersionChain}}\ *,\ uint32\_t\ *);}
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vk_enumerate_instance_version_chain}{VkEnumerateInstanceVersionChain}}\ *\mbox{\hyperlink{struct_vk_enumerate_instance_version_chain_adc5848e8090612d387246e0d1fecdc22}{pNextLink}};}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00186\ \textcolor{preprocessor}{\#if\ defined(\_\_cplusplus)}}
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{keyword}{inline}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{VkResult}}\ CallDown(uint32\_t\ *pApiVersion)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ pfnNextLayer(\mbox{\hyperlink{struct_vk_enumerate_instance_version_chain_adc5848e8090612d387246e0d1fecdc22}{pNextLink}},\ pApiVersion);}
+\DoxyCodeLine{00189\ \ \ \ \ \}}
+\DoxyCodeLine{00190\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00191\ \}\ \mbox{\hyperlink{vk__layer_8h_a0b6f52fbdfbf802c2e25449be922a09e}{VkEnumerateInstanceVersionChain}};}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00193\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00194\ \}}
+\DoxyCodeLine{00195\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

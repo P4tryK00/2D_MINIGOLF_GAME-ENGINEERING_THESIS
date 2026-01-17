@@ -1,0 +1,187 @@
+\doxysection{Dokumentacja klasy sf\+::priv\+::Render\+Texture\+Impl}
+\hypertarget{classsf_1_1priv_1_1_render_texture_impl}{}\label{classsf_1_1priv_1_1_render_texture_impl}\index{sf::priv::RenderTextureImpl@{sf::priv::RenderTextureImpl}}
+
+
+Abstract base class for render-\/texture implementations.  
+
+
+
+
+{\ttfamily \#include $<$Render\+Texture\+Impl.\+hpp$>$}
+
+
+
+Diagram dziedziczenia dla sf\+::priv\+::Render\+Texture\+Impl\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classsf_1_1priv_1_1_render_texture_impl__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagram współpracy dla sf\+::priv\+::Render\+Texture\+Impl\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{classsf_1_1priv_1_1_render_texture_impl__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classsf_1_1priv_1_1_render_texture_impl_af505672c86098c99b446a0e5b21b6598}{\texorpdfstring{$\sim$}{\string~}\+Render\+Texture\+Impl}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classsf_1_1priv_1_1_render_texture_impl_a9f47a58dd71506875601e88ed86a2806}{create}} (unsigned int width, unsigned int height, unsigned int texture\+Id, const \mbox{\hyperlink{structsf_1_1_context_settings}{Context\+Settings}} \&settings)=0
+\begin{DoxyCompactList}\small\item\em Create the render texture implementation. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classsf_1_1priv_1_1_render_texture_impl_a9bddf81716167dc980b4b36287056a51}{activate}} (bool active)=0
+\begin{DoxyCompactList}\small\item\em Activate or deactivate the render texture for rendering. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classsf_1_1priv_1_1_render_texture_impl_a0c330de7b05cf055201490fb3b97569f}{is\+Srgb}} () const =0
+\begin{DoxyCompactList}\small\item\em Tell if the render-\/texture will use s\+RGB encoding when drawing on it. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_render_texture_impl_aca935a46aa8f04b070b9b0b55491313e}{update\+Texture}} (unsigned int texture\+Id)=0
+\begin{DoxyCompactList}\small\item\em Update the pixels of the target texture. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Dodatkowe Dziedziczone Składowe}
+\doxysubsection*{Metody prywatne dziedziczone z \mbox{\hyperlink{classsf_1_1_non_copyable}{sf\+::\+Non\+Copyable}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsf_1_1_non_copyable_a2110add170580fdb946f887719da6860}{Non\+Copyable}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1_non_copyable_a8274ffbf46014f5f7f364befb52c7728}{\texorpdfstring{$\sim$}{\string~}\+Non\+Copyable}} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Abstract base class for render-\/texture implementations. 
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{classsf_1_1priv_1_1_render_texture_impl_af505672c86098c99b446a0e5b21b6598}\label{classsf_1_1priv_1_1_render_texture_impl_af505672c86098c99b446a0e5b21b6598} 
+\index{sf::priv::RenderTextureImpl@{sf::priv::RenderTextureImpl}!````~RenderTextureImpl@{\texorpdfstring{$\sim$}{\string~}RenderTextureImpl}}
+\index{````~RenderTextureImpl@{\texorpdfstring{$\sim$}{\string~}RenderTextureImpl}!sf::priv::RenderTextureImpl@{sf::priv::RenderTextureImpl}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}RenderTextureImpl()}{\string~RenderTextureImpl()}}
+{\footnotesize\ttfamily sf\+::priv\+::\+Render\+Texture\+Impl\+::\texorpdfstring{$\sim$}{\string~}\+Render\+Texture\+Impl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{classsf_1_1priv_1_1_render_texture_impl_a9bddf81716167dc980b4b36287056a51}\label{classsf_1_1priv_1_1_render_texture_impl_a9bddf81716167dc980b4b36287056a51} 
+\index{sf::priv::RenderTextureImpl@{sf::priv::RenderTextureImpl}!activate@{activate}}
+\index{activate@{activate}!sf::priv::RenderTextureImpl@{sf::priv::RenderTextureImpl}}
+\doxysubsubsection{\texorpdfstring{activate()}{activate()}}
+{\footnotesize\ttfamily virtual bool sf\+::priv\+::\+Render\+Texture\+Impl\+::activate (\begin{DoxyParamCaption}\item[{bool}]{active }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Activate or deactivate the render texture for rendering. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em active} & True to activate, false to deactivate\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True on success, false on failure 
+\end{DoxyReturn}
+
+
+Implementowany w \mbox{\hyperlink{classsf_1_1priv_1_1_render_texture_impl_default_aa983a97409e0906dc3385261f1a304b9}{sf\+::priv\+::\+Render\+Texture\+Impl\+Default}} i \mbox{\hyperlink{classsf_1_1priv_1_1_render_texture_impl_f_b_o_aa2e0aa648bcce022a90b1a60f87d3820}{sf\+::priv\+::\+Render\+Texture\+Impl\+FBO}}.
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_render_texture_impl_a9bddf81716167dc980b4b36287056a51_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_render_texture_impl_a9f47a58dd71506875601e88ed86a2806}\label{classsf_1_1priv_1_1_render_texture_impl_a9f47a58dd71506875601e88ed86a2806} 
+\index{sf::priv::RenderTextureImpl@{sf::priv::RenderTextureImpl}!create@{create}}
+\index{create@{create}!sf::priv::RenderTextureImpl@{sf::priv::RenderTextureImpl}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily virtual bool sf\+::priv\+::\+Render\+Texture\+Impl\+::create (\begin{DoxyParamCaption}\item[{unsigned int}]{width,  }\item[{unsigned int}]{height,  }\item[{unsigned int}]{texture\+Id,  }\item[{const \mbox{\hyperlink{structsf_1_1_context_settings}{Context\+Settings}} \&}]{settings }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Create the render texture implementation. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em width} & Width of the texture to render to \\
+\hline
+{\em height} & Height of the texture to render to \\
+\hline
+{\em texture\+Id} & Open\+GL identifier of the target texture \\
+\hline
+{\em settings} & \doxylink{classsf_1_1_context}{Context} settings to create render-\/texture with\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True if creation has been successful 
+\end{DoxyReturn}
+
+
+Implementowany w \mbox{\hyperlink{classsf_1_1priv_1_1_render_texture_impl_default_ac4b2947e4e869415b479f7d931db9dda}{sf\+::priv\+::\+Render\+Texture\+Impl\+Default}} i \mbox{\hyperlink{classsf_1_1priv_1_1_render_texture_impl_f_b_o_a00871d7a3b2a7676cbba1a1ad56aedd9}{sf\+::priv\+::\+Render\+Texture\+Impl\+FBO}}.
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_render_texture_impl_a9f47a58dd71506875601e88ed86a2806_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_render_texture_impl_a0c330de7b05cf055201490fb3b97569f}\label{classsf_1_1priv_1_1_render_texture_impl_a0c330de7b05cf055201490fb3b97569f} 
+\index{sf::priv::RenderTextureImpl@{sf::priv::RenderTextureImpl}!isSrgb@{isSrgb}}
+\index{isSrgb@{isSrgb}!sf::priv::RenderTextureImpl@{sf::priv::RenderTextureImpl}}
+\doxysubsubsection{\texorpdfstring{isSrgb()}{isSrgb()}}
+{\footnotesize\ttfamily virtual bool sf\+::priv\+::\+Render\+Texture\+Impl\+::is\+Srgb (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Tell if the render-\/texture will use s\+RGB encoding when drawing on it. 
+
+You can request s\+RGB encoding for a render-\/texture by having the s\+Rgb\+Capable flag set for the context parameter of \doxylink{classsf_1_1priv_1_1_render_texture_impl_a9f47a58dd71506875601e88ed86a2806}{create()} method
+
+\begin{DoxyReturn}{Zwraca}
+True if the render-\/texture use s\+RGB encoding, false otherwise 
+\end{DoxyReturn}
+
+
+Implementowany w \mbox{\hyperlink{classsf_1_1priv_1_1_render_texture_impl_default_a6f6780ba7d8c605d5371c518cb61c0bd}{sf\+::priv\+::\+Render\+Texture\+Impl\+Default}} i \mbox{\hyperlink{classsf_1_1priv_1_1_render_texture_impl_f_b_o_aec1b4cacf1f43d124a39b6cbf106f46e}{sf\+::priv\+::\+Render\+Texture\+Impl\+FBO}}.
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_render_texture_impl_a0c330de7b05cf055201490fb3b97569f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_render_texture_impl_aca935a46aa8f04b070b9b0b55491313e}\label{classsf_1_1priv_1_1_render_texture_impl_aca935a46aa8f04b070b9b0b55491313e} 
+\index{sf::priv::RenderTextureImpl@{sf::priv::RenderTextureImpl}!updateTexture@{updateTexture}}
+\index{updateTexture@{updateTexture}!sf::priv::RenderTextureImpl@{sf::priv::RenderTextureImpl}}
+\doxysubsubsection{\texorpdfstring{updateTexture()}{updateTexture()}}
+{\footnotesize\ttfamily virtual void sf\+::priv\+::\+Render\+Texture\+Impl\+::update\+Texture (\begin{DoxyParamCaption}\item[{unsigned int}]{texture\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Update the pixels of the target texture. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em texture\+Id} & Open\+GL identifier of the target texture \\
+\hline
+\end{DoxyParams}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_render_texture_impl_aca935a46aa8f04b070b9b0b55491313e_icgraph}
+\end{center}
+\end{figure}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Graphics/\mbox{\hyperlink{_render_texture_impl_8hpp}{Render\+Texture\+Impl.\+hpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Graphics/\mbox{\hyperlink{_render_texture_impl_8cpp}{Render\+Texture\+Impl.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,168 @@
+\doxysection{Dokumentacja przestrzeni nazw Catch\+::Detail}
+\hypertarget{namespace_catch_1_1_detail}{}\label{namespace_catch_1_1_detail}\index{Catch::Detail@{Catch::Detail}}
+\doxysubsubsection*{Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_catch_1_1_detail_1_1_approx}{Approx}}
+\item 
+struct \mbox{\hyperlink{struct_catch_1_1_detail_1_1_borg_type}{Borg\+Type}}
+\item 
+struct \mbox{\hyperlink{struct_catch_1_1_detail_1_1_false_type}{False\+Type}}
+\item 
+struct \mbox{\hyperlink{struct_catch_1_1_detail_1_1_is_stream_insertable}{Is\+Stream\+Insertable}}
+\item 
+struct \mbox{\hyperlink{struct_catch_1_1_detail_1_1_string_maker_base}{String\+Maker\+Base}}
+\item 
+struct \mbox{\hyperlink{struct_catch_1_1_detail_1_1_string_maker_base_3_01true_01_4}{String\+Maker\+Base$<$ true $>$}}
+\item 
+struct \mbox{\hyperlink{struct_catch_1_1_detail_1_1_true_type}{True\+Type}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_catch_1_1_detail_1_1_true_type}{True\+Type}} \& \mbox{\hyperlink{namespace_catch_1_1_detail_acf6a0fb6642c5936c2e53b74f5b0e3f0}{test\+Streamable}} (std\+::ostream \&)
+\item 
+\mbox{\hyperlink{struct_catch_1_1_detail_1_1_false_type}{False\+Type}} \mbox{\hyperlink{namespace_catch_1_1_detail_aac81f01b0d687f75b8f24a925591b7ac}{test\+Streamable}} (\mbox{\hyperlink{struct_catch_1_1_detail_1_1_false_type}{False\+Type}})
+\item 
+\mbox{\hyperlink{struct_catch_1_1_detail_1_1_false_type}{False\+Type}} \mbox{\hyperlink{namespace_catch_1_1_detail_ae9a44d574c4fbd18fabaaee05a433d88}{operator$<$$<$}} (std\+::ostream const \&, \mbox{\hyperlink{struct_catch_1_1_detail_1_1_borg_type}{Borg\+Type}} const \&)
+\item 
+std\+::string \mbox{\hyperlink{namespace_catch_1_1_detail_ac5d6c510e565ee5bddcc2236194ce29e}{raw\+Memory\+To\+String}} (const void \texorpdfstring{$\ast$}{*}object, std\+::size\+\_\+t size)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::string \mbox{\hyperlink{namespace_catch_1_1_detail_a371620ed524abfcae5c3772bf49b563a}{raw\+Memory\+To\+String}} (const T \&object)
+\item 
+{\footnotesize template$<$typename Input\+Iterator $>$ }\\std\+::string \mbox{\hyperlink{namespace_catch_1_1_detail_a6650a1dff325bf29962ff15ae73fd972}{range\+To\+String}} (Input\+Iterator first, Input\+Iterator last)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::string \mbox{\hyperlink{namespace_catch_1_1_detail_aef46b4178e08758524d25d1d969a503c}{make\+String}} (T const \&value)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Zmienne}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::string \mbox{\hyperlink{namespace_catch_1_1_detail_a466775f4eec29ffef29ab334cd885136}{unprintable\+String}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja funkcji}
+\Hypertarget{namespace_catch_1_1_detail_aef46b4178e08758524d25d1d969a503c}\label{namespace_catch_1_1_detail_aef46b4178e08758524d25d1d969a503c} 
+\index{Catch::Detail@{Catch::Detail}!makeString@{makeString}}
+\index{makeString@{makeString}!Catch::Detail@{Catch::Detail}}
+\doxysubsubsection{\texorpdfstring{makeString()}{makeString()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::string Catch\+::\+Detail\+::make\+String (\begin{DoxyParamCaption}\item[{T const \&}]{value }\end{DoxyParamCaption})}
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{namespace_catch_1_1_detail_aef46b4178e08758524d25d1d969a503c_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{namespace_catch_1_1_detail_aef46b4178e08758524d25d1d969a503c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespace_catch_1_1_detail_ae9a44d574c4fbd18fabaaee05a433d88}\label{namespace_catch_1_1_detail_ae9a44d574c4fbd18fabaaee05a433d88} 
+\index{Catch::Detail@{Catch::Detail}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Catch::Detail@{Catch::Detail}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_catch_1_1_detail_1_1_false_type}{False\+Type}} Catch\+::\+Detail\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream const \&}]{,  }\item[{\mbox{\hyperlink{struct_catch_1_1_detail_1_1_borg_type}{Borg\+Type}} const \&}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{namespace_catch_1_1_detail_a6650a1dff325bf29962ff15ae73fd972}\label{namespace_catch_1_1_detail_a6650a1dff325bf29962ff15ae73fd972} 
+\index{Catch::Detail@{Catch::Detail}!rangeToString@{rangeToString}}
+\index{rangeToString@{rangeToString}!Catch::Detail@{Catch::Detail}}
+\doxysubsubsection{\texorpdfstring{rangeToString()}{rangeToString()}}
+{\footnotesize\ttfamily template$<$typename Input\+Iterator $>$ \\
+std\+::string Catch\+::\+Detail\+::range\+To\+String (\begin{DoxyParamCaption}\item[{Input\+Iterator}]{first,  }\item[{Input\+Iterator}]{last }\end{DoxyParamCaption})}
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{namespace_catch_1_1_detail_a6650a1dff325bf29962ff15ae73fd972_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{namespace_catch_1_1_detail_a6650a1dff325bf29962ff15ae73fd972_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespace_catch_1_1_detail_a371620ed524abfcae5c3772bf49b563a}\label{namespace_catch_1_1_detail_a371620ed524abfcae5c3772bf49b563a} 
+\index{Catch::Detail@{Catch::Detail}!rawMemoryToString@{rawMemoryToString}}
+\index{rawMemoryToString@{rawMemoryToString}!Catch::Detail@{Catch::Detail}}
+\doxysubsubsection{\texorpdfstring{rawMemoryToString()}{rawMemoryToString()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::string Catch\+::\+Detail\+::raw\+Memory\+To\+String (\begin{DoxyParamCaption}\item[{const T \&}]{object }\end{DoxyParamCaption})}
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_catch_1_1_detail_a371620ed524abfcae5c3772bf49b563a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespace_catch_1_1_detail_ac5d6c510e565ee5bddcc2236194ce29e}\label{namespace_catch_1_1_detail_ac5d6c510e565ee5bddcc2236194ce29e} 
+\index{Catch::Detail@{Catch::Detail}!rawMemoryToString@{rawMemoryToString}}
+\index{rawMemoryToString@{rawMemoryToString}!Catch::Detail@{Catch::Detail}}
+\doxysubsubsection{\texorpdfstring{rawMemoryToString()}{rawMemoryToString()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::string Catch\+::\+Detail\+::raw\+Memory\+To\+String (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{object,  }\item[{std\+::size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{namespace_catch_1_1_detail_ac5d6c510e565ee5bddcc2236194ce29e_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_catch_1_1_detail_ac5d6c510e565ee5bddcc2236194ce29e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespace_catch_1_1_detail_aac81f01b0d687f75b8f24a925591b7ac}\label{namespace_catch_1_1_detail_aac81f01b0d687f75b8f24a925591b7ac} 
+\index{Catch::Detail@{Catch::Detail}!testStreamable@{testStreamable}}
+\index{testStreamable@{testStreamable}!Catch::Detail@{Catch::Detail}}
+\doxysubsubsection{\texorpdfstring{testStreamable()}{testStreamable()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_catch_1_1_detail_1_1_false_type}{False\+Type}} Catch\+::\+Detail\+::test\+Streamable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_catch_1_1_detail_1_1_false_type}{False\+Type}}}]{ }\end{DoxyParamCaption})}
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_catch_1_1_detail_aac81f01b0d687f75b8f24a925591b7ac_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespace_catch_1_1_detail_acf6a0fb6642c5936c2e53b74f5b0e3f0}\label{namespace_catch_1_1_detail_acf6a0fb6642c5936c2e53b74f5b0e3f0} 
+\index{Catch::Detail@{Catch::Detail}!testStreamable@{testStreamable}}
+\index{testStreamable@{testStreamable}!Catch::Detail@{Catch::Detail}}
+\doxysubsubsection{\texorpdfstring{testStreamable()}{testStreamable()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_catch_1_1_detail_1_1_true_type}{True\+Type}} \& Catch\+::\+Detail\+::test\+Streamable (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{ }\end{DoxyParamCaption})}
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{namespace_catch_1_1_detail_acf6a0fb6642c5936c2e53b74f5b0e3f0_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_catch_1_1_detail_acf6a0fb6642c5936c2e53b74f5b0e3f0_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Dokumentacja zmiennych}
+\Hypertarget{namespace_catch_1_1_detail_a466775f4eec29ffef29ab334cd885136}\label{namespace_catch_1_1_detail_a466775f4eec29ffef29ab334cd885136} 
+\index{Catch::Detail@{Catch::Detail}!unprintableString@{unprintableString}}
+\index{unprintableString@{unprintableString}!Catch::Detail@{Catch::Detail}}
+\doxysubsubsection{\texorpdfstring{unprintableString}{unprintableString}}
+{\footnotesize\ttfamily const std\+::string Catch\+::\+Detail\+::unprintable\+String\hspace{0.3cm}{\ttfamily [extern]}}
+

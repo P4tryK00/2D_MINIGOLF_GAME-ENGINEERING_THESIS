@@ -1,0 +1,146 @@
+\doxysection{Dokumentacja klasy sf\+::Ftp\+::Data\+Channel}
+\hypertarget{classsf_1_1_ftp_1_1_data_channel}{}\label{classsf_1_1_ftp_1_1_data_channel}\index{sf::Ftp::DataChannel@{sf::Ftp::DataChannel}}
+
+
+Diagram dziedziczenia dla sf\+::Ftp\+::Data\+Channel\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{classsf_1_1_ftp_1_1_data_channel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagram współpracy dla sf\+::Ftp\+::Data\+Channel\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classsf_1_1_ftp_1_1_data_channel__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsf_1_1_ftp_1_1_data_channel_a9c25c59d47b66167598281158a5f869c}{Data\+Channel}} (\mbox{\hyperlink{classsf_1_1_ftp}{Ftp}} \&owner)
+\item 
+\mbox{\hyperlink{classsf_1_1_ftp_1_1_response}{Ftp\+::\+Response}} \mbox{\hyperlink{classsf_1_1_ftp_1_1_data_channel_ab1856a9f5acc45e8ef157776c092cb93}{open}} (\mbox{\hyperlink{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cb}{Ftp\+::\+Transfer\+Mode}} mode)
+\item 
+void \mbox{\hyperlink{classsf_1_1_ftp_1_1_data_channel_a6a3f373762c6f3122a336ba39308171f}{send}} (std\+::istream \&stream)
+\item 
+void \mbox{\hyperlink{classsf_1_1_ftp_1_1_data_channel_a00a06a7c81f24a0b85733fbe6dd4cac5}{receive}} (std\+::ostream \&stream)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsf_1_1_ftp}{Ftp}} \& \mbox{\hyperlink{classsf_1_1_ftp_1_1_data_channel_a1884dcc014d17bba8e9819e9d3e258d4}{m\+\_\+ftp}}
+\begin{DoxyCompactList}\small\item\em Reference to the owner \doxylink{classsf_1_1_ftp}{Ftp} instance. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1_tcp_socket}{Tcp\+Socket}} \mbox{\hyperlink{classsf_1_1_ftp_1_1_data_channel_acf9036601d6be1499991500f20eba8a2}{m\+\_\+data\+Socket}}
+\begin{DoxyCompactList}\small\item\em \doxylink{classsf_1_1_socket}{Socket} used for data transfers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Dodatkowe Dziedziczone Składowe}
+\doxysubsection*{Metody prywatne dziedziczone z \mbox{\hyperlink{classsf_1_1_non_copyable}{sf\+::\+Non\+Copyable}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsf_1_1_non_copyable_a2110add170580fdb946f887719da6860}{Non\+Copyable}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1_non_copyable_a8274ffbf46014f5f7f364befb52c7728}{\texorpdfstring{$\sim$}{\string~}\+Non\+Copyable}} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{classsf_1_1_ftp_1_1_data_channel_a9c25c59d47b66167598281158a5f869c}\label{classsf_1_1_ftp_1_1_data_channel_a9c25c59d47b66167598281158a5f869c} 
+\index{sf::Ftp::DataChannel@{sf::Ftp::DataChannel}!DataChannel@{DataChannel}}
+\index{DataChannel@{DataChannel}!sf::Ftp::DataChannel@{sf::Ftp::DataChannel}}
+\doxysubsubsection{\texorpdfstring{DataChannel()}{DataChannel()}}
+{\footnotesize\ttfamily sf\+::\+Ftp\+::\+Data\+Channel\+::\+Data\+Channel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_ftp}{Ftp}} \&}]{owner }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{classsf_1_1_ftp_1_1_data_channel_ab1856a9f5acc45e8ef157776c092cb93}\label{classsf_1_1_ftp_1_1_data_channel_ab1856a9f5acc45e8ef157776c092cb93} 
+\index{sf::Ftp::DataChannel@{sf::Ftp::DataChannel}!open@{open}}
+\index{open@{open}!sf::Ftp::DataChannel@{sf::Ftp::DataChannel}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1_ftp_1_1_response}{Ftp\+::\+Response}} sf\+::\+Ftp\+::\+Data\+Channel\+::open (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cb}{Ftp\+::\+Transfer\+Mode}}}]{mode }\end{DoxyParamCaption})}
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{classsf_1_1_ftp_1_1_data_channel_ab1856a9f5acc45e8ef157776c092cb93_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1_ftp_1_1_data_channel_ab1856a9f5acc45e8ef157776c092cb93_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1_ftp_1_1_data_channel_a00a06a7c81f24a0b85733fbe6dd4cac5}\label{classsf_1_1_ftp_1_1_data_channel_a00a06a7c81f24a0b85733fbe6dd4cac5} 
+\index{sf::Ftp::DataChannel@{sf::Ftp::DataChannel}!receive@{receive}}
+\index{receive@{receive}!sf::Ftp::DataChannel@{sf::Ftp::DataChannel}}
+\doxysubsubsection{\texorpdfstring{receive()}{receive()}}
+{\footnotesize\ttfamily void sf\+::\+Ftp\+::\+Data\+Channel\+::receive (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{stream }\end{DoxyParamCaption})}
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=265pt]{classsf_1_1_ftp_1_1_data_channel_a00a06a7c81f24a0b85733fbe6dd4cac5_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1_ftp_1_1_data_channel_a00a06a7c81f24a0b85733fbe6dd4cac5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1_ftp_1_1_data_channel_a6a3f373762c6f3122a336ba39308171f}\label{classsf_1_1_ftp_1_1_data_channel_a6a3f373762c6f3122a336ba39308171f} 
+\index{sf::Ftp::DataChannel@{sf::Ftp::DataChannel}!send@{send}}
+\index{send@{send}!sf::Ftp::DataChannel@{sf::Ftp::DataChannel}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily void sf\+::\+Ftp\+::\+Data\+Channel\+::send (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{stream }\end{DoxyParamCaption})}
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=265pt]{classsf_1_1_ftp_1_1_data_channel_a6a3f373762c6f3122a336ba39308171f_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1_ftp_1_1_data_channel_a6a3f373762c6f3122a336ba39308171f_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{classsf_1_1_ftp_1_1_data_channel_acf9036601d6be1499991500f20eba8a2}\label{classsf_1_1_ftp_1_1_data_channel_acf9036601d6be1499991500f20eba8a2} 
+\index{sf::Ftp::DataChannel@{sf::Ftp::DataChannel}!m\_dataSocket@{m\_dataSocket}}
+\index{m\_dataSocket@{m\_dataSocket}!sf::Ftp::DataChannel@{sf::Ftp::DataChannel}}
+\doxysubsubsection{\texorpdfstring{m\_dataSocket}{m\_dataSocket}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1_tcp_socket}{Tcp\+Socket}} sf\+::\+Ftp\+::\+Data\+Channel\+::m\+\_\+data\+Socket\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxylink{classsf_1_1_socket}{Socket} used for data transfers. 
+
+\Hypertarget{classsf_1_1_ftp_1_1_data_channel_a1884dcc014d17bba8e9819e9d3e258d4}\label{classsf_1_1_ftp_1_1_data_channel_a1884dcc014d17bba8e9819e9d3e258d4} 
+\index{sf::Ftp::DataChannel@{sf::Ftp::DataChannel}!m\_ftp@{m\_ftp}}
+\index{m\_ftp@{m\_ftp}!sf::Ftp::DataChannel@{sf::Ftp::DataChannel}}
+\doxysubsubsection{\texorpdfstring{m\_ftp}{m\_ftp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1_ftp}{Ftp}}\& sf\+::\+Ftp\+::\+Data\+Channel\+::m\+\_\+ftp\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Reference to the owner \doxylink{classsf_1_1_ftp}{Ftp} instance. 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Network/\mbox{\hyperlink{src_2_s_f_m_l_2_network_2_ftp_8cpp}{Ftp.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,218 @@
+\doxysection{Dokumentacja struktury mp3dec\+\_\+ex\+\_\+t}
+\hypertarget{structmp3dec__ex__t}{}\label{structmp3dec__ex__t}\index{mp3dec\_ex\_t@{mp3dec\_ex\_t}}
+
+
+{\ttfamily \#include $<$minimp3\+\_\+ex.\+h$>$}
+
+
+
+Diagram współpracy dla mp3dec\+\_\+ex\+\_\+t\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structmp3dec__ex__t__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structmp3dec__t}{mp3dec\+\_\+t}} \mbox{\hyperlink{structmp3dec__ex__t_a17a9729ae1728c919876d6fd8693914a}{mp3d}}
+\item 
+\mbox{\hyperlink{structmp3dec__map__info__t}{mp3dec\+\_\+map\+\_\+info\+\_\+t}} \mbox{\hyperlink{structmp3dec__ex__t_aa83ce3f305ad2239de2c2167b8a51bc8}{file}}
+\item 
+\mbox{\hyperlink{structmp3dec__io__t}{mp3dec\+\_\+io\+\_\+t}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structmp3dec__ex__t_a2e32856a712086490fa8167a7f99b4ae}{io}}
+\item 
+\mbox{\hyperlink{structmp3dec__index__t}{mp3dec\+\_\+index\+\_\+t}} \mbox{\hyperlink{structmp3dec__ex__t_a3a9c9e9dbe68b24a397a921404b598ea}{index}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structmp3dec__ex__t_a33d2308a3bdaf5dc0738a6a7be91493f}{offset}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structmp3dec__ex__t_a138bf7485e7f4f20c481b46051a0a8bf}{samples}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structmp3dec__ex__t_ae16315bdda132a17b9e71d75f9f5cc16}{detected\+\_\+samples}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structmp3dec__ex__t_a028bbd1ac0bb11138c8e0ba11e38eadb}{cur\+\_\+sample}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structmp3dec__ex__t_a7884cfda5fa124a6994468e69681a203}{start\+\_\+offset}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structmp3dec__ex__t_a19da317bf596134c8a2397edbf90c061}{end\+\_\+offset}}
+\item 
+\mbox{\hyperlink{structmp3dec__frame__info__t}{mp3dec\+\_\+frame\+\_\+info\+\_\+t}} \mbox{\hyperlink{structmp3dec__ex__t_a227aeba45d7295665e6eb6eb5203c56d}{info}}
+\item 
+\mbox{\hyperlink{minimp3_8h_a829d503db4023edb6b1705acc319b008}{mp3d\+\_\+sample\+\_\+t}} \mbox{\hyperlink{structmp3dec__ex__t_a9b80b49c5d1672fd01d49fc27c8a1861}{buffer}} \mbox{[}\mbox{\hyperlink{minimp3_8h_a60ef7262cf8772c101938ce095ecd482}{MINIMP3\+\_\+\+MAX\+\_\+\+SAMPLES\+\_\+\+PER\+\_\+\+FRAME}}\mbox{]}
+\item 
+size\+\_\+t \mbox{\hyperlink{structmp3dec__ex__t_aceffd88f33a7210f8272297836c467ba}{input\+\_\+consumed}}
+\item 
+size\+\_\+t \mbox{\hyperlink{structmp3dec__ex__t_a3ef1f3115304bd3c2ef745f3b26f0c28}{input\+\_\+filled}}
+\item 
+int \mbox{\hyperlink{structmp3dec__ex__t_ae82b3fcc75ebb41c91ba8a5c286c71f8}{is\+\_\+file}}
+\item 
+int \mbox{\hyperlink{structmp3dec__ex__t_a1fbba373f884d9a1bcee655104070e87}{flags}}
+\item 
+int \mbox{\hyperlink{structmp3dec__ex__t_a56111cda542372126c53b751bb231b2b}{vbr\+\_\+tag\+\_\+found}}
+\item 
+int \mbox{\hyperlink{structmp3dec__ex__t_a3a3ed982119a5322a0a1690c312662a2}{indexes\+\_\+built}}
+\item 
+int \mbox{\hyperlink{structmp3dec__ex__t_a2dacee877a4c0bee52369036233ef402}{free\+\_\+format\+\_\+bytes}}
+\item 
+int \mbox{\hyperlink{structmp3dec__ex__t_a80e64fa71e0ec9aad9654038baf2dd4a}{buffer\+\_\+samples}}
+\item 
+int \mbox{\hyperlink{structmp3dec__ex__t_ae9599790d074f45d47a44a394a92273e}{buffer\+\_\+consumed}}
+\item 
+int \mbox{\hyperlink{structmp3dec__ex__t_a09fd3fb5e70266fca05d7167e614bfee}{to\+\_\+skip}}
+\item 
+int \mbox{\hyperlink{structmp3dec__ex__t_abb7c22db7aa7fdd657edb68a14cc0f60}{start\+\_\+delay}}
+\item 
+int \mbox{\hyperlink{structmp3dec__ex__t_ac0ae50bbcde19affd18d8e88da7cd13b}{last\+\_\+error}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{structmp3dec__ex__t_a9b80b49c5d1672fd01d49fc27c8a1861}\label{structmp3dec__ex__t_a9b80b49c5d1672fd01d49fc27c8a1861} 
+\index{mp3dec\_ex\_t@{mp3dec\_ex\_t}!buffer@{buffer}}
+\index{buffer@{buffer}!mp3dec\_ex\_t@{mp3dec\_ex\_t}}
+\doxysubsubsection{\texorpdfstring{buffer}{buffer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{minimp3_8h_a829d503db4023edb6b1705acc319b008}{mp3d\+\_\+sample\+\_\+t}} mp3dec\+\_\+ex\+\_\+t\+::buffer\mbox{[}\mbox{\hyperlink{minimp3_8h_a60ef7262cf8772c101938ce095ecd482}{MINIMP3\+\_\+\+MAX\+\_\+\+SAMPLES\+\_\+\+PER\+\_\+\+FRAME}}\mbox{]}}
+
+\Hypertarget{structmp3dec__ex__t_ae9599790d074f45d47a44a394a92273e}\label{structmp3dec__ex__t_ae9599790d074f45d47a44a394a92273e} 
+\index{mp3dec\_ex\_t@{mp3dec\_ex\_t}!buffer\_consumed@{buffer\_consumed}}
+\index{buffer\_consumed@{buffer\_consumed}!mp3dec\_ex\_t@{mp3dec\_ex\_t}}
+\doxysubsubsection{\texorpdfstring{buffer\_consumed}{buffer\_consumed}}
+{\footnotesize\ttfamily int mp3dec\+\_\+ex\+\_\+t\+::buffer\+\_\+consumed}
+
+\Hypertarget{structmp3dec__ex__t_a80e64fa71e0ec9aad9654038baf2dd4a}\label{structmp3dec__ex__t_a80e64fa71e0ec9aad9654038baf2dd4a} 
+\index{mp3dec\_ex\_t@{mp3dec\_ex\_t}!buffer\_samples@{buffer\_samples}}
+\index{buffer\_samples@{buffer\_samples}!mp3dec\_ex\_t@{mp3dec\_ex\_t}}
+\doxysubsubsection{\texorpdfstring{buffer\_samples}{buffer\_samples}}
+{\footnotesize\ttfamily int mp3dec\+\_\+ex\+\_\+t\+::buffer\+\_\+samples}
+
+\Hypertarget{structmp3dec__ex__t_a028bbd1ac0bb11138c8e0ba11e38eadb}\label{structmp3dec__ex__t_a028bbd1ac0bb11138c8e0ba11e38eadb} 
+\index{mp3dec\_ex\_t@{mp3dec\_ex\_t}!cur\_sample@{cur\_sample}}
+\index{cur\_sample@{cur\_sample}!mp3dec\_ex\_t@{mp3dec\_ex\_t}}
+\doxysubsubsection{\texorpdfstring{cur\_sample}{cur\_sample}}
+{\footnotesize\ttfamily uint64\+\_\+t mp3dec\+\_\+ex\+\_\+t\+::cur\+\_\+sample}
+
+\Hypertarget{structmp3dec__ex__t_ae16315bdda132a17b9e71d75f9f5cc16}\label{structmp3dec__ex__t_ae16315bdda132a17b9e71d75f9f5cc16} 
+\index{mp3dec\_ex\_t@{mp3dec\_ex\_t}!detected\_samples@{detected\_samples}}
+\index{detected\_samples@{detected\_samples}!mp3dec\_ex\_t@{mp3dec\_ex\_t}}
+\doxysubsubsection{\texorpdfstring{detected\_samples}{detected\_samples}}
+{\footnotesize\ttfamily uint64\+\_\+t mp3dec\+\_\+ex\+\_\+t\+::detected\+\_\+samples}
+
+\Hypertarget{structmp3dec__ex__t_a19da317bf596134c8a2397edbf90c061}\label{structmp3dec__ex__t_a19da317bf596134c8a2397edbf90c061} 
+\index{mp3dec\_ex\_t@{mp3dec\_ex\_t}!end\_offset@{end\_offset}}
+\index{end\_offset@{end\_offset}!mp3dec\_ex\_t@{mp3dec\_ex\_t}}
+\doxysubsubsection{\texorpdfstring{end\_offset}{end\_offset}}
+{\footnotesize\ttfamily uint64\+\_\+t mp3dec\+\_\+ex\+\_\+t\+::end\+\_\+offset}
+
+\Hypertarget{structmp3dec__ex__t_aa83ce3f305ad2239de2c2167b8a51bc8}\label{structmp3dec__ex__t_aa83ce3f305ad2239de2c2167b8a51bc8} 
+\index{mp3dec\_ex\_t@{mp3dec\_ex\_t}!file@{file}}
+\index{file@{file}!mp3dec\_ex\_t@{mp3dec\_ex\_t}}
+\doxysubsubsection{\texorpdfstring{file}{file}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmp3dec__map__info__t}{mp3dec\+\_\+map\+\_\+info\+\_\+t}} mp3dec\+\_\+ex\+\_\+t\+::file}
+
+\Hypertarget{structmp3dec__ex__t_a1fbba373f884d9a1bcee655104070e87}\label{structmp3dec__ex__t_a1fbba373f884d9a1bcee655104070e87} 
+\index{mp3dec\_ex\_t@{mp3dec\_ex\_t}!flags@{flags}}
+\index{flags@{flags}!mp3dec\_ex\_t@{mp3dec\_ex\_t}}
+\doxysubsubsection{\texorpdfstring{flags}{flags}}
+{\footnotesize\ttfamily int mp3dec\+\_\+ex\+\_\+t\+::flags}
+
+\Hypertarget{structmp3dec__ex__t_a2dacee877a4c0bee52369036233ef402}\label{structmp3dec__ex__t_a2dacee877a4c0bee52369036233ef402} 
+\index{mp3dec\_ex\_t@{mp3dec\_ex\_t}!free\_format\_bytes@{free\_format\_bytes}}
+\index{free\_format\_bytes@{free\_format\_bytes}!mp3dec\_ex\_t@{mp3dec\_ex\_t}}
+\doxysubsubsection{\texorpdfstring{free\_format\_bytes}{free\_format\_bytes}}
+{\footnotesize\ttfamily int mp3dec\+\_\+ex\+\_\+t\+::free\+\_\+format\+\_\+bytes}
+
+\Hypertarget{structmp3dec__ex__t_a3a9c9e9dbe68b24a397a921404b598ea}\label{structmp3dec__ex__t_a3a9c9e9dbe68b24a397a921404b598ea} 
+\index{mp3dec\_ex\_t@{mp3dec\_ex\_t}!index@{index}}
+\index{index@{index}!mp3dec\_ex\_t@{mp3dec\_ex\_t}}
+\doxysubsubsection{\texorpdfstring{index}{index}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmp3dec__index__t}{mp3dec\+\_\+index\+\_\+t}} mp3dec\+\_\+ex\+\_\+t\+::index}
+
+\Hypertarget{structmp3dec__ex__t_a3a3ed982119a5322a0a1690c312662a2}\label{structmp3dec__ex__t_a3a3ed982119a5322a0a1690c312662a2} 
+\index{mp3dec\_ex\_t@{mp3dec\_ex\_t}!indexes\_built@{indexes\_built}}
+\index{indexes\_built@{indexes\_built}!mp3dec\_ex\_t@{mp3dec\_ex\_t}}
+\doxysubsubsection{\texorpdfstring{indexes\_built}{indexes\_built}}
+{\footnotesize\ttfamily int mp3dec\+\_\+ex\+\_\+t\+::indexes\+\_\+built}
+
+\Hypertarget{structmp3dec__ex__t_a227aeba45d7295665e6eb6eb5203c56d}\label{structmp3dec__ex__t_a227aeba45d7295665e6eb6eb5203c56d} 
+\index{mp3dec\_ex\_t@{mp3dec\_ex\_t}!info@{info}}
+\index{info@{info}!mp3dec\_ex\_t@{mp3dec\_ex\_t}}
+\doxysubsubsection{\texorpdfstring{info}{info}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmp3dec__frame__info__t}{mp3dec\+\_\+frame\+\_\+info\+\_\+t}} mp3dec\+\_\+ex\+\_\+t\+::info}
+
+\Hypertarget{structmp3dec__ex__t_aceffd88f33a7210f8272297836c467ba}\label{structmp3dec__ex__t_aceffd88f33a7210f8272297836c467ba} 
+\index{mp3dec\_ex\_t@{mp3dec\_ex\_t}!input\_consumed@{input\_consumed}}
+\index{input\_consumed@{input\_consumed}!mp3dec\_ex\_t@{mp3dec\_ex\_t}}
+\doxysubsubsection{\texorpdfstring{input\_consumed}{input\_consumed}}
+{\footnotesize\ttfamily size\+\_\+t mp3dec\+\_\+ex\+\_\+t\+::input\+\_\+consumed}
+
+\Hypertarget{structmp3dec__ex__t_a3ef1f3115304bd3c2ef745f3b26f0c28}\label{structmp3dec__ex__t_a3ef1f3115304bd3c2ef745f3b26f0c28} 
+\index{mp3dec\_ex\_t@{mp3dec\_ex\_t}!input\_filled@{input\_filled}}
+\index{input\_filled@{input\_filled}!mp3dec\_ex\_t@{mp3dec\_ex\_t}}
+\doxysubsubsection{\texorpdfstring{input\_filled}{input\_filled}}
+{\footnotesize\ttfamily size\+\_\+t mp3dec\+\_\+ex\+\_\+t\+::input\+\_\+filled}
+
+\Hypertarget{structmp3dec__ex__t_a2e32856a712086490fa8167a7f99b4ae}\label{structmp3dec__ex__t_a2e32856a712086490fa8167a7f99b4ae} 
+\index{mp3dec\_ex\_t@{mp3dec\_ex\_t}!io@{io}}
+\index{io@{io}!mp3dec\_ex\_t@{mp3dec\_ex\_t}}
+\doxysubsubsection{\texorpdfstring{io}{io}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmp3dec__io__t}{mp3dec\+\_\+io\+\_\+t}}\texorpdfstring{$\ast$}{*} mp3dec\+\_\+ex\+\_\+t\+::io}
+
+\Hypertarget{structmp3dec__ex__t_ae82b3fcc75ebb41c91ba8a5c286c71f8}\label{structmp3dec__ex__t_ae82b3fcc75ebb41c91ba8a5c286c71f8} 
+\index{mp3dec\_ex\_t@{mp3dec\_ex\_t}!is\_file@{is\_file}}
+\index{is\_file@{is\_file}!mp3dec\_ex\_t@{mp3dec\_ex\_t}}
+\doxysubsubsection{\texorpdfstring{is\_file}{is\_file}}
+{\footnotesize\ttfamily int mp3dec\+\_\+ex\+\_\+t\+::is\+\_\+file}
+
+\Hypertarget{structmp3dec__ex__t_ac0ae50bbcde19affd18d8e88da7cd13b}\label{structmp3dec__ex__t_ac0ae50bbcde19affd18d8e88da7cd13b} 
+\index{mp3dec\_ex\_t@{mp3dec\_ex\_t}!last\_error@{last\_error}}
+\index{last\_error@{last\_error}!mp3dec\_ex\_t@{mp3dec\_ex\_t}}
+\doxysubsubsection{\texorpdfstring{last\_error}{last\_error}}
+{\footnotesize\ttfamily int mp3dec\+\_\+ex\+\_\+t\+::last\+\_\+error}
+
+\Hypertarget{structmp3dec__ex__t_a17a9729ae1728c919876d6fd8693914a}\label{structmp3dec__ex__t_a17a9729ae1728c919876d6fd8693914a} 
+\index{mp3dec\_ex\_t@{mp3dec\_ex\_t}!mp3d@{mp3d}}
+\index{mp3d@{mp3d}!mp3dec\_ex\_t@{mp3dec\_ex\_t}}
+\doxysubsubsection{\texorpdfstring{mp3d}{mp3d}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmp3dec__t}{mp3dec\+\_\+t}} mp3dec\+\_\+ex\+\_\+t\+::mp3d}
+
+\Hypertarget{structmp3dec__ex__t_a33d2308a3bdaf5dc0738a6a7be91493f}\label{structmp3dec__ex__t_a33d2308a3bdaf5dc0738a6a7be91493f} 
+\index{mp3dec\_ex\_t@{mp3dec\_ex\_t}!offset@{offset}}
+\index{offset@{offset}!mp3dec\_ex\_t@{mp3dec\_ex\_t}}
+\doxysubsubsection{\texorpdfstring{offset}{offset}}
+{\footnotesize\ttfamily uint64\+\_\+t mp3dec\+\_\+ex\+\_\+t\+::offset}
+
+\Hypertarget{structmp3dec__ex__t_a138bf7485e7f4f20c481b46051a0a8bf}\label{structmp3dec__ex__t_a138bf7485e7f4f20c481b46051a0a8bf} 
+\index{mp3dec\_ex\_t@{mp3dec\_ex\_t}!samples@{samples}}
+\index{samples@{samples}!mp3dec\_ex\_t@{mp3dec\_ex\_t}}
+\doxysubsubsection{\texorpdfstring{samples}{samples}}
+{\footnotesize\ttfamily uint64\+\_\+t mp3dec\+\_\+ex\+\_\+t\+::samples}
+
+\Hypertarget{structmp3dec__ex__t_abb7c22db7aa7fdd657edb68a14cc0f60}\label{structmp3dec__ex__t_abb7c22db7aa7fdd657edb68a14cc0f60} 
+\index{mp3dec\_ex\_t@{mp3dec\_ex\_t}!start\_delay@{start\_delay}}
+\index{start\_delay@{start\_delay}!mp3dec\_ex\_t@{mp3dec\_ex\_t}}
+\doxysubsubsection{\texorpdfstring{start\_delay}{start\_delay}}
+{\footnotesize\ttfamily int mp3dec\+\_\+ex\+\_\+t\+::start\+\_\+delay}
+
+\Hypertarget{structmp3dec__ex__t_a7884cfda5fa124a6994468e69681a203}\label{structmp3dec__ex__t_a7884cfda5fa124a6994468e69681a203} 
+\index{mp3dec\_ex\_t@{mp3dec\_ex\_t}!start\_offset@{start\_offset}}
+\index{start\_offset@{start\_offset}!mp3dec\_ex\_t@{mp3dec\_ex\_t}}
+\doxysubsubsection{\texorpdfstring{start\_offset}{start\_offset}}
+{\footnotesize\ttfamily uint64\+\_\+t mp3dec\+\_\+ex\+\_\+t\+::start\+\_\+offset}
+
+\Hypertarget{structmp3dec__ex__t_a09fd3fb5e70266fca05d7167e614bfee}\label{structmp3dec__ex__t_a09fd3fb5e70266fca05d7167e614bfee} 
+\index{mp3dec\_ex\_t@{mp3dec\_ex\_t}!to\_skip@{to\_skip}}
+\index{to\_skip@{to\_skip}!mp3dec\_ex\_t@{mp3dec\_ex\_t}}
+\doxysubsubsection{\texorpdfstring{to\_skip}{to\_skip}}
+{\footnotesize\ttfamily int mp3dec\+\_\+ex\+\_\+t\+::to\+\_\+skip}
+
+\Hypertarget{structmp3dec__ex__t_a56111cda542372126c53b751bb231b2b}\label{structmp3dec__ex__t_a56111cda542372126c53b751bb231b2b} 
+\index{mp3dec\_ex\_t@{mp3dec\_ex\_t}!vbr\_tag\_found@{vbr\_tag\_found}}
+\index{vbr\_tag\_found@{vbr\_tag\_found}!mp3dec\_ex\_t@{mp3dec\_ex\_t}}
+\doxysubsubsection{\texorpdfstring{vbr\_tag\_found}{vbr\_tag\_found}}
+{\footnotesize\ttfamily int mp3dec\+\_\+ex\+\_\+t\+::vbr\+\_\+tag\+\_\+found}
+
+
+
+Dokumentacja dla tej struktury została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/extlibs/headers/minimp3/\mbox{\hyperlink{minimp3__ex_8h}{minimp3\+\_\+ex.\+h}}\end{DoxyCompactItemize}

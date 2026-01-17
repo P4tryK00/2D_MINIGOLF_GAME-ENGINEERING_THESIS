@@ -1,0 +1,137 @@
+\doxysection{Dokumentacja klasy Sound\+Manager}
+\hypertarget{class_sound_manager}{}\label{class_sound_manager}\index{SoundManager@{SoundManager}}
+
+
+Statyczny menedżer zasobów dla buforów dźwiękowych.  
+
+
+
+
+{\ttfamily \#include $<$Sound\+Manager.\+h$>$}
+
+
+
+Diagram współpracy dla Sound\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{class_sound_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sound_manager_a9a80176f87fc146c193c4f2de7b114aa}{Sound\+Manager}} ()=delete
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Statyczne metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_sound_manager_a9c81ee7b0dc13c6af3e557bc3cd69941}{load}} (const std\+::string \&key, const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Ładuje plik dźwiękowy do pamięci. \end{DoxyCompactList}\item 
+static const sf\+::\+Sound\+Buffer \& \mbox{\hyperlink{class_sound_manager_a664980ef8161f3ca2d515604b52912c2}{get}} (const std\+::string \&key)
+\begin{DoxyCompactList}\small\item\em Pobiera załadowany bufor dźwiękowy. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_sound_manager_a67ffa8733e649c42efa534e072ae6699}{cleanup}} ()
+\begin{DoxyCompactList}\small\item\em Czyści wszystkie bufory dźwiękowe. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Statyczne atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::map$<$ std\+::string, sf\+::\+Sound\+Buffer $>$ \mbox{\hyperlink{class_sound_manager_aa0faaee02ad8452b4c9d3fc67660550f}{m\+\_\+\+Sounds}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Statyczny menedżer zasobów dla buforów dźwiękowych. 
+
+Zarządza obiektami sf\+::\+Sound\+Buffer, aby zapewnić jednokrotne ładowanie danych audio do pamięci. 
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{class_sound_manager_a9a80176f87fc146c193c4f2de7b114aa}\label{class_sound_manager_a9a80176f87fc146c193c4f2de7b114aa} 
+\index{SoundManager@{SoundManager}!SoundManager@{SoundManager}}
+\index{SoundManager@{SoundManager}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{SoundManager()}{SoundManager()}}
+{\footnotesize\ttfamily Sound\+Manager\+::\+Sound\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_sound_manager_a67ffa8733e649c42efa534e072ae6699}\label{class_sound_manager_a67ffa8733e649c42efa534e072ae6699} 
+\index{SoundManager@{SoundManager}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{cleanup()}{cleanup()}}
+{\footnotesize\ttfamily void Sound\+Manager\+::cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Czyści wszystkie bufory dźwiękowe. 
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_sound_manager_a67ffa8733e649c42efa534e072ae6699_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_sound_manager_a664980ef8161f3ca2d515604b52912c2}\label{class_sound_manager_a664980ef8161f3ca2d515604b52912c2} 
+\index{SoundManager@{SoundManager}!get@{get}}
+\index{get@{get}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily const sf\+::\+Sound\+Buffer \& Sound\+Manager\+::get (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Pobiera załadowany bufor dźwiękowy. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em key} & Unikalny identyfikator. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Stała referencja do sf\+::\+Sound\+Buffer. 
+\end{DoxyReturn}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_sound_manager_a664980ef8161f3ca2d515604b52912c2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_sound_manager_a9c81ee7b0dc13c6af3e557bc3cd69941}\label{class_sound_manager_a9c81ee7b0dc13c6af3e557bc3cd69941} 
+\index{SoundManager@{SoundManager}!load@{load}}
+\index{load@{load}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily void Sound\+Manager\+::load (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Ładuje plik dźwiękowy do pamięci. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em key} & Unikalny identyfikator dźwięku. \\
+\hline
+{\em path} & Ścieżka do pliku audio (.wav, .ogg itp.). \\
+\hline
+\end{DoxyParams}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_sound_manager_a9c81ee7b0dc13c6af3e557bc3cd69941_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{class_sound_manager_aa0faaee02ad8452b4c9d3fc67660550f}\label{class_sound_manager_aa0faaee02ad8452b4c9d3fc67660550f} 
+\index{SoundManager@{SoundManager}!m\_Sounds@{m\_Sounds}}
+\index{m\_Sounds@{m\_Sounds}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{m\_Sounds}{m\_Sounds}}
+{\footnotesize\ttfamily std\+::map$<$ std\+::string, sf\+::\+Sound\+Buffer $>$ Sound\+Manager\+::m\+\_\+\+Sounds\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_sound_manager_8h}{Sound\+Manager.\+h}}\item 
+\mbox{\hyperlink{_sound_manager_8cpp}{Sound\+Manager.\+cpp}}\end{DoxyCompactItemize}

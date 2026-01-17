@@ -1,0 +1,454 @@
+\doxysection{Dokumentacja klasy sf\+::priv\+::Render\+Texture\+Impl\+FBO}
+\hypertarget{classsf_1_1priv_1_1_render_texture_impl_f_b_o}{}\label{classsf_1_1priv_1_1_render_texture_impl_f_b_o}\index{sf::priv::RenderTextureImplFBO@{sf::priv::RenderTextureImplFBO}}
+
+
+Specialization of \doxylink{classsf_1_1priv_1_1_render_texture_impl}{Render\+Texture\+Impl} using the Frame\+Buffer Object Open\+GL extension.  
+
+
+
+
+{\ttfamily \#include $<$Render\+Texture\+Impl\+FBO.\+hpp$>$}
+
+
+
+Diagram dziedziczenia dla sf\+::priv\+::Render\+Texture\+Impl\+FBO\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classsf_1_1priv_1_1_render_texture_impl_f_b_o__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagram współpracy dla sf\+::priv\+::Render\+Texture\+Impl\+FBO\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classsf_1_1priv_1_1_render_texture_impl_f_b_o__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsf_1_1priv_1_1_render_texture_impl_f_b_o_ab140f18ba82777dc6a0b3536a6ac45fa}{Render\+Texture\+Impl\+FBO}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1priv_1_1_render_texture_impl_f_b_o_aa81882a241bb72764c343d83f7ce6767}{\texorpdfstring{$\sim$}{\string~}\+Render\+Texture\+Impl\+FBO}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{classsf_1_1priv_1_1_render_texture_impl}{sf\+::priv\+::\+Render\+Texture\+Impl}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classsf_1_1priv_1_1_render_texture_impl_af505672c86098c99b446a0e5b21b6598}{\texorpdfstring{$\sim$}{\string~}\+Render\+Texture\+Impl}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_render_texture_impl_aca935a46aa8f04b070b9b0b55491313e}{update\+Texture}} (unsigned int texture\+Id)=0
+\begin{DoxyCompactList}\small\item\em Update the pixels of the target texture. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Statyczne metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_render_texture_impl_f_b_o_aff593bebeb1cd3b617733464c41d0252}{is\+Available}} ()
+\begin{DoxyCompactList}\small\item\em Check whether the system supports FBOs or not. \end{DoxyCompactList}\item 
+static unsigned int \mbox{\hyperlink{classsf_1_1priv_1_1_render_texture_impl_f_b_o_a6be14d1c3045b0687a2e1cab5481cb89}{get\+Maximum\+Antialiasing\+Level}} ()
+\begin{DoxyCompactList}\small\item\em Get the maximum anti-\/aliasing level supported by the system. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_render_texture_impl_f_b_o_af90c7cd4b3a1e41be7f45a97daba9a4f}{unbind}} ()
+\begin{DoxyCompactList}\small\item\em Unbind the currently bound FBO. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classsf_1_1priv_1_1_render_texture_impl_f_b_o_a00871d7a3b2a7676cbba1a1ad56aedd9}{create}} (unsigned int width, unsigned int height, unsigned int texture\+Id, const \mbox{\hyperlink{structsf_1_1_context_settings}{Context\+Settings}} \&settings)
+\begin{DoxyCompactList}\small\item\em Create the render texture implementation. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_render_texture_impl_f_b_o_a1dd673e726ed8fda8727f05fc0929048}{create\+Frame\+Buffer}} ()
+\begin{DoxyCompactList}\small\item\em Create an FBO in the current context. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classsf_1_1priv_1_1_render_texture_impl_f_b_o_aa2e0aa648bcce022a90b1a60f87d3820}{activate}} (bool active)
+\begin{DoxyCompactList}\small\item\em Activate or deactivate the render texture for rendering. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classsf_1_1priv_1_1_render_texture_impl_f_b_o_aec1b4cacf1f43d124a39b6cbf106f46e}{is\+Srgb}} () const
+\begin{DoxyCompactList}\small\item\em Tell if the render-\/texture will use s\+RGB encoding when drawing on it. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_render_texture_impl_f_b_o_ab5b6ae1389ed03868b74b694c5dc6eaa}{update\+Texture}} (unsigned texture\+Id)
+\begin{DoxyCompactList}\small\item\em Update the pixels of the target texture. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody prywatne dziedziczone z \mbox{\hyperlink{classsf_1_1_gl_resource}{sf\+::\+Gl\+Resource}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsf_1_1_gl_resource_ad8fb7a0674f0f77e530dacc2a3b0dc6a}{Gl\+Resource}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1_gl_resource_ab99035b67052331d1e8cf67abd93de98}{\texorpdfstring{$\sim$}{\string~}\+Gl\+Resource}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ \mbox{\hyperlink{namespacesf_add9ac83466d96b9f50a009b9f4064266}{Uint64}}, unsigned int $>$ \mbox{\hyperlink{classsf_1_1priv_1_1_render_texture_impl_f_b_o_a191552fdbec0ad0bfae96297e26d2e5d}{m\+\_\+frame\+Buffers}}
+\begin{DoxyCompactList}\small\item\em Open\+GL frame buffer objects per context. \end{DoxyCompactList}\item 
+std\+::map$<$ \mbox{\hyperlink{namespacesf_add9ac83466d96b9f50a009b9f4064266}{Uint64}}, unsigned int $>$ \mbox{\hyperlink{classsf_1_1priv_1_1_render_texture_impl_f_b_o_a75c1567d2bfc1349f84e41377c627ac2}{m\+\_\+multisample\+Frame\+Buffers}}
+\begin{DoxyCompactList}\small\item\em Optional per-\/context Open\+GL frame buffer objects with multisample attachments. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classsf_1_1priv_1_1_render_texture_impl_f_b_o_a1e474418083b991c4344de1d5d516ade}{m\+\_\+depth\+Stencil\+Buffer}}
+\begin{DoxyCompactList}\small\item\em Optional depth/stencil buffer attached to the frame buffer. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classsf_1_1priv_1_1_render_texture_impl_f_b_o_a09a3c076bb65eaac6fa401ff926fb6e9}{m\+\_\+color\+Buffer}}
+\begin{DoxyCompactList}\small\item\em Optional multisample color buffer attached to the frame buffer. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classsf_1_1priv_1_1_render_texture_impl_f_b_o_adbf9ac646dc11d449d0f856ad0bfcdcb}{m\+\_\+width}}
+\begin{DoxyCompactList}\small\item\em Width of the attachments. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classsf_1_1priv_1_1_render_texture_impl_f_b_o_afd6bec02bc23138804c9697b11f0b325}{m\+\_\+height}}
+\begin{DoxyCompactList}\small\item\em Height of the attachments. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1_context}{Context}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classsf_1_1priv_1_1_render_texture_impl_f_b_o_ad975f419e4ebfa38bb8377e257dd7399}{m\+\_\+context}}
+\begin{DoxyCompactList}\small\item\em Backup Open\+GL context, used when none already exist. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classsf_1_1priv_1_1_render_texture_impl_f_b_o_af8474f9f9a0a6d20fb79c70bb6871be1}{m\+\_\+texture\+Id}}
+\begin{DoxyCompactList}\small\item\em The ID of the texture to attach to the FBO. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_render_texture_impl_f_b_o_a843c3ec811763bfd67b9a7557e0e4a70}{m\+\_\+multisample}}
+\begin{DoxyCompactList}\small\item\em Whether we have to create a multisample frame buffer as well. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_render_texture_impl_f_b_o_a4a1116b83b04ed4e362985becc18de1c}{m\+\_\+stencil}}
+\begin{DoxyCompactList}\small\item\em Whether we have stencil attachment. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_render_texture_impl_f_b_o_a003a57b0289496d37e677a3c84ca2ab9}{m\+\_\+s\+Rgb}}
+\begin{DoxyCompactList}\small\item\em Whether we need to encode drawn pixels into s\+RGB color space. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Dodatkowe Dziedziczone Składowe}
+\doxysubsection*{Statyczne metody prywatne dziedziczone z \mbox{\hyperlink{classsf_1_1_gl_resource}{sf\+::\+Gl\+Resource}}}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classsf_1_1_gl_resource_ac033925617e3b2a2f2f5c1f10d814d8e}{register\+Context\+Destroy\+Callback}} (\mbox{\hyperlink{namespacesf_a90389f466699a5737ffa91d2a94b0166}{Context\+Destroy\+Callback}} callback, void \texorpdfstring{$\ast$}{*}arg)
+\begin{DoxyCompactList}\small\item\em Register a function to be called when a context is destroyed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Specialization of \doxylink{classsf_1_1priv_1_1_render_texture_impl}{Render\+Texture\+Impl} using the Frame\+Buffer Object Open\+GL extension. 
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{classsf_1_1priv_1_1_render_texture_impl_f_b_o_ab140f18ba82777dc6a0b3536a6ac45fa}\label{classsf_1_1priv_1_1_render_texture_impl_f_b_o_ab140f18ba82777dc6a0b3536a6ac45fa} 
+\index{sf::priv::RenderTextureImplFBO@{sf::priv::RenderTextureImplFBO}!RenderTextureImplFBO@{RenderTextureImplFBO}}
+\index{RenderTextureImplFBO@{RenderTextureImplFBO}!sf::priv::RenderTextureImplFBO@{sf::priv::RenderTextureImplFBO}}
+\doxysubsubsection{\texorpdfstring{RenderTextureImplFBO()}{RenderTextureImplFBO()}}
+{\footnotesize\ttfamily sf\+::priv\+::\+Render\+Texture\+Impl\+FBO\+::\+Render\+Texture\+Impl\+FBO (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_render_texture_impl_f_b_o_ab140f18ba82777dc6a0b3536a6ac45fa_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_render_texture_impl_f_b_o_aa81882a241bb72764c343d83f7ce6767}\label{classsf_1_1priv_1_1_render_texture_impl_f_b_o_aa81882a241bb72764c343d83f7ce6767} 
+\index{sf::priv::RenderTextureImplFBO@{sf::priv::RenderTextureImplFBO}!````~RenderTextureImplFBO@{\texorpdfstring{$\sim$}{\string~}RenderTextureImplFBO}}
+\index{````~RenderTextureImplFBO@{\texorpdfstring{$\sim$}{\string~}RenderTextureImplFBO}!sf::priv::RenderTextureImplFBO@{sf::priv::RenderTextureImplFBO}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}RenderTextureImplFBO()}{\string~RenderTextureImplFBO()}}
+{\footnotesize\ttfamily sf\+::priv\+::\+Render\+Texture\+Impl\+FBO\+::\texorpdfstring{$\sim$}{\string~}\+Render\+Texture\+Impl\+FBO (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{classsf_1_1priv_1_1_render_texture_impl_f_b_o_aa2e0aa648bcce022a90b1a60f87d3820}\label{classsf_1_1priv_1_1_render_texture_impl_f_b_o_aa2e0aa648bcce022a90b1a60f87d3820} 
+\index{sf::priv::RenderTextureImplFBO@{sf::priv::RenderTextureImplFBO}!activate@{activate}}
+\index{activate@{activate}!sf::priv::RenderTextureImplFBO@{sf::priv::RenderTextureImplFBO}}
+\doxysubsubsection{\texorpdfstring{activate()}{activate()}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Render\+Texture\+Impl\+FBO\+::activate (\begin{DoxyParamCaption}\item[{bool}]{active }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Activate or deactivate the render texture for rendering. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em active} & True to activate, false to deactivate\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True on success, false on failure 
+\end{DoxyReturn}
+
+
+Implementuje \mbox{\hyperlink{classsf_1_1priv_1_1_render_texture_impl_a9bddf81716167dc980b4b36287056a51}{sf\+::priv\+::\+Render\+Texture\+Impl}}.
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_render_texture_impl_f_b_o_aa2e0aa648bcce022a90b1a60f87d3820_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_render_texture_impl_f_b_o_aa2e0aa648bcce022a90b1a60f87d3820_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_render_texture_impl_f_b_o_a00871d7a3b2a7676cbba1a1ad56aedd9}\label{classsf_1_1priv_1_1_render_texture_impl_f_b_o_a00871d7a3b2a7676cbba1a1ad56aedd9} 
+\index{sf::priv::RenderTextureImplFBO@{sf::priv::RenderTextureImplFBO}!create@{create}}
+\index{create@{create}!sf::priv::RenderTextureImplFBO@{sf::priv::RenderTextureImplFBO}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Render\+Texture\+Impl\+FBO\+::create (\begin{DoxyParamCaption}\item[{unsigned int}]{width,  }\item[{unsigned int}]{height,  }\item[{unsigned int}]{texture\+Id,  }\item[{const \mbox{\hyperlink{structsf_1_1_context_settings}{Context\+Settings}} \&}]{settings }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Create the render texture implementation. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em width} & Width of the texture to render to \\
+\hline
+{\em height} & Height of the texture to render to \\
+\hline
+{\em texture\+Id} & Open\+GL identifier of the target texture \\
+\hline
+{\em settings} & \doxylink{classsf_1_1_context}{Context} settings to create render-\/texture with\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True if creation has been successful 
+\end{DoxyReturn}
+
+
+Implementuje \mbox{\hyperlink{classsf_1_1priv_1_1_render_texture_impl_a9f47a58dd71506875601e88ed86a2806}{sf\+::priv\+::\+Render\+Texture\+Impl}}.
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_render_texture_impl_f_b_o_a00871d7a3b2a7676cbba1a1ad56aedd9_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_render_texture_impl_f_b_o_a1dd673e726ed8fda8727f05fc0929048}\label{classsf_1_1priv_1_1_render_texture_impl_f_b_o_a1dd673e726ed8fda8727f05fc0929048} 
+\index{sf::priv::RenderTextureImplFBO@{sf::priv::RenderTextureImplFBO}!createFrameBuffer@{createFrameBuffer}}
+\index{createFrameBuffer@{createFrameBuffer}!sf::priv::RenderTextureImplFBO@{sf::priv::RenderTextureImplFBO}}
+\doxysubsubsection{\texorpdfstring{createFrameBuffer()}{createFrameBuffer()}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Render\+Texture\+Impl\+FBO\+::create\+Frame\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Create an FBO in the current context. 
+
+\begin{DoxyReturn}{Zwraca}
+True if creation has been successful 
+\end{DoxyReturn}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_render_texture_impl_f_b_o_a1dd673e726ed8fda8727f05fc0929048_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_render_texture_impl_f_b_o_a1dd673e726ed8fda8727f05fc0929048_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_render_texture_impl_f_b_o_a6be14d1c3045b0687a2e1cab5481cb89}\label{classsf_1_1priv_1_1_render_texture_impl_f_b_o_a6be14d1c3045b0687a2e1cab5481cb89} 
+\index{sf::priv::RenderTextureImplFBO@{sf::priv::RenderTextureImplFBO}!getMaximumAntialiasingLevel@{getMaximumAntialiasingLevel}}
+\index{getMaximumAntialiasingLevel@{getMaximumAntialiasingLevel}!sf::priv::RenderTextureImplFBO@{sf::priv::RenderTextureImplFBO}}
+\doxysubsubsection{\texorpdfstring{getMaximumAntialiasingLevel()}{getMaximumAntialiasingLevel()}}
+{\footnotesize\ttfamily unsigned int sf\+::priv\+::\+Render\+Texture\+Impl\+FBO\+::get\+Maximum\+Antialiasing\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the maximum anti-\/aliasing level supported by the system. 
+
+\begin{DoxyReturn}{Zwraca}
+The maximum anti-\/aliasing level supported by the system 
+\end{DoxyReturn}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_render_texture_impl_f_b_o_a6be14d1c3045b0687a2e1cab5481cb89_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_render_texture_impl_f_b_o_aff593bebeb1cd3b617733464c41d0252}\label{classsf_1_1priv_1_1_render_texture_impl_f_b_o_aff593bebeb1cd3b617733464c41d0252} 
+\index{sf::priv::RenderTextureImplFBO@{sf::priv::RenderTextureImplFBO}!isAvailable@{isAvailable}}
+\index{isAvailable@{isAvailable}!sf::priv::RenderTextureImplFBO@{sf::priv::RenderTextureImplFBO}}
+\doxysubsubsection{\texorpdfstring{isAvailable()}{isAvailable()}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Render\+Texture\+Impl\+FBO\+::is\+Available (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Check whether the system supports FBOs or not. 
+
+\begin{DoxyReturn}{Zwraca}
+True if FBO render textures are supported 
+\end{DoxyReturn}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_render_texture_impl_f_b_o_aff593bebeb1cd3b617733464c41d0252_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_render_texture_impl_f_b_o_aff593bebeb1cd3b617733464c41d0252_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_render_texture_impl_f_b_o_aec1b4cacf1f43d124a39b6cbf106f46e}\label{classsf_1_1priv_1_1_render_texture_impl_f_b_o_aec1b4cacf1f43d124a39b6cbf106f46e} 
+\index{sf::priv::RenderTextureImplFBO@{sf::priv::RenderTextureImplFBO}!isSrgb@{isSrgb}}
+\index{isSrgb@{isSrgb}!sf::priv::RenderTextureImplFBO@{sf::priv::RenderTextureImplFBO}}
+\doxysubsubsection{\texorpdfstring{isSrgb()}{isSrgb()}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Render\+Texture\+Impl\+FBO\+::is\+Srgb (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Tell if the render-\/texture will use s\+RGB encoding when drawing on it. 
+
+You can request s\+RGB encoding for a render-\/texture by having the s\+Rgb\+Capable flag set for the context parameter of \doxylink{classsf_1_1priv_1_1_render_texture_impl_f_b_o_a00871d7a3b2a7676cbba1a1ad56aedd9}{create()} method
+
+\begin{DoxyReturn}{Zwraca}
+True if the render-\/texture use s\+RGB encoding, false otherwise 
+\end{DoxyReturn}
+
+
+Implementuje \mbox{\hyperlink{classsf_1_1priv_1_1_render_texture_impl_a0c330de7b05cf055201490fb3b97569f}{sf\+::priv\+::\+Render\+Texture\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_render_texture_impl_f_b_o_af90c7cd4b3a1e41be7f45a97daba9a4f}\label{classsf_1_1priv_1_1_render_texture_impl_f_b_o_af90c7cd4b3a1e41be7f45a97daba9a4f} 
+\index{sf::priv::RenderTextureImplFBO@{sf::priv::RenderTextureImplFBO}!unbind@{unbind}}
+\index{unbind@{unbind}!sf::priv::RenderTextureImplFBO@{sf::priv::RenderTextureImplFBO}}
+\doxysubsubsection{\texorpdfstring{unbind()}{unbind()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Render\+Texture\+Impl\+FBO\+::unbind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Unbind the currently bound FBO. 
+
+\Hypertarget{classsf_1_1priv_1_1_render_texture_impl_f_b_o_ab5b6ae1389ed03868b74b694c5dc6eaa}\label{classsf_1_1priv_1_1_render_texture_impl_f_b_o_ab5b6ae1389ed03868b74b694c5dc6eaa} 
+\index{sf::priv::RenderTextureImplFBO@{sf::priv::RenderTextureImplFBO}!updateTexture@{updateTexture}}
+\index{updateTexture@{updateTexture}!sf::priv::RenderTextureImplFBO@{sf::priv::RenderTextureImplFBO}}
+\doxysubsubsection{\texorpdfstring{updateTexture()}{updateTexture()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Render\+Texture\+Impl\+FBO\+::update\+Texture (\begin{DoxyParamCaption}\item[{unsigned}]{texture\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Update the pixels of the target texture. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em texture\+Id} & Open\+GL identifier of the target texture \\
+\hline
+\end{DoxyParams}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_render_texture_impl_f_b_o_ab5b6ae1389ed03868b74b694c5dc6eaa_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{classsf_1_1priv_1_1_render_texture_impl_f_b_o_a09a3c076bb65eaac6fa401ff926fb6e9}\label{classsf_1_1priv_1_1_render_texture_impl_f_b_o_a09a3c076bb65eaac6fa401ff926fb6e9} 
+\index{sf::priv::RenderTextureImplFBO@{sf::priv::RenderTextureImplFBO}!m\_colorBuffer@{m\_colorBuffer}}
+\index{m\_colorBuffer@{m\_colorBuffer}!sf::priv::RenderTextureImplFBO@{sf::priv::RenderTextureImplFBO}}
+\doxysubsubsection{\texorpdfstring{m\_colorBuffer}{m\_colorBuffer}}
+{\footnotesize\ttfamily unsigned int sf\+::priv\+::\+Render\+Texture\+Impl\+FBO\+::m\+\_\+color\+Buffer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Optional multisample color buffer attached to the frame buffer. 
+
+\Hypertarget{classsf_1_1priv_1_1_render_texture_impl_f_b_o_ad975f419e4ebfa38bb8377e257dd7399}\label{classsf_1_1priv_1_1_render_texture_impl_f_b_o_ad975f419e4ebfa38bb8377e257dd7399} 
+\index{sf::priv::RenderTextureImplFBO@{sf::priv::RenderTextureImplFBO}!m\_context@{m\_context}}
+\index{m\_context@{m\_context}!sf::priv::RenderTextureImplFBO@{sf::priv::RenderTextureImplFBO}}
+\doxysubsubsection{\texorpdfstring{m\_context}{m\_context}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1_context}{Context}}\texorpdfstring{$\ast$}{*} sf\+::priv\+::\+Render\+Texture\+Impl\+FBO\+::m\+\_\+context\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Backup Open\+GL context, used when none already exist. 
+
+\Hypertarget{classsf_1_1priv_1_1_render_texture_impl_f_b_o_a1e474418083b991c4344de1d5d516ade}\label{classsf_1_1priv_1_1_render_texture_impl_f_b_o_a1e474418083b991c4344de1d5d516ade} 
+\index{sf::priv::RenderTextureImplFBO@{sf::priv::RenderTextureImplFBO}!m\_depthStencilBuffer@{m\_depthStencilBuffer}}
+\index{m\_depthStencilBuffer@{m\_depthStencilBuffer}!sf::priv::RenderTextureImplFBO@{sf::priv::RenderTextureImplFBO}}
+\doxysubsubsection{\texorpdfstring{m\_depthStencilBuffer}{m\_depthStencilBuffer}}
+{\footnotesize\ttfamily unsigned int sf\+::priv\+::\+Render\+Texture\+Impl\+FBO\+::m\+\_\+depth\+Stencil\+Buffer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Optional depth/stencil buffer attached to the frame buffer. 
+
+\Hypertarget{classsf_1_1priv_1_1_render_texture_impl_f_b_o_a191552fdbec0ad0bfae96297e26d2e5d}\label{classsf_1_1priv_1_1_render_texture_impl_f_b_o_a191552fdbec0ad0bfae96297e26d2e5d} 
+\index{sf::priv::RenderTextureImplFBO@{sf::priv::RenderTextureImplFBO}!m\_frameBuffers@{m\_frameBuffers}}
+\index{m\_frameBuffers@{m\_frameBuffers}!sf::priv::RenderTextureImplFBO@{sf::priv::RenderTextureImplFBO}}
+\doxysubsubsection{\texorpdfstring{m\_frameBuffers}{m\_frameBuffers}}
+{\footnotesize\ttfamily std\+::map$<$\mbox{\hyperlink{namespacesf_add9ac83466d96b9f50a009b9f4064266}{Uint64}}, unsigned int$>$ sf\+::priv\+::\+Render\+Texture\+Impl\+FBO\+::m\+\_\+frame\+Buffers\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Open\+GL frame buffer objects per context. 
+
+\Hypertarget{classsf_1_1priv_1_1_render_texture_impl_f_b_o_afd6bec02bc23138804c9697b11f0b325}\label{classsf_1_1priv_1_1_render_texture_impl_f_b_o_afd6bec02bc23138804c9697b11f0b325} 
+\index{sf::priv::RenderTextureImplFBO@{sf::priv::RenderTextureImplFBO}!m\_height@{m\_height}}
+\index{m\_height@{m\_height}!sf::priv::RenderTextureImplFBO@{sf::priv::RenderTextureImplFBO}}
+\doxysubsubsection{\texorpdfstring{m\_height}{m\_height}}
+{\footnotesize\ttfamily unsigned int sf\+::priv\+::\+Render\+Texture\+Impl\+FBO\+::m\+\_\+height\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Height of the attachments. 
+
+\Hypertarget{classsf_1_1priv_1_1_render_texture_impl_f_b_o_a843c3ec811763bfd67b9a7557e0e4a70}\label{classsf_1_1priv_1_1_render_texture_impl_f_b_o_a843c3ec811763bfd67b9a7557e0e4a70} 
+\index{sf::priv::RenderTextureImplFBO@{sf::priv::RenderTextureImplFBO}!m\_multisample@{m\_multisample}}
+\index{m\_multisample@{m\_multisample}!sf::priv::RenderTextureImplFBO@{sf::priv::RenderTextureImplFBO}}
+\doxysubsubsection{\texorpdfstring{m\_multisample}{m\_multisample}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Render\+Texture\+Impl\+FBO\+::m\+\_\+multisample\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Whether we have to create a multisample frame buffer as well. 
+
+\Hypertarget{classsf_1_1priv_1_1_render_texture_impl_f_b_o_a75c1567d2bfc1349f84e41377c627ac2}\label{classsf_1_1priv_1_1_render_texture_impl_f_b_o_a75c1567d2bfc1349f84e41377c627ac2} 
+\index{sf::priv::RenderTextureImplFBO@{sf::priv::RenderTextureImplFBO}!m\_multisampleFrameBuffers@{m\_multisampleFrameBuffers}}
+\index{m\_multisampleFrameBuffers@{m\_multisampleFrameBuffers}!sf::priv::RenderTextureImplFBO@{sf::priv::RenderTextureImplFBO}}
+\doxysubsubsection{\texorpdfstring{m\_multisampleFrameBuffers}{m\_multisampleFrameBuffers}}
+{\footnotesize\ttfamily std\+::map$<$\mbox{\hyperlink{namespacesf_add9ac83466d96b9f50a009b9f4064266}{Uint64}}, unsigned int$>$ sf\+::priv\+::\+Render\+Texture\+Impl\+FBO\+::m\+\_\+multisample\+Frame\+Buffers\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Optional per-\/context Open\+GL frame buffer objects with multisample attachments. 
+
+\Hypertarget{classsf_1_1priv_1_1_render_texture_impl_f_b_o_a003a57b0289496d37e677a3c84ca2ab9}\label{classsf_1_1priv_1_1_render_texture_impl_f_b_o_a003a57b0289496d37e677a3c84ca2ab9} 
+\index{sf::priv::RenderTextureImplFBO@{sf::priv::RenderTextureImplFBO}!m\_sRgb@{m\_sRgb}}
+\index{m\_sRgb@{m\_sRgb}!sf::priv::RenderTextureImplFBO@{sf::priv::RenderTextureImplFBO}}
+\doxysubsubsection{\texorpdfstring{m\_sRgb}{m\_sRgb}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Render\+Texture\+Impl\+FBO\+::m\+\_\+s\+Rgb\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Whether we need to encode drawn pixels into s\+RGB color space. 
+
+\Hypertarget{classsf_1_1priv_1_1_render_texture_impl_f_b_o_a4a1116b83b04ed4e362985becc18de1c}\label{classsf_1_1priv_1_1_render_texture_impl_f_b_o_a4a1116b83b04ed4e362985becc18de1c} 
+\index{sf::priv::RenderTextureImplFBO@{sf::priv::RenderTextureImplFBO}!m\_stencil@{m\_stencil}}
+\index{m\_stencil@{m\_stencil}!sf::priv::RenderTextureImplFBO@{sf::priv::RenderTextureImplFBO}}
+\doxysubsubsection{\texorpdfstring{m\_stencil}{m\_stencil}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Render\+Texture\+Impl\+FBO\+::m\+\_\+stencil\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Whether we have stencil attachment. 
+
+\Hypertarget{classsf_1_1priv_1_1_render_texture_impl_f_b_o_af8474f9f9a0a6d20fb79c70bb6871be1}\label{classsf_1_1priv_1_1_render_texture_impl_f_b_o_af8474f9f9a0a6d20fb79c70bb6871be1} 
+\index{sf::priv::RenderTextureImplFBO@{sf::priv::RenderTextureImplFBO}!m\_textureId@{m\_textureId}}
+\index{m\_textureId@{m\_textureId}!sf::priv::RenderTextureImplFBO@{sf::priv::RenderTextureImplFBO}}
+\doxysubsubsection{\texorpdfstring{m\_textureId}{m\_textureId}}
+{\footnotesize\ttfamily unsigned int sf\+::priv\+::\+Render\+Texture\+Impl\+FBO\+::m\+\_\+texture\+Id\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The ID of the texture to attach to the FBO. 
+
+\Hypertarget{classsf_1_1priv_1_1_render_texture_impl_f_b_o_adbf9ac646dc11d449d0f856ad0bfcdcb}\label{classsf_1_1priv_1_1_render_texture_impl_f_b_o_adbf9ac646dc11d449d0f856ad0bfcdcb} 
+\index{sf::priv::RenderTextureImplFBO@{sf::priv::RenderTextureImplFBO}!m\_width@{m\_width}}
+\index{m\_width@{m\_width}!sf::priv::RenderTextureImplFBO@{sf::priv::RenderTextureImplFBO}}
+\doxysubsubsection{\texorpdfstring{m\_width}{m\_width}}
+{\footnotesize\ttfamily unsigned int sf\+::priv\+::\+Render\+Texture\+Impl\+FBO\+::m\+\_\+width\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Width of the attachments. 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Graphics/\mbox{\hyperlink{_render_texture_impl_f_b_o_8hpp}{Render\+Texture\+Impl\+FBO.\+hpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Graphics/\mbox{\hyperlink{_render_texture_impl_f_b_o_8cpp}{Render\+Texture\+Impl\+FBO.\+cpp}}\end{DoxyCompactItemize}

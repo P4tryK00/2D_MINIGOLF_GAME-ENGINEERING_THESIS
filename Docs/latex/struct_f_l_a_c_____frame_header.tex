@@ -1,0 +1,48 @@
+\doxysection{Dokumentacja struktury FLAC\+\_\+\+\_\+\+Frame\+Header}
+\hypertarget{struct_f_l_a_c_____frame_header}{}\label{struct_f_l_a_c_____frame_header}\index{FLAC\_\_FrameHeader@{FLAC\_\_FrameHeader}}
+
+
+{\ttfamily \#include $<$format.\+h$>$}
+
+
+
+Diagram współpracy dla FLAC\+\_\+\+\_\+\+Frame\+Header\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{struct_f_l_a_c_____frame_header__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+unsigned \mbox{\hyperlink{group__flac__format_gace760def6dcbbde3d9d140e5bfda34b3}{blocksize}}
+\item 
+unsigned \mbox{\hyperlink{group__flac__format_gacc23daa576f4e75885bf4f2b69cee1be}{sample\+\_\+rate}}
+\item 
+unsigned \mbox{\hyperlink{group__flac__format_ga5950c6e4f03ad81f4a03c8c6188b9bf5}{channels}}
+\item 
+\mbox{\hyperlink{group__flac__format_ga79855f8525672e37f299bbe02952ef9c}{FLAC\+\_\+\+\_\+\+Channel\+Assignment}} \mbox{\hyperlink{group__flac__format_ga9a31f752e16da9d690f8d5ff85aed89c}{channel\+\_\+assignment}}
+\item 
+unsigned \mbox{\hyperlink{group__flac__format_gae1f4af58cbbb837adf670d12bc4e86f3}{bits\+\_\+per\+\_\+sample}}
+\item 
+\mbox{\hyperlink{group__flac__format_ga8fe9ebc78386cd2a3d23b7b8e3818e1c}{FLAC\+\_\+\+\_\+\+Frame\+Number\+Type}} \mbox{\hyperlink{group__flac__format_ga7a62ec09e6f3029297179ef65377265f}{number\+\_\+type}}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>\mbox{\hyperlink{ordinals_8h_a9c4005ea7ef8d564b0cc993cdd0e4e5e}{FLAC\_\_uint32}} \mbox{\hyperlink{group__flac__format_gaa8f183fd8bcb5b73c392ae9ba7da4dbb}{FLAC\_\_FrameHeader::frame\_number}}\\
+\>\mbox{\hyperlink{ordinals_8h_aa78c8c70a3eb8a58af7436f278acde8e}{FLAC\_\_uint64}} \mbox{\hyperlink{group__flac__format_ga4bbe555be68bd9fa48a22624233ee9f0}{FLAC\_\_FrameHeader::sample\_number}}\\
+\} \mbox{\hyperlink{group__flac__format_ga4ade5d35bd9112e28476d75a3f60eaae}{number}}\\
+
+\end{tabbing}\item 
+\mbox{\hyperlink{ordinals_8h_ac49472999bc6507b4ded92a922168adf}{FLAC\+\_\+\+\_\+uint8}} \mbox{\hyperlink{group__flac__format_ga980438c380697df6f332cb27dc4672c4}{crc}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+FLAC frame header structure. (c.\+f. \href{../format.html\#frame_header}{\texttt{ format specification}}) 
+
+Dokumentacja dla tej struktury została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/extlibs/headers/\+FLAC/\mbox{\hyperlink{format_8h}{format.\+h}}\end{DoxyCompactItemize}

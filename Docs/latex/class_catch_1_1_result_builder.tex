@@ -1,0 +1,326 @@
+\doxysection{Dokumentacja klasy Catch\+::Result\+Builder}
+\hypertarget{class_catch_1_1_result_builder}{}\label{class_catch_1_1_result_builder}\index{Catch::ResultBuilder@{Catch::ResultBuilder}}
+
+
+{\ttfamily \#include $<$catch.\+hpp$>$}
+
+
+
+Diagram dziedziczenia dla Catch\+::Result\+Builder\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_catch_1_1_result_builder__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagram współpracy dla Catch\+::Result\+Builder\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_catch_1_1_result_builder__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_catch_1_1_result_builder_a8579c3056f64f9324cf1181532828376}{Result\+Builder}} (char const \texorpdfstring{$\ast$}{*}macro\+Name, \mbox{\hyperlink{struct_catch_1_1_source_line_info}{Source\+Line\+Info}} const \&line\+Info, char const \texorpdfstring{$\ast$}{*}captured\+Expression, \mbox{\hyperlink{struct_catch_1_1_result_disposition_a3396cad6e2259af326b3aae93e23e9d8}{Result\+Disposition\+::\+Flags}} result\+Disposition, char const \texorpdfstring{$\ast$}{*}second\+Arg="{}"{})
+\item 
+\mbox{\hyperlink{class_catch_1_1_result_builder_a687d1e9521d97f93c883ab070cc94c64}{\texorpdfstring{$\sim$}{\string~}\+Result\+Builder}} ()
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{class_catch_1_1_expression_lhs}{Expression\+Lhs}}$<$ T const \& $>$ \mbox{\hyperlink{class_catch_1_1_result_builder_a1829db87e701758c4c520988883b25b5}{operator$<$=}} (T const \&operand)
+\item 
+\mbox{\hyperlink{class_catch_1_1_expression_lhs}{Expression\+Lhs}}$<$ bool $>$ \mbox{\hyperlink{class_catch_1_1_result_builder_a3b87b20bcd1ef9e630880e59eeefba2a}{operator$<$=}} (bool value)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{class_catch_1_1_result_builder}{Result\+Builder}} \& \mbox{\hyperlink{class_catch_1_1_result_builder_aed849cb1c654940bfbf33c501dac7729}{operator$<$$<$}} (T const \&value)
+\item 
+\mbox{\hyperlink{class_catch_1_1_result_builder}{Result\+Builder}} \& \mbox{\hyperlink{class_catch_1_1_result_builder_abd0bf0a0d763e14509cde3ac6fab654b}{set\+Result\+Type}} (\mbox{\hyperlink{struct_catch_1_1_result_was_a624e1ee3661fcf6094ceef1f654601ef}{Result\+Was\+::\+Of\+Type}} result)
+\item 
+\mbox{\hyperlink{class_catch_1_1_result_builder}{Result\+Builder}} \& \mbox{\hyperlink{class_catch_1_1_result_builder_a192f7ab71681a1c7a6aaf9073e85ce1a}{set\+Result\+Type}} (bool result)
+\item 
+void \mbox{\hyperlink{class_catch_1_1_result_builder_a864e03b7300271de7cc44b9864463c5a}{end\+Expression}} (\mbox{\hyperlink{struct_catch_1_1_decomposed_expression}{Decomposed\+Expression}} const \&expr)
+\item 
+virtual void \mbox{\hyperlink{class_catch_1_1_result_builder_a7d94b15cf04301a8617e7b16158b5d82}{reconstruct\+Expression}} (std\+::string \&dest) const \mbox{\hyperlink{catch_8hpp_a8ecdce4d3f57835f707915ae831eb847}{CATCH\+\_\+\+OVERRIDE}}
+\item 
+\mbox{\hyperlink{class_catch_1_1_assertion_result}{Assertion\+Result}} \mbox{\hyperlink{class_catch_1_1_result_builder_a4fc96e7bb8b5f7119a8e79692ec97808}{build}} () const
+\item 
+\mbox{\hyperlink{class_catch_1_1_assertion_result}{Assertion\+Result}} \mbox{\hyperlink{class_catch_1_1_result_builder_a475d19a04c5d10a5a87cbb85447b59da}{build}} (\mbox{\hyperlink{struct_catch_1_1_decomposed_expression}{Decomposed\+Expression}} const \&expr) const
+\item 
+void \mbox{\hyperlink{class_catch_1_1_result_builder_a5bbd2f14a678f3e8d0f791ac6d233d65}{use\+Active\+Exception}} (\mbox{\hyperlink{struct_catch_1_1_result_disposition_a3396cad6e2259af326b3aae93e23e9d8}{Result\+Disposition\+::\+Flags}} result\+Disposition=\mbox{\hyperlink{struct_catch_1_1_result_disposition_a3396cad6e2259af326b3aae93e23e9d8af3bd52347ed6f8796e8ce2f77bb39ea5}{Result\+Disposition\+::\+Normal}})
+\item 
+void \mbox{\hyperlink{class_catch_1_1_result_builder_a10e467f7b7a4976e5d148b4d5066e8fd}{capture\+Result}} (\mbox{\hyperlink{struct_catch_1_1_result_was_a624e1ee3661fcf6094ceef1f654601ef}{Result\+Was\+::\+Of\+Type}} result\+Type)
+\item 
+void \mbox{\hyperlink{class_catch_1_1_result_builder_af2ae2343965802eeeb0abbd4ea9d2d36}{capture\+Expression}} ()
+\item 
+void \mbox{\hyperlink{class_catch_1_1_result_builder_a9ac96f6220c8dd8e4feee725c6228d77}{capture\+Expected\+Exception}} (std\+::string const \&expected\+Message)
+\item 
+void \mbox{\hyperlink{class_catch_1_1_result_builder_a2d6a194258f07f212fef098c0201038a}{capture\+Expected\+Exception}} (\mbox{\hyperlink{struct_catch_1_1_matchers_1_1_impl_1_1_matcher_base}{Matchers\+::\+Impl\+::\+Matcher\+Base}}$<$ std\+::string $>$ const \&matcher)
+\item 
+void \mbox{\hyperlink{class_catch_1_1_result_builder_ad8bb17e4ac590b75bf8630d8f3502f4e}{handle\+Result}} (\mbox{\hyperlink{class_catch_1_1_assertion_result}{Assertion\+Result}} const \&result)
+\item 
+void \mbox{\hyperlink{class_catch_1_1_result_builder_a3085cdc46533d45bed6f652a2ac295c0}{react}} ()
+\item 
+bool \mbox{\hyperlink{class_catch_1_1_result_builder_a6f2b0dbcc6cc5e0a500ac45f2534e3e7}{should\+Debug\+Break}} () const
+\item 
+bool \mbox{\hyperlink{class_catch_1_1_result_builder_a0428fd78ab9e8e6f1aca6855f20fc715}{allow\+Throws}} () const
+\item 
+{\footnotesize template$<$typename ArgT , typename MatcherT $>$ }\\void \mbox{\hyperlink{class_catch_1_1_result_builder_a27425538bec8fee7ac69403c5df6078c}{capture\+Match}} (ArgT const \&arg, MatcherT const \&matcher, char const \texorpdfstring{$\ast$}{*}matcher\+String)
+\item 
+void \mbox{\hyperlink{class_catch_1_1_result_builder_a87929808b4ec9b6cb5838edc1f27df17}{set\+Exception\+Guard}} ()
+\item 
+void \mbox{\hyperlink{class_catch_1_1_result_builder_a0990e93c1e13f96ffe02fa0f45e8f155}{unset\+Exception\+Guard}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{struct_catch_1_1_decomposed_expression}{Catch\+::\+Decomposed\+Expression}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{struct_catch_1_1_decomposed_expression_aa627c69bd83582c33a4d4dcac403936c}{\texorpdfstring{$\sim$}{\string~}\+Decomposed\+Expression}} ()
+\item 
+virtual bool \mbox{\hyperlink{struct_catch_1_1_decomposed_expression_a1c458ece47b71f093290dbdf9bb31fdb}{is\+Binary\+Expression}} () const
+\item 
+{\footnotesize template$<$typename T $>$ }\\STATIC\+\_\+\+ASSERT\+\_\+\+Expression\+\_\+\+Too\+\_\+\+Complex\+\_\+\+Please\+\_\+\+Rewrite\+\_\+\+As\+\_\+\+Binary\+\_\+\+Comparison \& \mbox{\hyperlink{struct_catch_1_1_decomposed_expression_a4942d391c87d78c7033a763a7e1f0831}{operator+}} (T const \&)
+\item 
+{\footnotesize template$<$typename T $>$ }\\STATIC\+\_\+\+ASSERT\+\_\+\+Expression\+\_\+\+Too\+\_\+\+Complex\+\_\+\+Please\+\_\+\+Rewrite\+\_\+\+As\+\_\+\+Binary\+\_\+\+Comparison \& \mbox{\hyperlink{struct_catch_1_1_decomposed_expression_ae6887092911ea7a45d78aee15f29ca7a}{operator-\/}} (T const \&)
+\item 
+{\footnotesize template$<$typename T $>$ }\\STATIC\+\_\+\+ASSERT\+\_\+\+Expression\+\_\+\+Too\+\_\+\+Complex\+\_\+\+Please\+\_\+\+Rewrite\+\_\+\+As\+\_\+\+Binary\+\_\+\+Comparison \& \mbox{\hyperlink{struct_catch_1_1_decomposed_expression_a013645657eac22efee92d1ebd9ae2946}{operator\texorpdfstring{$\ast$}{*}}} (T const \&)
+\item 
+{\footnotesize template$<$typename T $>$ }\\STATIC\+\_\+\+ASSERT\+\_\+\+Expression\+\_\+\+Too\+\_\+\+Complex\+\_\+\+Please\+\_\+\+Rewrite\+\_\+\+As\+\_\+\+Binary\+\_\+\+Comparison \& \mbox{\hyperlink{struct_catch_1_1_decomposed_expression_a9c74d3ddf32bffd1a2ffb5883340fc6a}{operator/}} (T const \&)
+\item 
+{\footnotesize template$<$typename T $>$ }\\STATIC\+\_\+\+ASSERT\+\_\+\+Expression\+\_\+\+Too\+\_\+\+Complex\+\_\+\+Please\+\_\+\+Rewrite\+\_\+\+As\+\_\+\+Binary\+\_\+\+Comparison \& \mbox{\hyperlink{struct_catch_1_1_decomposed_expression_a9dbe00f858cd2ac9fcaadc56b053b00a}{operator\%}} (T const \&)
+\item 
+{\footnotesize template$<$typename T $>$ }\\STATIC\+\_\+\+ASSERT\+\_\+\+Expression\+\_\+\+Too\+\_\+\+Complex\+\_\+\+Please\+\_\+\+Rewrite\+\_\+\+As\+\_\+\+Binary\+\_\+\+Comparison \& \mbox{\hyperlink{struct_catch_1_1_decomposed_expression_a6033e3cf45de73da8e2ba57bc72592ed}{operator\&\&}} (T const \&)
+\item 
+{\footnotesize template$<$typename T $>$ }\\STATIC\+\_\+\+ASSERT\+\_\+\+Expression\+\_\+\+Too\+\_\+\+Complex\+\_\+\+Please\+\_\+\+Rewrite\+\_\+\+As\+\_\+\+Binary\+\_\+\+Comparison \& \mbox{\hyperlink{struct_catch_1_1_decomposed_expression_aee11987488b46d686c94dc8549f4e0eb}{operator\texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|}}} (T const \&)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_catch_1_1_copyable_stream}{Copyable\+Stream}} \& \mbox{\hyperlink{class_catch_1_1_result_builder_a19048d6067a9ff864285ba84372b3cbe}{stream}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Statyczne metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_catch_1_1_copyable_stream}{Copyable\+Stream}} \& \mbox{\hyperlink{class_catch_1_1_result_builder_a7d0658ad3199fe122d06ac75265a42b8}{m\+\_\+stream}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_catch_1_1_assertion_info}{Assertion\+Info}} \mbox{\hyperlink{class_catch_1_1_result_builder_a63a4d1afd96793f5ce68b7b66e42cad5}{m\+\_\+assertion\+Info}}
+\item 
+\mbox{\hyperlink{struct_catch_1_1_assertion_result_data}{Assertion\+Result\+Data}} \mbox{\hyperlink{class_catch_1_1_result_builder_a631c2d5d82c240c8d1754ce40f108b13}{m\+\_\+data}}
+\item 
+bool \mbox{\hyperlink{class_catch_1_1_result_builder_aaa0653a25c1ebfde5cea3438392e7a9b}{m\+\_\+should\+Debug\+Break}}
+\item 
+bool \mbox{\hyperlink{class_catch_1_1_result_builder_a635ae36960c8122559e20585ae2d0b08}{m\+\_\+should\+Throw}}
+\item 
+bool \mbox{\hyperlink{class_catch_1_1_result_builder_a7266a8afe5c2980b78c0d450a6396e24}{m\+\_\+guard\+Exception}}
+\item 
+bool \mbox{\hyperlink{class_catch_1_1_result_builder_ab72fdc4a1eb9161914f3a820bce56f3f}{m\+\_\+used\+Stream}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{class_catch_1_1_result_builder_a8579c3056f64f9324cf1181532828376}\label{class_catch_1_1_result_builder_a8579c3056f64f9324cf1181532828376} 
+\index{Catch::ResultBuilder@{Catch::ResultBuilder}!ResultBuilder@{ResultBuilder}}
+\index{ResultBuilder@{ResultBuilder}!Catch::ResultBuilder@{Catch::ResultBuilder}}
+\doxysubsubsection{\texorpdfstring{ResultBuilder()}{ResultBuilder()}}
+{\footnotesize\ttfamily Catch\+::\+Result\+Builder\+::\+Result\+Builder (\begin{DoxyParamCaption}\item[{char const \texorpdfstring{$\ast$}{*}}]{macro\+Name,  }\item[{\mbox{\hyperlink{struct_catch_1_1_source_line_info}{Source\+Line\+Info}} const \&}]{line\+Info,  }\item[{char const \texorpdfstring{$\ast$}{*}}]{captured\+Expression,  }\item[{\mbox{\hyperlink{struct_catch_1_1_result_disposition_a3396cad6e2259af326b3aae93e23e9d8}{Result\+Disposition\+::\+Flags}}}]{result\+Disposition,  }\item[{char const \texorpdfstring{$\ast$}{*}}]{second\+Arg = {\ttfamily "{}"{}} }\end{DoxyParamCaption})}
+
+\Hypertarget{class_catch_1_1_result_builder_a687d1e9521d97f93c883ab070cc94c64}\label{class_catch_1_1_result_builder_a687d1e9521d97f93c883ab070cc94c64} 
+\index{Catch::ResultBuilder@{Catch::ResultBuilder}!````~ResultBuilder@{\texorpdfstring{$\sim$}{\string~}ResultBuilder}}
+\index{````~ResultBuilder@{\texorpdfstring{$\sim$}{\string~}ResultBuilder}!Catch::ResultBuilder@{Catch::ResultBuilder}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ResultBuilder()}{\string~ResultBuilder()}}
+{\footnotesize\ttfamily Catch\+::\+Result\+Builder\+::\texorpdfstring{$\sim$}{\string~}\+Result\+Builder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_catch_1_1_result_builder_a0428fd78ab9e8e6f1aca6855f20fc715}\label{class_catch_1_1_result_builder_a0428fd78ab9e8e6f1aca6855f20fc715} 
+\index{Catch::ResultBuilder@{Catch::ResultBuilder}!allowThrows@{allowThrows}}
+\index{allowThrows@{allowThrows}!Catch::ResultBuilder@{Catch::ResultBuilder}}
+\doxysubsubsection{\texorpdfstring{allowThrows()}{allowThrows()}}
+{\footnotesize\ttfamily bool Catch\+::\+Result\+Builder\+::allow\+Throws (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_catch_1_1_result_builder_a4fc96e7bb8b5f7119a8e79692ec97808}\label{class_catch_1_1_result_builder_a4fc96e7bb8b5f7119a8e79692ec97808} 
+\index{Catch::ResultBuilder@{Catch::ResultBuilder}!build@{build}}
+\index{build@{build}!Catch::ResultBuilder@{Catch::ResultBuilder}}
+\doxysubsubsection{\texorpdfstring{build()}{build()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_catch_1_1_assertion_result}{Assertion\+Result}} Catch\+::\+Result\+Builder\+::build (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_catch_1_1_result_builder_a475d19a04c5d10a5a87cbb85447b59da}\label{class_catch_1_1_result_builder_a475d19a04c5d10a5a87cbb85447b59da} 
+\index{Catch::ResultBuilder@{Catch::ResultBuilder}!build@{build}}
+\index{build@{build}!Catch::ResultBuilder@{Catch::ResultBuilder}}
+\doxysubsubsection{\texorpdfstring{build()}{build()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_catch_1_1_assertion_result}{Assertion\+Result}} Catch\+::\+Result\+Builder\+::build (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_catch_1_1_decomposed_expression}{Decomposed\+Expression}} const \&}]{expr }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_catch_1_1_result_builder_a2d6a194258f07f212fef098c0201038a}\label{class_catch_1_1_result_builder_a2d6a194258f07f212fef098c0201038a} 
+\index{Catch::ResultBuilder@{Catch::ResultBuilder}!captureExpectedException@{captureExpectedException}}
+\index{captureExpectedException@{captureExpectedException}!Catch::ResultBuilder@{Catch::ResultBuilder}}
+\doxysubsubsection{\texorpdfstring{captureExpectedException()}{captureExpectedException()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Catch\+::\+Result\+Builder\+::capture\+Expected\+Exception (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_catch_1_1_matchers_1_1_impl_1_1_matcher_base}{Matchers\+::\+Impl\+::\+Matcher\+Base}}$<$ std\+::string $>$ const \&}]{matcher }\end{DoxyParamCaption})}
+
+\Hypertarget{class_catch_1_1_result_builder_a9ac96f6220c8dd8e4feee725c6228d77}\label{class_catch_1_1_result_builder_a9ac96f6220c8dd8e4feee725c6228d77} 
+\index{Catch::ResultBuilder@{Catch::ResultBuilder}!captureExpectedException@{captureExpectedException}}
+\index{captureExpectedException@{captureExpectedException}!Catch::ResultBuilder@{Catch::ResultBuilder}}
+\doxysubsubsection{\texorpdfstring{captureExpectedException()}{captureExpectedException()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Catch\+::\+Result\+Builder\+::capture\+Expected\+Exception (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{expected\+Message }\end{DoxyParamCaption})}
+
+\Hypertarget{class_catch_1_1_result_builder_af2ae2343965802eeeb0abbd4ea9d2d36}\label{class_catch_1_1_result_builder_af2ae2343965802eeeb0abbd4ea9d2d36} 
+\index{Catch::ResultBuilder@{Catch::ResultBuilder}!captureExpression@{captureExpression}}
+\index{captureExpression@{captureExpression}!Catch::ResultBuilder@{Catch::ResultBuilder}}
+\doxysubsubsection{\texorpdfstring{captureExpression()}{captureExpression()}}
+{\footnotesize\ttfamily void Catch\+::\+Result\+Builder\+::capture\+Expression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_catch_1_1_result_builder_a27425538bec8fee7ac69403c5df6078c}\label{class_catch_1_1_result_builder_a27425538bec8fee7ac69403c5df6078c} 
+\index{Catch::ResultBuilder@{Catch::ResultBuilder}!captureMatch@{captureMatch}}
+\index{captureMatch@{captureMatch}!Catch::ResultBuilder@{Catch::ResultBuilder}}
+\doxysubsubsection{\texorpdfstring{captureMatch()}{captureMatch()}}
+{\footnotesize\ttfamily template$<$typename ArgT , typename MatcherT $>$ \\
+void Catch\+::\+Result\+Builder\+::capture\+Match (\begin{DoxyParamCaption}\item[{ArgT const \&}]{arg,  }\item[{MatcherT const \&}]{matcher,  }\item[{char const \texorpdfstring{$\ast$}{*}}]{matcher\+String }\end{DoxyParamCaption})}
+
+\Hypertarget{class_catch_1_1_result_builder_a10e467f7b7a4976e5d148b4d5066e8fd}\label{class_catch_1_1_result_builder_a10e467f7b7a4976e5d148b4d5066e8fd} 
+\index{Catch::ResultBuilder@{Catch::ResultBuilder}!captureResult@{captureResult}}
+\index{captureResult@{captureResult}!Catch::ResultBuilder@{Catch::ResultBuilder}}
+\doxysubsubsection{\texorpdfstring{captureResult()}{captureResult()}}
+{\footnotesize\ttfamily void Catch\+::\+Result\+Builder\+::capture\+Result (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_catch_1_1_result_was_a624e1ee3661fcf6094ceef1f654601ef}{Result\+Was\+::\+Of\+Type}}}]{result\+Type }\end{DoxyParamCaption})}
+
+\Hypertarget{class_catch_1_1_result_builder_a864e03b7300271de7cc44b9864463c5a}\label{class_catch_1_1_result_builder_a864e03b7300271de7cc44b9864463c5a} 
+\index{Catch::ResultBuilder@{Catch::ResultBuilder}!endExpression@{endExpression}}
+\index{endExpression@{endExpression}!Catch::ResultBuilder@{Catch::ResultBuilder}}
+\doxysubsubsection{\texorpdfstring{endExpression()}{endExpression()}}
+{\footnotesize\ttfamily void Catch\+::\+Result\+Builder\+::end\+Expression (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_catch_1_1_decomposed_expression}{Decomposed\+Expression}} const \&}]{expr }\end{DoxyParamCaption})}
+
+\Hypertarget{class_catch_1_1_result_builder_ad8bb17e4ac590b75bf8630d8f3502f4e}\label{class_catch_1_1_result_builder_ad8bb17e4ac590b75bf8630d8f3502f4e} 
+\index{Catch::ResultBuilder@{Catch::ResultBuilder}!handleResult@{handleResult}}
+\index{handleResult@{handleResult}!Catch::ResultBuilder@{Catch::ResultBuilder}}
+\doxysubsubsection{\texorpdfstring{handleResult()}{handleResult()}}
+{\footnotesize\ttfamily void Catch\+::\+Result\+Builder\+::handle\+Result (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_catch_1_1_assertion_result}{Assertion\+Result}} const \&}]{result }\end{DoxyParamCaption})}
+
+\Hypertarget{class_catch_1_1_result_builder_a7d0658ad3199fe122d06ac75265a42b8}\label{class_catch_1_1_result_builder_a7d0658ad3199fe122d06ac75265a42b8} 
+\index{Catch::ResultBuilder@{Catch::ResultBuilder}!m\_stream@{m\_stream}}
+\index{m\_stream@{m\_stream}!Catch::ResultBuilder@{Catch::ResultBuilder}}
+\doxysubsubsection{\texorpdfstring{m\_stream()}{m\_stream()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{struct_catch_1_1_copyable_stream}{Copyable\+Stream}} \& Catch\+::\+Result\+Builder\+::m\+\_\+stream (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{class_catch_1_1_result_builder_aed849cb1c654940bfbf33c501dac7729}\label{class_catch_1_1_result_builder_aed849cb1c654940bfbf33c501dac7729} 
+\index{Catch::ResultBuilder@{Catch::ResultBuilder}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Catch::ResultBuilder@{Catch::ResultBuilder}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_catch_1_1_result_builder}{Result\+Builder}} \& Catch\+::\+Result\+Builder\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{T const \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_catch_1_1_result_builder_a3b87b20bcd1ef9e630880e59eeefba2a}\label{class_catch_1_1_result_builder_a3b87b20bcd1ef9e630880e59eeefba2a} 
+\index{Catch::ResultBuilder@{Catch::ResultBuilder}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!Catch::ResultBuilder@{Catch::ResultBuilder}}
+\doxysubsubsection{\texorpdfstring{operator$<$=()}{operator<=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_catch_1_1_expression_lhs}{Expression\+Lhs}}$<$ bool $>$ Catch\+::\+Result\+Builder\+::operator$<$= (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_catch_1_1_result_builder_a1829db87e701758c4c520988883b25b5}\label{class_catch_1_1_result_builder_a1829db87e701758c4c520988883b25b5} 
+\index{Catch::ResultBuilder@{Catch::ResultBuilder}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!Catch::ResultBuilder@{Catch::ResultBuilder}}
+\doxysubsubsection{\texorpdfstring{operator$<$=()}{operator<=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_catch_1_1_expression_lhs}{Expression\+Lhs}}$<$ T const \& $>$ Catch\+::\+Result\+Builder\+::operator$<$= (\begin{DoxyParamCaption}\item[{T const \&}]{operand }\end{DoxyParamCaption})}
+
+\Hypertarget{class_catch_1_1_result_builder_a3085cdc46533d45bed6f652a2ac295c0}\label{class_catch_1_1_result_builder_a3085cdc46533d45bed6f652a2ac295c0} 
+\index{Catch::ResultBuilder@{Catch::ResultBuilder}!react@{react}}
+\index{react@{react}!Catch::ResultBuilder@{Catch::ResultBuilder}}
+\doxysubsubsection{\texorpdfstring{react()}{react()}}
+{\footnotesize\ttfamily void Catch\+::\+Result\+Builder\+::react (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_catch_1_1_result_builder_a7d94b15cf04301a8617e7b16158b5d82}\label{class_catch_1_1_result_builder_a7d94b15cf04301a8617e7b16158b5d82} 
+\index{Catch::ResultBuilder@{Catch::ResultBuilder}!reconstructExpression@{reconstructExpression}}
+\index{reconstructExpression@{reconstructExpression}!Catch::ResultBuilder@{Catch::ResultBuilder}}
+\doxysubsubsection{\texorpdfstring{reconstructExpression()}{reconstructExpression()}}
+{\footnotesize\ttfamily virtual void Catch\+::\+Result\+Builder\+::reconstruct\+Expression (\begin{DoxyParamCaption}\item[{std\+::string \&}]{dest }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implementuje \mbox{\hyperlink{struct_catch_1_1_decomposed_expression_a9ce7f356dc96f11f80e40c82f5aa7e55}{Catch\+::\+Decomposed\+Expression}}.
+
+\Hypertarget{class_catch_1_1_result_builder_a87929808b4ec9b6cb5838edc1f27df17}\label{class_catch_1_1_result_builder_a87929808b4ec9b6cb5838edc1f27df17} 
+\index{Catch::ResultBuilder@{Catch::ResultBuilder}!setExceptionGuard@{setExceptionGuard}}
+\index{setExceptionGuard@{setExceptionGuard}!Catch::ResultBuilder@{Catch::ResultBuilder}}
+\doxysubsubsection{\texorpdfstring{setExceptionGuard()}{setExceptionGuard()}}
+{\footnotesize\ttfamily void Catch\+::\+Result\+Builder\+::set\+Exception\+Guard (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_catch_1_1_result_builder_a192f7ab71681a1c7a6aaf9073e85ce1a}\label{class_catch_1_1_result_builder_a192f7ab71681a1c7a6aaf9073e85ce1a} 
+\index{Catch::ResultBuilder@{Catch::ResultBuilder}!setResultType@{setResultType}}
+\index{setResultType@{setResultType}!Catch::ResultBuilder@{Catch::ResultBuilder}}
+\doxysubsubsection{\texorpdfstring{setResultType()}{setResultType()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_catch_1_1_result_builder}{Result\+Builder}} \& Catch\+::\+Result\+Builder\+::set\+Result\+Type (\begin{DoxyParamCaption}\item[{bool}]{result }\end{DoxyParamCaption})}
+
+\Hypertarget{class_catch_1_1_result_builder_abd0bf0a0d763e14509cde3ac6fab654b}\label{class_catch_1_1_result_builder_abd0bf0a0d763e14509cde3ac6fab654b} 
+\index{Catch::ResultBuilder@{Catch::ResultBuilder}!setResultType@{setResultType}}
+\index{setResultType@{setResultType}!Catch::ResultBuilder@{Catch::ResultBuilder}}
+\doxysubsubsection{\texorpdfstring{setResultType()}{setResultType()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_catch_1_1_result_builder}{Result\+Builder}} \& Catch\+::\+Result\+Builder\+::set\+Result\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_catch_1_1_result_was_a624e1ee3661fcf6094ceef1f654601ef}{Result\+Was\+::\+Of\+Type}}}]{result }\end{DoxyParamCaption})}
+
+\Hypertarget{class_catch_1_1_result_builder_a6f2b0dbcc6cc5e0a500ac45f2534e3e7}\label{class_catch_1_1_result_builder_a6f2b0dbcc6cc5e0a500ac45f2534e3e7} 
+\index{Catch::ResultBuilder@{Catch::ResultBuilder}!shouldDebugBreak@{shouldDebugBreak}}
+\index{shouldDebugBreak@{shouldDebugBreak}!Catch::ResultBuilder@{Catch::ResultBuilder}}
+\doxysubsubsection{\texorpdfstring{shouldDebugBreak()}{shouldDebugBreak()}}
+{\footnotesize\ttfamily bool Catch\+::\+Result\+Builder\+::should\+Debug\+Break (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_catch_1_1_result_builder_a19048d6067a9ff864285ba84372b3cbe}\label{class_catch_1_1_result_builder_a19048d6067a9ff864285ba84372b3cbe} 
+\index{Catch::ResultBuilder@{Catch::ResultBuilder}!stream@{stream}}
+\index{stream@{stream}!Catch::ResultBuilder@{Catch::ResultBuilder}}
+\doxysubsubsection{\texorpdfstring{stream()}{stream()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_catch_1_1_copyable_stream}{Copyable\+Stream}} \& Catch\+::\+Result\+Builder\+::stream (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_catch_1_1_result_builder_a0990e93c1e13f96ffe02fa0f45e8f155}\label{class_catch_1_1_result_builder_a0990e93c1e13f96ffe02fa0f45e8f155} 
+\index{Catch::ResultBuilder@{Catch::ResultBuilder}!unsetExceptionGuard@{unsetExceptionGuard}}
+\index{unsetExceptionGuard@{unsetExceptionGuard}!Catch::ResultBuilder@{Catch::ResultBuilder}}
+\doxysubsubsection{\texorpdfstring{unsetExceptionGuard()}{unsetExceptionGuard()}}
+{\footnotesize\ttfamily void Catch\+::\+Result\+Builder\+::unset\+Exception\+Guard (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_catch_1_1_result_builder_a5bbd2f14a678f3e8d0f791ac6d233d65}\label{class_catch_1_1_result_builder_a5bbd2f14a678f3e8d0f791ac6d233d65} 
+\index{Catch::ResultBuilder@{Catch::ResultBuilder}!useActiveException@{useActiveException}}
+\index{useActiveException@{useActiveException}!Catch::ResultBuilder@{Catch::ResultBuilder}}
+\doxysubsubsection{\texorpdfstring{useActiveException()}{useActiveException()}}
+{\footnotesize\ttfamily void Catch\+::\+Result\+Builder\+::use\+Active\+Exception (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_catch_1_1_result_disposition_a3396cad6e2259af326b3aae93e23e9d8}{Result\+Disposition\+::\+Flags}}}]{result\+Disposition = {\ttfamily \mbox{\hyperlink{struct_catch_1_1_result_disposition_a3396cad6e2259af326b3aae93e23e9d8af3bd52347ed6f8796e8ce2f77bb39ea5}{Result\+Disposition\+::\+Normal}}} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{class_catch_1_1_result_builder_a63a4d1afd96793f5ce68b7b66e42cad5}\label{class_catch_1_1_result_builder_a63a4d1afd96793f5ce68b7b66e42cad5} 
+\index{Catch::ResultBuilder@{Catch::ResultBuilder}!m\_assertionInfo@{m\_assertionInfo}}
+\index{m\_assertionInfo@{m\_assertionInfo}!Catch::ResultBuilder@{Catch::ResultBuilder}}
+\doxysubsubsection{\texorpdfstring{m\_assertionInfo}{m\_assertionInfo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_catch_1_1_assertion_info}{Assertion\+Info}} Catch\+::\+Result\+Builder\+::m\+\_\+assertion\+Info\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_catch_1_1_result_builder_a631c2d5d82c240c8d1754ce40f108b13}\label{class_catch_1_1_result_builder_a631c2d5d82c240c8d1754ce40f108b13} 
+\index{Catch::ResultBuilder@{Catch::ResultBuilder}!m\_data@{m\_data}}
+\index{m\_data@{m\_data}!Catch::ResultBuilder@{Catch::ResultBuilder}}
+\doxysubsubsection{\texorpdfstring{m\_data}{m\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_catch_1_1_assertion_result_data}{Assertion\+Result\+Data}} Catch\+::\+Result\+Builder\+::m\+\_\+data\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_catch_1_1_result_builder_a7266a8afe5c2980b78c0d450a6396e24}\label{class_catch_1_1_result_builder_a7266a8afe5c2980b78c0d450a6396e24} 
+\index{Catch::ResultBuilder@{Catch::ResultBuilder}!m\_guardException@{m\_guardException}}
+\index{m\_guardException@{m\_guardException}!Catch::ResultBuilder@{Catch::ResultBuilder}}
+\doxysubsubsection{\texorpdfstring{m\_guardException}{m\_guardException}}
+{\footnotesize\ttfamily bool Catch\+::\+Result\+Builder\+::m\+\_\+guard\+Exception\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_catch_1_1_result_builder_aaa0653a25c1ebfde5cea3438392e7a9b}\label{class_catch_1_1_result_builder_aaa0653a25c1ebfde5cea3438392e7a9b} 
+\index{Catch::ResultBuilder@{Catch::ResultBuilder}!m\_shouldDebugBreak@{m\_shouldDebugBreak}}
+\index{m\_shouldDebugBreak@{m\_shouldDebugBreak}!Catch::ResultBuilder@{Catch::ResultBuilder}}
+\doxysubsubsection{\texorpdfstring{m\_shouldDebugBreak}{m\_shouldDebugBreak}}
+{\footnotesize\ttfamily bool Catch\+::\+Result\+Builder\+::m\+\_\+should\+Debug\+Break\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_catch_1_1_result_builder_a635ae36960c8122559e20585ae2d0b08}\label{class_catch_1_1_result_builder_a635ae36960c8122559e20585ae2d0b08} 
+\index{Catch::ResultBuilder@{Catch::ResultBuilder}!m\_shouldThrow@{m\_shouldThrow}}
+\index{m\_shouldThrow@{m\_shouldThrow}!Catch::ResultBuilder@{Catch::ResultBuilder}}
+\doxysubsubsection{\texorpdfstring{m\_shouldThrow}{m\_shouldThrow}}
+{\footnotesize\ttfamily bool Catch\+::\+Result\+Builder\+::m\+\_\+should\+Throw\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_catch_1_1_result_builder_ab72fdc4a1eb9161914f3a820bce56f3f}\label{class_catch_1_1_result_builder_ab72fdc4a1eb9161914f3a820bce56f3f} 
+\index{Catch::ResultBuilder@{Catch::ResultBuilder}!m\_usedStream@{m\_usedStream}}
+\index{m\_usedStream@{m\_usedStream}!Catch::ResultBuilder@{Catch::ResultBuilder}}
+\doxysubsubsection{\texorpdfstring{m\_usedStream}{m\_usedStream}}
+{\footnotesize\ttfamily bool Catch\+::\+Result\+Builder\+::m\+\_\+used\+Stream\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/extlibs/headers/\mbox{\hyperlink{catch_8hpp}{catch.\+hpp}}\end{DoxyCompactItemize}

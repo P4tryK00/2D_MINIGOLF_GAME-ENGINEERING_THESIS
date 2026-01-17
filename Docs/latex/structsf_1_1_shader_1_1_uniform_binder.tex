@@ -1,0 +1,124 @@
+\doxysection{Dokumentacja struktury sf\+::Shader\+::Uniform\+Binder}
+\hypertarget{structsf_1_1_shader_1_1_uniform_binder}{}\label{structsf_1_1_shader_1_1_uniform_binder}\index{sf::Shader::UniformBinder@{sf::Shader::UniformBinder}}
+
+
+Diagram dziedziczenia dla sf\+::Shader\+::Uniform\+Binder\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{structsf_1_1_shader_1_1_uniform_binder__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagram współpracy dla sf\+::Shader\+::Uniform\+Binder\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{structsf_1_1_shader_1_1_uniform_binder__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsf_1_1_shader_1_1_uniform_binder_aea83c2f8cc1cd762ba22335aab55955e}{Uniform\+Binder}} (\mbox{\hyperlink{classsf_1_1_shader}{Shader}} \&shader, const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Constructor\+: set up state before uniform is set. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsf_1_1_shader_1_1_uniform_binder_a9ecf64ed9f8b4da8912252af83edcc90}{\texorpdfstring{$\sim$}{\string~}\+Uniform\+Binder}} ()
+\begin{DoxyCompactList}\small\item\em Destructor\+: restore state after uniform is set. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsf_1_1_gl_resource_1_1_transient_context_lock}{Transient\+Context\+Lock}} \mbox{\hyperlink{structsf_1_1_shader_1_1_uniform_binder_ad79d103ca5d3b4c3e9bcd4822b1809c4}{lock}}
+\begin{DoxyCompactList}\small\item\em \doxylink{classsf_1_1_lock}{Lock} to keep context active while uniform is bound. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_g_l_extensions_8hpp_aef8111b63ee1d4e2c0cab37adb604d63}{GLEXT\+\_\+\+GLhandle}} \mbox{\hyperlink{structsf_1_1_shader_1_1_uniform_binder_a81f2e3635edec67bd8297f283864c4b6}{saved\+Program}}
+\begin{DoxyCompactList}\small\item\em Handle to the previously active program object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_g_l_extensions_8hpp_aef8111b63ee1d4e2c0cab37adb604d63}{GLEXT\+\_\+\+GLhandle}} \mbox{\hyperlink{structsf_1_1_shader_1_1_uniform_binder_a3628ba9f46c95293ff5dadcafc56a2f9}{current\+Program}}
+\begin{DoxyCompactList}\small\item\em Handle to the program object of the modified \doxylink{classsf_1_1_shader}{sf\+::\+Shader} instance. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{examples_2opengl_2gl_8h_a5ac0f3c4d7fafd42b284b5487a791017}{GLint}} \mbox{\hyperlink{structsf_1_1_shader_1_1_uniform_binder_a3d95c500b594ea252276e3ee7b7a0d3e}{location}}
+\begin{DoxyCompactList}\small\item\em Uniform location, used by the surrounding \doxylink{classsf_1_1_shader}{sf\+::\+Shader} code. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Dodatkowe Dziedziczone Składowe}
+\doxysubsection*{Metody prywatne dziedziczone z \mbox{\hyperlink{classsf_1_1_non_copyable}{sf\+::\+Non\+Copyable}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsf_1_1_non_copyable_a2110add170580fdb946f887719da6860}{Non\+Copyable}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1_non_copyable_a8274ffbf46014f5f7f364befb52c7728}{\texorpdfstring{$\sim$}{\string~}\+Non\+Copyable}} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{structsf_1_1_shader_1_1_uniform_binder_aea83c2f8cc1cd762ba22335aab55955e}\label{structsf_1_1_shader_1_1_uniform_binder_aea83c2f8cc1cd762ba22335aab55955e} 
+\index{sf::Shader::UniformBinder@{sf::Shader::UniformBinder}!UniformBinder@{UniformBinder}}
+\index{UniformBinder@{UniformBinder}!sf::Shader::UniformBinder@{sf::Shader::UniformBinder}}
+\doxysubsubsection{\texorpdfstring{UniformBinder()}{UniformBinder()}}
+{\footnotesize\ttfamily sf\+::\+Shader\+::\+Uniform\+Binder\+::\+Uniform\+Binder (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_shader}{Shader}} \&}]{shader,  }\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor\+: set up state before uniform is set. 
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsf_1_1_shader_1_1_uniform_binder_aea83c2f8cc1cd762ba22335aab55955e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{structsf_1_1_shader_1_1_uniform_binder_a9ecf64ed9f8b4da8912252af83edcc90}\label{structsf_1_1_shader_1_1_uniform_binder_a9ecf64ed9f8b4da8912252af83edcc90} 
+\index{sf::Shader::UniformBinder@{sf::Shader::UniformBinder}!````~UniformBinder@{\texorpdfstring{$\sim$}{\string~}UniformBinder}}
+\index{````~UniformBinder@{\texorpdfstring{$\sim$}{\string~}UniformBinder}!sf::Shader::UniformBinder@{sf::Shader::UniformBinder}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}UniformBinder()}{\string~UniformBinder()}}
+{\footnotesize\ttfamily sf\+::\+Shader\+::\+Uniform\+Binder\+::\texorpdfstring{$\sim$}{\string~}\+Uniform\+Binder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor\+: restore state after uniform is set. 
+
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{structsf_1_1_shader_1_1_uniform_binder_a3628ba9f46c95293ff5dadcafc56a2f9}\label{structsf_1_1_shader_1_1_uniform_binder_a3628ba9f46c95293ff5dadcafc56a2f9} 
+\index{sf::Shader::UniformBinder@{sf::Shader::UniformBinder}!currentProgram@{currentProgram}}
+\index{currentProgram@{currentProgram}!sf::Shader::UniformBinder@{sf::Shader::UniformBinder}}
+\doxysubsubsection{\texorpdfstring{currentProgram}{currentProgram}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_l_extensions_8hpp_aef8111b63ee1d4e2c0cab37adb604d63}{GLEXT\+\_\+\+GLhandle}} sf\+::\+Shader\+::\+Uniform\+Binder\+::current\+Program}
+
+
+
+Handle to the program object of the modified \doxylink{classsf_1_1_shader}{sf\+::\+Shader} instance. 
+
+\Hypertarget{structsf_1_1_shader_1_1_uniform_binder_a3d95c500b594ea252276e3ee7b7a0d3e}\label{structsf_1_1_shader_1_1_uniform_binder_a3d95c500b594ea252276e3ee7b7a0d3e} 
+\index{sf::Shader::UniformBinder@{sf::Shader::UniformBinder}!location@{location}}
+\index{location@{location}!sf::Shader::UniformBinder@{sf::Shader::UniformBinder}}
+\doxysubsubsection{\texorpdfstring{location}{location}}
+{\footnotesize\ttfamily \mbox{\hyperlink{examples_2opengl_2gl_8h_a5ac0f3c4d7fafd42b284b5487a791017}{GLint}} sf\+::\+Shader\+::\+Uniform\+Binder\+::location}
+
+
+
+Uniform location, used by the surrounding \doxylink{classsf_1_1_shader}{sf\+::\+Shader} code. 
+
+\Hypertarget{structsf_1_1_shader_1_1_uniform_binder_ad79d103ca5d3b4c3e9bcd4822b1809c4}\label{structsf_1_1_shader_1_1_uniform_binder_ad79d103ca5d3b4c3e9bcd4822b1809c4} 
+\index{sf::Shader::UniformBinder@{sf::Shader::UniformBinder}!lock@{lock}}
+\index{lock@{lock}!sf::Shader::UniformBinder@{sf::Shader::UniformBinder}}
+\doxysubsubsection{\texorpdfstring{lock}{lock}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1_gl_resource_1_1_transient_context_lock}{Transient\+Context\+Lock}} sf\+::\+Shader\+::\+Uniform\+Binder\+::lock}
+
+
+
+\doxylink{classsf_1_1_lock}{Lock} to keep context active while uniform is bound. 
+
+\Hypertarget{structsf_1_1_shader_1_1_uniform_binder_a81f2e3635edec67bd8297f283864c4b6}\label{structsf_1_1_shader_1_1_uniform_binder_a81f2e3635edec67bd8297f283864c4b6} 
+\index{sf::Shader::UniformBinder@{sf::Shader::UniformBinder}!savedProgram@{savedProgram}}
+\index{savedProgram@{savedProgram}!sf::Shader::UniformBinder@{sf::Shader::UniformBinder}}
+\doxysubsubsection{\texorpdfstring{savedProgram}{savedProgram}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_l_extensions_8hpp_aef8111b63ee1d4e2c0cab37adb604d63}{GLEXT\+\_\+\+GLhandle}} sf\+::\+Shader\+::\+Uniform\+Binder\+::saved\+Program}
+
+
+
+Handle to the previously active program object. 
+
+
+
+Dokumentacja dla tej struktury została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Graphics/\mbox{\hyperlink{src_2_s_f_m_l_2_graphics_2_shader_8cpp}{Shader.\+cpp}}\end{DoxyCompactItemize}

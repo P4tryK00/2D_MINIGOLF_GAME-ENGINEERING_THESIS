@@ -1,0 +1,87 @@
+\doxysection{Dokumentacja szablonu struktury Catch\+::IGenerator\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}}
+\hypertarget{struct_catch_1_1_i_generator}{}\label{struct_catch_1_1_i_generator}\index{Catch::IGenerator$<$ T $>$@{Catch::IGenerator$<$ T $>$}}
+
+
+{\ttfamily \#include $<$catch.\+hpp$>$}
+
+
+
+Diagram dziedziczenia dla Catch\+::IGenerator\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_catch_1_1_i_generator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagram współpracy dla Catch\+::IGenerator\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{struct_catch_1_1_i_generator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{struct_catch_1_1_i_generator_a0622037f4617e09aa8c584b0144d4a1a}{\texorpdfstring{$\sim$}{\string~}\+IGenerator}} ()
+\item 
+virtual T \mbox{\hyperlink{struct_catch_1_1_i_generator_ad69e937cb66dba3ed9429c42abf4fce3}{get\+Value}} (std\+::size\+\_\+t index) const =0
+\item 
+virtual std\+::size\+\_\+t \mbox{\hyperlink{struct_catch_1_1_i_generator_a2e317253b03e838b6065ce69719a198e}{size}} () const =0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{struct_catch_1_1_i_generator_a0622037f4617e09aa8c584b0144d4a1a}\label{struct_catch_1_1_i_generator_a0622037f4617e09aa8c584b0144d4a1a} 
+\index{Catch::IGenerator$<$ T $>$@{Catch::IGenerator$<$ T $>$}!````~IGenerator@{\texorpdfstring{$\sim$}{\string~}IGenerator}}
+\index{````~IGenerator@{\texorpdfstring{$\sim$}{\string~}IGenerator}!Catch::IGenerator$<$ T $>$@{Catch::IGenerator$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}IGenerator()}{\string~IGenerator()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual \mbox{\hyperlink{struct_catch_1_1_i_generator}{Catch\+::\+IGenerator}}$<$ T $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{struct_catch_1_1_i_generator}{IGenerator}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{struct_catch_1_1_i_generator_ad69e937cb66dba3ed9429c42abf4fce3}\label{struct_catch_1_1_i_generator_ad69e937cb66dba3ed9429c42abf4fce3} 
+\index{Catch::IGenerator$<$ T $>$@{Catch::IGenerator$<$ T $>$}!getValue@{getValue}}
+\index{getValue@{getValue}!Catch::IGenerator$<$ T $>$@{Catch::IGenerator$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual T \mbox{\hyperlink{struct_catch_1_1_i_generator}{Catch\+::\+IGenerator}}$<$ T $>$\+::get\+Value (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implementowany w \mbox{\hyperlink{class_catch_1_1_between_generator_a913f74bb0c23b3bc0127abfffdabbd94}{Catch\+::\+Between\+Generator$<$ T $>$}} i \mbox{\hyperlink{class_catch_1_1_values_generator_a9674c8b70d562d2d68154de92dd1810a}{Catch\+::\+Values\+Generator$<$ T $>$}}.
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_catch_1_1_i_generator_ad69e937cb66dba3ed9429c42abf4fce3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_catch_1_1_i_generator_a2e317253b03e838b6065ce69719a198e}\label{struct_catch_1_1_i_generator_a2e317253b03e838b6065ce69719a198e} 
+\index{Catch::IGenerator$<$ T $>$@{Catch::IGenerator$<$ T $>$}!size@{size}}
+\index{size@{size}!Catch::IGenerator$<$ T $>$@{Catch::IGenerator$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual std\+::size\+\_\+t \mbox{\hyperlink{struct_catch_1_1_i_generator}{Catch\+::\+IGenerator}}$<$ T $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implementowany w \mbox{\hyperlink{class_catch_1_1_between_generator_af65a1fe51f9b1106fc676e3dd189adb6}{Catch\+::\+Between\+Generator$<$ T $>$}} i \mbox{\hyperlink{class_catch_1_1_values_generator_a9aa5b140ee502975cf35115e534ab771}{Catch\+::\+Values\+Generator$<$ T $>$}}.
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_catch_1_1_i_generator_a2e317253b03e838b6065ce69719a198e_icgraph}
+\end{center}
+\end{figure}
+
+
+Dokumentacja dla tej struktury została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/extlibs/headers/\mbox{\hyperlink{catch_8hpp}{catch.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,298 @@
+\doxysection{Dokumentacja klasy sf\+::priv\+::Socket\+Impl}
+\hypertarget{classsf_1_1priv_1_1_socket_impl}{}\label{classsf_1_1priv_1_1_socket_impl}\index{sf::priv::SocketImpl@{sf::priv::SocketImpl}}
+
+
+Helper class implementing all the non-\/portable socket stuff; this is the Unix version.  
+
+
+
+
+{\ttfamily \#include $<$Socket\+Impl.\+hpp$>$}
+
+
+
+Diagram współpracy dla sf\+::priv\+::Socket\+Impl\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{classsf_1_1priv_1_1_socket_impl__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Typy publiczne}
+\begin{DoxyCompactItemize}
+\item 
+typedef socklen\+\_\+t \mbox{\hyperlink{classsf_1_1priv_1_1_socket_impl_a86f870223170735967f1651874d92323}{Addr\+Length}}
+\item 
+typedef size\+\_\+t \mbox{\hyperlink{classsf_1_1priv_1_1_socket_impl_a11a853c7b08458e060f88f0beb00fca9}{Size}}
+\item 
+typedef int \mbox{\hyperlink{classsf_1_1priv_1_1_socket_impl_aa2497e2e580cf499a9793087a9a7c9c1}{Addr\+Length}}
+\item 
+typedef int \mbox{\hyperlink{classsf_1_1priv_1_1_socket_impl_a5fce585be57b0fb632b66b8b4464dfa5}{Size}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Statyczne metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static sockaddr\+\_\+in \mbox{\hyperlink{classsf_1_1priv_1_1_socket_impl_a6248119b74b0b68c5b9a61158e1a9c49}{create\+Address}} (\mbox{\hyperlink{namespacesf_aa746fb1ddef4410bddf198ebb27e727c}{Uint32}} address, unsigned short port)
+\begin{DoxyCompactList}\small\item\em Create an internal sockaddr\+\_\+in address. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{namespacesf_aefabb521d8f5eec9e6a9b521271d20d1}{Socket\+Handle}} \mbox{\hyperlink{classsf_1_1priv_1_1_socket_impl_a7bbe5cdd74f45bfab8d098afbd2828a8}{invalid\+Socket}} ()
+\begin{DoxyCompactList}\small\item\em Return the value of the invalid socket. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_socket_impl_afa265a10bd79fd53cddc6e9e91ac6e91}{close}} (\mbox{\hyperlink{namespacesf_aefabb521d8f5eec9e6a9b521271d20d1}{Socket\+Handle}} sock)
+\begin{DoxyCompactList}\small\item\em Close and destroy a socket. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_socket_impl_a9004e6ed41073966469b9e17054e0ecf}{set\+Blocking}} (\mbox{\hyperlink{namespacesf_aefabb521d8f5eec9e6a9b521271d20d1}{Socket\+Handle}} sock, bool block)
+\begin{DoxyCompactList}\small\item\em Set a socket as blocking or non-\/blocking. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classsf_1_1_socket_a51bf0fd51057b98a10fbb866246176dc}{Socket\+::\+Status}} \mbox{\hyperlink{classsf_1_1priv_1_1_socket_impl_a476a6cca7a1ce9ebc173c84cbba5a7e6}{get\+Error\+Status}} ()
+\item 
+static sockaddr\+\_\+in \mbox{\hyperlink{classsf_1_1priv_1_1_socket_impl_a04423b70828f10ff1fa65260874c338b}{create\+Address}} (\mbox{\hyperlink{namespacesf_aa746fb1ddef4410bddf198ebb27e727c}{Uint32}} address, unsigned short port)
+\begin{DoxyCompactList}\small\item\em Create an internal sockaddr\+\_\+in address. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{namespacesf_aefabb521d8f5eec9e6a9b521271d20d1}{Socket\+Handle}} \mbox{\hyperlink{classsf_1_1priv_1_1_socket_impl_a67f5d6bcc433566e83b8cd1e85c627f0}{invalid\+Socket}} ()
+\begin{DoxyCompactList}\small\item\em Return the value of the invalid socket. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_socket_impl_aa7adb2c566f8ee836a3fe6f6b57942bf}{close}} (\mbox{\hyperlink{namespacesf_aefabb521d8f5eec9e6a9b521271d20d1}{Socket\+Handle}} sock)
+\begin{DoxyCompactList}\small\item\em Close and destroy a socket. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_socket_impl_a20ade8a00a18cffc73210fd347591ff8}{set\+Blocking}} (\mbox{\hyperlink{namespacesf_aefabb521d8f5eec9e6a9b521271d20d1}{Socket\+Handle}} sock, bool block)
+\begin{DoxyCompactList}\small\item\em Set a socket as blocking or non-\/blocking. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classsf_1_1_socket_a51bf0fd51057b98a10fbb866246176dc}{Socket\+::\+Status}} \mbox{\hyperlink{classsf_1_1priv_1_1_socket_impl_acfb37d0bb28868e7a717ade58144ab3f}{get\+Error\+Status}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Helper class implementing all the non-\/portable socket stuff; this is the Unix version. 
+
+Helper class implementing all the non-\/portable socket stuff; this is the Windows version. 
+
+\doxysubsection{Dokumentacja składowych definicji typu}
+\Hypertarget{classsf_1_1priv_1_1_socket_impl_a86f870223170735967f1651874d92323}\label{classsf_1_1priv_1_1_socket_impl_a86f870223170735967f1651874d92323} 
+\index{sf::priv::SocketImpl@{sf::priv::SocketImpl}!AddrLength@{AddrLength}}
+\index{AddrLength@{AddrLength}!sf::priv::SocketImpl@{sf::priv::SocketImpl}}
+\doxysubsubsection{\texorpdfstring{AddrLength}{AddrLength}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily typedef socklen\+\_\+t \mbox{\hyperlink{classsf_1_1priv_1_1_socket_impl_a86f870223170735967f1651874d92323}{sf\+::priv\+::\+Socket\+Impl\+::\+Addr\+Length}}}
+
+\Hypertarget{classsf_1_1priv_1_1_socket_impl_aa2497e2e580cf499a9793087a9a7c9c1}\label{classsf_1_1priv_1_1_socket_impl_aa2497e2e580cf499a9793087a9a7c9c1} 
+\index{sf::priv::SocketImpl@{sf::priv::SocketImpl}!AddrLength@{AddrLength}}
+\index{AddrLength@{AddrLength}!sf::priv::SocketImpl@{sf::priv::SocketImpl}}
+\doxysubsubsection{\texorpdfstring{AddrLength}{AddrLength}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily typedef int \mbox{\hyperlink{classsf_1_1priv_1_1_socket_impl_a86f870223170735967f1651874d92323}{sf\+::priv\+::\+Socket\+Impl\+::\+Addr\+Length}}}
+
+\Hypertarget{classsf_1_1priv_1_1_socket_impl_a11a853c7b08458e060f88f0beb00fca9}\label{classsf_1_1priv_1_1_socket_impl_a11a853c7b08458e060f88f0beb00fca9} 
+\index{sf::priv::SocketImpl@{sf::priv::SocketImpl}!Size@{Size}}
+\index{Size@{Size}!sf::priv::SocketImpl@{sf::priv::SocketImpl}}
+\doxysubsubsection{\texorpdfstring{Size}{Size}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily typedef size\+\_\+t \mbox{\hyperlink{classsf_1_1priv_1_1_socket_impl_a11a853c7b08458e060f88f0beb00fca9}{sf\+::priv\+::\+Socket\+Impl\+::\+Size}}}
+
+\Hypertarget{classsf_1_1priv_1_1_socket_impl_a5fce585be57b0fb632b66b8b4464dfa5}\label{classsf_1_1priv_1_1_socket_impl_a5fce585be57b0fb632b66b8b4464dfa5} 
+\index{sf::priv::SocketImpl@{sf::priv::SocketImpl}!Size@{Size}}
+\index{Size@{Size}!sf::priv::SocketImpl@{sf::priv::SocketImpl}}
+\doxysubsubsection{\texorpdfstring{Size}{Size}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily typedef int \mbox{\hyperlink{classsf_1_1priv_1_1_socket_impl_a11a853c7b08458e060f88f0beb00fca9}{sf\+::priv\+::\+Socket\+Impl\+::\+Size}}}
+
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{classsf_1_1priv_1_1_socket_impl_afa265a10bd79fd53cddc6e9e91ac6e91}\label{classsf_1_1priv_1_1_socket_impl_afa265a10bd79fd53cddc6e9e91ac6e91} 
+\index{sf::priv::SocketImpl@{sf::priv::SocketImpl}!close@{close}}
+\index{close@{close}!sf::priv::SocketImpl@{sf::priv::SocketImpl}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Socket\+Impl\+::close (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesf_aefabb521d8f5eec9e6a9b521271d20d1}{Socket\+Handle}}}]{sock }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Close and destroy a socket. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em sock} & Handle of the socket to close \\
+\hline
+\end{DoxyParams}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{classsf_1_1priv_1_1_socket_impl_afa265a10bd79fd53cddc6e9e91ac6e91_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_socket_impl_afa265a10bd79fd53cddc6e9e91ac6e91_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_socket_impl_aa7adb2c566f8ee836a3fe6f6b57942bf}\label{classsf_1_1priv_1_1_socket_impl_aa7adb2c566f8ee836a3fe6f6b57942bf} 
+\index{sf::priv::SocketImpl@{sf::priv::SocketImpl}!close@{close}}
+\index{close@{close}!sf::priv::SocketImpl@{sf::priv::SocketImpl}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static void sf\+::priv\+::\+Socket\+Impl\+::close (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesf_aefabb521d8f5eec9e6a9b521271d20d1}{Socket\+Handle}}}]{sock }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Close and destroy a socket. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em sock} & Handle of the socket to close \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classsf_1_1priv_1_1_socket_impl_a6248119b74b0b68c5b9a61158e1a9c49}\label{classsf_1_1priv_1_1_socket_impl_a6248119b74b0b68c5b9a61158e1a9c49} 
+\index{sf::priv::SocketImpl@{sf::priv::SocketImpl}!createAddress@{createAddress}}
+\index{createAddress@{createAddress}!sf::priv::SocketImpl@{sf::priv::SocketImpl}}
+\doxysubsubsection{\texorpdfstring{createAddress()}{createAddress()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily sockaddr\+\_\+in sf\+::priv\+::\+Socket\+Impl\+::create\+Address (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesf_aa746fb1ddef4410bddf198ebb27e727c}{Uint32}}}]{address,  }\item[{unsigned short}]{port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create an internal sockaddr\+\_\+in address. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em address} & Target address \\
+\hline
+{\em port} & Target port\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+sockaddr\+\_\+in ready to be used by socket functions 
+\end{DoxyReturn}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_socket_impl_a6248119b74b0b68c5b9a61158e1a9c49_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_socket_impl_a04423b70828f10ff1fa65260874c338b}\label{classsf_1_1priv_1_1_socket_impl_a04423b70828f10ff1fa65260874c338b} 
+\index{sf::priv::SocketImpl@{sf::priv::SocketImpl}!createAddress@{createAddress}}
+\index{createAddress@{createAddress}!sf::priv::SocketImpl@{sf::priv::SocketImpl}}
+\doxysubsubsection{\texorpdfstring{createAddress()}{createAddress()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static sockaddr\+\_\+in sf\+::priv\+::\+Socket\+Impl\+::create\+Address (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesf_aa746fb1ddef4410bddf198ebb27e727c}{Uint32}}}]{address,  }\item[{unsigned short}]{port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create an internal sockaddr\+\_\+in address. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em address} & Target address \\
+\hline
+{\em port} & Target port\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+sockaddr\+\_\+in ready to be used by socket functions 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_socket_impl_a476a6cca7a1ce9ebc173c84cbba5a7e6}\label{classsf_1_1priv_1_1_socket_impl_a476a6cca7a1ce9ebc173c84cbba5a7e6} 
+\index{sf::priv::SocketImpl@{sf::priv::SocketImpl}!getErrorStatus@{getErrorStatus}}
+\index{getErrorStatus@{getErrorStatus}!sf::priv::SocketImpl@{sf::priv::SocketImpl}}
+\doxysubsubsection{\texorpdfstring{getErrorStatus()}{getErrorStatus()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1_socket_a51bf0fd51057b98a10fbb866246176dc}{Socket\+::\+Status}} sf\+::priv\+::\+Socket\+Impl\+::get\+Error\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Get the last socket error status
+
+\begin{DoxyReturn}{Zwraca}
+Status corresponding to the last socket error 
+\end{DoxyReturn}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_socket_impl_a476a6cca7a1ce9ebc173c84cbba5a7e6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_socket_impl_acfb37d0bb28868e7a717ade58144ab3f}\label{classsf_1_1priv_1_1_socket_impl_acfb37d0bb28868e7a717ade58144ab3f} 
+\index{sf::priv::SocketImpl@{sf::priv::SocketImpl}!getErrorStatus@{getErrorStatus}}
+\index{getErrorStatus@{getErrorStatus}!sf::priv::SocketImpl@{sf::priv::SocketImpl}}
+\doxysubsubsection{\texorpdfstring{getErrorStatus()}{getErrorStatus()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classsf_1_1_socket_a51bf0fd51057b98a10fbb866246176dc}{Socket\+::\+Status}} sf\+::priv\+::\+Socket\+Impl\+::get\+Error\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Get the last socket error status
+
+\begin{DoxyReturn}{Zwraca}
+Status corresponding to the last socket error 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_socket_impl_a7bbe5cdd74f45bfab8d098afbd2828a8}\label{classsf_1_1priv_1_1_socket_impl_a7bbe5cdd74f45bfab8d098afbd2828a8} 
+\index{sf::priv::SocketImpl@{sf::priv::SocketImpl}!invalidSocket@{invalidSocket}}
+\index{invalidSocket@{invalidSocket}!sf::priv::SocketImpl@{sf::priv::SocketImpl}}
+\doxysubsubsection{\texorpdfstring{invalidSocket()}{invalidSocket()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesf_aefabb521d8f5eec9e6a9b521271d20d1}{Socket\+Handle}} sf\+::priv\+::\+Socket\+Impl\+::invalid\+Socket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Return the value of the invalid socket. 
+
+\begin{DoxyReturn}{Zwraca}
+Special value of the invalid socket 
+\end{DoxyReturn}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_socket_impl_a7bbe5cdd74f45bfab8d098afbd2828a8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_socket_impl_a67f5d6bcc433566e83b8cd1e85c627f0}\label{classsf_1_1priv_1_1_socket_impl_a67f5d6bcc433566e83b8cd1e85c627f0} 
+\index{sf::priv::SocketImpl@{sf::priv::SocketImpl}!invalidSocket@{invalidSocket}}
+\index{invalidSocket@{invalidSocket}!sf::priv::SocketImpl@{sf::priv::SocketImpl}}
+\doxysubsubsection{\texorpdfstring{invalidSocket()}{invalidSocket()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{namespacesf_aefabb521d8f5eec9e6a9b521271d20d1}{Socket\+Handle}} sf\+::priv\+::\+Socket\+Impl\+::invalid\+Socket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Return the value of the invalid socket. 
+
+\begin{DoxyReturn}{Zwraca}
+Special value of the invalid socket 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_socket_impl_a9004e6ed41073966469b9e17054e0ecf}\label{classsf_1_1priv_1_1_socket_impl_a9004e6ed41073966469b9e17054e0ecf} 
+\index{sf::priv::SocketImpl@{sf::priv::SocketImpl}!setBlocking@{setBlocking}}
+\index{setBlocking@{setBlocking}!sf::priv::SocketImpl@{sf::priv::SocketImpl}}
+\doxysubsubsection{\texorpdfstring{setBlocking()}{setBlocking()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Socket\+Impl\+::set\+Blocking (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesf_aefabb521d8f5eec9e6a9b521271d20d1}{Socket\+Handle}}}]{sock,  }\item[{bool}]{block }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Set a socket as blocking or non-\/blocking. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em sock} & Handle of the socket \\
+\hline
+{\em block} & New blocking state of the socket \\
+\hline
+\end{DoxyParams}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{classsf_1_1priv_1_1_socket_impl_a9004e6ed41073966469b9e17054e0ecf_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_socket_impl_a9004e6ed41073966469b9e17054e0ecf_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_socket_impl_a20ade8a00a18cffc73210fd347591ff8}\label{classsf_1_1priv_1_1_socket_impl_a20ade8a00a18cffc73210fd347591ff8} 
+\index{sf::priv::SocketImpl@{sf::priv::SocketImpl}!setBlocking@{setBlocking}}
+\index{setBlocking@{setBlocking}!sf::priv::SocketImpl@{sf::priv::SocketImpl}}
+\doxysubsubsection{\texorpdfstring{setBlocking()}{setBlocking()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static void sf\+::priv\+::\+Socket\+Impl\+::set\+Blocking (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesf_aefabb521d8f5eec9e6a9b521271d20d1}{Socket\+Handle}}}]{sock,  }\item[{bool}]{block }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Set a socket as blocking or non-\/blocking. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em sock} & Handle of the socket \\
+\hline
+{\em block} & New blocking state of the socket \\
+\hline
+\end{DoxyParams}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Network/\+Unix/\mbox{\hyperlink{_unix_2_socket_impl_8hpp}{Socket\+Impl.\+hpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Network/\+Win32/\mbox{\hyperlink{_win32_2_socket_impl_8hpp}{Socket\+Impl.\+hpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Network/\+Unix/\mbox{\hyperlink{_unix_2_socket_impl_8cpp}{Socket\+Impl.\+cpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Network/\+Win32/\mbox{\hyperlink{_win32_2_socket_impl_8cpp}{Socket\+Impl.\+cpp}}\end{DoxyCompactItemize}

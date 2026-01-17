@@ -1,0 +1,635 @@
+\doxysection{Dokumentacja pliku cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/extlibs/headers/ogg/ogg.h}
+\hypertarget{ogg_8h}{}\label{ogg_8h}\index{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/ogg/ogg.h@{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/ogg/ogg.h}}
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$ogg/os\+\_\+types.\+h$>$}\newline
+Wykres zależności załączania dla ogg.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{ogg_8h__incl}
+\end{center}
+\end{figure}
+Ten wykres pokazuje, które pliki bezpośrednio lub pośrednio załączają ten plik\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ogg_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structogg__iovec__t}{ogg\+\_\+iovec\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}}
+\item 
+struct \mbox{\hyperlink{structogg__page}{ogg\+\_\+page}}
+\item 
+struct \mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}}
+\item 
+struct \mbox{\hyperlink{structogg__packet}{ogg\+\_\+packet}}
+\item 
+struct \mbox{\hyperlink{structogg__sync__state}{ogg\+\_\+sync\+\_\+state}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{ogg_8h_ad65b5bd71ff1e2d4d7c8dc0d5767f580}{oggpack\+\_\+writeinit}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}b)
+\item 
+int \mbox{\hyperlink{ogg_8h_ac07a7afbd7d6ef9cbef4934e86125485}{oggpack\+\_\+writecheck}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}b)
+\item 
+void \mbox{\hyperlink{ogg_8h_a7e629a16865518a073109ec5496c1db5}{oggpack\+\_\+writetrunc}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}b, long bits)
+\item 
+void \mbox{\hyperlink{ogg_8h_a954dc6d19d32b82851970138fe2c54a9}{oggpack\+\_\+writealign}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}b)
+\item 
+void \mbox{\hyperlink{ogg_8h_adc9ef879e4c946efd285937e53a57dd8}{oggpack\+\_\+writecopy}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}b, void \texorpdfstring{$\ast$}{*}source, long bits)
+\item 
+void \mbox{\hyperlink{ogg_8h_a149a7ea2f5b6c732c716b2267ef46b82}{oggpack\+\_\+reset}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}b)
+\item 
+void \mbox{\hyperlink{ogg_8h_a1ed2493438bb950987014f3dc671be5f}{oggpack\+\_\+writeclear}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}b)
+\item 
+void \mbox{\hyperlink{ogg_8h_a5586b0772a73f943fcaf0db8ab788e4d}{oggpack\+\_\+readinit}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}b, unsigned char \texorpdfstring{$\ast$}{*}buf, int bytes)
+\item 
+void \mbox{\hyperlink{ogg_8h_af2e77bfb7ad82b12c81e725d7b4c2133}{oggpack\+\_\+write}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}b, unsigned long value, int bits)
+\item 
+long \mbox{\hyperlink{ogg_8h_ad49883be3d28269b4dc245460dd4753c}{oggpack\+\_\+look}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}b, int bits)
+\item 
+long \mbox{\hyperlink{ogg_8h_a42a32a4d9f328fe7259a5ed47ccae14e}{oggpack\+\_\+look1}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}b)
+\item 
+void \mbox{\hyperlink{ogg_8h_ab1072d1dfae8866cce6014489fa926f0}{oggpack\+\_\+adv}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}b, int bits)
+\item 
+void \mbox{\hyperlink{ogg_8h_af11de3c5c31f4ab567826c66e6a2cb5c}{oggpack\+\_\+adv1}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}b)
+\item 
+long \mbox{\hyperlink{ogg_8h_a7e3e346e19e4a74bfe4e21f90578eee6}{oggpack\+\_\+read}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}b, int bits)
+\item 
+long \mbox{\hyperlink{ogg_8h_af78224170f805b432381042401635165}{oggpack\+\_\+read1}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}b)
+\item 
+long \mbox{\hyperlink{ogg_8h_a6483ce3b4718d510fd506a7d0099d8e4}{oggpack\+\_\+bytes}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}b)
+\item 
+long \mbox{\hyperlink{ogg_8h_ac3f0fcfb088cdf281e676653d74a918f}{oggpack\+\_\+bits}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}b)
+\item 
+unsigned char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{ogg_8h_aabd41e0075a0a5d5de9ef98a6bf58797}{oggpack\+\_\+get\+\_\+buffer}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}b)
+\item 
+void \mbox{\hyperlink{ogg_8h_a6617bd89f2f26221195126f7d9937772}{oggpack\+B\+\_\+writeinit}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}b)
+\item 
+int \mbox{\hyperlink{ogg_8h_af070521872121dde6a7ff51df5b3b53a}{oggpack\+B\+\_\+writecheck}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}b)
+\item 
+void \mbox{\hyperlink{ogg_8h_a6f1d4a7f3a6af4e122bcd35aa5f9bd4f}{oggpack\+B\+\_\+writetrunc}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}b, long bits)
+\item 
+void \mbox{\hyperlink{ogg_8h_a67f128fbd1c2823097e24e924c9500b5}{oggpack\+B\+\_\+writealign}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}b)
+\item 
+void \mbox{\hyperlink{ogg_8h_ae033d573c9e7a5a9338250f887af287b}{oggpack\+B\+\_\+writecopy}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}b, void \texorpdfstring{$\ast$}{*}source, long bits)
+\item 
+void \mbox{\hyperlink{ogg_8h_a3a5d1e5244feb038ddb2b171a1ae8879}{oggpack\+B\+\_\+reset}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}b)
+\item 
+void \mbox{\hyperlink{ogg_8h_a12aeb63fb274f529b6bd25b795aca6f6}{oggpack\+B\+\_\+writeclear}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}b)
+\item 
+void \mbox{\hyperlink{ogg_8h_a85caa0815737960c1215bd5ca9cc12ba}{oggpack\+B\+\_\+readinit}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}b, unsigned char \texorpdfstring{$\ast$}{*}buf, int bytes)
+\item 
+void \mbox{\hyperlink{ogg_8h_a81cec9a7d04f473b38cfbc083d747042}{oggpack\+B\+\_\+write}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}b, unsigned long value, int bits)
+\item 
+long \mbox{\hyperlink{ogg_8h_afca6a2cfacb4e02fd30fa2c5d809ad81}{oggpack\+B\+\_\+look}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}b, int bits)
+\item 
+long \mbox{\hyperlink{ogg_8h_a00c0f5aa56f411dbed471144dd36aa4c}{oggpack\+B\+\_\+look1}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}b)
+\item 
+void \mbox{\hyperlink{ogg_8h_af9237517e47a58059cc028019f760482}{oggpack\+B\+\_\+adv}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}b, int bits)
+\item 
+void \mbox{\hyperlink{ogg_8h_a7ba15c21247b46a4ef85b672495335d5}{oggpack\+B\+\_\+adv1}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}b)
+\item 
+long \mbox{\hyperlink{ogg_8h_a7182bc320e5e6b94cb8d90caa0c0b2b0}{oggpack\+B\+\_\+read}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}b, int bits)
+\item 
+long \mbox{\hyperlink{ogg_8h_a38d53b127663e1365e734b48e700f0c5}{oggpack\+B\+\_\+read1}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}b)
+\item 
+long \mbox{\hyperlink{ogg_8h_ad267f53b9522efe31e1721af11af3fdb}{oggpack\+B\+\_\+bytes}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}b)
+\item 
+long \mbox{\hyperlink{ogg_8h_a317d9e0c9bd3396b131d7c9bea6762c0}{oggpack\+B\+\_\+bits}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}b)
+\item 
+unsigned char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{ogg_8h_a16046a0d67cf2c70d80d152af777f9c7}{oggpack\+B\+\_\+get\+\_\+buffer}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}b)
+\item 
+int \mbox{\hyperlink{ogg_8h_a57ec8183300b01784037b7fd845894e4}{ogg\+\_\+stream\+\_\+packetin}} (\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} \texorpdfstring{$\ast$}{*}os, \mbox{\hyperlink{structogg__packet}{ogg\+\_\+packet}} \texorpdfstring{$\ast$}{*}op)
+\item 
+int \mbox{\hyperlink{ogg_8h_aa16a1d6d26dbc8c0cbf4a3994f3116d7}{ogg\+\_\+stream\+\_\+iovecin}} (\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} \texorpdfstring{$\ast$}{*}os, \mbox{\hyperlink{structogg__iovec__t}{ogg\+\_\+iovec\+\_\+t}} \texorpdfstring{$\ast$}{*}iov, int count, long e\+\_\+o\+\_\+s, \mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\+\_\+int64\+\_\+t}} granulepos)
+\item 
+int \mbox{\hyperlink{ogg_8h_a75f6056bc13fa979a2443a3c309dc83f}{ogg\+\_\+stream\+\_\+pageout}} (\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} \texorpdfstring{$\ast$}{*}os, \mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} \texorpdfstring{$\ast$}{*}og)
+\item 
+int \mbox{\hyperlink{ogg_8h_ab167ba3c3ce03270cb6a8b99953ef060}{ogg\+\_\+stream\+\_\+pageout\+\_\+fill}} (\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} \texorpdfstring{$\ast$}{*}os, \mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} \texorpdfstring{$\ast$}{*}og, int nfill)
+\item 
+int \mbox{\hyperlink{ogg_8h_aae837247e0edb7003c7ce5b7ae76d20e}{ogg\+\_\+stream\+\_\+flush}} (\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} \texorpdfstring{$\ast$}{*}os, \mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} \texorpdfstring{$\ast$}{*}og)
+\item 
+int \mbox{\hyperlink{ogg_8h_af5bac9d5dbc1f8e9a182b31442b17598}{ogg\+\_\+stream\+\_\+flush\+\_\+fill}} (\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} \texorpdfstring{$\ast$}{*}os, \mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} \texorpdfstring{$\ast$}{*}og, int nfill)
+\item 
+int \mbox{\hyperlink{ogg_8h_a20504c78ff5a937b38729c6b220e78a6}{ogg\+\_\+sync\+\_\+init}} (\mbox{\hyperlink{structogg__sync__state}{ogg\+\_\+sync\+\_\+state}} \texorpdfstring{$\ast$}{*}oy)
+\item 
+int \mbox{\hyperlink{ogg_8h_a43833b30d583f7522224fb28849fc479}{ogg\+\_\+sync\+\_\+clear}} (\mbox{\hyperlink{structogg__sync__state}{ogg\+\_\+sync\+\_\+state}} \texorpdfstring{$\ast$}{*}oy)
+\item 
+int \mbox{\hyperlink{ogg_8h_aac95c26af4c17a724fe8c574fb7d04ec}{ogg\+\_\+sync\+\_\+reset}} (\mbox{\hyperlink{structogg__sync__state}{ogg\+\_\+sync\+\_\+state}} \texorpdfstring{$\ast$}{*}oy)
+\item 
+int \mbox{\hyperlink{ogg_8h_a721f1f5279730065c0cef7278ec45525}{ogg\+\_\+sync\+\_\+destroy}} (\mbox{\hyperlink{structogg__sync__state}{ogg\+\_\+sync\+\_\+state}} \texorpdfstring{$\ast$}{*}oy)
+\item 
+int \mbox{\hyperlink{ogg_8h_ac985c6bd3c1e06399e65cef6a5bb28f7}{ogg\+\_\+sync\+\_\+check}} (\mbox{\hyperlink{structogg__sync__state}{ogg\+\_\+sync\+\_\+state}} \texorpdfstring{$\ast$}{*}oy)
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{ogg_8h_aebaf3772d15f8b545c1530ebfe54397d}{ogg\+\_\+sync\+\_\+buffer}} (\mbox{\hyperlink{structogg__sync__state}{ogg\+\_\+sync\+\_\+state}} \texorpdfstring{$\ast$}{*}oy, long size)
+\item 
+int \mbox{\hyperlink{ogg_8h_abd197a9cda5a6cec788c65c79530e20d}{ogg\+\_\+sync\+\_\+wrote}} (\mbox{\hyperlink{structogg__sync__state}{ogg\+\_\+sync\+\_\+state}} \texorpdfstring{$\ast$}{*}oy, long bytes)
+\item 
+long \mbox{\hyperlink{ogg_8h_a5345f2f7f8b48e8dcaad082aa047a04d}{ogg\+\_\+sync\+\_\+pageseek}} (\mbox{\hyperlink{structogg__sync__state}{ogg\+\_\+sync\+\_\+state}} \texorpdfstring{$\ast$}{*}oy, \mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} \texorpdfstring{$\ast$}{*}og)
+\item 
+int \mbox{\hyperlink{ogg_8h_abcb8ea90cec5a3e5bb19686432c11da6}{ogg\+\_\+sync\+\_\+pageout}} (\mbox{\hyperlink{structogg__sync__state}{ogg\+\_\+sync\+\_\+state}} \texorpdfstring{$\ast$}{*}oy, \mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} \texorpdfstring{$\ast$}{*}og)
+\item 
+int \mbox{\hyperlink{ogg_8h_a60db38b6032f1fb0729e14adb61f11a2}{ogg\+\_\+stream\+\_\+pagein}} (\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} \texorpdfstring{$\ast$}{*}os, \mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} \texorpdfstring{$\ast$}{*}og)
+\item 
+int \mbox{\hyperlink{ogg_8h_a387e608bc7cc9d39e74c962475f2e9d4}{ogg\+\_\+stream\+\_\+packetout}} (\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} \texorpdfstring{$\ast$}{*}os, \mbox{\hyperlink{structogg__packet}{ogg\+\_\+packet}} \texorpdfstring{$\ast$}{*}op)
+\item 
+int \mbox{\hyperlink{ogg_8h_a55245182c6e49c3e474fb8c83a39faae}{ogg\+\_\+stream\+\_\+packetpeek}} (\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} \texorpdfstring{$\ast$}{*}os, \mbox{\hyperlink{structogg__packet}{ogg\+\_\+packet}} \texorpdfstring{$\ast$}{*}op)
+\item 
+int \mbox{\hyperlink{ogg_8h_abbbbea9bc3d14e9aff39582854d96d94}{ogg\+\_\+stream\+\_\+init}} (\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} \texorpdfstring{$\ast$}{*}os, int serialno)
+\item 
+int \mbox{\hyperlink{ogg_8h_a305dff20a5476305be61e46f6b34d4e1}{ogg\+\_\+stream\+\_\+clear}} (\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} \texorpdfstring{$\ast$}{*}os)
+\item 
+int \mbox{\hyperlink{ogg_8h_a675ce59aae7b53cba0ed6a8bf913ae98}{ogg\+\_\+stream\+\_\+reset}} (\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} \texorpdfstring{$\ast$}{*}os)
+\item 
+int \mbox{\hyperlink{ogg_8h_af6da3e5f5a7980513878576c9499d192}{ogg\+\_\+stream\+\_\+reset\+\_\+serialno}} (\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} \texorpdfstring{$\ast$}{*}os, int serialno)
+\item 
+int \mbox{\hyperlink{ogg_8h_a0498b400e1248e86151c21083bb1abaf}{ogg\+\_\+stream\+\_\+destroy}} (\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} \texorpdfstring{$\ast$}{*}os)
+\item 
+int \mbox{\hyperlink{ogg_8h_a19a4792d729d1a199dcd974733702acd}{ogg\+\_\+stream\+\_\+check}} (\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} \texorpdfstring{$\ast$}{*}os)
+\item 
+int \mbox{\hyperlink{ogg_8h_a79150395233a093faa465fd2e2e2a6d3}{ogg\+\_\+stream\+\_\+eos}} (\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} \texorpdfstring{$\ast$}{*}os)
+\item 
+void \mbox{\hyperlink{ogg_8h_aaada108f98be64cc8230044709bf452d}{ogg\+\_\+page\+\_\+checksum\+\_\+set}} (\mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} \texorpdfstring{$\ast$}{*}og)
+\item 
+int \mbox{\hyperlink{ogg_8h_a4c3333898b90e1df4734abd96e2d5cb1}{ogg\+\_\+page\+\_\+version}} (const \mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} \texorpdfstring{$\ast$}{*}og)
+\item 
+int \mbox{\hyperlink{ogg_8h_a01e13664fc5db742a2658dcb5dbec978}{ogg\+\_\+page\+\_\+continued}} (const \mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} \texorpdfstring{$\ast$}{*}og)
+\item 
+int \mbox{\hyperlink{ogg_8h_a9c0d96d6060b511e6ad4c0a2aec3bc49}{ogg\+\_\+page\+\_\+bos}} (const \mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} \texorpdfstring{$\ast$}{*}og)
+\item 
+int \mbox{\hyperlink{ogg_8h_ad970fa8d2ee19a0c965a45f55f108ec6}{ogg\+\_\+page\+\_\+eos}} (const \mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} \texorpdfstring{$\ast$}{*}og)
+\item 
+\mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\+\_\+int64\+\_\+t}} \mbox{\hyperlink{ogg_8h_a538a0abd2b69e7548eb6638475ede669}{ogg\+\_\+page\+\_\+granulepos}} (const \mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} \texorpdfstring{$\ast$}{*}og)
+\item 
+int \mbox{\hyperlink{ogg_8h_a6194aa97806e93b0889a3b376c7ceb8f}{ogg\+\_\+page\+\_\+serialno}} (const \mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} \texorpdfstring{$\ast$}{*}og)
+\item 
+long \mbox{\hyperlink{ogg_8h_a5b4cfa61e780b79880071f927c22800e}{ogg\+\_\+page\+\_\+pageno}} (const \mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} \texorpdfstring{$\ast$}{*}og)
+\item 
+int \mbox{\hyperlink{ogg_8h_a18b465902d8c13d626058868c24c8db4}{ogg\+\_\+page\+\_\+packets}} (const \mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} \texorpdfstring{$\ast$}{*}og)
+\item 
+void \mbox{\hyperlink{ogg_8h_ae4136972678f564c382a54015bab3c9c}{ogg\+\_\+packet\+\_\+clear}} (\mbox{\hyperlink{structogg__packet}{ogg\+\_\+packet}} \texorpdfstring{$\ast$}{*}op)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja funkcji}
+\Hypertarget{ogg_8h_ae4136972678f564c382a54015bab3c9c}\label{ogg_8h_ae4136972678f564c382a54015bab3c9c} 
+\index{ogg.h@{ogg.h}!ogg\_packet\_clear@{ogg\_packet\_clear}}
+\index{ogg\_packet\_clear@{ogg\_packet\_clear}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{ogg\_packet\_clear()}{ogg\_packet\_clear()}}
+{\footnotesize\ttfamily void ogg\+\_\+packet\+\_\+clear (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__packet}{ogg\+\_\+packet}} \texorpdfstring{$\ast$}{*}}]{op }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_a9c0d96d6060b511e6ad4c0a2aec3bc49}\label{ogg_8h_a9c0d96d6060b511e6ad4c0a2aec3bc49} 
+\index{ogg.h@{ogg.h}!ogg\_page\_bos@{ogg\_page\_bos}}
+\index{ogg\_page\_bos@{ogg\_page\_bos}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{ogg\_page\_bos()}{ogg\_page\_bos()}}
+{\footnotesize\ttfamily int ogg\+\_\+page\+\_\+bos (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} \texorpdfstring{$\ast$}{*}}]{og }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_aaada108f98be64cc8230044709bf452d}\label{ogg_8h_aaada108f98be64cc8230044709bf452d} 
+\index{ogg.h@{ogg.h}!ogg\_page\_checksum\_set@{ogg\_page\_checksum\_set}}
+\index{ogg\_page\_checksum\_set@{ogg\_page\_checksum\_set}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{ogg\_page\_checksum\_set()}{ogg\_page\_checksum\_set()}}
+{\footnotesize\ttfamily void ogg\+\_\+page\+\_\+checksum\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} \texorpdfstring{$\ast$}{*}}]{og }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_a01e13664fc5db742a2658dcb5dbec978}\label{ogg_8h_a01e13664fc5db742a2658dcb5dbec978} 
+\index{ogg.h@{ogg.h}!ogg\_page\_continued@{ogg\_page\_continued}}
+\index{ogg\_page\_continued@{ogg\_page\_continued}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{ogg\_page\_continued()}{ogg\_page\_continued()}}
+{\footnotesize\ttfamily int ogg\+\_\+page\+\_\+continued (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} \texorpdfstring{$\ast$}{*}}]{og }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_ad970fa8d2ee19a0c965a45f55f108ec6}\label{ogg_8h_ad970fa8d2ee19a0c965a45f55f108ec6} 
+\index{ogg.h@{ogg.h}!ogg\_page\_eos@{ogg\_page\_eos}}
+\index{ogg\_page\_eos@{ogg\_page\_eos}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{ogg\_page\_eos()}{ogg\_page\_eos()}}
+{\footnotesize\ttfamily int ogg\+\_\+page\+\_\+eos (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} \texorpdfstring{$\ast$}{*}}]{og }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_a538a0abd2b69e7548eb6638475ede669}\label{ogg_8h_a538a0abd2b69e7548eb6638475ede669} 
+\index{ogg.h@{ogg.h}!ogg\_page\_granulepos@{ogg\_page\_granulepos}}
+\index{ogg\_page\_granulepos@{ogg\_page\_granulepos}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{ogg\_page\_granulepos()}{ogg\_page\_granulepos()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\+\_\+int64\+\_\+t}} ogg\+\_\+page\+\_\+granulepos (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} \texorpdfstring{$\ast$}{*}}]{og }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_a18b465902d8c13d626058868c24c8db4}\label{ogg_8h_a18b465902d8c13d626058868c24c8db4} 
+\index{ogg.h@{ogg.h}!ogg\_page\_packets@{ogg\_page\_packets}}
+\index{ogg\_page\_packets@{ogg\_page\_packets}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{ogg\_page\_packets()}{ogg\_page\_packets()}}
+{\footnotesize\ttfamily int ogg\+\_\+page\+\_\+packets (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} \texorpdfstring{$\ast$}{*}}]{og }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_a5b4cfa61e780b79880071f927c22800e}\label{ogg_8h_a5b4cfa61e780b79880071f927c22800e} 
+\index{ogg.h@{ogg.h}!ogg\_page\_pageno@{ogg\_page\_pageno}}
+\index{ogg\_page\_pageno@{ogg\_page\_pageno}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{ogg\_page\_pageno()}{ogg\_page\_pageno()}}
+{\footnotesize\ttfamily long ogg\+\_\+page\+\_\+pageno (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} \texorpdfstring{$\ast$}{*}}]{og }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_a6194aa97806e93b0889a3b376c7ceb8f}\label{ogg_8h_a6194aa97806e93b0889a3b376c7ceb8f} 
+\index{ogg.h@{ogg.h}!ogg\_page\_serialno@{ogg\_page\_serialno}}
+\index{ogg\_page\_serialno@{ogg\_page\_serialno}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{ogg\_page\_serialno()}{ogg\_page\_serialno()}}
+{\footnotesize\ttfamily int ogg\+\_\+page\+\_\+serialno (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} \texorpdfstring{$\ast$}{*}}]{og }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_a4c3333898b90e1df4734abd96e2d5cb1}\label{ogg_8h_a4c3333898b90e1df4734abd96e2d5cb1} 
+\index{ogg.h@{ogg.h}!ogg\_page\_version@{ogg\_page\_version}}
+\index{ogg\_page\_version@{ogg\_page\_version}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{ogg\_page\_version()}{ogg\_page\_version()}}
+{\footnotesize\ttfamily int ogg\+\_\+page\+\_\+version (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} \texorpdfstring{$\ast$}{*}}]{og }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_a19a4792d729d1a199dcd974733702acd}\label{ogg_8h_a19a4792d729d1a199dcd974733702acd} 
+\index{ogg.h@{ogg.h}!ogg\_stream\_check@{ogg\_stream\_check}}
+\index{ogg\_stream\_check@{ogg\_stream\_check}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{ogg\_stream\_check()}{ogg\_stream\_check()}}
+{\footnotesize\ttfamily int ogg\+\_\+stream\+\_\+check (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} \texorpdfstring{$\ast$}{*}}]{os }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_a305dff20a5476305be61e46f6b34d4e1}\label{ogg_8h_a305dff20a5476305be61e46f6b34d4e1} 
+\index{ogg.h@{ogg.h}!ogg\_stream\_clear@{ogg\_stream\_clear}}
+\index{ogg\_stream\_clear@{ogg\_stream\_clear}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{ogg\_stream\_clear()}{ogg\_stream\_clear()}}
+{\footnotesize\ttfamily int ogg\+\_\+stream\+\_\+clear (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} \texorpdfstring{$\ast$}{*}}]{os }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ogg_8h_a305dff20a5476305be61e46f6b34d4e1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{ogg_8h_a0498b400e1248e86151c21083bb1abaf}\label{ogg_8h_a0498b400e1248e86151c21083bb1abaf} 
+\index{ogg.h@{ogg.h}!ogg\_stream\_destroy@{ogg\_stream\_destroy}}
+\index{ogg\_stream\_destroy@{ogg\_stream\_destroy}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{ogg\_stream\_destroy()}{ogg\_stream\_destroy()}}
+{\footnotesize\ttfamily int ogg\+\_\+stream\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} \texorpdfstring{$\ast$}{*}}]{os }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_a79150395233a093faa465fd2e2e2a6d3}\label{ogg_8h_a79150395233a093faa465fd2e2e2a6d3} 
+\index{ogg.h@{ogg.h}!ogg\_stream\_eos@{ogg\_stream\_eos}}
+\index{ogg\_stream\_eos@{ogg\_stream\_eos}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{ogg\_stream\_eos()}{ogg\_stream\_eos()}}
+{\footnotesize\ttfamily int ogg\+\_\+stream\+\_\+eos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} \texorpdfstring{$\ast$}{*}}]{os }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_aae837247e0edb7003c7ce5b7ae76d20e}\label{ogg_8h_aae837247e0edb7003c7ce5b7ae76d20e} 
+\index{ogg.h@{ogg.h}!ogg\_stream\_flush@{ogg\_stream\_flush}}
+\index{ogg\_stream\_flush@{ogg\_stream\_flush}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{ogg\_stream\_flush()}{ogg\_stream\_flush()}}
+{\footnotesize\ttfamily int ogg\+\_\+stream\+\_\+flush (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} \texorpdfstring{$\ast$}{*}}]{os,  }\item[{\mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} \texorpdfstring{$\ast$}{*}}]{og }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ogg_8h_aae837247e0edb7003c7ce5b7ae76d20e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{ogg_8h_af5bac9d5dbc1f8e9a182b31442b17598}\label{ogg_8h_af5bac9d5dbc1f8e9a182b31442b17598} 
+\index{ogg.h@{ogg.h}!ogg\_stream\_flush\_fill@{ogg\_stream\_flush\_fill}}
+\index{ogg\_stream\_flush\_fill@{ogg\_stream\_flush\_fill}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{ogg\_stream\_flush\_fill()}{ogg\_stream\_flush\_fill()}}
+{\footnotesize\ttfamily int ogg\+\_\+stream\+\_\+flush\+\_\+fill (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} \texorpdfstring{$\ast$}{*}}]{os,  }\item[{\mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} \texorpdfstring{$\ast$}{*}}]{og,  }\item[{int}]{nfill }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_abbbbea9bc3d14e9aff39582854d96d94}\label{ogg_8h_abbbbea9bc3d14e9aff39582854d96d94} 
+\index{ogg.h@{ogg.h}!ogg\_stream\_init@{ogg\_stream\_init}}
+\index{ogg\_stream\_init@{ogg\_stream\_init}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{ogg\_stream\_init()}{ogg\_stream\_init()}}
+{\footnotesize\ttfamily int ogg\+\_\+stream\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} \texorpdfstring{$\ast$}{*}}]{os,  }\item[{int}]{serialno }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{ogg_8h_abbbbea9bc3d14e9aff39582854d96d94_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{ogg_8h_aa16a1d6d26dbc8c0cbf4a3994f3116d7}\label{ogg_8h_aa16a1d6d26dbc8c0cbf4a3994f3116d7} 
+\index{ogg.h@{ogg.h}!ogg\_stream\_iovecin@{ogg\_stream\_iovecin}}
+\index{ogg\_stream\_iovecin@{ogg\_stream\_iovecin}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{ogg\_stream\_iovecin()}{ogg\_stream\_iovecin()}}
+{\footnotesize\ttfamily int ogg\+\_\+stream\+\_\+iovecin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} \texorpdfstring{$\ast$}{*}}]{os,  }\item[{\mbox{\hyperlink{structogg__iovec__t}{ogg\+\_\+iovec\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{iov,  }\item[{int}]{count,  }\item[{long}]{e\+\_\+o\+\_\+s,  }\item[{\mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\+\_\+int64\+\_\+t}}}]{granulepos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_a57ec8183300b01784037b7fd845894e4}\label{ogg_8h_a57ec8183300b01784037b7fd845894e4} 
+\index{ogg.h@{ogg.h}!ogg\_stream\_packetin@{ogg\_stream\_packetin}}
+\index{ogg\_stream\_packetin@{ogg\_stream\_packetin}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{ogg\_stream\_packetin()}{ogg\_stream\_packetin()}}
+{\footnotesize\ttfamily int ogg\+\_\+stream\+\_\+packetin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} \texorpdfstring{$\ast$}{*}}]{os,  }\item[{\mbox{\hyperlink{structogg__packet}{ogg\+\_\+packet}} \texorpdfstring{$\ast$}{*}}]{op }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ogg_8h_a57ec8183300b01784037b7fd845894e4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{ogg_8h_a387e608bc7cc9d39e74c962475f2e9d4}\label{ogg_8h_a387e608bc7cc9d39e74c962475f2e9d4} 
+\index{ogg.h@{ogg.h}!ogg\_stream\_packetout@{ogg\_stream\_packetout}}
+\index{ogg\_stream\_packetout@{ogg\_stream\_packetout}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{ogg\_stream\_packetout()}{ogg\_stream\_packetout()}}
+{\footnotesize\ttfamily int ogg\+\_\+stream\+\_\+packetout (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} \texorpdfstring{$\ast$}{*}}]{os,  }\item[{\mbox{\hyperlink{structogg__packet}{ogg\+\_\+packet}} \texorpdfstring{$\ast$}{*}}]{op }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_a55245182c6e49c3e474fb8c83a39faae}\label{ogg_8h_a55245182c6e49c3e474fb8c83a39faae} 
+\index{ogg.h@{ogg.h}!ogg\_stream\_packetpeek@{ogg\_stream\_packetpeek}}
+\index{ogg\_stream\_packetpeek@{ogg\_stream\_packetpeek}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{ogg\_stream\_packetpeek()}{ogg\_stream\_packetpeek()}}
+{\footnotesize\ttfamily int ogg\+\_\+stream\+\_\+packetpeek (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} \texorpdfstring{$\ast$}{*}}]{os,  }\item[{\mbox{\hyperlink{structogg__packet}{ogg\+\_\+packet}} \texorpdfstring{$\ast$}{*}}]{op }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_a60db38b6032f1fb0729e14adb61f11a2}\label{ogg_8h_a60db38b6032f1fb0729e14adb61f11a2} 
+\index{ogg.h@{ogg.h}!ogg\_stream\_pagein@{ogg\_stream\_pagein}}
+\index{ogg\_stream\_pagein@{ogg\_stream\_pagein}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{ogg\_stream\_pagein()}{ogg\_stream\_pagein()}}
+{\footnotesize\ttfamily int ogg\+\_\+stream\+\_\+pagein (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} \texorpdfstring{$\ast$}{*}}]{os,  }\item[{\mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} \texorpdfstring{$\ast$}{*}}]{og }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_a75f6056bc13fa979a2443a3c309dc83f}\label{ogg_8h_a75f6056bc13fa979a2443a3c309dc83f} 
+\index{ogg.h@{ogg.h}!ogg\_stream\_pageout@{ogg\_stream\_pageout}}
+\index{ogg\_stream\_pageout@{ogg\_stream\_pageout}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{ogg\_stream\_pageout()}{ogg\_stream\_pageout()}}
+{\footnotesize\ttfamily int ogg\+\_\+stream\+\_\+pageout (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} \texorpdfstring{$\ast$}{*}}]{os,  }\item[{\mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} \texorpdfstring{$\ast$}{*}}]{og }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_ab167ba3c3ce03270cb6a8b99953ef060}\label{ogg_8h_ab167ba3c3ce03270cb6a8b99953ef060} 
+\index{ogg.h@{ogg.h}!ogg\_stream\_pageout\_fill@{ogg\_stream\_pageout\_fill}}
+\index{ogg\_stream\_pageout\_fill@{ogg\_stream\_pageout\_fill}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{ogg\_stream\_pageout\_fill()}{ogg\_stream\_pageout\_fill()}}
+{\footnotesize\ttfamily int ogg\+\_\+stream\+\_\+pageout\+\_\+fill (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} \texorpdfstring{$\ast$}{*}}]{os,  }\item[{\mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} \texorpdfstring{$\ast$}{*}}]{og,  }\item[{int}]{nfill }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_a675ce59aae7b53cba0ed6a8bf913ae98}\label{ogg_8h_a675ce59aae7b53cba0ed6a8bf913ae98} 
+\index{ogg.h@{ogg.h}!ogg\_stream\_reset@{ogg\_stream\_reset}}
+\index{ogg\_stream\_reset@{ogg\_stream\_reset}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{ogg\_stream\_reset()}{ogg\_stream\_reset()}}
+{\footnotesize\ttfamily int ogg\+\_\+stream\+\_\+reset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} \texorpdfstring{$\ast$}{*}}]{os }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_af6da3e5f5a7980513878576c9499d192}\label{ogg_8h_af6da3e5f5a7980513878576c9499d192} 
+\index{ogg.h@{ogg.h}!ogg\_stream\_reset\_serialno@{ogg\_stream\_reset\_serialno}}
+\index{ogg\_stream\_reset\_serialno@{ogg\_stream\_reset\_serialno}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{ogg\_stream\_reset\_serialno()}{ogg\_stream\_reset\_serialno()}}
+{\footnotesize\ttfamily int ogg\+\_\+stream\+\_\+reset\+\_\+serialno (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} \texorpdfstring{$\ast$}{*}}]{os,  }\item[{int}]{serialno }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_aebaf3772d15f8b545c1530ebfe54397d}\label{ogg_8h_aebaf3772d15f8b545c1530ebfe54397d} 
+\index{ogg.h@{ogg.h}!ogg\_sync\_buffer@{ogg\_sync\_buffer}}
+\index{ogg\_sync\_buffer@{ogg\_sync\_buffer}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{ogg\_sync\_buffer()}{ogg\_sync\_buffer()}}
+{\footnotesize\ttfamily char \texorpdfstring{$\ast$}{*} ogg\+\_\+sync\+\_\+buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__sync__state}{ogg\+\_\+sync\+\_\+state}} \texorpdfstring{$\ast$}{*}}]{oy,  }\item[{long}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_ac985c6bd3c1e06399e65cef6a5bb28f7}\label{ogg_8h_ac985c6bd3c1e06399e65cef6a5bb28f7} 
+\index{ogg.h@{ogg.h}!ogg\_sync\_check@{ogg\_sync\_check}}
+\index{ogg\_sync\_check@{ogg\_sync\_check}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{ogg\_sync\_check()}{ogg\_sync\_check()}}
+{\footnotesize\ttfamily int ogg\+\_\+sync\+\_\+check (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__sync__state}{ogg\+\_\+sync\+\_\+state}} \texorpdfstring{$\ast$}{*}}]{oy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_a43833b30d583f7522224fb28849fc479}\label{ogg_8h_a43833b30d583f7522224fb28849fc479} 
+\index{ogg.h@{ogg.h}!ogg\_sync\_clear@{ogg\_sync\_clear}}
+\index{ogg\_sync\_clear@{ogg\_sync\_clear}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{ogg\_sync\_clear()}{ogg\_sync\_clear()}}
+{\footnotesize\ttfamily int ogg\+\_\+sync\+\_\+clear (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__sync__state}{ogg\+\_\+sync\+\_\+state}} \texorpdfstring{$\ast$}{*}}]{oy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_a721f1f5279730065c0cef7278ec45525}\label{ogg_8h_a721f1f5279730065c0cef7278ec45525} 
+\index{ogg.h@{ogg.h}!ogg\_sync\_destroy@{ogg\_sync\_destroy}}
+\index{ogg\_sync\_destroy@{ogg\_sync\_destroy}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{ogg\_sync\_destroy()}{ogg\_sync\_destroy()}}
+{\footnotesize\ttfamily int ogg\+\_\+sync\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__sync__state}{ogg\+\_\+sync\+\_\+state}} \texorpdfstring{$\ast$}{*}}]{oy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_a20504c78ff5a937b38729c6b220e78a6}\label{ogg_8h_a20504c78ff5a937b38729c6b220e78a6} 
+\index{ogg.h@{ogg.h}!ogg\_sync\_init@{ogg\_sync\_init}}
+\index{ogg\_sync\_init@{ogg\_sync\_init}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{ogg\_sync\_init()}{ogg\_sync\_init()}}
+{\footnotesize\ttfamily int ogg\+\_\+sync\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__sync__state}{ogg\+\_\+sync\+\_\+state}} \texorpdfstring{$\ast$}{*}}]{oy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_abcb8ea90cec5a3e5bb19686432c11da6}\label{ogg_8h_abcb8ea90cec5a3e5bb19686432c11da6} 
+\index{ogg.h@{ogg.h}!ogg\_sync\_pageout@{ogg\_sync\_pageout}}
+\index{ogg\_sync\_pageout@{ogg\_sync\_pageout}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{ogg\_sync\_pageout()}{ogg\_sync\_pageout()}}
+{\footnotesize\ttfamily int ogg\+\_\+sync\+\_\+pageout (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__sync__state}{ogg\+\_\+sync\+\_\+state}} \texorpdfstring{$\ast$}{*}}]{oy,  }\item[{\mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} \texorpdfstring{$\ast$}{*}}]{og }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_a5345f2f7f8b48e8dcaad082aa047a04d}\label{ogg_8h_a5345f2f7f8b48e8dcaad082aa047a04d} 
+\index{ogg.h@{ogg.h}!ogg\_sync\_pageseek@{ogg\_sync\_pageseek}}
+\index{ogg\_sync\_pageseek@{ogg\_sync\_pageseek}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{ogg\_sync\_pageseek()}{ogg\_sync\_pageseek()}}
+{\footnotesize\ttfamily long ogg\+\_\+sync\+\_\+pageseek (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__sync__state}{ogg\+\_\+sync\+\_\+state}} \texorpdfstring{$\ast$}{*}}]{oy,  }\item[{\mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} \texorpdfstring{$\ast$}{*}}]{og }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_aac95c26af4c17a724fe8c574fb7d04ec}\label{ogg_8h_aac95c26af4c17a724fe8c574fb7d04ec} 
+\index{ogg.h@{ogg.h}!ogg\_sync\_reset@{ogg\_sync\_reset}}
+\index{ogg\_sync\_reset@{ogg\_sync\_reset}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{ogg\_sync\_reset()}{ogg\_sync\_reset()}}
+{\footnotesize\ttfamily int ogg\+\_\+sync\+\_\+reset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__sync__state}{ogg\+\_\+sync\+\_\+state}} \texorpdfstring{$\ast$}{*}}]{oy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_abd197a9cda5a6cec788c65c79530e20d}\label{ogg_8h_abd197a9cda5a6cec788c65c79530e20d} 
+\index{ogg.h@{ogg.h}!ogg\_sync\_wrote@{ogg\_sync\_wrote}}
+\index{ogg\_sync\_wrote@{ogg\_sync\_wrote}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{ogg\_sync\_wrote()}{ogg\_sync\_wrote()}}
+{\footnotesize\ttfamily int ogg\+\_\+sync\+\_\+wrote (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__sync__state}{ogg\+\_\+sync\+\_\+state}} \texorpdfstring{$\ast$}{*}}]{oy,  }\item[{long}]{bytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_ab1072d1dfae8866cce6014489fa926f0}\label{ogg_8h_ab1072d1dfae8866cce6014489fa926f0} 
+\index{ogg.h@{ogg.h}!oggpack\_adv@{oggpack\_adv}}
+\index{oggpack\_adv@{oggpack\_adv}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{oggpack\_adv()}{oggpack\_adv()}}
+{\footnotesize\ttfamily void oggpack\+\_\+adv (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}}]{b,  }\item[{int}]{bits }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_af11de3c5c31f4ab567826c66e6a2cb5c}\label{ogg_8h_af11de3c5c31f4ab567826c66e6a2cb5c} 
+\index{ogg.h@{ogg.h}!oggpack\_adv1@{oggpack\_adv1}}
+\index{oggpack\_adv1@{oggpack\_adv1}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{oggpack\_adv1()}{oggpack\_adv1()}}
+{\footnotesize\ttfamily void oggpack\+\_\+adv1 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_ac3f0fcfb088cdf281e676653d74a918f}\label{ogg_8h_ac3f0fcfb088cdf281e676653d74a918f} 
+\index{ogg.h@{ogg.h}!oggpack\_bits@{oggpack\_bits}}
+\index{oggpack\_bits@{oggpack\_bits}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{oggpack\_bits()}{oggpack\_bits()}}
+{\footnotesize\ttfamily long oggpack\+\_\+bits (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_a6483ce3b4718d510fd506a7d0099d8e4}\label{ogg_8h_a6483ce3b4718d510fd506a7d0099d8e4} 
+\index{ogg.h@{ogg.h}!oggpack\_bytes@{oggpack\_bytes}}
+\index{oggpack\_bytes@{oggpack\_bytes}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{oggpack\_bytes()}{oggpack\_bytes()}}
+{\footnotesize\ttfamily long oggpack\+\_\+bytes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_aabd41e0075a0a5d5de9ef98a6bf58797}\label{ogg_8h_aabd41e0075a0a5d5de9ef98a6bf58797} 
+\index{ogg.h@{ogg.h}!oggpack\_get\_buffer@{oggpack\_get\_buffer}}
+\index{oggpack\_get\_buffer@{oggpack\_get\_buffer}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{oggpack\_get\_buffer()}{oggpack\_get\_buffer()}}
+{\footnotesize\ttfamily unsigned char \texorpdfstring{$\ast$}{*} oggpack\+\_\+get\+\_\+buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_ad49883be3d28269b4dc245460dd4753c}\label{ogg_8h_ad49883be3d28269b4dc245460dd4753c} 
+\index{ogg.h@{ogg.h}!oggpack\_look@{oggpack\_look}}
+\index{oggpack\_look@{oggpack\_look}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{oggpack\_look()}{oggpack\_look()}}
+{\footnotesize\ttfamily long oggpack\+\_\+look (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}}]{b,  }\item[{int}]{bits }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_a42a32a4d9f328fe7259a5ed47ccae14e}\label{ogg_8h_a42a32a4d9f328fe7259a5ed47ccae14e} 
+\index{ogg.h@{ogg.h}!oggpack\_look1@{oggpack\_look1}}
+\index{oggpack\_look1@{oggpack\_look1}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{oggpack\_look1()}{oggpack\_look1()}}
+{\footnotesize\ttfamily long oggpack\+\_\+look1 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_a7e3e346e19e4a74bfe4e21f90578eee6}\label{ogg_8h_a7e3e346e19e4a74bfe4e21f90578eee6} 
+\index{ogg.h@{ogg.h}!oggpack\_read@{oggpack\_read}}
+\index{oggpack\_read@{oggpack\_read}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{oggpack\_read()}{oggpack\_read()}}
+{\footnotesize\ttfamily long oggpack\+\_\+read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}}]{b,  }\item[{int}]{bits }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_af78224170f805b432381042401635165}\label{ogg_8h_af78224170f805b432381042401635165} 
+\index{ogg.h@{ogg.h}!oggpack\_read1@{oggpack\_read1}}
+\index{oggpack\_read1@{oggpack\_read1}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{oggpack\_read1()}{oggpack\_read1()}}
+{\footnotesize\ttfamily long oggpack\+\_\+read1 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_a5586b0772a73f943fcaf0db8ab788e4d}\label{ogg_8h_a5586b0772a73f943fcaf0db8ab788e4d} 
+\index{ogg.h@{ogg.h}!oggpack\_readinit@{oggpack\_readinit}}
+\index{oggpack\_readinit@{oggpack\_readinit}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{oggpack\_readinit()}{oggpack\_readinit()}}
+{\footnotesize\ttfamily void oggpack\+\_\+readinit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}}]{b,  }\item[{unsigned char \texorpdfstring{$\ast$}{*}}]{buf,  }\item[{int}]{bytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_a149a7ea2f5b6c732c716b2267ef46b82}\label{ogg_8h_a149a7ea2f5b6c732c716b2267ef46b82} 
+\index{ogg.h@{ogg.h}!oggpack\_reset@{oggpack\_reset}}
+\index{oggpack\_reset@{oggpack\_reset}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{oggpack\_reset()}{oggpack\_reset()}}
+{\footnotesize\ttfamily void oggpack\+\_\+reset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_af2e77bfb7ad82b12c81e725d7b4c2133}\label{ogg_8h_af2e77bfb7ad82b12c81e725d7b4c2133} 
+\index{ogg.h@{ogg.h}!oggpack\_write@{oggpack\_write}}
+\index{oggpack\_write@{oggpack\_write}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{oggpack\_write()}{oggpack\_write()}}
+{\footnotesize\ttfamily void oggpack\+\_\+write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}}]{b,  }\item[{unsigned long}]{value,  }\item[{int}]{bits }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_a954dc6d19d32b82851970138fe2c54a9}\label{ogg_8h_a954dc6d19d32b82851970138fe2c54a9} 
+\index{ogg.h@{ogg.h}!oggpack\_writealign@{oggpack\_writealign}}
+\index{oggpack\_writealign@{oggpack\_writealign}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{oggpack\_writealign()}{oggpack\_writealign()}}
+{\footnotesize\ttfamily void oggpack\+\_\+writealign (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_ac07a7afbd7d6ef9cbef4934e86125485}\label{ogg_8h_ac07a7afbd7d6ef9cbef4934e86125485} 
+\index{ogg.h@{ogg.h}!oggpack\_writecheck@{oggpack\_writecheck}}
+\index{oggpack\_writecheck@{oggpack\_writecheck}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{oggpack\_writecheck()}{oggpack\_writecheck()}}
+{\footnotesize\ttfamily int oggpack\+\_\+writecheck (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_a1ed2493438bb950987014f3dc671be5f}\label{ogg_8h_a1ed2493438bb950987014f3dc671be5f} 
+\index{ogg.h@{ogg.h}!oggpack\_writeclear@{oggpack\_writeclear}}
+\index{oggpack\_writeclear@{oggpack\_writeclear}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{oggpack\_writeclear()}{oggpack\_writeclear()}}
+{\footnotesize\ttfamily void oggpack\+\_\+writeclear (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_adc9ef879e4c946efd285937e53a57dd8}\label{ogg_8h_adc9ef879e4c946efd285937e53a57dd8} 
+\index{ogg.h@{ogg.h}!oggpack\_writecopy@{oggpack\_writecopy}}
+\index{oggpack\_writecopy@{oggpack\_writecopy}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{oggpack\_writecopy()}{oggpack\_writecopy()}}
+{\footnotesize\ttfamily void oggpack\+\_\+writecopy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}}]{b,  }\item[{void \texorpdfstring{$\ast$}{*}}]{source,  }\item[{long}]{bits }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_ad65b5bd71ff1e2d4d7c8dc0d5767f580}\label{ogg_8h_ad65b5bd71ff1e2d4d7c8dc0d5767f580} 
+\index{ogg.h@{ogg.h}!oggpack\_writeinit@{oggpack\_writeinit}}
+\index{oggpack\_writeinit@{oggpack\_writeinit}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{oggpack\_writeinit()}{oggpack\_writeinit()}}
+{\footnotesize\ttfamily void oggpack\+\_\+writeinit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_a7e629a16865518a073109ec5496c1db5}\label{ogg_8h_a7e629a16865518a073109ec5496c1db5} 
+\index{ogg.h@{ogg.h}!oggpack\_writetrunc@{oggpack\_writetrunc}}
+\index{oggpack\_writetrunc@{oggpack\_writetrunc}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{oggpack\_writetrunc()}{oggpack\_writetrunc()}}
+{\footnotesize\ttfamily void oggpack\+\_\+writetrunc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}}]{b,  }\item[{long}]{bits }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_af9237517e47a58059cc028019f760482}\label{ogg_8h_af9237517e47a58059cc028019f760482} 
+\index{ogg.h@{ogg.h}!oggpackB\_adv@{oggpackB\_adv}}
+\index{oggpackB\_adv@{oggpackB\_adv}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{oggpackB\_adv()}{oggpackB\_adv()}}
+{\footnotesize\ttfamily void oggpack\+B\+\_\+adv (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}}]{b,  }\item[{int}]{bits }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_a7ba15c21247b46a4ef85b672495335d5}\label{ogg_8h_a7ba15c21247b46a4ef85b672495335d5} 
+\index{ogg.h@{ogg.h}!oggpackB\_adv1@{oggpackB\_adv1}}
+\index{oggpackB\_adv1@{oggpackB\_adv1}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{oggpackB\_adv1()}{oggpackB\_adv1()}}
+{\footnotesize\ttfamily void oggpack\+B\+\_\+adv1 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_a317d9e0c9bd3396b131d7c9bea6762c0}\label{ogg_8h_a317d9e0c9bd3396b131d7c9bea6762c0} 
+\index{ogg.h@{ogg.h}!oggpackB\_bits@{oggpackB\_bits}}
+\index{oggpackB\_bits@{oggpackB\_bits}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{oggpackB\_bits()}{oggpackB\_bits()}}
+{\footnotesize\ttfamily long oggpack\+B\+\_\+bits (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_ad267f53b9522efe31e1721af11af3fdb}\label{ogg_8h_ad267f53b9522efe31e1721af11af3fdb} 
+\index{ogg.h@{ogg.h}!oggpackB\_bytes@{oggpackB\_bytes}}
+\index{oggpackB\_bytes@{oggpackB\_bytes}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{oggpackB\_bytes()}{oggpackB\_bytes()}}
+{\footnotesize\ttfamily long oggpack\+B\+\_\+bytes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_a16046a0d67cf2c70d80d152af777f9c7}\label{ogg_8h_a16046a0d67cf2c70d80d152af777f9c7} 
+\index{ogg.h@{ogg.h}!oggpackB\_get\_buffer@{oggpackB\_get\_buffer}}
+\index{oggpackB\_get\_buffer@{oggpackB\_get\_buffer}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{oggpackB\_get\_buffer()}{oggpackB\_get\_buffer()}}
+{\footnotesize\ttfamily unsigned char \texorpdfstring{$\ast$}{*} oggpack\+B\+\_\+get\+\_\+buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_afca6a2cfacb4e02fd30fa2c5d809ad81}\label{ogg_8h_afca6a2cfacb4e02fd30fa2c5d809ad81} 
+\index{ogg.h@{ogg.h}!oggpackB\_look@{oggpackB\_look}}
+\index{oggpackB\_look@{oggpackB\_look}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{oggpackB\_look()}{oggpackB\_look()}}
+{\footnotesize\ttfamily long oggpack\+B\+\_\+look (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}}]{b,  }\item[{int}]{bits }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_a00c0f5aa56f411dbed471144dd36aa4c}\label{ogg_8h_a00c0f5aa56f411dbed471144dd36aa4c} 
+\index{ogg.h@{ogg.h}!oggpackB\_look1@{oggpackB\_look1}}
+\index{oggpackB\_look1@{oggpackB\_look1}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{oggpackB\_look1()}{oggpackB\_look1()}}
+{\footnotesize\ttfamily long oggpack\+B\+\_\+look1 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_a7182bc320e5e6b94cb8d90caa0c0b2b0}\label{ogg_8h_a7182bc320e5e6b94cb8d90caa0c0b2b0} 
+\index{ogg.h@{ogg.h}!oggpackB\_read@{oggpackB\_read}}
+\index{oggpackB\_read@{oggpackB\_read}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{oggpackB\_read()}{oggpackB\_read()}}
+{\footnotesize\ttfamily long oggpack\+B\+\_\+read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}}]{b,  }\item[{int}]{bits }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_a38d53b127663e1365e734b48e700f0c5}\label{ogg_8h_a38d53b127663e1365e734b48e700f0c5} 
+\index{ogg.h@{ogg.h}!oggpackB\_read1@{oggpackB\_read1}}
+\index{oggpackB\_read1@{oggpackB\_read1}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{oggpackB\_read1()}{oggpackB\_read1()}}
+{\footnotesize\ttfamily long oggpack\+B\+\_\+read1 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_a85caa0815737960c1215bd5ca9cc12ba}\label{ogg_8h_a85caa0815737960c1215bd5ca9cc12ba} 
+\index{ogg.h@{ogg.h}!oggpackB\_readinit@{oggpackB\_readinit}}
+\index{oggpackB\_readinit@{oggpackB\_readinit}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{oggpackB\_readinit()}{oggpackB\_readinit()}}
+{\footnotesize\ttfamily void oggpack\+B\+\_\+readinit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}}]{b,  }\item[{unsigned char \texorpdfstring{$\ast$}{*}}]{buf,  }\item[{int}]{bytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_a3a5d1e5244feb038ddb2b171a1ae8879}\label{ogg_8h_a3a5d1e5244feb038ddb2b171a1ae8879} 
+\index{ogg.h@{ogg.h}!oggpackB\_reset@{oggpackB\_reset}}
+\index{oggpackB\_reset@{oggpackB\_reset}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{oggpackB\_reset()}{oggpackB\_reset()}}
+{\footnotesize\ttfamily void oggpack\+B\+\_\+reset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_a81cec9a7d04f473b38cfbc083d747042}\label{ogg_8h_a81cec9a7d04f473b38cfbc083d747042} 
+\index{ogg.h@{ogg.h}!oggpackB\_write@{oggpackB\_write}}
+\index{oggpackB\_write@{oggpackB\_write}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{oggpackB\_write()}{oggpackB\_write()}}
+{\footnotesize\ttfamily void oggpack\+B\+\_\+write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}}]{b,  }\item[{unsigned long}]{value,  }\item[{int}]{bits }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_a67f128fbd1c2823097e24e924c9500b5}\label{ogg_8h_a67f128fbd1c2823097e24e924c9500b5} 
+\index{ogg.h@{ogg.h}!oggpackB\_writealign@{oggpackB\_writealign}}
+\index{oggpackB\_writealign@{oggpackB\_writealign}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{oggpackB\_writealign()}{oggpackB\_writealign()}}
+{\footnotesize\ttfamily void oggpack\+B\+\_\+writealign (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_af070521872121dde6a7ff51df5b3b53a}\label{ogg_8h_af070521872121dde6a7ff51df5b3b53a} 
+\index{ogg.h@{ogg.h}!oggpackB\_writecheck@{oggpackB\_writecheck}}
+\index{oggpackB\_writecheck@{oggpackB\_writecheck}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{oggpackB\_writecheck()}{oggpackB\_writecheck()}}
+{\footnotesize\ttfamily int oggpack\+B\+\_\+writecheck (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_a12aeb63fb274f529b6bd25b795aca6f6}\label{ogg_8h_a12aeb63fb274f529b6bd25b795aca6f6} 
+\index{ogg.h@{ogg.h}!oggpackB\_writeclear@{oggpackB\_writeclear}}
+\index{oggpackB\_writeclear@{oggpackB\_writeclear}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{oggpackB\_writeclear()}{oggpackB\_writeclear()}}
+{\footnotesize\ttfamily void oggpack\+B\+\_\+writeclear (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_ae033d573c9e7a5a9338250f887af287b}\label{ogg_8h_ae033d573c9e7a5a9338250f887af287b} 
+\index{ogg.h@{ogg.h}!oggpackB\_writecopy@{oggpackB\_writecopy}}
+\index{oggpackB\_writecopy@{oggpackB\_writecopy}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{oggpackB\_writecopy()}{oggpackB\_writecopy()}}
+{\footnotesize\ttfamily void oggpack\+B\+\_\+writecopy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}}]{b,  }\item[{void \texorpdfstring{$\ast$}{*}}]{source,  }\item[{long}]{bits }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_a6617bd89f2f26221195126f7d9937772}\label{ogg_8h_a6617bd89f2f26221195126f7d9937772} 
+\index{ogg.h@{ogg.h}!oggpackB\_writeinit@{oggpackB\_writeinit}}
+\index{oggpackB\_writeinit@{oggpackB\_writeinit}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{oggpackB\_writeinit()}{oggpackB\_writeinit()}}
+{\footnotesize\ttfamily void oggpack\+B\+\_\+writeinit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{ogg_8h_a6f1d4a7f3a6af4e122bcd35aa5f9bd4f}\label{ogg_8h_a6f1d4a7f3a6af4e122bcd35aa5f9bd4f} 
+\index{ogg.h@{ogg.h}!oggpackB\_writetrunc@{oggpackB\_writetrunc}}
+\index{oggpackB\_writetrunc@{oggpackB\_writetrunc}!ogg.h@{ogg.h}}
+\doxysubsubsection{\texorpdfstring{oggpackB\_writetrunc()}{oggpackB\_writetrunc()}}
+{\footnotesize\ttfamily void oggpack\+B\+\_\+writetrunc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} \texorpdfstring{$\ast$}{*}}]{b,  }\item[{long}]{bits }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+

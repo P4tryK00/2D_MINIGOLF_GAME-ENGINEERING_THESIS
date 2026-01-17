@@ -1,0 +1,272 @@
+\doxysection{Dokumentacja klasy sf\+::priv\+::Sound\+File\+Writer\+Ogg}
+\hypertarget{classsf_1_1priv_1_1_sound_file_writer_ogg}{}\label{classsf_1_1priv_1_1_sound_file_writer_ogg}\index{sf::priv::SoundFileWriterOgg@{sf::priv::SoundFileWriterOgg}}
+
+
+Implementation of sound file writer that handles OGG/\+Vorbis files.  
+
+
+
+
+{\ttfamily \#include $<$Sound\+File\+Writer\+Ogg.\+hpp$>$}
+
+
+
+Diagram dziedziczenia dla sf\+::priv\+::Sound\+File\+Writer\+Ogg\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classsf_1_1priv_1_1_sound_file_writer_ogg__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagram współpracy dla sf\+::priv\+::Sound\+File\+Writer\+Ogg\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_sound_file_writer_ogg__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsf_1_1priv_1_1_sound_file_writer_ogg_ab410a4d0a617717571e343ce60e279ce}{Sound\+File\+Writer\+Ogg}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1priv_1_1_sound_file_writer_ogg_aa48c82f7c8c6dae41c47f90da64e3f03}{\texorpdfstring{$\sim$}{\string~}\+Sound\+File\+Writer\+Ogg}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classsf_1_1priv_1_1_sound_file_writer_ogg_acc278a42330d792ac8ad078981ac61b6}{open}} (const std\+::string \&filename, unsigned int sample\+Rate, unsigned int channel\+Count)
+\begin{DoxyCompactList}\small\item\em Open a sound file for writing. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_sound_file_writer_ogg_a307e4e42e46072fb04e18391a82971bb}{write}} (const \mbox{\hyperlink{namespacesf_a3c8e10435e2a310a7741755e66b5c94e}{Int16}} \texorpdfstring{$\ast$}{*}samples, \mbox{\hyperlink{namespacesf_add9ac83466d96b9f50a009b9f4064266}{Uint64}} count)
+\begin{DoxyCompactList}\small\item\em Write audio samples to the open file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{classsf_1_1_sound_file_writer}{sf\+::\+Sound\+File\+Writer}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classsf_1_1_sound_file_writer_a76944fc158688f35050bd5b592c90270}{\texorpdfstring{$\sim$}{\string~}\+Sound\+File\+Writer}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Statyczne metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_sound_file_writer_ogg_a7d4fee03e56749daf43959f93a18a721}{check}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Check if this writer can handle a file on disk. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_sound_file_writer_ogg_aa2f48e00e78314efce73a54a07a501b7}{flush\+Blocks}} ()
+\begin{DoxyCompactList}\small\item\em Flush blocks produced by the ogg stream, if any. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_sound_file_writer_ogg_a1d3f37e758f82fbb7d8406192111ca93}{close}} ()
+\begin{DoxyCompactList}\small\item\em Close the file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{classsf_1_1priv_1_1_sound_file_writer_ogg_abb5565ad2bebc9b11acf2f6555d559a1}{m\+\_\+channel\+Count}}
+\item 
+std\+::ofstream \mbox{\hyperlink{classsf_1_1priv_1_1_sound_file_writer_ogg_aa5873e1a70a3d8b4a4d2439b8d84eb9a}{m\+\_\+file}}
+\item 
+\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} \mbox{\hyperlink{classsf_1_1priv_1_1_sound_file_writer_ogg_aa4668f9a54535a433ed92b2aebf30f2d}{m\+\_\+ogg}}
+\item 
+\mbox{\hyperlink{structvorbis__info}{vorbis\+\_\+info}} \mbox{\hyperlink{classsf_1_1priv_1_1_sound_file_writer_ogg_aa218c9025ad62fd493b3f31fb776cc4c}{m\+\_\+vorbis}}
+\item 
+\mbox{\hyperlink{structvorbis__dsp__state}{vorbis\+\_\+dsp\+\_\+state}} \mbox{\hyperlink{classsf_1_1priv_1_1_sound_file_writer_ogg_adaee283ab140f488e664c257c3b24087}{m\+\_\+state}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Implementation of sound file writer that handles OGG/\+Vorbis files. 
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{classsf_1_1priv_1_1_sound_file_writer_ogg_ab410a4d0a617717571e343ce60e279ce}\label{classsf_1_1priv_1_1_sound_file_writer_ogg_ab410a4d0a617717571e343ce60e279ce} 
+\index{sf::priv::SoundFileWriterOgg@{sf::priv::SoundFileWriterOgg}!SoundFileWriterOgg@{SoundFileWriterOgg}}
+\index{SoundFileWriterOgg@{SoundFileWriterOgg}!sf::priv::SoundFileWriterOgg@{sf::priv::SoundFileWriterOgg}}
+\doxysubsubsection{\texorpdfstring{SoundFileWriterOgg()}{SoundFileWriterOgg()}}
+{\footnotesize\ttfamily sf\+::priv\+::\+Sound\+File\+Writer\+Ogg\+::\+Sound\+File\+Writer\+Ogg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+\Hypertarget{classsf_1_1priv_1_1_sound_file_writer_ogg_aa48c82f7c8c6dae41c47f90da64e3f03}\label{classsf_1_1priv_1_1_sound_file_writer_ogg_aa48c82f7c8c6dae41c47f90da64e3f03} 
+\index{sf::priv::SoundFileWriterOgg@{sf::priv::SoundFileWriterOgg}!````~SoundFileWriterOgg@{\texorpdfstring{$\sim$}{\string~}SoundFileWriterOgg}}
+\index{````~SoundFileWriterOgg@{\texorpdfstring{$\sim$}{\string~}SoundFileWriterOgg}!sf::priv::SoundFileWriterOgg@{sf::priv::SoundFileWriterOgg}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}SoundFileWriterOgg()}{\string~SoundFileWriterOgg()}}
+{\footnotesize\ttfamily sf\+::priv\+::\+Sound\+File\+Writer\+Ogg\+::\texorpdfstring{$\sim$}{\string~}\+Sound\+File\+Writer\+Ogg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_sound_file_writer_ogg_aa48c82f7c8c6dae41c47f90da64e3f03_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{classsf_1_1priv_1_1_sound_file_writer_ogg_a7d4fee03e56749daf43959f93a18a721}\label{classsf_1_1priv_1_1_sound_file_writer_ogg_a7d4fee03e56749daf43959f93a18a721} 
+\index{sf::priv::SoundFileWriterOgg@{sf::priv::SoundFileWriterOgg}!check@{check}}
+\index{check@{check}!sf::priv::SoundFileWriterOgg@{sf::priv::SoundFileWriterOgg}}
+\doxysubsubsection{\texorpdfstring{check()}{check()}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Sound\+File\+Writer\+Ogg\+::check (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Check if this writer can handle a file on disk. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em filename} & Path of the sound file to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True if the file can be written by this writer 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_sound_file_writer_ogg_a1d3f37e758f82fbb7d8406192111ca93}\label{classsf_1_1priv_1_1_sound_file_writer_ogg_a1d3f37e758f82fbb7d8406192111ca93} 
+\index{sf::priv::SoundFileWriterOgg@{sf::priv::SoundFileWriterOgg}!close@{close}}
+\index{close@{close}!sf::priv::SoundFileWriterOgg@{sf::priv::SoundFileWriterOgg}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Sound\+File\+Writer\+Ogg\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Close the file. 
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_sound_file_writer_ogg_a1d3f37e758f82fbb7d8406192111ca93_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_sound_file_writer_ogg_a1d3f37e758f82fbb7d8406192111ca93_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_sound_file_writer_ogg_aa2f48e00e78314efce73a54a07a501b7}\label{classsf_1_1priv_1_1_sound_file_writer_ogg_aa2f48e00e78314efce73a54a07a501b7} 
+\index{sf::priv::SoundFileWriterOgg@{sf::priv::SoundFileWriterOgg}!flushBlocks@{flushBlocks}}
+\index{flushBlocks@{flushBlocks}!sf::priv::SoundFileWriterOgg@{sf::priv::SoundFileWriterOgg}}
+\doxysubsubsection{\texorpdfstring{flushBlocks()}{flushBlocks()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Sound\+File\+Writer\+Ogg\+::flush\+Blocks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Flush blocks produced by the ogg stream, if any. 
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_sound_file_writer_ogg_aa2f48e00e78314efce73a54a07a501b7_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_sound_file_writer_ogg_aa2f48e00e78314efce73a54a07a501b7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_sound_file_writer_ogg_acc278a42330d792ac8ad078981ac61b6}\label{classsf_1_1priv_1_1_sound_file_writer_ogg_acc278a42330d792ac8ad078981ac61b6} 
+\index{sf::priv::SoundFileWriterOgg@{sf::priv::SoundFileWriterOgg}!open@{open}}
+\index{open@{open}!sf::priv::SoundFileWriterOgg@{sf::priv::SoundFileWriterOgg}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Sound\+File\+Writer\+Ogg\+::open (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename,  }\item[{unsigned int}]{sample\+Rate,  }\item[{unsigned int}]{channel\+Count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Open a sound file for writing. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em filename} & Path of the file to open \\
+\hline
+{\em sample\+Rate} & Sample rate of the sound \\
+\hline
+{\em channel\+Count} & Number of channels of the sound\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True if the file was successfully opened 
+\end{DoxyReturn}
+
+
+Implementuje \mbox{\hyperlink{classsf_1_1_sound_file_writer_a5c92bcaaa880ef4d3eaab18dae1d3d07}{sf\+::\+Sound\+File\+Writer}}.
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_sound_file_writer_ogg_acc278a42330d792ac8ad078981ac61b6_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_sound_file_writer_ogg_a307e4e42e46072fb04e18391a82971bb}\label{classsf_1_1priv_1_1_sound_file_writer_ogg_a307e4e42e46072fb04e18391a82971bb} 
+\index{sf::priv::SoundFileWriterOgg@{sf::priv::SoundFileWriterOgg}!write@{write}}
+\index{write@{write}!sf::priv::SoundFileWriterOgg@{sf::priv::SoundFileWriterOgg}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Sound\+File\+Writer\+Ogg\+::write (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacesf_a3c8e10435e2a310a7741755e66b5c94e}{Int16}} \texorpdfstring{$\ast$}{*}}]{samples,  }\item[{\mbox{\hyperlink{namespacesf_add9ac83466d96b9f50a009b9f4064266}{Uint64}}}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Write audio samples to the open file. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em samples} & Pointer to the sample array to write \\
+\hline
+{\em count} & Number of samples to write \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \mbox{\hyperlink{classsf_1_1_sound_file_writer_a4ce597e7682d22c5b2c98d77e931a1da}{sf\+::\+Sound\+File\+Writer}}.
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_sound_file_writer_ogg_a307e4e42e46072fb04e18391a82971bb_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{classsf_1_1priv_1_1_sound_file_writer_ogg_abb5565ad2bebc9b11acf2f6555d559a1}\label{classsf_1_1priv_1_1_sound_file_writer_ogg_abb5565ad2bebc9b11acf2f6555d559a1} 
+\index{sf::priv::SoundFileWriterOgg@{sf::priv::SoundFileWriterOgg}!m\_channelCount@{m\_channelCount}}
+\index{m\_channelCount@{m\_channelCount}!sf::priv::SoundFileWriterOgg@{sf::priv::SoundFileWriterOgg}}
+\doxysubsubsection{\texorpdfstring{m\_channelCount}{m\_channelCount}}
+{\footnotesize\ttfamily unsigned int sf\+::priv\+::\+Sound\+File\+Writer\+Ogg\+::m\+\_\+channel\+Count\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classsf_1_1priv_1_1_sound_file_writer_ogg_aa5873e1a70a3d8b4a4d2439b8d84eb9a}\label{classsf_1_1priv_1_1_sound_file_writer_ogg_aa5873e1a70a3d8b4a4d2439b8d84eb9a} 
+\index{sf::priv::SoundFileWriterOgg@{sf::priv::SoundFileWriterOgg}!m\_file@{m\_file}}
+\index{m\_file@{m\_file}!sf::priv::SoundFileWriterOgg@{sf::priv::SoundFileWriterOgg}}
+\doxysubsubsection{\texorpdfstring{m\_file}{m\_file}}
+{\footnotesize\ttfamily std\+::ofstream sf\+::priv\+::\+Sound\+File\+Writer\+Ogg\+::m\+\_\+file\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classsf_1_1priv_1_1_sound_file_writer_ogg_aa4668f9a54535a433ed92b2aebf30f2d}\label{classsf_1_1priv_1_1_sound_file_writer_ogg_aa4668f9a54535a433ed92b2aebf30f2d} 
+\index{sf::priv::SoundFileWriterOgg@{sf::priv::SoundFileWriterOgg}!m\_ogg@{m\_ogg}}
+\index{m\_ogg@{m\_ogg}!sf::priv::SoundFileWriterOgg@{sf::priv::SoundFileWriterOgg}}
+\doxysubsubsection{\texorpdfstring{m\_ogg}{m\_ogg}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} sf\+::priv\+::\+Sound\+File\+Writer\+Ogg\+::m\+\_\+ogg\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classsf_1_1priv_1_1_sound_file_writer_ogg_adaee283ab140f488e664c257c3b24087}\label{classsf_1_1priv_1_1_sound_file_writer_ogg_adaee283ab140f488e664c257c3b24087} 
+\index{sf::priv::SoundFileWriterOgg@{sf::priv::SoundFileWriterOgg}!m\_state@{m\_state}}
+\index{m\_state@{m\_state}!sf::priv::SoundFileWriterOgg@{sf::priv::SoundFileWriterOgg}}
+\doxysubsubsection{\texorpdfstring{m\_state}{m\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structvorbis__dsp__state}{vorbis\+\_\+dsp\+\_\+state}} sf\+::priv\+::\+Sound\+File\+Writer\+Ogg\+::m\+\_\+state\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classsf_1_1priv_1_1_sound_file_writer_ogg_aa218c9025ad62fd493b3f31fb776cc4c}\label{classsf_1_1priv_1_1_sound_file_writer_ogg_aa218c9025ad62fd493b3f31fb776cc4c} 
+\index{sf::priv::SoundFileWriterOgg@{sf::priv::SoundFileWriterOgg}!m\_vorbis@{m\_vorbis}}
+\index{m\_vorbis@{m\_vorbis}!sf::priv::SoundFileWriterOgg@{sf::priv::SoundFileWriterOgg}}
+\doxysubsubsection{\texorpdfstring{m\_vorbis}{m\_vorbis}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structvorbis__info}{vorbis\+\_\+info}} sf\+::priv\+::\+Sound\+File\+Writer\+Ogg\+::m\+\_\+vorbis\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Audio/\mbox{\hyperlink{_sound_file_writer_ogg_8hpp}{Sound\+File\+Writer\+Ogg.\+hpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Audio/\mbox{\hyperlink{_sound_file_writer_ogg_8cpp}{Sound\+File\+Writer\+Ogg.\+cpp}}\end{DoxyCompactItemize}

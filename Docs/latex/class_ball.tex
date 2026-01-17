@@ -1,0 +1,378 @@
+\doxysection{Dokumentacja klasy Ball}
+\hypertarget{class_ball}{}\label{class_ball}\index{Ball@{Ball}}
+
+
+Klasa reprezentująca piłkę golfową (obiekt gracza).  
+
+
+
+
+{\ttfamily \#include $<$Ball.\+h$>$}
+
+
+
+Diagram współpracy dla Ball\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{class_ball__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_ball_a86a144d3dad6c953e422e32435923bbb}{Ball}} ()
+\begin{DoxyCompactList}\small\item\em Domyślny konstruktor. Inicjalizuje teksturę i origin piłki. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ball_a1bb0bbf31a2abebdcccaf61a3f30337d}{update}} (float dt, float friction)
+\begin{DoxyCompactList}\small\item\em Aktualizuje pozycję piłki na podstawie prędkości i czasu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ball_ada0736d899918581fb4fe0bcffbbca85}{draw}} (sf\+::\+Render\+Window \&window)
+\begin{DoxyCompactList}\small\item\em Rysuje piłkę w oknie gry. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ball_a72ef793126ac61ded2fdc0132f022fcd}{apply\+Impulse}} (const sf\+::\+Vector2f \&impulse)
+\begin{DoxyCompactList}\small\item\em Nadaje piłce natychmiastowy wektor prędkości (uderzenie). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ball_a3540a4ad1a9ea3bf0015bba2533867f9}{contains}} (const sf\+::\+Vector2f \&point) const
+\begin{DoxyCompactList}\small\item\em Sprawdza, czy dany punkt (np. myszka) znajduje się w obrębie piłki. \end{DoxyCompactList}\item 
+sf\+::\+Vector2f \mbox{\hyperlink{class_ball_ad6ef89d51219c18ca49d774fed666b43}{get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Pobiera aktualną pozycję piłki. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ball_aa6adf1f827ad57dde0f7946a5b811e8d}{set\+Position}} (const sf\+::\+Vector2f \&pos)
+\begin{DoxyCompactList}\small\item\em Ustawia piłkę w konkretnym miejscu (np. na starcie poziomu). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ball_ada66b93ed25e35a2a2f06d3a3bb11656}{stop}} ()
+\begin{DoxyCompactList}\small\item\em Całkowicie zatrzymuje piłkę (zeruje prędkość). \end{DoxyCompactList}\item 
+sf\+::\+Vector2f \mbox{\hyperlink{class_ball_a7a9eedf60466395b70c33e2a1cc0b558}{get\+Scale}} () const
+\begin{DoxyCompactList}\small\item\em Pobiera aktualną skalę obiektu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ball_a86e9c9d82f097eb26379d2e5263a5969}{bounceX}} ()
+\begin{DoxyCompactList}\small\item\em Obsługuje fizykę odbicia od pionowej ściany (oś X). Odwraca wektor X i redukuje prędkość (symulacja utraty energii). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ball_a75d9ccb97de1b65c047b31a09a30d9cb}{bounceY}} ()
+\begin{DoxyCompactList}\small\item\em Obsługuje fizykę odbicia od poziomej ściany (oś Y). Odwraca wektor Y i redukuje prędkość. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ball_a6136426a795d806848fa2370b2ebb7b9}{invert\+Velocity}} ()
+\begin{DoxyCompactList}\small\item\em Odwraca całkowicie wektor prędkości. \end{DoxyCompactList}\item 
+sf\+::\+Vector2f \mbox{\hyperlink{class_ball_a0f45fdcf740f894ddcf0c1a8614d9a4f}{get\+Velocity}} () const
+\begin{DoxyCompactList}\small\item\em Pobiera aktualny wektor prędkości. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ball_a920b6aa4df14d49895e5e0da571586d6}{set\+Scale}} (float factor)
+\begin{DoxyCompactList}\small\item\em Ustawia skalę sprite\textquotesingle{}a (używane np. przy animacji skoku lub wpadania do wody). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Sprite \mbox{\hyperlink{class_ball_ab1dab247bd5dd7103fe6c18d13b3ccfb}{player}}
+\begin{DoxyCompactList}\small\item\em Sprite graficzny piłki. \end{DoxyCompactList}\item 
+sf\+::\+Vector2f \mbox{\hyperlink{class_ball_a8ab4e883d502142a717ad5ca9543dec4}{velocity}}
+\begin{DoxyCompactList}\small\item\em Aktualny wektor prędkości piłki. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Klasa reprezentująca piłkę golfową (obiekt gracza). 
+
+Obsługuje fizykę ruchu, kolizje (odbicia), renderowanie oraz logikę interakcji z otoczeniem. 
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{class_ball_a86a144d3dad6c953e422e32435923bbb}\label{class_ball_a86a144d3dad6c953e422e32435923bbb} 
+\index{Ball@{Ball}!Ball@{Ball}}
+\index{Ball@{Ball}!Ball@{Ball}}
+\doxysubsubsection{\texorpdfstring{Ball()}{Ball()}}
+{\footnotesize\ttfamily Ball\+::\+Ball (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Domyślny konstruktor. Inicjalizuje teksturę i origin piłki. 
+
+Oto graf wywołań dla tej funkcji\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{class_ball_a86a144d3dad6c953e422e32435923bbb_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_ball_a72ef793126ac61ded2fdc0132f022fcd}\label{class_ball_a72ef793126ac61ded2fdc0132f022fcd} 
+\index{Ball@{Ball}!applyImpulse@{applyImpulse}}
+\index{applyImpulse@{applyImpulse}!Ball@{Ball}}
+\doxysubsubsection{\texorpdfstring{applyImpulse()}{applyImpulse()}}
+{\footnotesize\ttfamily void Ball\+::apply\+Impulse (\begin{DoxyParamCaption}\item[{const sf\+::\+Vector2f \&}]{impulse }\end{DoxyParamCaption})}
+
+
+
+Nadaje piłce natychmiastowy wektor prędkości (uderzenie). 
+
+
+\begin{DoxyParams}{Parametry}
+{\em impulse} & Wektor siły uderzenia. \\
+\hline
+\end{DoxyParams}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=313pt]{class_ball_a72ef793126ac61ded2fdc0132f022fcd_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_ball_a86e9c9d82f097eb26379d2e5263a5969}\label{class_ball_a86e9c9d82f097eb26379d2e5263a5969} 
+\index{Ball@{Ball}!bounceX@{bounceX}}
+\index{bounceX@{bounceX}!Ball@{Ball}}
+\doxysubsubsection{\texorpdfstring{bounceX()}{bounceX()}}
+{\footnotesize\ttfamily void Ball\+::bounceX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obsługuje fizykę odbicia od pionowej ściany (oś X). Odwraca wektor X i redukuje prędkość (symulacja utraty energii). 
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{class_ball_a86e9c9d82f097eb26379d2e5263a5969_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_ball_a75d9ccb97de1b65c047b31a09a30d9cb}\label{class_ball_a75d9ccb97de1b65c047b31a09a30d9cb} 
+\index{Ball@{Ball}!bounceY@{bounceY}}
+\index{bounceY@{bounceY}!Ball@{Ball}}
+\doxysubsubsection{\texorpdfstring{bounceY()}{bounceY()}}
+{\footnotesize\ttfamily void Ball\+::bounceY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obsługuje fizykę odbicia od poziomej ściany (oś Y). Odwraca wektor Y i redukuje prędkość. 
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{class_ball_a75d9ccb97de1b65c047b31a09a30d9cb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_ball_a3540a4ad1a9ea3bf0015bba2533867f9}\label{class_ball_a3540a4ad1a9ea3bf0015bba2533867f9} 
+\index{Ball@{Ball}!contains@{contains}}
+\index{contains@{contains}!Ball@{Ball}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily bool Ball\+::contains (\begin{DoxyParamCaption}\item[{const sf\+::\+Vector2f \&}]{point }\end{DoxyParamCaption}) const}
+
+
+
+Sprawdza, czy dany punkt (np. myszka) znajduje się w obrębie piłki. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em point} & Współrzędne punktu. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+true Jeśli punkt zawiera się w granicach sprite\textquotesingle{}a. 
+\end{DoxyReturn}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_ball_a3540a4ad1a9ea3bf0015bba2533867f9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_ball_ada0736d899918581fb4fe0bcffbbca85}\label{class_ball_ada0736d899918581fb4fe0bcffbbca85} 
+\index{Ball@{Ball}!draw@{draw}}
+\index{draw@{draw}!Ball@{Ball}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Ball\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})}
+
+
+
+Rysuje piłkę w oknie gry. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em window} & Referencja do okna renderowania. \\
+\hline
+\end{DoxyParams}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{class_ball_ada0736d899918581fb4fe0bcffbbca85_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_ball_ad6ef89d51219c18ca49d774fed666b43}\label{class_ball_ad6ef89d51219c18ca49d774fed666b43} 
+\index{Ball@{Ball}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!Ball@{Ball}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Ball\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Pobiera aktualną pozycję piłki. 
+
+\begin{DoxyReturn}{Zwraca}
+Wektor pozycji (x, y). 
+\end{DoxyReturn}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_ball_ad6ef89d51219c18ca49d774fed666b43_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_ball_a7a9eedf60466395b70c33e2a1cc0b558}\label{class_ball_a7a9eedf60466395b70c33e2a1cc0b558} 
+\index{Ball@{Ball}!getScale@{getScale}}
+\index{getScale@{getScale}!Ball@{Ball}}
+\doxysubsubsection{\texorpdfstring{getScale()}{getScale()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Ball\+::get\+Scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Pobiera aktualną skalę obiektu. 
+
+\begin{DoxyReturn}{Zwraca}
+Wektor skali (x, y). 
+\end{DoxyReturn}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{class_ball_a7a9eedf60466395b70c33e2a1cc0b558_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_ball_a0f45fdcf740f894ddcf0c1a8614d9a4f}\label{class_ball_a0f45fdcf740f894ddcf0c1a8614d9a4f} 
+\index{Ball@{Ball}!getVelocity@{getVelocity}}
+\index{getVelocity@{getVelocity}!Ball@{Ball}}
+\doxysubsubsection{\texorpdfstring{getVelocity()}{getVelocity()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Ball\+::get\+Velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Pobiera aktualny wektor prędkości. 
+
+\begin{DoxyReturn}{Zwraca}
+Wektor prędkości (vx, vy). 
+\end{DoxyReturn}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_ball_a0f45fdcf740f894ddcf0c1a8614d9a4f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_ball_a6136426a795d806848fa2370b2ebb7b9}\label{class_ball_a6136426a795d806848fa2370b2ebb7b9} 
+\index{Ball@{Ball}!invertVelocity@{invertVelocity}}
+\index{invertVelocity@{invertVelocity}!Ball@{Ball}}
+\doxysubsubsection{\texorpdfstring{invertVelocity()}{invertVelocity()}}
+{\footnotesize\ttfamily void Ball\+::invert\+Velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Odwraca całkowicie wektor prędkości. 
+
+\Hypertarget{class_ball_aa6adf1f827ad57dde0f7946a5b811e8d}\label{class_ball_aa6adf1f827ad57dde0f7946a5b811e8d} 
+\index{Ball@{Ball}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!Ball@{Ball}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily void Ball\+::set\+Position (\begin{DoxyParamCaption}\item[{const sf\+::\+Vector2f \&}]{pos }\end{DoxyParamCaption})}
+
+
+
+Ustawia piłkę w konkretnym miejscu (np. na starcie poziomu). 
+
+
+\begin{DoxyParams}{Parametry}
+{\em pos} & Nowa pozycja. \\
+\hline
+\end{DoxyParams}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_ball_aa6adf1f827ad57dde0f7946a5b811e8d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_ball_a920b6aa4df14d49895e5e0da571586d6}\label{class_ball_a920b6aa4df14d49895e5e0da571586d6} 
+\index{Ball@{Ball}!setScale@{setScale}}
+\index{setScale@{setScale}!Ball@{Ball}}
+\doxysubsubsection{\texorpdfstring{setScale()}{setScale()}}
+{\footnotesize\ttfamily void Ball\+::set\+Scale (\begin{DoxyParamCaption}\item[{float}]{factor }\end{DoxyParamCaption})}
+
+
+
+Ustawia skalę sprite\textquotesingle{}a (używane np. przy animacji skoku lub wpadania do wody). 
+
+
+\begin{DoxyParams}{Parametry}
+{\em factor} & Współczynnik skali (1.\+0 = normalny rozmiar). \\
+\hline
+\end{DoxyParams}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_ball_a920b6aa4df14d49895e5e0da571586d6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_ball_ada66b93ed25e35a2a2f06d3a3bb11656}\label{class_ball_ada66b93ed25e35a2a2f06d3a3bb11656} 
+\index{Ball@{Ball}!stop@{stop}}
+\index{stop@{stop}!Ball@{Ball}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void Ball\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Całkowicie zatrzymuje piłkę (zeruje prędkość). 
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_ball_ada66b93ed25e35a2a2f06d3a3bb11656_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_ball_a1bb0bbf31a2abebdcccaf61a3f30337d}\label{class_ball_a1bb0bbf31a2abebdcccaf61a3f30337d} 
+\index{Ball@{Ball}!update@{update}}
+\index{update@{update}!Ball@{Ball}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Ball\+::update (\begin{DoxyParamCaption}\item[{float}]{dt,  }\item[{float}]{friction }\end{DoxyParamCaption})}
+
+
+
+Aktualizuje pozycję piłki na podstawie prędkości i czasu. 
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parametry}
+{\em dt} & Czas, który upłynął od ostatniej klatki (Delta Time). \\
+\hline
+{\em friction} & Współczynnik tarcia (zwalnia piłkę w każdej klatce). \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{class_ball_a1bb0bbf31a2abebdcccaf61a3f30337d_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{class_ball_ab1dab247bd5dd7103fe6c18d13b3ccfb}\label{class_ball_ab1dab247bd5dd7103fe6c18d13b3ccfb} 
+\index{Ball@{Ball}!player@{player}}
+\index{player@{player}!Ball@{Ball}}
+\doxysubsubsection{\texorpdfstring{player}{player}}
+{\footnotesize\ttfamily sf\+::\+Sprite Ball\+::player\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Sprite graficzny piłki. 
+
+\Hypertarget{class_ball_a8ab4e883d502142a717ad5ca9543dec4}\label{class_ball_a8ab4e883d502142a717ad5ca9543dec4} 
+\index{Ball@{Ball}!velocity@{velocity}}
+\index{velocity@{velocity}!Ball@{Ball}}
+\doxysubsubsection{\texorpdfstring{velocity}{velocity}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Ball\+::velocity\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Aktualny wektor prędkości piłki. 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_ball_8h}{Ball.\+h}}\item 
+\mbox{\hyperlink{_ball_8cpp}{Ball.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,141 @@
+\doxysection{Dokumentacja klasy sf\+::priv\+::Vulkan\+Impl\+X11}
+\hypertarget{classsf_1_1priv_1_1_vulkan_impl_x11}{}\label{classsf_1_1priv_1_1_vulkan_impl_x11}\index{sf::priv::VulkanImplX11@{sf::priv::VulkanImplX11}}
+
+
+Linux (X11) implementation of \doxylink{classsf_1_1_vulkan}{Vulkan}.  
+
+
+
+
+{\ttfamily \#include $<$Vulkan\+Impl\+X11.\+hpp$>$}
+
+
+
+Diagram współpracy dla sf\+::priv\+::Vulkan\+Impl\+X11\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classsf_1_1priv_1_1_vulkan_impl_x11__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Statyczne metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_vulkan_impl_x11_a53de5d0ac96c14a2b5865467acfd2312}{is\+Available}} (bool require\+Graphics=\mbox{\hyperlink{ordinals_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}})
+\begin{DoxyCompactList}\small\item\em Tell whether or not the system supports \doxylink{classsf_1_1_vulkan}{Vulkan}. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{namespacesf_a5e86c49c1bd2a47bd6bfa3fb3b3386ca}{Vulkan\+Function\+Pointer}} \mbox{\hyperlink{classsf_1_1priv_1_1_vulkan_impl_x11_ae5b09b4c8efb613a5de7ac68b1d5a48e}{get\+Function}} (const char \texorpdfstring{$\ast$}{*}name)
+\begin{DoxyCompactList}\small\item\em Get the address of a \doxylink{classsf_1_1_vulkan}{Vulkan} function. \end{DoxyCompactList}\item 
+static const std\+::vector$<$ const char \texorpdfstring{$\ast$}{*} $>$ \& \mbox{\hyperlink{classsf_1_1priv_1_1_vulkan_impl_x11_a6d5b4fc96809933eb73a5203ff089ffe}{get\+Graphics\+Required\+Instance\+Extensions}} ()
+\begin{DoxyCompactList}\small\item\em Get \doxylink{classsf_1_1_vulkan}{Vulkan} instance extensions required for graphics. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_vulkan_impl_x11_adedf9119627cd4a4d1ea8fd3b1d53fe0}{create\+Vulkan\+Surface}} (const \mbox{\hyperlink{_vulkan_8hpp_a6d9f7e27148712f2c97db45ca6991547}{Vk\+Instance}} \&instance, Window\+Handle window\+Handle, \mbox{\hyperlink{_vulkan_8hpp_a09787d7da5f3146095ed80ceccc2d794}{Vk\+Surface\+KHR}} \&surface, const \mbox{\hyperlink{struct_vk_allocation_callbacks}{Vk\+Allocation\+Callbacks}} \texorpdfstring{$\ast$}{*}allocator)
+\begin{DoxyCompactList}\small\item\em Create a \doxylink{classsf_1_1_vulkan}{Vulkan} rendering surface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Linux (X11) implementation of \doxylink{classsf_1_1_vulkan}{Vulkan}. 
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{classsf_1_1priv_1_1_vulkan_impl_x11_adedf9119627cd4a4d1ea8fd3b1d53fe0}\label{classsf_1_1priv_1_1_vulkan_impl_x11_adedf9119627cd4a4d1ea8fd3b1d53fe0} 
+\index{sf::priv::VulkanImplX11@{sf::priv::VulkanImplX11}!createVulkanSurface@{createVulkanSurface}}
+\index{createVulkanSurface@{createVulkanSurface}!sf::priv::VulkanImplX11@{sf::priv::VulkanImplX11}}
+\doxysubsubsection{\texorpdfstring{createVulkanSurface()}{createVulkanSurface()}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Vulkan\+Impl\+X11\+::create\+Vulkan\+Surface (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_vulkan_8hpp_a6d9f7e27148712f2c97db45ca6991547}{Vk\+Instance}} \&}]{instance,  }\item[{Window\+Handle}]{window\+Handle,  }\item[{\mbox{\hyperlink{_vulkan_8hpp_a09787d7da5f3146095ed80ceccc2d794}{Vk\+Surface\+KHR}} \&}]{surface,  }\item[{const \mbox{\hyperlink{struct_vk_allocation_callbacks}{Vk\+Allocation\+Callbacks}} \texorpdfstring{$\ast$}{*}}]{allocator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create a \doxylink{classsf_1_1_vulkan}{Vulkan} rendering surface. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em instance} & \doxylink{classsf_1_1_vulkan}{Vulkan} instance \\
+\hline
+{\em window\+Handle} & Handle to the window to create the surface for \\
+\hline
+{\em surface} & Created surface \\
+\hline
+{\em allocator} & Allocator to use\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True if surface creation was successful, false otherwise 
+\end{DoxyReturn}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_vulkan_impl_x11_adedf9119627cd4a4d1ea8fd3b1d53fe0_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_vulkan_impl_x11_ae5b09b4c8efb613a5de7ac68b1d5a48e}\label{classsf_1_1priv_1_1_vulkan_impl_x11_ae5b09b4c8efb613a5de7ac68b1d5a48e} 
+\index{sf::priv::VulkanImplX11@{sf::priv::VulkanImplX11}!getFunction@{getFunction}}
+\index{getFunction@{getFunction}!sf::priv::VulkanImplX11@{sf::priv::VulkanImplX11}}
+\doxysubsubsection{\texorpdfstring{getFunction()}{getFunction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesf_a5e86c49c1bd2a47bd6bfa3fb3b3386ca}{Vulkan\+Function\+Pointer}} sf\+::priv\+::\+Vulkan\+Impl\+X11\+::get\+Function (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the address of a \doxylink{classsf_1_1_vulkan}{Vulkan} function. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em name} & Name of the function to get the address of\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Address of the \doxylink{classsf_1_1_vulkan}{Vulkan} function, 0 on failure 
+\end{DoxyReturn}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{classsf_1_1priv_1_1_vulkan_impl_x11_ae5b09b4c8efb613a5de7ac68b1d5a48e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_vulkan_impl_x11_a6d5b4fc96809933eb73a5203ff089ffe}\label{classsf_1_1priv_1_1_vulkan_impl_x11_a6d5b4fc96809933eb73a5203ff089ffe} 
+\index{sf::priv::VulkanImplX11@{sf::priv::VulkanImplX11}!getGraphicsRequiredInstanceExtensions@{getGraphicsRequiredInstanceExtensions}}
+\index{getGraphicsRequiredInstanceExtensions@{getGraphicsRequiredInstanceExtensions}!sf::priv::VulkanImplX11@{sf::priv::VulkanImplX11}}
+\doxysubsubsection{\texorpdfstring{getGraphicsRequiredInstanceExtensions()}{getGraphicsRequiredInstanceExtensions()}}
+{\footnotesize\ttfamily const std\+::vector$<$ const char \texorpdfstring{$\ast$}{*} $>$ \& sf\+::priv\+::\+Vulkan\+Impl\+X11\+::get\+Graphics\+Required\+Instance\+Extensions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get \doxylink{classsf_1_1_vulkan}{Vulkan} instance extensions required for graphics. 
+
+\begin{DoxyReturn}{Zwraca}
+\doxylink{classsf_1_1_vulkan}{Vulkan} instance extensions required for graphics 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_vulkan_impl_x11_a53de5d0ac96c14a2b5865467acfd2312}\label{classsf_1_1priv_1_1_vulkan_impl_x11_a53de5d0ac96c14a2b5865467acfd2312} 
+\index{sf::priv::VulkanImplX11@{sf::priv::VulkanImplX11}!isAvailable@{isAvailable}}
+\index{isAvailable@{isAvailable}!sf::priv::VulkanImplX11@{sf::priv::VulkanImplX11}}
+\doxysubsubsection{\texorpdfstring{isAvailable()}{isAvailable()}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Vulkan\+Impl\+X11\+::is\+Available (\begin{DoxyParamCaption}\item[{bool}]{require\+Graphics = {\ttfamily \mbox{\hyperlink{ordinals_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Tell whether or not the system supports \doxylink{classsf_1_1_vulkan}{Vulkan}. 
+
+This function should always be called before using the \doxylink{classsf_1_1_vulkan}{Vulkan} features. If it returns false, then any attempt to use \doxylink{classsf_1_1_vulkan}{Vulkan} will fail.
+
+If only compute is required, set {\itshape require\+Graphics} to false to skip checking for the extensions necessary for graphics rendering.
+
+
+\begin{DoxyParams}{Parametry}
+{\em require\+Graphics} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True if \doxylink{classsf_1_1_vulkan}{Vulkan} is supported, false otherwise 
+\end{DoxyReturn}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{classsf_1_1priv_1_1_vulkan_impl_x11_a53de5d0ac96c14a2b5865467acfd2312_icgraph}
+\end{center}
+\end{figure}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+Unix/\mbox{\hyperlink{_vulkan_impl_x11_8hpp}{Vulkan\+Impl\+X11.\+hpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+Unix/\mbox{\hyperlink{_vulkan_impl_x11_8cpp}{Vulkan\+Impl\+X11.\+cpp}}\end{DoxyCompactItemize}

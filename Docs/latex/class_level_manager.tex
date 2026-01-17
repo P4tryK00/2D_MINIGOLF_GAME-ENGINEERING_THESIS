@@ -1,0 +1,130 @@
+\doxysection{Dokumentacja klasy Level\+Manager}
+\hypertarget{class_level_manager}{}\label{class_level_manager}\index{LevelManager@{LevelManager}}
+
+
+Klasa statyczna odpowiedzialna za wczytywanie poziomów.  
+
+
+
+
+{\ttfamily \#include $<$Level\+Manager.\+h$>$}
+
+
+
+Diagram współpracy dla Level\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{class_level_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Statyczne metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ int $>$ \mbox{\hyperlink{class_level_manager_a9d5717c3b1cd038dc198da72a08c56b9}{load\+Level\+From\+Image}} (int level\+Number)
+\begin{DoxyCompactList}\small\item\em Wczytuje poziom z pliku obrazu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Statyczne atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static sf\+::\+Vector2f \mbox{\hyperlink{class_level_manager_a6ca35afa27e4decebf361fb52806fbc7}{start\+Position}} = sf\+::\+Vector2f(400.f, 300.f)
+\begin{DoxyCompactList}\small\item\em Pozycja startowa gracza wykryta podczas ładowania ostatniego poziomu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Statyczne metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_level_manager_ab2c042dcc6c82f520e586f06eff8ef16}{color\+To\+Tile\+ID}} (sf\+::\+Color color)
+\begin{DoxyCompactList}\small\item\em Konwertuje kolor piksela na ID kafelka. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Klasa statyczna odpowiedzialna za wczytywanie poziomów. 
+
+Implementuje parsowanie plików graficznych (PNG) na strukturę mapy kafelkowej. Mapuje kolory pikseli na identyfikatory kafelków (Tile ID). 
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_level_manager_ab2c042dcc6c82f520e586f06eff8ef16}\label{class_level_manager_ab2c042dcc6c82f520e586f06eff8ef16} 
+\index{LevelManager@{LevelManager}!colorToTileID@{colorToTileID}}
+\index{colorToTileID@{colorToTileID}!LevelManager@{LevelManager}}
+\doxysubsubsection{\texorpdfstring{colorToTileID()}{colorToTileID()}}
+{\footnotesize\ttfamily int Level\+Manager\+::color\+To\+Tile\+ID (\begin{DoxyParamCaption}\item[{sf\+::\+Color}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Konwertuje kolor piksela na ID kafelka. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em color} & Kolor piksela z mapy źródłowej. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+ID kafelka zgodne z definicjami w \doxylink{_d_e_f_i_n_i_t_i_o_n_s_8h}{DEFINITIONS.\+h}. 
+\end{DoxyReturn}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_level_manager_ab2c042dcc6c82f520e586f06eff8ef16_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_level_manager_ab2c042dcc6c82f520e586f06eff8ef16_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_level_manager_a9d5717c3b1cd038dc198da72a08c56b9}\label{class_level_manager_a9d5717c3b1cd038dc198da72a08c56b9} 
+\index{LevelManager@{LevelManager}!loadLevelFromImage@{loadLevelFromImage}}
+\index{loadLevelFromImage@{loadLevelFromImage}!LevelManager@{LevelManager}}
+\doxysubsubsection{\texorpdfstring{loadLevelFromImage()}{loadLevelFromImage()}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ Level\+Manager\+::load\+Level\+From\+Image (\begin{DoxyParamCaption}\item[{int}]{level\+Number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Wczytuje poziom z pliku obrazu. 
+
+Iteruje po pikselach obrazu i na podstawie ich koloru generuje tablicę ID kafelków. Wykrywa również pozycję startową gracza (biały piksel).
+
+
+\begin{DoxyParams}{Parametry}
+{\em level\+Number} & Numer poziomu do wczytania (np. 1 dla "{}level1.\+png"{}). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Wektor liczb całkowitych reprezentujący mapę kafelków. 
+\end{DoxyReturn}
+Oto graf wywołań dla tej funkcji\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_level_manager_a9d5717c3b1cd038dc198da72a08c56b9_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=347pt]{class_level_manager_a9d5717c3b1cd038dc198da72a08c56b9_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{class_level_manager_a6ca35afa27e4decebf361fb52806fbc7}\label{class_level_manager_a6ca35afa27e4decebf361fb52806fbc7} 
+\index{LevelManager@{LevelManager}!startPosition@{startPosition}}
+\index{startPosition@{startPosition}!LevelManager@{LevelManager}}
+\doxysubsubsection{\texorpdfstring{startPosition}{startPosition}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Level\+Manager\+::start\+Position = sf\+::\+Vector2f(400.f, 300.f)\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Pozycja startowa gracza wykryta podczas ładowania ostatniego poziomu. 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_level_manager_8h}{Level\+Manager.\+h}}\item 
+\mbox{\hyperlink{_level_manager_8cpp}{Level\+Manager.\+cpp}}\end{DoxyCompactItemize}

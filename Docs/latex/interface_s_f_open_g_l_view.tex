@@ -1,0 +1,517 @@
+\doxysection{Dokumentacja klasy SFOpen\+GLView}
+\hypertarget{interface_s_f_open_g_l_view}{}\label{interface_s_f_open_g_l_view}\index{SFOpenGLView@{SFOpenGLView}}
+
+
+Specialized NSOpen\+GLView.  
+
+
+
+
+{\ttfamily \#include $<$SFOpen\+GLView.\+h$>$}
+
+
+
+Diagram dziedziczenia dla SFOpen\+GLView\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{interface_s_f_open_g_l_view__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagram współpracy dla SFOpen\+GLView\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{interface_s_f_open_g_l_view__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(id) -\/ \mbox{\hyperlink{interface_s_f_open_g_l_view_a46bdd119b82d81505250357776361aa3}{init\+With\+Frame\+:fullscreen\+:high\+Dpi\+:}}
+\begin{DoxyCompactList}\small\item\em Create the SFML Open\+GL view. \end{DoxyCompactList}\item 
+(void) -\/ \mbox{\hyperlink{interface_s_f_open_g_l_view_a384013e58f101224154e1c4a70a3d901}{finish\+Init}}
+\begin{DoxyCompactList}\small\item\em Finish the creation of the SFML Open\+GL view. \end{DoxyCompactList}\item 
+(void) -\/ \mbox{\hyperlink{interface_s_f_open_g_l_view_ae12b72607fcf8fae9cdfd9375ff2e15d}{set\+Requester\+To\+:}}
+\begin{DoxyCompactList}\small\item\em Apply the given requester to the view. \end{DoxyCompactList}\item 
+(NSPoint) -\/ \mbox{\hyperlink{interface_s_f_open_g_l_view_a1697a9924d01f595bbcbc7b4fdbb28cc}{compute\+Global\+Position\+Of\+Relative\+Point\+:}}
+\begin{DoxyCompactList}\small\item\em Compute the position in global coordinate. \end{DoxyCompactList}\item 
+(CGFloat) -\/ \mbox{\hyperlink{interface_s_f_open_g_l_view_a9b8bef934cb1acf3528ecb536c852e78}{display\+Scale\+Factor}}
+\begin{DoxyCompactList}\small\item\em Get the display scale factor. \end{DoxyCompactList}\item 
+(void) -\/ \mbox{\hyperlink{interface_s_f_open_g_l_view_a66fb2d1dedaa56ed04f1240932d31dce}{update\+Mouse\+State}}
+\begin{DoxyCompactList}\small\item\em Update the mouse state (in or out) \end{DoxyCompactList}\item 
+(void) -\/ \mbox{\hyperlink{interface_s_f_open_g_l_view_a8c7467ff60bd2784b35bd1371aa4d500}{handle\+Mouse\+Down\+:}}
+\begin{DoxyCompactList}\small\item\em handle mouse down event \end{DoxyCompactList}\item 
+(void) -\/ \mbox{\hyperlink{interface_s_f_open_g_l_view_aad813422f30f09fe4e1dc34e4ab60721}{handle\+Mouse\+Up\+:}}
+\begin{DoxyCompactList}\small\item\em handle mouse up event \end{DoxyCompactList}\item 
+(void) -\/ \mbox{\hyperlink{interface_s_f_open_g_l_view_a5b0e047a3d55ea0b4286ca0e25a4ce3b}{handle\+Mouse\+Move\+:}}
+\begin{DoxyCompactList}\small\item\em handle mouse move event \end{DoxyCompactList}\item 
+(BOOL) -\/ \mbox{\hyperlink{interface_s_f_open_g_l_view_a490a37c2df13608342527d638bc50f8c}{is\+Cursor\+Currently\+Grabbed}}
+\begin{DoxyCompactList}\small\item\em Check whether the cursor is grabbed or not. \end{DoxyCompactList}\item 
+(void) -\/ \mbox{\hyperlink{interface_s_f_open_g_l_view_af86825f25efeefa82e2ce670ee57e78c}{update\+Cursor\+Grabbed}}
+\begin{DoxyCompactList}\small\item\em (Dis)connect the cursor\textquotesingle{}s movements from/to the system and project the cursor into the view \end{DoxyCompactList}\item 
+(void) -\/ \mbox{\hyperlink{interface_s_f_open_g_l_view_a3588e074ef8e16a79f00380adea0b8bd}{move\+Cursor\+To\+:}}
+\begin{DoxyCompactList}\small\item\em Move the cursor to the given location. \end{DoxyCompactList}\item 
+(CGDirect\+Display\+ID) -\/ \mbox{\hyperlink{interface_s_f_open_g_l_view_a1b65d848db7e6948524bf2582b980074}{display\+Id}}
+\begin{DoxyCompactList}\small\item\em Get the display identifier on which the view is. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Class Methods}
+\begin{DoxyCompactItemize}
+\item 
+(\mbox{\hyperlink{structsf_1_1_event_1_1_key_event}{sf\+::\+Event\+::\+Key\+Event}}) + \mbox{\hyperlink{interface_s_f_open_g_l_view_ad4a61933f54e2eb4996b22a1f2ebef6e}{convert\+NSKey\+Event\+To\+SFMLEvent\+:}}
+\begin{DoxyCompactList}\small\item\em Convert a key down/up NSEvent into an SFML key event. \end{DoxyCompactList}\item 
+(BOOL) + \mbox{\hyperlink{interface_s_f_open_g_l_view_aa8a67ba6c9faab468fbdf9b3f794c2dd}{is\+Valid\+Text\+Unicode\+:}}
+\begin{DoxyCompactList}\small\item\em Check if the event represent some Unicode text. \end{DoxyCompactList}\item 
+(\mbox{\hyperlink{classsf_1_1_mouse_a4fb128be433f9aafe66bc0c605daaa90}{sf\+::\+Mouse\+::\+Button}}) + \mbox{\hyperlink{interface_s_f_open_g_l_view_a8b502cc62d1f541edd5796e6fb03c744}{mouse\+Button\+From\+Event\+:}}
+\begin{DoxyCompactList}\small\item\em Convert the NSEvent mouse button type to SFML type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty chronione}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_cocoa}{sf\+::priv\+::\+Window\+Impl\+Cocoa}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{interface_s_f_open_g_l_view_ab4cfba5f1c80b7aacb219bb8f6337e12}{m\+\_\+requester}}
+\begin{DoxyCompactList}\small\item\em View\textquotesingle{}s requester. \end{DoxyCompactList}\item 
+BOOL \mbox{\hyperlink{interface_s_f_open_g_l_view_a746fd7510438905eafd65cbf1c8dc352}{m\+\_\+use\+Key\+Repeat}}
+\begin{DoxyCompactList}\small\item\em Key repeat setting. \end{DoxyCompactList}\item 
+BOOL \mbox{\hyperlink{interface_s_f_open_g_l_view_ad321cd6bab9ea7502aded303b577998e}{m\+\_\+mouse\+Is\+In}}
+\begin{DoxyCompactList}\small\item\em Mouse positional state. \end{DoxyCompactList}\item 
+NSCursor \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{interface_s_f_open_g_l_view_a8508577f920b32bcc1716840587b5bf2}{m\+\_\+cursor}}
+\begin{DoxyCompactList}\small\item\em Active cursor. \end{DoxyCompactList}\item 
+NSTracking\+Area \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{interface_s_f_open_g_l_view_a8b4c9487c935f6fdf67fa11fe82023dd}{m\+\_\+tracking\+Area}}
+\begin{DoxyCompactList}\small\item\em Mouse tracking area. \end{DoxyCompactList}\item 
+BOOL \mbox{\hyperlink{interface_s_f_open_g_l_view_a5da6c2e3b4ed24745cd98faba116d83d}{m\+\_\+fullscreen}}
+\begin{DoxyCompactList}\small\item\em Indicate whether the window is fullscreen or not. \end{DoxyCompactList}\item 
+CGFloat \mbox{\hyperlink{interface_s_f_open_g_l_view_a3f0ec9155bfb92104b472d02adfaa8e8}{m\+\_\+scale\+Factor}}
+\begin{DoxyCompactList}\small\item\em Display scale factor (e.\+g. 1x for classic display, 2x for retina) \end{DoxyCompactList}\item 
+BOOL \mbox{\hyperlink{interface_s_f_open_g_l_view_a34159db17cfcebd31fc158589ca43d56}{m\+\_\+cursor\+Grabbed}}
+\begin{DoxyCompactList}\small\item\em Is the mouse cursor trapped? \end{DoxyCompactList}\item 
+CGFloat \mbox{\hyperlink{interface_s_f_open_g_l_view_a9fab9c89c46f6d46762c056512570c88}{m\+\_\+delta\+XBuffer}}
+\begin{DoxyCompactList}\small\item\em See note about cursor grabbing above. \end{DoxyCompactList}\item 
+CGFloat \mbox{\hyperlink{interface_s_f_open_g_l_view_a959c69f58ad62474571f08d07d4d0c08}{m\+\_\+delta\+YBuffer}}
+\begin{DoxyCompactList}\small\item\em See note about cursor grabbing above. \end{DoxyCompactList}\item 
+BOOL \mbox{\hyperlink{interface_s_f_open_g_l_view_a543465a955d8dab5427a89bb0aa34c06}{m\+\_\+high\+Dpi}}
+\begin{DoxyCompactList}\small\item\em Is high-\/\+DPI enabled? \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_s_f_silent_responder}{SFSilent\+Responder}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{interface_s_f_open_g_l_view_a0a8df4ff4e13f3c4aa240da58d1a5c43}{m\+\_\+silent\+Responder}}
+\item 
+NSText\+View \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{interface_s_f_open_g_l_view_ade5541077e7a3f443ba41516bdc12b2b}{m\+\_\+hidden\+Text\+View}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Specialized NSOpen\+GLView. 
+
+Handle event and send them back to the requester.
+
+NSTracking\+Area is used to keep track of mouse events. We also need to be able to ignore mouse event when exiting fullscreen.
+
+Modifiers keys (cmd, ctrl, alt, shift) are handled by this class but the actual logic is done in SFKeyboard\+Modifiers\+Helper.(h\texorpdfstring{$\vert$}{|}mm).
+
+The interface is subdivided into several categories in order to have multiple implementation files to divide this monolithic implementation. However, all attributes are defined in the main interface declaration right below.
+
+Note about delta\+XBuffer and delta\+YBuffer\+: when grabbing the cursor for the first time, either by entering fullscreen or through set\+Cursor\+Grabbed\+:, the cursor might be projected into the view. Doing this will result in a big delta (relative movement) in the next move event (cursor\+Position\+From\+Event\+:), because no move event is generated, which in turn will give the impression that the user want to move the cursor by the same distance it was projected. To prevent the cursor to fly twice the distance we keep track of how much the cursor was projected in delta\+XBuffer and delta\+YBuffer. In cursor\+Position\+From\+Event\+: we can then reduce/augment those buffers to determine when a move event should result in an actual move of the cursor (that was disconnected from the system). 
+
+\doxysubsection{Method Documentation}
+\Hypertarget{interface_s_f_open_g_l_view_a1697a9924d01f595bbcbc7b4fdbb28cc}\label{interface_s_f_open_g_l_view_a1697a9924d01f595bbcbc7b4fdbb28cc} 
+\index{SFOpenGLView@{SFOpenGLView}!computeGlobalPositionOfRelativePoint:@{computeGlobalPositionOfRelativePoint:}}
+\index{computeGlobalPositionOfRelativePoint:@{computeGlobalPositionOfRelativePoint:}!SFOpenGLView@{SFOpenGLView}}
+\doxysubsubsection{\texorpdfstring{computeGlobalPositionOfRelativePoint:}{computeGlobalPositionOfRelativePoint:}}
+{\footnotesize\ttfamily -\/ (NSPoint) compute\+Global\+Position\+Of\+Relative\+Point\+: \begin{DoxyParamCaption}\item[{(NSPoint)}]{point }\end{DoxyParamCaption}}
+
+
+
+Compute the position in global coordinate. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em point} & a point in SFML coordinate\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+the global coordinates of the point 
+\end{DoxyReturn}
+\Hypertarget{interface_s_f_open_g_l_view_ad4a61933f54e2eb4996b22a1f2ebef6e}\label{interface_s_f_open_g_l_view_ad4a61933f54e2eb4996b22a1f2ebef6e} 
+\index{SFOpenGLView@{SFOpenGLView}!convertNSKeyEventToSFMLEvent:@{convertNSKeyEventToSFMLEvent:}}
+\index{convertNSKeyEventToSFMLEvent:@{convertNSKeyEventToSFMLEvent:}!SFOpenGLView@{SFOpenGLView}}
+\doxysubsubsection{\texorpdfstring{convertNSKeyEventToSFMLEvent:}{convertNSKeyEventToSFMLEvent:}}
+{\footnotesize\ttfamily + Event\+: \begin{DoxyParamCaption}\item[{(NSEvent \texorpdfstring{$\ast$}{*})}]{event }\end{DoxyParamCaption}}
+
+
+
+Convert a key down/up NSEvent into an SFML key event. 
+
+The conversion is based on localized\+Keys and non\+Localized\+Keys functions.
+
+
+\begin{DoxyParams}{Parametry}
+{\em event} & a key event\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+\doxylink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a840c43fa8e05ff854f6fe9a86c7c939e}{sf\+::\+Keyboard\+::\+Unknown} as Code if the key is unknown 
+\end{DoxyReturn}
+
+
+Provided by category \mbox{\hyperlink{interface_s_f_open_g_l_view_ad4a61933f54e2eb4996b22a1f2ebef6e}{SFOpen\+GLView(keyboard\+\_\+priv)}}.
+
+\Hypertarget{interface_s_f_open_g_l_view_a1b65d848db7e6948524bf2582b980074}\label{interface_s_f_open_g_l_view_a1b65d848db7e6948524bf2582b980074} 
+\index{SFOpenGLView@{SFOpenGLView}!displayId@{displayId}}
+\index{displayId@{displayId}!SFOpenGLView@{SFOpenGLView}}
+\doxysubsubsection{\texorpdfstring{displayId}{displayId}}
+{\footnotesize\ttfamily -\/ (CGDirect\+Display\+ID) display\+Id \begin{DoxyParamCaption}{ }\end{DoxyParamCaption}}
+
+
+
+Get the display identifier on which the view is. 
+
+
+
+Provided by category \mbox{\hyperlink{interface_s_f_open_g_l_view_a1b65d848db7e6948524bf2582b980074}{SFOpen\+GLView(mouse\+\_\+priv)}}.
+
+\Hypertarget{interface_s_f_open_g_l_view_a9b8bef934cb1acf3528ecb536c852e78}\label{interface_s_f_open_g_l_view_a9b8bef934cb1acf3528ecb536c852e78} 
+\index{SFOpenGLView@{SFOpenGLView}!displayScaleFactor@{displayScaleFactor}}
+\index{displayScaleFactor@{displayScaleFactor}!SFOpenGLView@{SFOpenGLView}}
+\doxysubsubsection{\texorpdfstring{displayScaleFactor}{displayScaleFactor}}
+{\footnotesize\ttfamily -\/ (CGFloat) display\+Scale\+Factor \begin{DoxyParamCaption}{ }\end{DoxyParamCaption}}
+
+
+
+Get the display scale factor. 
+
+\begin{DoxyReturn}{Zwraca}
+e.\+g. 1.\+0 for classic display, 2.\+0 for retina display 
+\end{DoxyReturn}
+\Hypertarget{interface_s_f_open_g_l_view_a384013e58f101224154e1c4a70a3d901}\label{interface_s_f_open_g_l_view_a384013e58f101224154e1c4a70a3d901} 
+\index{SFOpenGLView@{SFOpenGLView}!finishInit@{finishInit}}
+\index{finishInit@{finishInit}!SFOpenGLView@{SFOpenGLView}}
+\doxysubsubsection{\texorpdfstring{finishInit}{finishInit}}
+{\footnotesize\ttfamily -\/ (void) finish\+Init \begin{DoxyParamCaption}{ }\end{DoxyParamCaption}}
+
+
+
+Finish the creation of the SFML Open\+GL view. 
+
+This method should be called after the view was added to a window Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{interface_s_f_open_g_l_view_a384013e58f101224154e1c4a70a3d901_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{interface_s_f_open_g_l_view_a8c7467ff60bd2784b35bd1371aa4d500}\label{interface_s_f_open_g_l_view_a8c7467ff60bd2784b35bd1371aa4d500} 
+\index{SFOpenGLView@{SFOpenGLView}!handleMouseDown:@{handleMouseDown:}}
+\index{handleMouseDown:@{handleMouseDown:}!SFOpenGLView@{SFOpenGLView}}
+\doxysubsubsection{\texorpdfstring{handleMouseDown:}{handleMouseDown:}}
+{\footnotesize\ttfamily -\/ (void) handle\+Mouse\+Down\+: \begin{DoxyParamCaption}\item[{(NSEvent \texorpdfstring{$\ast$}{*})}]{the\+Event }\end{DoxyParamCaption}}
+
+
+
+handle mouse down event 
+
+
+
+Provided by category \mbox{\hyperlink{interface_s_f_open_g_l_view_a8c7467ff60bd2784b35bd1371aa4d500}{SFOpen\+GLView(mouse\+\_\+priv)}}.
+
+\Hypertarget{interface_s_f_open_g_l_view_a5b0e047a3d55ea0b4286ca0e25a4ce3b}\label{interface_s_f_open_g_l_view_a5b0e047a3d55ea0b4286ca0e25a4ce3b} 
+\index{SFOpenGLView@{SFOpenGLView}!handleMouseMove:@{handleMouseMove:}}
+\index{handleMouseMove:@{handleMouseMove:}!SFOpenGLView@{SFOpenGLView}}
+\doxysubsubsection{\texorpdfstring{handleMouseMove:}{handleMouseMove:}}
+{\footnotesize\ttfamily -\/ (void) handle\+Mouse\+Move\+: \begin{DoxyParamCaption}\item[{(NSEvent \texorpdfstring{$\ast$}{*})}]{the\+Event }\end{DoxyParamCaption}}
+
+
+
+handle mouse move event 
+
+
+
+Provided by category \mbox{\hyperlink{interface_s_f_open_g_l_view_a5b0e047a3d55ea0b4286ca0e25a4ce3b}{SFOpen\+GLView(mouse\+\_\+priv)}}.
+
+\Hypertarget{interface_s_f_open_g_l_view_aad813422f30f09fe4e1dc34e4ab60721}\label{interface_s_f_open_g_l_view_aad813422f30f09fe4e1dc34e4ab60721} 
+\index{SFOpenGLView@{SFOpenGLView}!handleMouseUp:@{handleMouseUp:}}
+\index{handleMouseUp:@{handleMouseUp:}!SFOpenGLView@{SFOpenGLView}}
+\doxysubsubsection{\texorpdfstring{handleMouseUp:}{handleMouseUp:}}
+{\footnotesize\ttfamily -\/ (void) handle\+Mouse\+Up\+: \begin{DoxyParamCaption}\item[{(NSEvent \texorpdfstring{$\ast$}{*})}]{the\+Event }\end{DoxyParamCaption}}
+
+
+
+handle mouse up event 
+
+
+
+Provided by category \mbox{\hyperlink{interface_s_f_open_g_l_view_aad813422f30f09fe4e1dc34e4ab60721}{SFOpen\+GLView(mouse\+\_\+priv)}}.
+
+\Hypertarget{interface_s_f_open_g_l_view_a46bdd119b82d81505250357776361aa3}\label{interface_s_f_open_g_l_view_a46bdd119b82d81505250357776361aa3} 
+\index{SFOpenGLView@{SFOpenGLView}!initWithFrame:fullscreen:highDpi:@{initWithFrame:fullscreen:highDpi:}}
+\index{initWithFrame:fullscreen:highDpi:@{initWithFrame:fullscreen:highDpi:}!SFOpenGLView@{SFOpenGLView}}
+\doxysubsubsection{\texorpdfstring{initWithFrame:fullscreen:highDpi:}{initWithFrame:fullscreen:highDpi:}}
+{\footnotesize\ttfamily -\/ (id) init\+With\+Frame\+: \begin{DoxyParamCaption}\item[{(NSRect)}]{frame\+Rect }\item[{fullscreen\+:(BOOL)}]{is\+Fullscreen }\item[{high\+Dpi\+:(BOOL)}]{is\+High\+Dpi }\end{DoxyParamCaption}}
+
+
+
+Create the SFML Open\+GL view. 
+
+NB\+: -\/init\+With\+Frame\+: is also implemented to default is\+Fullscreen to NO in case \doxylink{interface_s_f_open_g_l_view}{SFOpen\+GLView} is created with the standard message.
+
+To finish the initialization -\/finish\+Init should be called too.
+
+
+\begin{DoxyParams}{Parametry}
+{\em frame\+Rect} & dimension of the view \\
+\hline
+{\em is\+Fullscreen} & fullscreen flag\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+an initialized view 
+\end{DoxyReturn}
+\Hypertarget{interface_s_f_open_g_l_view_a490a37c2df13608342527d638bc50f8c}\label{interface_s_f_open_g_l_view_a490a37c2df13608342527d638bc50f8c} 
+\index{SFOpenGLView@{SFOpenGLView}!isCursorCurrentlyGrabbed@{isCursorCurrentlyGrabbed}}
+\index{isCursorCurrentlyGrabbed@{isCursorCurrentlyGrabbed}!SFOpenGLView@{SFOpenGLView}}
+\doxysubsubsection{\texorpdfstring{isCursorCurrentlyGrabbed}{isCursorCurrentlyGrabbed}}
+{\footnotesize\ttfamily -\/ (BOOL) is\+Cursor\+Currently\+Grabbed \begin{DoxyParamCaption}{ }\end{DoxyParamCaption}}
+
+
+
+Check whether the cursor is grabbed or not. 
+
+The cursor is grabbed if the window is active (key) and the user wants to grab it. 
+
+Provided by category \mbox{\hyperlink{interface_s_f_open_g_l_view_a490a37c2df13608342527d638bc50f8c}{SFOpen\+GLView(mouse\+\_\+priv)}}.
+
+\Hypertarget{interface_s_f_open_g_l_view_aa8a67ba6c9faab468fbdf9b3f794c2dd}\label{interface_s_f_open_g_l_view_aa8a67ba6c9faab468fbdf9b3f794c2dd} 
+\index{SFOpenGLView@{SFOpenGLView}!isValidTextUnicode:@{isValidTextUnicode:}}
+\index{isValidTextUnicode:@{isValidTextUnicode:}!SFOpenGLView@{SFOpenGLView}}
+\doxysubsubsection{\texorpdfstring{isValidTextUnicode:}{isValidTextUnicode:}}
+{\footnotesize\ttfamily + (BOOL) is\+Valid\+Text\+Unicode\+: \begin{DoxyParamCaption}\item[{(NSEvent \texorpdfstring{$\ast$}{*})}]{event }\end{DoxyParamCaption}}
+
+
+
+Check if the event represent some Unicode text. 
+
+The event is assumed to be a key down event. False is returned if the event is either escape or a non text Unicode.
+
+
+\begin{DoxyParams}{Parametry}
+{\em event} & a key down event\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+true if event represents a Unicode character, false otherwise 
+\end{DoxyReturn}
+
+
+Provided by category \mbox{\hyperlink{interface_s_f_open_g_l_view_aa8a67ba6c9faab468fbdf9b3f794c2dd}{SFOpen\+GLView(keyboard\+\_\+priv)}}.
+
+\Hypertarget{interface_s_f_open_g_l_view_a8b502cc62d1f541edd5796e6fb03c744}\label{interface_s_f_open_g_l_view_a8b502cc62d1f541edd5796e6fb03c744} 
+\index{SFOpenGLView@{SFOpenGLView}!mouseButtonFromEvent:@{mouseButtonFromEvent:}}
+\index{mouseButtonFromEvent:@{mouseButtonFromEvent:}!SFOpenGLView@{SFOpenGLView}}
+\doxysubsubsection{\texorpdfstring{mouseButtonFromEvent:}{mouseButtonFromEvent:}}
+{\footnotesize\ttfamily + Mouse\+: \begin{DoxyParamCaption}\item[{(NSEvent \texorpdfstring{$\ast$}{*})}]{event }\end{DoxyParamCaption}}
+
+
+
+Convert the NSEvent mouse button type to SFML type. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em event} & a mouse button event\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Left, Right, ..., or Button\+Count if the button is unknown 
+\end{DoxyReturn}
+
+
+Provided by category \mbox{\hyperlink{interface_s_f_open_g_l_view_a8b502cc62d1f541edd5796e6fb03c744}{SFOpen\+GLView(mouse\+\_\+priv)}}.
+
+\Hypertarget{interface_s_f_open_g_l_view_a3588e074ef8e16a79f00380adea0b8bd}\label{interface_s_f_open_g_l_view_a3588e074ef8e16a79f00380adea0b8bd} 
+\index{SFOpenGLView@{SFOpenGLView}!moveCursorTo:@{moveCursorTo:}}
+\index{moveCursorTo:@{moveCursorTo:}!SFOpenGLView@{SFOpenGLView}}
+\doxysubsubsection{\texorpdfstring{moveCursorTo:}{moveCursorTo:}}
+{\footnotesize\ttfamily -\/ (void) move\+Cursor\+To\+: \begin{DoxyParamCaption}\item[{(NSPoint)}]{loc }\end{DoxyParamCaption}}
+
+
+
+Move the cursor to the given location. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em loc} & location expressed in SFML coordinate system \\
+\hline
+\end{DoxyParams}
+
+
+Provided by category \mbox{\hyperlink{interface_s_f_open_g_l_view_a3588e074ef8e16a79f00380adea0b8bd}{SFOpen\+GLView(mouse\+\_\+priv)}}.
+
+\Hypertarget{interface_s_f_open_g_l_view_ae12b72607fcf8fae9cdfd9375ff2e15d}\label{interface_s_f_open_g_l_view_ae12b72607fcf8fae9cdfd9375ff2e15d} 
+\index{SFOpenGLView@{SFOpenGLView}!setRequesterTo:@{setRequesterTo:}}
+\index{setRequesterTo:@{setRequesterTo:}!SFOpenGLView@{SFOpenGLView}}
+\doxysubsubsection{\texorpdfstring{setRequesterTo:}{setRequesterTo:}}
+{\footnotesize\ttfamily -\/ (void) set\+Requester\+To\+: \begin{DoxyParamCaption}\item[{(\mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_cocoa}{sf\+::priv\+::\+Window\+Impl\+Cocoa}}\texorpdfstring{$\ast$}{*})}]{requester }\end{DoxyParamCaption}}
+
+
+
+Apply the given requester to the view. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em requester} & new \textquotesingle{}requester\textquotesingle{} of the view \\
+\hline
+\end{DoxyParams}
+\Hypertarget{interface_s_f_open_g_l_view_af86825f25efeefa82e2ce670ee57e78c}\label{interface_s_f_open_g_l_view_af86825f25efeefa82e2ce670ee57e78c} 
+\index{SFOpenGLView@{SFOpenGLView}!updateCursorGrabbed@{updateCursorGrabbed}}
+\index{updateCursorGrabbed@{updateCursorGrabbed}!SFOpenGLView@{SFOpenGLView}}
+\doxysubsubsection{\texorpdfstring{updateCursorGrabbed}{updateCursorGrabbed}}
+{\footnotesize\ttfamily -\/ (void) update\+Cursor\+Grabbed \begin{DoxyParamCaption}{ }\end{DoxyParamCaption}}
+
+
+
+(Dis)connect the cursor\textquotesingle{}s movements from/to the system and project the cursor into the view 
+
+
+
+Provided by category \mbox{\hyperlink{interface_s_f_open_g_l_view_af86825f25efeefa82e2ce670ee57e78c}{SFOpen\+GLView(mouse\+\_\+priv)}}.
+
+\Hypertarget{interface_s_f_open_g_l_view_a66fb2d1dedaa56ed04f1240932d31dce}\label{interface_s_f_open_g_l_view_a66fb2d1dedaa56ed04f1240932d31dce} 
+\index{SFOpenGLView@{SFOpenGLView}!updateMouseState@{updateMouseState}}
+\index{updateMouseState@{updateMouseState}!SFOpenGLView@{SFOpenGLView}}
+\doxysubsubsection{\texorpdfstring{updateMouseState}{updateMouseState}}
+{\footnotesize\ttfamily -\/ (void) update\+Mouse\+State \begin{DoxyParamCaption}{ }\end{DoxyParamCaption}}
+
+
+
+Update the mouse state (in or out) 
+
+Fire an event if its state has changed. 
+
+Provided by category \mbox{\hyperlink{interface_s_f_open_g_l_view_a66fb2d1dedaa56ed04f1240932d31dce}{SFOpen\+GLView(mouse\+\_\+priv)}}.
+
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{interface_s_f_open_g_l_view_a8508577f920b32bcc1716840587b5bf2}\label{interface_s_f_open_g_l_view_a8508577f920b32bcc1716840587b5bf2} 
+\index{SFOpenGLView@{SFOpenGLView}!m\_cursor@{m\_cursor}}
+\index{m\_cursor@{m\_cursor}!SFOpenGLView@{SFOpenGLView}}
+\doxysubsubsection{\texorpdfstring{m\_cursor}{m\_cursor}}
+{\footnotesize\ttfamily -\/ (NSCursor\texorpdfstring{$\ast$}{*}) m\+\_\+cursor\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Active cursor. 
+
+\Hypertarget{interface_s_f_open_g_l_view_a34159db17cfcebd31fc158589ca43d56}\label{interface_s_f_open_g_l_view_a34159db17cfcebd31fc158589ca43d56} 
+\index{SFOpenGLView@{SFOpenGLView}!m\_cursorGrabbed@{m\_cursorGrabbed}}
+\index{m\_cursorGrabbed@{m\_cursorGrabbed}!SFOpenGLView@{SFOpenGLView}}
+\doxysubsubsection{\texorpdfstring{m\_cursorGrabbed}{m\_cursorGrabbed}}
+{\footnotesize\ttfamily -\/ (BOOL) m\+\_\+cursor\+Grabbed\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Is the mouse cursor trapped? 
+
+\Hypertarget{interface_s_f_open_g_l_view_a9fab9c89c46f6d46762c056512570c88}\label{interface_s_f_open_g_l_view_a9fab9c89c46f6d46762c056512570c88} 
+\index{SFOpenGLView@{SFOpenGLView}!m\_deltaXBuffer@{m\_deltaXBuffer}}
+\index{m\_deltaXBuffer@{m\_deltaXBuffer}!SFOpenGLView@{SFOpenGLView}}
+\doxysubsubsection{\texorpdfstring{m\_deltaXBuffer}{m\_deltaXBuffer}}
+{\footnotesize\ttfamily -\/ (CGFloat) m\+\_\+delta\+XBuffer\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+See note about cursor grabbing above. 
+
+\Hypertarget{interface_s_f_open_g_l_view_a959c69f58ad62474571f08d07d4d0c08}\label{interface_s_f_open_g_l_view_a959c69f58ad62474571f08d07d4d0c08} 
+\index{SFOpenGLView@{SFOpenGLView}!m\_deltaYBuffer@{m\_deltaYBuffer}}
+\index{m\_deltaYBuffer@{m\_deltaYBuffer}!SFOpenGLView@{SFOpenGLView}}
+\doxysubsubsection{\texorpdfstring{m\_deltaYBuffer}{m\_deltaYBuffer}}
+{\footnotesize\ttfamily -\/ (CGFloat) m\+\_\+delta\+YBuffer\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+See note about cursor grabbing above. 
+
+\Hypertarget{interface_s_f_open_g_l_view_a5da6c2e3b4ed24745cd98faba116d83d}\label{interface_s_f_open_g_l_view_a5da6c2e3b4ed24745cd98faba116d83d} 
+\index{SFOpenGLView@{SFOpenGLView}!m\_fullscreen@{m\_fullscreen}}
+\index{m\_fullscreen@{m\_fullscreen}!SFOpenGLView@{SFOpenGLView}}
+\doxysubsubsection{\texorpdfstring{m\_fullscreen}{m\_fullscreen}}
+{\footnotesize\ttfamily -\/ (BOOL) m\+\_\+fullscreen\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Indicate whether the window is fullscreen or not. 
+
+\Hypertarget{interface_s_f_open_g_l_view_ade5541077e7a3f443ba41516bdc12b2b}\label{interface_s_f_open_g_l_view_ade5541077e7a3f443ba41516bdc12b2b} 
+\index{SFOpenGLView@{SFOpenGLView}!m\_hiddenTextView@{m\_hiddenTextView}}
+\index{m\_hiddenTextView@{m\_hiddenTextView}!SFOpenGLView@{SFOpenGLView}}
+\doxysubsubsection{\texorpdfstring{m\_hiddenTextView}{m\_hiddenTextView}}
+{\footnotesize\ttfamily -\/ (NSText\+View\texorpdfstring{$\ast$}{*}) m\+\_\+hidden\+Text\+View\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{interface_s_f_open_g_l_view_a543465a955d8dab5427a89bb0aa34c06}\label{interface_s_f_open_g_l_view_a543465a955d8dab5427a89bb0aa34c06} 
+\index{SFOpenGLView@{SFOpenGLView}!m\_highDpi@{m\_highDpi}}
+\index{m\_highDpi@{m\_highDpi}!SFOpenGLView@{SFOpenGLView}}
+\doxysubsubsection{\texorpdfstring{m\_highDpi}{m\_highDpi}}
+{\footnotesize\ttfamily -\/ (BOOL) m\+\_\+high\+Dpi\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Is high-\/\+DPI enabled? 
+
+\Hypertarget{interface_s_f_open_g_l_view_ad321cd6bab9ea7502aded303b577998e}\label{interface_s_f_open_g_l_view_ad321cd6bab9ea7502aded303b577998e} 
+\index{SFOpenGLView@{SFOpenGLView}!m\_mouseIsIn@{m\_mouseIsIn}}
+\index{m\_mouseIsIn@{m\_mouseIsIn}!SFOpenGLView@{SFOpenGLView}}
+\doxysubsubsection{\texorpdfstring{m\_mouseIsIn}{m\_mouseIsIn}}
+{\footnotesize\ttfamily -\/ (BOOL) m\+\_\+mouse\+Is\+In\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Mouse positional state. 
+
+\Hypertarget{interface_s_f_open_g_l_view_ab4cfba5f1c80b7aacb219bb8f6337e12}\label{interface_s_f_open_g_l_view_ab4cfba5f1c80b7aacb219bb8f6337e12} 
+\index{SFOpenGLView@{SFOpenGLView}!m\_requester@{m\_requester}}
+\index{m\_requester@{m\_requester}!SFOpenGLView@{SFOpenGLView}}
+\doxysubsubsection{\texorpdfstring{m\_requester}{m\_requester}}
+{\footnotesize\ttfamily -\/ priv\+:\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+View\textquotesingle{}s requester. 
+
+\Hypertarget{interface_s_f_open_g_l_view_a3f0ec9155bfb92104b472d02adfaa8e8}\label{interface_s_f_open_g_l_view_a3f0ec9155bfb92104b472d02adfaa8e8} 
+\index{SFOpenGLView@{SFOpenGLView}!m\_scaleFactor@{m\_scaleFactor}}
+\index{m\_scaleFactor@{m\_scaleFactor}!SFOpenGLView@{SFOpenGLView}}
+\doxysubsubsection{\texorpdfstring{m\_scaleFactor}{m\_scaleFactor}}
+{\footnotesize\ttfamily -\/ (CGFloat) m\+\_\+scale\+Factor\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Display scale factor (e.\+g. 1x for classic display, 2x for retina) 
+
+\Hypertarget{interface_s_f_open_g_l_view_a0a8df4ff4e13f3c4aa240da58d1a5c43}\label{interface_s_f_open_g_l_view_a0a8df4ff4e13f3c4aa240da58d1a5c43} 
+\index{SFOpenGLView@{SFOpenGLView}!m\_silentResponder@{m\_silentResponder}}
+\index{m\_silentResponder@{m\_silentResponder}!SFOpenGLView@{SFOpenGLView}}
+\doxysubsubsection{\texorpdfstring{m\_silentResponder}{m\_silentResponder}}
+{\footnotesize\ttfamily -\/ (\mbox{\hyperlink{interface_s_f_silent_responder}{SFSilent\+Responder}}\texorpdfstring{$\ast$}{*}) m\+\_\+silent\+Responder\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{interface_s_f_open_g_l_view_a8b4c9487c935f6fdf67fa11fe82023dd}\label{interface_s_f_open_g_l_view_a8b4c9487c935f6fdf67fa11fe82023dd} 
+\index{SFOpenGLView@{SFOpenGLView}!m\_trackingArea@{m\_trackingArea}}
+\index{m\_trackingArea@{m\_trackingArea}!SFOpenGLView@{SFOpenGLView}}
+\doxysubsubsection{\texorpdfstring{m\_trackingArea}{m\_trackingArea}}
+{\footnotesize\ttfamily -\/ (NSTracking\+Area\texorpdfstring{$\ast$}{*}) m\+\_\+tracking\+Area\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Mouse tracking area. 
+
+\Hypertarget{interface_s_f_open_g_l_view_a746fd7510438905eafd65cbf1c8dc352}\label{interface_s_f_open_g_l_view_a746fd7510438905eafd65cbf1c8dc352} 
+\index{SFOpenGLView@{SFOpenGLView}!m\_useKeyRepeat@{m\_useKeyRepeat}}
+\index{m\_useKeyRepeat@{m\_useKeyRepeat}!SFOpenGLView@{SFOpenGLView}}
+\doxysubsubsection{\texorpdfstring{m\_useKeyRepeat}{m\_useKeyRepeat}}
+{\footnotesize\ttfamily -\/ (BOOL) m\+\_\+use\+Key\+Repeat\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Key repeat setting. 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+OSX/\mbox{\hyperlink{_s_f_open_g_l_view_8h}{SFOpen\+GLView.\+h}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+OSX/\mbox{\hyperlink{_s_f_open_g_l_view_8mm}{SFOpen\+GLView.\+mm}}\end{DoxyCompactItemize}

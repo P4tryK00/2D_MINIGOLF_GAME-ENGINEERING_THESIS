@@ -1,0 +1,101 @@
+\doxysection{System module}
+\hypertarget{group__system}{}\label{group__system}\index{System module@{System module}}
+\doxysubsubsection*{Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsf_1_1_clock}{sf\+::\+Clock}}
+\begin{DoxyCompactList}\small\item\em Utility class that measures the elapsed time. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1_file_input_stream}{sf\+::\+File\+Input\+Stream}}
+\begin{DoxyCompactList}\small\item\em Implementation of input stream based on a file. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1_input_stream}{sf\+::\+Input\+Stream}}
+\begin{DoxyCompactList}\small\item\em Abstract class for custom file input streams. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1_lock}{sf\+::\+Lock}}
+\begin{DoxyCompactList}\small\item\em Automatic wrapper for locking and unlocking mutexes. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1_memory_input_stream}{sf\+::\+Memory\+Input\+Stream}}
+\begin{DoxyCompactList}\small\item\em Implementation of input stream based on a memory chunk. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1_mutex}{sf\+::\+Mutex}}
+\begin{DoxyCompactList}\small\item\em Blocks concurrent access to shared resources from multiple threads. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1_non_copyable}{sf\+::\+Non\+Copyable}}
+\begin{DoxyCompactList}\small\item\em Utility class that makes any derived class non-\/copyable. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1_string}{sf\+::\+String}}
+\begin{DoxyCompactList}\small\item\em Utility string class that automatically handles conversions between types and encodings. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1_thread}{sf\+::\+Thread}}
+\begin{DoxyCompactList}\small\item\em Utility class to manipulate threads. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1_thread_local}{sf\+::\+Thread\+Local}}
+\begin{DoxyCompactList}\small\item\em Defines variables with thread-\/local storage. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1_thread_local_ptr}{sf\+::\+Thread\+Local\+Ptr$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em Pointer to a thread-\/local variable. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1_time}{sf\+::\+Time}}
+\begin{DoxyCompactList}\small\item\em Represents a time value. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1_utf}{sf\+::\+Utf$<$ N $>$}}
+\item 
+class \mbox{\hyperlink{classsf_1_1_vector2}{sf\+::\+Vector2$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em Utility template class for manipulating 2-\/dimensional vectors. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsf_1_1_vector3}{sf\+::\+Vector3$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em Utility template class for manipulating 3-\/dimensional vectors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_system_2_export_8hpp_a6476c9e422606477a4c23d92b1d79a1f}{SFML\+\_\+\+SYSTEM\+\_\+\+API}} ANative\+Activity \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__system_ga666414341ce8396227f5a125ee5b7053}{sf\+::get\+Native\+Activity}} ()
+\begin{DoxyCompactList}\small\item\em Return a pointer to the Android native activity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_system_2_export_8hpp_a6476c9e422606477a4c23d92b1d79a1f}{SFML\+\_\+\+SYSTEM\+\_\+\+API}} \mbox{\hyperlink{group__system_gab8c0d1f966b4e5110fd370b662d8c11b}{sf\+::sleep}} (\mbox{\hyperlink{classsf_1_1_time}{Time}} duration)
+\begin{DoxyCompactList}\small\item\em Make the current thread sleep for a given duration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Base module of SFML, defining various utilities. It provides vector classes, Unicode strings and conversion functions, threads and mutexes, timing classes. 
+
+\doxysubsection{Dokumentacja funkcji}
+\Hypertarget{group__system_ga666414341ce8396227f5a125ee5b7053}\label{group__system_ga666414341ce8396227f5a125ee5b7053} 
+\index{System module@{System module}!getNativeActivity@{getNativeActivity}}
+\index{getNativeActivity@{getNativeActivity}!System module@{System module}}
+\doxysubsubsection{\texorpdfstring{getNativeActivity()}{getNativeActivity()}}
+{\footnotesize\ttfamily ANative\+Activity \texorpdfstring{$\ast$}{*} sf\+::get\+Native\+Activity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Return a pointer to the Android native activity. 
+
+You shouldn\textquotesingle{}t have to use this function, unless you want to implement very specific details, that SFML doesn\textquotesingle{}t support, or to use a workaround for a known issue.
+
+\begin{DoxyReturn}{Zwraca}
+Pointer to Android native activity structure
+\end{DoxyReturn}
+\textbackslash{}sfplatform\{Android,\doxylink{_native_activity_8hpp}{SFML/\+System/\+Native\+Activity.\+hpp}\} Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__system_ga666414341ce8396227f5a125ee5b7053_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{group__system_gab8c0d1f966b4e5110fd370b662d8c11b}\label{group__system_gab8c0d1f966b4e5110fd370b662d8c11b} 
+\index{System module@{System module}!sleep@{sleep}}
+\index{sleep@{sleep}!System module@{System module}}
+\doxysubsubsection{\texorpdfstring{sleep()}{sleep()}}
+{\footnotesize\ttfamily void sf\+::sleep (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_time}{Time}}}]{duration }\end{DoxyParamCaption})}
+
+
+
+Make the current thread sleep for a given duration. 
+
+\doxylink{group__system_gab8c0d1f966b4e5110fd370b662d8c11b}{sf\+::sleep} is the best way to block a program or one of its threads, as it doesn\textquotesingle{}t consume any CPU power.
+
+
+\begin{DoxyParams}{Parametry}
+{\em duration} & \doxylink{classsf_1_1_time}{Time} to sleep \\
+\hline
+\end{DoxyParams}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__system_gab8c0d1f966b4e5110fd370b662d8c11b_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__system_gab8c0d1f966b4e5110fd370b662d8c11b_icgraph}
+\end{center}
+\end{figure}

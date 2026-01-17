@@ -1,0 +1,98 @@
+\doxysection{Dokumentacja struktury Vk\+Win32\+Keyed\+Mutex\+Acquire\+Release\+Info\+NV}
+\hypertarget{struct_vk_win32_keyed_mutex_acquire_release_info_n_v}{}\label{struct_vk_win32_keyed_mutex_acquire_release_info_n_v}\index{VkWin32KeyedMutexAcquireReleaseInfoNV@{VkWin32KeyedMutexAcquireReleaseInfoNV}}
+
+
+{\ttfamily \#include $<$vulkan\+\_\+win32.\+h$>$}
+
+
+
+Diagram współpracy dla Vk\+Win32\+Keyed\+Mutex\+Acquire\+Release\+Info\+NV\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{struct_vk_win32_keyed_mutex_acquire_release_info_n_v__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_aff9f2b99398eb80a2b5a146bc5534ce8}{Vk\+Structure\+Type}} \mbox{\hyperlink{struct_vk_win32_keyed_mutex_acquire_release_info_n_v_a91a6b2968aba3a5d3df4c532d7757215}{s\+Type}}
+\item 
+const void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_vk_win32_keyed_mutex_acquire_release_info_n_v_ab37e3276e9e923396eb97600d73596cf}{p\+Next}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_vk_win32_keyed_mutex_acquire_release_info_n_v_ab97822ac3a522c9996e24d7df0a147de}{acquire\+Count}}
+\item 
+const Vk\+Device\+Memory \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_vk_win32_keyed_mutex_acquire_release_info_n_v_a1b207fd2b1ebd4c652b7708513cc07d3}{p\+Acquire\+Syncs}}
+\item 
+const uint64\+\_\+t \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_vk_win32_keyed_mutex_acquire_release_info_n_v_ac345675e8992da5b3c90633292717a4c}{p\+Acquire\+Keys}}
+\item 
+const uint32\+\_\+t \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_vk_win32_keyed_mutex_acquire_release_info_n_v_a56056663a29b711a17724a95234e9aa5}{p\+Acquire\+Timeout\+Milliseconds}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_vk_win32_keyed_mutex_acquire_release_info_n_v_a946645b8cd5da9df88fcda74ca64f30f}{release\+Count}}
+\item 
+const Vk\+Device\+Memory \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_vk_win32_keyed_mutex_acquire_release_info_n_v_a86ae77bc6a1fde5aa7f209f3276e1abf}{p\+Release\+Syncs}}
+\item 
+const uint64\+\_\+t \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_vk_win32_keyed_mutex_acquire_release_info_n_v_a6738ae245524f4f3988946ad76b0db43}{p\+Release\+Keys}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{struct_vk_win32_keyed_mutex_acquire_release_info_n_v_ab97822ac3a522c9996e24d7df0a147de}\label{struct_vk_win32_keyed_mutex_acquire_release_info_n_v_ab97822ac3a522c9996e24d7df0a147de} 
+\index{VkWin32KeyedMutexAcquireReleaseInfoNV@{VkWin32KeyedMutexAcquireReleaseInfoNV}!acquireCount@{acquireCount}}
+\index{acquireCount@{acquireCount}!VkWin32KeyedMutexAcquireReleaseInfoNV@{VkWin32KeyedMutexAcquireReleaseInfoNV}}
+\doxysubsubsection{\texorpdfstring{acquireCount}{acquireCount}}
+{\footnotesize\ttfamily uint32\+\_\+t Vk\+Win32\+Keyed\+Mutex\+Acquire\+Release\+Info\+NV\+::acquire\+Count}
+
+\Hypertarget{struct_vk_win32_keyed_mutex_acquire_release_info_n_v_ac345675e8992da5b3c90633292717a4c}\label{struct_vk_win32_keyed_mutex_acquire_release_info_n_v_ac345675e8992da5b3c90633292717a4c} 
+\index{VkWin32KeyedMutexAcquireReleaseInfoNV@{VkWin32KeyedMutexAcquireReleaseInfoNV}!pAcquireKeys@{pAcquireKeys}}
+\index{pAcquireKeys@{pAcquireKeys}!VkWin32KeyedMutexAcquireReleaseInfoNV@{VkWin32KeyedMutexAcquireReleaseInfoNV}}
+\doxysubsubsection{\texorpdfstring{pAcquireKeys}{pAcquireKeys}}
+{\footnotesize\ttfamily const uint64\+\_\+t\texorpdfstring{$\ast$}{*} Vk\+Win32\+Keyed\+Mutex\+Acquire\+Release\+Info\+NV\+::p\+Acquire\+Keys}
+
+\Hypertarget{struct_vk_win32_keyed_mutex_acquire_release_info_n_v_a1b207fd2b1ebd4c652b7708513cc07d3}\label{struct_vk_win32_keyed_mutex_acquire_release_info_n_v_a1b207fd2b1ebd4c652b7708513cc07d3} 
+\index{VkWin32KeyedMutexAcquireReleaseInfoNV@{VkWin32KeyedMutexAcquireReleaseInfoNV}!pAcquireSyncs@{pAcquireSyncs}}
+\index{pAcquireSyncs@{pAcquireSyncs}!VkWin32KeyedMutexAcquireReleaseInfoNV@{VkWin32KeyedMutexAcquireReleaseInfoNV}}
+\doxysubsubsection{\texorpdfstring{pAcquireSyncs}{pAcquireSyncs}}
+{\footnotesize\ttfamily const Vk\+Device\+Memory\texorpdfstring{$\ast$}{*} Vk\+Win32\+Keyed\+Mutex\+Acquire\+Release\+Info\+NV\+::p\+Acquire\+Syncs}
+
+\Hypertarget{struct_vk_win32_keyed_mutex_acquire_release_info_n_v_a56056663a29b711a17724a95234e9aa5}\label{struct_vk_win32_keyed_mutex_acquire_release_info_n_v_a56056663a29b711a17724a95234e9aa5} 
+\index{VkWin32KeyedMutexAcquireReleaseInfoNV@{VkWin32KeyedMutexAcquireReleaseInfoNV}!pAcquireTimeoutMilliseconds@{pAcquireTimeoutMilliseconds}}
+\index{pAcquireTimeoutMilliseconds@{pAcquireTimeoutMilliseconds}!VkWin32KeyedMutexAcquireReleaseInfoNV@{VkWin32KeyedMutexAcquireReleaseInfoNV}}
+\doxysubsubsection{\texorpdfstring{pAcquireTimeoutMilliseconds}{pAcquireTimeoutMilliseconds}}
+{\footnotesize\ttfamily const uint32\+\_\+t\texorpdfstring{$\ast$}{*} Vk\+Win32\+Keyed\+Mutex\+Acquire\+Release\+Info\+NV\+::p\+Acquire\+Timeout\+Milliseconds}
+
+\Hypertarget{struct_vk_win32_keyed_mutex_acquire_release_info_n_v_ab37e3276e9e923396eb97600d73596cf}\label{struct_vk_win32_keyed_mutex_acquire_release_info_n_v_ab37e3276e9e923396eb97600d73596cf} 
+\index{VkWin32KeyedMutexAcquireReleaseInfoNV@{VkWin32KeyedMutexAcquireReleaseInfoNV}!pNext@{pNext}}
+\index{pNext@{pNext}!VkWin32KeyedMutexAcquireReleaseInfoNV@{VkWin32KeyedMutexAcquireReleaseInfoNV}}
+\doxysubsubsection{\texorpdfstring{pNext}{pNext}}
+{\footnotesize\ttfamily const void\texorpdfstring{$\ast$}{*} Vk\+Win32\+Keyed\+Mutex\+Acquire\+Release\+Info\+NV\+::p\+Next}
+
+\Hypertarget{struct_vk_win32_keyed_mutex_acquire_release_info_n_v_a6738ae245524f4f3988946ad76b0db43}\label{struct_vk_win32_keyed_mutex_acquire_release_info_n_v_a6738ae245524f4f3988946ad76b0db43} 
+\index{VkWin32KeyedMutexAcquireReleaseInfoNV@{VkWin32KeyedMutexAcquireReleaseInfoNV}!pReleaseKeys@{pReleaseKeys}}
+\index{pReleaseKeys@{pReleaseKeys}!VkWin32KeyedMutexAcquireReleaseInfoNV@{VkWin32KeyedMutexAcquireReleaseInfoNV}}
+\doxysubsubsection{\texorpdfstring{pReleaseKeys}{pReleaseKeys}}
+{\footnotesize\ttfamily const uint64\+\_\+t\texorpdfstring{$\ast$}{*} Vk\+Win32\+Keyed\+Mutex\+Acquire\+Release\+Info\+NV\+::p\+Release\+Keys}
+
+\Hypertarget{struct_vk_win32_keyed_mutex_acquire_release_info_n_v_a86ae77bc6a1fde5aa7f209f3276e1abf}\label{struct_vk_win32_keyed_mutex_acquire_release_info_n_v_a86ae77bc6a1fde5aa7f209f3276e1abf} 
+\index{VkWin32KeyedMutexAcquireReleaseInfoNV@{VkWin32KeyedMutexAcquireReleaseInfoNV}!pReleaseSyncs@{pReleaseSyncs}}
+\index{pReleaseSyncs@{pReleaseSyncs}!VkWin32KeyedMutexAcquireReleaseInfoNV@{VkWin32KeyedMutexAcquireReleaseInfoNV}}
+\doxysubsubsection{\texorpdfstring{pReleaseSyncs}{pReleaseSyncs}}
+{\footnotesize\ttfamily const Vk\+Device\+Memory\texorpdfstring{$\ast$}{*} Vk\+Win32\+Keyed\+Mutex\+Acquire\+Release\+Info\+NV\+::p\+Release\+Syncs}
+
+\Hypertarget{struct_vk_win32_keyed_mutex_acquire_release_info_n_v_a946645b8cd5da9df88fcda74ca64f30f}\label{struct_vk_win32_keyed_mutex_acquire_release_info_n_v_a946645b8cd5da9df88fcda74ca64f30f} 
+\index{VkWin32KeyedMutexAcquireReleaseInfoNV@{VkWin32KeyedMutexAcquireReleaseInfoNV}!releaseCount@{releaseCount}}
+\index{releaseCount@{releaseCount}!VkWin32KeyedMutexAcquireReleaseInfoNV@{VkWin32KeyedMutexAcquireReleaseInfoNV}}
+\doxysubsubsection{\texorpdfstring{releaseCount}{releaseCount}}
+{\footnotesize\ttfamily uint32\+\_\+t Vk\+Win32\+Keyed\+Mutex\+Acquire\+Release\+Info\+NV\+::release\+Count}
+
+\Hypertarget{struct_vk_win32_keyed_mutex_acquire_release_info_n_v_a91a6b2968aba3a5d3df4c532d7757215}\label{struct_vk_win32_keyed_mutex_acquire_release_info_n_v_a91a6b2968aba3a5d3df4c532d7757215} 
+\index{VkWin32KeyedMutexAcquireReleaseInfoNV@{VkWin32KeyedMutexAcquireReleaseInfoNV}!sType@{sType}}
+\index{sType@{sType}!VkWin32KeyedMutexAcquireReleaseInfoNV@{VkWin32KeyedMutexAcquireReleaseInfoNV}}
+\doxysubsubsection{\texorpdfstring{sType}{sType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_aff9f2b99398eb80a2b5a146bc5534ce8}{Vk\+Structure\+Type}} Vk\+Win32\+Keyed\+Mutex\+Acquire\+Release\+Info\+NV\+::s\+Type}
+
+
+
+Dokumentacja dla tej struktury została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/extlibs/headers/vulkan/\mbox{\hyperlink{vulkan__win32_8h}{vulkan\+\_\+win32.\+h}}\end{DoxyCompactItemize}

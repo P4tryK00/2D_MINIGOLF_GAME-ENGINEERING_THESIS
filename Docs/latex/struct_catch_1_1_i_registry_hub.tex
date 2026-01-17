@@ -1,0 +1,69 @@
+\doxysection{Dokumentacja struktury Catch\+::IRegistry\+Hub}
+\hypertarget{struct_catch_1_1_i_registry_hub}{}\label{struct_catch_1_1_i_registry_hub}\index{Catch::IRegistryHub@{Catch::IRegistryHub}}
+
+
+{\ttfamily \#include $<$catch.\+hpp$>$}
+
+
+
+Diagram współpracy dla Catch\+::IRegistry\+Hub\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{struct_catch_1_1_i_registry_hub__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{struct_catch_1_1_i_registry_hub_a050de0f27f96888c8b410992146c9a09}{\texorpdfstring{$\sim$}{\string~}\+IRegistry\+Hub}} ()
+\item 
+virtual IReporter\+Registry const \& \mbox{\hyperlink{struct_catch_1_1_i_registry_hub_abbb3aafb58916d633ef959d724d4b82c}{get\+Reporter\+Registry}} () const =0
+\item 
+virtual \mbox{\hyperlink{struct_catch_1_1_i_test_case_registry}{ITest\+Case\+Registry}} const \& \mbox{\hyperlink{struct_catch_1_1_i_registry_hub_a3016c8766e42bae7b021f02d1cbd356b}{get\+Test\+Case\+Registry}} () const =0
+\item 
+virtual \mbox{\hyperlink{struct_catch_1_1_i_tag_alias_registry}{ITag\+Alias\+Registry}} const \& \mbox{\hyperlink{struct_catch_1_1_i_registry_hub_a3fb24564dba3f679dfa58792f1e21708}{get\+Tag\+Alias\+Registry}} () const =0
+\item 
+virtual \mbox{\hyperlink{struct_catch_1_1_i_exception_translator_registry}{IException\+Translator\+Registry}} \& \mbox{\hyperlink{struct_catch_1_1_i_registry_hub_a8590e063a9675e2a26c888e45b9c8bd7}{get\+Exception\+Translator\+Registry}} ()=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{struct_catch_1_1_i_registry_hub_a050de0f27f96888c8b410992146c9a09}\label{struct_catch_1_1_i_registry_hub_a050de0f27f96888c8b410992146c9a09} 
+\index{Catch::IRegistryHub@{Catch::IRegistryHub}!````~IRegistryHub@{\texorpdfstring{$\sim$}{\string~}IRegistryHub}}
+\index{````~IRegistryHub@{\texorpdfstring{$\sim$}{\string~}IRegistryHub}!Catch::IRegistryHub@{Catch::IRegistryHub}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}IRegistryHub()}{\string~IRegistryHub()}}
+{\footnotesize\ttfamily virtual Catch\+::\+IRegistry\+Hub\+::\texorpdfstring{$\sim$}{\string~}\+IRegistry\+Hub (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{struct_catch_1_1_i_registry_hub_a8590e063a9675e2a26c888e45b9c8bd7}\label{struct_catch_1_1_i_registry_hub_a8590e063a9675e2a26c888e45b9c8bd7} 
+\index{Catch::IRegistryHub@{Catch::IRegistryHub}!getExceptionTranslatorRegistry@{getExceptionTranslatorRegistry}}
+\index{getExceptionTranslatorRegistry@{getExceptionTranslatorRegistry}!Catch::IRegistryHub@{Catch::IRegistryHub}}
+\doxysubsubsection{\texorpdfstring{getExceptionTranslatorRegistry()}{getExceptionTranslatorRegistry()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{struct_catch_1_1_i_exception_translator_registry}{IException\+Translator\+Registry}} \& Catch\+::\+IRegistry\+Hub\+::get\+Exception\+Translator\+Registry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\Hypertarget{struct_catch_1_1_i_registry_hub_abbb3aafb58916d633ef959d724d4b82c}\label{struct_catch_1_1_i_registry_hub_abbb3aafb58916d633ef959d724d4b82c} 
+\index{Catch::IRegistryHub@{Catch::IRegistryHub}!getReporterRegistry@{getReporterRegistry}}
+\index{getReporterRegistry@{getReporterRegistry}!Catch::IRegistryHub@{Catch::IRegistryHub}}
+\doxysubsubsection{\texorpdfstring{getReporterRegistry()}{getReporterRegistry()}}
+{\footnotesize\ttfamily virtual IReporter\+Registry const  \& Catch\+::\+IRegistry\+Hub\+::get\+Reporter\+Registry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\Hypertarget{struct_catch_1_1_i_registry_hub_a3fb24564dba3f679dfa58792f1e21708}\label{struct_catch_1_1_i_registry_hub_a3fb24564dba3f679dfa58792f1e21708} 
+\index{Catch::IRegistryHub@{Catch::IRegistryHub}!getTagAliasRegistry@{getTagAliasRegistry}}
+\index{getTagAliasRegistry@{getTagAliasRegistry}!Catch::IRegistryHub@{Catch::IRegistryHub}}
+\doxysubsubsection{\texorpdfstring{getTagAliasRegistry()}{getTagAliasRegistry()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{struct_catch_1_1_i_tag_alias_registry}{ITag\+Alias\+Registry}} const  \& Catch\+::\+IRegistry\+Hub\+::get\+Tag\+Alias\+Registry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\Hypertarget{struct_catch_1_1_i_registry_hub_a3016c8766e42bae7b021f02d1cbd356b}\label{struct_catch_1_1_i_registry_hub_a3016c8766e42bae7b021f02d1cbd356b} 
+\index{Catch::IRegistryHub@{Catch::IRegistryHub}!getTestCaseRegistry@{getTestCaseRegistry}}
+\index{getTestCaseRegistry@{getTestCaseRegistry}!Catch::IRegistryHub@{Catch::IRegistryHub}}
+\doxysubsubsection{\texorpdfstring{getTestCaseRegistry()}{getTestCaseRegistry()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{struct_catch_1_1_i_test_case_registry}{ITest\+Case\+Registry}} const  \& Catch\+::\+IRegistry\+Hub\+::get\+Test\+Case\+Registry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Dokumentacja dla tej struktury została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/extlibs/headers/\mbox{\hyperlink{catch_8hpp}{catch.\+hpp}}\end{DoxyCompactItemize}

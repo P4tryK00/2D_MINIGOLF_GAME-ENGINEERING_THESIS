@@ -1,0 +1,87 @@
+\doxysection{Dokumentacja pliku cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+Win32/\+Window\+Impl\+Win32.cpp}
+\hypertarget{_window_impl_win32_8cpp}{}\label{_window_impl_win32_8cpp}\index{cmake-\/build-\/debug/\_deps/sfml-\/src/src/SFML/Window/Win32/WindowImplWin32.cpp@{cmake-\/build-\/debug/\_deps/sfml-\/src/src/SFML/Window/Win32/WindowImplWin32.cpp}}
+{\ttfamily \#include $<$SFML/\+Window/\+Win32/\+Window\+Impl\+Win32.\+hpp$>$}\newline
+{\ttfamily \#include $<$SFML/\+Window/\+Window\+Style.\+hpp$>$}\newline
+{\ttfamily \#include $<$SFML/\+System/\+Err.\+hpp$>$}\newline
+{\ttfamily \#include $<$SFML/\+System/\+Utf.\+hpp$>$}\newline
+{\ttfamily \#include $<$dbt.\+h$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+Wykres zależności załączania dla Window\+Impl\+Win32.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_window_impl_win32_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Przestrzenie nazw}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacesf}{sf}}
+\begin{DoxyCompactList}\small\item\em Predefine some classes. \end{DoxyCompactList}\item 
+namespace \mbox{\hyperlink{namespacesf_1_1priv}{sf\+::priv}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Definicje}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_window_impl_win32_8cpp_a074ca98c073d899c62fc6629918186c8}{\+\_\+\+WIN32\+\_\+\+WINDOWS}}~0x0501
+\item 
+\#define \mbox{\hyperlink{_window_impl_win32_8cpp_ac50762666aa00bd3a4308158510f1748}{\+\_\+\+WIN32\+\_\+\+WINNT}}~0x0501
+\item 
+\#define \mbox{\hyperlink{_window_impl_win32_8cpp_a966cd377b9f3fdeb1432460c33352af1}{WINVER}}~0x0501
+\item 
+\#define \mbox{\hyperlink{_window_impl_win32_8cpp_a466ba152ad50de01f74de9926c77933d}{XBUTTON1}}~0x0001
+\item 
+\#define \mbox{\hyperlink{_window_impl_win32_8cpp_a9d5df0a70bb9ac15388bda51fd56115e}{XBUTTON2}}~0x0002
+\item 
+\#define \mbox{\hyperlink{_window_impl_win32_8cpp_a7b2918d422b3a1fe86a641f74818bb55}{WM\+\_\+\+MOUSEHWHEEL}}~0x020E
+\item 
+\#define \mbox{\hyperlink{_window_impl_win32_8cpp_ace2c5967db2da364131c33419725c928}{MAPVK\+\_\+\+VK\+\_\+\+TO\+\_\+\+VSC}}~(0)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja definicji}
+\Hypertarget{_window_impl_win32_8cpp_a074ca98c073d899c62fc6629918186c8}\label{_window_impl_win32_8cpp_a074ca98c073d899c62fc6629918186c8} 
+\index{WindowImplWin32.cpp@{WindowImplWin32.cpp}!\_WIN32\_WINDOWS@{\_WIN32\_WINDOWS}}
+\index{\_WIN32\_WINDOWS@{\_WIN32\_WINDOWS}!WindowImplWin32.cpp@{WindowImplWin32.cpp}}
+\doxysubsubsection{\texorpdfstring{\_WIN32\_WINDOWS}{\_WIN32\_WINDOWS}}
+{\footnotesize\ttfamily \#define \+\_\+\+WIN32\+\_\+\+WINDOWS~0x0501}
+
+\Hypertarget{_window_impl_win32_8cpp_ac50762666aa00bd3a4308158510f1748}\label{_window_impl_win32_8cpp_ac50762666aa00bd3a4308158510f1748} 
+\index{WindowImplWin32.cpp@{WindowImplWin32.cpp}!\_WIN32\_WINNT@{\_WIN32\_WINNT}}
+\index{\_WIN32\_WINNT@{\_WIN32\_WINNT}!WindowImplWin32.cpp@{WindowImplWin32.cpp}}
+\doxysubsubsection{\texorpdfstring{\_WIN32\_WINNT}{\_WIN32\_WINNT}}
+{\footnotesize\ttfamily \#define \+\_\+\+WIN32\+\_\+\+WINNT~0x0501}
+
+\Hypertarget{_window_impl_win32_8cpp_ace2c5967db2da364131c33419725c928}\label{_window_impl_win32_8cpp_ace2c5967db2da364131c33419725c928} 
+\index{WindowImplWin32.cpp@{WindowImplWin32.cpp}!MAPVK\_VK\_TO\_VSC@{MAPVK\_VK\_TO\_VSC}}
+\index{MAPVK\_VK\_TO\_VSC@{MAPVK\_VK\_TO\_VSC}!WindowImplWin32.cpp@{WindowImplWin32.cpp}}
+\doxysubsubsection{\texorpdfstring{MAPVK\_VK\_TO\_VSC}{MAPVK\_VK\_TO\_VSC}}
+{\footnotesize\ttfamily \#define MAPVK\+\_\+\+VK\+\_\+\+TO\+\_\+\+VSC~(0)}
+
+\Hypertarget{_window_impl_win32_8cpp_a966cd377b9f3fdeb1432460c33352af1}\label{_window_impl_win32_8cpp_a966cd377b9f3fdeb1432460c33352af1} 
+\index{WindowImplWin32.cpp@{WindowImplWin32.cpp}!WINVER@{WINVER}}
+\index{WINVER@{WINVER}!WindowImplWin32.cpp@{WindowImplWin32.cpp}}
+\doxysubsubsection{\texorpdfstring{WINVER}{WINVER}}
+{\footnotesize\ttfamily \#define WINVER~0x0501}
+
+\Hypertarget{_window_impl_win32_8cpp_a7b2918d422b3a1fe86a641f74818bb55}\label{_window_impl_win32_8cpp_a7b2918d422b3a1fe86a641f74818bb55} 
+\index{WindowImplWin32.cpp@{WindowImplWin32.cpp}!WM\_MOUSEHWHEEL@{WM\_MOUSEHWHEEL}}
+\index{WM\_MOUSEHWHEEL@{WM\_MOUSEHWHEEL}!WindowImplWin32.cpp@{WindowImplWin32.cpp}}
+\doxysubsubsection{\texorpdfstring{WM\_MOUSEHWHEEL}{WM\_MOUSEHWHEEL}}
+{\footnotesize\ttfamily \#define WM\+\_\+\+MOUSEHWHEEL~0x020E}
+
+\Hypertarget{_window_impl_win32_8cpp_a466ba152ad50de01f74de9926c77933d}\label{_window_impl_win32_8cpp_a466ba152ad50de01f74de9926c77933d} 
+\index{WindowImplWin32.cpp@{WindowImplWin32.cpp}!XBUTTON1@{XBUTTON1}}
+\index{XBUTTON1@{XBUTTON1}!WindowImplWin32.cpp@{WindowImplWin32.cpp}}
+\doxysubsubsection{\texorpdfstring{XBUTTON1}{XBUTTON1}}
+{\footnotesize\ttfamily \#define XBUTTON1~0x0001}
+
+\Hypertarget{_window_impl_win32_8cpp_a9d5df0a70bb9ac15388bda51fd56115e}\label{_window_impl_win32_8cpp_a9d5df0a70bb9ac15388bda51fd56115e} 
+\index{WindowImplWin32.cpp@{WindowImplWin32.cpp}!XBUTTON2@{XBUTTON2}}
+\index{XBUTTON2@{XBUTTON2}!WindowImplWin32.cpp@{WindowImplWin32.cpp}}
+\doxysubsubsection{\texorpdfstring{XBUTTON2}{XBUTTON2}}
+{\footnotesize\ttfamily \#define XBUTTON2~0x0002}
+

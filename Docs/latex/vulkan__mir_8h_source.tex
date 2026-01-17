@@ -1,0 +1,71 @@
+\doxysection{vulkan\+\_\+mir.\+h}
+\hypertarget{vulkan__mir_8h_source}{}\label{vulkan__mir_8h_source}\index{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/vulkan/vulkan\_mir.h@{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/vulkan/vulkan\_mir.h}}
+\mbox{\hyperlink{vulkan__mir_8h}{Idź do dokumentacji tego pliku.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ VULKAN\_MIR\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ VULKAN\_MIR\_H\_\ 1}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00005\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00009\ \textcolor{comment}{**\ Copyright\ (c)\ 2015-\/2018\ The\ Khronos\ Group\ Inc.}}
+\DoxyCodeLine{00010\ \textcolor{comment}{**}}
+\DoxyCodeLine{00011\ \textcolor{comment}{**\ Licensed\ under\ the\ Apache\ License,\ Version\ 2.0\ (the\ "{}License"{});}}
+\DoxyCodeLine{00012\ \textcolor{comment}{**\ you\ may\ not\ use\ this\ file\ except\ in\ compliance\ with\ the\ License.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{**\ You\ may\ obtain\ a\ copy\ of\ the\ License\ at}}
+\DoxyCodeLine{00014\ \textcolor{comment}{**}}
+\DoxyCodeLine{00015\ \textcolor{comment}{**\ \ \ \ \ http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{00016\ \textcolor{comment}{**}}
+\DoxyCodeLine{00017\ \textcolor{comment}{**\ Unless\ required\ by\ applicable\ law\ or\ agreed\ to\ in\ writing,\ software}}
+\DoxyCodeLine{00018\ \textcolor{comment}{**\ distributed\ under\ the\ License\ is\ distributed\ on\ an\ "{}AS\ IS"{}\ BASIS,}}
+\DoxyCodeLine{00019\ \textcolor{comment}{**\ WITHOUT\ WARRANTIES\ OR\ CONDITIONS\ OF\ ANY\ KIND,\ either\ express\ or\ implied.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{**\ See\ the\ License\ for\ the\ specific\ language\ governing\ permissions\ and}}
+\DoxyCodeLine{00021\ \textcolor{comment}{**\ limitations\ under\ the\ License.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00025\ \textcolor{comment}{**\ This\ header\ is\ generated\ from\ the\ Khronos\ Vulkan\ XML\ API\ Registry.}}
+\DoxyCodeLine{00026\ \textcolor{comment}{**}}
+\DoxyCodeLine{00027\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ VK\_KHR\_mir\_surface\ 1}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#define\ VK\_KHR\_MIR\_SURFACE\_SPEC\_VERSION\ \ \ 4}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ VK\_KHR\_MIR\_SURFACE\_EXTENSION\_NAME\ "{}VK\_KHR\_mir\_surface"{}}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abb605a7700670dd8420cc3841b939444}{VkFlags}}\ \mbox{\hyperlink{vulkan__mir_8h_aac20add1bef88baababbac63fd9f8cca}{VkMirSurfaceCreateFlagsKHR}};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vk_mir_surface_create_info_k_h_r}{VkMirSurfaceCreateInfoKHR}}\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_aff9f2b99398eb80a2b5a146bc5534ce8}{VkStructureType}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_mir_surface_create_info_k_h_r_a947356510366c7e07c7a68678812f993}{sType}};}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_mir_surface_create_info_k_h_r_a854869cdcf8501a62098bf6a2827bfd7}{pNext}};}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{vulkan__mir_8h_aac20add1bef88baababbac63fd9f8cca}{VkMirSurfaceCreateFlagsKHR}}\ \ \ \ \mbox{\hyperlink{struct_vk_mir_surface_create_info_k_h_r_ab82ff1b7590d6fb39d29fe390de05c72}{flags}};}
+\DoxyCodeLine{00040\ \ \ \ \ MirConnection*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_mir_surface_create_info_k_h_r_a6b9d6f95151be66400c2327b8f5ee019}{connection}};}
+\DoxyCodeLine{00041\ \ \ \ \ MirSurface*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_mir_surface_create_info_k_h_r_a76b3848864c507bab8b0e6e7fc4becf8}{mirSurface}};}
+\DoxyCodeLine{00042\ \}\ \mbox{\hyperlink{vulkan__mir_8h_a40316b345aee58cdd8dbb0c42e9574f7}{VkMirSurfaceCreateInfoKHR}};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{VkResult}}\ (\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\_PTR}}\ *\mbox{\hyperlink{vulkan__mir_8h_ae031974b98a66cd613ea7b2ad648f4d0}{PFN\_vkCreateMirSurfaceKHR}})(\mbox{\hyperlink{_vulkan_8hpp_a6d9f7e27148712f2c97db45ca6991547}{VkInstance}}\ instance,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_vk_mir_surface_create_info_k_h_r}{VkMirSurfaceCreateInfoKHR}}*\ pCreateInfo,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_vk_allocation_callbacks}{VkAllocationCallbacks}}*\ pAllocator,\ \mbox{\hyperlink{_vulkan_8hpp_a09787d7da5f3146095ed80ceccc2d794}{VkSurfaceKHR}}*\ pSurface);}
+\DoxyCodeLine{00046\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_ae5d9faf75f583010e32ee49087a15326}{VkBool32}}\ (\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\_PTR}}\ *\mbox{\hyperlink{vulkan__mir_8h_a2a9070dfef7efd32d203dff6a2080bdf}{PFN\_vkGetPhysicalDeviceMirPresentationSupportKHR}})(VkPhysicalDevice\ physicalDevice,\ uint32\_t\ queueFamilyIndex,\ MirConnection*\ connection);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#ifndef\ VK\_NO\_PROTOTYPES}}
+\DoxyCodeLine{00049\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a4394dd2421147ed91e838b086be25512}{VKAPI\_ATTR}}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{VkResult}}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a3856c7761d8b7260870053d0f03a0a49}{VKAPI\_CALL}}\ \mbox{\hyperlink{vulkan__mir_8h_a230bf5be3d07653a9597e591a5bc6e34}{vkCreateMirSurfaceKHR}}(}
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{_vulkan_8hpp_a6d9f7e27148712f2c97db45ca6991547}{VkInstance}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ instance,}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_vk_mir_surface_create_info_k_h_r}{VkMirSurfaceCreateInfoKHR}}*\ \ \ \ \ \ \ \ \ \ \ \ pCreateInfo,}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_vk_allocation_callbacks}{VkAllocationCallbacks}}*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pAllocator,}
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{_vulkan_8hpp_a09787d7da5f3146095ed80ceccc2d794}{VkSurfaceKHR}}*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pSurface);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a4394dd2421147ed91e838b086be25512}{VKAPI\_ATTR}}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_ae5d9faf75f583010e32ee49087a15326}{VkBool32}}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a3856c7761d8b7260870053d0f03a0a49}{VKAPI\_CALL}}\ \mbox{\hyperlink{vulkan__mir_8h_a8a33463eafb453bdad1757058665c441}{vkGetPhysicalDeviceMirPresentationSupportKHR}}(}
+\DoxyCodeLine{00056\ \ \ \ \ VkPhysicalDevice\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ physicalDevice,}
+\DoxyCodeLine{00057\ \ \ \ \ uint32\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ queueFamilyIndex,}
+\DoxyCodeLine{00058\ \ \ \ \ MirConnection*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ connection);}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00062\ \}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,171 @@
+\doxysection{Dokumentacja klasy Geometry}
+\hypertarget{class_geometry}{}\label{class_geometry}\index{Geometry@{Geometry}}
+
+
+Diagram dziedziczenia dla Geometry\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_geometry__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagram współpracy dla Geometry\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_geometry__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_geometry_a4c301c163c63d21ed08c17b0f4e131d3}{Geometry}} ()
+\item 
+bool \mbox{\hyperlink{class_geometry_a2282e16f6c9c7362350b5066d187ae34}{on\+Load}} ()
+\item 
+void \mbox{\hyperlink{class_geometry_a405678a47e45ba651efff67d918f9b3f}{on\+Update}} (float, float x, float y)
+\item 
+void \mbox{\hyperlink{class_geometry_ab6112c3c25ca6dc914f1e6922724a6a7}{on\+Draw}} (\mbox{\hyperlink{classsf_1_1_render_target}{sf\+::\+Render\+Target}} \&target, \mbox{\hyperlink{classsf_1_1_render_states}{sf\+::\+Render\+States}} states) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{class_effect}{Effect}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_effect_ab0f471df484d3ef351b704fef39a7072}{\texorpdfstring{$\sim$}{\string~}\+Effect}} ()
+\item 
+const std\+::string \& \mbox{\hyperlink{class_effect_a409291db11c835d76ee94a2abfc90983}{get\+Name}} () const
+\item 
+void \mbox{\hyperlink{class_effect_a7f926c8c6b21664461745f4c62cf7d0b}{load}} ()
+\item 
+void \mbox{\hyperlink{class_effect_a857a5b45439813ecc71e8e931c98f6a2}{update}} (float time, float x, float y)
+\item 
+void \mbox{\hyperlink{class_effect_a6a3a393e127581c7f84e1278b5be0438}{draw}} (\mbox{\hyperlink{classsf_1_1_render_target}{sf\+::\+Render\+Target}} \&target, \mbox{\hyperlink{classsf_1_1_render_states}{sf\+::\+Render\+States}} states) const
+\begin{DoxyCompactList}\small\item\em Draw the object to a render target. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{classsf_1_1_drawable}{sf\+::\+Drawable}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classsf_1_1_drawable_a906002f2df7beb5edbddf5bbef96f120}{\texorpdfstring{$\sim$}{\string~}\+Drawable}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsf_1_1_texture}{sf\+::\+Texture}} \mbox{\hyperlink{class_geometry_af0efefeb9506dfbe74b96eaed3d3636e}{m\+\_\+logo\+Texture}}
+\item 
+\mbox{\hyperlink{classsf_1_1_transform}{sf\+::\+Transform}} \mbox{\hyperlink{class_geometry_a62d708553e700293a2c1e51a73daa616}{m\+\_\+transform}}
+\item 
+\mbox{\hyperlink{classsf_1_1_shader}{sf\+::\+Shader}} \mbox{\hyperlink{class_geometry_a8ca74fd77bf9875768a6315d3600b408}{m\+\_\+shader}}
+\item 
+\mbox{\hyperlink{classsf_1_1_vertex_array}{sf\+::\+Vertex\+Array}} \mbox{\hyperlink{class_geometry_a46f19bff1a9321155e7b22c9e42c2175}{m\+\_\+point\+Cloud}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Dodatkowe Dziedziczone Składowe}
+\doxysubsection*{Statyczne metody publiczne dziedziczone z \mbox{\hyperlink{class_effect}{Effect}}}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_effect_a2a4eaf667af8ea6498b77fe532c5a43d}{set\+Font}} (const \mbox{\hyperlink{classsf_1_1_font}{sf\+::\+Font}} \&font)
+\end{DoxyCompactItemize}
+\doxysubsection*{Metody chronione dziedziczone z \mbox{\hyperlink{class_effect}{Effect}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_effect_a6c1c4ec803a1aa5dcbd34a6cf92fd8d5}{Effect}} (const std\+::string \&name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Statyczne metody chronione dziedziczone z \mbox{\hyperlink{class_effect}{Effect}}}
+\begin{DoxyCompactItemize}
+\item 
+static const \mbox{\hyperlink{classsf_1_1_font}{sf\+::\+Font}} \& \mbox{\hyperlink{class_effect_aa66af317229f52d12619b7e720c500d3}{get\+Font}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{class_geometry_a4c301c163c63d21ed08c17b0f4e131d3}\label{class_geometry_a4c301c163c63d21ed08c17b0f4e131d3} 
+\index{Geometry@{Geometry}!Geometry@{Geometry}}
+\index{Geometry@{Geometry}!Geometry@{Geometry}}
+\doxysubsubsection{\texorpdfstring{Geometry()}{Geometry()}}
+{\footnotesize\ttfamily Geometry\+::\+Geometry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_geometry_ab6112c3c25ca6dc914f1e6922724a6a7}\label{class_geometry_ab6112c3c25ca6dc914f1e6922724a6a7} 
+\index{Geometry@{Geometry}!onDraw@{onDraw}}
+\index{onDraw@{onDraw}!Geometry@{Geometry}}
+\doxysubsubsection{\texorpdfstring{onDraw()}{onDraw()}}
+{\footnotesize\ttfamily void Geometry\+::on\+Draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_render_target}{sf\+::\+Render\+Target}} \&}]{target,  }\item[{\mbox{\hyperlink{classsf_1_1_render_states}{sf\+::\+Render\+States}}}]{states }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implementuje \mbox{\hyperlink{class_effect_abb5811a89ac41358261e658f6682516a}{Effect}}.
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_geometry_ab6112c3c25ca6dc914f1e6922724a6a7_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_geometry_a2282e16f6c9c7362350b5066d187ae34}\label{class_geometry_a2282e16f6c9c7362350b5066d187ae34} 
+\index{Geometry@{Geometry}!onLoad@{onLoad}}
+\index{onLoad@{onLoad}!Geometry@{Geometry}}
+\doxysubsubsection{\texorpdfstring{onLoad()}{onLoad()}}
+{\footnotesize\ttfamily bool Geometry\+::on\+Load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implementuje \mbox{\hyperlink{class_effect_a43713a92e87e731ddfebdfa18996baaa}{Effect}}.
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_geometry_a2282e16f6c9c7362350b5066d187ae34_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_geometry_a405678a47e45ba651efff67d918f9b3f}\label{class_geometry_a405678a47e45ba651efff67d918f9b3f} 
+\index{Geometry@{Geometry}!onUpdate@{onUpdate}}
+\index{onUpdate@{onUpdate}!Geometry@{Geometry}}
+\doxysubsubsection{\texorpdfstring{onUpdate()}{onUpdate()}}
+{\footnotesize\ttfamily void Geometry\+::on\+Update (\begin{DoxyParamCaption}\item[{float}]{,  }\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implementuje \mbox{\hyperlink{class_effect_a2e33e1902383f350a873f61d0fb67c4e}{Effect}}.
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_geometry_a405678a47e45ba651efff67d918f9b3f_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{class_geometry_af0efefeb9506dfbe74b96eaed3d3636e}\label{class_geometry_af0efefeb9506dfbe74b96eaed3d3636e} 
+\index{Geometry@{Geometry}!m\_logoTexture@{m\_logoTexture}}
+\index{m\_logoTexture@{m\_logoTexture}!Geometry@{Geometry}}
+\doxysubsubsection{\texorpdfstring{m\_logoTexture}{m\_logoTexture}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1_texture}{sf\+::\+Texture}} Geometry\+::m\+\_\+logo\+Texture\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_geometry_a46f19bff1a9321155e7b22c9e42c2175}\label{class_geometry_a46f19bff1a9321155e7b22c9e42c2175} 
+\index{Geometry@{Geometry}!m\_pointCloud@{m\_pointCloud}}
+\index{m\_pointCloud@{m\_pointCloud}!Geometry@{Geometry}}
+\doxysubsubsection{\texorpdfstring{m\_pointCloud}{m\_pointCloud}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1_vertex_array}{sf\+::\+Vertex\+Array}} Geometry\+::m\+\_\+point\+Cloud\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_geometry_a8ca74fd77bf9875768a6315d3600b408}\label{class_geometry_a8ca74fd77bf9875768a6315d3600b408} 
+\index{Geometry@{Geometry}!m\_shader@{m\_shader}}
+\index{m\_shader@{m\_shader}!Geometry@{Geometry}}
+\doxysubsubsection{\texorpdfstring{m\_shader}{m\_shader}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1_shader}{sf\+::\+Shader}} Geometry\+::m\+\_\+shader\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_geometry_a62d708553e700293a2c1e51a73daa616}\label{class_geometry_a62d708553e700293a2c1e51a73daa616} 
+\index{Geometry@{Geometry}!m\_transform@{m\_transform}}
+\index{m\_transform@{m\_transform}!Geometry@{Geometry}}
+\doxysubsubsection{\texorpdfstring{m\_transform}{m\_transform}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1_transform}{sf\+::\+Transform}} Geometry\+::m\+\_\+transform\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/examples/shader/\mbox{\hyperlink{examples_2shader_2_shader_8cpp}{Shader.\+cpp}}\end{DoxyCompactItemize}

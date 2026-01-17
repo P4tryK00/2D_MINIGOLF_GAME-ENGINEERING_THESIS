@@ -1,0 +1,114 @@
+\doxysection{Dokumentacja pliku cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/examples/\+X11/\+X11.cpp}
+\hypertarget{_x11_8cpp}{}\label{_x11_8cpp}\index{cmake-\/build-\/debug/\_deps/sfml-\/src/examples/X11/X11.cpp@{cmake-\/build-\/debug/\_deps/sfml-\/src/examples/X11/X11.cpp}}
+{\ttfamily \#include $<$SFML/\+Window.\+hpp$>$}\newline
+{\ttfamily \#include $<$gl.\+h$>$}\newline
+{\ttfamily \#include $<$X11/\+Xlib.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+Wykres zależności załączania dla X11.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_x11_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Definicje}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_x11_8cpp_a09f9c3bf094ecaf707c673924ffd615a}{GLAD\+\_\+\+GL\+\_\+\+IMPLEMENTATION}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_x11_8cpp_a7c6d15cc5505dfcc7d3c0b3fecde410b}{initialize}} (\mbox{\hyperlink{classsf_1_1_window}{sf\+::\+Window}} \&window)
+\item 
+void \mbox{\hyperlink{_x11_8cpp_a48af9740d723947b5c9182149f240322}{draw}} (\mbox{\hyperlink{classsf_1_1_window}{sf\+::\+Window}} \&window, float elapsed\+Time)
+\item 
+int \mbox{\hyperlink{_x11_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja definicji}
+\Hypertarget{_x11_8cpp_a09f9c3bf094ecaf707c673924ffd615a}\label{_x11_8cpp_a09f9c3bf094ecaf707c673924ffd615a} 
+\index{X11.cpp@{X11.cpp}!GLAD\_GL\_IMPLEMENTATION@{GLAD\_GL\_IMPLEMENTATION}}
+\index{GLAD\_GL\_IMPLEMENTATION@{GLAD\_GL\_IMPLEMENTATION}!X11.cpp@{X11.cpp}}
+\doxysubsubsection{\texorpdfstring{GLAD\_GL\_IMPLEMENTATION}{GLAD\_GL\_IMPLEMENTATION}}
+{\footnotesize\ttfamily \#define GLAD\+\_\+\+GL\+\_\+\+IMPLEMENTATION}
+
+
+
+\doxysubsection{Dokumentacja funkcji}
+\Hypertarget{_x11_8cpp_a48af9740d723947b5c9182149f240322}\label{_x11_8cpp_a48af9740d723947b5c9182149f240322} 
+\index{X11.cpp@{X11.cpp}!draw@{draw}}
+\index{draw@{draw}!X11.cpp@{X11.cpp}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_window}{sf\+::\+Window}} \&}]{window,  }\item[{float}]{elapsed\+Time }\end{DoxyParamCaption})}
+
+Draw the Open\+GL scene (a rotating cube) into the specified view
+
+
+\begin{DoxyParams}{Parametry}
+{\em window} & Target window for rendering \\
+\hline
+{\em elapsed\+Time} & Time elapsed since the last draw \\
+\hline
+\end{DoxyParams}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_x11_8cpp_a48af9740d723947b5c9182149f240322_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{_x11_8cpp_a48af9740d723947b5c9182149f240322_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_x11_8cpp_a7c6d15cc5505dfcc7d3c0b3fecde410b}\label{_x11_8cpp_a7c6d15cc5505dfcc7d3c0b3fecde410b} 
+\index{X11.cpp@{X11.cpp}!initialize@{initialize}}
+\index{initialize@{initialize}!X11.cpp@{X11.cpp}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_window}{sf\+::\+Window}} \&}]{window }\end{DoxyParamCaption})}
+
+Initialize Open\+GL states into the specified view
+
+
+\begin{DoxyParams}{Parametry}
+{\em Window} & Target window to initialize \\
+\hline
+\end{DoxyParams}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_x11_8cpp_a7c6d15cc5505dfcc7d3c0b3fecde410b_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{_x11_8cpp_a7c6d15cc5505dfcc7d3c0b3fecde410b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_x11_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{_x11_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+\index{X11.cpp@{X11.cpp}!main@{main}}
+\index{main@{main}!X11.cpp@{X11.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Entry point of application
+
+\begin{DoxyReturn}{Zwraca}
+Error code 
+\end{DoxyReturn}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_x11_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}

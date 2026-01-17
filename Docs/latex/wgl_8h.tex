@@ -1,0 +1,1861 @@
+\doxysection{Dokumentacja pliku cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/extlibs/headers/glad/include/glad/wgl.h}
+\hypertarget{wgl_8h}{}\label{wgl_8h}\index{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/glad/include/glad/wgl.h@{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/glad/include/glad/wgl.h}}
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$glad/gl.\+h$>$}\newline
+Wykres zależności załączania dla wgl.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{wgl_8h__incl}
+\end{center}
+\end{figure}
+Ten wykres pokazuje, które pliki bezpośrednio lub pośrednio załączają ten plik\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{wgl_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct___g_p_u___d_e_v_i_c_e}{\+\_\+\+GPU\+\_\+\+DEVICE}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Definicje}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a74d01dfed950ca743ee986cab2ba7257}{SF\+\_\+\+GLAD\+\_\+\+WGL}}
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a5248eacf9303356f901b8b992116adc5}{GLAD\+\_\+\+OPTION\+\_\+\+WGL\+\_\+\+LOADER}}
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a6ea2d65dffa87e2e1bafecf39833224b}{GLAD\+\_\+\+OPTION\+\_\+\+WGL\+\_\+\+ALIAS}}
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a3295bc79cd98db531a7cf6e6fd83a501}{GLAD\+\_\+\+OPTION\+\_\+\+WGL\+\_\+\+HEADER\+\_\+\+ONLY}}
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a06fa90554818a5886c574ed962dec52c}{GLAD\+\_\+\+PLATFORM\+\_\+\+H\+\_\+}}
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a60b6ed380499858af0d114267ada5046}{GLAD\+\_\+\+PLATFORM\+\_\+\+WIN32}}~0
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a525c82530b662a029be7c4d55c65ec28}{GLAD\+\_\+\+PLATFORM\+\_\+\+APPLE}}~0
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a1c26041606a8662b890c109e958a0d6c}{GLAD\+\_\+\+PLATFORM\+\_\+\+EMSCRIPTEN}}~0
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a3475d17b29fd0d925c7ba19460583e50}{GLAD\+\_\+\+PLATFORM\+\_\+\+UWP}}~0
+\item 
+\#define \mbox{\hyperlink{wgl_8h_ab70ae7823e852994dce75d9ea6b07753}{GLAD\+\_\+\+GNUC\+\_\+\+EXTENSION}}
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}}~extern
+\item 
+\#define \mbox{\hyperlink{wgl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}}
+\item 
+\#define \mbox{\hyperlink{wgl_8h_abad5ea874b73fa802c9ac0f5488bf9b5}{GLAPI}}~\mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}}
+\item 
+\#define \mbox{\hyperlink{wgl_8h_aa97755eb47e4bf2727ad45d610e18206}{GLAPIENTRY}}~\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}}
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a60ee2ee57556e9268173d34491db7b83}{GLAD\+\_\+\+MAKE\+\_\+\+VERSION}}(major,  minor)~(major \texorpdfstring{$\ast$}{*} 10000 + minor)
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a23fff3933d34ef45477f268c45c39fdb}{GLAD\+\_\+\+VERSION\+\_\+\+MAJOR}}(version)~(version / 10000)
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a3cee5ca772600bfe0a087d2913e82a8b}{GLAD\+\_\+\+VERSION\+\_\+\+MINOR}}(version)~(version \% 10000)
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a011f12a92fc08c967f226ea1c9ce8f4b}{GLAD\+\_\+\+GENERATOR\+\_\+\+VERSION}}~"{}2.\+0.\+0-\/beta"{}
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a685e9dcd28f13baaa254a1c41a796a5a}{ERROR\+\_\+\+INVALID\+\_\+\+PROFILE\+\_\+\+ARB}}~0x2096
+\item 
+\#define \mbox{\hyperlink{wgl_8h_aa711b7b414242207d8f58d9e9a8feb73}{ERROR\+\_\+\+INVALID\+\_\+\+VERSION\+\_\+\+ARB}}~0x2095
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a131f3cc56b5489a6fd8f7efa556634ea}{WGL\+\_\+\+ACCELERATION\+\_\+\+ARB}}~0x2003
+\item 
+\#define \mbox{\hyperlink{wgl_8h_aeb27a625f80aaa587b86c28ea44fbe65}{WGL\+\_\+\+ACCUM\+\_\+\+ALPHA\+\_\+\+BITS\+\_\+\+ARB}}~0x2021
+\item 
+\#define \mbox{\hyperlink{wgl_8h_ae70e59419a58e3c6c1951cad5e78c055}{WGL\+\_\+\+ACCUM\+\_\+\+BITS\+\_\+\+ARB}}~0x201D
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a0044e12ada2c0cee252e1205400413a1}{WGL\+\_\+\+ACCUM\+\_\+\+BLUE\+\_\+\+BITS\+\_\+\+ARB}}~0x2020
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a491952e52b2caad0be533c23b65b16e2}{WGL\+\_\+\+ACCUM\+\_\+\+GREEN\+\_\+\+BITS\+\_\+\+ARB}}~0x201F
+\item 
+\#define \mbox{\hyperlink{wgl_8h_ac457cdee636955daf428b8d5311f7870}{WGL\+\_\+\+ACCUM\+\_\+\+RED\+\_\+\+BITS\+\_\+\+ARB}}~0x201E
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a5d54c3606cc49e80cb6420b145a2119a}{WGL\+\_\+\+ALPHA\+\_\+\+BITS\+\_\+\+ARB}}~0x201B
+\item 
+\#define \mbox{\hyperlink{wgl_8h_aa5f833102cee048157f3c96a887d9922}{WGL\+\_\+\+ALPHA\+\_\+\+SHIFT\+\_\+\+ARB}}~0x201C
+\item 
+\#define \mbox{\hyperlink{wgl_8h_ade9ba085a4a1ad9db1fea0ede7139948}{WGL\+\_\+\+AUX\+\_\+\+BUFFERS\+\_\+\+ARB}}~0x2024
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a25743041a05d4564428d28a2e0e35e09}{WGL\+\_\+\+BLUE\+\_\+\+BITS\+\_\+\+ARB}}~0x2019
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a33128dba5304ec64ed26475722828a9b}{WGL\+\_\+\+BLUE\+\_\+\+SHIFT\+\_\+\+ARB}}~0x201A
+\item 
+\#define \mbox{\hyperlink{wgl_8h_af979369c958742bf188a9dc993886b0f}{WGL\+\_\+\+COLOR\+\_\+\+BITS\+\_\+\+ARB}}~0x2014
+\item 
+\#define \mbox{\hyperlink{wgl_8h_ac0e0f83037fd693f85a0a382245cded4}{WGL\+\_\+\+CONTEXT\+\_\+\+COMPATIBILITY\+\_\+\+PROFILE\+\_\+\+BIT\+\_\+\+ARB}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a956f8c0391ca8b3076aacdd11123ab23}{WGL\+\_\+\+CONTEXT\+\_\+\+CORE\+\_\+\+PROFILE\+\_\+\+BIT\+\_\+\+ARB}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a8a600cc66dbc5a788e7b16dd9c116055}{WGL\+\_\+\+CONTEXT\+\_\+\+DEBUG\+\_\+\+BIT\+\_\+\+ARB}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{wgl_8h_aa9b5de1c7cb84a809ad79296192a76d3}{WGL\+\_\+\+CONTEXT\+\_\+\+FLAGS\+\_\+\+ARB}}~0x2094
+\item 
+\#define \mbox{\hyperlink{wgl_8h_aaec3bbb2c9fb813e229ad64f25130da6}{WGL\+\_\+\+CONTEXT\+\_\+\+FORWARD\+\_\+\+COMPATIBLE\+\_\+\+BIT\+\_\+\+ARB}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a3e171b65bf6c350ed81ecd79101f0424}{WGL\+\_\+\+CONTEXT\+\_\+\+LAYER\+\_\+\+PLANE\+\_\+\+ARB}}~0x2093
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a64d5f1fa63a1979e33aee2949f6f21ad}{WGL\+\_\+\+CONTEXT\+\_\+\+MAJOR\+\_\+\+VERSION\+\_\+\+ARB}}~0x2091
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a043b9ae0e73a1ff853339c02a3026096}{WGL\+\_\+\+CONTEXT\+\_\+\+MINOR\+\_\+\+VERSION\+\_\+\+ARB}}~0x2092
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a6847a02f9b4e6e9712a4b32250337dc1}{WGL\+\_\+\+CONTEXT\+\_\+\+PROFILE\+\_\+\+MASK\+\_\+\+ARB}}~0x9126
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a75b1340d23a385c2b1ce88a303930820}{WGL\+\_\+\+DEPTH\+\_\+\+BITS\+\_\+\+ARB}}~0x2022
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a8acd69a2be1c4ed51226145c520ecbe5}{WGL\+\_\+\+DOUBLE\+\_\+\+BUFFER\+\_\+\+ARB}}~0x2011
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a1509eb13bd86db634067c22218dbbde2}{WGL\+\_\+\+DRAW\+\_\+\+TO\+\_\+\+BITMAP\+\_\+\+ARB}}~0x2002
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a96e1f671cfc6ac0930c31a1cd0742d8f}{WGL\+\_\+\+DRAW\+\_\+\+TO\+\_\+\+PBUFFER\+\_\+\+ARB}}~0x202D
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a9b0723a3d7c302c78c2c225a142e6e84}{WGL\+\_\+\+DRAW\+\_\+\+TO\+\_\+\+WINDOW\+\_\+\+ARB}}~0x2001
+\item 
+\#define \mbox{\hyperlink{wgl_8h_aadf414c1d43721117db84f4489ffb10c}{WGL\+\_\+\+FONT\+\_\+\+LINES}}~0
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a25d0b076b548a29e68f09c1952257086}{WGL\+\_\+\+FONT\+\_\+\+POLYGONS}}~1
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a18ba4b32abb0962574805c320cc6e00a}{WGL\+\_\+\+FRAMEBUFFER\+\_\+\+SRGB\+\_\+\+CAPABLE\+\_\+\+ARB}}~0x20\+A9
+\item 
+\#define \mbox{\hyperlink{wgl_8h_adcfb2958b77d12448b2873771ed53d39}{WGL\+\_\+\+FRAMEBUFFER\+\_\+\+SRGB\+\_\+\+CAPABLE\+\_\+\+EXT}}~0x20\+A9
+\item 
+\#define \mbox{\hyperlink{wgl_8h_ac7e61d450f6af6ffd08143f33421958e}{WGL\+\_\+\+FULL\+\_\+\+ACCELERATION\+\_\+\+ARB}}~0x2027
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a5352d3160045983765b46358b3a43d4a}{WGL\+\_\+\+GENERIC\+\_\+\+ACCELERATION\+\_\+\+ARB}}~0x2026
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a4b67d94c2dbd3c5ad5235eeac10749db}{WGL\+\_\+\+GREEN\+\_\+\+BITS\+\_\+\+ARB}}~0x2017
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a6d6fd2424c846bcd2800ea296e76113f}{WGL\+\_\+\+GREEN\+\_\+\+SHIFT\+\_\+\+ARB}}~0x2018
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a1f82fa69634a81f8ab407240b95df5f1}{WGL\+\_\+\+MAX\+\_\+\+PBUFFER\+\_\+\+HEIGHT\+\_\+\+ARB}}~0x2030
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a2f56e6cef8e60e45a1dca9f08db524b9}{WGL\+\_\+\+MAX\+\_\+\+PBUFFER\+\_\+\+PIXELS\+\_\+\+ARB}}~0x202E
+\item 
+\#define \mbox{\hyperlink{wgl_8h_afe7252e31e53dd49c32075c7359816bc}{WGL\+\_\+\+MAX\+\_\+\+PBUFFER\+\_\+\+WIDTH\+\_\+\+ARB}}~0x202F
+\item 
+\#define \mbox{\hyperlink{wgl_8h_ab2dc3925b8ae5000a84920192d80cecf}{WGL\+\_\+\+NEED\+\_\+\+PALETTE\+\_\+\+ARB}}~0x2004
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a35239e4dce57200276d0d72fc2ccf5b6}{WGL\+\_\+\+NEED\+\_\+\+SYSTEM\+\_\+\+PALETTE\+\_\+\+ARB}}~0x2005
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a6e99b85ae842730daef27353a9e3d434}{WGL\+\_\+\+NO\+\_\+\+ACCELERATION\+\_\+\+ARB}}~0x2025
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a85f0cf7dcb4fa8628282ffcb64bc8c07}{WGL\+\_\+\+NUMBER\+\_\+\+OVERLAYS\+\_\+\+ARB}}~0x2008
+\item 
+\#define \mbox{\hyperlink{wgl_8h_ac08792306c4cb9c9f258979cebd7895d}{WGL\+\_\+\+NUMBER\+\_\+\+PIXEL\+\_\+\+FORMATS\+\_\+\+ARB}}~0x2000
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a740af5b0cb6eaa7c3b509ae41b7c3297}{WGL\+\_\+\+NUMBER\+\_\+\+UNDERLAYS\+\_\+\+ARB}}~0x2009
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a9b0a9b9a933aca4a57ce0c665d13c682}{WGL\+\_\+\+PBUFFER\+\_\+\+HEIGHT\+\_\+\+ARB}}~0x2035
+\item 
+\#define \mbox{\hyperlink{wgl_8h_adef2a95fbd105e06e8a699cc61c3fc49}{WGL\+\_\+\+PBUFFER\+\_\+\+LARGEST\+\_\+\+ARB}}~0x2033
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a965793730415a067e6445bd7cc325b22}{WGL\+\_\+\+PBUFFER\+\_\+\+LOST\+\_\+\+ARB}}~0x2036
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a5c1dc6dc8a0aaf63b0ec5250001fc561}{WGL\+\_\+\+PBUFFER\+\_\+\+WIDTH\+\_\+\+ARB}}~0x2034
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a74709fd85aae5b059d39dd4b51694249}{WGL\+\_\+\+PIXEL\+\_\+\+TYPE\+\_\+\+ARB}}~0x2013
+\item 
+\#define \mbox{\hyperlink{wgl_8h_acf6d0dc14bd58ab03b10d4cf1534625a}{WGL\+\_\+\+RED\+\_\+\+BITS\+\_\+\+ARB}}~0x2015
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a266ab3ccd927f4caf9df1f426c960c1b}{WGL\+\_\+\+RED\+\_\+\+SHIFT\+\_\+\+ARB}}~0x2016
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a99289a023da8e683eb7de95543e22c87}{WGL\+\_\+\+SAMPLES\+\_\+\+ARB}}~0x2042
+\item 
+\#define \mbox{\hyperlink{wgl_8h_ac9792da6e4869780e07504635b3e1a42}{WGL\+\_\+\+SAMPLE\+\_\+\+BUFFERS\+\_\+\+ARB}}~0x2041
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a6da7ce52485fdd258b9ab494eedcd98e}{WGL\+\_\+\+SHARE\+\_\+\+ACCUM\+\_\+\+ARB}}~0x200E
+\item 
+\#define \mbox{\hyperlink{wgl_8h_aba970a427c2dca2f2a3907d867d3ca7e}{WGL\+\_\+\+SHARE\+\_\+\+DEPTH\+\_\+\+ARB}}~0x200C
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a5b0fd4fef9367431eb546d3e735803ea}{WGL\+\_\+\+SHARE\+\_\+\+STENCIL\+\_\+\+ARB}}~0x200D
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a0adda3bf0bcae1b1f66094f4331570bd}{WGL\+\_\+\+STENCIL\+\_\+\+BITS\+\_\+\+ARB}}~0x2023
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a2aa289efbc19a76be9dc0ac303f01689}{WGL\+\_\+\+STEREO\+\_\+\+ARB}}~0x2012
+\item 
+\#define \mbox{\hyperlink{wgl_8h_aba61f71193fd3d3d86c685f7b34e56dd}{WGL\+\_\+\+SUPPORT\+\_\+\+GDI\+\_\+\+ARB}}~0x200F
+\item 
+\#define \mbox{\hyperlink{wgl_8h_afddc80fbff35c1f270613b83090eca85}{WGL\+\_\+\+SUPPORT\+\_\+\+OPENGL\+\_\+\+ARB}}~0x2010
+\item 
+\#define \mbox{\hyperlink{wgl_8h_ac27ce73d3f143c8353ef1df789ef046e}{WGL\+\_\+\+SWAP\+\_\+\+COPY\+\_\+\+ARB}}~0x2029
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a0d1f93ca815d7a25ab315f7c0eacae84}{WGL\+\_\+\+SWAP\+\_\+\+EXCHANGE\+\_\+\+ARB}}~0x2028
+\item 
+\#define \mbox{\hyperlink{wgl_8h_ac314b1700a0bcda2d7530373d9dde7c2}{WGL\+\_\+\+SWAP\+\_\+\+LAYER\+\_\+\+BUFFERS\+\_\+\+ARB}}~0x2006
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a5acfffebbebe590d7fb6641cba927b58}{WGL\+\_\+\+SWAP\+\_\+\+MAIN\+\_\+\+PLANE}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a2c1814f7285f6392517ed940fb675f15}{WGL\+\_\+\+SWAP\+\_\+\+METHOD\+\_\+\+ARB}}~0x2007
+\item 
+\#define \mbox{\hyperlink{wgl_8h_accdb9225a9fc9e9e4de44e624e6f0d74}{WGL\+\_\+\+SWAP\+\_\+\+OVERLAY1}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{wgl_8h_af85e4cb950996bac506b638d3cc8820a}{WGL\+\_\+\+SWAP\+\_\+\+OVERLAY10}}~0x00000400
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a14d6481dc51ecb0ea5a8547e91e35a7f}{WGL\+\_\+\+SWAP\+\_\+\+OVERLAY11}}~0x00000800
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a02958425d2a68f0c55747eaacbcafa5c}{WGL\+\_\+\+SWAP\+\_\+\+OVERLAY12}}~0x00001000
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a15c141ce5b3ed121dc567852c6f0d234}{WGL\+\_\+\+SWAP\+\_\+\+OVERLAY13}}~0x00002000
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a3db07ed592f21bfe4ef6af30baf56ac5}{WGL\+\_\+\+SWAP\+\_\+\+OVERLAY14}}~0x00004000
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a9af1e49be10acbd1ad5648939d005f0d}{WGL\+\_\+\+SWAP\+\_\+\+OVERLAY15}}~0x00008000
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a3bec2bd5916daca8633bf2f6528b1449}{WGL\+\_\+\+SWAP\+\_\+\+OVERLAY2}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a6ad51cefefd6f0059f4d240b56859ccb}{WGL\+\_\+\+SWAP\+\_\+\+OVERLAY3}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{wgl_8h_ae3679f6c28cced553f0f44ddf55af81c}{WGL\+\_\+\+SWAP\+\_\+\+OVERLAY4}}~0x00000010
+\item 
+\#define \mbox{\hyperlink{wgl_8h_ac437f09fe44d26e43a3cd2f197b1e42f}{WGL\+\_\+\+SWAP\+\_\+\+OVERLAY5}}~0x00000020
+\item 
+\#define \mbox{\hyperlink{wgl_8h_adc193633a0f5e1a36ba4de2e97368ddf}{WGL\+\_\+\+SWAP\+\_\+\+OVERLAY6}}~0x00000040
+\item 
+\#define \mbox{\hyperlink{wgl_8h_afadaab42da064a57e519c83244585b04}{WGL\+\_\+\+SWAP\+\_\+\+OVERLAY7}}~0x00000080
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a7e22578b2889785320db2a23b3cc992b}{WGL\+\_\+\+SWAP\+\_\+\+OVERLAY8}}~0x00000100
+\item 
+\#define \mbox{\hyperlink{wgl_8h_abddac1afc0d1d457a54ccb7e17c87cc1}{WGL\+\_\+\+SWAP\+\_\+\+OVERLAY9}}~0x00000200
+\item 
+\#define \mbox{\hyperlink{wgl_8h_addc0aa8a0b99095e09cc748e17dcd8bb}{WGL\+\_\+\+SWAP\+\_\+\+UNDEFINED\+\_\+\+ARB}}~0x202A
+\item 
+\#define \mbox{\hyperlink{wgl_8h_ae44d57bfeb270c1f921d9f9e103e8140}{WGL\+\_\+\+SWAP\+\_\+\+UNDERLAY1}}~0x00010000
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a5efaded664bd6b75eacbd50880a8844e}{WGL\+\_\+\+SWAP\+\_\+\+UNDERLAY10}}~0x02000000
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a6cdccef6d3dc944a47660073eb8c494e}{WGL\+\_\+\+SWAP\+\_\+\+UNDERLAY11}}~0x04000000
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a7f73e0ea8a0b49e9df99f773a66d2821}{WGL\+\_\+\+SWAP\+\_\+\+UNDERLAY12}}~0x08000000
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a2c2fac31e1196b7bbab4e2f698061a80}{WGL\+\_\+\+SWAP\+\_\+\+UNDERLAY13}}~0x10000000
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a6f75e0de9d9db366d2727c27fa37de83}{WGL\+\_\+\+SWAP\+\_\+\+UNDERLAY14}}~0x20000000
+\item 
+\#define \mbox{\hyperlink{wgl_8h_ab4c0de664c62802cd98622cf2d46d2ff}{WGL\+\_\+\+SWAP\+\_\+\+UNDERLAY15}}~0x40000000
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a15a73483099e8aaffa83911df0afc763}{WGL\+\_\+\+SWAP\+\_\+\+UNDERLAY2}}~0x00020000
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a65f0d80e6ed70e0fd0103650f7fd01db}{WGL\+\_\+\+SWAP\+\_\+\+UNDERLAY3}}~0x00040000
+\item 
+\#define \mbox{\hyperlink{wgl_8h_aedc7538fbeeff8d37a5621b908f9d4b4}{WGL\+\_\+\+SWAP\+\_\+\+UNDERLAY4}}~0x00080000
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a4cae889d937a65296647008c889fbab2}{WGL\+\_\+\+SWAP\+\_\+\+UNDERLAY5}}~0x00100000
+\item 
+\#define \mbox{\hyperlink{wgl_8h_acfa5f731dabd62d8c82019437aa3c5cf}{WGL\+\_\+\+SWAP\+\_\+\+UNDERLAY6}}~0x00200000
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a40b28673f5da6926eed881d5bc1f8948}{WGL\+\_\+\+SWAP\+\_\+\+UNDERLAY7}}~0x00400000
+\item 
+\#define \mbox{\hyperlink{wgl_8h_abc5e9e93a4385484757bf2fe38225df9}{WGL\+\_\+\+SWAP\+\_\+\+UNDERLAY8}}~0x00800000
+\item 
+\#define \mbox{\hyperlink{wgl_8h_afa137a8e504a83c72c896610623ad62e}{WGL\+\_\+\+SWAP\+\_\+\+UNDERLAY9}}~0x01000000
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a4ed17228cd09c34f556948807c91a2d3}{WGL\+\_\+\+TRANSPARENT\+\_\+\+ALPHA\+\_\+\+VALUE\+\_\+\+ARB}}~0x203A
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a2a9cc47f0c03ed77341edc8c502b9ff1}{WGL\+\_\+\+TRANSPARENT\+\_\+\+ARB}}~0x200A
+\item 
+\#define \mbox{\hyperlink{wgl_8h_abc05aa81ef07b7c2e4f3a55bd30dfded}{WGL\+\_\+\+TRANSPARENT\+\_\+\+BLUE\+\_\+\+VALUE\+\_\+\+ARB}}~0x2039
+\item 
+\#define \mbox{\hyperlink{wgl_8h_af61c714bf83ed4ab06e6e5e8970008e8}{WGL\+\_\+\+TRANSPARENT\+\_\+\+GREEN\+\_\+\+VALUE\+\_\+\+ARB}}~0x2038
+\item 
+\#define \mbox{\hyperlink{wgl_8h_ab0dce9ba7c0a09bb36e508d872d313cf}{WGL\+\_\+\+TRANSPARENT\+\_\+\+INDEX\+\_\+\+VALUE\+\_\+\+ARB}}~0x203B
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a9f6ea6a06f906059c0103fc38479170a}{WGL\+\_\+\+TRANSPARENT\+\_\+\+RED\+\_\+\+VALUE\+\_\+\+ARB}}~0x2037
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a8bf596fcd313de5ab063c732774063cb}{WGL\+\_\+\+TYPE\+\_\+\+COLORINDEX\+\_\+\+ARB}}~0x202C
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a9ef316350bc3d0261a55e22242da3573}{WGL\+\_\+\+TYPE\+\_\+\+RGBA\+\_\+\+ARB}}~0x202B
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a108f14d8cf24bb2b12e0a88e5ca405e4}{WGL\+\_\+\+VERSION\+\_\+1\+\_\+0}}~1
+\item 
+\#define \mbox{\hyperlink{wgl_8h_af9df7287ebc54553ffdd27b64edba1ba}{WGL\+\_\+\+ARB\+\_\+create\+\_\+context}}~1
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a2d3c08e05c220a6e53d4efaa076b3701}{WGL\+\_\+\+ARB\+\_\+create\+\_\+context\+\_\+profile}}~1
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a4d7db892fdd77701f3efd34c070e19c3}{WGL\+\_\+\+ARB\+\_\+extensions\+\_\+string}}~1
+\item 
+\#define \mbox{\hyperlink{wgl_8h_aeb7a8cb36bd85cb917aa94bca199a75c}{WGL\+\_\+\+ARB\+\_\+framebuffer\+\_\+s\+RGB}}~1
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a2a45e7c88a5e6c754aeeaf5fa1153ff7}{WGL\+\_\+\+ARB\+\_\+multisample}}~1
+\item 
+\#define \mbox{\hyperlink{wgl_8h_af5c1a41d6050c963287486dfc80f42a5}{WGL\+\_\+\+ARB\+\_\+pbuffer}}~1
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a53c2abeb08e5feeaf8e4fc67b84e7b41}{WGL\+\_\+\+ARB\+\_\+pixel\+\_\+format}}~1
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a398dc467ed3bd3d58524154e0e75483a}{WGL\+\_\+\+EXT\+\_\+extensions\+\_\+string}}~1
+\item 
+\#define \mbox{\hyperlink{wgl_8h_af3c6f4a530e32998cd4e1a7a8920a6db}{WGL\+\_\+\+EXT\+\_\+framebuffer\+\_\+s\+RGB}}~1
+\item 
+\#define \mbox{\hyperlink{wgl_8h_abce6504ea96abbd7b5b4d0d99053e544}{WGL\+\_\+\+EXT\+\_\+swap\+\_\+control}}~1
+\item 
+\#define \mbox{\hyperlink{wgl_8h_ac8759d4f1193da04f4f215446b70eded}{wgl\+Choose\+Pixel\+Format\+ARB}}~\mbox{\hyperlink{wgl_8h_a3bfdb69c4378331f1b9ff9ed8f10cf99}{sf\+\_\+glad\+\_\+wgl\+Choose\+Pixel\+Format\+ARB}}
+\item 
+\#define \mbox{\hyperlink{wgl_8h_acdca080586c894bbe2244900e8dfa24c}{wgl\+Create\+Context\+Attribs\+ARB}}~\mbox{\hyperlink{wgl_8h_ac14299eb06101d4e88bd130224a1d88b}{sf\+\_\+glad\+\_\+wgl\+Create\+Context\+Attribs\+ARB}}
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a19e4cd37146596d6608d175f909f643c}{wgl\+Create\+Pbuffer\+ARB}}~\mbox{\hyperlink{wgl_8h_abb49a1c4ba8c8daf5da72fe2d2596fc6}{sf\+\_\+glad\+\_\+wgl\+Create\+Pbuffer\+ARB}}
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a9f08c595b107bbf053b2551b18260416}{wgl\+Destroy\+Pbuffer\+ARB}}~\mbox{\hyperlink{wgl_8h_abf4735d33e056f410d1e384a85d09cdd}{sf\+\_\+glad\+\_\+wgl\+Destroy\+Pbuffer\+ARB}}
+\item 
+\#define \mbox{\hyperlink{wgl_8h_adee3b196f14083e02d4e6f8222fd3791}{wgl\+Get\+Extensions\+String\+ARB}}~\mbox{\hyperlink{wgl_8h_a79e148cba70e70cf6440082050516048}{sf\+\_\+glad\+\_\+wgl\+Get\+Extensions\+String\+ARB}}
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a134614db3b57ba3660b3bc2e01b6c886}{wgl\+Get\+Extensions\+String\+EXT}}~\mbox{\hyperlink{wgl_8h_a1a93b7e0affb8d9fe444a8c954529383}{sf\+\_\+glad\+\_\+wgl\+Get\+Extensions\+String\+EXT}}
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a62cc2dd14065b9bba106e03861222e51}{wgl\+Get\+Pbuffer\+DCARB}}~\mbox{\hyperlink{wgl_8h_aea2fc9a37eb4ee85863d928804297262}{sf\+\_\+glad\+\_\+wgl\+Get\+Pbuffer\+DCARB}}
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a1fd864e9fd93c12a28350cf391ef4f28}{wgl\+Get\+Pixel\+Format\+Attribfv\+ARB}}~\mbox{\hyperlink{wgl_8h_a32db980fd2a3183df081f548ebeb92b0}{sf\+\_\+glad\+\_\+wgl\+Get\+Pixel\+Format\+Attribfv\+ARB}}
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a8edcc08abf2e74d0331fdfe925e98199}{wgl\+Get\+Pixel\+Format\+Attribiv\+ARB}}~\mbox{\hyperlink{wgl_8h_a0bbbca7a2193919ad8f3865a10150083}{sf\+\_\+glad\+\_\+wgl\+Get\+Pixel\+Format\+Attribiv\+ARB}}
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a7073e5f629ddd39067319f13e13f676e}{wgl\+Get\+Swap\+Interval\+EXT}}~\mbox{\hyperlink{wgl_8h_a53c8e361af02d82cf89f5dfc4b820b68}{sf\+\_\+glad\+\_\+wgl\+Get\+Swap\+Interval\+EXT}}
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a5e6ee5d9b4bc75b0446c06e228740e91}{wgl\+Query\+Pbuffer\+ARB}}~\mbox{\hyperlink{wgl_8h_acbff66120f132c2357eb08bf76050b39}{sf\+\_\+glad\+\_\+wgl\+Query\+Pbuffer\+ARB}}
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a5e97d07092dd3dc6e0a0c5739d865861}{wgl\+Release\+Pbuffer\+DCARB}}~\mbox{\hyperlink{wgl_8h_ad2b64853d180ef645b28b781268c0618}{sf\+\_\+glad\+\_\+wgl\+Release\+Pbuffer\+DCARB}}
+\item 
+\#define \mbox{\hyperlink{wgl_8h_a8a2877f5187c2bbcaab779c518e4bb1a}{wgl\+Swap\+Interval\+EXT}}~\mbox{\hyperlink{wgl_8h_adc53059c83ac5a291d3f01d912c96fee}{sf\+\_\+glad\+\_\+wgl\+Swap\+Interval\+EXT}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Definicje typów}
+\begin{DoxyCompactItemize}
+\item 
+typedef void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{wgl_8h_a3846514fc4f209fb7736dcbe3e5caccf}{GLADapiproc}}) (void)
+\item 
+typedef \mbox{\hyperlink{examples_2opengl_2gl_8h_a3846514fc4f209fb7736dcbe3e5caccf}{GLADapiproc}}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{wgl_8h_ad93f2ec070d0526a454a3cfdaedd344b}{GLADloadfunc}}) (const char \texorpdfstring{$\ast$}{*}name)
+\item 
+typedef \mbox{\hyperlink{examples_2opengl_2gl_8h_a3846514fc4f209fb7736dcbe3e5caccf}{GLADapiproc}}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{wgl_8h_a03952ee64de15eb14cf7add74902c311}{GLADuserptrloadfunc}}) (void \texorpdfstring{$\ast$}{*}userptr, const char \texorpdfstring{$\ast$}{*}name)
+\item 
+typedef void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{wgl_8h_ace7ec17ce773f2bd6d26525fd6cfe546}{GLADprecallback}}) (const char \texorpdfstring{$\ast$}{*}name, \mbox{\hyperlink{examples_2opengl_2gl_8h_a3846514fc4f209fb7736dcbe3e5caccf}{GLADapiproc}} apiproc, int len\+\_\+args,...)
+\item 
+typedef void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{wgl_8h_a352cbf566fef16b44d1f187dbc1fe12d}{GLADpostcallback}}) (void \texorpdfstring{$\ast$}{*}ret, const char \texorpdfstring{$\ast$}{*}name, \mbox{\hyperlink{examples_2opengl_2gl_8h_a3846514fc4f209fb7736dcbe3e5caccf}{GLADapiproc}} apiproc, int len\+\_\+args,...)
+\item 
+typedef struct \mbox{\hyperlink{struct___g_p_u___d_e_v_i_c_e}{\+\_\+\+GPU\+\_\+\+DEVICE}} \mbox{\hyperlink{wgl_8h_aa7a85be45956039ac7a0100a75cded66}{GPU\+\_\+\+DEVICE}}
+\item 
+typedef struct \mbox{\hyperlink{struct___g_p_u___d_e_v_i_c_e}{\+\_\+\+GPU\+\_\+\+DEVICE}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{wgl_8h_afeaad4eb2ceb32236deb77d209ce1f7f}{PGPU\+\_\+\+DEVICE}}
+\item 
+typedef int(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{wgl_8h_a39ffb39dac096fd5925848f0f05a3646}{PFNCHOOSEPIXELFORMATPROC}}) (HDC h\+Dc, const PIXELFORMATDESCRIPTOR \texorpdfstring{$\ast$}{*}p\+Pfd)
+\item 
+typedef int(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{wgl_8h_a3bb9af7293f00a1d24643e06302cf4cd}{PFNDESCRIBEPIXELFORMATPROC}}) (HDC hdc, int ipfd, UINT cjpfd, const PIXELFORMATDESCRIPTOR \texorpdfstring{$\ast$}{*}ppfd)
+\item 
+typedef UINT(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{wgl_8h_a2a9baab28f78c54b464bce01bd27be43}{PFNGETENHMETAFILEPIXELFORMATPROC}}) (HENHMETAFILE hemf, const PIXELFORMATDESCRIPTOR \texorpdfstring{$\ast$}{*}ppfd)
+\item 
+typedef int(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{wgl_8h_ad60d677f17ab783463554f39d0b67e48}{PFNGETPIXELFORMATPROC}}) (HDC hdc)
+\item 
+typedef BOOL(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{wgl_8h_a80db95dc2379f63d2424ded430ea2103}{PFNSETPIXELFORMATPROC}}) (HDC hdc, int ipfd, const PIXELFORMATDESCRIPTOR \texorpdfstring{$\ast$}{*}ppfd)
+\item 
+typedef BOOL(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{wgl_8h_a07f5c013d667f35b6783c815d15109d4}{PFNSWAPBUFFERSPROC}}) (HDC hdc)
+\item 
+typedef BOOL(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{wgl_8h_a58c610f540c89e65fea0c535c664e962}{PFNWGLCHOOSEPIXELFORMATARBPROC}}) (HDC hdc, const int \texorpdfstring{$\ast$}{*}pi\+Attrib\+IList, const FLOAT \texorpdfstring{$\ast$}{*}pf\+Attrib\+FList, UINT n\+Max\+Formats, int \texorpdfstring{$\ast$}{*}pi\+Formats, UINT \texorpdfstring{$\ast$}{*}n\+Num\+Formats)
+\item 
+typedef BOOL(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{wgl_8h_a2967ed7ea8d54044c01acf3bd43a922b}{PFNWGLCOPYCONTEXTPROC}}) (HGLRC hglrc\+Src, HGLRC hglrc\+Dst, UINT mask)
+\item 
+typedef HGLRC(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{wgl_8h_ab9527b71a76a3518a1b4070865168acd}{PFNWGLCREATECONTEXTPROC}}) (HDC h\+Dc)
+\item 
+typedef HGLRC(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{wgl_8h_a3791e4afa3ab9a2db774d7dfb218f457}{PFNWGLCREATECONTEXTATTRIBSARBPROC}}) (HDC h\+DC, HGLRC h\+Share\+Context, const int \texorpdfstring{$\ast$}{*}attrib\+List)
+\item 
+typedef HGLRC(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{wgl_8h_a8cd35a90298602577920d79d48e4b2e9}{PFNWGLCREATELAYERCONTEXTPROC}}) (HDC h\+Dc, int level)
+\item 
+typedef HPBUFFERARB(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{wgl_8h_a28af55bb11b5efcfe432d80f57288484}{PFNWGLCREATEPBUFFERARBPROC}}) (HDC h\+DC, int i\+Pixel\+Format, int i\+Width, int i\+Height, const int \texorpdfstring{$\ast$}{*}pi\+Attrib\+List)
+\item 
+typedef BOOL(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{wgl_8h_af63209fbc57a30e424483eb7767c28e2}{PFNWGLDELETECONTEXTPROC}}) (HGLRC old\+Context)
+\item 
+typedef BOOL(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{wgl_8h_a38ca74385714863d9c80dfb91a3b0552}{PFNWGLDESCRIBELAYERPLANEPROC}}) (HDC h\+Dc, int pixel\+Format, int layer\+Plane, UINT n\+Bytes, const LAYERPLANEDESCRIPTOR \texorpdfstring{$\ast$}{*}plpd)
+\item 
+typedef BOOL(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{wgl_8h_a5bfc4fe61272a6635abcf0d524859180}{PFNWGLDESTROYPBUFFERARBPROC}}) (HPBUFFERARB h\+Pbuffer)
+\item 
+typedef HGLRC(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{wgl_8h_a8aa687f2c85ee4df3bd1d76791f6dc4e}{PFNWGLGETCURRENTCONTEXTPROC}}) (void)
+\item 
+typedef HDC(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{wgl_8h_a6d8bf092203171e60c8c1bbf373d528b}{PFNWGLGETCURRENTDCPROC}}) (void)
+\item 
+typedef const char \texorpdfstring{$\ast$}{*}(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{wgl_8h_a2c0715d4251a68da58bc5eae5ae6d720}{PFNWGLGETEXTENSIONSSTRINGARBPROC}}) (HDC hdc)
+\item 
+typedef const char \texorpdfstring{$\ast$}{*}(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{wgl_8h_adca220242bc21024bc21f0578ee83e40}{PFNWGLGETEXTENSIONSSTRINGEXTPROC}}) (void)
+\item 
+typedef int(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{wgl_8h_ac2c1a8d0f70c2614fa10a0b58470b6fb}{PFNWGLGETLAYERPALETTEENTRIESPROC}}) (HDC hdc, int i\+Layer\+Plane, int i\+Start, int c\+Entries, const COLORREF \texorpdfstring{$\ast$}{*}pcr)
+\item 
+typedef HDC(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{wgl_8h_a87b5a9987d82575272d2ec87da0621e5}{PFNWGLGETPBUFFERDCARBPROC}}) (HPBUFFERARB h\+Pbuffer)
+\item 
+typedef BOOL(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{wgl_8h_a305bede050377d3a417e8431881d34f9}{PFNWGLGETPIXELFORMATATTRIBFVARBPROC}}) (HDC hdc, int i\+Pixel\+Format, int i\+Layer\+Plane, UINT n\+Attributes, const int \texorpdfstring{$\ast$}{*}pi\+Attributes, FLOAT \texorpdfstring{$\ast$}{*}pf\+Values)
+\item 
+typedef BOOL(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{wgl_8h_a6dee6ddcc3ca46cff0f16ba72c380c03}{PFNWGLGETPIXELFORMATATTRIBIVARBPROC}}) (HDC hdc, int i\+Pixel\+Format, int i\+Layer\+Plane, UINT n\+Attributes, const int \texorpdfstring{$\ast$}{*}pi\+Attributes, int \texorpdfstring{$\ast$}{*}pi\+Values)
+\item 
+typedef PROC(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{wgl_8h_ac176cb50f644d499b8b5f747c27969d3}{PFNWGLGETPROCADDRESSPROC}}) (LPCSTR lpsz\+Proc)
+\item 
+typedef int(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{wgl_8h_af56cdbd6243329afc4bd0dcd0ec9c6ab}{PFNWGLGETSWAPINTERVALEXTPROC}}) (void)
+\item 
+typedef BOOL(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{wgl_8h_ab07e62a02e66dff51904071e91dfca23}{PFNWGLMAKECURRENTPROC}}) (HDC h\+Dc, HGLRC new\+Context)
+\item 
+typedef BOOL(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{wgl_8h_a2a0044c12ec87f00f4388077f1cfacfa}{PFNWGLQUERYPBUFFERARBPROC}}) (HPBUFFERARB h\+Pbuffer, int i\+Attribute, int \texorpdfstring{$\ast$}{*}pi\+Value)
+\item 
+typedef BOOL(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{wgl_8h_a21cb68bdcf5d656ad7b0c735e537dbdf}{PFNWGLREALIZELAYERPALETTEPROC}}) (HDC hdc, int i\+Layer\+Plane, BOOL b\+Realize)
+\item 
+typedef int(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{wgl_8h_aaf004ab851cd386dbd980af7d2787c71}{PFNWGLRELEASEPBUFFERDCARBPROC}}) (HPBUFFERARB h\+Pbuffer, HDC h\+DC)
+\item 
+typedef int(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{wgl_8h_aa7ffc597e54bd7b449fedaadb26f9f04}{PFNWGLSETLAYERPALETTEENTRIESPROC}}) (HDC hdc, int i\+Layer\+Plane, int i\+Start, int c\+Entries, const COLORREF \texorpdfstring{$\ast$}{*}pcr)
+\item 
+typedef BOOL(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{wgl_8h_a08c87dbb260fdae3a40c107381c520d2}{PFNWGLSHARELISTSPROC}}) (HGLRC hrc\+Srv\+Share, HGLRC hrc\+Srv\+Source)
+\item 
+typedef BOOL(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{wgl_8h_af12c284fbd5163f837f0a221024d3c0e}{PFNWGLSWAPINTERVALEXTPROC}}) (int interval)
+\item 
+typedef BOOL(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{wgl_8h_abe99f9cba87ad1fb8bcdcdc5ae1d7dba}{PFNWGLSWAPLAYERBUFFERSPROC}}) (HDC hdc, UINT fu\+Flags)
+\item 
+typedef BOOL(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{wgl_8h_a03dd862bf2aac188a9e70464dcaa8806}{PFNWGLUSEFONTBITMAPSPROC}}) (HDC h\+DC, DWORD first, DWORD count, DWORD list\+Base)
+\item 
+typedef BOOL(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{wgl_8h_a096d215c42077c2975c40f195c7a25cf}{PFNWGLUSEFONTBITMAPSAPROC}}) (HDC h\+DC, DWORD first, DWORD count, DWORD list\+Base)
+\item 
+typedef BOOL(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{wgl_8h_a43cedf36cde210d30ed4940930d480e0}{PFNWGLUSEFONTBITMAPSWPROC}}) (HDC h\+DC, DWORD first, DWORD count, DWORD list\+Base)
+\item 
+typedef BOOL(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{wgl_8h_a9a3d35f1ae3036b5741d79b12f8a1523}{PFNWGLUSEFONTOUTLINESPROC}}) (HDC h\+DC, DWORD first, DWORD count, DWORD list\+Base, FLOAT deviation, FLOAT extrusion, int format, LPGLYPHMETRICSFLOAT lpgmf)
+\item 
+typedef BOOL(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{wgl_8h_a5aec9181e39b9554752217a2688a9b51}{PFNWGLUSEFONTOUTLINESAPROC}}) (HDC h\+DC, DWORD first, DWORD count, DWORD list\+Base, FLOAT deviation, FLOAT extrusion, int format, LPGLYPHMETRICSFLOAT lpgmf)
+\item 
+typedef BOOL(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{wgl_8h_a3079da56bba8a0ace6b9551d77084b6e}{PFNWGLUSEFONTOUTLINESWPROC}}) (HDC h\+DC, DWORD first, DWORD count, DWORD list\+Base, FLOAT deviation, FLOAT extrusion, int format, LPGLYPHMETRICSFLOAT lpgmf)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{wgl_8h_a2323c13d0f42654f004c358af0753921}{DECLARE\+\_\+\+HANDLE}} (HPBUFFERARB)
+\item 
+\mbox{\hyperlink{wgl_8h_ad121866d66db9d4244bc5b63347dfdf0}{DECLARE\+\_\+\+HANDLE}} (HPBUFFEREXT)
+\item 
+\mbox{\hyperlink{wgl_8h_a151582be63bbce7f4b7e0ae262a257dc}{DECLARE\+\_\+\+HANDLE}} (HVIDEOOUTPUTDEVICENV)
+\item 
+\mbox{\hyperlink{wgl_8h_aee641dec07ca3cb211d0101a520075a7}{DECLARE\+\_\+\+HANDLE}} (HPVIDEODEV)
+\item 
+\mbox{\hyperlink{wgl_8h_a54e641a4b8de42243647fd7482e472ff}{DECLARE\+\_\+\+HANDLE}} (HPGPUNV)
+\item 
+\mbox{\hyperlink{wgl_8h_ac8c780d847b73fc3bb6630af090a0a5e}{DECLARE\+\_\+\+HANDLE}} (HGPUNV)
+\item 
+\mbox{\hyperlink{wgl_8h_a656d791c955682368207c1fe3a662401}{DECLARE\+\_\+\+HANDLE}} (HVIDEOINPUTDEVICENV)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Zmienne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}} int \mbox{\hyperlink{wgl_8h_a829f60e7a92d3de92afc181ade21d38f}{SF\+\_\+\+GLAD\+\_\+\+WGL\+\_\+\+VERSION\+\_\+1\+\_\+0}}
+\item 
+\mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}} int \mbox{\hyperlink{wgl_8h_a3d4926ada237bb28e22c7a7e138d0f3d}{SF\+\_\+\+GLAD\+\_\+\+WGL\+\_\+\+ARB\+\_\+create\+\_\+context}}
+\item 
+\mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}} int \mbox{\hyperlink{wgl_8h_aedf59b140c359b80b0aeba41b14e8238}{SF\+\_\+\+GLAD\+\_\+\+WGL\+\_\+\+ARB\+\_\+create\+\_\+context\+\_\+profile}}
+\item 
+\mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}} int \mbox{\hyperlink{wgl_8h_afdf445fc529b961d708b386d0ee87b01}{SF\+\_\+\+GLAD\+\_\+\+WGL\+\_\+\+ARB\+\_\+extensions\+\_\+string}}
+\item 
+\mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}} int \mbox{\hyperlink{wgl_8h_a844b04a7995159a30d4158363186e802}{SF\+\_\+\+GLAD\+\_\+\+WGL\+\_\+\+ARB\+\_\+framebuffer\+\_\+s\+RGB}}
+\item 
+\mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}} int \mbox{\hyperlink{wgl_8h_afdcd9467a5a872eec40b31cee3bc6d58}{SF\+\_\+\+GLAD\+\_\+\+WGL\+\_\+\+ARB\+\_\+multisample}}
+\item 
+\mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}} int \mbox{\hyperlink{wgl_8h_addec55c80854178b4a57d64ebe1ab94c}{SF\+\_\+\+GLAD\+\_\+\+WGL\+\_\+\+ARB\+\_\+pbuffer}}
+\item 
+\mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}} int \mbox{\hyperlink{wgl_8h_abcb3120c080fabb69d8145e5160800e0}{SF\+\_\+\+GLAD\+\_\+\+WGL\+\_\+\+ARB\+\_\+pixel\+\_\+format}}
+\item 
+\mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}} int \mbox{\hyperlink{wgl_8h_aa2d8e6f7965d8727f68638ab6596d31f}{SF\+\_\+\+GLAD\+\_\+\+WGL\+\_\+\+EXT\+\_\+extensions\+\_\+string}}
+\item 
+\mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}} int \mbox{\hyperlink{wgl_8h_a3fe31ba60adc8c999e4e2304c6a95190}{SF\+\_\+\+GLAD\+\_\+\+WGL\+\_\+\+EXT\+\_\+framebuffer\+\_\+s\+RGB}}
+\item 
+\mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}} int \mbox{\hyperlink{wgl_8h_afb1b4be9e816c2712645b104d8df0a20}{SF\+\_\+\+GLAD\+\_\+\+WGL\+\_\+\+EXT\+\_\+swap\+\_\+control}}
+\item 
+\mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}} \mbox{\hyperlink{wgl_8h_a58c610f540c89e65fea0c535c664e962}{PFNWGLCHOOSEPIXELFORMATARBPROC}} \mbox{\hyperlink{wgl_8h_a3bfdb69c4378331f1b9ff9ed8f10cf99}{sf\+\_\+glad\+\_\+wgl\+Choose\+Pixel\+Format\+ARB}}
+\item 
+\mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}} \mbox{\hyperlink{wgl_8h_a3791e4afa3ab9a2db774d7dfb218f457}{PFNWGLCREATECONTEXTATTRIBSARBPROC}} \mbox{\hyperlink{wgl_8h_ac14299eb06101d4e88bd130224a1d88b}{sf\+\_\+glad\+\_\+wgl\+Create\+Context\+Attribs\+ARB}}
+\item 
+\mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}} \mbox{\hyperlink{wgl_8h_a28af55bb11b5efcfe432d80f57288484}{PFNWGLCREATEPBUFFERARBPROC}} \mbox{\hyperlink{wgl_8h_abb49a1c4ba8c8daf5da72fe2d2596fc6}{sf\+\_\+glad\+\_\+wgl\+Create\+Pbuffer\+ARB}}
+\item 
+\mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}} \mbox{\hyperlink{wgl_8h_a5bfc4fe61272a6635abcf0d524859180}{PFNWGLDESTROYPBUFFERARBPROC}} \mbox{\hyperlink{wgl_8h_abf4735d33e056f410d1e384a85d09cdd}{sf\+\_\+glad\+\_\+wgl\+Destroy\+Pbuffer\+ARB}}
+\item 
+\mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}} \mbox{\hyperlink{wgl_8h_a2c0715d4251a68da58bc5eae5ae6d720}{PFNWGLGETEXTENSIONSSTRINGARBPROC}} \mbox{\hyperlink{wgl_8h_a79e148cba70e70cf6440082050516048}{sf\+\_\+glad\+\_\+wgl\+Get\+Extensions\+String\+ARB}}
+\item 
+\mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}} \mbox{\hyperlink{wgl_8h_adca220242bc21024bc21f0578ee83e40}{PFNWGLGETEXTENSIONSSTRINGEXTPROC}} \mbox{\hyperlink{wgl_8h_a1a93b7e0affb8d9fe444a8c954529383}{sf\+\_\+glad\+\_\+wgl\+Get\+Extensions\+String\+EXT}}
+\item 
+\mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}} \mbox{\hyperlink{wgl_8h_a87b5a9987d82575272d2ec87da0621e5}{PFNWGLGETPBUFFERDCARBPROC}} \mbox{\hyperlink{wgl_8h_aea2fc9a37eb4ee85863d928804297262}{sf\+\_\+glad\+\_\+wgl\+Get\+Pbuffer\+DCARB}}
+\item 
+\mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}} \mbox{\hyperlink{wgl_8h_a305bede050377d3a417e8431881d34f9}{PFNWGLGETPIXELFORMATATTRIBFVARBPROC}} \mbox{\hyperlink{wgl_8h_a32db980fd2a3183df081f548ebeb92b0}{sf\+\_\+glad\+\_\+wgl\+Get\+Pixel\+Format\+Attribfv\+ARB}}
+\item 
+\mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}} \mbox{\hyperlink{wgl_8h_a6dee6ddcc3ca46cff0f16ba72c380c03}{PFNWGLGETPIXELFORMATATTRIBIVARBPROC}} \mbox{\hyperlink{wgl_8h_a0bbbca7a2193919ad8f3865a10150083}{sf\+\_\+glad\+\_\+wgl\+Get\+Pixel\+Format\+Attribiv\+ARB}}
+\item 
+\mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}} \mbox{\hyperlink{wgl_8h_af56cdbd6243329afc4bd0dcd0ec9c6ab}{PFNWGLGETSWAPINTERVALEXTPROC}} \mbox{\hyperlink{wgl_8h_a53c8e361af02d82cf89f5dfc4b820b68}{sf\+\_\+glad\+\_\+wgl\+Get\+Swap\+Interval\+EXT}}
+\item 
+\mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}} \mbox{\hyperlink{wgl_8h_a2a0044c12ec87f00f4388077f1cfacfa}{PFNWGLQUERYPBUFFERARBPROC}} \mbox{\hyperlink{wgl_8h_acbff66120f132c2357eb08bf76050b39}{sf\+\_\+glad\+\_\+wgl\+Query\+Pbuffer\+ARB}}
+\item 
+\mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}} \mbox{\hyperlink{wgl_8h_aaf004ab851cd386dbd980af7d2787c71}{PFNWGLRELEASEPBUFFERDCARBPROC}} \mbox{\hyperlink{wgl_8h_ad2b64853d180ef645b28b781268c0618}{sf\+\_\+glad\+\_\+wgl\+Release\+Pbuffer\+DCARB}}
+\item 
+\mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}} \mbox{\hyperlink{wgl_8h_af12c284fbd5163f837f0a221024d3c0e}{PFNWGLSWAPINTERVALEXTPROC}} \mbox{\hyperlink{wgl_8h_adc53059c83ac5a291d3f01d912c96fee}{sf\+\_\+glad\+\_\+wgl\+Swap\+Interval\+EXT}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja definicji}
+\Hypertarget{wgl_8h_a685e9dcd28f13baaa254a1c41a796a5a}\label{wgl_8h_a685e9dcd28f13baaa254a1c41a796a5a} 
+\index{wgl.h@{wgl.h}!ERROR\_INVALID\_PROFILE\_ARB@{ERROR\_INVALID\_PROFILE\_ARB}}
+\index{ERROR\_INVALID\_PROFILE\_ARB@{ERROR\_INVALID\_PROFILE\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{ERROR\_INVALID\_PROFILE\_ARB}{ERROR\_INVALID\_PROFILE\_ARB}}
+{\footnotesize\ttfamily \#define ERROR\+\_\+\+INVALID\+\_\+\+PROFILE\+\_\+\+ARB~0x2096}
+
+\Hypertarget{wgl_8h_aa711b7b414242207d8f58d9e9a8feb73}\label{wgl_8h_aa711b7b414242207d8f58d9e9a8feb73} 
+\index{wgl.h@{wgl.h}!ERROR\_INVALID\_VERSION\_ARB@{ERROR\_INVALID\_VERSION\_ARB}}
+\index{ERROR\_INVALID\_VERSION\_ARB@{ERROR\_INVALID\_VERSION\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{ERROR\_INVALID\_VERSION\_ARB}{ERROR\_INVALID\_VERSION\_ARB}}
+{\footnotesize\ttfamily \#define ERROR\+\_\+\+INVALID\+\_\+\+VERSION\+\_\+\+ARB~0x2095}
+
+\Hypertarget{wgl_8h_a927dddebb543b0c410276ad0c2dd92ba}\label{wgl_8h_a927dddebb543b0c410276ad0c2dd92ba} 
+\index{wgl.h@{wgl.h}!GLAD\_API\_CALL@{GLAD\_API\_CALL}}
+\index{GLAD\_API\_CALL@{GLAD\_API\_CALL}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{GLAD\_API\_CALL}{GLAD\_API\_CALL}}
+{\footnotesize\ttfamily \#define GLAD\+\_\+\+API\+\_\+\+CALL~extern}
+
+\Hypertarget{wgl_8h_ae53ad9236de14aa81b547c1c3a6d4774}\label{wgl_8h_ae53ad9236de14aa81b547c1c3a6d4774} 
+\index{wgl.h@{wgl.h}!GLAD\_API\_PTR@{GLAD\_API\_PTR}}
+\index{GLAD\_API\_PTR@{GLAD\_API\_PTR}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{GLAD\_API\_PTR}{GLAD\_API\_PTR}}
+{\footnotesize\ttfamily \#define GLAD\+\_\+\+API\+\_\+\+PTR}
+
+\Hypertarget{wgl_8h_a011f12a92fc08c967f226ea1c9ce8f4b}\label{wgl_8h_a011f12a92fc08c967f226ea1c9ce8f4b} 
+\index{wgl.h@{wgl.h}!GLAD\_GENERATOR\_VERSION@{GLAD\_GENERATOR\_VERSION}}
+\index{GLAD\_GENERATOR\_VERSION@{GLAD\_GENERATOR\_VERSION}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{GLAD\_GENERATOR\_VERSION}{GLAD\_GENERATOR\_VERSION}}
+{\footnotesize\ttfamily \#define GLAD\+\_\+\+GENERATOR\+\_\+\+VERSION~"{}2.\+0.\+0-\/beta"{}}
+
+\Hypertarget{wgl_8h_ab70ae7823e852994dce75d9ea6b07753}\label{wgl_8h_ab70ae7823e852994dce75d9ea6b07753} 
+\index{wgl.h@{wgl.h}!GLAD\_GNUC\_EXTENSION@{GLAD\_GNUC\_EXTENSION}}
+\index{GLAD\_GNUC\_EXTENSION@{GLAD\_GNUC\_EXTENSION}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{GLAD\_GNUC\_EXTENSION}{GLAD\_GNUC\_EXTENSION}}
+{\footnotesize\ttfamily \#define GLAD\+\_\+\+GNUC\+\_\+\+EXTENSION}
+
+\Hypertarget{wgl_8h_a60ee2ee57556e9268173d34491db7b83}\label{wgl_8h_a60ee2ee57556e9268173d34491db7b83} 
+\index{wgl.h@{wgl.h}!GLAD\_MAKE\_VERSION@{GLAD\_MAKE\_VERSION}}
+\index{GLAD\_MAKE\_VERSION@{GLAD\_MAKE\_VERSION}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{GLAD\_MAKE\_VERSION}{GLAD\_MAKE\_VERSION}}
+{\footnotesize\ttfamily \#define GLAD\+\_\+\+MAKE\+\_\+\+VERSION(\begin{DoxyParamCaption}\item[{}]{major,  }\item[{}]{minor }\end{DoxyParamCaption})~(major \texorpdfstring{$\ast$}{*} 10000 + minor)}
+
+\Hypertarget{wgl_8h_a6ea2d65dffa87e2e1bafecf39833224b}\label{wgl_8h_a6ea2d65dffa87e2e1bafecf39833224b} 
+\index{wgl.h@{wgl.h}!GLAD\_OPTION\_WGL\_ALIAS@{GLAD\_OPTION\_WGL\_ALIAS}}
+\index{GLAD\_OPTION\_WGL\_ALIAS@{GLAD\_OPTION\_WGL\_ALIAS}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{GLAD\_OPTION\_WGL\_ALIAS}{GLAD\_OPTION\_WGL\_ALIAS}}
+{\footnotesize\ttfamily \#define GLAD\+\_\+\+OPTION\+\_\+\+WGL\+\_\+\+ALIAS}
+
+\Hypertarget{wgl_8h_a3295bc79cd98db531a7cf6e6fd83a501}\label{wgl_8h_a3295bc79cd98db531a7cf6e6fd83a501} 
+\index{wgl.h@{wgl.h}!GLAD\_OPTION\_WGL\_HEADER\_ONLY@{GLAD\_OPTION\_WGL\_HEADER\_ONLY}}
+\index{GLAD\_OPTION\_WGL\_HEADER\_ONLY@{GLAD\_OPTION\_WGL\_HEADER\_ONLY}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{GLAD\_OPTION\_WGL\_HEADER\_ONLY}{GLAD\_OPTION\_WGL\_HEADER\_ONLY}}
+{\footnotesize\ttfamily \#define GLAD\+\_\+\+OPTION\+\_\+\+WGL\+\_\+\+HEADER\+\_\+\+ONLY}
+
+\Hypertarget{wgl_8h_a5248eacf9303356f901b8b992116adc5}\label{wgl_8h_a5248eacf9303356f901b8b992116adc5} 
+\index{wgl.h@{wgl.h}!GLAD\_OPTION\_WGL\_LOADER@{GLAD\_OPTION\_WGL\_LOADER}}
+\index{GLAD\_OPTION\_WGL\_LOADER@{GLAD\_OPTION\_WGL\_LOADER}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{GLAD\_OPTION\_WGL\_LOADER}{GLAD\_OPTION\_WGL\_LOADER}}
+{\footnotesize\ttfamily \#define GLAD\+\_\+\+OPTION\+\_\+\+WGL\+\_\+\+LOADER}
+
+\Hypertarget{wgl_8h_a525c82530b662a029be7c4d55c65ec28}\label{wgl_8h_a525c82530b662a029be7c4d55c65ec28} 
+\index{wgl.h@{wgl.h}!GLAD\_PLATFORM\_APPLE@{GLAD\_PLATFORM\_APPLE}}
+\index{GLAD\_PLATFORM\_APPLE@{GLAD\_PLATFORM\_APPLE}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{GLAD\_PLATFORM\_APPLE}{GLAD\_PLATFORM\_APPLE}}
+{\footnotesize\ttfamily \#define GLAD\+\_\+\+PLATFORM\+\_\+\+APPLE~0}
+
+\Hypertarget{wgl_8h_a1c26041606a8662b890c109e958a0d6c}\label{wgl_8h_a1c26041606a8662b890c109e958a0d6c} 
+\index{wgl.h@{wgl.h}!GLAD\_PLATFORM\_EMSCRIPTEN@{GLAD\_PLATFORM\_EMSCRIPTEN}}
+\index{GLAD\_PLATFORM\_EMSCRIPTEN@{GLAD\_PLATFORM\_EMSCRIPTEN}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{GLAD\_PLATFORM\_EMSCRIPTEN}{GLAD\_PLATFORM\_EMSCRIPTEN}}
+{\footnotesize\ttfamily \#define GLAD\+\_\+\+PLATFORM\+\_\+\+EMSCRIPTEN~0}
+
+\Hypertarget{wgl_8h_a06fa90554818a5886c574ed962dec52c}\label{wgl_8h_a06fa90554818a5886c574ed962dec52c} 
+\index{wgl.h@{wgl.h}!GLAD\_PLATFORM\_H\_@{GLAD\_PLATFORM\_H\_}}
+\index{GLAD\_PLATFORM\_H\_@{GLAD\_PLATFORM\_H\_}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{GLAD\_PLATFORM\_H\_}{GLAD\_PLATFORM\_H\_}}
+{\footnotesize\ttfamily \#define GLAD\+\_\+\+PLATFORM\+\_\+\+H\+\_\+}
+
+\Hypertarget{wgl_8h_a3475d17b29fd0d925c7ba19460583e50}\label{wgl_8h_a3475d17b29fd0d925c7ba19460583e50} 
+\index{wgl.h@{wgl.h}!GLAD\_PLATFORM\_UWP@{GLAD\_PLATFORM\_UWP}}
+\index{GLAD\_PLATFORM\_UWP@{GLAD\_PLATFORM\_UWP}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{GLAD\_PLATFORM\_UWP}{GLAD\_PLATFORM\_UWP}}
+{\footnotesize\ttfamily \#define GLAD\+\_\+\+PLATFORM\+\_\+\+UWP~0}
+
+\Hypertarget{wgl_8h_a60b6ed380499858af0d114267ada5046}\label{wgl_8h_a60b6ed380499858af0d114267ada5046} 
+\index{wgl.h@{wgl.h}!GLAD\_PLATFORM\_WIN32@{GLAD\_PLATFORM\_WIN32}}
+\index{GLAD\_PLATFORM\_WIN32@{GLAD\_PLATFORM\_WIN32}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{GLAD\_PLATFORM\_WIN32}{GLAD\_PLATFORM\_WIN32}}
+{\footnotesize\ttfamily \#define GLAD\+\_\+\+PLATFORM\+\_\+\+WIN32~0}
+
+\Hypertarget{wgl_8h_a23fff3933d34ef45477f268c45c39fdb}\label{wgl_8h_a23fff3933d34ef45477f268c45c39fdb} 
+\index{wgl.h@{wgl.h}!GLAD\_VERSION\_MAJOR@{GLAD\_VERSION\_MAJOR}}
+\index{GLAD\_VERSION\_MAJOR@{GLAD\_VERSION\_MAJOR}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{GLAD\_VERSION\_MAJOR}{GLAD\_VERSION\_MAJOR}}
+{\footnotesize\ttfamily \#define GLAD\+\_\+\+VERSION\+\_\+\+MAJOR(\begin{DoxyParamCaption}\item[{}]{version }\end{DoxyParamCaption})~(version / 10000)}
+
+\Hypertarget{wgl_8h_a3cee5ca772600bfe0a087d2913e82a8b}\label{wgl_8h_a3cee5ca772600bfe0a087d2913e82a8b} 
+\index{wgl.h@{wgl.h}!GLAD\_VERSION\_MINOR@{GLAD\_VERSION\_MINOR}}
+\index{GLAD\_VERSION\_MINOR@{GLAD\_VERSION\_MINOR}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{GLAD\_VERSION\_MINOR}{GLAD\_VERSION\_MINOR}}
+{\footnotesize\ttfamily \#define GLAD\+\_\+\+VERSION\+\_\+\+MINOR(\begin{DoxyParamCaption}\item[{}]{version }\end{DoxyParamCaption})~(version \% 10000)}
+
+\Hypertarget{wgl_8h_abad5ea874b73fa802c9ac0f5488bf9b5}\label{wgl_8h_abad5ea874b73fa802c9ac0f5488bf9b5} 
+\index{wgl.h@{wgl.h}!GLAPI@{GLAPI}}
+\index{GLAPI@{GLAPI}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{GLAPI}{GLAPI}}
+{\footnotesize\ttfamily \#define GLAPI~\mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}}}
+
+\Hypertarget{wgl_8h_aa97755eb47e4bf2727ad45d610e18206}\label{wgl_8h_aa97755eb47e4bf2727ad45d610e18206} 
+\index{wgl.h@{wgl.h}!GLAPIENTRY@{GLAPIENTRY}}
+\index{GLAPIENTRY@{GLAPIENTRY}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{GLAPIENTRY}{GLAPIENTRY}}
+{\footnotesize\ttfamily \#define GLAPIENTRY~\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}}}
+
+\Hypertarget{wgl_8h_a74d01dfed950ca743ee986cab2ba7257}\label{wgl_8h_a74d01dfed950ca743ee986cab2ba7257} 
+\index{wgl.h@{wgl.h}!SF\_GLAD\_WGL@{SF\_GLAD\_WGL}}
+\index{SF\_GLAD\_WGL@{SF\_GLAD\_WGL}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{SF\_GLAD\_WGL}{SF\_GLAD\_WGL}}
+{\footnotesize\ttfamily \#define SF\+\_\+\+GLAD\+\_\+\+WGL}
+
+Loader generated by glad 2.\+0.\+0-\/beta on Wed Jul 17 02\+:23\+:29 2019
+
+Generator\+: C/\+C++ Specification\+: wgl Extensions\+: 10
+
+APIs\+:
+\begin{DoxyItemize}
+\item wgl=1.\+0
+\end{DoxyItemize}
+
+Options\+:
+\begin{DoxyItemize}
+\item MX\+\_\+\+GLOBAL = False
+\item ON\+\_\+\+DEMAND = False
+\item LOADER = True
+\item ALIAS = True
+\item HEADER\+\_\+\+ONLY = True
+\item DEBUG = False
+\item MX = False
+\end{DoxyItemize}
+
+Commandline\+: --api=\textquotesingle{}wgl=1.\+0\textquotesingle{} --extensions=\textquotesingle{}WGL\+\_\+\+ARB\+\_\+create\+\_\+context,WGL\+\_\+\+ARB\+\_\+create\+\_\+context\+\_\+profile,WGL\+\_\+\+ARB\+\_\+extensions\+\_\+string,WGL\+\_\+\+ARB\+\_\+framebuffer\+\_\+s\+RGB,WGL\+\_\+\+ARB\+\_\+multisample,WGL\+\_\+\+ARB\+\_\+pbuffer,WGL\+\_\+\+ARB\+\_\+pixel\+\_\+format,WGL\+\_\+\+EXT\+\_\+extensions\+\_\+string,WGL\+\_\+\+EXT\+\_\+framebuffer\+\_\+s\+RGB,WGL\+\_\+\+EXT\+\_\+swap\+\_\+control\textquotesingle{} c --loader --alias --header-\/only
+
+Online\+: \href{http://glad.sh/\#api=wgl\%3D1.0&extensions=WGL_ARB_create_context\%2CWGL_ARB_create_context_profile\%2CWGL_ARB_extensions_string\%2CWGL_ARB_framebuffer_sRGB\%2CWGL_ARB_multisample\%2CWGL_ARB_pbuffer\%2CWGL_ARB_pixel_format\%2CWGL_EXT_extensions_string\%2CWGL_EXT_framebuffer_sRGB\%2CWGL_EXT_swap_control&generator=c&options=LOADER\%2CALIAS\%2CHEADER_ONLY}{\texttt{ http\+://glad.\+sh/\#api=wgl\%3\+D1.\+0\&extensions=\+WGL\+\_\+\+ARB\+\_\+create\+\_\+context\%2\+CWGL\+\_\+\+ARB\+\_\+create\+\_\+context\+\_\+profile\%2\+CWGL\+\_\+\+ARB\+\_\+extensions\+\_\+string\%2\+CWGL\+\_\+\+ARB\+\_\+framebuffer\+\_\+s\+RGB\%2\+CWGL\+\_\+\+ARB\+\_\+multisample\%2\+CWGL\+\_\+\+ARB\+\_\+pbuffer\%2\+CWGL\+\_\+\+ARB\+\_\+pixel\+\_\+format\%2\+CWGL\+\_\+\+EXT\+\_\+extensions\+\_\+string\%2\+CWGL\+\_\+\+EXT\+\_\+framebuffer\+\_\+s\+RGB\%2\+CWGL\+\_\+\+EXT\+\_\+swap\+\_\+control\&generator=c\&options=\+LOADER\%2\+CALIAS\%2\+CHEADER\+\_\+\+ONLY}} \Hypertarget{wgl_8h_a131f3cc56b5489a6fd8f7efa556634ea}\label{wgl_8h_a131f3cc56b5489a6fd8f7efa556634ea} 
+\index{wgl.h@{wgl.h}!WGL\_ACCELERATION\_ARB@{WGL\_ACCELERATION\_ARB}}
+\index{WGL\_ACCELERATION\_ARB@{WGL\_ACCELERATION\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_ACCELERATION\_ARB}{WGL\_ACCELERATION\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+ACCELERATION\+\_\+\+ARB~0x2003}
+
+\Hypertarget{wgl_8h_aeb27a625f80aaa587b86c28ea44fbe65}\label{wgl_8h_aeb27a625f80aaa587b86c28ea44fbe65} 
+\index{wgl.h@{wgl.h}!WGL\_ACCUM\_ALPHA\_BITS\_ARB@{WGL\_ACCUM\_ALPHA\_BITS\_ARB}}
+\index{WGL\_ACCUM\_ALPHA\_BITS\_ARB@{WGL\_ACCUM\_ALPHA\_BITS\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_ACCUM\_ALPHA\_BITS\_ARB}{WGL\_ACCUM\_ALPHA\_BITS\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+ACCUM\+\_\+\+ALPHA\+\_\+\+BITS\+\_\+\+ARB~0x2021}
+
+\Hypertarget{wgl_8h_ae70e59419a58e3c6c1951cad5e78c055}\label{wgl_8h_ae70e59419a58e3c6c1951cad5e78c055} 
+\index{wgl.h@{wgl.h}!WGL\_ACCUM\_BITS\_ARB@{WGL\_ACCUM\_BITS\_ARB}}
+\index{WGL\_ACCUM\_BITS\_ARB@{WGL\_ACCUM\_BITS\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_ACCUM\_BITS\_ARB}{WGL\_ACCUM\_BITS\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+ACCUM\+\_\+\+BITS\+\_\+\+ARB~0x201D}
+
+\Hypertarget{wgl_8h_a0044e12ada2c0cee252e1205400413a1}\label{wgl_8h_a0044e12ada2c0cee252e1205400413a1} 
+\index{wgl.h@{wgl.h}!WGL\_ACCUM\_BLUE\_BITS\_ARB@{WGL\_ACCUM\_BLUE\_BITS\_ARB}}
+\index{WGL\_ACCUM\_BLUE\_BITS\_ARB@{WGL\_ACCUM\_BLUE\_BITS\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_ACCUM\_BLUE\_BITS\_ARB}{WGL\_ACCUM\_BLUE\_BITS\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+ACCUM\+\_\+\+BLUE\+\_\+\+BITS\+\_\+\+ARB~0x2020}
+
+\Hypertarget{wgl_8h_a491952e52b2caad0be533c23b65b16e2}\label{wgl_8h_a491952e52b2caad0be533c23b65b16e2} 
+\index{wgl.h@{wgl.h}!WGL\_ACCUM\_GREEN\_BITS\_ARB@{WGL\_ACCUM\_GREEN\_BITS\_ARB}}
+\index{WGL\_ACCUM\_GREEN\_BITS\_ARB@{WGL\_ACCUM\_GREEN\_BITS\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_ACCUM\_GREEN\_BITS\_ARB}{WGL\_ACCUM\_GREEN\_BITS\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+ACCUM\+\_\+\+GREEN\+\_\+\+BITS\+\_\+\+ARB~0x201F}
+
+\Hypertarget{wgl_8h_ac457cdee636955daf428b8d5311f7870}\label{wgl_8h_ac457cdee636955daf428b8d5311f7870} 
+\index{wgl.h@{wgl.h}!WGL\_ACCUM\_RED\_BITS\_ARB@{WGL\_ACCUM\_RED\_BITS\_ARB}}
+\index{WGL\_ACCUM\_RED\_BITS\_ARB@{WGL\_ACCUM\_RED\_BITS\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_ACCUM\_RED\_BITS\_ARB}{WGL\_ACCUM\_RED\_BITS\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+ACCUM\+\_\+\+RED\+\_\+\+BITS\+\_\+\+ARB~0x201E}
+
+\Hypertarget{wgl_8h_a5d54c3606cc49e80cb6420b145a2119a}\label{wgl_8h_a5d54c3606cc49e80cb6420b145a2119a} 
+\index{wgl.h@{wgl.h}!WGL\_ALPHA\_BITS\_ARB@{WGL\_ALPHA\_BITS\_ARB}}
+\index{WGL\_ALPHA\_BITS\_ARB@{WGL\_ALPHA\_BITS\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_ALPHA\_BITS\_ARB}{WGL\_ALPHA\_BITS\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+ALPHA\+\_\+\+BITS\+\_\+\+ARB~0x201B}
+
+\Hypertarget{wgl_8h_aa5f833102cee048157f3c96a887d9922}\label{wgl_8h_aa5f833102cee048157f3c96a887d9922} 
+\index{wgl.h@{wgl.h}!WGL\_ALPHA\_SHIFT\_ARB@{WGL\_ALPHA\_SHIFT\_ARB}}
+\index{WGL\_ALPHA\_SHIFT\_ARB@{WGL\_ALPHA\_SHIFT\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_ALPHA\_SHIFT\_ARB}{WGL\_ALPHA\_SHIFT\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+ALPHA\+\_\+\+SHIFT\+\_\+\+ARB~0x201C}
+
+\Hypertarget{wgl_8h_af9df7287ebc54553ffdd27b64edba1ba}\label{wgl_8h_af9df7287ebc54553ffdd27b64edba1ba} 
+\index{wgl.h@{wgl.h}!WGL\_ARB\_create\_context@{WGL\_ARB\_create\_context}}
+\index{WGL\_ARB\_create\_context@{WGL\_ARB\_create\_context}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_ARB\_create\_context}{WGL\_ARB\_create\_context}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+ARB\+\_\+create\+\_\+context~1}
+
+\Hypertarget{wgl_8h_a2d3c08e05c220a6e53d4efaa076b3701}\label{wgl_8h_a2d3c08e05c220a6e53d4efaa076b3701} 
+\index{wgl.h@{wgl.h}!WGL\_ARB\_create\_context\_profile@{WGL\_ARB\_create\_context\_profile}}
+\index{WGL\_ARB\_create\_context\_profile@{WGL\_ARB\_create\_context\_profile}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_ARB\_create\_context\_profile}{WGL\_ARB\_create\_context\_profile}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+ARB\+\_\+create\+\_\+context\+\_\+profile~1}
+
+\Hypertarget{wgl_8h_a4d7db892fdd77701f3efd34c070e19c3}\label{wgl_8h_a4d7db892fdd77701f3efd34c070e19c3} 
+\index{wgl.h@{wgl.h}!WGL\_ARB\_extensions\_string@{WGL\_ARB\_extensions\_string}}
+\index{WGL\_ARB\_extensions\_string@{WGL\_ARB\_extensions\_string}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_ARB\_extensions\_string}{WGL\_ARB\_extensions\_string}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+ARB\+\_\+extensions\+\_\+string~1}
+
+\Hypertarget{wgl_8h_aeb7a8cb36bd85cb917aa94bca199a75c}\label{wgl_8h_aeb7a8cb36bd85cb917aa94bca199a75c} 
+\index{wgl.h@{wgl.h}!WGL\_ARB\_framebuffer\_sRGB@{WGL\_ARB\_framebuffer\_sRGB}}
+\index{WGL\_ARB\_framebuffer\_sRGB@{WGL\_ARB\_framebuffer\_sRGB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_ARB\_framebuffer\_sRGB}{WGL\_ARB\_framebuffer\_sRGB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+ARB\+\_\+framebuffer\+\_\+s\+RGB~1}
+
+\Hypertarget{wgl_8h_a2a45e7c88a5e6c754aeeaf5fa1153ff7}\label{wgl_8h_a2a45e7c88a5e6c754aeeaf5fa1153ff7} 
+\index{wgl.h@{wgl.h}!WGL\_ARB\_multisample@{WGL\_ARB\_multisample}}
+\index{WGL\_ARB\_multisample@{WGL\_ARB\_multisample}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_ARB\_multisample}{WGL\_ARB\_multisample}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+ARB\+\_\+multisample~1}
+
+\Hypertarget{wgl_8h_af5c1a41d6050c963287486dfc80f42a5}\label{wgl_8h_af5c1a41d6050c963287486dfc80f42a5} 
+\index{wgl.h@{wgl.h}!WGL\_ARB\_pbuffer@{WGL\_ARB\_pbuffer}}
+\index{WGL\_ARB\_pbuffer@{WGL\_ARB\_pbuffer}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_ARB\_pbuffer}{WGL\_ARB\_pbuffer}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+ARB\+\_\+pbuffer~1}
+
+\Hypertarget{wgl_8h_a53c2abeb08e5feeaf8e4fc67b84e7b41}\label{wgl_8h_a53c2abeb08e5feeaf8e4fc67b84e7b41} 
+\index{wgl.h@{wgl.h}!WGL\_ARB\_pixel\_format@{WGL\_ARB\_pixel\_format}}
+\index{WGL\_ARB\_pixel\_format@{WGL\_ARB\_pixel\_format}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_ARB\_pixel\_format}{WGL\_ARB\_pixel\_format}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+ARB\+\_\+pixel\+\_\+format~1}
+
+\Hypertarget{wgl_8h_ade9ba085a4a1ad9db1fea0ede7139948}\label{wgl_8h_ade9ba085a4a1ad9db1fea0ede7139948} 
+\index{wgl.h@{wgl.h}!WGL\_AUX\_BUFFERS\_ARB@{WGL\_AUX\_BUFFERS\_ARB}}
+\index{WGL\_AUX\_BUFFERS\_ARB@{WGL\_AUX\_BUFFERS\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_AUX\_BUFFERS\_ARB}{WGL\_AUX\_BUFFERS\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+AUX\+\_\+\+BUFFERS\+\_\+\+ARB~0x2024}
+
+\Hypertarget{wgl_8h_a25743041a05d4564428d28a2e0e35e09}\label{wgl_8h_a25743041a05d4564428d28a2e0e35e09} 
+\index{wgl.h@{wgl.h}!WGL\_BLUE\_BITS\_ARB@{WGL\_BLUE\_BITS\_ARB}}
+\index{WGL\_BLUE\_BITS\_ARB@{WGL\_BLUE\_BITS\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_BLUE\_BITS\_ARB}{WGL\_BLUE\_BITS\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+BLUE\+\_\+\+BITS\+\_\+\+ARB~0x2019}
+
+\Hypertarget{wgl_8h_a33128dba5304ec64ed26475722828a9b}\label{wgl_8h_a33128dba5304ec64ed26475722828a9b} 
+\index{wgl.h@{wgl.h}!WGL\_BLUE\_SHIFT\_ARB@{WGL\_BLUE\_SHIFT\_ARB}}
+\index{WGL\_BLUE\_SHIFT\_ARB@{WGL\_BLUE\_SHIFT\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_BLUE\_SHIFT\_ARB}{WGL\_BLUE\_SHIFT\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+BLUE\+\_\+\+SHIFT\+\_\+\+ARB~0x201A}
+
+\Hypertarget{wgl_8h_af979369c958742bf188a9dc993886b0f}\label{wgl_8h_af979369c958742bf188a9dc993886b0f} 
+\index{wgl.h@{wgl.h}!WGL\_COLOR\_BITS\_ARB@{WGL\_COLOR\_BITS\_ARB}}
+\index{WGL\_COLOR\_BITS\_ARB@{WGL\_COLOR\_BITS\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_COLOR\_BITS\_ARB}{WGL\_COLOR\_BITS\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+COLOR\+\_\+\+BITS\+\_\+\+ARB~0x2014}
+
+\Hypertarget{wgl_8h_ac0e0f83037fd693f85a0a382245cded4}\label{wgl_8h_ac0e0f83037fd693f85a0a382245cded4} 
+\index{wgl.h@{wgl.h}!WGL\_CONTEXT\_COMPATIBILITY\_PROFILE\_BIT\_ARB@{WGL\_CONTEXT\_COMPATIBILITY\_PROFILE\_BIT\_ARB}}
+\index{WGL\_CONTEXT\_COMPATIBILITY\_PROFILE\_BIT\_ARB@{WGL\_CONTEXT\_COMPATIBILITY\_PROFILE\_BIT\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_CONTEXT\_COMPATIBILITY\_PROFILE\_BIT\_ARB}{WGL\_CONTEXT\_COMPATIBILITY\_PROFILE\_BIT\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+CONTEXT\+\_\+\+COMPATIBILITY\+\_\+\+PROFILE\+\_\+\+BIT\+\_\+\+ARB~0x00000002}
+
+\Hypertarget{wgl_8h_a956f8c0391ca8b3076aacdd11123ab23}\label{wgl_8h_a956f8c0391ca8b3076aacdd11123ab23} 
+\index{wgl.h@{wgl.h}!WGL\_CONTEXT\_CORE\_PROFILE\_BIT\_ARB@{WGL\_CONTEXT\_CORE\_PROFILE\_BIT\_ARB}}
+\index{WGL\_CONTEXT\_CORE\_PROFILE\_BIT\_ARB@{WGL\_CONTEXT\_CORE\_PROFILE\_BIT\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_CONTEXT\_CORE\_PROFILE\_BIT\_ARB}{WGL\_CONTEXT\_CORE\_PROFILE\_BIT\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+CONTEXT\+\_\+\+CORE\+\_\+\+PROFILE\+\_\+\+BIT\+\_\+\+ARB~0x00000001}
+
+\Hypertarget{wgl_8h_a8a600cc66dbc5a788e7b16dd9c116055}\label{wgl_8h_a8a600cc66dbc5a788e7b16dd9c116055} 
+\index{wgl.h@{wgl.h}!WGL\_CONTEXT\_DEBUG\_BIT\_ARB@{WGL\_CONTEXT\_DEBUG\_BIT\_ARB}}
+\index{WGL\_CONTEXT\_DEBUG\_BIT\_ARB@{WGL\_CONTEXT\_DEBUG\_BIT\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_CONTEXT\_DEBUG\_BIT\_ARB}{WGL\_CONTEXT\_DEBUG\_BIT\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+CONTEXT\+\_\+\+DEBUG\+\_\+\+BIT\+\_\+\+ARB~0x00000001}
+
+\Hypertarget{wgl_8h_aa9b5de1c7cb84a809ad79296192a76d3}\label{wgl_8h_aa9b5de1c7cb84a809ad79296192a76d3} 
+\index{wgl.h@{wgl.h}!WGL\_CONTEXT\_FLAGS\_ARB@{WGL\_CONTEXT\_FLAGS\_ARB}}
+\index{WGL\_CONTEXT\_FLAGS\_ARB@{WGL\_CONTEXT\_FLAGS\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_CONTEXT\_FLAGS\_ARB}{WGL\_CONTEXT\_FLAGS\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+CONTEXT\+\_\+\+FLAGS\+\_\+\+ARB~0x2094}
+
+\Hypertarget{wgl_8h_aaec3bbb2c9fb813e229ad64f25130da6}\label{wgl_8h_aaec3bbb2c9fb813e229ad64f25130da6} 
+\index{wgl.h@{wgl.h}!WGL\_CONTEXT\_FORWARD\_COMPATIBLE\_BIT\_ARB@{WGL\_CONTEXT\_FORWARD\_COMPATIBLE\_BIT\_ARB}}
+\index{WGL\_CONTEXT\_FORWARD\_COMPATIBLE\_BIT\_ARB@{WGL\_CONTEXT\_FORWARD\_COMPATIBLE\_BIT\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_CONTEXT\_FORWARD\_COMPATIBLE\_BIT\_ARB}{WGL\_CONTEXT\_FORWARD\_COMPATIBLE\_BIT\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+CONTEXT\+\_\+\+FORWARD\+\_\+\+COMPATIBLE\+\_\+\+BIT\+\_\+\+ARB~0x00000002}
+
+\Hypertarget{wgl_8h_a3e171b65bf6c350ed81ecd79101f0424}\label{wgl_8h_a3e171b65bf6c350ed81ecd79101f0424} 
+\index{wgl.h@{wgl.h}!WGL\_CONTEXT\_LAYER\_PLANE\_ARB@{WGL\_CONTEXT\_LAYER\_PLANE\_ARB}}
+\index{WGL\_CONTEXT\_LAYER\_PLANE\_ARB@{WGL\_CONTEXT\_LAYER\_PLANE\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_CONTEXT\_LAYER\_PLANE\_ARB}{WGL\_CONTEXT\_LAYER\_PLANE\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+CONTEXT\+\_\+\+LAYER\+\_\+\+PLANE\+\_\+\+ARB~0x2093}
+
+\Hypertarget{wgl_8h_a64d5f1fa63a1979e33aee2949f6f21ad}\label{wgl_8h_a64d5f1fa63a1979e33aee2949f6f21ad} 
+\index{wgl.h@{wgl.h}!WGL\_CONTEXT\_MAJOR\_VERSION\_ARB@{WGL\_CONTEXT\_MAJOR\_VERSION\_ARB}}
+\index{WGL\_CONTEXT\_MAJOR\_VERSION\_ARB@{WGL\_CONTEXT\_MAJOR\_VERSION\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_CONTEXT\_MAJOR\_VERSION\_ARB}{WGL\_CONTEXT\_MAJOR\_VERSION\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+CONTEXT\+\_\+\+MAJOR\+\_\+\+VERSION\+\_\+\+ARB~0x2091}
+
+\Hypertarget{wgl_8h_a043b9ae0e73a1ff853339c02a3026096}\label{wgl_8h_a043b9ae0e73a1ff853339c02a3026096} 
+\index{wgl.h@{wgl.h}!WGL\_CONTEXT\_MINOR\_VERSION\_ARB@{WGL\_CONTEXT\_MINOR\_VERSION\_ARB}}
+\index{WGL\_CONTEXT\_MINOR\_VERSION\_ARB@{WGL\_CONTEXT\_MINOR\_VERSION\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_CONTEXT\_MINOR\_VERSION\_ARB}{WGL\_CONTEXT\_MINOR\_VERSION\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+CONTEXT\+\_\+\+MINOR\+\_\+\+VERSION\+\_\+\+ARB~0x2092}
+
+\Hypertarget{wgl_8h_a6847a02f9b4e6e9712a4b32250337dc1}\label{wgl_8h_a6847a02f9b4e6e9712a4b32250337dc1} 
+\index{wgl.h@{wgl.h}!WGL\_CONTEXT\_PROFILE\_MASK\_ARB@{WGL\_CONTEXT\_PROFILE\_MASK\_ARB}}
+\index{WGL\_CONTEXT\_PROFILE\_MASK\_ARB@{WGL\_CONTEXT\_PROFILE\_MASK\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_CONTEXT\_PROFILE\_MASK\_ARB}{WGL\_CONTEXT\_PROFILE\_MASK\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+CONTEXT\+\_\+\+PROFILE\+\_\+\+MASK\+\_\+\+ARB~0x9126}
+
+\Hypertarget{wgl_8h_a75b1340d23a385c2b1ce88a303930820}\label{wgl_8h_a75b1340d23a385c2b1ce88a303930820} 
+\index{wgl.h@{wgl.h}!WGL\_DEPTH\_BITS\_ARB@{WGL\_DEPTH\_BITS\_ARB}}
+\index{WGL\_DEPTH\_BITS\_ARB@{WGL\_DEPTH\_BITS\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_DEPTH\_BITS\_ARB}{WGL\_DEPTH\_BITS\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+DEPTH\+\_\+\+BITS\+\_\+\+ARB~0x2022}
+
+\Hypertarget{wgl_8h_a8acd69a2be1c4ed51226145c520ecbe5}\label{wgl_8h_a8acd69a2be1c4ed51226145c520ecbe5} 
+\index{wgl.h@{wgl.h}!WGL\_DOUBLE\_BUFFER\_ARB@{WGL\_DOUBLE\_BUFFER\_ARB}}
+\index{WGL\_DOUBLE\_BUFFER\_ARB@{WGL\_DOUBLE\_BUFFER\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_DOUBLE\_BUFFER\_ARB}{WGL\_DOUBLE\_BUFFER\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+DOUBLE\+\_\+\+BUFFER\+\_\+\+ARB~0x2011}
+
+\Hypertarget{wgl_8h_a1509eb13bd86db634067c22218dbbde2}\label{wgl_8h_a1509eb13bd86db634067c22218dbbde2} 
+\index{wgl.h@{wgl.h}!WGL\_DRAW\_TO\_BITMAP\_ARB@{WGL\_DRAW\_TO\_BITMAP\_ARB}}
+\index{WGL\_DRAW\_TO\_BITMAP\_ARB@{WGL\_DRAW\_TO\_BITMAP\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_DRAW\_TO\_BITMAP\_ARB}{WGL\_DRAW\_TO\_BITMAP\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+DRAW\+\_\+\+TO\+\_\+\+BITMAP\+\_\+\+ARB~0x2002}
+
+\Hypertarget{wgl_8h_a96e1f671cfc6ac0930c31a1cd0742d8f}\label{wgl_8h_a96e1f671cfc6ac0930c31a1cd0742d8f} 
+\index{wgl.h@{wgl.h}!WGL\_DRAW\_TO\_PBUFFER\_ARB@{WGL\_DRAW\_TO\_PBUFFER\_ARB}}
+\index{WGL\_DRAW\_TO\_PBUFFER\_ARB@{WGL\_DRAW\_TO\_PBUFFER\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_DRAW\_TO\_PBUFFER\_ARB}{WGL\_DRAW\_TO\_PBUFFER\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+DRAW\+\_\+\+TO\+\_\+\+PBUFFER\+\_\+\+ARB~0x202D}
+
+\Hypertarget{wgl_8h_a9b0723a3d7c302c78c2c225a142e6e84}\label{wgl_8h_a9b0723a3d7c302c78c2c225a142e6e84} 
+\index{wgl.h@{wgl.h}!WGL\_DRAW\_TO\_WINDOW\_ARB@{WGL\_DRAW\_TO\_WINDOW\_ARB}}
+\index{WGL\_DRAW\_TO\_WINDOW\_ARB@{WGL\_DRAW\_TO\_WINDOW\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_DRAW\_TO\_WINDOW\_ARB}{WGL\_DRAW\_TO\_WINDOW\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+DRAW\+\_\+\+TO\+\_\+\+WINDOW\+\_\+\+ARB~0x2001}
+
+\Hypertarget{wgl_8h_a398dc467ed3bd3d58524154e0e75483a}\label{wgl_8h_a398dc467ed3bd3d58524154e0e75483a} 
+\index{wgl.h@{wgl.h}!WGL\_EXT\_extensions\_string@{WGL\_EXT\_extensions\_string}}
+\index{WGL\_EXT\_extensions\_string@{WGL\_EXT\_extensions\_string}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_EXT\_extensions\_string}{WGL\_EXT\_extensions\_string}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+EXT\+\_\+extensions\+\_\+string~1}
+
+\Hypertarget{wgl_8h_af3c6f4a530e32998cd4e1a7a8920a6db}\label{wgl_8h_af3c6f4a530e32998cd4e1a7a8920a6db} 
+\index{wgl.h@{wgl.h}!WGL\_EXT\_framebuffer\_sRGB@{WGL\_EXT\_framebuffer\_sRGB}}
+\index{WGL\_EXT\_framebuffer\_sRGB@{WGL\_EXT\_framebuffer\_sRGB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_EXT\_framebuffer\_sRGB}{WGL\_EXT\_framebuffer\_sRGB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+EXT\+\_\+framebuffer\+\_\+s\+RGB~1}
+
+\Hypertarget{wgl_8h_abce6504ea96abbd7b5b4d0d99053e544}\label{wgl_8h_abce6504ea96abbd7b5b4d0d99053e544} 
+\index{wgl.h@{wgl.h}!WGL\_EXT\_swap\_control@{WGL\_EXT\_swap\_control}}
+\index{WGL\_EXT\_swap\_control@{WGL\_EXT\_swap\_control}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_EXT\_swap\_control}{WGL\_EXT\_swap\_control}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+EXT\+\_\+swap\+\_\+control~1}
+
+\Hypertarget{wgl_8h_aadf414c1d43721117db84f4489ffb10c}\label{wgl_8h_aadf414c1d43721117db84f4489ffb10c} 
+\index{wgl.h@{wgl.h}!WGL\_FONT\_LINES@{WGL\_FONT\_LINES}}
+\index{WGL\_FONT\_LINES@{WGL\_FONT\_LINES}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_FONT\_LINES}{WGL\_FONT\_LINES}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+FONT\+\_\+\+LINES~0}
+
+\Hypertarget{wgl_8h_a25d0b076b548a29e68f09c1952257086}\label{wgl_8h_a25d0b076b548a29e68f09c1952257086} 
+\index{wgl.h@{wgl.h}!WGL\_FONT\_POLYGONS@{WGL\_FONT\_POLYGONS}}
+\index{WGL\_FONT\_POLYGONS@{WGL\_FONT\_POLYGONS}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_FONT\_POLYGONS}{WGL\_FONT\_POLYGONS}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+FONT\+\_\+\+POLYGONS~1}
+
+\Hypertarget{wgl_8h_a18ba4b32abb0962574805c320cc6e00a}\label{wgl_8h_a18ba4b32abb0962574805c320cc6e00a} 
+\index{wgl.h@{wgl.h}!WGL\_FRAMEBUFFER\_SRGB\_CAPABLE\_ARB@{WGL\_FRAMEBUFFER\_SRGB\_CAPABLE\_ARB}}
+\index{WGL\_FRAMEBUFFER\_SRGB\_CAPABLE\_ARB@{WGL\_FRAMEBUFFER\_SRGB\_CAPABLE\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_FRAMEBUFFER\_SRGB\_CAPABLE\_ARB}{WGL\_FRAMEBUFFER\_SRGB\_CAPABLE\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+FRAMEBUFFER\+\_\+\+SRGB\+\_\+\+CAPABLE\+\_\+\+ARB~0x20\+A9}
+
+\Hypertarget{wgl_8h_adcfb2958b77d12448b2873771ed53d39}\label{wgl_8h_adcfb2958b77d12448b2873771ed53d39} 
+\index{wgl.h@{wgl.h}!WGL\_FRAMEBUFFER\_SRGB\_CAPABLE\_EXT@{WGL\_FRAMEBUFFER\_SRGB\_CAPABLE\_EXT}}
+\index{WGL\_FRAMEBUFFER\_SRGB\_CAPABLE\_EXT@{WGL\_FRAMEBUFFER\_SRGB\_CAPABLE\_EXT}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_FRAMEBUFFER\_SRGB\_CAPABLE\_EXT}{WGL\_FRAMEBUFFER\_SRGB\_CAPABLE\_EXT}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+FRAMEBUFFER\+\_\+\+SRGB\+\_\+\+CAPABLE\+\_\+\+EXT~0x20\+A9}
+
+\Hypertarget{wgl_8h_ac7e61d450f6af6ffd08143f33421958e}\label{wgl_8h_ac7e61d450f6af6ffd08143f33421958e} 
+\index{wgl.h@{wgl.h}!WGL\_FULL\_ACCELERATION\_ARB@{WGL\_FULL\_ACCELERATION\_ARB}}
+\index{WGL\_FULL\_ACCELERATION\_ARB@{WGL\_FULL\_ACCELERATION\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_FULL\_ACCELERATION\_ARB}{WGL\_FULL\_ACCELERATION\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+FULL\+\_\+\+ACCELERATION\+\_\+\+ARB~0x2027}
+
+\Hypertarget{wgl_8h_a5352d3160045983765b46358b3a43d4a}\label{wgl_8h_a5352d3160045983765b46358b3a43d4a} 
+\index{wgl.h@{wgl.h}!WGL\_GENERIC\_ACCELERATION\_ARB@{WGL\_GENERIC\_ACCELERATION\_ARB}}
+\index{WGL\_GENERIC\_ACCELERATION\_ARB@{WGL\_GENERIC\_ACCELERATION\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_GENERIC\_ACCELERATION\_ARB}{WGL\_GENERIC\_ACCELERATION\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+GENERIC\+\_\+\+ACCELERATION\+\_\+\+ARB~0x2026}
+
+\Hypertarget{wgl_8h_a4b67d94c2dbd3c5ad5235eeac10749db}\label{wgl_8h_a4b67d94c2dbd3c5ad5235eeac10749db} 
+\index{wgl.h@{wgl.h}!WGL\_GREEN\_BITS\_ARB@{WGL\_GREEN\_BITS\_ARB}}
+\index{WGL\_GREEN\_BITS\_ARB@{WGL\_GREEN\_BITS\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_GREEN\_BITS\_ARB}{WGL\_GREEN\_BITS\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+GREEN\+\_\+\+BITS\+\_\+\+ARB~0x2017}
+
+\Hypertarget{wgl_8h_a6d6fd2424c846bcd2800ea296e76113f}\label{wgl_8h_a6d6fd2424c846bcd2800ea296e76113f} 
+\index{wgl.h@{wgl.h}!WGL\_GREEN\_SHIFT\_ARB@{WGL\_GREEN\_SHIFT\_ARB}}
+\index{WGL\_GREEN\_SHIFT\_ARB@{WGL\_GREEN\_SHIFT\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_GREEN\_SHIFT\_ARB}{WGL\_GREEN\_SHIFT\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+GREEN\+\_\+\+SHIFT\+\_\+\+ARB~0x2018}
+
+\Hypertarget{wgl_8h_a1f82fa69634a81f8ab407240b95df5f1}\label{wgl_8h_a1f82fa69634a81f8ab407240b95df5f1} 
+\index{wgl.h@{wgl.h}!WGL\_MAX\_PBUFFER\_HEIGHT\_ARB@{WGL\_MAX\_PBUFFER\_HEIGHT\_ARB}}
+\index{WGL\_MAX\_PBUFFER\_HEIGHT\_ARB@{WGL\_MAX\_PBUFFER\_HEIGHT\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_MAX\_PBUFFER\_HEIGHT\_ARB}{WGL\_MAX\_PBUFFER\_HEIGHT\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+MAX\+\_\+\+PBUFFER\+\_\+\+HEIGHT\+\_\+\+ARB~0x2030}
+
+\Hypertarget{wgl_8h_a2f56e6cef8e60e45a1dca9f08db524b9}\label{wgl_8h_a2f56e6cef8e60e45a1dca9f08db524b9} 
+\index{wgl.h@{wgl.h}!WGL\_MAX\_PBUFFER\_PIXELS\_ARB@{WGL\_MAX\_PBUFFER\_PIXELS\_ARB}}
+\index{WGL\_MAX\_PBUFFER\_PIXELS\_ARB@{WGL\_MAX\_PBUFFER\_PIXELS\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_MAX\_PBUFFER\_PIXELS\_ARB}{WGL\_MAX\_PBUFFER\_PIXELS\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+MAX\+\_\+\+PBUFFER\+\_\+\+PIXELS\+\_\+\+ARB~0x202E}
+
+\Hypertarget{wgl_8h_afe7252e31e53dd49c32075c7359816bc}\label{wgl_8h_afe7252e31e53dd49c32075c7359816bc} 
+\index{wgl.h@{wgl.h}!WGL\_MAX\_PBUFFER\_WIDTH\_ARB@{WGL\_MAX\_PBUFFER\_WIDTH\_ARB}}
+\index{WGL\_MAX\_PBUFFER\_WIDTH\_ARB@{WGL\_MAX\_PBUFFER\_WIDTH\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_MAX\_PBUFFER\_WIDTH\_ARB}{WGL\_MAX\_PBUFFER\_WIDTH\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+MAX\+\_\+\+PBUFFER\+\_\+\+WIDTH\+\_\+\+ARB~0x202F}
+
+\Hypertarget{wgl_8h_ab2dc3925b8ae5000a84920192d80cecf}\label{wgl_8h_ab2dc3925b8ae5000a84920192d80cecf} 
+\index{wgl.h@{wgl.h}!WGL\_NEED\_PALETTE\_ARB@{WGL\_NEED\_PALETTE\_ARB}}
+\index{WGL\_NEED\_PALETTE\_ARB@{WGL\_NEED\_PALETTE\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_NEED\_PALETTE\_ARB}{WGL\_NEED\_PALETTE\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+NEED\+\_\+\+PALETTE\+\_\+\+ARB~0x2004}
+
+\Hypertarget{wgl_8h_a35239e4dce57200276d0d72fc2ccf5b6}\label{wgl_8h_a35239e4dce57200276d0d72fc2ccf5b6} 
+\index{wgl.h@{wgl.h}!WGL\_NEED\_SYSTEM\_PALETTE\_ARB@{WGL\_NEED\_SYSTEM\_PALETTE\_ARB}}
+\index{WGL\_NEED\_SYSTEM\_PALETTE\_ARB@{WGL\_NEED\_SYSTEM\_PALETTE\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_NEED\_SYSTEM\_PALETTE\_ARB}{WGL\_NEED\_SYSTEM\_PALETTE\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+NEED\+\_\+\+SYSTEM\+\_\+\+PALETTE\+\_\+\+ARB~0x2005}
+
+\Hypertarget{wgl_8h_a6e99b85ae842730daef27353a9e3d434}\label{wgl_8h_a6e99b85ae842730daef27353a9e3d434} 
+\index{wgl.h@{wgl.h}!WGL\_NO\_ACCELERATION\_ARB@{WGL\_NO\_ACCELERATION\_ARB}}
+\index{WGL\_NO\_ACCELERATION\_ARB@{WGL\_NO\_ACCELERATION\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_NO\_ACCELERATION\_ARB}{WGL\_NO\_ACCELERATION\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+NO\+\_\+\+ACCELERATION\+\_\+\+ARB~0x2025}
+
+\Hypertarget{wgl_8h_a85f0cf7dcb4fa8628282ffcb64bc8c07}\label{wgl_8h_a85f0cf7dcb4fa8628282ffcb64bc8c07} 
+\index{wgl.h@{wgl.h}!WGL\_NUMBER\_OVERLAYS\_ARB@{WGL\_NUMBER\_OVERLAYS\_ARB}}
+\index{WGL\_NUMBER\_OVERLAYS\_ARB@{WGL\_NUMBER\_OVERLAYS\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_NUMBER\_OVERLAYS\_ARB}{WGL\_NUMBER\_OVERLAYS\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+NUMBER\+\_\+\+OVERLAYS\+\_\+\+ARB~0x2008}
+
+\Hypertarget{wgl_8h_ac08792306c4cb9c9f258979cebd7895d}\label{wgl_8h_ac08792306c4cb9c9f258979cebd7895d} 
+\index{wgl.h@{wgl.h}!WGL\_NUMBER\_PIXEL\_FORMATS\_ARB@{WGL\_NUMBER\_PIXEL\_FORMATS\_ARB}}
+\index{WGL\_NUMBER\_PIXEL\_FORMATS\_ARB@{WGL\_NUMBER\_PIXEL\_FORMATS\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_NUMBER\_PIXEL\_FORMATS\_ARB}{WGL\_NUMBER\_PIXEL\_FORMATS\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+NUMBER\+\_\+\+PIXEL\+\_\+\+FORMATS\+\_\+\+ARB~0x2000}
+
+\Hypertarget{wgl_8h_a740af5b0cb6eaa7c3b509ae41b7c3297}\label{wgl_8h_a740af5b0cb6eaa7c3b509ae41b7c3297} 
+\index{wgl.h@{wgl.h}!WGL\_NUMBER\_UNDERLAYS\_ARB@{WGL\_NUMBER\_UNDERLAYS\_ARB}}
+\index{WGL\_NUMBER\_UNDERLAYS\_ARB@{WGL\_NUMBER\_UNDERLAYS\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_NUMBER\_UNDERLAYS\_ARB}{WGL\_NUMBER\_UNDERLAYS\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+NUMBER\+\_\+\+UNDERLAYS\+\_\+\+ARB~0x2009}
+
+\Hypertarget{wgl_8h_a9b0a9b9a933aca4a57ce0c665d13c682}\label{wgl_8h_a9b0a9b9a933aca4a57ce0c665d13c682} 
+\index{wgl.h@{wgl.h}!WGL\_PBUFFER\_HEIGHT\_ARB@{WGL\_PBUFFER\_HEIGHT\_ARB}}
+\index{WGL\_PBUFFER\_HEIGHT\_ARB@{WGL\_PBUFFER\_HEIGHT\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_PBUFFER\_HEIGHT\_ARB}{WGL\_PBUFFER\_HEIGHT\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+PBUFFER\+\_\+\+HEIGHT\+\_\+\+ARB~0x2035}
+
+\Hypertarget{wgl_8h_adef2a95fbd105e06e8a699cc61c3fc49}\label{wgl_8h_adef2a95fbd105e06e8a699cc61c3fc49} 
+\index{wgl.h@{wgl.h}!WGL\_PBUFFER\_LARGEST\_ARB@{WGL\_PBUFFER\_LARGEST\_ARB}}
+\index{WGL\_PBUFFER\_LARGEST\_ARB@{WGL\_PBUFFER\_LARGEST\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_PBUFFER\_LARGEST\_ARB}{WGL\_PBUFFER\_LARGEST\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+PBUFFER\+\_\+\+LARGEST\+\_\+\+ARB~0x2033}
+
+\Hypertarget{wgl_8h_a965793730415a067e6445bd7cc325b22}\label{wgl_8h_a965793730415a067e6445bd7cc325b22} 
+\index{wgl.h@{wgl.h}!WGL\_PBUFFER\_LOST\_ARB@{WGL\_PBUFFER\_LOST\_ARB}}
+\index{WGL\_PBUFFER\_LOST\_ARB@{WGL\_PBUFFER\_LOST\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_PBUFFER\_LOST\_ARB}{WGL\_PBUFFER\_LOST\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+PBUFFER\+\_\+\+LOST\+\_\+\+ARB~0x2036}
+
+\Hypertarget{wgl_8h_a5c1dc6dc8a0aaf63b0ec5250001fc561}\label{wgl_8h_a5c1dc6dc8a0aaf63b0ec5250001fc561} 
+\index{wgl.h@{wgl.h}!WGL\_PBUFFER\_WIDTH\_ARB@{WGL\_PBUFFER\_WIDTH\_ARB}}
+\index{WGL\_PBUFFER\_WIDTH\_ARB@{WGL\_PBUFFER\_WIDTH\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_PBUFFER\_WIDTH\_ARB}{WGL\_PBUFFER\_WIDTH\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+PBUFFER\+\_\+\+WIDTH\+\_\+\+ARB~0x2034}
+
+\Hypertarget{wgl_8h_a74709fd85aae5b059d39dd4b51694249}\label{wgl_8h_a74709fd85aae5b059d39dd4b51694249} 
+\index{wgl.h@{wgl.h}!WGL\_PIXEL\_TYPE\_ARB@{WGL\_PIXEL\_TYPE\_ARB}}
+\index{WGL\_PIXEL\_TYPE\_ARB@{WGL\_PIXEL\_TYPE\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_PIXEL\_TYPE\_ARB}{WGL\_PIXEL\_TYPE\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+PIXEL\+\_\+\+TYPE\+\_\+\+ARB~0x2013}
+
+\Hypertarget{wgl_8h_acf6d0dc14bd58ab03b10d4cf1534625a}\label{wgl_8h_acf6d0dc14bd58ab03b10d4cf1534625a} 
+\index{wgl.h@{wgl.h}!WGL\_RED\_BITS\_ARB@{WGL\_RED\_BITS\_ARB}}
+\index{WGL\_RED\_BITS\_ARB@{WGL\_RED\_BITS\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_RED\_BITS\_ARB}{WGL\_RED\_BITS\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+RED\+\_\+\+BITS\+\_\+\+ARB~0x2015}
+
+\Hypertarget{wgl_8h_a266ab3ccd927f4caf9df1f426c960c1b}\label{wgl_8h_a266ab3ccd927f4caf9df1f426c960c1b} 
+\index{wgl.h@{wgl.h}!WGL\_RED\_SHIFT\_ARB@{WGL\_RED\_SHIFT\_ARB}}
+\index{WGL\_RED\_SHIFT\_ARB@{WGL\_RED\_SHIFT\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_RED\_SHIFT\_ARB}{WGL\_RED\_SHIFT\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+RED\+\_\+\+SHIFT\+\_\+\+ARB~0x2016}
+
+\Hypertarget{wgl_8h_ac9792da6e4869780e07504635b3e1a42}\label{wgl_8h_ac9792da6e4869780e07504635b3e1a42} 
+\index{wgl.h@{wgl.h}!WGL\_SAMPLE\_BUFFERS\_ARB@{WGL\_SAMPLE\_BUFFERS\_ARB}}
+\index{WGL\_SAMPLE\_BUFFERS\_ARB@{WGL\_SAMPLE\_BUFFERS\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_SAMPLE\_BUFFERS\_ARB}{WGL\_SAMPLE\_BUFFERS\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+SAMPLE\+\_\+\+BUFFERS\+\_\+\+ARB~0x2041}
+
+\Hypertarget{wgl_8h_a99289a023da8e683eb7de95543e22c87}\label{wgl_8h_a99289a023da8e683eb7de95543e22c87} 
+\index{wgl.h@{wgl.h}!WGL\_SAMPLES\_ARB@{WGL\_SAMPLES\_ARB}}
+\index{WGL\_SAMPLES\_ARB@{WGL\_SAMPLES\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_SAMPLES\_ARB}{WGL\_SAMPLES\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+SAMPLES\+\_\+\+ARB~0x2042}
+
+\Hypertarget{wgl_8h_a6da7ce52485fdd258b9ab494eedcd98e}\label{wgl_8h_a6da7ce52485fdd258b9ab494eedcd98e} 
+\index{wgl.h@{wgl.h}!WGL\_SHARE\_ACCUM\_ARB@{WGL\_SHARE\_ACCUM\_ARB}}
+\index{WGL\_SHARE\_ACCUM\_ARB@{WGL\_SHARE\_ACCUM\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_SHARE\_ACCUM\_ARB}{WGL\_SHARE\_ACCUM\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+SHARE\+\_\+\+ACCUM\+\_\+\+ARB~0x200E}
+
+\Hypertarget{wgl_8h_aba970a427c2dca2f2a3907d867d3ca7e}\label{wgl_8h_aba970a427c2dca2f2a3907d867d3ca7e} 
+\index{wgl.h@{wgl.h}!WGL\_SHARE\_DEPTH\_ARB@{WGL\_SHARE\_DEPTH\_ARB}}
+\index{WGL\_SHARE\_DEPTH\_ARB@{WGL\_SHARE\_DEPTH\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_SHARE\_DEPTH\_ARB}{WGL\_SHARE\_DEPTH\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+SHARE\+\_\+\+DEPTH\+\_\+\+ARB~0x200C}
+
+\Hypertarget{wgl_8h_a5b0fd4fef9367431eb546d3e735803ea}\label{wgl_8h_a5b0fd4fef9367431eb546d3e735803ea} 
+\index{wgl.h@{wgl.h}!WGL\_SHARE\_STENCIL\_ARB@{WGL\_SHARE\_STENCIL\_ARB}}
+\index{WGL\_SHARE\_STENCIL\_ARB@{WGL\_SHARE\_STENCIL\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_SHARE\_STENCIL\_ARB}{WGL\_SHARE\_STENCIL\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+SHARE\+\_\+\+STENCIL\+\_\+\+ARB~0x200D}
+
+\Hypertarget{wgl_8h_a0adda3bf0bcae1b1f66094f4331570bd}\label{wgl_8h_a0adda3bf0bcae1b1f66094f4331570bd} 
+\index{wgl.h@{wgl.h}!WGL\_STENCIL\_BITS\_ARB@{WGL\_STENCIL\_BITS\_ARB}}
+\index{WGL\_STENCIL\_BITS\_ARB@{WGL\_STENCIL\_BITS\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_STENCIL\_BITS\_ARB}{WGL\_STENCIL\_BITS\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+STENCIL\+\_\+\+BITS\+\_\+\+ARB~0x2023}
+
+\Hypertarget{wgl_8h_a2aa289efbc19a76be9dc0ac303f01689}\label{wgl_8h_a2aa289efbc19a76be9dc0ac303f01689} 
+\index{wgl.h@{wgl.h}!WGL\_STEREO\_ARB@{WGL\_STEREO\_ARB}}
+\index{WGL\_STEREO\_ARB@{WGL\_STEREO\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_STEREO\_ARB}{WGL\_STEREO\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+STEREO\+\_\+\+ARB~0x2012}
+
+\Hypertarget{wgl_8h_aba61f71193fd3d3d86c685f7b34e56dd}\label{wgl_8h_aba61f71193fd3d3d86c685f7b34e56dd} 
+\index{wgl.h@{wgl.h}!WGL\_SUPPORT\_GDI\_ARB@{WGL\_SUPPORT\_GDI\_ARB}}
+\index{WGL\_SUPPORT\_GDI\_ARB@{WGL\_SUPPORT\_GDI\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_SUPPORT\_GDI\_ARB}{WGL\_SUPPORT\_GDI\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+SUPPORT\+\_\+\+GDI\+\_\+\+ARB~0x200F}
+
+\Hypertarget{wgl_8h_afddc80fbff35c1f270613b83090eca85}\label{wgl_8h_afddc80fbff35c1f270613b83090eca85} 
+\index{wgl.h@{wgl.h}!WGL\_SUPPORT\_OPENGL\_ARB@{WGL\_SUPPORT\_OPENGL\_ARB}}
+\index{WGL\_SUPPORT\_OPENGL\_ARB@{WGL\_SUPPORT\_OPENGL\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_SUPPORT\_OPENGL\_ARB}{WGL\_SUPPORT\_OPENGL\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+SUPPORT\+\_\+\+OPENGL\+\_\+\+ARB~0x2010}
+
+\Hypertarget{wgl_8h_ac27ce73d3f143c8353ef1df789ef046e}\label{wgl_8h_ac27ce73d3f143c8353ef1df789ef046e} 
+\index{wgl.h@{wgl.h}!WGL\_SWAP\_COPY\_ARB@{WGL\_SWAP\_COPY\_ARB}}
+\index{WGL\_SWAP\_COPY\_ARB@{WGL\_SWAP\_COPY\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_SWAP\_COPY\_ARB}{WGL\_SWAP\_COPY\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+SWAP\+\_\+\+COPY\+\_\+\+ARB~0x2029}
+
+\Hypertarget{wgl_8h_a0d1f93ca815d7a25ab315f7c0eacae84}\label{wgl_8h_a0d1f93ca815d7a25ab315f7c0eacae84} 
+\index{wgl.h@{wgl.h}!WGL\_SWAP\_EXCHANGE\_ARB@{WGL\_SWAP\_EXCHANGE\_ARB}}
+\index{WGL\_SWAP\_EXCHANGE\_ARB@{WGL\_SWAP\_EXCHANGE\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_SWAP\_EXCHANGE\_ARB}{WGL\_SWAP\_EXCHANGE\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+SWAP\+\_\+\+EXCHANGE\+\_\+\+ARB~0x2028}
+
+\Hypertarget{wgl_8h_ac314b1700a0bcda2d7530373d9dde7c2}\label{wgl_8h_ac314b1700a0bcda2d7530373d9dde7c2} 
+\index{wgl.h@{wgl.h}!WGL\_SWAP\_LAYER\_BUFFERS\_ARB@{WGL\_SWAP\_LAYER\_BUFFERS\_ARB}}
+\index{WGL\_SWAP\_LAYER\_BUFFERS\_ARB@{WGL\_SWAP\_LAYER\_BUFFERS\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_SWAP\_LAYER\_BUFFERS\_ARB}{WGL\_SWAP\_LAYER\_BUFFERS\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+SWAP\+\_\+\+LAYER\+\_\+\+BUFFERS\+\_\+\+ARB~0x2006}
+
+\Hypertarget{wgl_8h_a5acfffebbebe590d7fb6641cba927b58}\label{wgl_8h_a5acfffebbebe590d7fb6641cba927b58} 
+\index{wgl.h@{wgl.h}!WGL\_SWAP\_MAIN\_PLANE@{WGL\_SWAP\_MAIN\_PLANE}}
+\index{WGL\_SWAP\_MAIN\_PLANE@{WGL\_SWAP\_MAIN\_PLANE}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_SWAP\_MAIN\_PLANE}{WGL\_SWAP\_MAIN\_PLANE}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+SWAP\+\_\+\+MAIN\+\_\+\+PLANE~0x00000001}
+
+\Hypertarget{wgl_8h_a2c1814f7285f6392517ed940fb675f15}\label{wgl_8h_a2c1814f7285f6392517ed940fb675f15} 
+\index{wgl.h@{wgl.h}!WGL\_SWAP\_METHOD\_ARB@{WGL\_SWAP\_METHOD\_ARB}}
+\index{WGL\_SWAP\_METHOD\_ARB@{WGL\_SWAP\_METHOD\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_SWAP\_METHOD\_ARB}{WGL\_SWAP\_METHOD\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+SWAP\+\_\+\+METHOD\+\_\+\+ARB~0x2007}
+
+\Hypertarget{wgl_8h_accdb9225a9fc9e9e4de44e624e6f0d74}\label{wgl_8h_accdb9225a9fc9e9e4de44e624e6f0d74} 
+\index{wgl.h@{wgl.h}!WGL\_SWAP\_OVERLAY1@{WGL\_SWAP\_OVERLAY1}}
+\index{WGL\_SWAP\_OVERLAY1@{WGL\_SWAP\_OVERLAY1}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_SWAP\_OVERLAY1}{WGL\_SWAP\_OVERLAY1}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+SWAP\+\_\+\+OVERLAY1~0x00000002}
+
+\Hypertarget{wgl_8h_af85e4cb950996bac506b638d3cc8820a}\label{wgl_8h_af85e4cb950996bac506b638d3cc8820a} 
+\index{wgl.h@{wgl.h}!WGL\_SWAP\_OVERLAY10@{WGL\_SWAP\_OVERLAY10}}
+\index{WGL\_SWAP\_OVERLAY10@{WGL\_SWAP\_OVERLAY10}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_SWAP\_OVERLAY10}{WGL\_SWAP\_OVERLAY10}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+SWAP\+\_\+\+OVERLAY10~0x00000400}
+
+\Hypertarget{wgl_8h_a14d6481dc51ecb0ea5a8547e91e35a7f}\label{wgl_8h_a14d6481dc51ecb0ea5a8547e91e35a7f} 
+\index{wgl.h@{wgl.h}!WGL\_SWAP\_OVERLAY11@{WGL\_SWAP\_OVERLAY11}}
+\index{WGL\_SWAP\_OVERLAY11@{WGL\_SWAP\_OVERLAY11}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_SWAP\_OVERLAY11}{WGL\_SWAP\_OVERLAY11}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+SWAP\+\_\+\+OVERLAY11~0x00000800}
+
+\Hypertarget{wgl_8h_a02958425d2a68f0c55747eaacbcafa5c}\label{wgl_8h_a02958425d2a68f0c55747eaacbcafa5c} 
+\index{wgl.h@{wgl.h}!WGL\_SWAP\_OVERLAY12@{WGL\_SWAP\_OVERLAY12}}
+\index{WGL\_SWAP\_OVERLAY12@{WGL\_SWAP\_OVERLAY12}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_SWAP\_OVERLAY12}{WGL\_SWAP\_OVERLAY12}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+SWAP\+\_\+\+OVERLAY12~0x00001000}
+
+\Hypertarget{wgl_8h_a15c141ce5b3ed121dc567852c6f0d234}\label{wgl_8h_a15c141ce5b3ed121dc567852c6f0d234} 
+\index{wgl.h@{wgl.h}!WGL\_SWAP\_OVERLAY13@{WGL\_SWAP\_OVERLAY13}}
+\index{WGL\_SWAP\_OVERLAY13@{WGL\_SWAP\_OVERLAY13}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_SWAP\_OVERLAY13}{WGL\_SWAP\_OVERLAY13}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+SWAP\+\_\+\+OVERLAY13~0x00002000}
+
+\Hypertarget{wgl_8h_a3db07ed592f21bfe4ef6af30baf56ac5}\label{wgl_8h_a3db07ed592f21bfe4ef6af30baf56ac5} 
+\index{wgl.h@{wgl.h}!WGL\_SWAP\_OVERLAY14@{WGL\_SWAP\_OVERLAY14}}
+\index{WGL\_SWAP\_OVERLAY14@{WGL\_SWAP\_OVERLAY14}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_SWAP\_OVERLAY14}{WGL\_SWAP\_OVERLAY14}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+SWAP\+\_\+\+OVERLAY14~0x00004000}
+
+\Hypertarget{wgl_8h_a9af1e49be10acbd1ad5648939d005f0d}\label{wgl_8h_a9af1e49be10acbd1ad5648939d005f0d} 
+\index{wgl.h@{wgl.h}!WGL\_SWAP\_OVERLAY15@{WGL\_SWAP\_OVERLAY15}}
+\index{WGL\_SWAP\_OVERLAY15@{WGL\_SWAP\_OVERLAY15}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_SWAP\_OVERLAY15}{WGL\_SWAP\_OVERLAY15}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+SWAP\+\_\+\+OVERLAY15~0x00008000}
+
+\Hypertarget{wgl_8h_a3bec2bd5916daca8633bf2f6528b1449}\label{wgl_8h_a3bec2bd5916daca8633bf2f6528b1449} 
+\index{wgl.h@{wgl.h}!WGL\_SWAP\_OVERLAY2@{WGL\_SWAP\_OVERLAY2}}
+\index{WGL\_SWAP\_OVERLAY2@{WGL\_SWAP\_OVERLAY2}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_SWAP\_OVERLAY2}{WGL\_SWAP\_OVERLAY2}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+SWAP\+\_\+\+OVERLAY2~0x00000004}
+
+\Hypertarget{wgl_8h_a6ad51cefefd6f0059f4d240b56859ccb}\label{wgl_8h_a6ad51cefefd6f0059f4d240b56859ccb} 
+\index{wgl.h@{wgl.h}!WGL\_SWAP\_OVERLAY3@{WGL\_SWAP\_OVERLAY3}}
+\index{WGL\_SWAP\_OVERLAY3@{WGL\_SWAP\_OVERLAY3}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_SWAP\_OVERLAY3}{WGL\_SWAP\_OVERLAY3}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+SWAP\+\_\+\+OVERLAY3~0x00000008}
+
+\Hypertarget{wgl_8h_ae3679f6c28cced553f0f44ddf55af81c}\label{wgl_8h_ae3679f6c28cced553f0f44ddf55af81c} 
+\index{wgl.h@{wgl.h}!WGL\_SWAP\_OVERLAY4@{WGL\_SWAP\_OVERLAY4}}
+\index{WGL\_SWAP\_OVERLAY4@{WGL\_SWAP\_OVERLAY4}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_SWAP\_OVERLAY4}{WGL\_SWAP\_OVERLAY4}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+SWAP\+\_\+\+OVERLAY4~0x00000010}
+
+\Hypertarget{wgl_8h_ac437f09fe44d26e43a3cd2f197b1e42f}\label{wgl_8h_ac437f09fe44d26e43a3cd2f197b1e42f} 
+\index{wgl.h@{wgl.h}!WGL\_SWAP\_OVERLAY5@{WGL\_SWAP\_OVERLAY5}}
+\index{WGL\_SWAP\_OVERLAY5@{WGL\_SWAP\_OVERLAY5}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_SWAP\_OVERLAY5}{WGL\_SWAP\_OVERLAY5}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+SWAP\+\_\+\+OVERLAY5~0x00000020}
+
+\Hypertarget{wgl_8h_adc193633a0f5e1a36ba4de2e97368ddf}\label{wgl_8h_adc193633a0f5e1a36ba4de2e97368ddf} 
+\index{wgl.h@{wgl.h}!WGL\_SWAP\_OVERLAY6@{WGL\_SWAP\_OVERLAY6}}
+\index{WGL\_SWAP\_OVERLAY6@{WGL\_SWAP\_OVERLAY6}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_SWAP\_OVERLAY6}{WGL\_SWAP\_OVERLAY6}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+SWAP\+\_\+\+OVERLAY6~0x00000040}
+
+\Hypertarget{wgl_8h_afadaab42da064a57e519c83244585b04}\label{wgl_8h_afadaab42da064a57e519c83244585b04} 
+\index{wgl.h@{wgl.h}!WGL\_SWAP\_OVERLAY7@{WGL\_SWAP\_OVERLAY7}}
+\index{WGL\_SWAP\_OVERLAY7@{WGL\_SWAP\_OVERLAY7}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_SWAP\_OVERLAY7}{WGL\_SWAP\_OVERLAY7}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+SWAP\+\_\+\+OVERLAY7~0x00000080}
+
+\Hypertarget{wgl_8h_a7e22578b2889785320db2a23b3cc992b}\label{wgl_8h_a7e22578b2889785320db2a23b3cc992b} 
+\index{wgl.h@{wgl.h}!WGL\_SWAP\_OVERLAY8@{WGL\_SWAP\_OVERLAY8}}
+\index{WGL\_SWAP\_OVERLAY8@{WGL\_SWAP\_OVERLAY8}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_SWAP\_OVERLAY8}{WGL\_SWAP\_OVERLAY8}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+SWAP\+\_\+\+OVERLAY8~0x00000100}
+
+\Hypertarget{wgl_8h_abddac1afc0d1d457a54ccb7e17c87cc1}\label{wgl_8h_abddac1afc0d1d457a54ccb7e17c87cc1} 
+\index{wgl.h@{wgl.h}!WGL\_SWAP\_OVERLAY9@{WGL\_SWAP\_OVERLAY9}}
+\index{WGL\_SWAP\_OVERLAY9@{WGL\_SWAP\_OVERLAY9}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_SWAP\_OVERLAY9}{WGL\_SWAP\_OVERLAY9}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+SWAP\+\_\+\+OVERLAY9~0x00000200}
+
+\Hypertarget{wgl_8h_addc0aa8a0b99095e09cc748e17dcd8bb}\label{wgl_8h_addc0aa8a0b99095e09cc748e17dcd8bb} 
+\index{wgl.h@{wgl.h}!WGL\_SWAP\_UNDEFINED\_ARB@{WGL\_SWAP\_UNDEFINED\_ARB}}
+\index{WGL\_SWAP\_UNDEFINED\_ARB@{WGL\_SWAP\_UNDEFINED\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_SWAP\_UNDEFINED\_ARB}{WGL\_SWAP\_UNDEFINED\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+SWAP\+\_\+\+UNDEFINED\+\_\+\+ARB~0x202A}
+
+\Hypertarget{wgl_8h_ae44d57bfeb270c1f921d9f9e103e8140}\label{wgl_8h_ae44d57bfeb270c1f921d9f9e103e8140} 
+\index{wgl.h@{wgl.h}!WGL\_SWAP\_UNDERLAY1@{WGL\_SWAP\_UNDERLAY1}}
+\index{WGL\_SWAP\_UNDERLAY1@{WGL\_SWAP\_UNDERLAY1}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_SWAP\_UNDERLAY1}{WGL\_SWAP\_UNDERLAY1}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+SWAP\+\_\+\+UNDERLAY1~0x00010000}
+
+\Hypertarget{wgl_8h_a5efaded664bd6b75eacbd50880a8844e}\label{wgl_8h_a5efaded664bd6b75eacbd50880a8844e} 
+\index{wgl.h@{wgl.h}!WGL\_SWAP\_UNDERLAY10@{WGL\_SWAP\_UNDERLAY10}}
+\index{WGL\_SWAP\_UNDERLAY10@{WGL\_SWAP\_UNDERLAY10}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_SWAP\_UNDERLAY10}{WGL\_SWAP\_UNDERLAY10}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+SWAP\+\_\+\+UNDERLAY10~0x02000000}
+
+\Hypertarget{wgl_8h_a6cdccef6d3dc944a47660073eb8c494e}\label{wgl_8h_a6cdccef6d3dc944a47660073eb8c494e} 
+\index{wgl.h@{wgl.h}!WGL\_SWAP\_UNDERLAY11@{WGL\_SWAP\_UNDERLAY11}}
+\index{WGL\_SWAP\_UNDERLAY11@{WGL\_SWAP\_UNDERLAY11}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_SWAP\_UNDERLAY11}{WGL\_SWAP\_UNDERLAY11}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+SWAP\+\_\+\+UNDERLAY11~0x04000000}
+
+\Hypertarget{wgl_8h_a7f73e0ea8a0b49e9df99f773a66d2821}\label{wgl_8h_a7f73e0ea8a0b49e9df99f773a66d2821} 
+\index{wgl.h@{wgl.h}!WGL\_SWAP\_UNDERLAY12@{WGL\_SWAP\_UNDERLAY12}}
+\index{WGL\_SWAP\_UNDERLAY12@{WGL\_SWAP\_UNDERLAY12}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_SWAP\_UNDERLAY12}{WGL\_SWAP\_UNDERLAY12}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+SWAP\+\_\+\+UNDERLAY12~0x08000000}
+
+\Hypertarget{wgl_8h_a2c2fac31e1196b7bbab4e2f698061a80}\label{wgl_8h_a2c2fac31e1196b7bbab4e2f698061a80} 
+\index{wgl.h@{wgl.h}!WGL\_SWAP\_UNDERLAY13@{WGL\_SWAP\_UNDERLAY13}}
+\index{WGL\_SWAP\_UNDERLAY13@{WGL\_SWAP\_UNDERLAY13}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_SWAP\_UNDERLAY13}{WGL\_SWAP\_UNDERLAY13}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+SWAP\+\_\+\+UNDERLAY13~0x10000000}
+
+\Hypertarget{wgl_8h_a6f75e0de9d9db366d2727c27fa37de83}\label{wgl_8h_a6f75e0de9d9db366d2727c27fa37de83} 
+\index{wgl.h@{wgl.h}!WGL\_SWAP\_UNDERLAY14@{WGL\_SWAP\_UNDERLAY14}}
+\index{WGL\_SWAP\_UNDERLAY14@{WGL\_SWAP\_UNDERLAY14}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_SWAP\_UNDERLAY14}{WGL\_SWAP\_UNDERLAY14}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+SWAP\+\_\+\+UNDERLAY14~0x20000000}
+
+\Hypertarget{wgl_8h_ab4c0de664c62802cd98622cf2d46d2ff}\label{wgl_8h_ab4c0de664c62802cd98622cf2d46d2ff} 
+\index{wgl.h@{wgl.h}!WGL\_SWAP\_UNDERLAY15@{WGL\_SWAP\_UNDERLAY15}}
+\index{WGL\_SWAP\_UNDERLAY15@{WGL\_SWAP\_UNDERLAY15}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_SWAP\_UNDERLAY15}{WGL\_SWAP\_UNDERLAY15}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+SWAP\+\_\+\+UNDERLAY15~0x40000000}
+
+\Hypertarget{wgl_8h_a15a73483099e8aaffa83911df0afc763}\label{wgl_8h_a15a73483099e8aaffa83911df0afc763} 
+\index{wgl.h@{wgl.h}!WGL\_SWAP\_UNDERLAY2@{WGL\_SWAP\_UNDERLAY2}}
+\index{WGL\_SWAP\_UNDERLAY2@{WGL\_SWAP\_UNDERLAY2}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_SWAP\_UNDERLAY2}{WGL\_SWAP\_UNDERLAY2}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+SWAP\+\_\+\+UNDERLAY2~0x00020000}
+
+\Hypertarget{wgl_8h_a65f0d80e6ed70e0fd0103650f7fd01db}\label{wgl_8h_a65f0d80e6ed70e0fd0103650f7fd01db} 
+\index{wgl.h@{wgl.h}!WGL\_SWAP\_UNDERLAY3@{WGL\_SWAP\_UNDERLAY3}}
+\index{WGL\_SWAP\_UNDERLAY3@{WGL\_SWAP\_UNDERLAY3}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_SWAP\_UNDERLAY3}{WGL\_SWAP\_UNDERLAY3}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+SWAP\+\_\+\+UNDERLAY3~0x00040000}
+
+\Hypertarget{wgl_8h_aedc7538fbeeff8d37a5621b908f9d4b4}\label{wgl_8h_aedc7538fbeeff8d37a5621b908f9d4b4} 
+\index{wgl.h@{wgl.h}!WGL\_SWAP\_UNDERLAY4@{WGL\_SWAP\_UNDERLAY4}}
+\index{WGL\_SWAP\_UNDERLAY4@{WGL\_SWAP\_UNDERLAY4}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_SWAP\_UNDERLAY4}{WGL\_SWAP\_UNDERLAY4}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+SWAP\+\_\+\+UNDERLAY4~0x00080000}
+
+\Hypertarget{wgl_8h_a4cae889d937a65296647008c889fbab2}\label{wgl_8h_a4cae889d937a65296647008c889fbab2} 
+\index{wgl.h@{wgl.h}!WGL\_SWAP\_UNDERLAY5@{WGL\_SWAP\_UNDERLAY5}}
+\index{WGL\_SWAP\_UNDERLAY5@{WGL\_SWAP\_UNDERLAY5}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_SWAP\_UNDERLAY5}{WGL\_SWAP\_UNDERLAY5}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+SWAP\+\_\+\+UNDERLAY5~0x00100000}
+
+\Hypertarget{wgl_8h_acfa5f731dabd62d8c82019437aa3c5cf}\label{wgl_8h_acfa5f731dabd62d8c82019437aa3c5cf} 
+\index{wgl.h@{wgl.h}!WGL\_SWAP\_UNDERLAY6@{WGL\_SWAP\_UNDERLAY6}}
+\index{WGL\_SWAP\_UNDERLAY6@{WGL\_SWAP\_UNDERLAY6}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_SWAP\_UNDERLAY6}{WGL\_SWAP\_UNDERLAY6}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+SWAP\+\_\+\+UNDERLAY6~0x00200000}
+
+\Hypertarget{wgl_8h_a40b28673f5da6926eed881d5bc1f8948}\label{wgl_8h_a40b28673f5da6926eed881d5bc1f8948} 
+\index{wgl.h@{wgl.h}!WGL\_SWAP\_UNDERLAY7@{WGL\_SWAP\_UNDERLAY7}}
+\index{WGL\_SWAP\_UNDERLAY7@{WGL\_SWAP\_UNDERLAY7}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_SWAP\_UNDERLAY7}{WGL\_SWAP\_UNDERLAY7}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+SWAP\+\_\+\+UNDERLAY7~0x00400000}
+
+\Hypertarget{wgl_8h_abc5e9e93a4385484757bf2fe38225df9}\label{wgl_8h_abc5e9e93a4385484757bf2fe38225df9} 
+\index{wgl.h@{wgl.h}!WGL\_SWAP\_UNDERLAY8@{WGL\_SWAP\_UNDERLAY8}}
+\index{WGL\_SWAP\_UNDERLAY8@{WGL\_SWAP\_UNDERLAY8}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_SWAP\_UNDERLAY8}{WGL\_SWAP\_UNDERLAY8}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+SWAP\+\_\+\+UNDERLAY8~0x00800000}
+
+\Hypertarget{wgl_8h_afa137a8e504a83c72c896610623ad62e}\label{wgl_8h_afa137a8e504a83c72c896610623ad62e} 
+\index{wgl.h@{wgl.h}!WGL\_SWAP\_UNDERLAY9@{WGL\_SWAP\_UNDERLAY9}}
+\index{WGL\_SWAP\_UNDERLAY9@{WGL\_SWAP\_UNDERLAY9}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_SWAP\_UNDERLAY9}{WGL\_SWAP\_UNDERLAY9}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+SWAP\+\_\+\+UNDERLAY9~0x01000000}
+
+\Hypertarget{wgl_8h_a4ed17228cd09c34f556948807c91a2d3}\label{wgl_8h_a4ed17228cd09c34f556948807c91a2d3} 
+\index{wgl.h@{wgl.h}!WGL\_TRANSPARENT\_ALPHA\_VALUE\_ARB@{WGL\_TRANSPARENT\_ALPHA\_VALUE\_ARB}}
+\index{WGL\_TRANSPARENT\_ALPHA\_VALUE\_ARB@{WGL\_TRANSPARENT\_ALPHA\_VALUE\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_TRANSPARENT\_ALPHA\_VALUE\_ARB}{WGL\_TRANSPARENT\_ALPHA\_VALUE\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+TRANSPARENT\+\_\+\+ALPHA\+\_\+\+VALUE\+\_\+\+ARB~0x203A}
+
+\Hypertarget{wgl_8h_a2a9cc47f0c03ed77341edc8c502b9ff1}\label{wgl_8h_a2a9cc47f0c03ed77341edc8c502b9ff1} 
+\index{wgl.h@{wgl.h}!WGL\_TRANSPARENT\_ARB@{WGL\_TRANSPARENT\_ARB}}
+\index{WGL\_TRANSPARENT\_ARB@{WGL\_TRANSPARENT\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_TRANSPARENT\_ARB}{WGL\_TRANSPARENT\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+TRANSPARENT\+\_\+\+ARB~0x200A}
+
+\Hypertarget{wgl_8h_abc05aa81ef07b7c2e4f3a55bd30dfded}\label{wgl_8h_abc05aa81ef07b7c2e4f3a55bd30dfded} 
+\index{wgl.h@{wgl.h}!WGL\_TRANSPARENT\_BLUE\_VALUE\_ARB@{WGL\_TRANSPARENT\_BLUE\_VALUE\_ARB}}
+\index{WGL\_TRANSPARENT\_BLUE\_VALUE\_ARB@{WGL\_TRANSPARENT\_BLUE\_VALUE\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_TRANSPARENT\_BLUE\_VALUE\_ARB}{WGL\_TRANSPARENT\_BLUE\_VALUE\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+TRANSPARENT\+\_\+\+BLUE\+\_\+\+VALUE\+\_\+\+ARB~0x2039}
+
+\Hypertarget{wgl_8h_af61c714bf83ed4ab06e6e5e8970008e8}\label{wgl_8h_af61c714bf83ed4ab06e6e5e8970008e8} 
+\index{wgl.h@{wgl.h}!WGL\_TRANSPARENT\_GREEN\_VALUE\_ARB@{WGL\_TRANSPARENT\_GREEN\_VALUE\_ARB}}
+\index{WGL\_TRANSPARENT\_GREEN\_VALUE\_ARB@{WGL\_TRANSPARENT\_GREEN\_VALUE\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_TRANSPARENT\_GREEN\_VALUE\_ARB}{WGL\_TRANSPARENT\_GREEN\_VALUE\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+TRANSPARENT\+\_\+\+GREEN\+\_\+\+VALUE\+\_\+\+ARB~0x2038}
+
+\Hypertarget{wgl_8h_ab0dce9ba7c0a09bb36e508d872d313cf}\label{wgl_8h_ab0dce9ba7c0a09bb36e508d872d313cf} 
+\index{wgl.h@{wgl.h}!WGL\_TRANSPARENT\_INDEX\_VALUE\_ARB@{WGL\_TRANSPARENT\_INDEX\_VALUE\_ARB}}
+\index{WGL\_TRANSPARENT\_INDEX\_VALUE\_ARB@{WGL\_TRANSPARENT\_INDEX\_VALUE\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_TRANSPARENT\_INDEX\_VALUE\_ARB}{WGL\_TRANSPARENT\_INDEX\_VALUE\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+TRANSPARENT\+\_\+\+INDEX\+\_\+\+VALUE\+\_\+\+ARB~0x203B}
+
+\Hypertarget{wgl_8h_a9f6ea6a06f906059c0103fc38479170a}\label{wgl_8h_a9f6ea6a06f906059c0103fc38479170a} 
+\index{wgl.h@{wgl.h}!WGL\_TRANSPARENT\_RED\_VALUE\_ARB@{WGL\_TRANSPARENT\_RED\_VALUE\_ARB}}
+\index{WGL\_TRANSPARENT\_RED\_VALUE\_ARB@{WGL\_TRANSPARENT\_RED\_VALUE\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_TRANSPARENT\_RED\_VALUE\_ARB}{WGL\_TRANSPARENT\_RED\_VALUE\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+TRANSPARENT\+\_\+\+RED\+\_\+\+VALUE\+\_\+\+ARB~0x2037}
+
+\Hypertarget{wgl_8h_a8bf596fcd313de5ab063c732774063cb}\label{wgl_8h_a8bf596fcd313de5ab063c732774063cb} 
+\index{wgl.h@{wgl.h}!WGL\_TYPE\_COLORINDEX\_ARB@{WGL\_TYPE\_COLORINDEX\_ARB}}
+\index{WGL\_TYPE\_COLORINDEX\_ARB@{WGL\_TYPE\_COLORINDEX\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_TYPE\_COLORINDEX\_ARB}{WGL\_TYPE\_COLORINDEX\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+TYPE\+\_\+\+COLORINDEX\+\_\+\+ARB~0x202C}
+
+\Hypertarget{wgl_8h_a9ef316350bc3d0261a55e22242da3573}\label{wgl_8h_a9ef316350bc3d0261a55e22242da3573} 
+\index{wgl.h@{wgl.h}!WGL\_TYPE\_RGBA\_ARB@{WGL\_TYPE\_RGBA\_ARB}}
+\index{WGL\_TYPE\_RGBA\_ARB@{WGL\_TYPE\_RGBA\_ARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_TYPE\_RGBA\_ARB}{WGL\_TYPE\_RGBA\_ARB}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+TYPE\+\_\+\+RGBA\+\_\+\+ARB~0x202B}
+
+\Hypertarget{wgl_8h_a108f14d8cf24bb2b12e0a88e5ca405e4}\label{wgl_8h_a108f14d8cf24bb2b12e0a88e5ca405e4} 
+\index{wgl.h@{wgl.h}!WGL\_VERSION\_1\_0@{WGL\_VERSION\_1\_0}}
+\index{WGL\_VERSION\_1\_0@{WGL\_VERSION\_1\_0}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{WGL\_VERSION\_1\_0}{WGL\_VERSION\_1\_0}}
+{\footnotesize\ttfamily \#define WGL\+\_\+\+VERSION\+\_\+1\+\_\+0~1}
+
+\Hypertarget{wgl_8h_ac8759d4f1193da04f4f215446b70eded}\label{wgl_8h_ac8759d4f1193da04f4f215446b70eded} 
+\index{wgl.h@{wgl.h}!wglChoosePixelFormatARB@{wglChoosePixelFormatARB}}
+\index{wglChoosePixelFormatARB@{wglChoosePixelFormatARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{wglChoosePixelFormatARB}{wglChoosePixelFormatARB}}
+{\footnotesize\ttfamily \#define wgl\+Choose\+Pixel\+Format\+ARB~\mbox{\hyperlink{wgl_8h_a3bfdb69c4378331f1b9ff9ed8f10cf99}{sf\+\_\+glad\+\_\+wgl\+Choose\+Pixel\+Format\+ARB}}}
+
+\Hypertarget{wgl_8h_acdca080586c894bbe2244900e8dfa24c}\label{wgl_8h_acdca080586c894bbe2244900e8dfa24c} 
+\index{wgl.h@{wgl.h}!wglCreateContextAttribsARB@{wglCreateContextAttribsARB}}
+\index{wglCreateContextAttribsARB@{wglCreateContextAttribsARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{wglCreateContextAttribsARB}{wglCreateContextAttribsARB}}
+{\footnotesize\ttfamily \#define wgl\+Create\+Context\+Attribs\+ARB~\mbox{\hyperlink{wgl_8h_ac14299eb06101d4e88bd130224a1d88b}{sf\+\_\+glad\+\_\+wgl\+Create\+Context\+Attribs\+ARB}}}
+
+\Hypertarget{wgl_8h_a19e4cd37146596d6608d175f909f643c}\label{wgl_8h_a19e4cd37146596d6608d175f909f643c} 
+\index{wgl.h@{wgl.h}!wglCreatePbufferARB@{wglCreatePbufferARB}}
+\index{wglCreatePbufferARB@{wglCreatePbufferARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{wglCreatePbufferARB}{wglCreatePbufferARB}}
+{\footnotesize\ttfamily \#define wgl\+Create\+Pbuffer\+ARB~\mbox{\hyperlink{wgl_8h_abb49a1c4ba8c8daf5da72fe2d2596fc6}{sf\+\_\+glad\+\_\+wgl\+Create\+Pbuffer\+ARB}}}
+
+\Hypertarget{wgl_8h_a9f08c595b107bbf053b2551b18260416}\label{wgl_8h_a9f08c595b107bbf053b2551b18260416} 
+\index{wgl.h@{wgl.h}!wglDestroyPbufferARB@{wglDestroyPbufferARB}}
+\index{wglDestroyPbufferARB@{wglDestroyPbufferARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{wglDestroyPbufferARB}{wglDestroyPbufferARB}}
+{\footnotesize\ttfamily \#define wgl\+Destroy\+Pbuffer\+ARB~\mbox{\hyperlink{wgl_8h_abf4735d33e056f410d1e384a85d09cdd}{sf\+\_\+glad\+\_\+wgl\+Destroy\+Pbuffer\+ARB}}}
+
+\Hypertarget{wgl_8h_adee3b196f14083e02d4e6f8222fd3791}\label{wgl_8h_adee3b196f14083e02d4e6f8222fd3791} 
+\index{wgl.h@{wgl.h}!wglGetExtensionsStringARB@{wglGetExtensionsStringARB}}
+\index{wglGetExtensionsStringARB@{wglGetExtensionsStringARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{wglGetExtensionsStringARB}{wglGetExtensionsStringARB}}
+{\footnotesize\ttfamily \#define wgl\+Get\+Extensions\+String\+ARB~\mbox{\hyperlink{wgl_8h_a79e148cba70e70cf6440082050516048}{sf\+\_\+glad\+\_\+wgl\+Get\+Extensions\+String\+ARB}}}
+
+\Hypertarget{wgl_8h_a134614db3b57ba3660b3bc2e01b6c886}\label{wgl_8h_a134614db3b57ba3660b3bc2e01b6c886} 
+\index{wgl.h@{wgl.h}!wglGetExtensionsStringEXT@{wglGetExtensionsStringEXT}}
+\index{wglGetExtensionsStringEXT@{wglGetExtensionsStringEXT}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{wglGetExtensionsStringEXT}{wglGetExtensionsStringEXT}}
+{\footnotesize\ttfamily \#define wgl\+Get\+Extensions\+String\+EXT~\mbox{\hyperlink{wgl_8h_a1a93b7e0affb8d9fe444a8c954529383}{sf\+\_\+glad\+\_\+wgl\+Get\+Extensions\+String\+EXT}}}
+
+\Hypertarget{wgl_8h_a62cc2dd14065b9bba106e03861222e51}\label{wgl_8h_a62cc2dd14065b9bba106e03861222e51} 
+\index{wgl.h@{wgl.h}!wglGetPbufferDCARB@{wglGetPbufferDCARB}}
+\index{wglGetPbufferDCARB@{wglGetPbufferDCARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{wglGetPbufferDCARB}{wglGetPbufferDCARB}}
+{\footnotesize\ttfamily \#define wgl\+Get\+Pbuffer\+DCARB~\mbox{\hyperlink{wgl_8h_aea2fc9a37eb4ee85863d928804297262}{sf\+\_\+glad\+\_\+wgl\+Get\+Pbuffer\+DCARB}}}
+
+\Hypertarget{wgl_8h_a1fd864e9fd93c12a28350cf391ef4f28}\label{wgl_8h_a1fd864e9fd93c12a28350cf391ef4f28} 
+\index{wgl.h@{wgl.h}!wglGetPixelFormatAttribfvARB@{wglGetPixelFormatAttribfvARB}}
+\index{wglGetPixelFormatAttribfvARB@{wglGetPixelFormatAttribfvARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{wglGetPixelFormatAttribfvARB}{wglGetPixelFormatAttribfvARB}}
+{\footnotesize\ttfamily \#define wgl\+Get\+Pixel\+Format\+Attribfv\+ARB~\mbox{\hyperlink{wgl_8h_a32db980fd2a3183df081f548ebeb92b0}{sf\+\_\+glad\+\_\+wgl\+Get\+Pixel\+Format\+Attribfv\+ARB}}}
+
+\Hypertarget{wgl_8h_a8edcc08abf2e74d0331fdfe925e98199}\label{wgl_8h_a8edcc08abf2e74d0331fdfe925e98199} 
+\index{wgl.h@{wgl.h}!wglGetPixelFormatAttribivARB@{wglGetPixelFormatAttribivARB}}
+\index{wglGetPixelFormatAttribivARB@{wglGetPixelFormatAttribivARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{wglGetPixelFormatAttribivARB}{wglGetPixelFormatAttribivARB}}
+{\footnotesize\ttfamily \#define wgl\+Get\+Pixel\+Format\+Attribiv\+ARB~\mbox{\hyperlink{wgl_8h_a0bbbca7a2193919ad8f3865a10150083}{sf\+\_\+glad\+\_\+wgl\+Get\+Pixel\+Format\+Attribiv\+ARB}}}
+
+\Hypertarget{wgl_8h_a7073e5f629ddd39067319f13e13f676e}\label{wgl_8h_a7073e5f629ddd39067319f13e13f676e} 
+\index{wgl.h@{wgl.h}!wglGetSwapIntervalEXT@{wglGetSwapIntervalEXT}}
+\index{wglGetSwapIntervalEXT@{wglGetSwapIntervalEXT}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{wglGetSwapIntervalEXT}{wglGetSwapIntervalEXT}}
+{\footnotesize\ttfamily \#define wgl\+Get\+Swap\+Interval\+EXT~\mbox{\hyperlink{wgl_8h_a53c8e361af02d82cf89f5dfc4b820b68}{sf\+\_\+glad\+\_\+wgl\+Get\+Swap\+Interval\+EXT}}}
+
+\Hypertarget{wgl_8h_a5e6ee5d9b4bc75b0446c06e228740e91}\label{wgl_8h_a5e6ee5d9b4bc75b0446c06e228740e91} 
+\index{wgl.h@{wgl.h}!wglQueryPbufferARB@{wglQueryPbufferARB}}
+\index{wglQueryPbufferARB@{wglQueryPbufferARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{wglQueryPbufferARB}{wglQueryPbufferARB}}
+{\footnotesize\ttfamily \#define wgl\+Query\+Pbuffer\+ARB~\mbox{\hyperlink{wgl_8h_acbff66120f132c2357eb08bf76050b39}{sf\+\_\+glad\+\_\+wgl\+Query\+Pbuffer\+ARB}}}
+
+\Hypertarget{wgl_8h_a5e97d07092dd3dc6e0a0c5739d865861}\label{wgl_8h_a5e97d07092dd3dc6e0a0c5739d865861} 
+\index{wgl.h@{wgl.h}!wglReleasePbufferDCARB@{wglReleasePbufferDCARB}}
+\index{wglReleasePbufferDCARB@{wglReleasePbufferDCARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{wglReleasePbufferDCARB}{wglReleasePbufferDCARB}}
+{\footnotesize\ttfamily \#define wgl\+Release\+Pbuffer\+DCARB~\mbox{\hyperlink{wgl_8h_ad2b64853d180ef645b28b781268c0618}{sf\+\_\+glad\+\_\+wgl\+Release\+Pbuffer\+DCARB}}}
+
+\Hypertarget{wgl_8h_a8a2877f5187c2bbcaab779c518e4bb1a}\label{wgl_8h_a8a2877f5187c2bbcaab779c518e4bb1a} 
+\index{wgl.h@{wgl.h}!wglSwapIntervalEXT@{wglSwapIntervalEXT}}
+\index{wglSwapIntervalEXT@{wglSwapIntervalEXT}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{wglSwapIntervalEXT}{wglSwapIntervalEXT}}
+{\footnotesize\ttfamily \#define wgl\+Swap\+Interval\+EXT~\mbox{\hyperlink{wgl_8h_adc53059c83ac5a291d3f01d912c96fee}{sf\+\_\+glad\+\_\+wgl\+Swap\+Interval\+EXT}}}
+
+
+
+\doxysubsection{Dokumentacja definicji typów}
+\Hypertarget{wgl_8h_a3846514fc4f209fb7736dcbe3e5caccf}\label{wgl_8h_a3846514fc4f209fb7736dcbe3e5caccf} 
+\index{wgl.h@{wgl.h}!GLADapiproc@{GLADapiproc}}
+\index{GLADapiproc@{GLADapiproc}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{GLADapiproc}{GLADapiproc}}
+{\footnotesize\ttfamily typedef void(\texorpdfstring{$\ast$}{*} GLADapiproc) (void)}
+
+\Hypertarget{wgl_8h_ad93f2ec070d0526a454a3cfdaedd344b}\label{wgl_8h_ad93f2ec070d0526a454a3cfdaedd344b} 
+\index{wgl.h@{wgl.h}!GLADloadfunc@{GLADloadfunc}}
+\index{GLADloadfunc@{GLADloadfunc}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{GLADloadfunc}{GLADloadfunc}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{examples_2opengl_2gl_8h_a3846514fc4f209fb7736dcbe3e5caccf}{GLADapiproc}}(\texorpdfstring{$\ast$}{*} GLADloadfunc) (const char \texorpdfstring{$\ast$}{*}name)}
+
+\Hypertarget{wgl_8h_a352cbf566fef16b44d1f187dbc1fe12d}\label{wgl_8h_a352cbf566fef16b44d1f187dbc1fe12d} 
+\index{wgl.h@{wgl.h}!GLADpostcallback@{GLADpostcallback}}
+\index{GLADpostcallback@{GLADpostcallback}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{GLADpostcallback}{GLADpostcallback}}
+{\footnotesize\ttfamily typedef void(\texorpdfstring{$\ast$}{*} GLADpostcallback) (void \texorpdfstring{$\ast$}{*}ret, const char \texorpdfstring{$\ast$}{*}name, \mbox{\hyperlink{examples_2opengl_2gl_8h_a3846514fc4f209fb7736dcbe3e5caccf}{GLADapiproc}} apiproc, int len\+\_\+args,...)}
+
+\Hypertarget{wgl_8h_ace7ec17ce773f2bd6d26525fd6cfe546}\label{wgl_8h_ace7ec17ce773f2bd6d26525fd6cfe546} 
+\index{wgl.h@{wgl.h}!GLADprecallback@{GLADprecallback}}
+\index{GLADprecallback@{GLADprecallback}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{GLADprecallback}{GLADprecallback}}
+{\footnotesize\ttfamily typedef void(\texorpdfstring{$\ast$}{*} GLADprecallback) (const char \texorpdfstring{$\ast$}{*}name, \mbox{\hyperlink{examples_2opengl_2gl_8h_a3846514fc4f209fb7736dcbe3e5caccf}{GLADapiproc}} apiproc, int len\+\_\+args,...)}
+
+\Hypertarget{wgl_8h_a03952ee64de15eb14cf7add74902c311}\label{wgl_8h_a03952ee64de15eb14cf7add74902c311} 
+\index{wgl.h@{wgl.h}!GLADuserptrloadfunc@{GLADuserptrloadfunc}}
+\index{GLADuserptrloadfunc@{GLADuserptrloadfunc}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{GLADuserptrloadfunc}{GLADuserptrloadfunc}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{examples_2opengl_2gl_8h_a3846514fc4f209fb7736dcbe3e5caccf}{GLADapiproc}}(\texorpdfstring{$\ast$}{*} GLADuserptrloadfunc) (void \texorpdfstring{$\ast$}{*}userptr, const char \texorpdfstring{$\ast$}{*}name)}
+
+\Hypertarget{wgl_8h_aa7a85be45956039ac7a0100a75cded66}\label{wgl_8h_aa7a85be45956039ac7a0100a75cded66} 
+\index{wgl.h@{wgl.h}!GPU\_DEVICE@{GPU\_DEVICE}}
+\index{GPU\_DEVICE@{GPU\_DEVICE}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{GPU\_DEVICE}{GPU\_DEVICE}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct___g_p_u___d_e_v_i_c_e}{\+\_\+\+GPU\+\_\+\+DEVICE}} \mbox{\hyperlink{wgl_8h_aa7a85be45956039ac7a0100a75cded66}{GPU\+\_\+\+DEVICE}}}
+
+\Hypertarget{wgl_8h_a39ffb39dac096fd5925848f0f05a3646}\label{wgl_8h_a39ffb39dac096fd5925848f0f05a3646} 
+\index{wgl.h@{wgl.h}!PFNCHOOSEPIXELFORMATPROC@{PFNCHOOSEPIXELFORMATPROC}}
+\index{PFNCHOOSEPIXELFORMATPROC@{PFNCHOOSEPIXELFORMATPROC}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{PFNCHOOSEPIXELFORMATPROC}{PFNCHOOSEPIXELFORMATPROC}}
+{\footnotesize\ttfamily typedef int(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFNCHOOSEPIXELFORMATPROC) (HDC h\+Dc, const PIXELFORMATDESCRIPTOR \texorpdfstring{$\ast$}{*}p\+Pfd)}
+
+\Hypertarget{wgl_8h_a3bb9af7293f00a1d24643e06302cf4cd}\label{wgl_8h_a3bb9af7293f00a1d24643e06302cf4cd} 
+\index{wgl.h@{wgl.h}!PFNDESCRIBEPIXELFORMATPROC@{PFNDESCRIBEPIXELFORMATPROC}}
+\index{PFNDESCRIBEPIXELFORMATPROC@{PFNDESCRIBEPIXELFORMATPROC}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{PFNDESCRIBEPIXELFORMATPROC}{PFNDESCRIBEPIXELFORMATPROC}}
+{\footnotesize\ttfamily typedef int(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFNDESCRIBEPIXELFORMATPROC) (HDC hdc, int ipfd, UINT cjpfd, const PIXELFORMATDESCRIPTOR \texorpdfstring{$\ast$}{*}ppfd)}
+
+\Hypertarget{wgl_8h_a2a9baab28f78c54b464bce01bd27be43}\label{wgl_8h_a2a9baab28f78c54b464bce01bd27be43} 
+\index{wgl.h@{wgl.h}!PFNGETENHMETAFILEPIXELFORMATPROC@{PFNGETENHMETAFILEPIXELFORMATPROC}}
+\index{PFNGETENHMETAFILEPIXELFORMATPROC@{PFNGETENHMETAFILEPIXELFORMATPROC}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{PFNGETENHMETAFILEPIXELFORMATPROC}{PFNGETENHMETAFILEPIXELFORMATPROC}}
+{\footnotesize\ttfamily typedef UINT(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFNGETENHMETAFILEPIXELFORMATPROC) (HENHMETAFILE hemf, const PIXELFORMATDESCRIPTOR \texorpdfstring{$\ast$}{*}ppfd)}
+
+\Hypertarget{wgl_8h_ad60d677f17ab783463554f39d0b67e48}\label{wgl_8h_ad60d677f17ab783463554f39d0b67e48} 
+\index{wgl.h@{wgl.h}!PFNGETPIXELFORMATPROC@{PFNGETPIXELFORMATPROC}}
+\index{PFNGETPIXELFORMATPROC@{PFNGETPIXELFORMATPROC}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{PFNGETPIXELFORMATPROC}{PFNGETPIXELFORMATPROC}}
+{\footnotesize\ttfamily typedef int(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFNGETPIXELFORMATPROC) (HDC hdc)}
+
+\Hypertarget{wgl_8h_a80db95dc2379f63d2424ded430ea2103}\label{wgl_8h_a80db95dc2379f63d2424ded430ea2103} 
+\index{wgl.h@{wgl.h}!PFNSETPIXELFORMATPROC@{PFNSETPIXELFORMATPROC}}
+\index{PFNSETPIXELFORMATPROC@{PFNSETPIXELFORMATPROC}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{PFNSETPIXELFORMATPROC}{PFNSETPIXELFORMATPROC}}
+{\footnotesize\ttfamily typedef BOOL(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFNSETPIXELFORMATPROC) (HDC hdc, int ipfd, const PIXELFORMATDESCRIPTOR \texorpdfstring{$\ast$}{*}ppfd)}
+
+\Hypertarget{wgl_8h_a07f5c013d667f35b6783c815d15109d4}\label{wgl_8h_a07f5c013d667f35b6783c815d15109d4} 
+\index{wgl.h@{wgl.h}!PFNSWAPBUFFERSPROC@{PFNSWAPBUFFERSPROC}}
+\index{PFNSWAPBUFFERSPROC@{PFNSWAPBUFFERSPROC}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{PFNSWAPBUFFERSPROC}{PFNSWAPBUFFERSPROC}}
+{\footnotesize\ttfamily typedef BOOL(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFNSWAPBUFFERSPROC) (HDC hdc)}
+
+\Hypertarget{wgl_8h_a58c610f540c89e65fea0c535c664e962}\label{wgl_8h_a58c610f540c89e65fea0c535c664e962} 
+\index{wgl.h@{wgl.h}!PFNWGLCHOOSEPIXELFORMATARBPROC@{PFNWGLCHOOSEPIXELFORMATARBPROC}}
+\index{PFNWGLCHOOSEPIXELFORMATARBPROC@{PFNWGLCHOOSEPIXELFORMATARBPROC}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{PFNWGLCHOOSEPIXELFORMATARBPROC}{PFNWGLCHOOSEPIXELFORMATARBPROC}}
+{\footnotesize\ttfamily typedef BOOL(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFNWGLCHOOSEPIXELFORMATARBPROC) (HDC hdc, const int \texorpdfstring{$\ast$}{*}pi\+Attrib\+IList, const FLOAT \texorpdfstring{$\ast$}{*}pf\+Attrib\+FList, UINT n\+Max\+Formats, int \texorpdfstring{$\ast$}{*}pi\+Formats, UINT \texorpdfstring{$\ast$}{*}n\+Num\+Formats)}
+
+\Hypertarget{wgl_8h_a2967ed7ea8d54044c01acf3bd43a922b}\label{wgl_8h_a2967ed7ea8d54044c01acf3bd43a922b} 
+\index{wgl.h@{wgl.h}!PFNWGLCOPYCONTEXTPROC@{PFNWGLCOPYCONTEXTPROC}}
+\index{PFNWGLCOPYCONTEXTPROC@{PFNWGLCOPYCONTEXTPROC}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{PFNWGLCOPYCONTEXTPROC}{PFNWGLCOPYCONTEXTPROC}}
+{\footnotesize\ttfamily typedef BOOL(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFNWGLCOPYCONTEXTPROC) (HGLRC hglrc\+Src, HGLRC hglrc\+Dst, UINT mask)}
+
+\Hypertarget{wgl_8h_a3791e4afa3ab9a2db774d7dfb218f457}\label{wgl_8h_a3791e4afa3ab9a2db774d7dfb218f457} 
+\index{wgl.h@{wgl.h}!PFNWGLCREATECONTEXTATTRIBSARBPROC@{PFNWGLCREATECONTEXTATTRIBSARBPROC}}
+\index{PFNWGLCREATECONTEXTATTRIBSARBPROC@{PFNWGLCREATECONTEXTATTRIBSARBPROC}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{PFNWGLCREATECONTEXTATTRIBSARBPROC}{PFNWGLCREATECONTEXTATTRIBSARBPROC}}
+{\footnotesize\ttfamily typedef HGLRC(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFNWGLCREATECONTEXTATTRIBSARBPROC) (HDC h\+DC, HGLRC h\+Share\+Context, const int \texorpdfstring{$\ast$}{*}attrib\+List)}
+
+\Hypertarget{wgl_8h_ab9527b71a76a3518a1b4070865168acd}\label{wgl_8h_ab9527b71a76a3518a1b4070865168acd} 
+\index{wgl.h@{wgl.h}!PFNWGLCREATECONTEXTPROC@{PFNWGLCREATECONTEXTPROC}}
+\index{PFNWGLCREATECONTEXTPROC@{PFNWGLCREATECONTEXTPROC}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{PFNWGLCREATECONTEXTPROC}{PFNWGLCREATECONTEXTPROC}}
+{\footnotesize\ttfamily typedef HGLRC(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFNWGLCREATECONTEXTPROC) (HDC h\+Dc)}
+
+\Hypertarget{wgl_8h_a8cd35a90298602577920d79d48e4b2e9}\label{wgl_8h_a8cd35a90298602577920d79d48e4b2e9} 
+\index{wgl.h@{wgl.h}!PFNWGLCREATELAYERCONTEXTPROC@{PFNWGLCREATELAYERCONTEXTPROC}}
+\index{PFNWGLCREATELAYERCONTEXTPROC@{PFNWGLCREATELAYERCONTEXTPROC}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{PFNWGLCREATELAYERCONTEXTPROC}{PFNWGLCREATELAYERCONTEXTPROC}}
+{\footnotesize\ttfamily typedef HGLRC(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFNWGLCREATELAYERCONTEXTPROC) (HDC h\+Dc, int level)}
+
+\Hypertarget{wgl_8h_a28af55bb11b5efcfe432d80f57288484}\label{wgl_8h_a28af55bb11b5efcfe432d80f57288484} 
+\index{wgl.h@{wgl.h}!PFNWGLCREATEPBUFFERARBPROC@{PFNWGLCREATEPBUFFERARBPROC}}
+\index{PFNWGLCREATEPBUFFERARBPROC@{PFNWGLCREATEPBUFFERARBPROC}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{PFNWGLCREATEPBUFFERARBPROC}{PFNWGLCREATEPBUFFERARBPROC}}
+{\footnotesize\ttfamily typedef HPBUFFERARB(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFNWGLCREATEPBUFFERARBPROC) (HDC h\+DC, int i\+Pixel\+Format, int i\+Width, int i\+Height, const int \texorpdfstring{$\ast$}{*}pi\+Attrib\+List)}
+
+\Hypertarget{wgl_8h_af63209fbc57a30e424483eb7767c28e2}\label{wgl_8h_af63209fbc57a30e424483eb7767c28e2} 
+\index{wgl.h@{wgl.h}!PFNWGLDELETECONTEXTPROC@{PFNWGLDELETECONTEXTPROC}}
+\index{PFNWGLDELETECONTEXTPROC@{PFNWGLDELETECONTEXTPROC}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{PFNWGLDELETECONTEXTPROC}{PFNWGLDELETECONTEXTPROC}}
+{\footnotesize\ttfamily typedef BOOL(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFNWGLDELETECONTEXTPROC) (HGLRC old\+Context)}
+
+\Hypertarget{wgl_8h_a38ca74385714863d9c80dfb91a3b0552}\label{wgl_8h_a38ca74385714863d9c80dfb91a3b0552} 
+\index{wgl.h@{wgl.h}!PFNWGLDESCRIBELAYERPLANEPROC@{PFNWGLDESCRIBELAYERPLANEPROC}}
+\index{PFNWGLDESCRIBELAYERPLANEPROC@{PFNWGLDESCRIBELAYERPLANEPROC}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{PFNWGLDESCRIBELAYERPLANEPROC}{PFNWGLDESCRIBELAYERPLANEPROC}}
+{\footnotesize\ttfamily typedef BOOL(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFNWGLDESCRIBELAYERPLANEPROC) (HDC h\+Dc, int pixel\+Format, int layer\+Plane, UINT n\+Bytes, const LAYERPLANEDESCRIPTOR \texorpdfstring{$\ast$}{*}plpd)}
+
+\Hypertarget{wgl_8h_a5bfc4fe61272a6635abcf0d524859180}\label{wgl_8h_a5bfc4fe61272a6635abcf0d524859180} 
+\index{wgl.h@{wgl.h}!PFNWGLDESTROYPBUFFERARBPROC@{PFNWGLDESTROYPBUFFERARBPROC}}
+\index{PFNWGLDESTROYPBUFFERARBPROC@{PFNWGLDESTROYPBUFFERARBPROC}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{PFNWGLDESTROYPBUFFERARBPROC}{PFNWGLDESTROYPBUFFERARBPROC}}
+{\footnotesize\ttfamily typedef BOOL(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFNWGLDESTROYPBUFFERARBPROC) (HPBUFFERARB h\+Pbuffer)}
+
+\Hypertarget{wgl_8h_a8aa687f2c85ee4df3bd1d76791f6dc4e}\label{wgl_8h_a8aa687f2c85ee4df3bd1d76791f6dc4e} 
+\index{wgl.h@{wgl.h}!PFNWGLGETCURRENTCONTEXTPROC@{PFNWGLGETCURRENTCONTEXTPROC}}
+\index{PFNWGLGETCURRENTCONTEXTPROC@{PFNWGLGETCURRENTCONTEXTPROC}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{PFNWGLGETCURRENTCONTEXTPROC}{PFNWGLGETCURRENTCONTEXTPROC}}
+{\footnotesize\ttfamily typedef HGLRC(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFNWGLGETCURRENTCONTEXTPROC) (void)}
+
+\Hypertarget{wgl_8h_a6d8bf092203171e60c8c1bbf373d528b}\label{wgl_8h_a6d8bf092203171e60c8c1bbf373d528b} 
+\index{wgl.h@{wgl.h}!PFNWGLGETCURRENTDCPROC@{PFNWGLGETCURRENTDCPROC}}
+\index{PFNWGLGETCURRENTDCPROC@{PFNWGLGETCURRENTDCPROC}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{PFNWGLGETCURRENTDCPROC}{PFNWGLGETCURRENTDCPROC}}
+{\footnotesize\ttfamily typedef HDC(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFNWGLGETCURRENTDCPROC) (void)}
+
+\Hypertarget{wgl_8h_a2c0715d4251a68da58bc5eae5ae6d720}\label{wgl_8h_a2c0715d4251a68da58bc5eae5ae6d720} 
+\index{wgl.h@{wgl.h}!PFNWGLGETEXTENSIONSSTRINGARBPROC@{PFNWGLGETEXTENSIONSSTRINGARBPROC}}
+\index{PFNWGLGETEXTENSIONSSTRINGARBPROC@{PFNWGLGETEXTENSIONSSTRINGARBPROC}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{PFNWGLGETEXTENSIONSSTRINGARBPROC}{PFNWGLGETEXTENSIONSSTRINGARBPROC}}
+{\footnotesize\ttfamily typedef const char \texorpdfstring{$\ast$}{*}(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFNWGLGETEXTENSIONSSTRINGARBPROC) (HDC hdc)}
+
+\Hypertarget{wgl_8h_adca220242bc21024bc21f0578ee83e40}\label{wgl_8h_adca220242bc21024bc21f0578ee83e40} 
+\index{wgl.h@{wgl.h}!PFNWGLGETEXTENSIONSSTRINGEXTPROC@{PFNWGLGETEXTENSIONSSTRINGEXTPROC}}
+\index{PFNWGLGETEXTENSIONSSTRINGEXTPROC@{PFNWGLGETEXTENSIONSSTRINGEXTPROC}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{PFNWGLGETEXTENSIONSSTRINGEXTPROC}{PFNWGLGETEXTENSIONSSTRINGEXTPROC}}
+{\footnotesize\ttfamily typedef const char \texorpdfstring{$\ast$}{*}(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFNWGLGETEXTENSIONSSTRINGEXTPROC) (void)}
+
+\Hypertarget{wgl_8h_ac2c1a8d0f70c2614fa10a0b58470b6fb}\label{wgl_8h_ac2c1a8d0f70c2614fa10a0b58470b6fb} 
+\index{wgl.h@{wgl.h}!PFNWGLGETLAYERPALETTEENTRIESPROC@{PFNWGLGETLAYERPALETTEENTRIESPROC}}
+\index{PFNWGLGETLAYERPALETTEENTRIESPROC@{PFNWGLGETLAYERPALETTEENTRIESPROC}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{PFNWGLGETLAYERPALETTEENTRIESPROC}{PFNWGLGETLAYERPALETTEENTRIESPROC}}
+{\footnotesize\ttfamily typedef int(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFNWGLGETLAYERPALETTEENTRIESPROC) (HDC hdc, int i\+Layer\+Plane, int i\+Start, int c\+Entries, const COLORREF \texorpdfstring{$\ast$}{*}pcr)}
+
+\Hypertarget{wgl_8h_a87b5a9987d82575272d2ec87da0621e5}\label{wgl_8h_a87b5a9987d82575272d2ec87da0621e5} 
+\index{wgl.h@{wgl.h}!PFNWGLGETPBUFFERDCARBPROC@{PFNWGLGETPBUFFERDCARBPROC}}
+\index{PFNWGLGETPBUFFERDCARBPROC@{PFNWGLGETPBUFFERDCARBPROC}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{PFNWGLGETPBUFFERDCARBPROC}{PFNWGLGETPBUFFERDCARBPROC}}
+{\footnotesize\ttfamily typedef HDC(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFNWGLGETPBUFFERDCARBPROC) (HPBUFFERARB h\+Pbuffer)}
+
+\Hypertarget{wgl_8h_a305bede050377d3a417e8431881d34f9}\label{wgl_8h_a305bede050377d3a417e8431881d34f9} 
+\index{wgl.h@{wgl.h}!PFNWGLGETPIXELFORMATATTRIBFVARBPROC@{PFNWGLGETPIXELFORMATATTRIBFVARBPROC}}
+\index{PFNWGLGETPIXELFORMATATTRIBFVARBPROC@{PFNWGLGETPIXELFORMATATTRIBFVARBPROC}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{PFNWGLGETPIXELFORMATATTRIBFVARBPROC}{PFNWGLGETPIXELFORMATATTRIBFVARBPROC}}
+{\footnotesize\ttfamily typedef BOOL(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFNWGLGETPIXELFORMATATTRIBFVARBPROC) (HDC hdc, int i\+Pixel\+Format, int i\+Layer\+Plane, UINT n\+Attributes, const int \texorpdfstring{$\ast$}{*}pi\+Attributes, FLOAT \texorpdfstring{$\ast$}{*}pf\+Values)}
+
+\Hypertarget{wgl_8h_a6dee6ddcc3ca46cff0f16ba72c380c03}\label{wgl_8h_a6dee6ddcc3ca46cff0f16ba72c380c03} 
+\index{wgl.h@{wgl.h}!PFNWGLGETPIXELFORMATATTRIBIVARBPROC@{PFNWGLGETPIXELFORMATATTRIBIVARBPROC}}
+\index{PFNWGLGETPIXELFORMATATTRIBIVARBPROC@{PFNWGLGETPIXELFORMATATTRIBIVARBPROC}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{PFNWGLGETPIXELFORMATATTRIBIVARBPROC}{PFNWGLGETPIXELFORMATATTRIBIVARBPROC}}
+{\footnotesize\ttfamily typedef BOOL(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFNWGLGETPIXELFORMATATTRIBIVARBPROC) (HDC hdc, int i\+Pixel\+Format, int i\+Layer\+Plane, UINT n\+Attributes, const int \texorpdfstring{$\ast$}{*}pi\+Attributes, int \texorpdfstring{$\ast$}{*}pi\+Values)}
+
+\Hypertarget{wgl_8h_ac176cb50f644d499b8b5f747c27969d3}\label{wgl_8h_ac176cb50f644d499b8b5f747c27969d3} 
+\index{wgl.h@{wgl.h}!PFNWGLGETPROCADDRESSPROC@{PFNWGLGETPROCADDRESSPROC}}
+\index{PFNWGLGETPROCADDRESSPROC@{PFNWGLGETPROCADDRESSPROC}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{PFNWGLGETPROCADDRESSPROC}{PFNWGLGETPROCADDRESSPROC}}
+{\footnotesize\ttfamily typedef PROC(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFNWGLGETPROCADDRESSPROC) (LPCSTR lpsz\+Proc)}
+
+\Hypertarget{wgl_8h_af56cdbd6243329afc4bd0dcd0ec9c6ab}\label{wgl_8h_af56cdbd6243329afc4bd0dcd0ec9c6ab} 
+\index{wgl.h@{wgl.h}!PFNWGLGETSWAPINTERVALEXTPROC@{PFNWGLGETSWAPINTERVALEXTPROC}}
+\index{PFNWGLGETSWAPINTERVALEXTPROC@{PFNWGLGETSWAPINTERVALEXTPROC}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{PFNWGLGETSWAPINTERVALEXTPROC}{PFNWGLGETSWAPINTERVALEXTPROC}}
+{\footnotesize\ttfamily typedef int(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFNWGLGETSWAPINTERVALEXTPROC) (void)}
+
+\Hypertarget{wgl_8h_ab07e62a02e66dff51904071e91dfca23}\label{wgl_8h_ab07e62a02e66dff51904071e91dfca23} 
+\index{wgl.h@{wgl.h}!PFNWGLMAKECURRENTPROC@{PFNWGLMAKECURRENTPROC}}
+\index{PFNWGLMAKECURRENTPROC@{PFNWGLMAKECURRENTPROC}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{PFNWGLMAKECURRENTPROC}{PFNWGLMAKECURRENTPROC}}
+{\footnotesize\ttfamily typedef BOOL(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFNWGLMAKECURRENTPROC) (HDC h\+Dc, HGLRC new\+Context)}
+
+\Hypertarget{wgl_8h_a2a0044c12ec87f00f4388077f1cfacfa}\label{wgl_8h_a2a0044c12ec87f00f4388077f1cfacfa} 
+\index{wgl.h@{wgl.h}!PFNWGLQUERYPBUFFERARBPROC@{PFNWGLQUERYPBUFFERARBPROC}}
+\index{PFNWGLQUERYPBUFFERARBPROC@{PFNWGLQUERYPBUFFERARBPROC}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{PFNWGLQUERYPBUFFERARBPROC}{PFNWGLQUERYPBUFFERARBPROC}}
+{\footnotesize\ttfamily typedef BOOL(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFNWGLQUERYPBUFFERARBPROC) (HPBUFFERARB h\+Pbuffer, int i\+Attribute, int \texorpdfstring{$\ast$}{*}pi\+Value)}
+
+\Hypertarget{wgl_8h_a21cb68bdcf5d656ad7b0c735e537dbdf}\label{wgl_8h_a21cb68bdcf5d656ad7b0c735e537dbdf} 
+\index{wgl.h@{wgl.h}!PFNWGLREALIZELAYERPALETTEPROC@{PFNWGLREALIZELAYERPALETTEPROC}}
+\index{PFNWGLREALIZELAYERPALETTEPROC@{PFNWGLREALIZELAYERPALETTEPROC}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{PFNWGLREALIZELAYERPALETTEPROC}{PFNWGLREALIZELAYERPALETTEPROC}}
+{\footnotesize\ttfamily typedef BOOL(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFNWGLREALIZELAYERPALETTEPROC) (HDC hdc, int i\+Layer\+Plane, BOOL b\+Realize)}
+
+\Hypertarget{wgl_8h_aaf004ab851cd386dbd980af7d2787c71}\label{wgl_8h_aaf004ab851cd386dbd980af7d2787c71} 
+\index{wgl.h@{wgl.h}!PFNWGLRELEASEPBUFFERDCARBPROC@{PFNWGLRELEASEPBUFFERDCARBPROC}}
+\index{PFNWGLRELEASEPBUFFERDCARBPROC@{PFNWGLRELEASEPBUFFERDCARBPROC}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{PFNWGLRELEASEPBUFFERDCARBPROC}{PFNWGLRELEASEPBUFFERDCARBPROC}}
+{\footnotesize\ttfamily typedef int(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFNWGLRELEASEPBUFFERDCARBPROC) (HPBUFFERARB h\+Pbuffer, HDC h\+DC)}
+
+\Hypertarget{wgl_8h_aa7ffc597e54bd7b449fedaadb26f9f04}\label{wgl_8h_aa7ffc597e54bd7b449fedaadb26f9f04} 
+\index{wgl.h@{wgl.h}!PFNWGLSETLAYERPALETTEENTRIESPROC@{PFNWGLSETLAYERPALETTEENTRIESPROC}}
+\index{PFNWGLSETLAYERPALETTEENTRIESPROC@{PFNWGLSETLAYERPALETTEENTRIESPROC}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{PFNWGLSETLAYERPALETTEENTRIESPROC}{PFNWGLSETLAYERPALETTEENTRIESPROC}}
+{\footnotesize\ttfamily typedef int(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFNWGLSETLAYERPALETTEENTRIESPROC) (HDC hdc, int i\+Layer\+Plane, int i\+Start, int c\+Entries, const COLORREF \texorpdfstring{$\ast$}{*}pcr)}
+
+\Hypertarget{wgl_8h_a08c87dbb260fdae3a40c107381c520d2}\label{wgl_8h_a08c87dbb260fdae3a40c107381c520d2} 
+\index{wgl.h@{wgl.h}!PFNWGLSHARELISTSPROC@{PFNWGLSHARELISTSPROC}}
+\index{PFNWGLSHARELISTSPROC@{PFNWGLSHARELISTSPROC}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{PFNWGLSHARELISTSPROC}{PFNWGLSHARELISTSPROC}}
+{\footnotesize\ttfamily typedef BOOL(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFNWGLSHARELISTSPROC) (HGLRC hrc\+Srv\+Share, HGLRC hrc\+Srv\+Source)}
+
+\Hypertarget{wgl_8h_af12c284fbd5163f837f0a221024d3c0e}\label{wgl_8h_af12c284fbd5163f837f0a221024d3c0e} 
+\index{wgl.h@{wgl.h}!PFNWGLSWAPINTERVALEXTPROC@{PFNWGLSWAPINTERVALEXTPROC}}
+\index{PFNWGLSWAPINTERVALEXTPROC@{PFNWGLSWAPINTERVALEXTPROC}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{PFNWGLSWAPINTERVALEXTPROC}{PFNWGLSWAPINTERVALEXTPROC}}
+{\footnotesize\ttfamily typedef BOOL(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFNWGLSWAPINTERVALEXTPROC) (int interval)}
+
+\Hypertarget{wgl_8h_abe99f9cba87ad1fb8bcdcdc5ae1d7dba}\label{wgl_8h_abe99f9cba87ad1fb8bcdcdc5ae1d7dba} 
+\index{wgl.h@{wgl.h}!PFNWGLSWAPLAYERBUFFERSPROC@{PFNWGLSWAPLAYERBUFFERSPROC}}
+\index{PFNWGLSWAPLAYERBUFFERSPROC@{PFNWGLSWAPLAYERBUFFERSPROC}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{PFNWGLSWAPLAYERBUFFERSPROC}{PFNWGLSWAPLAYERBUFFERSPROC}}
+{\footnotesize\ttfamily typedef BOOL(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFNWGLSWAPLAYERBUFFERSPROC) (HDC hdc, UINT fu\+Flags)}
+
+\Hypertarget{wgl_8h_a096d215c42077c2975c40f195c7a25cf}\label{wgl_8h_a096d215c42077c2975c40f195c7a25cf} 
+\index{wgl.h@{wgl.h}!PFNWGLUSEFONTBITMAPSAPROC@{PFNWGLUSEFONTBITMAPSAPROC}}
+\index{PFNWGLUSEFONTBITMAPSAPROC@{PFNWGLUSEFONTBITMAPSAPROC}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{PFNWGLUSEFONTBITMAPSAPROC}{PFNWGLUSEFONTBITMAPSAPROC}}
+{\footnotesize\ttfamily typedef BOOL(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFNWGLUSEFONTBITMAPSAPROC) (HDC h\+DC, DWORD first, DWORD count, DWORD list\+Base)}
+
+\Hypertarget{wgl_8h_a03dd862bf2aac188a9e70464dcaa8806}\label{wgl_8h_a03dd862bf2aac188a9e70464dcaa8806} 
+\index{wgl.h@{wgl.h}!PFNWGLUSEFONTBITMAPSPROC@{PFNWGLUSEFONTBITMAPSPROC}}
+\index{PFNWGLUSEFONTBITMAPSPROC@{PFNWGLUSEFONTBITMAPSPROC}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{PFNWGLUSEFONTBITMAPSPROC}{PFNWGLUSEFONTBITMAPSPROC}}
+{\footnotesize\ttfamily typedef BOOL(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFNWGLUSEFONTBITMAPSPROC) (HDC h\+DC, DWORD first, DWORD count, DWORD list\+Base)}
+
+\Hypertarget{wgl_8h_a43cedf36cde210d30ed4940930d480e0}\label{wgl_8h_a43cedf36cde210d30ed4940930d480e0} 
+\index{wgl.h@{wgl.h}!PFNWGLUSEFONTBITMAPSWPROC@{PFNWGLUSEFONTBITMAPSWPROC}}
+\index{PFNWGLUSEFONTBITMAPSWPROC@{PFNWGLUSEFONTBITMAPSWPROC}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{PFNWGLUSEFONTBITMAPSWPROC}{PFNWGLUSEFONTBITMAPSWPROC}}
+{\footnotesize\ttfamily typedef BOOL(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFNWGLUSEFONTBITMAPSWPROC) (HDC h\+DC, DWORD first, DWORD count, DWORD list\+Base)}
+
+\Hypertarget{wgl_8h_a5aec9181e39b9554752217a2688a9b51}\label{wgl_8h_a5aec9181e39b9554752217a2688a9b51} 
+\index{wgl.h@{wgl.h}!PFNWGLUSEFONTOUTLINESAPROC@{PFNWGLUSEFONTOUTLINESAPROC}}
+\index{PFNWGLUSEFONTOUTLINESAPROC@{PFNWGLUSEFONTOUTLINESAPROC}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{PFNWGLUSEFONTOUTLINESAPROC}{PFNWGLUSEFONTOUTLINESAPROC}}
+{\footnotesize\ttfamily typedef BOOL(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFNWGLUSEFONTOUTLINESAPROC) (HDC h\+DC, DWORD first, DWORD count, DWORD list\+Base, FLOAT deviation, FLOAT extrusion, int format, LPGLYPHMETRICSFLOAT lpgmf)}
+
+\Hypertarget{wgl_8h_a9a3d35f1ae3036b5741d79b12f8a1523}\label{wgl_8h_a9a3d35f1ae3036b5741d79b12f8a1523} 
+\index{wgl.h@{wgl.h}!PFNWGLUSEFONTOUTLINESPROC@{PFNWGLUSEFONTOUTLINESPROC}}
+\index{PFNWGLUSEFONTOUTLINESPROC@{PFNWGLUSEFONTOUTLINESPROC}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{PFNWGLUSEFONTOUTLINESPROC}{PFNWGLUSEFONTOUTLINESPROC}}
+{\footnotesize\ttfamily typedef BOOL(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFNWGLUSEFONTOUTLINESPROC) (HDC h\+DC, DWORD first, DWORD count, DWORD list\+Base, FLOAT deviation, FLOAT extrusion, int format, LPGLYPHMETRICSFLOAT lpgmf)}
+
+\Hypertarget{wgl_8h_a3079da56bba8a0ace6b9551d77084b6e}\label{wgl_8h_a3079da56bba8a0ace6b9551d77084b6e} 
+\index{wgl.h@{wgl.h}!PFNWGLUSEFONTOUTLINESWPROC@{PFNWGLUSEFONTOUTLINESWPROC}}
+\index{PFNWGLUSEFONTOUTLINESWPROC@{PFNWGLUSEFONTOUTLINESWPROC}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{PFNWGLUSEFONTOUTLINESWPROC}{PFNWGLUSEFONTOUTLINESWPROC}}
+{\footnotesize\ttfamily typedef BOOL(\mbox{\hyperlink{examples_2opengl_2gl_8h_ae53ad9236de14aa81b547c1c3a6d4774}{GLAD\+\_\+\+API\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFNWGLUSEFONTOUTLINESWPROC) (HDC h\+DC, DWORD first, DWORD count, DWORD list\+Base, FLOAT deviation, FLOAT extrusion, int format, LPGLYPHMETRICSFLOAT lpgmf)}
+
+\Hypertarget{wgl_8h_afeaad4eb2ceb32236deb77d209ce1f7f}\label{wgl_8h_afeaad4eb2ceb32236deb77d209ce1f7f} 
+\index{wgl.h@{wgl.h}!PGPU\_DEVICE@{PGPU\_DEVICE}}
+\index{PGPU\_DEVICE@{PGPU\_DEVICE}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{PGPU\_DEVICE}{PGPU\_DEVICE}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct___g_p_u___d_e_v_i_c_e}{\+\_\+\+GPU\+\_\+\+DEVICE}}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{wgl_8h_afeaad4eb2ceb32236deb77d209ce1f7f}{PGPU\+\_\+\+DEVICE}}}
+
+
+
+\doxysubsection{Dokumentacja funkcji}
+\Hypertarget{wgl_8h_ac8c780d847b73fc3bb6630af090a0a5e}\label{wgl_8h_ac8c780d847b73fc3bb6630af090a0a5e} 
+\index{wgl.h@{wgl.h}!DECLARE\_HANDLE@{DECLARE\_HANDLE}}
+\index{DECLARE\_HANDLE@{DECLARE\_HANDLE}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_HANDLE()}{DECLARE\_HANDLE()}\hspace{0.1cm}{\footnotesize\ttfamily [1/7]}}
+{\footnotesize\ttfamily DECLARE\+\_\+\+HANDLE (\begin{DoxyParamCaption}\item[{HGPUNV}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{wgl_8h_a2323c13d0f42654f004c358af0753921}\label{wgl_8h_a2323c13d0f42654f004c358af0753921} 
+\index{wgl.h@{wgl.h}!DECLARE\_HANDLE@{DECLARE\_HANDLE}}
+\index{DECLARE\_HANDLE@{DECLARE\_HANDLE}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_HANDLE()}{DECLARE\_HANDLE()}\hspace{0.1cm}{\footnotesize\ttfamily [2/7]}}
+{\footnotesize\ttfamily DECLARE\+\_\+\+HANDLE (\begin{DoxyParamCaption}\item[{HPBUFFERARB}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{wgl_8h_ad121866d66db9d4244bc5b63347dfdf0}\label{wgl_8h_ad121866d66db9d4244bc5b63347dfdf0} 
+\index{wgl.h@{wgl.h}!DECLARE\_HANDLE@{DECLARE\_HANDLE}}
+\index{DECLARE\_HANDLE@{DECLARE\_HANDLE}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_HANDLE()}{DECLARE\_HANDLE()}\hspace{0.1cm}{\footnotesize\ttfamily [3/7]}}
+{\footnotesize\ttfamily DECLARE\+\_\+\+HANDLE (\begin{DoxyParamCaption}\item[{HPBUFFEREXT}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{wgl_8h_a54e641a4b8de42243647fd7482e472ff}\label{wgl_8h_a54e641a4b8de42243647fd7482e472ff} 
+\index{wgl.h@{wgl.h}!DECLARE\_HANDLE@{DECLARE\_HANDLE}}
+\index{DECLARE\_HANDLE@{DECLARE\_HANDLE}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_HANDLE()}{DECLARE\_HANDLE()}\hspace{0.1cm}{\footnotesize\ttfamily [4/7]}}
+{\footnotesize\ttfamily DECLARE\+\_\+\+HANDLE (\begin{DoxyParamCaption}\item[{HPGPUNV}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{wgl_8h_aee641dec07ca3cb211d0101a520075a7}\label{wgl_8h_aee641dec07ca3cb211d0101a520075a7} 
+\index{wgl.h@{wgl.h}!DECLARE\_HANDLE@{DECLARE\_HANDLE}}
+\index{DECLARE\_HANDLE@{DECLARE\_HANDLE}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_HANDLE()}{DECLARE\_HANDLE()}\hspace{0.1cm}{\footnotesize\ttfamily [5/7]}}
+{\footnotesize\ttfamily DECLARE\+\_\+\+HANDLE (\begin{DoxyParamCaption}\item[{HPVIDEODEV}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{wgl_8h_a656d791c955682368207c1fe3a662401}\label{wgl_8h_a656d791c955682368207c1fe3a662401} 
+\index{wgl.h@{wgl.h}!DECLARE\_HANDLE@{DECLARE\_HANDLE}}
+\index{DECLARE\_HANDLE@{DECLARE\_HANDLE}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_HANDLE()}{DECLARE\_HANDLE()}\hspace{0.1cm}{\footnotesize\ttfamily [6/7]}}
+{\footnotesize\ttfamily DECLARE\+\_\+\+HANDLE (\begin{DoxyParamCaption}\item[{HVIDEOINPUTDEVICENV}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{wgl_8h_a151582be63bbce7f4b7e0ae262a257dc}\label{wgl_8h_a151582be63bbce7f4b7e0ae262a257dc} 
+\index{wgl.h@{wgl.h}!DECLARE\_HANDLE@{DECLARE\_HANDLE}}
+\index{DECLARE\_HANDLE@{DECLARE\_HANDLE}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_HANDLE()}{DECLARE\_HANDLE()}\hspace{0.1cm}{\footnotesize\ttfamily [7/7]}}
+{\footnotesize\ttfamily DECLARE\+\_\+\+HANDLE (\begin{DoxyParamCaption}\item[{HVIDEOOUTPUTDEVICENV}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Dokumentacja zmiennych}
+\Hypertarget{wgl_8h_a3d4926ada237bb28e22c7a7e138d0f3d}\label{wgl_8h_a3d4926ada237bb28e22c7a7e138d0f3d} 
+\index{wgl.h@{wgl.h}!SF\_GLAD\_WGL\_ARB\_create\_context@{SF\_GLAD\_WGL\_ARB\_create\_context}}
+\index{SF\_GLAD\_WGL\_ARB\_create\_context@{SF\_GLAD\_WGL\_ARB\_create\_context}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{SF\_GLAD\_WGL\_ARB\_create\_context}{SF\_GLAD\_WGL\_ARB\_create\_context}}
+{\footnotesize\ttfamily \mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}} int SF\+\_\+\+GLAD\+\_\+\+WGL\+\_\+\+ARB\+\_\+create\+\_\+context}
+
+\Hypertarget{wgl_8h_aedf59b140c359b80b0aeba41b14e8238}\label{wgl_8h_aedf59b140c359b80b0aeba41b14e8238} 
+\index{wgl.h@{wgl.h}!SF\_GLAD\_WGL\_ARB\_create\_context\_profile@{SF\_GLAD\_WGL\_ARB\_create\_context\_profile}}
+\index{SF\_GLAD\_WGL\_ARB\_create\_context\_profile@{SF\_GLAD\_WGL\_ARB\_create\_context\_profile}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{SF\_GLAD\_WGL\_ARB\_create\_context\_profile}{SF\_GLAD\_WGL\_ARB\_create\_context\_profile}}
+{\footnotesize\ttfamily \mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}} int SF\+\_\+\+GLAD\+\_\+\+WGL\+\_\+\+ARB\+\_\+create\+\_\+context\+\_\+profile}
+
+\Hypertarget{wgl_8h_afdf445fc529b961d708b386d0ee87b01}\label{wgl_8h_afdf445fc529b961d708b386d0ee87b01} 
+\index{wgl.h@{wgl.h}!SF\_GLAD\_WGL\_ARB\_extensions\_string@{SF\_GLAD\_WGL\_ARB\_extensions\_string}}
+\index{SF\_GLAD\_WGL\_ARB\_extensions\_string@{SF\_GLAD\_WGL\_ARB\_extensions\_string}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{SF\_GLAD\_WGL\_ARB\_extensions\_string}{SF\_GLAD\_WGL\_ARB\_extensions\_string}}
+{\footnotesize\ttfamily \mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}} int SF\+\_\+\+GLAD\+\_\+\+WGL\+\_\+\+ARB\+\_\+extensions\+\_\+string}
+
+\Hypertarget{wgl_8h_a844b04a7995159a30d4158363186e802}\label{wgl_8h_a844b04a7995159a30d4158363186e802} 
+\index{wgl.h@{wgl.h}!SF\_GLAD\_WGL\_ARB\_framebuffer\_sRGB@{SF\_GLAD\_WGL\_ARB\_framebuffer\_sRGB}}
+\index{SF\_GLAD\_WGL\_ARB\_framebuffer\_sRGB@{SF\_GLAD\_WGL\_ARB\_framebuffer\_sRGB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{SF\_GLAD\_WGL\_ARB\_framebuffer\_sRGB}{SF\_GLAD\_WGL\_ARB\_framebuffer\_sRGB}}
+{\footnotesize\ttfamily \mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}} int SF\+\_\+\+GLAD\+\_\+\+WGL\+\_\+\+ARB\+\_\+framebuffer\+\_\+s\+RGB}
+
+\Hypertarget{wgl_8h_afdcd9467a5a872eec40b31cee3bc6d58}\label{wgl_8h_afdcd9467a5a872eec40b31cee3bc6d58} 
+\index{wgl.h@{wgl.h}!SF\_GLAD\_WGL\_ARB\_multisample@{SF\_GLAD\_WGL\_ARB\_multisample}}
+\index{SF\_GLAD\_WGL\_ARB\_multisample@{SF\_GLAD\_WGL\_ARB\_multisample}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{SF\_GLAD\_WGL\_ARB\_multisample}{SF\_GLAD\_WGL\_ARB\_multisample}}
+{\footnotesize\ttfamily \mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}} int SF\+\_\+\+GLAD\+\_\+\+WGL\+\_\+\+ARB\+\_\+multisample}
+
+\Hypertarget{wgl_8h_addec55c80854178b4a57d64ebe1ab94c}\label{wgl_8h_addec55c80854178b4a57d64ebe1ab94c} 
+\index{wgl.h@{wgl.h}!SF\_GLAD\_WGL\_ARB\_pbuffer@{SF\_GLAD\_WGL\_ARB\_pbuffer}}
+\index{SF\_GLAD\_WGL\_ARB\_pbuffer@{SF\_GLAD\_WGL\_ARB\_pbuffer}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{SF\_GLAD\_WGL\_ARB\_pbuffer}{SF\_GLAD\_WGL\_ARB\_pbuffer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}} int SF\+\_\+\+GLAD\+\_\+\+WGL\+\_\+\+ARB\+\_\+pbuffer}
+
+\Hypertarget{wgl_8h_abcb3120c080fabb69d8145e5160800e0}\label{wgl_8h_abcb3120c080fabb69d8145e5160800e0} 
+\index{wgl.h@{wgl.h}!SF\_GLAD\_WGL\_ARB\_pixel\_format@{SF\_GLAD\_WGL\_ARB\_pixel\_format}}
+\index{SF\_GLAD\_WGL\_ARB\_pixel\_format@{SF\_GLAD\_WGL\_ARB\_pixel\_format}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{SF\_GLAD\_WGL\_ARB\_pixel\_format}{SF\_GLAD\_WGL\_ARB\_pixel\_format}}
+{\footnotesize\ttfamily \mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}} int SF\+\_\+\+GLAD\+\_\+\+WGL\+\_\+\+ARB\+\_\+pixel\+\_\+format}
+
+\Hypertarget{wgl_8h_aa2d8e6f7965d8727f68638ab6596d31f}\label{wgl_8h_aa2d8e6f7965d8727f68638ab6596d31f} 
+\index{wgl.h@{wgl.h}!SF\_GLAD\_WGL\_EXT\_extensions\_string@{SF\_GLAD\_WGL\_EXT\_extensions\_string}}
+\index{SF\_GLAD\_WGL\_EXT\_extensions\_string@{SF\_GLAD\_WGL\_EXT\_extensions\_string}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{SF\_GLAD\_WGL\_EXT\_extensions\_string}{SF\_GLAD\_WGL\_EXT\_extensions\_string}}
+{\footnotesize\ttfamily \mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}} int SF\+\_\+\+GLAD\+\_\+\+WGL\+\_\+\+EXT\+\_\+extensions\+\_\+string}
+
+\Hypertarget{wgl_8h_a3fe31ba60adc8c999e4e2304c6a95190}\label{wgl_8h_a3fe31ba60adc8c999e4e2304c6a95190} 
+\index{wgl.h@{wgl.h}!SF\_GLAD\_WGL\_EXT\_framebuffer\_sRGB@{SF\_GLAD\_WGL\_EXT\_framebuffer\_sRGB}}
+\index{SF\_GLAD\_WGL\_EXT\_framebuffer\_sRGB@{SF\_GLAD\_WGL\_EXT\_framebuffer\_sRGB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{SF\_GLAD\_WGL\_EXT\_framebuffer\_sRGB}{SF\_GLAD\_WGL\_EXT\_framebuffer\_sRGB}}
+{\footnotesize\ttfamily \mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}} int SF\+\_\+\+GLAD\+\_\+\+WGL\+\_\+\+EXT\+\_\+framebuffer\+\_\+s\+RGB}
+
+\Hypertarget{wgl_8h_afb1b4be9e816c2712645b104d8df0a20}\label{wgl_8h_afb1b4be9e816c2712645b104d8df0a20} 
+\index{wgl.h@{wgl.h}!SF\_GLAD\_WGL\_EXT\_swap\_control@{SF\_GLAD\_WGL\_EXT\_swap\_control}}
+\index{SF\_GLAD\_WGL\_EXT\_swap\_control@{SF\_GLAD\_WGL\_EXT\_swap\_control}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{SF\_GLAD\_WGL\_EXT\_swap\_control}{SF\_GLAD\_WGL\_EXT\_swap\_control}}
+{\footnotesize\ttfamily \mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}} int SF\+\_\+\+GLAD\+\_\+\+WGL\+\_\+\+EXT\+\_\+swap\+\_\+control}
+
+\Hypertarget{wgl_8h_a829f60e7a92d3de92afc181ade21d38f}\label{wgl_8h_a829f60e7a92d3de92afc181ade21d38f} 
+\index{wgl.h@{wgl.h}!SF\_GLAD\_WGL\_VERSION\_1\_0@{SF\_GLAD\_WGL\_VERSION\_1\_0}}
+\index{SF\_GLAD\_WGL\_VERSION\_1\_0@{SF\_GLAD\_WGL\_VERSION\_1\_0}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{SF\_GLAD\_WGL\_VERSION\_1\_0}{SF\_GLAD\_WGL\_VERSION\_1\_0}}
+{\footnotesize\ttfamily \mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}} int SF\+\_\+\+GLAD\+\_\+\+WGL\+\_\+\+VERSION\+\_\+1\+\_\+0}
+
+\Hypertarget{wgl_8h_a3bfdb69c4378331f1b9ff9ed8f10cf99}\label{wgl_8h_a3bfdb69c4378331f1b9ff9ed8f10cf99} 
+\index{wgl.h@{wgl.h}!sf\_glad\_wglChoosePixelFormatARB@{sf\_glad\_wglChoosePixelFormatARB}}
+\index{sf\_glad\_wglChoosePixelFormatARB@{sf\_glad\_wglChoosePixelFormatARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{sf\_glad\_wglChoosePixelFormatARB}{sf\_glad\_wglChoosePixelFormatARB}}
+{\footnotesize\ttfamily \mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}} \mbox{\hyperlink{wgl_8h_a58c610f540c89e65fea0c535c664e962}{PFNWGLCHOOSEPIXELFORMATARBPROC}} sf\+\_\+glad\+\_\+wgl\+Choose\+Pixel\+Format\+ARB}
+
+\Hypertarget{wgl_8h_ac14299eb06101d4e88bd130224a1d88b}\label{wgl_8h_ac14299eb06101d4e88bd130224a1d88b} 
+\index{wgl.h@{wgl.h}!sf\_glad\_wglCreateContextAttribsARB@{sf\_glad\_wglCreateContextAttribsARB}}
+\index{sf\_glad\_wglCreateContextAttribsARB@{sf\_glad\_wglCreateContextAttribsARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{sf\_glad\_wglCreateContextAttribsARB}{sf\_glad\_wglCreateContextAttribsARB}}
+{\footnotesize\ttfamily \mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}} \mbox{\hyperlink{wgl_8h_a3791e4afa3ab9a2db774d7dfb218f457}{PFNWGLCREATECONTEXTATTRIBSARBPROC}} sf\+\_\+glad\+\_\+wgl\+Create\+Context\+Attribs\+ARB}
+
+\Hypertarget{wgl_8h_abb49a1c4ba8c8daf5da72fe2d2596fc6}\label{wgl_8h_abb49a1c4ba8c8daf5da72fe2d2596fc6} 
+\index{wgl.h@{wgl.h}!sf\_glad\_wglCreatePbufferARB@{sf\_glad\_wglCreatePbufferARB}}
+\index{sf\_glad\_wglCreatePbufferARB@{sf\_glad\_wglCreatePbufferARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{sf\_glad\_wglCreatePbufferARB}{sf\_glad\_wglCreatePbufferARB}}
+{\footnotesize\ttfamily \mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}} \mbox{\hyperlink{wgl_8h_a28af55bb11b5efcfe432d80f57288484}{PFNWGLCREATEPBUFFERARBPROC}} sf\+\_\+glad\+\_\+wgl\+Create\+Pbuffer\+ARB}
+
+\Hypertarget{wgl_8h_abf4735d33e056f410d1e384a85d09cdd}\label{wgl_8h_abf4735d33e056f410d1e384a85d09cdd} 
+\index{wgl.h@{wgl.h}!sf\_glad\_wglDestroyPbufferARB@{sf\_glad\_wglDestroyPbufferARB}}
+\index{sf\_glad\_wglDestroyPbufferARB@{sf\_glad\_wglDestroyPbufferARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{sf\_glad\_wglDestroyPbufferARB}{sf\_glad\_wglDestroyPbufferARB}}
+{\footnotesize\ttfamily \mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}} \mbox{\hyperlink{wgl_8h_a5bfc4fe61272a6635abcf0d524859180}{PFNWGLDESTROYPBUFFERARBPROC}} sf\+\_\+glad\+\_\+wgl\+Destroy\+Pbuffer\+ARB}
+
+\Hypertarget{wgl_8h_a79e148cba70e70cf6440082050516048}\label{wgl_8h_a79e148cba70e70cf6440082050516048} 
+\index{wgl.h@{wgl.h}!sf\_glad\_wglGetExtensionsStringARB@{sf\_glad\_wglGetExtensionsStringARB}}
+\index{sf\_glad\_wglGetExtensionsStringARB@{sf\_glad\_wglGetExtensionsStringARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{sf\_glad\_wglGetExtensionsStringARB}{sf\_glad\_wglGetExtensionsStringARB}}
+{\footnotesize\ttfamily \mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}} \mbox{\hyperlink{wgl_8h_a2c0715d4251a68da58bc5eae5ae6d720}{PFNWGLGETEXTENSIONSSTRINGARBPROC}} sf\+\_\+glad\+\_\+wgl\+Get\+Extensions\+String\+ARB}
+
+\Hypertarget{wgl_8h_a1a93b7e0affb8d9fe444a8c954529383}\label{wgl_8h_a1a93b7e0affb8d9fe444a8c954529383} 
+\index{wgl.h@{wgl.h}!sf\_glad\_wglGetExtensionsStringEXT@{sf\_glad\_wglGetExtensionsStringEXT}}
+\index{sf\_glad\_wglGetExtensionsStringEXT@{sf\_glad\_wglGetExtensionsStringEXT}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{sf\_glad\_wglGetExtensionsStringEXT}{sf\_glad\_wglGetExtensionsStringEXT}}
+{\footnotesize\ttfamily \mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}} \mbox{\hyperlink{wgl_8h_adca220242bc21024bc21f0578ee83e40}{PFNWGLGETEXTENSIONSSTRINGEXTPROC}} sf\+\_\+glad\+\_\+wgl\+Get\+Extensions\+String\+EXT}
+
+\Hypertarget{wgl_8h_aea2fc9a37eb4ee85863d928804297262}\label{wgl_8h_aea2fc9a37eb4ee85863d928804297262} 
+\index{wgl.h@{wgl.h}!sf\_glad\_wglGetPbufferDCARB@{sf\_glad\_wglGetPbufferDCARB}}
+\index{sf\_glad\_wglGetPbufferDCARB@{sf\_glad\_wglGetPbufferDCARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{sf\_glad\_wglGetPbufferDCARB}{sf\_glad\_wglGetPbufferDCARB}}
+{\footnotesize\ttfamily \mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}} \mbox{\hyperlink{wgl_8h_a87b5a9987d82575272d2ec87da0621e5}{PFNWGLGETPBUFFERDCARBPROC}} sf\+\_\+glad\+\_\+wgl\+Get\+Pbuffer\+DCARB}
+
+\Hypertarget{wgl_8h_a32db980fd2a3183df081f548ebeb92b0}\label{wgl_8h_a32db980fd2a3183df081f548ebeb92b0} 
+\index{wgl.h@{wgl.h}!sf\_glad\_wglGetPixelFormatAttribfvARB@{sf\_glad\_wglGetPixelFormatAttribfvARB}}
+\index{sf\_glad\_wglGetPixelFormatAttribfvARB@{sf\_glad\_wglGetPixelFormatAttribfvARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{sf\_glad\_wglGetPixelFormatAttribfvARB}{sf\_glad\_wglGetPixelFormatAttribfvARB}}
+{\footnotesize\ttfamily \mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}} \mbox{\hyperlink{wgl_8h_a305bede050377d3a417e8431881d34f9}{PFNWGLGETPIXELFORMATATTRIBFVARBPROC}} sf\+\_\+glad\+\_\+wgl\+Get\+Pixel\+Format\+Attribfv\+ARB}
+
+\Hypertarget{wgl_8h_a0bbbca7a2193919ad8f3865a10150083}\label{wgl_8h_a0bbbca7a2193919ad8f3865a10150083} 
+\index{wgl.h@{wgl.h}!sf\_glad\_wglGetPixelFormatAttribivARB@{sf\_glad\_wglGetPixelFormatAttribivARB}}
+\index{sf\_glad\_wglGetPixelFormatAttribivARB@{sf\_glad\_wglGetPixelFormatAttribivARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{sf\_glad\_wglGetPixelFormatAttribivARB}{sf\_glad\_wglGetPixelFormatAttribivARB}}
+{\footnotesize\ttfamily \mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}} \mbox{\hyperlink{wgl_8h_a6dee6ddcc3ca46cff0f16ba72c380c03}{PFNWGLGETPIXELFORMATATTRIBIVARBPROC}} sf\+\_\+glad\+\_\+wgl\+Get\+Pixel\+Format\+Attribiv\+ARB}
+
+\Hypertarget{wgl_8h_a53c8e361af02d82cf89f5dfc4b820b68}\label{wgl_8h_a53c8e361af02d82cf89f5dfc4b820b68} 
+\index{wgl.h@{wgl.h}!sf\_glad\_wglGetSwapIntervalEXT@{sf\_glad\_wglGetSwapIntervalEXT}}
+\index{sf\_glad\_wglGetSwapIntervalEXT@{sf\_glad\_wglGetSwapIntervalEXT}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{sf\_glad\_wglGetSwapIntervalEXT}{sf\_glad\_wglGetSwapIntervalEXT}}
+{\footnotesize\ttfamily \mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}} \mbox{\hyperlink{wgl_8h_af56cdbd6243329afc4bd0dcd0ec9c6ab}{PFNWGLGETSWAPINTERVALEXTPROC}} sf\+\_\+glad\+\_\+wgl\+Get\+Swap\+Interval\+EXT}
+
+\Hypertarget{wgl_8h_acbff66120f132c2357eb08bf76050b39}\label{wgl_8h_acbff66120f132c2357eb08bf76050b39} 
+\index{wgl.h@{wgl.h}!sf\_glad\_wglQueryPbufferARB@{sf\_glad\_wglQueryPbufferARB}}
+\index{sf\_glad\_wglQueryPbufferARB@{sf\_glad\_wglQueryPbufferARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{sf\_glad\_wglQueryPbufferARB}{sf\_glad\_wglQueryPbufferARB}}
+{\footnotesize\ttfamily \mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}} \mbox{\hyperlink{wgl_8h_a2a0044c12ec87f00f4388077f1cfacfa}{PFNWGLQUERYPBUFFERARBPROC}} sf\+\_\+glad\+\_\+wgl\+Query\+Pbuffer\+ARB}
+
+\Hypertarget{wgl_8h_ad2b64853d180ef645b28b781268c0618}\label{wgl_8h_ad2b64853d180ef645b28b781268c0618} 
+\index{wgl.h@{wgl.h}!sf\_glad\_wglReleasePbufferDCARB@{sf\_glad\_wglReleasePbufferDCARB}}
+\index{sf\_glad\_wglReleasePbufferDCARB@{sf\_glad\_wglReleasePbufferDCARB}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{sf\_glad\_wglReleasePbufferDCARB}{sf\_glad\_wglReleasePbufferDCARB}}
+{\footnotesize\ttfamily \mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}} \mbox{\hyperlink{wgl_8h_aaf004ab851cd386dbd980af7d2787c71}{PFNWGLRELEASEPBUFFERDCARBPROC}} sf\+\_\+glad\+\_\+wgl\+Release\+Pbuffer\+DCARB}
+
+\Hypertarget{wgl_8h_adc53059c83ac5a291d3f01d912c96fee}\label{wgl_8h_adc53059c83ac5a291d3f01d912c96fee} 
+\index{wgl.h@{wgl.h}!sf\_glad\_wglSwapIntervalEXT@{sf\_glad\_wglSwapIntervalEXT}}
+\index{sf\_glad\_wglSwapIntervalEXT@{sf\_glad\_wglSwapIntervalEXT}!wgl.h@{wgl.h}}
+\doxysubsubsection{\texorpdfstring{sf\_glad\_wglSwapIntervalEXT}{sf\_glad\_wglSwapIntervalEXT}}
+{\footnotesize\ttfamily \mbox{\hyperlink{examples_2opengl_2gl_8h_a927dddebb543b0c410276ad0c2dd92ba}{GLAD\+\_\+\+API\+\_\+\+CALL}} \mbox{\hyperlink{wgl_8h_af12c284fbd5163f837f0a221024d3c0e}{PFNWGLSWAPINTERVALEXTPROC}} sf\+\_\+glad\+\_\+wgl\+Swap\+Interval\+EXT}
+

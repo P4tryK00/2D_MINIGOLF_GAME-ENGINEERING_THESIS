@@ -1,0 +1,143 @@
+\doxysection{Dokumentacja klasy Tile\+Map}
+\hypertarget{class_tile_map}{}\label{class_tile_map}\index{TileMap@{TileMap}}
+
+
+Klasa odpowiedzialna za renderowanie poziomu gry przy użyciu Vertex Array.  
+
+
+
+
+{\ttfamily \#include $<$Tile\+Map.\+h$>$}
+
+
+
+Diagram dziedziczenia dla Tile\+Map
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{class_tile_map__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagram współpracy dla Tile\+Map\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{class_tile_map__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_tile_map_a5f1b1220765294ed6f3f95607d2a9e4b}{load}} (const std\+::string \&tileset, sf\+::\+Vector2u tile\+Size, std\+::vector$<$ int $>$tiles, unsigned int width, unsigned int height)
+\begin{DoxyCompactList}\small\item\em Wczytuje dane mapy i generuje tablicę wierzchołków. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_tile_map_aadd711572c2abc576e705671cc55dfd7}{draw}} (sf\+::\+Render\+Target \&target, sf\+::\+Render\+States states) const
+\begin{DoxyCompactList}\small\item\em Nadpisana metoda draw z sf\+::\+Drawable. Obsługuje renderowanie tablicy wierzchołków z przypisaną teksturą. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Vertex\+Array \mbox{\hyperlink{class_tile_map_a1070824d191a06562a31df73cbe7fe99}{m\+\_\+vertices}}
+\begin{DoxyCompactList}\small\item\em Kolekcja wierzchołków reprezentująca kafelki (Quads). \end{DoxyCompactList}\item 
+const sf\+::\+Texture \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_tile_map_a64c27d5582e381d84f23442fb00606b3}{m\+\_\+tileset}}
+\begin{DoxyCompactList}\small\item\em Wskaźnik do tekstury źródłowej (tileset). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Klasa odpowiedzialna za renderowanie poziomu gry przy użyciu Vertex Array. 
+
+Klasa ta optymalizuje wyświetlanie mapy poprzez rysowanie całego poziomu jako jednego obiektu (jedno wywołanie draw) przy użyciu sf\+::\+Vertex\+Array. Jest to znacznie wydajniejsze niż rysowanie oddzielnych sprite\textquotesingle{}ów dla każdego kafelka. 
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_tile_map_aadd711572c2abc576e705671cc55dfd7}\label{class_tile_map_aadd711572c2abc576e705671cc55dfd7} 
+\index{TileMap@{TileMap}!draw@{draw}}
+\index{draw@{draw}!TileMap@{TileMap}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Tile\+Map\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target \&}]{target,  }\item[{sf\+::\+Render\+States}]{states }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Nadpisana metoda draw z sf\+::\+Drawable. Obsługuje renderowanie tablicy wierzchołków z przypisaną teksturą. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em target} & Cel renderowania (okno). \\
+\hline
+{\em states} & Stany renderowania (transformacja, tekstura). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_tile_map_a5f1b1220765294ed6f3f95607d2a9e4b}\label{class_tile_map_a5f1b1220765294ed6f3f95607d2a9e4b} 
+\index{TileMap@{TileMap}!load@{load}}
+\index{load@{load}!TileMap@{TileMap}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily bool Tile\+Map\+::load (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{tileset,  }\item[{sf\+::\+Vector2u}]{tile\+Size,  }\item[{std\+::vector$<$ int $>$}]{tiles,  }\item[{unsigned int}]{width,  }\item[{unsigned int}]{height }\end{DoxyParamCaption})}
+
+
+
+Wczytuje dane mapy i generuje tablicę wierzchołków. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em tileset} & Ścieżka do pliku tekstury (tileset) lub klucz w Resource\+Managerze. \\
+\hline
+{\em tile\+Size} & Wymiary pojedynczego kafelka (np. 32x32). \\
+\hline
+{\em tiles} & Wektor zawierający identyfikatory kafelków (indeksy w tilesecie). \\
+\hline
+{\em width} & Szerokość mapy w kafelkach. \\
+\hline
+{\em height} & Wysokość mapy w kafelkach. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+true jeśli wczytywanie się powiodło, false w przeciwnym razie. 
+\end{DoxyReturn}
+Oto graf wywołań dla tej funkcji\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{class_tile_map_a5f1b1220765294ed6f3f95607d2a9e4b_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=275pt]{class_tile_map_a5f1b1220765294ed6f3f95607d2a9e4b_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{class_tile_map_a64c27d5582e381d84f23442fb00606b3}\label{class_tile_map_a64c27d5582e381d84f23442fb00606b3} 
+\index{TileMap@{TileMap}!m\_tileset@{m\_tileset}}
+\index{m\_tileset@{m\_tileset}!TileMap@{TileMap}}
+\doxysubsubsection{\texorpdfstring{m\_tileset}{m\_tileset}}
+{\footnotesize\ttfamily const sf\+::\+Texture\texorpdfstring{$\ast$}{*} Tile\+Map\+::m\+\_\+tileset\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Wskaźnik do tekstury źródłowej (tileset). 
+
+\Hypertarget{class_tile_map_a1070824d191a06562a31df73cbe7fe99}\label{class_tile_map_a1070824d191a06562a31df73cbe7fe99} 
+\index{TileMap@{TileMap}!m\_vertices@{m\_vertices}}
+\index{m\_vertices@{m\_vertices}!TileMap@{TileMap}}
+\doxysubsubsection{\texorpdfstring{m\_vertices}{m\_vertices}}
+{\footnotesize\ttfamily sf\+::\+Vertex\+Array Tile\+Map\+::m\+\_\+vertices\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Kolekcja wierzchołków reprezentująca kafelki (Quads). 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_tile_map_8h}{Tile\+Map.\+h}}\item 
+\mbox{\hyperlink{_tile_map_8cpp}{Tile\+Map.\+cpp}}\end{DoxyCompactItemize}

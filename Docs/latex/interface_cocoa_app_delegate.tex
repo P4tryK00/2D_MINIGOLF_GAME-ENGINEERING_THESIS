@@ -1,0 +1,168 @@
+\doxysection{Dokumentacja klasy Cocoa\+App\+Delegate}
+\hypertarget{interface_cocoa_app_delegate}{}\label{interface_cocoa_app_delegate}\index{CocoaAppDelegate@{CocoaAppDelegate}}
+
+
+{\ttfamily \#include $<$Cocoa\+App\+Delegate.\+h$>$}
+
+
+
+Diagram dziedziczenia dla Cocoa\+App\+Delegate\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{interface_cocoa_app_delegate__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagram współpracy dla Cocoa\+App\+Delegate\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interface_cocoa_app_delegate__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(IBAction) -\/ \mbox{\hyperlink{interface_cocoa_app_delegate_af0f05475416061c891cf0cb9e94b2ef7}{color\+Changed\+:}}
+\item 
+(IBAction) -\/ \mbox{\hyperlink{interface_cocoa_app_delegate_acb3c30b521838dcbaa080e2007ce8dae}{rotation\+Changed\+:}}
+\item 
+(IBAction) -\/ \mbox{\hyperlink{interface_cocoa_app_delegate_abc1184569ff6d2d249857f0d7abf06ff}{visible\+Changed\+:}}
+\item 
+(IBAction) -\/ \mbox{\hyperlink{interface_cocoa_app_delegate_ad35583215e42434e1c37b52a51dac74a}{text\+Changed\+:}}
+\item 
+(IBAction) -\/ \mbox{\hyperlink{interface_cocoa_app_delegate_a16583070913559e6ccfe15b3cfb64feb}{update\+Text\+:}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Właściwości}
+\begin{DoxyCompactItemize}
+\item 
+IBOutlet NSWindow \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{interface_cocoa_app_delegate_aeded95e7cf8373f31f5b1db8feb6eed6}{window}}
+\item 
+IBOutlet NSView \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{interface_cocoa_app_delegate_a440f7ef0924957be825a11a961ebe0bd}{sfml\+View}}
+\item 
+IBOutlet NSText\+Field \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{interface_cocoa_app_delegate_aa1b61161d7617ac4129eebabfb1c4039}{text\+Field}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+NSWindow \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{interface_cocoa_app_delegate_ab460570c35d7655b917f1e3a3fb5ab9e}{m\+\_\+window}}
+\item 
+NSView \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{interface_cocoa_app_delegate_a9179270c7392ec65ea92e0ec7cb698ac}{m\+\_\+sfml\+View}}
+\item 
+NSText\+Field \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{interface_cocoa_app_delegate_a04a9dda4ba72d7b891e326f276fbf5cd}{m\+\_\+text\+Field}}
+\item 
+\mbox{\hyperlink{struct_s_f_m_lmain_window}{SFMLmain\+Window}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{interface_cocoa_app_delegate_a7ae8e88ef2075d61a55996dd492fb3fd}{m\+\_\+main\+Window}}
+\item 
+NSTimer \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{interface_cocoa_app_delegate_a02cea176810fc4c812e786c7276b4edb}{m\+\_\+render\+Timer}}
+\item 
+BOOL \mbox{\hyperlink{interface_cocoa_app_delegate_a3c5fc4c9ca55b02e5da4cfa0fbdb6b7b}{m\+\_\+visible}}
+\item 
+BOOL \mbox{\hyperlink{interface_cocoa_app_delegate_a359fe4ecdbe7d53b5ca1449bdf11194f}{m\+\_\+initialized}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Method Documentation}
+\Hypertarget{interface_cocoa_app_delegate_af0f05475416061c891cf0cb9e94b2ef7}\label{interface_cocoa_app_delegate_af0f05475416061c891cf0cb9e94b2ef7} 
+\index{CocoaAppDelegate@{CocoaAppDelegate}!colorChanged:@{colorChanged:}}
+\index{colorChanged:@{colorChanged:}!CocoaAppDelegate@{CocoaAppDelegate}}
+\doxysubsubsection{\texorpdfstring{colorChanged:}{colorChanged:}}
+{\footnotesize\ttfamily -\/ (IBAction) color\+Changed\+: \begin{DoxyParamCaption}\item[{(NSPop\+Up\+Button\texorpdfstring{$\ast$}{*})}]{sender }\end{DoxyParamCaption}}
+
+\Hypertarget{interface_cocoa_app_delegate_acb3c30b521838dcbaa080e2007ce8dae}\label{interface_cocoa_app_delegate_acb3c30b521838dcbaa080e2007ce8dae} 
+\index{CocoaAppDelegate@{CocoaAppDelegate}!rotationChanged:@{rotationChanged:}}
+\index{rotationChanged:@{rotationChanged:}!CocoaAppDelegate@{CocoaAppDelegate}}
+\doxysubsubsection{\texorpdfstring{rotationChanged:}{rotationChanged:}}
+{\footnotesize\ttfamily -\/ (IBAction) rotation\+Changed\+: \begin{DoxyParamCaption}\item[{(NSSlider\texorpdfstring{$\ast$}{*})}]{sender }\end{DoxyParamCaption}}
+
+\Hypertarget{interface_cocoa_app_delegate_ad35583215e42434e1c37b52a51dac74a}\label{interface_cocoa_app_delegate_ad35583215e42434e1c37b52a51dac74a} 
+\index{CocoaAppDelegate@{CocoaAppDelegate}!textChanged:@{textChanged:}}
+\index{textChanged:@{textChanged:}!CocoaAppDelegate@{CocoaAppDelegate}}
+\doxysubsubsection{\texorpdfstring{textChanged:}{textChanged:}}
+{\footnotesize\ttfamily -\/ (IBAction) text\+Changed\+: \begin{DoxyParamCaption}\item[{(NSText\+Field\texorpdfstring{$\ast$}{*})}]{sender }\end{DoxyParamCaption}}
+
+\Hypertarget{interface_cocoa_app_delegate_a16583070913559e6ccfe15b3cfb64feb}\label{interface_cocoa_app_delegate_a16583070913559e6ccfe15b3cfb64feb} 
+\index{CocoaAppDelegate@{CocoaAppDelegate}!updateText:@{updateText:}}
+\index{updateText:@{updateText:}!CocoaAppDelegate@{CocoaAppDelegate}}
+\doxysubsubsection{\texorpdfstring{updateText:}{updateText:}}
+{\footnotesize\ttfamily -\/ (IBAction) update\+Text\+: \begin{DoxyParamCaption}\item[{(NSButton\texorpdfstring{$\ast$}{*})}]{sender }\end{DoxyParamCaption}}
+
+\Hypertarget{interface_cocoa_app_delegate_abc1184569ff6d2d249857f0d7abf06ff}\label{interface_cocoa_app_delegate_abc1184569ff6d2d249857f0d7abf06ff} 
+\index{CocoaAppDelegate@{CocoaAppDelegate}!visibleChanged:@{visibleChanged:}}
+\index{visibleChanged:@{visibleChanged:}!CocoaAppDelegate@{CocoaAppDelegate}}
+\doxysubsubsection{\texorpdfstring{visibleChanged:}{visibleChanged:}}
+{\footnotesize\ttfamily -\/ (IBAction) visible\+Changed\+: \begin{DoxyParamCaption}\item[{(NSButton\texorpdfstring{$\ast$}{*})}]{sender }\end{DoxyParamCaption}}
+
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{interface_cocoa_app_delegate_a359fe4ecdbe7d53b5ca1449bdf11194f}\label{interface_cocoa_app_delegate_a359fe4ecdbe7d53b5ca1449bdf11194f} 
+\index{CocoaAppDelegate@{CocoaAppDelegate}!m\_initialized@{m\_initialized}}
+\index{m\_initialized@{m\_initialized}!CocoaAppDelegate@{CocoaAppDelegate}}
+\doxysubsubsection{\texorpdfstring{m\_initialized}{m\_initialized}}
+{\footnotesize\ttfamily -\/ (BOOL) m\+\_\+initialized\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{interface_cocoa_app_delegate_a7ae8e88ef2075d61a55996dd492fb3fd}\label{interface_cocoa_app_delegate_a7ae8e88ef2075d61a55996dd492fb3fd} 
+\index{CocoaAppDelegate@{CocoaAppDelegate}!m\_mainWindow@{m\_mainWindow}}
+\index{m\_mainWindow@{m\_mainWindow}!CocoaAppDelegate@{CocoaAppDelegate}}
+\doxysubsubsection{\texorpdfstring{m\_mainWindow}{m\_mainWindow}}
+{\footnotesize\ttfamily -\/ (\mbox{\hyperlink{struct_s_f_m_lmain_window}{SFMLmain\+Window}}\texorpdfstring{$\ast$}{*}) m\+\_\+main\+Window\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{interface_cocoa_app_delegate_a02cea176810fc4c812e786c7276b4edb}\label{interface_cocoa_app_delegate_a02cea176810fc4c812e786c7276b4edb} 
+\index{CocoaAppDelegate@{CocoaAppDelegate}!m\_renderTimer@{m\_renderTimer}}
+\index{m\_renderTimer@{m\_renderTimer}!CocoaAppDelegate@{CocoaAppDelegate}}
+\doxysubsubsection{\texorpdfstring{m\_renderTimer}{m\_renderTimer}}
+{\footnotesize\ttfamily -\/ (NSTimer\texorpdfstring{$\ast$}{*}) m\+\_\+render\+Timer\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{interface_cocoa_app_delegate_a9179270c7392ec65ea92e0ec7cb698ac}\label{interface_cocoa_app_delegate_a9179270c7392ec65ea92e0ec7cb698ac} 
+\index{CocoaAppDelegate@{CocoaAppDelegate}!m\_sfmlView@{m\_sfmlView}}
+\index{m\_sfmlView@{m\_sfmlView}!CocoaAppDelegate@{CocoaAppDelegate}}
+\doxysubsubsection{\texorpdfstring{m\_sfmlView}{m\_sfmlView}}
+{\footnotesize\ttfamily -\/ (NSView\texorpdfstring{$\ast$}{*}) m\+\_\+sfml\+View\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{interface_cocoa_app_delegate_a04a9dda4ba72d7b891e326f276fbf5cd}\label{interface_cocoa_app_delegate_a04a9dda4ba72d7b891e326f276fbf5cd} 
+\index{CocoaAppDelegate@{CocoaAppDelegate}!m\_textField@{m\_textField}}
+\index{m\_textField@{m\_textField}!CocoaAppDelegate@{CocoaAppDelegate}}
+\doxysubsubsection{\texorpdfstring{m\_textField}{m\_textField}}
+{\footnotesize\ttfamily -\/ (NSText\+Field\texorpdfstring{$\ast$}{*}) m\+\_\+text\+Field\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{interface_cocoa_app_delegate_a3c5fc4c9ca55b02e5da4cfa0fbdb6b7b}\label{interface_cocoa_app_delegate_a3c5fc4c9ca55b02e5da4cfa0fbdb6b7b} 
+\index{CocoaAppDelegate@{CocoaAppDelegate}!m\_visible@{m\_visible}}
+\index{m\_visible@{m\_visible}!CocoaAppDelegate@{CocoaAppDelegate}}
+\doxysubsubsection{\texorpdfstring{m\_visible}{m\_visible}}
+{\footnotesize\ttfamily -\/ (BOOL) m\+\_\+visible\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{interface_cocoa_app_delegate_ab460570c35d7655b917f1e3a3fb5ab9e}\label{interface_cocoa_app_delegate_ab460570c35d7655b917f1e3a3fb5ab9e} 
+\index{CocoaAppDelegate@{CocoaAppDelegate}!m\_window@{m\_window}}
+\index{m\_window@{m\_window}!CocoaAppDelegate@{CocoaAppDelegate}}
+\doxysubsubsection{\texorpdfstring{m\_window}{m\_window}}
+{\footnotesize\ttfamily -\/ (NSWindow\texorpdfstring{$\ast$}{*}) m\+\_\+window\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Dokumentacja właściwości}
+\Hypertarget{interface_cocoa_app_delegate_a440f7ef0924957be825a11a961ebe0bd}\label{interface_cocoa_app_delegate_a440f7ef0924957be825a11a961ebe0bd} 
+\index{CocoaAppDelegate@{CocoaAppDelegate}!sfmlView@{sfmlView}}
+\index{sfmlView@{sfmlView}!CocoaAppDelegate@{CocoaAppDelegate}}
+\doxysubsubsection{\texorpdfstring{sfmlView}{sfmlView}}
+{\footnotesize\ttfamily -\/ (IBOutlet NSView\texorpdfstring{$\ast$}{*}) sfml\+View\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [assign]}}
+
+\Hypertarget{interface_cocoa_app_delegate_aa1b61161d7617ac4129eebabfb1c4039}\label{interface_cocoa_app_delegate_aa1b61161d7617ac4129eebabfb1c4039} 
+\index{CocoaAppDelegate@{CocoaAppDelegate}!textField@{textField}}
+\index{textField@{textField}!CocoaAppDelegate@{CocoaAppDelegate}}
+\doxysubsubsection{\texorpdfstring{textField}{textField}}
+{\footnotesize\ttfamily -\/ (IBOutlet NSText\+Field\texorpdfstring{$\ast$}{*}) text\+Field\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [assign]}}
+
+\Hypertarget{interface_cocoa_app_delegate_aeded95e7cf8373f31f5b1db8feb6eed6}\label{interface_cocoa_app_delegate_aeded95e7cf8373f31f5b1db8feb6eed6} 
+\index{CocoaAppDelegate@{CocoaAppDelegate}!window@{window}}
+\index{window@{window}!CocoaAppDelegate@{CocoaAppDelegate}}
+\doxysubsubsection{\texorpdfstring{window}{window}}
+{\footnotesize\ttfamily -\/ (IBOutlet NSWindow\texorpdfstring{$\ast$}{*}) window\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [retain]}}
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/examples/cocoa/\mbox{\hyperlink{_cocoa_app_delegate_8h}{Cocoa\+App\+Delegate.\+h}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/examples/cocoa/\mbox{\hyperlink{_cocoa_app_delegate_8mm}{Cocoa\+App\+Delegate.\+mm}}\end{DoxyCompactItemize}

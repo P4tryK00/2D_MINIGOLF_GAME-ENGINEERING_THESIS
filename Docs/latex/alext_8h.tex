@@ -1,0 +1,1406 @@
+\doxysection{Dokumentacja pliku cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/extlibs/headers/\+AL/alext.h}
+\hypertarget{alext_8h}{}\label{alext_8h}\index{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/AL/alext.h@{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/AL/alext.h}}
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$inttypes.\+h$>$}\newline
+{\ttfamily \#include "{}alc.\+h"{}}\newline
+{\ttfamily \#include "{}al.\+h"{}}\newline
+{\ttfamily \#include "{}efx.\+h"{}}\newline
+Wykres zależności załączania dla alext.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{alext_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Definicje}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{alext_8h_a446f06ec4ed637d6ed7060a66ecd4d7d}{AL\+\_\+\+LOKI\+\_\+\+IMA\+\_\+\+ADPCM\+\_\+format}}~1
+\item 
+\#define \mbox{\hyperlink{alext_8h_aa10665b6cb087aae4c59b0d4be6c5288}{AL\+\_\+\+FORMAT\+\_\+\+IMA\+\_\+\+ADPCM\+\_\+\+MONO16\+\_\+\+EXT}}~0x10000
+\item 
+\#define \mbox{\hyperlink{alext_8h_aa182f02d5ad06aaf62160a7187ed00ab}{AL\+\_\+\+FORMAT\+\_\+\+IMA\+\_\+\+ADPCM\+\_\+\+STEREO16\+\_\+\+EXT}}~0x10001
+\item 
+\#define \mbox{\hyperlink{alext_8h_ad99cb226713c498c35a3af414b959a73}{AL\+\_\+\+LOKI\+\_\+\+WAVE\+\_\+format}}~1
+\item 
+\#define \mbox{\hyperlink{alext_8h_a6ba270d33106ed108226e6b723e7e843}{AL\+\_\+\+FORMAT\+\_\+\+WAVE\+\_\+\+EXT}}~0x10002
+\item 
+\#define \mbox{\hyperlink{alext_8h_aad72bd48e64234aaea85e513d0e25780}{AL\+\_\+\+EXT\+\_\+vorbis}}~1
+\item 
+\#define \mbox{\hyperlink{alext_8h_af6eb94067be8377f04a1d948d7f8658f}{AL\+\_\+\+FORMAT\+\_\+\+VORBIS\+\_\+\+EXT}}~0x10003
+\item 
+\#define \mbox{\hyperlink{alext_8h_adce8d225a88850373359d6ea726fe1a0}{AL\+\_\+\+LOKI\+\_\+quadriphonic}}~1
+\item 
+\#define \mbox{\hyperlink{alext_8h_a50207369d2feaf297dcd5deae58733c4}{AL\+\_\+\+FORMAT\+\_\+\+QUAD8\+\_\+\+LOKI}}~0x10004
+\item 
+\#define \mbox{\hyperlink{alext_8h_aaaf9512bcb4ebc9482ef6614a981ae76}{AL\+\_\+\+FORMAT\+\_\+\+QUAD16\+\_\+\+LOKI}}~0x10005
+\item 
+\#define \mbox{\hyperlink{alext_8h_adf37d7332c0de089a8e4192efe6b319d}{AL\+\_\+\+EXT\+\_\+float32}}~1
+\item 
+\#define \mbox{\hyperlink{alext_8h_aaa92a983ae1fa30210d96f23accd03e3}{AL\+\_\+\+FORMAT\+\_\+\+MONO\+\_\+\+FLOAT32}}~0x10010
+\item 
+\#define \mbox{\hyperlink{alext_8h_a388e1bdcb05009bf0c6cc83ec3056fac}{AL\+\_\+\+FORMAT\+\_\+\+STEREO\+\_\+\+FLOAT32}}~0x10011
+\item 
+\#define \mbox{\hyperlink{alext_8h_a8d6b6f70d7298c9b6682f72417d495d7}{AL\+\_\+\+EXT\+\_\+double}}~1
+\item 
+\#define \mbox{\hyperlink{alext_8h_a52db5fe9c4483f1315df23032218fcbe}{AL\+\_\+\+FORMAT\+\_\+\+MONO\+\_\+\+DOUBLE\+\_\+\+EXT}}~0x10012
+\item 
+\#define \mbox{\hyperlink{alext_8h_a6dc8fb0a065eac4dfbb64f2a2da2593b}{AL\+\_\+\+FORMAT\+\_\+\+STEREO\+\_\+\+DOUBLE\+\_\+\+EXT}}~0x10013
+\item 
+\#define \mbox{\hyperlink{alext_8h_ae1d0a903c6bf7a1e5e4747e3711397a4}{AL\+\_\+\+EXT\+\_\+\+MULAW}}~1
+\item 
+\#define \mbox{\hyperlink{alext_8h_a5ae10be3f4c373f50676910566c09a27}{AL\+\_\+\+FORMAT\+\_\+\+MONO\+\_\+\+MULAW\+\_\+\+EXT}}~0x10014
+\item 
+\#define \mbox{\hyperlink{alext_8h_a1df2c4c43ced7f6bc9c59bd640355dfd}{AL\+\_\+\+FORMAT\+\_\+\+STEREO\+\_\+\+MULAW\+\_\+\+EXT}}~0x10015
+\item 
+\#define \mbox{\hyperlink{alext_8h_ae7da02b3ba4b0c3aa0a50b21a9c48045}{AL\+\_\+\+EXT\+\_\+\+ALAW}}~1
+\item 
+\#define \mbox{\hyperlink{alext_8h_afa8baf50317d7d71bd49debe8a877f5d}{AL\+\_\+\+FORMAT\+\_\+\+MONO\+\_\+\+ALAW\+\_\+\+EXT}}~0x10016
+\item 
+\#define \mbox{\hyperlink{alext_8h_ab890378eba11bf7d55f9e4020ed01eab}{AL\+\_\+\+FORMAT\+\_\+\+STEREO\+\_\+\+ALAW\+\_\+\+EXT}}~0x10017
+\item 
+\#define \mbox{\hyperlink{alext_8h_a37fd39ddaa651afd67058066990f740f}{ALC\+\_\+\+LOKI\+\_\+audio\+\_\+channel}}~1
+\item 
+\#define \mbox{\hyperlink{alext_8h_a67652ccd57802c92a4c937d3dc2f24ac}{ALC\+\_\+\+CHAN\+\_\+\+MAIN\+\_\+\+LOKI}}~0x500001
+\item 
+\#define \mbox{\hyperlink{alext_8h_a02d00aa8a9cc181c1458a709f18a1a60}{ALC\+\_\+\+CHAN\+\_\+\+PCM\+\_\+\+LOKI}}~0x500002
+\item 
+\#define \mbox{\hyperlink{alext_8h_a9dc3494bc875d0aa57a66ca8a85936d2}{ALC\+\_\+\+CHAN\+\_\+\+CD\+\_\+\+LOKI}}~0x500003
+\item 
+\#define \mbox{\hyperlink{alext_8h_a2ed32bd66de4efaad7dda89bc2776c83}{AL\+\_\+\+EXT\+\_\+\+MCFORMATS}}~1
+\item 
+\#define \mbox{\hyperlink{alext_8h_a0df567b830b0e27e7469d71b6c8256e7}{AL\+\_\+\+FORMAT\+\_\+\+QUAD8}}~0x1204
+\item 
+\#define \mbox{\hyperlink{alext_8h_af3531c0637152c681fc1390f0029adf1}{AL\+\_\+\+FORMAT\+\_\+\+QUAD16}}~0x1205
+\item 
+\#define \mbox{\hyperlink{alext_8h_a7210b353131cdb8e07f2721f1070d452}{AL\+\_\+\+FORMAT\+\_\+\+QUAD32}}~0x1206
+\item 
+\#define \mbox{\hyperlink{alext_8h_a4835e1cd9bc7c80f788b2961d45babad}{AL\+\_\+\+FORMAT\+\_\+\+REAR8}}~0x1207
+\item 
+\#define \mbox{\hyperlink{alext_8h_ab5a89a1fdc5e65da9730cba841bacabe}{AL\+\_\+\+FORMAT\+\_\+\+REAR16}}~0x1208
+\item 
+\#define \mbox{\hyperlink{alext_8h_a3f4db6a87ca17fdab7ddf000a3e33dff}{AL\+\_\+\+FORMAT\+\_\+\+REAR32}}~0x1209
+\item 
+\#define \mbox{\hyperlink{alext_8h_a9229726bfbf45d050c6381d477a24622}{AL\+\_\+\+FORMAT\+\_\+51\+CHN8}}~0x120A
+\item 
+\#define \mbox{\hyperlink{alext_8h_a3ef3f9a7fb3322411bd4275990947db1}{AL\+\_\+\+FORMAT\+\_\+51\+CHN16}}~0x120B
+\item 
+\#define \mbox{\hyperlink{alext_8h_a239a5d40d10a186207189d3d62ac5ab4}{AL\+\_\+\+FORMAT\+\_\+51\+CHN32}}~0x120C
+\item 
+\#define \mbox{\hyperlink{alext_8h_a66d63b8a1c4a091cf1362b0f59c3a783}{AL\+\_\+\+FORMAT\+\_\+61\+CHN8}}~0x120D
+\item 
+\#define \mbox{\hyperlink{alext_8h_a7326e6e323e22f26720a6018d5f20cc1}{AL\+\_\+\+FORMAT\+\_\+61\+CHN16}}~0x120E
+\item 
+\#define \mbox{\hyperlink{alext_8h_a4d6af44423cec30d76781fed10697b7f}{AL\+\_\+\+FORMAT\+\_\+61\+CHN32}}~0x120F
+\item 
+\#define \mbox{\hyperlink{alext_8h_ac9ee6f89bc3eabf5118394f2eac26db8}{AL\+\_\+\+FORMAT\+\_\+71\+CHN8}}~0x1210
+\item 
+\#define \mbox{\hyperlink{alext_8h_a36f1650b2294be507c08e5d3ef85e9b0}{AL\+\_\+\+FORMAT\+\_\+71\+CHN16}}~0x1211
+\item 
+\#define \mbox{\hyperlink{alext_8h_aa2de06ff9dd3d679c98be4676bc57e5b}{AL\+\_\+\+FORMAT\+\_\+71\+CHN32}}~0x1212
+\item 
+\#define \mbox{\hyperlink{alext_8h_a4a9c261e205793cac2743e3d563dc2bc}{AL\+\_\+\+EXT\+\_\+\+MULAW\+\_\+\+MCFORMATS}}~1
+\item 
+\#define \mbox{\hyperlink{alext_8h_a8c3aaa5c50b1d66f6818affc633a82bc}{AL\+\_\+\+FORMAT\+\_\+\+MONO\+\_\+\+MULAW}}~0x10014
+\item 
+\#define \mbox{\hyperlink{alext_8h_ad747d0c21286d6e0930701ab77a21677}{AL\+\_\+\+FORMAT\+\_\+\+STEREO\+\_\+\+MULAW}}~0x10015
+\item 
+\#define \mbox{\hyperlink{alext_8h_a11e22edf5861c7a60c51e796937c5240}{AL\+\_\+\+FORMAT\+\_\+\+QUAD\+\_\+\+MULAW}}~0x10021
+\item 
+\#define \mbox{\hyperlink{alext_8h_a899403dfb2a32a8b9f7fdc50c6670a2e}{AL\+\_\+\+FORMAT\+\_\+\+REAR\+\_\+\+MULAW}}~0x10022
+\item 
+\#define \mbox{\hyperlink{alext_8h_a93502dbe2b52469daa24913015faf144}{AL\+\_\+\+FORMAT\+\_\+51\+CHN\+\_\+\+MULAW}}~0x10023
+\item 
+\#define \mbox{\hyperlink{alext_8h_a19cad6849d3d40d0e90416c00e99694e}{AL\+\_\+\+FORMAT\+\_\+61\+CHN\+\_\+\+MULAW}}~0x10024
+\item 
+\#define \mbox{\hyperlink{alext_8h_af49247437d963d4f9494e5b825809c2c}{AL\+\_\+\+FORMAT\+\_\+71\+CHN\+\_\+\+MULAW}}~0x10025
+\item 
+\#define \mbox{\hyperlink{alext_8h_a1a8aa3bdb21bad0b193c7e0e6f762eee}{AL\+\_\+\+EXT\+\_\+\+IMA4}}~1
+\item 
+\#define \mbox{\hyperlink{alext_8h_a0808770e8662dc38ebea2201186e8bf9}{AL\+\_\+\+FORMAT\+\_\+\+MONO\+\_\+\+IMA4}}~0x1300
+\item 
+\#define \mbox{\hyperlink{alext_8h_a0ca6a53d80c7f291b3b939b62c9a19fa}{AL\+\_\+\+FORMAT\+\_\+\+STEREO\+\_\+\+IMA4}}~0x1301
+\item 
+\#define \mbox{\hyperlink{alext_8h_ab85b94d56089c08f6c63708b1948e4f3}{AL\+\_\+\+EXT\+\_\+\+STATIC\+\_\+\+BUFFER}}~1
+\item 
+\#define \mbox{\hyperlink{alext_8h_ae7abeacdf71a5843ac9a5aa2cb3ac2e7}{ALC\+\_\+\+EXT\+\_\+\+EFX}}~1
+\item 
+\#define \mbox{\hyperlink{alext_8h_ab4ca7513102d1b9816635f48aaebef20}{ALC\+\_\+\+EXT\+\_\+disconnect}}~1
+\item 
+\#define \mbox{\hyperlink{alext_8h_a4071fd0766c6defceb6da60875da5816}{ALC\+\_\+\+CONNECTED}}~0x313
+\item 
+\#define \mbox{\hyperlink{alext_8h_aa5a0b43132d400d32ff2e367c58d6287}{ALC\+\_\+\+EXT\+\_\+thread\+\_\+local\+\_\+context}}~1
+\item 
+\#define \mbox{\hyperlink{alext_8h_a6b7ada6da09937de2387a6484b2a414d}{AL\+\_\+\+EXT\+\_\+source\+\_\+distance\+\_\+model}}~1
+\item 
+\#define \mbox{\hyperlink{alext_8h_abe3e5a29a84432d0a77ed15c812dbb9d}{AL\+\_\+\+SOURCE\+\_\+\+DISTANCE\+\_\+\+MODEL}}~0x200
+\item 
+\#define \mbox{\hyperlink{alext_8h_a02a30af1fa820e294260687a20a2737c}{AL\+\_\+\+SOFT\+\_\+buffer\+\_\+sub\+\_\+data}}~1
+\item 
+\#define \mbox{\hyperlink{alext_8h_a1bf7275b8fdd310ac69b034f2f87933d}{AL\+\_\+\+BYTE\+\_\+\+RW\+\_\+\+OFFSETS\+\_\+\+SOFT}}~0x1031
+\item 
+\#define \mbox{\hyperlink{alext_8h_ad6bac197b2aaca3c5d0ef0009740364a}{AL\+\_\+\+SAMPLE\+\_\+\+RW\+\_\+\+OFFSETS\+\_\+\+SOFT}}~0x1032
+\item 
+\#define \mbox{\hyperlink{alext_8h_a6b8de6d06c10662b2e2f0e1c8899ab40}{AL\+\_\+\+SOFT\+\_\+loop\+\_\+points}}~1
+\item 
+\#define \mbox{\hyperlink{alext_8h_aa13dde281c119a75f361899a7ee03d56}{AL\+\_\+\+LOOP\+\_\+\+POINTS\+\_\+\+SOFT}}~0x2015
+\item 
+\#define \mbox{\hyperlink{alext_8h_ac5ee23f8bae10ac5b222a76126bde594}{AL\+\_\+\+EXT\+\_\+\+FOLDBACK}}~1
+\item 
+\#define \mbox{\hyperlink{alext_8h_ae739b724e8b39dd9a5e97e8829a2daf6}{AL\+\_\+\+EXT\+\_\+\+FOLDBACK\+\_\+\+NAME}}~"{}AL\+\_\+\+EXT\+\_\+\+FOLDBACK"{}
+\item 
+\#define \mbox{\hyperlink{alext_8h_a63d4040fd1f27b24646f0ba2e49f364e}{AL\+\_\+\+FOLDBACK\+\_\+\+EVENT\+\_\+\+BLOCK}}~0x4112
+\item 
+\#define \mbox{\hyperlink{alext_8h_ae37828d89a764f0fcf75af4ec8225807}{AL\+\_\+\+FOLDBACK\+\_\+\+EVENT\+\_\+\+START}}~0x4111
+\item 
+\#define \mbox{\hyperlink{alext_8h_aefd0faa09df7e34168afe4a8932d35dd}{AL\+\_\+\+FOLDBACK\+\_\+\+EVENT\+\_\+\+STOP}}~0x4113
+\item 
+\#define \mbox{\hyperlink{alext_8h_ac035188f152395a5d54639a02dd86e31}{AL\+\_\+\+FOLDBACK\+\_\+\+MODE\+\_\+\+MONO}}~0x4101
+\item 
+\#define \mbox{\hyperlink{alext_8h_a29d4d68ffda10b2f19c6d65a7c744c5d}{AL\+\_\+\+FOLDBACK\+\_\+\+MODE\+\_\+\+STEREO}}~0x4102
+\item 
+\#define \mbox{\hyperlink{alext_8h_a39014e58a688957474d604a1af68075c}{ALC\+\_\+\+EXT\+\_\+\+DEDICATED}}~1
+\item 
+\#define \mbox{\hyperlink{alext_8h_adde0c104d07354eb0f0db8adc626bad0}{AL\+\_\+\+DEDICATED\+\_\+\+GAIN}}~0x0001
+\item 
+\#define \mbox{\hyperlink{alext_8h_a43b6f4c65cf455a66710ba7d665aae90}{AL\+\_\+\+EFFECT\+\_\+\+DEDICATED\+\_\+\+DIALOGUE}}~0x9001
+\item 
+\#define \mbox{\hyperlink{alext_8h_afc79ad4e1a489aa5dd1ce1ddd87efe97}{AL\+\_\+\+EFFECT\+\_\+\+DEDICATED\+\_\+\+LOW\+\_\+\+FREQUENCY\+\_\+\+EFFECT}}~0x9000
+\item 
+\#define \mbox{\hyperlink{alext_8h_a45b8d28562378fac5c1029c963b4af7d}{AL\+\_\+\+SOFT\+\_\+buffer\+\_\+samples}}~1
+\item 
+\#define \mbox{\hyperlink{alext_8h_ab1336c5f4288fb25a0cdf227e8dcf486}{AL\+\_\+\+MONO\+\_\+\+SOFT}}~0x1500
+\item 
+\#define \mbox{\hyperlink{alext_8h_adc6554553bfbc5f4623ab1b71ec69343}{AL\+\_\+\+STEREO\+\_\+\+SOFT}}~0x1501
+\item 
+\#define \mbox{\hyperlink{alext_8h_ac82e1e1bf0b54b43dbae180e904c8a92}{AL\+\_\+\+REAR\+\_\+\+SOFT}}~0x1502
+\item 
+\#define \mbox{\hyperlink{alext_8h_a9580db0ce80c78d9eab8548ae23a93cd}{AL\+\_\+\+QUAD\+\_\+\+SOFT}}~0x1503
+\item 
+\#define \mbox{\hyperlink{alext_8h_a324d3ef4ef986e17d198f104d3414ece}{AL\+\_\+5\+POINT1\+\_\+\+SOFT}}~0x1504
+\item 
+\#define \mbox{\hyperlink{alext_8h_a4f8f68090406c97becdc10e7836acb4f}{AL\+\_\+6\+POINT1\+\_\+\+SOFT}}~0x1505
+\item 
+\#define \mbox{\hyperlink{alext_8h_a7073dc16eb3c4df26b37b5dfa170945e}{AL\+\_\+7\+POINT1\+\_\+\+SOFT}}~0x1506
+\item 
+\#define \mbox{\hyperlink{alext_8h_acc6f00ad89ff6f1d1e18dfef33a84f0f}{AL\+\_\+\+BYTE\+\_\+\+SOFT}}~0x1400
+\item 
+\#define \mbox{\hyperlink{alext_8h_a65766a245a9b140ef09626057eed983b}{AL\+\_\+\+UNSIGNED\+\_\+\+BYTE\+\_\+\+SOFT}}~0x1401
+\item 
+\#define \mbox{\hyperlink{alext_8h_ab587836254197faec03e8c4f77bc846b}{AL\+\_\+\+SHORT\+\_\+\+SOFT}}~0x1402
+\item 
+\#define \mbox{\hyperlink{alext_8h_afee22d8f73a230d5ce90102a90a75405}{AL\+\_\+\+UNSIGNED\+\_\+\+SHORT\+\_\+\+SOFT}}~0x1403
+\item 
+\#define \mbox{\hyperlink{alext_8h_afe3abe3f3dd3463dd3d13dc3025c9ccd}{AL\+\_\+\+INT\+\_\+\+SOFT}}~0x1404
+\item 
+\#define \mbox{\hyperlink{alext_8h_a2a594f508b03f1333b6e36238f62760e}{AL\+\_\+\+UNSIGNED\+\_\+\+INT\+\_\+\+SOFT}}~0x1405
+\item 
+\#define \mbox{\hyperlink{alext_8h_a16355a78a861526d22c8bfa1b899a061}{AL\+\_\+\+FLOAT\+\_\+\+SOFT}}~0x1406
+\item 
+\#define \mbox{\hyperlink{alext_8h_a83a58357312e30b9c0e2c40c69bd6538}{AL\+\_\+\+DOUBLE\+\_\+\+SOFT}}~0x1407
+\item 
+\#define \mbox{\hyperlink{alext_8h_a11f726ba38bbf779b792d2ee85aecbe1}{AL\+\_\+\+BYTE3\+\_\+\+SOFT}}~0x1408
+\item 
+\#define \mbox{\hyperlink{alext_8h_aa1ae3e42bfc4b8c649a12c4da6e390c0}{AL\+\_\+\+UNSIGNED\+\_\+\+BYTE3\+\_\+\+SOFT}}~0x1409
+\item 
+\#define \mbox{\hyperlink{alext_8h_ae901ab5335ab8e70371c05ac6a0afbd5}{AL\+\_\+\+MONO8\+\_\+\+SOFT}}~0x1100
+\item 
+\#define \mbox{\hyperlink{alext_8h_a5ef7b877512724447d88ea848155a4f4}{AL\+\_\+\+MONO16\+\_\+\+SOFT}}~0x1101
+\item 
+\#define \mbox{\hyperlink{alext_8h_a103830a757d00404cce3aa1f3b185051}{AL\+\_\+\+MONO32\+F\+\_\+\+SOFT}}~0x10010
+\item 
+\#define \mbox{\hyperlink{alext_8h_a052e85d3f26eb3610151b223ce388a74}{AL\+\_\+\+STEREO8\+\_\+\+SOFT}}~0x1102
+\item 
+\#define \mbox{\hyperlink{alext_8h_aa88c1663cc943d3346e3268237737ded}{AL\+\_\+\+STEREO16\+\_\+\+SOFT}}~0x1103
+\item 
+\#define \mbox{\hyperlink{alext_8h_ab1ebed06aa5b5ea331a262ffa645afdc}{AL\+\_\+\+STEREO32\+F\+\_\+\+SOFT}}~0x10011
+\item 
+\#define \mbox{\hyperlink{alext_8h_af5adeeb4c50d20b82ec8093a0faa4744}{AL\+\_\+\+QUAD8\+\_\+\+SOFT}}~0x1204
+\item 
+\#define \mbox{\hyperlink{alext_8h_a0f23565e77481dac489f157cb07eaaa5}{AL\+\_\+\+QUAD16\+\_\+\+SOFT}}~0x1205
+\item 
+\#define \mbox{\hyperlink{alext_8h_aca1a3426901b1d8a8dc677ce10673976}{AL\+\_\+\+QUAD32\+F\+\_\+\+SOFT}}~0x1206
+\item 
+\#define \mbox{\hyperlink{alext_8h_ae78734cf3b15faa5bcbd201f1f6cbeb9}{AL\+\_\+\+REAR8\+\_\+\+SOFT}}~0x1207
+\item 
+\#define \mbox{\hyperlink{alext_8h_ab878a2636af39f1861786e2507b7ed06}{AL\+\_\+\+REAR16\+\_\+\+SOFT}}~0x1208
+\item 
+\#define \mbox{\hyperlink{alext_8h_a4e4b2e447af09406d7c61a5bb5e4632c}{AL\+\_\+\+REAR32\+F\+\_\+\+SOFT}}~0x1209
+\item 
+\#define \mbox{\hyperlink{alext_8h_a38077496c14a2b8152848772be0b7ee1}{AL\+\_\+5\+POINT1\+\_\+8\+\_\+\+SOFT}}~0x120A
+\item 
+\#define \mbox{\hyperlink{alext_8h_ae05aeb7a747d67219e7ca179b7503426}{AL\+\_\+5\+POINT1\+\_\+16\+\_\+\+SOFT}}~0x120B
+\item 
+\#define \mbox{\hyperlink{alext_8h_a487a0516244406211e282b39205d9cbe}{AL\+\_\+5\+POINT1\+\_\+32\+F\+\_\+\+SOFT}}~0x120C
+\item 
+\#define \mbox{\hyperlink{alext_8h_a770fa220786cf84fc4cdd5e24735ddfb}{AL\+\_\+6\+POINT1\+\_\+8\+\_\+\+SOFT}}~0x120D
+\item 
+\#define \mbox{\hyperlink{alext_8h_a205788cc7e5934c5e2e36d6bf94c2094}{AL\+\_\+6\+POINT1\+\_\+16\+\_\+\+SOFT}}~0x120E
+\item 
+\#define \mbox{\hyperlink{alext_8h_ab61ca311dbff14665bc75c16a46a5d4f}{AL\+\_\+6\+POINT1\+\_\+32\+F\+\_\+\+SOFT}}~0x120F
+\item 
+\#define \mbox{\hyperlink{alext_8h_ac59f77b1041c91631411df56ce365264}{AL\+\_\+7\+POINT1\+\_\+8\+\_\+\+SOFT}}~0x1210
+\item 
+\#define \mbox{\hyperlink{alext_8h_a233be4fe2ceb902629606052b7e4a8ac}{AL\+\_\+7\+POINT1\+\_\+16\+\_\+\+SOFT}}~0x1211
+\item 
+\#define \mbox{\hyperlink{alext_8h_aff345e3bb40760d41650c1fc4eb1404c}{AL\+\_\+7\+POINT1\+\_\+32\+F\+\_\+\+SOFT}}~0x1212
+\item 
+\#define \mbox{\hyperlink{alext_8h_a08b8b6dfcb3ef72ac8c8405348f78f8f}{AL\+\_\+\+INTERNAL\+\_\+\+FORMAT\+\_\+\+SOFT}}~0x2008
+\item 
+\#define \mbox{\hyperlink{alext_8h_a58b1746038c7829935f8ae07a374fc98}{AL\+\_\+\+BYTE\+\_\+\+LENGTH\+\_\+\+SOFT}}~0x2009
+\item 
+\#define \mbox{\hyperlink{alext_8h_a23fa5aae76fb906144f6722f757657c4}{AL\+\_\+\+SAMPLE\+\_\+\+LENGTH\+\_\+\+SOFT}}~0x200A
+\item 
+\#define \mbox{\hyperlink{alext_8h_aa584cc54689dbfe251a9ea54268e5cee}{AL\+\_\+\+SEC\+\_\+\+LENGTH\+\_\+\+SOFT}}~0x200B
+\item 
+\#define \mbox{\hyperlink{alext_8h_a240a57cac0a535fbc72c425b760c3ca4}{AL\+\_\+\+SOFT\+\_\+direct\+\_\+channels}}~1
+\item 
+\#define \mbox{\hyperlink{alext_8h_a687e7f26c8dbffd99946fe11b2e47b0a}{AL\+\_\+\+DIRECT\+\_\+\+CHANNELS\+\_\+\+SOFT}}~0x1033
+\item 
+\#define \mbox{\hyperlink{alext_8h_ab5fc6b8417202e8f22624e471972eaf1}{ALC\+\_\+\+SOFT\+\_\+loopback}}~1
+\item 
+\#define \mbox{\hyperlink{alext_8h_ae08bfa8efd7df5f7df73347e8cbca6f2}{ALC\+\_\+\+FORMAT\+\_\+\+CHANNELS\+\_\+\+SOFT}}~0x1990
+\item 
+\#define \mbox{\hyperlink{alext_8h_ae74d31c731ea228d8adb42e68626f8f7}{ALC\+\_\+\+FORMAT\+\_\+\+TYPE\+\_\+\+SOFT}}~0x1991
+\item 
+\#define \mbox{\hyperlink{alext_8h_a613f9a16c32884c7390c3be430df84ca}{ALC\+\_\+\+BYTE\+\_\+\+SOFT}}~0x1400
+\item 
+\#define \mbox{\hyperlink{alext_8h_a64174c0f43577a95c9527f0bdedc0ecc}{ALC\+\_\+\+UNSIGNED\+\_\+\+BYTE\+\_\+\+SOFT}}~0x1401
+\item 
+\#define \mbox{\hyperlink{alext_8h_aa3c8844664113d33bbc4db783fb41a41}{ALC\+\_\+\+SHORT\+\_\+\+SOFT}}~0x1402
+\item 
+\#define \mbox{\hyperlink{alext_8h_a32333bbbf0c9d61b35fdf16da43859c3}{ALC\+\_\+\+UNSIGNED\+\_\+\+SHORT\+\_\+\+SOFT}}~0x1403
+\item 
+\#define \mbox{\hyperlink{alext_8h_ab4e463088c7f257f16aa6bbb3eb3ecf5}{ALC\+\_\+\+INT\+\_\+\+SOFT}}~0x1404
+\item 
+\#define \mbox{\hyperlink{alext_8h_a16bdeea243f0085aab3dc69fae7383f4}{ALC\+\_\+\+UNSIGNED\+\_\+\+INT\+\_\+\+SOFT}}~0x1405
+\item 
+\#define \mbox{\hyperlink{alext_8h_a93234bc8d212e994f725340bc7234989}{ALC\+\_\+\+FLOAT\+\_\+\+SOFT}}~0x1406
+\item 
+\#define \mbox{\hyperlink{alext_8h_a98995d8d18b6b9e635e4f8629230e8b5}{ALC\+\_\+\+MONO\+\_\+\+SOFT}}~0x1500
+\item 
+\#define \mbox{\hyperlink{alext_8h_ada645ffdc832c3eeade8430845e2f1d2}{ALC\+\_\+\+STEREO\+\_\+\+SOFT}}~0x1501
+\item 
+\#define \mbox{\hyperlink{alext_8h_ad81f173bb924576f12ace97c0e491996}{ALC\+\_\+\+QUAD\+\_\+\+SOFT}}~0x1503
+\item 
+\#define \mbox{\hyperlink{alext_8h_a09cc70559b5756bc54316749af8bd063}{ALC\+\_\+5\+POINT1\+\_\+\+SOFT}}~0x1504
+\item 
+\#define \mbox{\hyperlink{alext_8h_a9a12c9e0ac591259f3b1a44335886779}{ALC\+\_\+6\+POINT1\+\_\+\+SOFT}}~0x1505
+\item 
+\#define \mbox{\hyperlink{alext_8h_addb51e08cae0c7a6075f9e34cf50ac09}{ALC\+\_\+7\+POINT1\+\_\+\+SOFT}}~0x1506
+\item 
+\#define \mbox{\hyperlink{alext_8h_a097ba9308185cbc67fabbcb29fde17bd}{AL\+\_\+\+EXT\+\_\+\+STEREO\+\_\+\+ANGLES}}~1
+\item 
+\#define \mbox{\hyperlink{alext_8h_aedf81f8fb9a8c8de94d03e4e2ca32a8c}{AL\+\_\+\+STEREO\+\_\+\+ANGLES}}~0x1030
+\item 
+\#define \mbox{\hyperlink{alext_8h_af7d879feb72e6fc1ce3a04955d3af7c8}{AL\+\_\+\+EXT\+\_\+\+SOURCE\+\_\+\+RADIUS}}~1
+\item 
+\#define \mbox{\hyperlink{alext_8h_a5c633ee47a7d61e83a1c357cc6f05f25}{AL\+\_\+\+SOURCE\+\_\+\+RADIUS}}~0x1031
+\item 
+\#define \mbox{\hyperlink{alext_8h_a78e7ea1da97af8b5b506699a89525ee9}{AL\+\_\+\+SOFT\+\_\+source\+\_\+latency}}~1
+\item 
+\#define \mbox{\hyperlink{alext_8h_afbefe1e7c8b811c10bdc6193fb0b5c88}{AL\+\_\+\+SAMPLE\+\_\+\+OFFSET\+\_\+\+LATENCY\+\_\+\+SOFT}}~0x1200
+\item 
+\#define \mbox{\hyperlink{alext_8h_a4159676e14dfd2f35a6dd9377fa997a2}{AL\+\_\+\+SEC\+\_\+\+OFFSET\+\_\+\+LATENCY\+\_\+\+SOFT}}~0x1201
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Definicje typów}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{al_8h_a33f8bcbc68209e69bd2d597f0b5471d4}{ALvoid}}(\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{alext_8h_a8df6ceab1d78f8fbe93d76a2498b2867}{PFNALBUFFERDATASTATICPROC}}) (const \mbox{\hyperlink{al_8h_a8e95e1bad09d820d882e1bff068a33ef}{ALint}}, \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}, \mbox{\hyperlink{al_8h_a33f8bcbc68209e69bd2d597f0b5471d4}{ALvoid}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{al_8h_ab966c4d5d554fee3ae4e5c7774e83c7e}{ALsizei}}, \mbox{\hyperlink{al_8h_ab966c4d5d554fee3ae4e5c7774e83c7e}{ALsizei}})
+\item 
+typedef \mbox{\hyperlink{alc_8h_ab3f76bbb16c17231a6b15f2caf769606}{ALCboolean}}(\mbox{\hyperlink{alc_8h_ad26234a076d29e819fa6654429bc8b35}{ALC\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{alext_8h_a4cb30011a8c41d0957dc86f9a450904d}{PFNALCSETTHREADCONTEXTPROC}}) (\mbox{\hyperlink{alc_8h_ad085cf94ff96646b5a2b5401c4489e23}{ALCcontext}} \texorpdfstring{$\ast$}{*}context)
+\item 
+typedef \mbox{\hyperlink{alc_8h_ad085cf94ff96646b5a2b5401c4489e23}{ALCcontext}} \texorpdfstring{$\ast$}{*}(\mbox{\hyperlink{alc_8h_ad26234a076d29e819fa6654429bc8b35}{ALC\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{alext_8h_a6163e5befcb30d690471041dc46966c0}{PFNALCGETTHREADCONTEXTPROC}}) (void)
+\item 
+typedef \mbox{\hyperlink{al_8h_a33f8bcbc68209e69bd2d597f0b5471d4}{ALvoid}}(\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{alext_8h_a3536e53fdc337e9242d52c37aecac1c8}{PFNALBUFFERSUBDATASOFTPROC}}) (\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}, \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}, const \mbox{\hyperlink{al_8h_a33f8bcbc68209e69bd2d597f0b5471d4}{ALvoid}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{al_8h_ab966c4d5d554fee3ae4e5c7774e83c7e}{ALsizei}}, \mbox{\hyperlink{al_8h_ab966c4d5d554fee3ae4e5c7774e83c7e}{ALsizei}})
+\item 
+typedef void(\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{alext_8h_a048aacbd107469034c4e8165b1c7ca64}{LPALFOLDBACKCALLBACK}}) (\mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}, \mbox{\hyperlink{al_8h_ab966c4d5d554fee3ae4e5c7774e83c7e}{ALsizei}})
+\item 
+typedef void(\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{alext_8h_aa4526ca7e63b1e041d19bd365d70aecd}{LPALREQUESTFOLDBACKSTART}}) (\mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}, \mbox{\hyperlink{al_8h_ab966c4d5d554fee3ae4e5c7774e83c7e}{ALsizei}}, \mbox{\hyperlink{al_8h_ab966c4d5d554fee3ae4e5c7774e83c7e}{ALsizei}}, \mbox{\hyperlink{al_8h_abb26671ce5d302ed61a2e55256624169}{ALfloat}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{alext_8h_a048aacbd107469034c4e8165b1c7ca64}{LPALFOLDBACKCALLBACK}})
+\item 
+typedef void(\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{alext_8h_a7fc2caef45affea521a32d3853386fa3}{LPALREQUESTFOLDBACKSTOP}}) (void)
+\item 
+typedef void(\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{alext_8h_a4f01085dc7535b5456e01ba9ba0330ff}{LPALBUFFERSAMPLESSOFT}}) (\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}, \mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}, \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}, \mbox{\hyperlink{al_8h_ab966c4d5d554fee3ae4e5c7774e83c7e}{ALsizei}}, \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}, \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}, const \mbox{\hyperlink{al_8h_a33f8bcbc68209e69bd2d597f0b5471d4}{ALvoid}} \texorpdfstring{$\ast$}{*})
+\item 
+typedef void(\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{alext_8h_a4cc0d5bcd7385feeb73e80e261d6dcc3}{LPALBUFFERSUBSAMPLESSOFT}}) (\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}, \mbox{\hyperlink{al_8h_ab966c4d5d554fee3ae4e5c7774e83c7e}{ALsizei}}, \mbox{\hyperlink{al_8h_ab966c4d5d554fee3ae4e5c7774e83c7e}{ALsizei}}, \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}, \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}, const \mbox{\hyperlink{al_8h_a33f8bcbc68209e69bd2d597f0b5471d4}{ALvoid}} \texorpdfstring{$\ast$}{*})
+\item 
+typedef void(\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{alext_8h_ae2270321e66207a89be199fdd925056a}{LPALGETBUFFERSAMPLESSOFT}}) (\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}, \mbox{\hyperlink{al_8h_ab966c4d5d554fee3ae4e5c7774e83c7e}{ALsizei}}, \mbox{\hyperlink{al_8h_ab966c4d5d554fee3ae4e5c7774e83c7e}{ALsizei}}, \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}, \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}, \mbox{\hyperlink{al_8h_a33f8bcbc68209e69bd2d597f0b5471d4}{ALvoid}} \texorpdfstring{$\ast$}{*})
+\item 
+typedef \mbox{\hyperlink{al_8h_a87bd2b64b8ce719af42bf9dfd0cdf8fc}{ALboolean}}(\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{alext_8h_a5e5cbe126eda088547d956064aa1f680}{LPALISBUFFERFORMATSUPPORTEDSOFT}}) (\mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}})
+\item 
+typedef \mbox{\hyperlink{alc_8h_aba8742179fd52ef41c66adacdec5383e}{ALCdevice}} \texorpdfstring{$\ast$}{*}(\mbox{\hyperlink{alc_8h_ad26234a076d29e819fa6654429bc8b35}{ALC\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{alext_8h_afd273f8537b4e335d9e0d86ba4cae2be}{LPALCLOOPBACKOPENDEVICESOFT}}) (const \mbox{\hyperlink{alc_8h_a5ffdc2576482e1ff45cc0bbde7177a36}{ALCchar}} \texorpdfstring{$\ast$}{*})
+\item 
+typedef \mbox{\hyperlink{alc_8h_ab3f76bbb16c17231a6b15f2caf769606}{ALCboolean}}(\mbox{\hyperlink{alc_8h_ad26234a076d29e819fa6654429bc8b35}{ALC\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{alext_8h_a5401325904bc481e92da4a658a4aaf0c}{LPALCISRENDERFORMATSUPPORTEDSOFT}}) (\mbox{\hyperlink{alc_8h_aba8742179fd52ef41c66adacdec5383e}{ALCdevice}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{alc_8h_a7041956d733b9affdb45d9b725e20156}{ALCsizei}}, \mbox{\hyperlink{alc_8h_a6535508b0b689f249c8e99053d584a0f}{ALCenum}}, \mbox{\hyperlink{alc_8h_a6535508b0b689f249c8e99053d584a0f}{ALCenum}})
+\item 
+typedef void(\mbox{\hyperlink{alc_8h_ad26234a076d29e819fa6654429bc8b35}{ALC\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{alext_8h_a9bcaf2687eb497300935ccc8130df571}{LPALCRENDERSAMPLESSOFT}}) (\mbox{\hyperlink{alc_8h_aba8742179fd52ef41c66adacdec5383e}{ALCdevice}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{alc_8h_a03528d12ba43b25711e5d893da1b128c}{ALCvoid}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{alc_8h_a7041956d733b9affdb45d9b725e20156}{ALCsizei}})
+\item 
+typedef int64\+\_\+t \mbox{\hyperlink{alext_8h_abf19b4a82344c0d24d95347f0016d44b}{ALint64\+SOFT}}
+\item 
+typedef uint64\+\_\+t \mbox{\hyperlink{alext_8h_a0429497eef92aee08e5a138f824d7d79}{ALuint64\+SOFT}}
+\item 
+typedef void(\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{alext_8h_aaa36b138105888bfd9068305a547238d}{LPALSOURCEDSOFT}}) (\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}, \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}, \mbox{\hyperlink{al_8h_a3a8eb9c919d2266a4d1a4e38151eb946}{ALdouble}})
+\item 
+typedef void(\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{alext_8h_afe994e847b058cf838e32f04cf14b0e4}{LPALSOURCE3\+DSOFT}}) (\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}, \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}, \mbox{\hyperlink{al_8h_a3a8eb9c919d2266a4d1a4e38151eb946}{ALdouble}}, \mbox{\hyperlink{al_8h_a3a8eb9c919d2266a4d1a4e38151eb946}{ALdouble}}, \mbox{\hyperlink{al_8h_a3a8eb9c919d2266a4d1a4e38151eb946}{ALdouble}})
+\item 
+typedef void(\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{alext_8h_ac2cb03b7634a09f8da711ad64f70368a}{LPALSOURCEDVSOFT}}) (\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}, \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}, const \mbox{\hyperlink{al_8h_a3a8eb9c919d2266a4d1a4e38151eb946}{ALdouble}} \texorpdfstring{$\ast$}{*})
+\item 
+typedef void(\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{alext_8h_aa48ee272a63dd701688f37d1e91e340c}{LPALGETSOURCEDSOFT}}) (\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}, \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}, \mbox{\hyperlink{al_8h_a3a8eb9c919d2266a4d1a4e38151eb946}{ALdouble}} \texorpdfstring{$\ast$}{*})
+\item 
+typedef void(\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{alext_8h_a0df25cfd55b3a156de1a8d5b1d2e8aae}{LPALGETSOURCE3\+DSOFT}}) (\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}, \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}, \mbox{\hyperlink{al_8h_a3a8eb9c919d2266a4d1a4e38151eb946}{ALdouble}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{al_8h_a3a8eb9c919d2266a4d1a4e38151eb946}{ALdouble}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{al_8h_a3a8eb9c919d2266a4d1a4e38151eb946}{ALdouble}} \texorpdfstring{$\ast$}{*})
+\item 
+typedef void(\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{alext_8h_a55b06021fb45ea298d73068c5efa9476}{LPALGETSOURCEDVSOFT}}) (\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}, \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}, \mbox{\hyperlink{al_8h_a3a8eb9c919d2266a4d1a4e38151eb946}{ALdouble}} \texorpdfstring{$\ast$}{*})
+\item 
+typedef void(\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{alext_8h_ad4e70efb83446d5f77a968fd7b3d56cc}{LPALSOURCEI64\+SOFT}}) (\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}, \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}, \mbox{\hyperlink{alext_8h_abf19b4a82344c0d24d95347f0016d44b}{ALint64\+SOFT}})
+\item 
+typedef void(\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{alext_8h_accbd03277395eaabdc94fcb9ccfbafbd}{LPALSOURCE3\+I64\+SOFT}}) (\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}, \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}, \mbox{\hyperlink{alext_8h_abf19b4a82344c0d24d95347f0016d44b}{ALint64\+SOFT}}, \mbox{\hyperlink{alext_8h_abf19b4a82344c0d24d95347f0016d44b}{ALint64\+SOFT}}, \mbox{\hyperlink{alext_8h_abf19b4a82344c0d24d95347f0016d44b}{ALint64\+SOFT}})
+\item 
+typedef void(\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{alext_8h_ab006e7d5140c510e9c979b70c48f6d1d}{LPALSOURCEI64\+VSOFT}}) (\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}, \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}, const \mbox{\hyperlink{alext_8h_abf19b4a82344c0d24d95347f0016d44b}{ALint64\+SOFT}} \texorpdfstring{$\ast$}{*})
+\item 
+typedef void(\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{alext_8h_a7734227b18d4e54f510ca1a87405f6bd}{LPALGETSOURCEI64\+SOFT}}) (\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}, \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}, \mbox{\hyperlink{alext_8h_abf19b4a82344c0d24d95347f0016d44b}{ALint64\+SOFT}} \texorpdfstring{$\ast$}{*})
+\item 
+typedef void(\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{alext_8h_a778e8e7fe28b0aae63baa0d7dca4900b}{LPALGETSOURCE3\+I64\+SOFT}}) (\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}, \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}, \mbox{\hyperlink{alext_8h_abf19b4a82344c0d24d95347f0016d44b}{ALint64\+SOFT}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{alext_8h_abf19b4a82344c0d24d95347f0016d44b}{ALint64\+SOFT}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{alext_8h_abf19b4a82344c0d24d95347f0016d44b}{ALint64\+SOFT}} \texorpdfstring{$\ast$}{*})
+\item 
+typedef void(\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{alext_8h_a6c6dbf72c11c0dabacd75f3047d084b2}{LPALGETSOURCEI64\+VSOFT}}) (\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}, \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}, \mbox{\hyperlink{alext_8h_abf19b4a82344c0d24d95347f0016d44b}{ALint64\+SOFT}} \texorpdfstring{$\ast$}{*})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja definicji}
+\Hypertarget{alext_8h_ae05aeb7a747d67219e7ca179b7503426}\label{alext_8h_ae05aeb7a747d67219e7ca179b7503426} 
+\index{alext.h@{alext.h}!AL\_5POINT1\_16\_SOFT@{AL\_5POINT1\_16\_SOFT}}
+\index{AL\_5POINT1\_16\_SOFT@{AL\_5POINT1\_16\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_5POINT1\_16\_SOFT}{AL\_5POINT1\_16\_SOFT}}
+{\footnotesize\ttfamily \#define AL\+\_\+5\+POINT1\+\_\+16\+\_\+\+SOFT~0x120B}
+
+\Hypertarget{alext_8h_a487a0516244406211e282b39205d9cbe}\label{alext_8h_a487a0516244406211e282b39205d9cbe} 
+\index{alext.h@{alext.h}!AL\_5POINT1\_32F\_SOFT@{AL\_5POINT1\_32F\_SOFT}}
+\index{AL\_5POINT1\_32F\_SOFT@{AL\_5POINT1\_32F\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_5POINT1\_32F\_SOFT}{AL\_5POINT1\_32F\_SOFT}}
+{\footnotesize\ttfamily \#define AL\+\_\+5\+POINT1\+\_\+32\+F\+\_\+\+SOFT~0x120C}
+
+\Hypertarget{alext_8h_a38077496c14a2b8152848772be0b7ee1}\label{alext_8h_a38077496c14a2b8152848772be0b7ee1} 
+\index{alext.h@{alext.h}!AL\_5POINT1\_8\_SOFT@{AL\_5POINT1\_8\_SOFT}}
+\index{AL\_5POINT1\_8\_SOFT@{AL\_5POINT1\_8\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_5POINT1\_8\_SOFT}{AL\_5POINT1\_8\_SOFT}}
+{\footnotesize\ttfamily \#define AL\+\_\+5\+POINT1\+\_\+8\+\_\+\+SOFT~0x120A}
+
+\Hypertarget{alext_8h_a324d3ef4ef986e17d198f104d3414ece}\label{alext_8h_a324d3ef4ef986e17d198f104d3414ece} 
+\index{alext.h@{alext.h}!AL\_5POINT1\_SOFT@{AL\_5POINT1\_SOFT}}
+\index{AL\_5POINT1\_SOFT@{AL\_5POINT1\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_5POINT1\_SOFT}{AL\_5POINT1\_SOFT}}
+{\footnotesize\ttfamily \#define AL\+\_\+5\+POINT1\+\_\+\+SOFT~0x1504}
+
+\Hypertarget{alext_8h_a205788cc7e5934c5e2e36d6bf94c2094}\label{alext_8h_a205788cc7e5934c5e2e36d6bf94c2094} 
+\index{alext.h@{alext.h}!AL\_6POINT1\_16\_SOFT@{AL\_6POINT1\_16\_SOFT}}
+\index{AL\_6POINT1\_16\_SOFT@{AL\_6POINT1\_16\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_6POINT1\_16\_SOFT}{AL\_6POINT1\_16\_SOFT}}
+{\footnotesize\ttfamily \#define AL\+\_\+6\+POINT1\+\_\+16\+\_\+\+SOFT~0x120E}
+
+\Hypertarget{alext_8h_ab61ca311dbff14665bc75c16a46a5d4f}\label{alext_8h_ab61ca311dbff14665bc75c16a46a5d4f} 
+\index{alext.h@{alext.h}!AL\_6POINT1\_32F\_SOFT@{AL\_6POINT1\_32F\_SOFT}}
+\index{AL\_6POINT1\_32F\_SOFT@{AL\_6POINT1\_32F\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_6POINT1\_32F\_SOFT}{AL\_6POINT1\_32F\_SOFT}}
+{\footnotesize\ttfamily \#define AL\+\_\+6\+POINT1\+\_\+32\+F\+\_\+\+SOFT~0x120F}
+
+\Hypertarget{alext_8h_a770fa220786cf84fc4cdd5e24735ddfb}\label{alext_8h_a770fa220786cf84fc4cdd5e24735ddfb} 
+\index{alext.h@{alext.h}!AL\_6POINT1\_8\_SOFT@{AL\_6POINT1\_8\_SOFT}}
+\index{AL\_6POINT1\_8\_SOFT@{AL\_6POINT1\_8\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_6POINT1\_8\_SOFT}{AL\_6POINT1\_8\_SOFT}}
+{\footnotesize\ttfamily \#define AL\+\_\+6\+POINT1\+\_\+8\+\_\+\+SOFT~0x120D}
+
+\Hypertarget{alext_8h_a4f8f68090406c97becdc10e7836acb4f}\label{alext_8h_a4f8f68090406c97becdc10e7836acb4f} 
+\index{alext.h@{alext.h}!AL\_6POINT1\_SOFT@{AL\_6POINT1\_SOFT}}
+\index{AL\_6POINT1\_SOFT@{AL\_6POINT1\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_6POINT1\_SOFT}{AL\_6POINT1\_SOFT}}
+{\footnotesize\ttfamily \#define AL\+\_\+6\+POINT1\+\_\+\+SOFT~0x1505}
+
+\Hypertarget{alext_8h_a233be4fe2ceb902629606052b7e4a8ac}\label{alext_8h_a233be4fe2ceb902629606052b7e4a8ac} 
+\index{alext.h@{alext.h}!AL\_7POINT1\_16\_SOFT@{AL\_7POINT1\_16\_SOFT}}
+\index{AL\_7POINT1\_16\_SOFT@{AL\_7POINT1\_16\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_7POINT1\_16\_SOFT}{AL\_7POINT1\_16\_SOFT}}
+{\footnotesize\ttfamily \#define AL\+\_\+7\+POINT1\+\_\+16\+\_\+\+SOFT~0x1211}
+
+\Hypertarget{alext_8h_aff345e3bb40760d41650c1fc4eb1404c}\label{alext_8h_aff345e3bb40760d41650c1fc4eb1404c} 
+\index{alext.h@{alext.h}!AL\_7POINT1\_32F\_SOFT@{AL\_7POINT1\_32F\_SOFT}}
+\index{AL\_7POINT1\_32F\_SOFT@{AL\_7POINT1\_32F\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_7POINT1\_32F\_SOFT}{AL\_7POINT1\_32F\_SOFT}}
+{\footnotesize\ttfamily \#define AL\+\_\+7\+POINT1\+\_\+32\+F\+\_\+\+SOFT~0x1212}
+
+\Hypertarget{alext_8h_ac59f77b1041c91631411df56ce365264}\label{alext_8h_ac59f77b1041c91631411df56ce365264} 
+\index{alext.h@{alext.h}!AL\_7POINT1\_8\_SOFT@{AL\_7POINT1\_8\_SOFT}}
+\index{AL\_7POINT1\_8\_SOFT@{AL\_7POINT1\_8\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_7POINT1\_8\_SOFT}{AL\_7POINT1\_8\_SOFT}}
+{\footnotesize\ttfamily \#define AL\+\_\+7\+POINT1\+\_\+8\+\_\+\+SOFT~0x1210}
+
+\Hypertarget{alext_8h_a7073dc16eb3c4df26b37b5dfa170945e}\label{alext_8h_a7073dc16eb3c4df26b37b5dfa170945e} 
+\index{alext.h@{alext.h}!AL\_7POINT1\_SOFT@{AL\_7POINT1\_SOFT}}
+\index{AL\_7POINT1\_SOFT@{AL\_7POINT1\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_7POINT1\_SOFT}{AL\_7POINT1\_SOFT}}
+{\footnotesize\ttfamily \#define AL\+\_\+7\+POINT1\+\_\+\+SOFT~0x1506}
+
+\Hypertarget{alext_8h_a11f726ba38bbf779b792d2ee85aecbe1}\label{alext_8h_a11f726ba38bbf779b792d2ee85aecbe1} 
+\index{alext.h@{alext.h}!AL\_BYTE3\_SOFT@{AL\_BYTE3\_SOFT}}
+\index{AL\_BYTE3\_SOFT@{AL\_BYTE3\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_BYTE3\_SOFT}{AL\_BYTE3\_SOFT}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+BYTE3\+\_\+\+SOFT~0x1408}
+
+\Hypertarget{alext_8h_a58b1746038c7829935f8ae07a374fc98}\label{alext_8h_a58b1746038c7829935f8ae07a374fc98} 
+\index{alext.h@{alext.h}!AL\_BYTE\_LENGTH\_SOFT@{AL\_BYTE\_LENGTH\_SOFT}}
+\index{AL\_BYTE\_LENGTH\_SOFT@{AL\_BYTE\_LENGTH\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_BYTE\_LENGTH\_SOFT}{AL\_BYTE\_LENGTH\_SOFT}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+BYTE\+\_\+\+LENGTH\+\_\+\+SOFT~0x2009}
+
+\Hypertarget{alext_8h_a1bf7275b8fdd310ac69b034f2f87933d}\label{alext_8h_a1bf7275b8fdd310ac69b034f2f87933d} 
+\index{alext.h@{alext.h}!AL\_BYTE\_RW\_OFFSETS\_SOFT@{AL\_BYTE\_RW\_OFFSETS\_SOFT}}
+\index{AL\_BYTE\_RW\_OFFSETS\_SOFT@{AL\_BYTE\_RW\_OFFSETS\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_BYTE\_RW\_OFFSETS\_SOFT}{AL\_BYTE\_RW\_OFFSETS\_SOFT}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+BYTE\+\_\+\+RW\+\_\+\+OFFSETS\+\_\+\+SOFT~0x1031}
+
+\Hypertarget{alext_8h_acc6f00ad89ff6f1d1e18dfef33a84f0f}\label{alext_8h_acc6f00ad89ff6f1d1e18dfef33a84f0f} 
+\index{alext.h@{alext.h}!AL\_BYTE\_SOFT@{AL\_BYTE\_SOFT}}
+\index{AL\_BYTE\_SOFT@{AL\_BYTE\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_BYTE\_SOFT}{AL\_BYTE\_SOFT}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+BYTE\+\_\+\+SOFT~0x1400}
+
+\Hypertarget{alext_8h_adde0c104d07354eb0f0db8adc626bad0}\label{alext_8h_adde0c104d07354eb0f0db8adc626bad0} 
+\index{alext.h@{alext.h}!AL\_DEDICATED\_GAIN@{AL\_DEDICATED\_GAIN}}
+\index{AL\_DEDICATED\_GAIN@{AL\_DEDICATED\_GAIN}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_DEDICATED\_GAIN}{AL\_DEDICATED\_GAIN}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+DEDICATED\+\_\+\+GAIN~0x0001}
+
+\Hypertarget{alext_8h_a687e7f26c8dbffd99946fe11b2e47b0a}\label{alext_8h_a687e7f26c8dbffd99946fe11b2e47b0a} 
+\index{alext.h@{alext.h}!AL\_DIRECT\_CHANNELS\_SOFT@{AL\_DIRECT\_CHANNELS\_SOFT}}
+\index{AL\_DIRECT\_CHANNELS\_SOFT@{AL\_DIRECT\_CHANNELS\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_DIRECT\_CHANNELS\_SOFT}{AL\_DIRECT\_CHANNELS\_SOFT}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+DIRECT\+\_\+\+CHANNELS\+\_\+\+SOFT~0x1033}
+
+\Hypertarget{alext_8h_a83a58357312e30b9c0e2c40c69bd6538}\label{alext_8h_a83a58357312e30b9c0e2c40c69bd6538} 
+\index{alext.h@{alext.h}!AL\_DOUBLE\_SOFT@{AL\_DOUBLE\_SOFT}}
+\index{AL\_DOUBLE\_SOFT@{AL\_DOUBLE\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_DOUBLE\_SOFT}{AL\_DOUBLE\_SOFT}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+DOUBLE\+\_\+\+SOFT~0x1407}
+
+\Hypertarget{alext_8h_a43b6f4c65cf455a66710ba7d665aae90}\label{alext_8h_a43b6f4c65cf455a66710ba7d665aae90} 
+\index{alext.h@{alext.h}!AL\_EFFECT\_DEDICATED\_DIALOGUE@{AL\_EFFECT\_DEDICATED\_DIALOGUE}}
+\index{AL\_EFFECT\_DEDICATED\_DIALOGUE@{AL\_EFFECT\_DEDICATED\_DIALOGUE}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_EFFECT\_DEDICATED\_DIALOGUE}{AL\_EFFECT\_DEDICATED\_DIALOGUE}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+EFFECT\+\_\+\+DEDICATED\+\_\+\+DIALOGUE~0x9001}
+
+\Hypertarget{alext_8h_afc79ad4e1a489aa5dd1ce1ddd87efe97}\label{alext_8h_afc79ad4e1a489aa5dd1ce1ddd87efe97} 
+\index{alext.h@{alext.h}!AL\_EFFECT\_DEDICATED\_LOW\_FREQUENCY\_EFFECT@{AL\_EFFECT\_DEDICATED\_LOW\_FREQUENCY\_EFFECT}}
+\index{AL\_EFFECT\_DEDICATED\_LOW\_FREQUENCY\_EFFECT@{AL\_EFFECT\_DEDICATED\_LOW\_FREQUENCY\_EFFECT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_EFFECT\_DEDICATED\_LOW\_FREQUENCY\_EFFECT}{AL\_EFFECT\_DEDICATED\_LOW\_FREQUENCY\_EFFECT}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+EFFECT\+\_\+\+DEDICATED\+\_\+\+LOW\+\_\+\+FREQUENCY\+\_\+\+EFFECT~0x9000}
+
+\Hypertarget{alext_8h_ae7da02b3ba4b0c3aa0a50b21a9c48045}\label{alext_8h_ae7da02b3ba4b0c3aa0a50b21a9c48045} 
+\index{alext.h@{alext.h}!AL\_EXT\_ALAW@{AL\_EXT\_ALAW}}
+\index{AL\_EXT\_ALAW@{AL\_EXT\_ALAW}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_EXT\_ALAW}{AL\_EXT\_ALAW}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+EXT\+\_\+\+ALAW~1}
+
+\Hypertarget{alext_8h_a8d6b6f70d7298c9b6682f72417d495d7}\label{alext_8h_a8d6b6f70d7298c9b6682f72417d495d7} 
+\index{alext.h@{alext.h}!AL\_EXT\_double@{AL\_EXT\_double}}
+\index{AL\_EXT\_double@{AL\_EXT\_double}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_EXT\_double}{AL\_EXT\_double}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+EXT\+\_\+double~1}
+
+\Hypertarget{alext_8h_adf37d7332c0de089a8e4192efe6b319d}\label{alext_8h_adf37d7332c0de089a8e4192efe6b319d} 
+\index{alext.h@{alext.h}!AL\_EXT\_float32@{AL\_EXT\_float32}}
+\index{AL\_EXT\_float32@{AL\_EXT\_float32}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_EXT\_float32}{AL\_EXT\_float32}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+EXT\+\_\+float32~1}
+
+\Hypertarget{alext_8h_ac5ee23f8bae10ac5b222a76126bde594}\label{alext_8h_ac5ee23f8bae10ac5b222a76126bde594} 
+\index{alext.h@{alext.h}!AL\_EXT\_FOLDBACK@{AL\_EXT\_FOLDBACK}}
+\index{AL\_EXT\_FOLDBACK@{AL\_EXT\_FOLDBACK}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_EXT\_FOLDBACK}{AL\_EXT\_FOLDBACK}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+EXT\+\_\+\+FOLDBACK~1}
+
+\Hypertarget{alext_8h_ae739b724e8b39dd9a5e97e8829a2daf6}\label{alext_8h_ae739b724e8b39dd9a5e97e8829a2daf6} 
+\index{alext.h@{alext.h}!AL\_EXT\_FOLDBACK\_NAME@{AL\_EXT\_FOLDBACK\_NAME}}
+\index{AL\_EXT\_FOLDBACK\_NAME@{AL\_EXT\_FOLDBACK\_NAME}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_EXT\_FOLDBACK\_NAME}{AL\_EXT\_FOLDBACK\_NAME}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+EXT\+\_\+\+FOLDBACK\+\_\+\+NAME~"{}AL\+\_\+\+EXT\+\_\+\+FOLDBACK"{}}
+
+\Hypertarget{alext_8h_a1a8aa3bdb21bad0b193c7e0e6f762eee}\label{alext_8h_a1a8aa3bdb21bad0b193c7e0e6f762eee} 
+\index{alext.h@{alext.h}!AL\_EXT\_IMA4@{AL\_EXT\_IMA4}}
+\index{AL\_EXT\_IMA4@{AL\_EXT\_IMA4}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_EXT\_IMA4}{AL\_EXT\_IMA4}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+EXT\+\_\+\+IMA4~1}
+
+\Hypertarget{alext_8h_a2ed32bd66de4efaad7dda89bc2776c83}\label{alext_8h_a2ed32bd66de4efaad7dda89bc2776c83} 
+\index{alext.h@{alext.h}!AL\_EXT\_MCFORMATS@{AL\_EXT\_MCFORMATS}}
+\index{AL\_EXT\_MCFORMATS@{AL\_EXT\_MCFORMATS}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_EXT\_MCFORMATS}{AL\_EXT\_MCFORMATS}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+EXT\+\_\+\+MCFORMATS~1}
+
+\Hypertarget{alext_8h_ae1d0a903c6bf7a1e5e4747e3711397a4}\label{alext_8h_ae1d0a903c6bf7a1e5e4747e3711397a4} 
+\index{alext.h@{alext.h}!AL\_EXT\_MULAW@{AL\_EXT\_MULAW}}
+\index{AL\_EXT\_MULAW@{AL\_EXT\_MULAW}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_EXT\_MULAW}{AL\_EXT\_MULAW}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+EXT\+\_\+\+MULAW~1}
+
+\Hypertarget{alext_8h_a4a9c261e205793cac2743e3d563dc2bc}\label{alext_8h_a4a9c261e205793cac2743e3d563dc2bc} 
+\index{alext.h@{alext.h}!AL\_EXT\_MULAW\_MCFORMATS@{AL\_EXT\_MULAW\_MCFORMATS}}
+\index{AL\_EXT\_MULAW\_MCFORMATS@{AL\_EXT\_MULAW\_MCFORMATS}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_EXT\_MULAW\_MCFORMATS}{AL\_EXT\_MULAW\_MCFORMATS}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+EXT\+\_\+\+MULAW\+\_\+\+MCFORMATS~1}
+
+\Hypertarget{alext_8h_a6b7ada6da09937de2387a6484b2a414d}\label{alext_8h_a6b7ada6da09937de2387a6484b2a414d} 
+\index{alext.h@{alext.h}!AL\_EXT\_source\_distance\_model@{AL\_EXT\_source\_distance\_model}}
+\index{AL\_EXT\_source\_distance\_model@{AL\_EXT\_source\_distance\_model}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_EXT\_source\_distance\_model}{AL\_EXT\_source\_distance\_model}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+EXT\+\_\+source\+\_\+distance\+\_\+model~1}
+
+\Hypertarget{alext_8h_af7d879feb72e6fc1ce3a04955d3af7c8}\label{alext_8h_af7d879feb72e6fc1ce3a04955d3af7c8} 
+\index{alext.h@{alext.h}!AL\_EXT\_SOURCE\_RADIUS@{AL\_EXT\_SOURCE\_RADIUS}}
+\index{AL\_EXT\_SOURCE\_RADIUS@{AL\_EXT\_SOURCE\_RADIUS}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_EXT\_SOURCE\_RADIUS}{AL\_EXT\_SOURCE\_RADIUS}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+EXT\+\_\+\+SOURCE\+\_\+\+RADIUS~1}
+
+\Hypertarget{alext_8h_ab85b94d56089c08f6c63708b1948e4f3}\label{alext_8h_ab85b94d56089c08f6c63708b1948e4f3} 
+\index{alext.h@{alext.h}!AL\_EXT\_STATIC\_BUFFER@{AL\_EXT\_STATIC\_BUFFER}}
+\index{AL\_EXT\_STATIC\_BUFFER@{AL\_EXT\_STATIC\_BUFFER}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_EXT\_STATIC\_BUFFER}{AL\_EXT\_STATIC\_BUFFER}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+EXT\+\_\+\+STATIC\+\_\+\+BUFFER~1}
+
+\Hypertarget{alext_8h_a097ba9308185cbc67fabbcb29fde17bd}\label{alext_8h_a097ba9308185cbc67fabbcb29fde17bd} 
+\index{alext.h@{alext.h}!AL\_EXT\_STEREO\_ANGLES@{AL\_EXT\_STEREO\_ANGLES}}
+\index{AL\_EXT\_STEREO\_ANGLES@{AL\_EXT\_STEREO\_ANGLES}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_EXT\_STEREO\_ANGLES}{AL\_EXT\_STEREO\_ANGLES}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+EXT\+\_\+\+STEREO\+\_\+\+ANGLES~1}
+
+\Hypertarget{alext_8h_aad72bd48e64234aaea85e513d0e25780}\label{alext_8h_aad72bd48e64234aaea85e513d0e25780} 
+\index{alext.h@{alext.h}!AL\_EXT\_vorbis@{AL\_EXT\_vorbis}}
+\index{AL\_EXT\_vorbis@{AL\_EXT\_vorbis}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_EXT\_vorbis}{AL\_EXT\_vorbis}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+EXT\+\_\+vorbis~1}
+
+\Hypertarget{alext_8h_a16355a78a861526d22c8bfa1b899a061}\label{alext_8h_a16355a78a861526d22c8bfa1b899a061} 
+\index{alext.h@{alext.h}!AL\_FLOAT\_SOFT@{AL\_FLOAT\_SOFT}}
+\index{AL\_FLOAT\_SOFT@{AL\_FLOAT\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_FLOAT\_SOFT}{AL\_FLOAT\_SOFT}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+FLOAT\+\_\+\+SOFT~0x1406}
+
+\Hypertarget{alext_8h_a63d4040fd1f27b24646f0ba2e49f364e}\label{alext_8h_a63d4040fd1f27b24646f0ba2e49f364e} 
+\index{alext.h@{alext.h}!AL\_FOLDBACK\_EVENT\_BLOCK@{AL\_FOLDBACK\_EVENT\_BLOCK}}
+\index{AL\_FOLDBACK\_EVENT\_BLOCK@{AL\_FOLDBACK\_EVENT\_BLOCK}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_FOLDBACK\_EVENT\_BLOCK}{AL\_FOLDBACK\_EVENT\_BLOCK}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+FOLDBACK\+\_\+\+EVENT\+\_\+\+BLOCK~0x4112}
+
+\Hypertarget{alext_8h_ae37828d89a764f0fcf75af4ec8225807}\label{alext_8h_ae37828d89a764f0fcf75af4ec8225807} 
+\index{alext.h@{alext.h}!AL\_FOLDBACK\_EVENT\_START@{AL\_FOLDBACK\_EVENT\_START}}
+\index{AL\_FOLDBACK\_EVENT\_START@{AL\_FOLDBACK\_EVENT\_START}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_FOLDBACK\_EVENT\_START}{AL\_FOLDBACK\_EVENT\_START}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+FOLDBACK\+\_\+\+EVENT\+\_\+\+START~0x4111}
+
+\Hypertarget{alext_8h_aefd0faa09df7e34168afe4a8932d35dd}\label{alext_8h_aefd0faa09df7e34168afe4a8932d35dd} 
+\index{alext.h@{alext.h}!AL\_FOLDBACK\_EVENT\_STOP@{AL\_FOLDBACK\_EVENT\_STOP}}
+\index{AL\_FOLDBACK\_EVENT\_STOP@{AL\_FOLDBACK\_EVENT\_STOP}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_FOLDBACK\_EVENT\_STOP}{AL\_FOLDBACK\_EVENT\_STOP}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+FOLDBACK\+\_\+\+EVENT\+\_\+\+STOP~0x4113}
+
+\Hypertarget{alext_8h_ac035188f152395a5d54639a02dd86e31}\label{alext_8h_ac035188f152395a5d54639a02dd86e31} 
+\index{alext.h@{alext.h}!AL\_FOLDBACK\_MODE\_MONO@{AL\_FOLDBACK\_MODE\_MONO}}
+\index{AL\_FOLDBACK\_MODE\_MONO@{AL\_FOLDBACK\_MODE\_MONO}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_FOLDBACK\_MODE\_MONO}{AL\_FOLDBACK\_MODE\_MONO}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+FOLDBACK\+\_\+\+MODE\+\_\+\+MONO~0x4101}
+
+\Hypertarget{alext_8h_a29d4d68ffda10b2f19c6d65a7c744c5d}\label{alext_8h_a29d4d68ffda10b2f19c6d65a7c744c5d} 
+\index{alext.h@{alext.h}!AL\_FOLDBACK\_MODE\_STEREO@{AL\_FOLDBACK\_MODE\_STEREO}}
+\index{AL\_FOLDBACK\_MODE\_STEREO@{AL\_FOLDBACK\_MODE\_STEREO}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_FOLDBACK\_MODE\_STEREO}{AL\_FOLDBACK\_MODE\_STEREO}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+FOLDBACK\+\_\+\+MODE\+\_\+\+STEREO~0x4102}
+
+\Hypertarget{alext_8h_a3ef3f9a7fb3322411bd4275990947db1}\label{alext_8h_a3ef3f9a7fb3322411bd4275990947db1} 
+\index{alext.h@{alext.h}!AL\_FORMAT\_51CHN16@{AL\_FORMAT\_51CHN16}}
+\index{AL\_FORMAT\_51CHN16@{AL\_FORMAT\_51CHN16}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_FORMAT\_51CHN16}{AL\_FORMAT\_51CHN16}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+FORMAT\+\_\+51\+CHN16~0x120B}
+
+\Hypertarget{alext_8h_a239a5d40d10a186207189d3d62ac5ab4}\label{alext_8h_a239a5d40d10a186207189d3d62ac5ab4} 
+\index{alext.h@{alext.h}!AL\_FORMAT\_51CHN32@{AL\_FORMAT\_51CHN32}}
+\index{AL\_FORMAT\_51CHN32@{AL\_FORMAT\_51CHN32}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_FORMAT\_51CHN32}{AL\_FORMAT\_51CHN32}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+FORMAT\+\_\+51\+CHN32~0x120C}
+
+\Hypertarget{alext_8h_a9229726bfbf45d050c6381d477a24622}\label{alext_8h_a9229726bfbf45d050c6381d477a24622} 
+\index{alext.h@{alext.h}!AL\_FORMAT\_51CHN8@{AL\_FORMAT\_51CHN8}}
+\index{AL\_FORMAT\_51CHN8@{AL\_FORMAT\_51CHN8}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_FORMAT\_51CHN8}{AL\_FORMAT\_51CHN8}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+FORMAT\+\_\+51\+CHN8~0x120A}
+
+\Hypertarget{alext_8h_a93502dbe2b52469daa24913015faf144}\label{alext_8h_a93502dbe2b52469daa24913015faf144} 
+\index{alext.h@{alext.h}!AL\_FORMAT\_51CHN\_MULAW@{AL\_FORMAT\_51CHN\_MULAW}}
+\index{AL\_FORMAT\_51CHN\_MULAW@{AL\_FORMAT\_51CHN\_MULAW}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_FORMAT\_51CHN\_MULAW}{AL\_FORMAT\_51CHN\_MULAW}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+FORMAT\+\_\+51\+CHN\+\_\+\+MULAW~0x10023}
+
+\Hypertarget{alext_8h_a7326e6e323e22f26720a6018d5f20cc1}\label{alext_8h_a7326e6e323e22f26720a6018d5f20cc1} 
+\index{alext.h@{alext.h}!AL\_FORMAT\_61CHN16@{AL\_FORMAT\_61CHN16}}
+\index{AL\_FORMAT\_61CHN16@{AL\_FORMAT\_61CHN16}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_FORMAT\_61CHN16}{AL\_FORMAT\_61CHN16}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+FORMAT\+\_\+61\+CHN16~0x120E}
+
+\Hypertarget{alext_8h_a4d6af44423cec30d76781fed10697b7f}\label{alext_8h_a4d6af44423cec30d76781fed10697b7f} 
+\index{alext.h@{alext.h}!AL\_FORMAT\_61CHN32@{AL\_FORMAT\_61CHN32}}
+\index{AL\_FORMAT\_61CHN32@{AL\_FORMAT\_61CHN32}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_FORMAT\_61CHN32}{AL\_FORMAT\_61CHN32}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+FORMAT\+\_\+61\+CHN32~0x120F}
+
+\Hypertarget{alext_8h_a66d63b8a1c4a091cf1362b0f59c3a783}\label{alext_8h_a66d63b8a1c4a091cf1362b0f59c3a783} 
+\index{alext.h@{alext.h}!AL\_FORMAT\_61CHN8@{AL\_FORMAT\_61CHN8}}
+\index{AL\_FORMAT\_61CHN8@{AL\_FORMAT\_61CHN8}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_FORMAT\_61CHN8}{AL\_FORMAT\_61CHN8}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+FORMAT\+\_\+61\+CHN8~0x120D}
+
+\Hypertarget{alext_8h_a19cad6849d3d40d0e90416c00e99694e}\label{alext_8h_a19cad6849d3d40d0e90416c00e99694e} 
+\index{alext.h@{alext.h}!AL\_FORMAT\_61CHN\_MULAW@{AL\_FORMAT\_61CHN\_MULAW}}
+\index{AL\_FORMAT\_61CHN\_MULAW@{AL\_FORMAT\_61CHN\_MULAW}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_FORMAT\_61CHN\_MULAW}{AL\_FORMAT\_61CHN\_MULAW}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+FORMAT\+\_\+61\+CHN\+\_\+\+MULAW~0x10024}
+
+\Hypertarget{alext_8h_a36f1650b2294be507c08e5d3ef85e9b0}\label{alext_8h_a36f1650b2294be507c08e5d3ef85e9b0} 
+\index{alext.h@{alext.h}!AL\_FORMAT\_71CHN16@{AL\_FORMAT\_71CHN16}}
+\index{AL\_FORMAT\_71CHN16@{AL\_FORMAT\_71CHN16}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_FORMAT\_71CHN16}{AL\_FORMAT\_71CHN16}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+FORMAT\+\_\+71\+CHN16~0x1211}
+
+\Hypertarget{alext_8h_aa2de06ff9dd3d679c98be4676bc57e5b}\label{alext_8h_aa2de06ff9dd3d679c98be4676bc57e5b} 
+\index{alext.h@{alext.h}!AL\_FORMAT\_71CHN32@{AL\_FORMAT\_71CHN32}}
+\index{AL\_FORMAT\_71CHN32@{AL\_FORMAT\_71CHN32}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_FORMAT\_71CHN32}{AL\_FORMAT\_71CHN32}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+FORMAT\+\_\+71\+CHN32~0x1212}
+
+\Hypertarget{alext_8h_ac9ee6f89bc3eabf5118394f2eac26db8}\label{alext_8h_ac9ee6f89bc3eabf5118394f2eac26db8} 
+\index{alext.h@{alext.h}!AL\_FORMAT\_71CHN8@{AL\_FORMAT\_71CHN8}}
+\index{AL\_FORMAT\_71CHN8@{AL\_FORMAT\_71CHN8}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_FORMAT\_71CHN8}{AL\_FORMAT\_71CHN8}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+FORMAT\+\_\+71\+CHN8~0x1210}
+
+\Hypertarget{alext_8h_af49247437d963d4f9494e5b825809c2c}\label{alext_8h_af49247437d963d4f9494e5b825809c2c} 
+\index{alext.h@{alext.h}!AL\_FORMAT\_71CHN\_MULAW@{AL\_FORMAT\_71CHN\_MULAW}}
+\index{AL\_FORMAT\_71CHN\_MULAW@{AL\_FORMAT\_71CHN\_MULAW}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_FORMAT\_71CHN\_MULAW}{AL\_FORMAT\_71CHN\_MULAW}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+FORMAT\+\_\+71\+CHN\+\_\+\+MULAW~0x10025}
+
+\Hypertarget{alext_8h_aa10665b6cb087aae4c59b0d4be6c5288}\label{alext_8h_aa10665b6cb087aae4c59b0d4be6c5288} 
+\index{alext.h@{alext.h}!AL\_FORMAT\_IMA\_ADPCM\_MONO16\_EXT@{AL\_FORMAT\_IMA\_ADPCM\_MONO16\_EXT}}
+\index{AL\_FORMAT\_IMA\_ADPCM\_MONO16\_EXT@{AL\_FORMAT\_IMA\_ADPCM\_MONO16\_EXT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_FORMAT\_IMA\_ADPCM\_MONO16\_EXT}{AL\_FORMAT\_IMA\_ADPCM\_MONO16\_EXT}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+FORMAT\+\_\+\+IMA\+\_\+\+ADPCM\+\_\+\+MONO16\+\_\+\+EXT~0x10000}
+
+\Hypertarget{alext_8h_aa182f02d5ad06aaf62160a7187ed00ab}\label{alext_8h_aa182f02d5ad06aaf62160a7187ed00ab} 
+\index{alext.h@{alext.h}!AL\_FORMAT\_IMA\_ADPCM\_STEREO16\_EXT@{AL\_FORMAT\_IMA\_ADPCM\_STEREO16\_EXT}}
+\index{AL\_FORMAT\_IMA\_ADPCM\_STEREO16\_EXT@{AL\_FORMAT\_IMA\_ADPCM\_STEREO16\_EXT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_FORMAT\_IMA\_ADPCM\_STEREO16\_EXT}{AL\_FORMAT\_IMA\_ADPCM\_STEREO16\_EXT}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+FORMAT\+\_\+\+IMA\+\_\+\+ADPCM\+\_\+\+STEREO16\+\_\+\+EXT~0x10001}
+
+\Hypertarget{alext_8h_afa8baf50317d7d71bd49debe8a877f5d}\label{alext_8h_afa8baf50317d7d71bd49debe8a877f5d} 
+\index{alext.h@{alext.h}!AL\_FORMAT\_MONO\_ALAW\_EXT@{AL\_FORMAT\_MONO\_ALAW\_EXT}}
+\index{AL\_FORMAT\_MONO\_ALAW\_EXT@{AL\_FORMAT\_MONO\_ALAW\_EXT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_FORMAT\_MONO\_ALAW\_EXT}{AL\_FORMAT\_MONO\_ALAW\_EXT}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+FORMAT\+\_\+\+MONO\+\_\+\+ALAW\+\_\+\+EXT~0x10016}
+
+\Hypertarget{alext_8h_a52db5fe9c4483f1315df23032218fcbe}\label{alext_8h_a52db5fe9c4483f1315df23032218fcbe} 
+\index{alext.h@{alext.h}!AL\_FORMAT\_MONO\_DOUBLE\_EXT@{AL\_FORMAT\_MONO\_DOUBLE\_EXT}}
+\index{AL\_FORMAT\_MONO\_DOUBLE\_EXT@{AL\_FORMAT\_MONO\_DOUBLE\_EXT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_FORMAT\_MONO\_DOUBLE\_EXT}{AL\_FORMAT\_MONO\_DOUBLE\_EXT}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+FORMAT\+\_\+\+MONO\+\_\+\+DOUBLE\+\_\+\+EXT~0x10012}
+
+\Hypertarget{alext_8h_aaa92a983ae1fa30210d96f23accd03e3}\label{alext_8h_aaa92a983ae1fa30210d96f23accd03e3} 
+\index{alext.h@{alext.h}!AL\_FORMAT\_MONO\_FLOAT32@{AL\_FORMAT\_MONO\_FLOAT32}}
+\index{AL\_FORMAT\_MONO\_FLOAT32@{AL\_FORMAT\_MONO\_FLOAT32}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_FORMAT\_MONO\_FLOAT32}{AL\_FORMAT\_MONO\_FLOAT32}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+FORMAT\+\_\+\+MONO\+\_\+\+FLOAT32~0x10010}
+
+\Hypertarget{alext_8h_a0808770e8662dc38ebea2201186e8bf9}\label{alext_8h_a0808770e8662dc38ebea2201186e8bf9} 
+\index{alext.h@{alext.h}!AL\_FORMAT\_MONO\_IMA4@{AL\_FORMAT\_MONO\_IMA4}}
+\index{AL\_FORMAT\_MONO\_IMA4@{AL\_FORMAT\_MONO\_IMA4}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_FORMAT\_MONO\_IMA4}{AL\_FORMAT\_MONO\_IMA4}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+FORMAT\+\_\+\+MONO\+\_\+\+IMA4~0x1300}
+
+\Hypertarget{alext_8h_a8c3aaa5c50b1d66f6818affc633a82bc}\label{alext_8h_a8c3aaa5c50b1d66f6818affc633a82bc} 
+\index{alext.h@{alext.h}!AL\_FORMAT\_MONO\_MULAW@{AL\_FORMAT\_MONO\_MULAW}}
+\index{AL\_FORMAT\_MONO\_MULAW@{AL\_FORMAT\_MONO\_MULAW}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_FORMAT\_MONO\_MULAW}{AL\_FORMAT\_MONO\_MULAW}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+FORMAT\+\_\+\+MONO\+\_\+\+MULAW~0x10014}
+
+\Hypertarget{alext_8h_a5ae10be3f4c373f50676910566c09a27}\label{alext_8h_a5ae10be3f4c373f50676910566c09a27} 
+\index{alext.h@{alext.h}!AL\_FORMAT\_MONO\_MULAW\_EXT@{AL\_FORMAT\_MONO\_MULAW\_EXT}}
+\index{AL\_FORMAT\_MONO\_MULAW\_EXT@{AL\_FORMAT\_MONO\_MULAW\_EXT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_FORMAT\_MONO\_MULAW\_EXT}{AL\_FORMAT\_MONO\_MULAW\_EXT}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+FORMAT\+\_\+\+MONO\+\_\+\+MULAW\+\_\+\+EXT~0x10014}
+
+\Hypertarget{alext_8h_af3531c0637152c681fc1390f0029adf1}\label{alext_8h_af3531c0637152c681fc1390f0029adf1} 
+\index{alext.h@{alext.h}!AL\_FORMAT\_QUAD16@{AL\_FORMAT\_QUAD16}}
+\index{AL\_FORMAT\_QUAD16@{AL\_FORMAT\_QUAD16}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_FORMAT\_QUAD16}{AL\_FORMAT\_QUAD16}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+FORMAT\+\_\+\+QUAD16~0x1205}
+
+\Hypertarget{alext_8h_aaaf9512bcb4ebc9482ef6614a981ae76}\label{alext_8h_aaaf9512bcb4ebc9482ef6614a981ae76} 
+\index{alext.h@{alext.h}!AL\_FORMAT\_QUAD16\_LOKI@{AL\_FORMAT\_QUAD16\_LOKI}}
+\index{AL\_FORMAT\_QUAD16\_LOKI@{AL\_FORMAT\_QUAD16\_LOKI}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_FORMAT\_QUAD16\_LOKI}{AL\_FORMAT\_QUAD16\_LOKI}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+FORMAT\+\_\+\+QUAD16\+\_\+\+LOKI~0x10005}
+
+\Hypertarget{alext_8h_a7210b353131cdb8e07f2721f1070d452}\label{alext_8h_a7210b353131cdb8e07f2721f1070d452} 
+\index{alext.h@{alext.h}!AL\_FORMAT\_QUAD32@{AL\_FORMAT\_QUAD32}}
+\index{AL\_FORMAT\_QUAD32@{AL\_FORMAT\_QUAD32}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_FORMAT\_QUAD32}{AL\_FORMAT\_QUAD32}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+FORMAT\+\_\+\+QUAD32~0x1206}
+
+\Hypertarget{alext_8h_a0df567b830b0e27e7469d71b6c8256e7}\label{alext_8h_a0df567b830b0e27e7469d71b6c8256e7} 
+\index{alext.h@{alext.h}!AL\_FORMAT\_QUAD8@{AL\_FORMAT\_QUAD8}}
+\index{AL\_FORMAT\_QUAD8@{AL\_FORMAT\_QUAD8}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_FORMAT\_QUAD8}{AL\_FORMAT\_QUAD8}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+FORMAT\+\_\+\+QUAD8~0x1204}
+
+\Hypertarget{alext_8h_a50207369d2feaf297dcd5deae58733c4}\label{alext_8h_a50207369d2feaf297dcd5deae58733c4} 
+\index{alext.h@{alext.h}!AL\_FORMAT\_QUAD8\_LOKI@{AL\_FORMAT\_QUAD8\_LOKI}}
+\index{AL\_FORMAT\_QUAD8\_LOKI@{AL\_FORMAT\_QUAD8\_LOKI}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_FORMAT\_QUAD8\_LOKI}{AL\_FORMAT\_QUAD8\_LOKI}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+FORMAT\+\_\+\+QUAD8\+\_\+\+LOKI~0x10004}
+
+\Hypertarget{alext_8h_a11e22edf5861c7a60c51e796937c5240}\label{alext_8h_a11e22edf5861c7a60c51e796937c5240} 
+\index{alext.h@{alext.h}!AL\_FORMAT\_QUAD\_MULAW@{AL\_FORMAT\_QUAD\_MULAW}}
+\index{AL\_FORMAT\_QUAD\_MULAW@{AL\_FORMAT\_QUAD\_MULAW}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_FORMAT\_QUAD\_MULAW}{AL\_FORMAT\_QUAD\_MULAW}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+FORMAT\+\_\+\+QUAD\+\_\+\+MULAW~0x10021}
+
+\Hypertarget{alext_8h_ab5a89a1fdc5e65da9730cba841bacabe}\label{alext_8h_ab5a89a1fdc5e65da9730cba841bacabe} 
+\index{alext.h@{alext.h}!AL\_FORMAT\_REAR16@{AL\_FORMAT\_REAR16}}
+\index{AL\_FORMAT\_REAR16@{AL\_FORMAT\_REAR16}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_FORMAT\_REAR16}{AL\_FORMAT\_REAR16}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+FORMAT\+\_\+\+REAR16~0x1208}
+
+\Hypertarget{alext_8h_a3f4db6a87ca17fdab7ddf000a3e33dff}\label{alext_8h_a3f4db6a87ca17fdab7ddf000a3e33dff} 
+\index{alext.h@{alext.h}!AL\_FORMAT\_REAR32@{AL\_FORMAT\_REAR32}}
+\index{AL\_FORMAT\_REAR32@{AL\_FORMAT\_REAR32}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_FORMAT\_REAR32}{AL\_FORMAT\_REAR32}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+FORMAT\+\_\+\+REAR32~0x1209}
+
+\Hypertarget{alext_8h_a4835e1cd9bc7c80f788b2961d45babad}\label{alext_8h_a4835e1cd9bc7c80f788b2961d45babad} 
+\index{alext.h@{alext.h}!AL\_FORMAT\_REAR8@{AL\_FORMAT\_REAR8}}
+\index{AL\_FORMAT\_REAR8@{AL\_FORMAT\_REAR8}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_FORMAT\_REAR8}{AL\_FORMAT\_REAR8}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+FORMAT\+\_\+\+REAR8~0x1207}
+
+\Hypertarget{alext_8h_a899403dfb2a32a8b9f7fdc50c6670a2e}\label{alext_8h_a899403dfb2a32a8b9f7fdc50c6670a2e} 
+\index{alext.h@{alext.h}!AL\_FORMAT\_REAR\_MULAW@{AL\_FORMAT\_REAR\_MULAW}}
+\index{AL\_FORMAT\_REAR\_MULAW@{AL\_FORMAT\_REAR\_MULAW}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_FORMAT\_REAR\_MULAW}{AL\_FORMAT\_REAR\_MULAW}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+FORMAT\+\_\+\+REAR\+\_\+\+MULAW~0x10022}
+
+\Hypertarget{alext_8h_ab890378eba11bf7d55f9e4020ed01eab}\label{alext_8h_ab890378eba11bf7d55f9e4020ed01eab} 
+\index{alext.h@{alext.h}!AL\_FORMAT\_STEREO\_ALAW\_EXT@{AL\_FORMAT\_STEREO\_ALAW\_EXT}}
+\index{AL\_FORMAT\_STEREO\_ALAW\_EXT@{AL\_FORMAT\_STEREO\_ALAW\_EXT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_FORMAT\_STEREO\_ALAW\_EXT}{AL\_FORMAT\_STEREO\_ALAW\_EXT}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+FORMAT\+\_\+\+STEREO\+\_\+\+ALAW\+\_\+\+EXT~0x10017}
+
+\Hypertarget{alext_8h_a6dc8fb0a065eac4dfbb64f2a2da2593b}\label{alext_8h_a6dc8fb0a065eac4dfbb64f2a2da2593b} 
+\index{alext.h@{alext.h}!AL\_FORMAT\_STEREO\_DOUBLE\_EXT@{AL\_FORMAT\_STEREO\_DOUBLE\_EXT}}
+\index{AL\_FORMAT\_STEREO\_DOUBLE\_EXT@{AL\_FORMAT\_STEREO\_DOUBLE\_EXT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_FORMAT\_STEREO\_DOUBLE\_EXT}{AL\_FORMAT\_STEREO\_DOUBLE\_EXT}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+FORMAT\+\_\+\+STEREO\+\_\+\+DOUBLE\+\_\+\+EXT~0x10013}
+
+\Hypertarget{alext_8h_a388e1bdcb05009bf0c6cc83ec3056fac}\label{alext_8h_a388e1bdcb05009bf0c6cc83ec3056fac} 
+\index{alext.h@{alext.h}!AL\_FORMAT\_STEREO\_FLOAT32@{AL\_FORMAT\_STEREO\_FLOAT32}}
+\index{AL\_FORMAT\_STEREO\_FLOAT32@{AL\_FORMAT\_STEREO\_FLOAT32}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_FORMAT\_STEREO\_FLOAT32}{AL\_FORMAT\_STEREO\_FLOAT32}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+FORMAT\+\_\+\+STEREO\+\_\+\+FLOAT32~0x10011}
+
+\Hypertarget{alext_8h_a0ca6a53d80c7f291b3b939b62c9a19fa}\label{alext_8h_a0ca6a53d80c7f291b3b939b62c9a19fa} 
+\index{alext.h@{alext.h}!AL\_FORMAT\_STEREO\_IMA4@{AL\_FORMAT\_STEREO\_IMA4}}
+\index{AL\_FORMAT\_STEREO\_IMA4@{AL\_FORMAT\_STEREO\_IMA4}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_FORMAT\_STEREO\_IMA4}{AL\_FORMAT\_STEREO\_IMA4}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+FORMAT\+\_\+\+STEREO\+\_\+\+IMA4~0x1301}
+
+\Hypertarget{alext_8h_ad747d0c21286d6e0930701ab77a21677}\label{alext_8h_ad747d0c21286d6e0930701ab77a21677} 
+\index{alext.h@{alext.h}!AL\_FORMAT\_STEREO\_MULAW@{AL\_FORMAT\_STEREO\_MULAW}}
+\index{AL\_FORMAT\_STEREO\_MULAW@{AL\_FORMAT\_STEREO\_MULAW}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_FORMAT\_STEREO\_MULAW}{AL\_FORMAT\_STEREO\_MULAW}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+FORMAT\+\_\+\+STEREO\+\_\+\+MULAW~0x10015}
+
+\Hypertarget{alext_8h_a1df2c4c43ced7f6bc9c59bd640355dfd}\label{alext_8h_a1df2c4c43ced7f6bc9c59bd640355dfd} 
+\index{alext.h@{alext.h}!AL\_FORMAT\_STEREO\_MULAW\_EXT@{AL\_FORMAT\_STEREO\_MULAW\_EXT}}
+\index{AL\_FORMAT\_STEREO\_MULAW\_EXT@{AL\_FORMAT\_STEREO\_MULAW\_EXT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_FORMAT\_STEREO\_MULAW\_EXT}{AL\_FORMAT\_STEREO\_MULAW\_EXT}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+FORMAT\+\_\+\+STEREO\+\_\+\+MULAW\+\_\+\+EXT~0x10015}
+
+\Hypertarget{alext_8h_af6eb94067be8377f04a1d948d7f8658f}\label{alext_8h_af6eb94067be8377f04a1d948d7f8658f} 
+\index{alext.h@{alext.h}!AL\_FORMAT\_VORBIS\_EXT@{AL\_FORMAT\_VORBIS\_EXT}}
+\index{AL\_FORMAT\_VORBIS\_EXT@{AL\_FORMAT\_VORBIS\_EXT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_FORMAT\_VORBIS\_EXT}{AL\_FORMAT\_VORBIS\_EXT}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+FORMAT\+\_\+\+VORBIS\+\_\+\+EXT~0x10003}
+
+\Hypertarget{alext_8h_a6ba270d33106ed108226e6b723e7e843}\label{alext_8h_a6ba270d33106ed108226e6b723e7e843} 
+\index{alext.h@{alext.h}!AL\_FORMAT\_WAVE\_EXT@{AL\_FORMAT\_WAVE\_EXT}}
+\index{AL\_FORMAT\_WAVE\_EXT@{AL\_FORMAT\_WAVE\_EXT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_FORMAT\_WAVE\_EXT}{AL\_FORMAT\_WAVE\_EXT}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+FORMAT\+\_\+\+WAVE\+\_\+\+EXT~0x10002}
+
+\Hypertarget{alext_8h_afe3abe3f3dd3463dd3d13dc3025c9ccd}\label{alext_8h_afe3abe3f3dd3463dd3d13dc3025c9ccd} 
+\index{alext.h@{alext.h}!AL\_INT\_SOFT@{AL\_INT\_SOFT}}
+\index{AL\_INT\_SOFT@{AL\_INT\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_INT\_SOFT}{AL\_INT\_SOFT}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+INT\+\_\+\+SOFT~0x1404}
+
+\Hypertarget{alext_8h_a08b8b6dfcb3ef72ac8c8405348f78f8f}\label{alext_8h_a08b8b6dfcb3ef72ac8c8405348f78f8f} 
+\index{alext.h@{alext.h}!AL\_INTERNAL\_FORMAT\_SOFT@{AL\_INTERNAL\_FORMAT\_SOFT}}
+\index{AL\_INTERNAL\_FORMAT\_SOFT@{AL\_INTERNAL\_FORMAT\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_INTERNAL\_FORMAT\_SOFT}{AL\_INTERNAL\_FORMAT\_SOFT}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+INTERNAL\+\_\+\+FORMAT\+\_\+\+SOFT~0x2008}
+
+\Hypertarget{alext_8h_a446f06ec4ed637d6ed7060a66ecd4d7d}\label{alext_8h_a446f06ec4ed637d6ed7060a66ecd4d7d} 
+\index{alext.h@{alext.h}!AL\_LOKI\_IMA\_ADPCM\_format@{AL\_LOKI\_IMA\_ADPCM\_format}}
+\index{AL\_LOKI\_IMA\_ADPCM\_format@{AL\_LOKI\_IMA\_ADPCM\_format}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_LOKI\_IMA\_ADPCM\_format}{AL\_LOKI\_IMA\_ADPCM\_format}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+LOKI\+\_\+\+IMA\+\_\+\+ADPCM\+\_\+format~1}
+
+Open\+AL cross platform audio library Copyright (C) 2008 by authors. This library is free software; you can redistribute it and/or modify it under the terms of the GNU Library General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Library General Public License for more details.
+
+You should have received a copy of the GNU Library General Public License along with this library; if not, write to the Free Software Foundation, Inc., 59 Temple Place -\/ Suite 330, Boston, MA 02111-\/1307, USA. Or go to \href{http://www.gnu.org/copyleft/lgpl.html}{\texttt{ http\+://www.\+gnu.\+org/copyleft/lgpl.\+html}} \Hypertarget{alext_8h_adce8d225a88850373359d6ea726fe1a0}\label{alext_8h_adce8d225a88850373359d6ea726fe1a0} 
+\index{alext.h@{alext.h}!AL\_LOKI\_quadriphonic@{AL\_LOKI\_quadriphonic}}
+\index{AL\_LOKI\_quadriphonic@{AL\_LOKI\_quadriphonic}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_LOKI\_quadriphonic}{AL\_LOKI\_quadriphonic}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+LOKI\+\_\+quadriphonic~1}
+
+\Hypertarget{alext_8h_ad99cb226713c498c35a3af414b959a73}\label{alext_8h_ad99cb226713c498c35a3af414b959a73} 
+\index{alext.h@{alext.h}!AL\_LOKI\_WAVE\_format@{AL\_LOKI\_WAVE\_format}}
+\index{AL\_LOKI\_WAVE\_format@{AL\_LOKI\_WAVE\_format}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_LOKI\_WAVE\_format}{AL\_LOKI\_WAVE\_format}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+LOKI\+\_\+\+WAVE\+\_\+format~1}
+
+\Hypertarget{alext_8h_aa13dde281c119a75f361899a7ee03d56}\label{alext_8h_aa13dde281c119a75f361899a7ee03d56} 
+\index{alext.h@{alext.h}!AL\_LOOP\_POINTS\_SOFT@{AL\_LOOP\_POINTS\_SOFT}}
+\index{AL\_LOOP\_POINTS\_SOFT@{AL\_LOOP\_POINTS\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_LOOP\_POINTS\_SOFT}{AL\_LOOP\_POINTS\_SOFT}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+LOOP\+\_\+\+POINTS\+\_\+\+SOFT~0x2015}
+
+\Hypertarget{alext_8h_a5ef7b877512724447d88ea848155a4f4}\label{alext_8h_a5ef7b877512724447d88ea848155a4f4} 
+\index{alext.h@{alext.h}!AL\_MONO16\_SOFT@{AL\_MONO16\_SOFT}}
+\index{AL\_MONO16\_SOFT@{AL\_MONO16\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_MONO16\_SOFT}{AL\_MONO16\_SOFT}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+MONO16\+\_\+\+SOFT~0x1101}
+
+\Hypertarget{alext_8h_a103830a757d00404cce3aa1f3b185051}\label{alext_8h_a103830a757d00404cce3aa1f3b185051} 
+\index{alext.h@{alext.h}!AL\_MONO32F\_SOFT@{AL\_MONO32F\_SOFT}}
+\index{AL\_MONO32F\_SOFT@{AL\_MONO32F\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_MONO32F\_SOFT}{AL\_MONO32F\_SOFT}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+MONO32\+F\+\_\+\+SOFT~0x10010}
+
+\Hypertarget{alext_8h_ae901ab5335ab8e70371c05ac6a0afbd5}\label{alext_8h_ae901ab5335ab8e70371c05ac6a0afbd5} 
+\index{alext.h@{alext.h}!AL\_MONO8\_SOFT@{AL\_MONO8\_SOFT}}
+\index{AL\_MONO8\_SOFT@{AL\_MONO8\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_MONO8\_SOFT}{AL\_MONO8\_SOFT}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+MONO8\+\_\+\+SOFT~0x1100}
+
+\Hypertarget{alext_8h_ab1336c5f4288fb25a0cdf227e8dcf486}\label{alext_8h_ab1336c5f4288fb25a0cdf227e8dcf486} 
+\index{alext.h@{alext.h}!AL\_MONO\_SOFT@{AL\_MONO\_SOFT}}
+\index{AL\_MONO\_SOFT@{AL\_MONO\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_MONO\_SOFT}{AL\_MONO\_SOFT}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+MONO\+\_\+\+SOFT~0x1500}
+
+\Hypertarget{alext_8h_a0f23565e77481dac489f157cb07eaaa5}\label{alext_8h_a0f23565e77481dac489f157cb07eaaa5} 
+\index{alext.h@{alext.h}!AL\_QUAD16\_SOFT@{AL\_QUAD16\_SOFT}}
+\index{AL\_QUAD16\_SOFT@{AL\_QUAD16\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_QUAD16\_SOFT}{AL\_QUAD16\_SOFT}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+QUAD16\+\_\+\+SOFT~0x1205}
+
+\Hypertarget{alext_8h_aca1a3426901b1d8a8dc677ce10673976}\label{alext_8h_aca1a3426901b1d8a8dc677ce10673976} 
+\index{alext.h@{alext.h}!AL\_QUAD32F\_SOFT@{AL\_QUAD32F\_SOFT}}
+\index{AL\_QUAD32F\_SOFT@{AL\_QUAD32F\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_QUAD32F\_SOFT}{AL\_QUAD32F\_SOFT}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+QUAD32\+F\+\_\+\+SOFT~0x1206}
+
+\Hypertarget{alext_8h_af5adeeb4c50d20b82ec8093a0faa4744}\label{alext_8h_af5adeeb4c50d20b82ec8093a0faa4744} 
+\index{alext.h@{alext.h}!AL\_QUAD8\_SOFT@{AL\_QUAD8\_SOFT}}
+\index{AL\_QUAD8\_SOFT@{AL\_QUAD8\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_QUAD8\_SOFT}{AL\_QUAD8\_SOFT}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+QUAD8\+\_\+\+SOFT~0x1204}
+
+\Hypertarget{alext_8h_a9580db0ce80c78d9eab8548ae23a93cd}\label{alext_8h_a9580db0ce80c78d9eab8548ae23a93cd} 
+\index{alext.h@{alext.h}!AL\_QUAD\_SOFT@{AL\_QUAD\_SOFT}}
+\index{AL\_QUAD\_SOFT@{AL\_QUAD\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_QUAD\_SOFT}{AL\_QUAD\_SOFT}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+QUAD\+\_\+\+SOFT~0x1503}
+
+\Hypertarget{alext_8h_ab878a2636af39f1861786e2507b7ed06}\label{alext_8h_ab878a2636af39f1861786e2507b7ed06} 
+\index{alext.h@{alext.h}!AL\_REAR16\_SOFT@{AL\_REAR16\_SOFT}}
+\index{AL\_REAR16\_SOFT@{AL\_REAR16\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_REAR16\_SOFT}{AL\_REAR16\_SOFT}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+REAR16\+\_\+\+SOFT~0x1208}
+
+\Hypertarget{alext_8h_a4e4b2e447af09406d7c61a5bb5e4632c}\label{alext_8h_a4e4b2e447af09406d7c61a5bb5e4632c} 
+\index{alext.h@{alext.h}!AL\_REAR32F\_SOFT@{AL\_REAR32F\_SOFT}}
+\index{AL\_REAR32F\_SOFT@{AL\_REAR32F\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_REAR32F\_SOFT}{AL\_REAR32F\_SOFT}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+REAR32\+F\+\_\+\+SOFT~0x1209}
+
+\Hypertarget{alext_8h_ae78734cf3b15faa5bcbd201f1f6cbeb9}\label{alext_8h_ae78734cf3b15faa5bcbd201f1f6cbeb9} 
+\index{alext.h@{alext.h}!AL\_REAR8\_SOFT@{AL\_REAR8\_SOFT}}
+\index{AL\_REAR8\_SOFT@{AL\_REAR8\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_REAR8\_SOFT}{AL\_REAR8\_SOFT}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+REAR8\+\_\+\+SOFT~0x1207}
+
+\Hypertarget{alext_8h_ac82e1e1bf0b54b43dbae180e904c8a92}\label{alext_8h_ac82e1e1bf0b54b43dbae180e904c8a92} 
+\index{alext.h@{alext.h}!AL\_REAR\_SOFT@{AL\_REAR\_SOFT}}
+\index{AL\_REAR\_SOFT@{AL\_REAR\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_REAR\_SOFT}{AL\_REAR\_SOFT}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+REAR\+\_\+\+SOFT~0x1502}
+
+\Hypertarget{alext_8h_a23fa5aae76fb906144f6722f757657c4}\label{alext_8h_a23fa5aae76fb906144f6722f757657c4} 
+\index{alext.h@{alext.h}!AL\_SAMPLE\_LENGTH\_SOFT@{AL\_SAMPLE\_LENGTH\_SOFT}}
+\index{AL\_SAMPLE\_LENGTH\_SOFT@{AL\_SAMPLE\_LENGTH\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_SAMPLE\_LENGTH\_SOFT}{AL\_SAMPLE\_LENGTH\_SOFT}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+SAMPLE\+\_\+\+LENGTH\+\_\+\+SOFT~0x200A}
+
+\Hypertarget{alext_8h_afbefe1e7c8b811c10bdc6193fb0b5c88}\label{alext_8h_afbefe1e7c8b811c10bdc6193fb0b5c88} 
+\index{alext.h@{alext.h}!AL\_SAMPLE\_OFFSET\_LATENCY\_SOFT@{AL\_SAMPLE\_OFFSET\_LATENCY\_SOFT}}
+\index{AL\_SAMPLE\_OFFSET\_LATENCY\_SOFT@{AL\_SAMPLE\_OFFSET\_LATENCY\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_SAMPLE\_OFFSET\_LATENCY\_SOFT}{AL\_SAMPLE\_OFFSET\_LATENCY\_SOFT}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+SAMPLE\+\_\+\+OFFSET\+\_\+\+LATENCY\+\_\+\+SOFT~0x1200}
+
+\Hypertarget{alext_8h_ad6bac197b2aaca3c5d0ef0009740364a}\label{alext_8h_ad6bac197b2aaca3c5d0ef0009740364a} 
+\index{alext.h@{alext.h}!AL\_SAMPLE\_RW\_OFFSETS\_SOFT@{AL\_SAMPLE\_RW\_OFFSETS\_SOFT}}
+\index{AL\_SAMPLE\_RW\_OFFSETS\_SOFT@{AL\_SAMPLE\_RW\_OFFSETS\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_SAMPLE\_RW\_OFFSETS\_SOFT}{AL\_SAMPLE\_RW\_OFFSETS\_SOFT}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+SAMPLE\+\_\+\+RW\+\_\+\+OFFSETS\+\_\+\+SOFT~0x1032}
+
+\Hypertarget{alext_8h_aa584cc54689dbfe251a9ea54268e5cee}\label{alext_8h_aa584cc54689dbfe251a9ea54268e5cee} 
+\index{alext.h@{alext.h}!AL\_SEC\_LENGTH\_SOFT@{AL\_SEC\_LENGTH\_SOFT}}
+\index{AL\_SEC\_LENGTH\_SOFT@{AL\_SEC\_LENGTH\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_SEC\_LENGTH\_SOFT}{AL\_SEC\_LENGTH\_SOFT}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+SEC\+\_\+\+LENGTH\+\_\+\+SOFT~0x200B}
+
+\Hypertarget{alext_8h_a4159676e14dfd2f35a6dd9377fa997a2}\label{alext_8h_a4159676e14dfd2f35a6dd9377fa997a2} 
+\index{alext.h@{alext.h}!AL\_SEC\_OFFSET\_LATENCY\_SOFT@{AL\_SEC\_OFFSET\_LATENCY\_SOFT}}
+\index{AL\_SEC\_OFFSET\_LATENCY\_SOFT@{AL\_SEC\_OFFSET\_LATENCY\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_SEC\_OFFSET\_LATENCY\_SOFT}{AL\_SEC\_OFFSET\_LATENCY\_SOFT}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+SEC\+\_\+\+OFFSET\+\_\+\+LATENCY\+\_\+\+SOFT~0x1201}
+
+\Hypertarget{alext_8h_ab587836254197faec03e8c4f77bc846b}\label{alext_8h_ab587836254197faec03e8c4f77bc846b} 
+\index{alext.h@{alext.h}!AL\_SHORT\_SOFT@{AL\_SHORT\_SOFT}}
+\index{AL\_SHORT\_SOFT@{AL\_SHORT\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_SHORT\_SOFT}{AL\_SHORT\_SOFT}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+SHORT\+\_\+\+SOFT~0x1402}
+
+\Hypertarget{alext_8h_a45b8d28562378fac5c1029c963b4af7d}\label{alext_8h_a45b8d28562378fac5c1029c963b4af7d} 
+\index{alext.h@{alext.h}!AL\_SOFT\_buffer\_samples@{AL\_SOFT\_buffer\_samples}}
+\index{AL\_SOFT\_buffer\_samples@{AL\_SOFT\_buffer\_samples}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_SOFT\_buffer\_samples}{AL\_SOFT\_buffer\_samples}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+SOFT\+\_\+buffer\+\_\+samples~1}
+
+\Hypertarget{alext_8h_a02a30af1fa820e294260687a20a2737c}\label{alext_8h_a02a30af1fa820e294260687a20a2737c} 
+\index{alext.h@{alext.h}!AL\_SOFT\_buffer\_sub\_data@{AL\_SOFT\_buffer\_sub\_data}}
+\index{AL\_SOFT\_buffer\_sub\_data@{AL\_SOFT\_buffer\_sub\_data}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_SOFT\_buffer\_sub\_data}{AL\_SOFT\_buffer\_sub\_data}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+SOFT\+\_\+buffer\+\_\+sub\+\_\+data~1}
+
+\Hypertarget{alext_8h_a240a57cac0a535fbc72c425b760c3ca4}\label{alext_8h_a240a57cac0a535fbc72c425b760c3ca4} 
+\index{alext.h@{alext.h}!AL\_SOFT\_direct\_channels@{AL\_SOFT\_direct\_channels}}
+\index{AL\_SOFT\_direct\_channels@{AL\_SOFT\_direct\_channels}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_SOFT\_direct\_channels}{AL\_SOFT\_direct\_channels}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+SOFT\+\_\+direct\+\_\+channels~1}
+
+\Hypertarget{alext_8h_a6b8de6d06c10662b2e2f0e1c8899ab40}\label{alext_8h_a6b8de6d06c10662b2e2f0e1c8899ab40} 
+\index{alext.h@{alext.h}!AL\_SOFT\_loop\_points@{AL\_SOFT\_loop\_points}}
+\index{AL\_SOFT\_loop\_points@{AL\_SOFT\_loop\_points}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_SOFT\_loop\_points}{AL\_SOFT\_loop\_points}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+SOFT\+\_\+loop\+\_\+points~1}
+
+\Hypertarget{alext_8h_a78e7ea1da97af8b5b506699a89525ee9}\label{alext_8h_a78e7ea1da97af8b5b506699a89525ee9} 
+\index{alext.h@{alext.h}!AL\_SOFT\_source\_latency@{AL\_SOFT\_source\_latency}}
+\index{AL\_SOFT\_source\_latency@{AL\_SOFT\_source\_latency}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_SOFT\_source\_latency}{AL\_SOFT\_source\_latency}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+SOFT\+\_\+source\+\_\+latency~1}
+
+\Hypertarget{alext_8h_abe3e5a29a84432d0a77ed15c812dbb9d}\label{alext_8h_abe3e5a29a84432d0a77ed15c812dbb9d} 
+\index{alext.h@{alext.h}!AL\_SOURCE\_DISTANCE\_MODEL@{AL\_SOURCE\_DISTANCE\_MODEL}}
+\index{AL\_SOURCE\_DISTANCE\_MODEL@{AL\_SOURCE\_DISTANCE\_MODEL}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_SOURCE\_DISTANCE\_MODEL}{AL\_SOURCE\_DISTANCE\_MODEL}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+SOURCE\+\_\+\+DISTANCE\+\_\+\+MODEL~0x200}
+
+\Hypertarget{alext_8h_a5c633ee47a7d61e83a1c357cc6f05f25}\label{alext_8h_a5c633ee47a7d61e83a1c357cc6f05f25} 
+\index{alext.h@{alext.h}!AL\_SOURCE\_RADIUS@{AL\_SOURCE\_RADIUS}}
+\index{AL\_SOURCE\_RADIUS@{AL\_SOURCE\_RADIUS}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_SOURCE\_RADIUS}{AL\_SOURCE\_RADIUS}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+SOURCE\+\_\+\+RADIUS~0x1031}
+
+\Hypertarget{alext_8h_aa88c1663cc943d3346e3268237737ded}\label{alext_8h_aa88c1663cc943d3346e3268237737ded} 
+\index{alext.h@{alext.h}!AL\_STEREO16\_SOFT@{AL\_STEREO16\_SOFT}}
+\index{AL\_STEREO16\_SOFT@{AL\_STEREO16\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_STEREO16\_SOFT}{AL\_STEREO16\_SOFT}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+STEREO16\+\_\+\+SOFT~0x1103}
+
+\Hypertarget{alext_8h_ab1ebed06aa5b5ea331a262ffa645afdc}\label{alext_8h_ab1ebed06aa5b5ea331a262ffa645afdc} 
+\index{alext.h@{alext.h}!AL\_STEREO32F\_SOFT@{AL\_STEREO32F\_SOFT}}
+\index{AL\_STEREO32F\_SOFT@{AL\_STEREO32F\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_STEREO32F\_SOFT}{AL\_STEREO32F\_SOFT}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+STEREO32\+F\+\_\+\+SOFT~0x10011}
+
+\Hypertarget{alext_8h_a052e85d3f26eb3610151b223ce388a74}\label{alext_8h_a052e85d3f26eb3610151b223ce388a74} 
+\index{alext.h@{alext.h}!AL\_STEREO8\_SOFT@{AL\_STEREO8\_SOFT}}
+\index{AL\_STEREO8\_SOFT@{AL\_STEREO8\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_STEREO8\_SOFT}{AL\_STEREO8\_SOFT}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+STEREO8\+\_\+\+SOFT~0x1102}
+
+\Hypertarget{alext_8h_aedf81f8fb9a8c8de94d03e4e2ca32a8c}\label{alext_8h_aedf81f8fb9a8c8de94d03e4e2ca32a8c} 
+\index{alext.h@{alext.h}!AL\_STEREO\_ANGLES@{AL\_STEREO\_ANGLES}}
+\index{AL\_STEREO\_ANGLES@{AL\_STEREO\_ANGLES}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_STEREO\_ANGLES}{AL\_STEREO\_ANGLES}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+STEREO\+\_\+\+ANGLES~0x1030}
+
+\Hypertarget{alext_8h_adc6554553bfbc5f4623ab1b71ec69343}\label{alext_8h_adc6554553bfbc5f4623ab1b71ec69343} 
+\index{alext.h@{alext.h}!AL\_STEREO\_SOFT@{AL\_STEREO\_SOFT}}
+\index{AL\_STEREO\_SOFT@{AL\_STEREO\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_STEREO\_SOFT}{AL\_STEREO\_SOFT}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+STEREO\+\_\+\+SOFT~0x1501}
+
+\Hypertarget{alext_8h_aa1ae3e42bfc4b8c649a12c4da6e390c0}\label{alext_8h_aa1ae3e42bfc4b8c649a12c4da6e390c0} 
+\index{alext.h@{alext.h}!AL\_UNSIGNED\_BYTE3\_SOFT@{AL\_UNSIGNED\_BYTE3\_SOFT}}
+\index{AL\_UNSIGNED\_BYTE3\_SOFT@{AL\_UNSIGNED\_BYTE3\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_UNSIGNED\_BYTE3\_SOFT}{AL\_UNSIGNED\_BYTE3\_SOFT}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+UNSIGNED\+\_\+\+BYTE3\+\_\+\+SOFT~0x1409}
+
+\Hypertarget{alext_8h_a65766a245a9b140ef09626057eed983b}\label{alext_8h_a65766a245a9b140ef09626057eed983b} 
+\index{alext.h@{alext.h}!AL\_UNSIGNED\_BYTE\_SOFT@{AL\_UNSIGNED\_BYTE\_SOFT}}
+\index{AL\_UNSIGNED\_BYTE\_SOFT@{AL\_UNSIGNED\_BYTE\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_UNSIGNED\_BYTE\_SOFT}{AL\_UNSIGNED\_BYTE\_SOFT}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+UNSIGNED\+\_\+\+BYTE\+\_\+\+SOFT~0x1401}
+
+\Hypertarget{alext_8h_a2a594f508b03f1333b6e36238f62760e}\label{alext_8h_a2a594f508b03f1333b6e36238f62760e} 
+\index{alext.h@{alext.h}!AL\_UNSIGNED\_INT\_SOFT@{AL\_UNSIGNED\_INT\_SOFT}}
+\index{AL\_UNSIGNED\_INT\_SOFT@{AL\_UNSIGNED\_INT\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_UNSIGNED\_INT\_SOFT}{AL\_UNSIGNED\_INT\_SOFT}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+UNSIGNED\+\_\+\+INT\+\_\+\+SOFT~0x1405}
+
+\Hypertarget{alext_8h_afee22d8f73a230d5ce90102a90a75405}\label{alext_8h_afee22d8f73a230d5ce90102a90a75405} 
+\index{alext.h@{alext.h}!AL\_UNSIGNED\_SHORT\_SOFT@{AL\_UNSIGNED\_SHORT\_SOFT}}
+\index{AL\_UNSIGNED\_SHORT\_SOFT@{AL\_UNSIGNED\_SHORT\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{AL\_UNSIGNED\_SHORT\_SOFT}{AL\_UNSIGNED\_SHORT\_SOFT}}
+{\footnotesize\ttfamily \#define AL\+\_\+\+UNSIGNED\+\_\+\+SHORT\+\_\+\+SOFT~0x1403}
+
+\Hypertarget{alext_8h_a09cc70559b5756bc54316749af8bd063}\label{alext_8h_a09cc70559b5756bc54316749af8bd063} 
+\index{alext.h@{alext.h}!ALC\_5POINT1\_SOFT@{ALC\_5POINT1\_SOFT}}
+\index{ALC\_5POINT1\_SOFT@{ALC\_5POINT1\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{ALC\_5POINT1\_SOFT}{ALC\_5POINT1\_SOFT}}
+{\footnotesize\ttfamily \#define ALC\+\_\+5\+POINT1\+\_\+\+SOFT~0x1504}
+
+\Hypertarget{alext_8h_a9a12c9e0ac591259f3b1a44335886779}\label{alext_8h_a9a12c9e0ac591259f3b1a44335886779} 
+\index{alext.h@{alext.h}!ALC\_6POINT1\_SOFT@{ALC\_6POINT1\_SOFT}}
+\index{ALC\_6POINT1\_SOFT@{ALC\_6POINT1\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{ALC\_6POINT1\_SOFT}{ALC\_6POINT1\_SOFT}}
+{\footnotesize\ttfamily \#define ALC\+\_\+6\+POINT1\+\_\+\+SOFT~0x1505}
+
+\Hypertarget{alext_8h_addb51e08cae0c7a6075f9e34cf50ac09}\label{alext_8h_addb51e08cae0c7a6075f9e34cf50ac09} 
+\index{alext.h@{alext.h}!ALC\_7POINT1\_SOFT@{ALC\_7POINT1\_SOFT}}
+\index{ALC\_7POINT1\_SOFT@{ALC\_7POINT1\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{ALC\_7POINT1\_SOFT}{ALC\_7POINT1\_SOFT}}
+{\footnotesize\ttfamily \#define ALC\+\_\+7\+POINT1\+\_\+\+SOFT~0x1506}
+
+\Hypertarget{alext_8h_a613f9a16c32884c7390c3be430df84ca}\label{alext_8h_a613f9a16c32884c7390c3be430df84ca} 
+\index{alext.h@{alext.h}!ALC\_BYTE\_SOFT@{ALC\_BYTE\_SOFT}}
+\index{ALC\_BYTE\_SOFT@{ALC\_BYTE\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{ALC\_BYTE\_SOFT}{ALC\_BYTE\_SOFT}}
+{\footnotesize\ttfamily \#define ALC\+\_\+\+BYTE\+\_\+\+SOFT~0x1400}
+
+\Hypertarget{alext_8h_a9dc3494bc875d0aa57a66ca8a85936d2}\label{alext_8h_a9dc3494bc875d0aa57a66ca8a85936d2} 
+\index{alext.h@{alext.h}!ALC\_CHAN\_CD\_LOKI@{ALC\_CHAN\_CD\_LOKI}}
+\index{ALC\_CHAN\_CD\_LOKI@{ALC\_CHAN\_CD\_LOKI}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{ALC\_CHAN\_CD\_LOKI}{ALC\_CHAN\_CD\_LOKI}}
+{\footnotesize\ttfamily \#define ALC\+\_\+\+CHAN\+\_\+\+CD\+\_\+\+LOKI~0x500003}
+
+\Hypertarget{alext_8h_a67652ccd57802c92a4c937d3dc2f24ac}\label{alext_8h_a67652ccd57802c92a4c937d3dc2f24ac} 
+\index{alext.h@{alext.h}!ALC\_CHAN\_MAIN\_LOKI@{ALC\_CHAN\_MAIN\_LOKI}}
+\index{ALC\_CHAN\_MAIN\_LOKI@{ALC\_CHAN\_MAIN\_LOKI}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{ALC\_CHAN\_MAIN\_LOKI}{ALC\_CHAN\_MAIN\_LOKI}}
+{\footnotesize\ttfamily \#define ALC\+\_\+\+CHAN\+\_\+\+MAIN\+\_\+\+LOKI~0x500001}
+
+\Hypertarget{alext_8h_a02d00aa8a9cc181c1458a709f18a1a60}\label{alext_8h_a02d00aa8a9cc181c1458a709f18a1a60} 
+\index{alext.h@{alext.h}!ALC\_CHAN\_PCM\_LOKI@{ALC\_CHAN\_PCM\_LOKI}}
+\index{ALC\_CHAN\_PCM\_LOKI@{ALC\_CHAN\_PCM\_LOKI}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{ALC\_CHAN\_PCM\_LOKI}{ALC\_CHAN\_PCM\_LOKI}}
+{\footnotesize\ttfamily \#define ALC\+\_\+\+CHAN\+\_\+\+PCM\+\_\+\+LOKI~0x500002}
+
+\Hypertarget{alext_8h_a4071fd0766c6defceb6da60875da5816}\label{alext_8h_a4071fd0766c6defceb6da60875da5816} 
+\index{alext.h@{alext.h}!ALC\_CONNECTED@{ALC\_CONNECTED}}
+\index{ALC\_CONNECTED@{ALC\_CONNECTED}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{ALC\_CONNECTED}{ALC\_CONNECTED}}
+{\footnotesize\ttfamily \#define ALC\+\_\+\+CONNECTED~0x313}
+
+\Hypertarget{alext_8h_a39014e58a688957474d604a1af68075c}\label{alext_8h_a39014e58a688957474d604a1af68075c} 
+\index{alext.h@{alext.h}!ALC\_EXT\_DEDICATED@{ALC\_EXT\_DEDICATED}}
+\index{ALC\_EXT\_DEDICATED@{ALC\_EXT\_DEDICATED}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{ALC\_EXT\_DEDICATED}{ALC\_EXT\_DEDICATED}}
+{\footnotesize\ttfamily \#define ALC\+\_\+\+EXT\+\_\+\+DEDICATED~1}
+
+\Hypertarget{alext_8h_ab4ca7513102d1b9816635f48aaebef20}\label{alext_8h_ab4ca7513102d1b9816635f48aaebef20} 
+\index{alext.h@{alext.h}!ALC\_EXT\_disconnect@{ALC\_EXT\_disconnect}}
+\index{ALC\_EXT\_disconnect@{ALC\_EXT\_disconnect}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{ALC\_EXT\_disconnect}{ALC\_EXT\_disconnect}}
+{\footnotesize\ttfamily \#define ALC\+\_\+\+EXT\+\_\+disconnect~1}
+
+\Hypertarget{alext_8h_ae7abeacdf71a5843ac9a5aa2cb3ac2e7}\label{alext_8h_ae7abeacdf71a5843ac9a5aa2cb3ac2e7} 
+\index{alext.h@{alext.h}!ALC\_EXT\_EFX@{ALC\_EXT\_EFX}}
+\index{ALC\_EXT\_EFX@{ALC\_EXT\_EFX}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{ALC\_EXT\_EFX}{ALC\_EXT\_EFX}}
+{\footnotesize\ttfamily \#define ALC\+\_\+\+EXT\+\_\+\+EFX~1}
+
+\Hypertarget{alext_8h_aa5a0b43132d400d32ff2e367c58d6287}\label{alext_8h_aa5a0b43132d400d32ff2e367c58d6287} 
+\index{alext.h@{alext.h}!ALC\_EXT\_thread\_local\_context@{ALC\_EXT\_thread\_local\_context}}
+\index{ALC\_EXT\_thread\_local\_context@{ALC\_EXT\_thread\_local\_context}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{ALC\_EXT\_thread\_local\_context}{ALC\_EXT\_thread\_local\_context}}
+{\footnotesize\ttfamily \#define ALC\+\_\+\+EXT\+\_\+thread\+\_\+local\+\_\+context~1}
+
+\Hypertarget{alext_8h_a93234bc8d212e994f725340bc7234989}\label{alext_8h_a93234bc8d212e994f725340bc7234989} 
+\index{alext.h@{alext.h}!ALC\_FLOAT\_SOFT@{ALC\_FLOAT\_SOFT}}
+\index{ALC\_FLOAT\_SOFT@{ALC\_FLOAT\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{ALC\_FLOAT\_SOFT}{ALC\_FLOAT\_SOFT}}
+{\footnotesize\ttfamily \#define ALC\+\_\+\+FLOAT\+\_\+\+SOFT~0x1406}
+
+\Hypertarget{alext_8h_ae08bfa8efd7df5f7df73347e8cbca6f2}\label{alext_8h_ae08bfa8efd7df5f7df73347e8cbca6f2} 
+\index{alext.h@{alext.h}!ALC\_FORMAT\_CHANNELS\_SOFT@{ALC\_FORMAT\_CHANNELS\_SOFT}}
+\index{ALC\_FORMAT\_CHANNELS\_SOFT@{ALC\_FORMAT\_CHANNELS\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{ALC\_FORMAT\_CHANNELS\_SOFT}{ALC\_FORMAT\_CHANNELS\_SOFT}}
+{\footnotesize\ttfamily \#define ALC\+\_\+\+FORMAT\+\_\+\+CHANNELS\+\_\+\+SOFT~0x1990}
+
+\Hypertarget{alext_8h_ae74d31c731ea228d8adb42e68626f8f7}\label{alext_8h_ae74d31c731ea228d8adb42e68626f8f7} 
+\index{alext.h@{alext.h}!ALC\_FORMAT\_TYPE\_SOFT@{ALC\_FORMAT\_TYPE\_SOFT}}
+\index{ALC\_FORMAT\_TYPE\_SOFT@{ALC\_FORMAT\_TYPE\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{ALC\_FORMAT\_TYPE\_SOFT}{ALC\_FORMAT\_TYPE\_SOFT}}
+{\footnotesize\ttfamily \#define ALC\+\_\+\+FORMAT\+\_\+\+TYPE\+\_\+\+SOFT~0x1991}
+
+\Hypertarget{alext_8h_ab4e463088c7f257f16aa6bbb3eb3ecf5}\label{alext_8h_ab4e463088c7f257f16aa6bbb3eb3ecf5} 
+\index{alext.h@{alext.h}!ALC\_INT\_SOFT@{ALC\_INT\_SOFT}}
+\index{ALC\_INT\_SOFT@{ALC\_INT\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{ALC\_INT\_SOFT}{ALC\_INT\_SOFT}}
+{\footnotesize\ttfamily \#define ALC\+\_\+\+INT\+\_\+\+SOFT~0x1404}
+
+\Hypertarget{alext_8h_a37fd39ddaa651afd67058066990f740f}\label{alext_8h_a37fd39ddaa651afd67058066990f740f} 
+\index{alext.h@{alext.h}!ALC\_LOKI\_audio\_channel@{ALC\_LOKI\_audio\_channel}}
+\index{ALC\_LOKI\_audio\_channel@{ALC\_LOKI\_audio\_channel}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{ALC\_LOKI\_audio\_channel}{ALC\_LOKI\_audio\_channel}}
+{\footnotesize\ttfamily \#define ALC\+\_\+\+LOKI\+\_\+audio\+\_\+channel~1}
+
+\Hypertarget{alext_8h_a98995d8d18b6b9e635e4f8629230e8b5}\label{alext_8h_a98995d8d18b6b9e635e4f8629230e8b5} 
+\index{alext.h@{alext.h}!ALC\_MONO\_SOFT@{ALC\_MONO\_SOFT}}
+\index{ALC\_MONO\_SOFT@{ALC\_MONO\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{ALC\_MONO\_SOFT}{ALC\_MONO\_SOFT}}
+{\footnotesize\ttfamily \#define ALC\+\_\+\+MONO\+\_\+\+SOFT~0x1500}
+
+\Hypertarget{alext_8h_ad81f173bb924576f12ace97c0e491996}\label{alext_8h_ad81f173bb924576f12ace97c0e491996} 
+\index{alext.h@{alext.h}!ALC\_QUAD\_SOFT@{ALC\_QUAD\_SOFT}}
+\index{ALC\_QUAD\_SOFT@{ALC\_QUAD\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{ALC\_QUAD\_SOFT}{ALC\_QUAD\_SOFT}}
+{\footnotesize\ttfamily \#define ALC\+\_\+\+QUAD\+\_\+\+SOFT~0x1503}
+
+\Hypertarget{alext_8h_aa3c8844664113d33bbc4db783fb41a41}\label{alext_8h_aa3c8844664113d33bbc4db783fb41a41} 
+\index{alext.h@{alext.h}!ALC\_SHORT\_SOFT@{ALC\_SHORT\_SOFT}}
+\index{ALC\_SHORT\_SOFT@{ALC\_SHORT\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{ALC\_SHORT\_SOFT}{ALC\_SHORT\_SOFT}}
+{\footnotesize\ttfamily \#define ALC\+\_\+\+SHORT\+\_\+\+SOFT~0x1402}
+
+\Hypertarget{alext_8h_ab5fc6b8417202e8f22624e471972eaf1}\label{alext_8h_ab5fc6b8417202e8f22624e471972eaf1} 
+\index{alext.h@{alext.h}!ALC\_SOFT\_loopback@{ALC\_SOFT\_loopback}}
+\index{ALC\_SOFT\_loopback@{ALC\_SOFT\_loopback}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{ALC\_SOFT\_loopback}{ALC\_SOFT\_loopback}}
+{\footnotesize\ttfamily \#define ALC\+\_\+\+SOFT\+\_\+loopback~1}
+
+\Hypertarget{alext_8h_ada645ffdc832c3eeade8430845e2f1d2}\label{alext_8h_ada645ffdc832c3eeade8430845e2f1d2} 
+\index{alext.h@{alext.h}!ALC\_STEREO\_SOFT@{ALC\_STEREO\_SOFT}}
+\index{ALC\_STEREO\_SOFT@{ALC\_STEREO\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{ALC\_STEREO\_SOFT}{ALC\_STEREO\_SOFT}}
+{\footnotesize\ttfamily \#define ALC\+\_\+\+STEREO\+\_\+\+SOFT~0x1501}
+
+\Hypertarget{alext_8h_a64174c0f43577a95c9527f0bdedc0ecc}\label{alext_8h_a64174c0f43577a95c9527f0bdedc0ecc} 
+\index{alext.h@{alext.h}!ALC\_UNSIGNED\_BYTE\_SOFT@{ALC\_UNSIGNED\_BYTE\_SOFT}}
+\index{ALC\_UNSIGNED\_BYTE\_SOFT@{ALC\_UNSIGNED\_BYTE\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{ALC\_UNSIGNED\_BYTE\_SOFT}{ALC\_UNSIGNED\_BYTE\_SOFT}}
+{\footnotesize\ttfamily \#define ALC\+\_\+\+UNSIGNED\+\_\+\+BYTE\+\_\+\+SOFT~0x1401}
+
+\Hypertarget{alext_8h_a16bdeea243f0085aab3dc69fae7383f4}\label{alext_8h_a16bdeea243f0085aab3dc69fae7383f4} 
+\index{alext.h@{alext.h}!ALC\_UNSIGNED\_INT\_SOFT@{ALC\_UNSIGNED\_INT\_SOFT}}
+\index{ALC\_UNSIGNED\_INT\_SOFT@{ALC\_UNSIGNED\_INT\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{ALC\_UNSIGNED\_INT\_SOFT}{ALC\_UNSIGNED\_INT\_SOFT}}
+{\footnotesize\ttfamily \#define ALC\+\_\+\+UNSIGNED\+\_\+\+INT\+\_\+\+SOFT~0x1405}
+
+\Hypertarget{alext_8h_a32333bbbf0c9d61b35fdf16da43859c3}\label{alext_8h_a32333bbbf0c9d61b35fdf16da43859c3} 
+\index{alext.h@{alext.h}!ALC\_UNSIGNED\_SHORT\_SOFT@{ALC\_UNSIGNED\_SHORT\_SOFT}}
+\index{ALC\_UNSIGNED\_SHORT\_SOFT@{ALC\_UNSIGNED\_SHORT\_SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{ALC\_UNSIGNED\_SHORT\_SOFT}{ALC\_UNSIGNED\_SHORT\_SOFT}}
+{\footnotesize\ttfamily \#define ALC\+\_\+\+UNSIGNED\+\_\+\+SHORT\+\_\+\+SOFT~0x1403}
+
+
+
+\doxysubsection{Dokumentacja definicji typów}
+\Hypertarget{alext_8h_abf19b4a82344c0d24d95347f0016d44b}\label{alext_8h_abf19b4a82344c0d24d95347f0016d44b} 
+\index{alext.h@{alext.h}!ALint64SOFT@{ALint64SOFT}}
+\index{ALint64SOFT@{ALint64SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{ALint64SOFT}{ALint64SOFT}}
+{\footnotesize\ttfamily typedef int64\+\_\+t \mbox{\hyperlink{alext_8h_abf19b4a82344c0d24d95347f0016d44b}{ALint64\+SOFT}}}
+
+\Hypertarget{alext_8h_a0429497eef92aee08e5a138f824d7d79}\label{alext_8h_a0429497eef92aee08e5a138f824d7d79} 
+\index{alext.h@{alext.h}!ALuint64SOFT@{ALuint64SOFT}}
+\index{ALuint64SOFT@{ALuint64SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{ALuint64SOFT}{ALuint64SOFT}}
+{\footnotesize\ttfamily typedef uint64\+\_\+t \mbox{\hyperlink{alext_8h_a0429497eef92aee08e5a138f824d7d79}{ALuint64\+SOFT}}}
+
+\Hypertarget{alext_8h_a4f01085dc7535b5456e01ba9ba0330ff}\label{alext_8h_a4f01085dc7535b5456e01ba9ba0330ff} 
+\index{alext.h@{alext.h}!LPALBUFFERSAMPLESSOFT@{LPALBUFFERSAMPLESSOFT}}
+\index{LPALBUFFERSAMPLESSOFT@{LPALBUFFERSAMPLESSOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{LPALBUFFERSAMPLESSOFT}{LPALBUFFERSAMPLESSOFT}}
+{\footnotesize\ttfamily typedef void(\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} LPALBUFFERSAMPLESSOFT) (\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}, \mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}, \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}, \mbox{\hyperlink{al_8h_ab966c4d5d554fee3ae4e5c7774e83c7e}{ALsizei}}, \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}, \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}, const \mbox{\hyperlink{al_8h_a33f8bcbc68209e69bd2d597f0b5471d4}{ALvoid}} \texorpdfstring{$\ast$}{*})}
+
+\Hypertarget{alext_8h_a4cc0d5bcd7385feeb73e80e261d6dcc3}\label{alext_8h_a4cc0d5bcd7385feeb73e80e261d6dcc3} 
+\index{alext.h@{alext.h}!LPALBUFFERSUBSAMPLESSOFT@{LPALBUFFERSUBSAMPLESSOFT}}
+\index{LPALBUFFERSUBSAMPLESSOFT@{LPALBUFFERSUBSAMPLESSOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{LPALBUFFERSUBSAMPLESSOFT}{LPALBUFFERSUBSAMPLESSOFT}}
+{\footnotesize\ttfamily typedef void(\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} LPALBUFFERSUBSAMPLESSOFT) (\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}, \mbox{\hyperlink{al_8h_ab966c4d5d554fee3ae4e5c7774e83c7e}{ALsizei}}, \mbox{\hyperlink{al_8h_ab966c4d5d554fee3ae4e5c7774e83c7e}{ALsizei}}, \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}, \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}, const \mbox{\hyperlink{al_8h_a33f8bcbc68209e69bd2d597f0b5471d4}{ALvoid}} \texorpdfstring{$\ast$}{*})}
+
+\Hypertarget{alext_8h_a5401325904bc481e92da4a658a4aaf0c}\label{alext_8h_a5401325904bc481e92da4a658a4aaf0c} 
+\index{alext.h@{alext.h}!LPALCISRENDERFORMATSUPPORTEDSOFT@{LPALCISRENDERFORMATSUPPORTEDSOFT}}
+\index{LPALCISRENDERFORMATSUPPORTEDSOFT@{LPALCISRENDERFORMATSUPPORTEDSOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{LPALCISRENDERFORMATSUPPORTEDSOFT}{LPALCISRENDERFORMATSUPPORTEDSOFT}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{alc_8h_ab3f76bbb16c17231a6b15f2caf769606}{ALCboolean}}(\mbox{\hyperlink{alc_8h_ad26234a076d29e819fa6654429bc8b35}{ALC\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} LPALCISRENDERFORMATSUPPORTEDSOFT) (\mbox{\hyperlink{alc_8h_aba8742179fd52ef41c66adacdec5383e}{ALCdevice}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{alc_8h_a7041956d733b9affdb45d9b725e20156}{ALCsizei}}, \mbox{\hyperlink{alc_8h_a6535508b0b689f249c8e99053d584a0f}{ALCenum}}, \mbox{\hyperlink{alc_8h_a6535508b0b689f249c8e99053d584a0f}{ALCenum}})}
+
+\Hypertarget{alext_8h_afd273f8537b4e335d9e0d86ba4cae2be}\label{alext_8h_afd273f8537b4e335d9e0d86ba4cae2be} 
+\index{alext.h@{alext.h}!LPALCLOOPBACKOPENDEVICESOFT@{LPALCLOOPBACKOPENDEVICESOFT}}
+\index{LPALCLOOPBACKOPENDEVICESOFT@{LPALCLOOPBACKOPENDEVICESOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{LPALCLOOPBACKOPENDEVICESOFT}{LPALCLOOPBACKOPENDEVICESOFT}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{alc_8h_aba8742179fd52ef41c66adacdec5383e}{ALCdevice}} \texorpdfstring{$\ast$}{*}(\mbox{\hyperlink{alc_8h_ad26234a076d29e819fa6654429bc8b35}{ALC\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} LPALCLOOPBACKOPENDEVICESOFT) (const \mbox{\hyperlink{alc_8h_a5ffdc2576482e1ff45cc0bbde7177a36}{ALCchar}} \texorpdfstring{$\ast$}{*})}
+
+\Hypertarget{alext_8h_a9bcaf2687eb497300935ccc8130df571}\label{alext_8h_a9bcaf2687eb497300935ccc8130df571} 
+\index{alext.h@{alext.h}!LPALCRENDERSAMPLESSOFT@{LPALCRENDERSAMPLESSOFT}}
+\index{LPALCRENDERSAMPLESSOFT@{LPALCRENDERSAMPLESSOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{LPALCRENDERSAMPLESSOFT}{LPALCRENDERSAMPLESSOFT}}
+{\footnotesize\ttfamily typedef void(\mbox{\hyperlink{alc_8h_ad26234a076d29e819fa6654429bc8b35}{ALC\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} LPALCRENDERSAMPLESSOFT) (\mbox{\hyperlink{alc_8h_aba8742179fd52ef41c66adacdec5383e}{ALCdevice}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{alc_8h_a03528d12ba43b25711e5d893da1b128c}{ALCvoid}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{alc_8h_a7041956d733b9affdb45d9b725e20156}{ALCsizei}})}
+
+\Hypertarget{alext_8h_a048aacbd107469034c4e8165b1c7ca64}\label{alext_8h_a048aacbd107469034c4e8165b1c7ca64} 
+\index{alext.h@{alext.h}!LPALFOLDBACKCALLBACK@{LPALFOLDBACKCALLBACK}}
+\index{LPALFOLDBACKCALLBACK@{LPALFOLDBACKCALLBACK}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{LPALFOLDBACKCALLBACK}{LPALFOLDBACKCALLBACK}}
+{\footnotesize\ttfamily typedef void(\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} LPALFOLDBACKCALLBACK) (\mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}, \mbox{\hyperlink{al_8h_ab966c4d5d554fee3ae4e5c7774e83c7e}{ALsizei}})}
+
+\Hypertarget{alext_8h_ae2270321e66207a89be199fdd925056a}\label{alext_8h_ae2270321e66207a89be199fdd925056a} 
+\index{alext.h@{alext.h}!LPALGETBUFFERSAMPLESSOFT@{LPALGETBUFFERSAMPLESSOFT}}
+\index{LPALGETBUFFERSAMPLESSOFT@{LPALGETBUFFERSAMPLESSOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{LPALGETBUFFERSAMPLESSOFT}{LPALGETBUFFERSAMPLESSOFT}}
+{\footnotesize\ttfamily typedef void(\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} LPALGETBUFFERSAMPLESSOFT) (\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}, \mbox{\hyperlink{al_8h_ab966c4d5d554fee3ae4e5c7774e83c7e}{ALsizei}}, \mbox{\hyperlink{al_8h_ab966c4d5d554fee3ae4e5c7774e83c7e}{ALsizei}}, \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}, \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}, \mbox{\hyperlink{al_8h_a33f8bcbc68209e69bd2d597f0b5471d4}{ALvoid}} \texorpdfstring{$\ast$}{*})}
+
+\Hypertarget{alext_8h_a0df25cfd55b3a156de1a8d5b1d2e8aae}\label{alext_8h_a0df25cfd55b3a156de1a8d5b1d2e8aae} 
+\index{alext.h@{alext.h}!LPALGETSOURCE3DSOFT@{LPALGETSOURCE3DSOFT}}
+\index{LPALGETSOURCE3DSOFT@{LPALGETSOURCE3DSOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{LPALGETSOURCE3DSOFT}{LPALGETSOURCE3DSOFT}}
+{\footnotesize\ttfamily typedef void(\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} LPALGETSOURCE3\+DSOFT) (\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}, \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}, \mbox{\hyperlink{al_8h_a3a8eb9c919d2266a4d1a4e38151eb946}{ALdouble}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{al_8h_a3a8eb9c919d2266a4d1a4e38151eb946}{ALdouble}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{al_8h_a3a8eb9c919d2266a4d1a4e38151eb946}{ALdouble}} \texorpdfstring{$\ast$}{*})}
+
+\Hypertarget{alext_8h_a778e8e7fe28b0aae63baa0d7dca4900b}\label{alext_8h_a778e8e7fe28b0aae63baa0d7dca4900b} 
+\index{alext.h@{alext.h}!LPALGETSOURCE3I64SOFT@{LPALGETSOURCE3I64SOFT}}
+\index{LPALGETSOURCE3I64SOFT@{LPALGETSOURCE3I64SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{LPALGETSOURCE3I64SOFT}{LPALGETSOURCE3I64SOFT}}
+{\footnotesize\ttfamily typedef void(\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} LPALGETSOURCE3\+I64\+SOFT) (\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}, \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}, \mbox{\hyperlink{alext_8h_abf19b4a82344c0d24d95347f0016d44b}{ALint64\+SOFT}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{alext_8h_abf19b4a82344c0d24d95347f0016d44b}{ALint64\+SOFT}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{alext_8h_abf19b4a82344c0d24d95347f0016d44b}{ALint64\+SOFT}} \texorpdfstring{$\ast$}{*})}
+
+\Hypertarget{alext_8h_aa48ee272a63dd701688f37d1e91e340c}\label{alext_8h_aa48ee272a63dd701688f37d1e91e340c} 
+\index{alext.h@{alext.h}!LPALGETSOURCEDSOFT@{LPALGETSOURCEDSOFT}}
+\index{LPALGETSOURCEDSOFT@{LPALGETSOURCEDSOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{LPALGETSOURCEDSOFT}{LPALGETSOURCEDSOFT}}
+{\footnotesize\ttfamily typedef void(\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} LPALGETSOURCEDSOFT) (\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}, \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}, \mbox{\hyperlink{al_8h_a3a8eb9c919d2266a4d1a4e38151eb946}{ALdouble}} \texorpdfstring{$\ast$}{*})}
+
+\Hypertarget{alext_8h_a55b06021fb45ea298d73068c5efa9476}\label{alext_8h_a55b06021fb45ea298d73068c5efa9476} 
+\index{alext.h@{alext.h}!LPALGETSOURCEDVSOFT@{LPALGETSOURCEDVSOFT}}
+\index{LPALGETSOURCEDVSOFT@{LPALGETSOURCEDVSOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{LPALGETSOURCEDVSOFT}{LPALGETSOURCEDVSOFT}}
+{\footnotesize\ttfamily typedef void(\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} LPALGETSOURCEDVSOFT) (\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}, \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}, \mbox{\hyperlink{al_8h_a3a8eb9c919d2266a4d1a4e38151eb946}{ALdouble}} \texorpdfstring{$\ast$}{*})}
+
+\Hypertarget{alext_8h_a7734227b18d4e54f510ca1a87405f6bd}\label{alext_8h_a7734227b18d4e54f510ca1a87405f6bd} 
+\index{alext.h@{alext.h}!LPALGETSOURCEI64SOFT@{LPALGETSOURCEI64SOFT}}
+\index{LPALGETSOURCEI64SOFT@{LPALGETSOURCEI64SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{LPALGETSOURCEI64SOFT}{LPALGETSOURCEI64SOFT}}
+{\footnotesize\ttfamily typedef void(\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} LPALGETSOURCEI64\+SOFT) (\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}, \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}, \mbox{\hyperlink{alext_8h_abf19b4a82344c0d24d95347f0016d44b}{ALint64\+SOFT}} \texorpdfstring{$\ast$}{*})}
+
+\Hypertarget{alext_8h_a6c6dbf72c11c0dabacd75f3047d084b2}\label{alext_8h_a6c6dbf72c11c0dabacd75f3047d084b2} 
+\index{alext.h@{alext.h}!LPALGETSOURCEI64VSOFT@{LPALGETSOURCEI64VSOFT}}
+\index{LPALGETSOURCEI64VSOFT@{LPALGETSOURCEI64VSOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{LPALGETSOURCEI64VSOFT}{LPALGETSOURCEI64VSOFT}}
+{\footnotesize\ttfamily typedef void(\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} LPALGETSOURCEI64\+VSOFT) (\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}, \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}, \mbox{\hyperlink{alext_8h_abf19b4a82344c0d24d95347f0016d44b}{ALint64\+SOFT}} \texorpdfstring{$\ast$}{*})}
+
+\Hypertarget{alext_8h_a5e5cbe126eda088547d956064aa1f680}\label{alext_8h_a5e5cbe126eda088547d956064aa1f680} 
+\index{alext.h@{alext.h}!LPALISBUFFERFORMATSUPPORTEDSOFT@{LPALISBUFFERFORMATSUPPORTEDSOFT}}
+\index{LPALISBUFFERFORMATSUPPORTEDSOFT@{LPALISBUFFERFORMATSUPPORTEDSOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{LPALISBUFFERFORMATSUPPORTEDSOFT}{LPALISBUFFERFORMATSUPPORTEDSOFT}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{al_8h_a87bd2b64b8ce719af42bf9dfd0cdf8fc}{ALboolean}}(\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} LPALISBUFFERFORMATSUPPORTEDSOFT) (\mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}})}
+
+\Hypertarget{alext_8h_aa4526ca7e63b1e041d19bd365d70aecd}\label{alext_8h_aa4526ca7e63b1e041d19bd365d70aecd} 
+\index{alext.h@{alext.h}!LPALREQUESTFOLDBACKSTART@{LPALREQUESTFOLDBACKSTART}}
+\index{LPALREQUESTFOLDBACKSTART@{LPALREQUESTFOLDBACKSTART}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{LPALREQUESTFOLDBACKSTART}{LPALREQUESTFOLDBACKSTART}}
+{\footnotesize\ttfamily typedef void(\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} LPALREQUESTFOLDBACKSTART) (\mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}, \mbox{\hyperlink{al_8h_ab966c4d5d554fee3ae4e5c7774e83c7e}{ALsizei}}, \mbox{\hyperlink{al_8h_ab966c4d5d554fee3ae4e5c7774e83c7e}{ALsizei}}, \mbox{\hyperlink{al_8h_abb26671ce5d302ed61a2e55256624169}{ALfloat}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{alext_8h_a048aacbd107469034c4e8165b1c7ca64}{LPALFOLDBACKCALLBACK}})}
+
+\Hypertarget{alext_8h_a7fc2caef45affea521a32d3853386fa3}\label{alext_8h_a7fc2caef45affea521a32d3853386fa3} 
+\index{alext.h@{alext.h}!LPALREQUESTFOLDBACKSTOP@{LPALREQUESTFOLDBACKSTOP}}
+\index{LPALREQUESTFOLDBACKSTOP@{LPALREQUESTFOLDBACKSTOP}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{LPALREQUESTFOLDBACKSTOP}{LPALREQUESTFOLDBACKSTOP}}
+{\footnotesize\ttfamily typedef void(\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} LPALREQUESTFOLDBACKSTOP) (void)}
+
+\Hypertarget{alext_8h_afe994e847b058cf838e32f04cf14b0e4}\label{alext_8h_afe994e847b058cf838e32f04cf14b0e4} 
+\index{alext.h@{alext.h}!LPALSOURCE3DSOFT@{LPALSOURCE3DSOFT}}
+\index{LPALSOURCE3DSOFT@{LPALSOURCE3DSOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{LPALSOURCE3DSOFT}{LPALSOURCE3DSOFT}}
+{\footnotesize\ttfamily typedef void(\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} LPALSOURCE3\+DSOFT) (\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}, \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}, \mbox{\hyperlink{al_8h_a3a8eb9c919d2266a4d1a4e38151eb946}{ALdouble}}, \mbox{\hyperlink{al_8h_a3a8eb9c919d2266a4d1a4e38151eb946}{ALdouble}}, \mbox{\hyperlink{al_8h_a3a8eb9c919d2266a4d1a4e38151eb946}{ALdouble}})}
+
+\Hypertarget{alext_8h_accbd03277395eaabdc94fcb9ccfbafbd}\label{alext_8h_accbd03277395eaabdc94fcb9ccfbafbd} 
+\index{alext.h@{alext.h}!LPALSOURCE3I64SOFT@{LPALSOURCE3I64SOFT}}
+\index{LPALSOURCE3I64SOFT@{LPALSOURCE3I64SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{LPALSOURCE3I64SOFT}{LPALSOURCE3I64SOFT}}
+{\footnotesize\ttfamily typedef void(\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} LPALSOURCE3\+I64\+SOFT) (\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}, \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}, \mbox{\hyperlink{alext_8h_abf19b4a82344c0d24d95347f0016d44b}{ALint64\+SOFT}}, \mbox{\hyperlink{alext_8h_abf19b4a82344c0d24d95347f0016d44b}{ALint64\+SOFT}}, \mbox{\hyperlink{alext_8h_abf19b4a82344c0d24d95347f0016d44b}{ALint64\+SOFT}})}
+
+\Hypertarget{alext_8h_aaa36b138105888bfd9068305a547238d}\label{alext_8h_aaa36b138105888bfd9068305a547238d} 
+\index{alext.h@{alext.h}!LPALSOURCEDSOFT@{LPALSOURCEDSOFT}}
+\index{LPALSOURCEDSOFT@{LPALSOURCEDSOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{LPALSOURCEDSOFT}{LPALSOURCEDSOFT}}
+{\footnotesize\ttfamily typedef void(\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} LPALSOURCEDSOFT) (\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}, \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}, \mbox{\hyperlink{al_8h_a3a8eb9c919d2266a4d1a4e38151eb946}{ALdouble}})}
+
+\Hypertarget{alext_8h_ac2cb03b7634a09f8da711ad64f70368a}\label{alext_8h_ac2cb03b7634a09f8da711ad64f70368a} 
+\index{alext.h@{alext.h}!LPALSOURCEDVSOFT@{LPALSOURCEDVSOFT}}
+\index{LPALSOURCEDVSOFT@{LPALSOURCEDVSOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{LPALSOURCEDVSOFT}{LPALSOURCEDVSOFT}}
+{\footnotesize\ttfamily typedef void(\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} LPALSOURCEDVSOFT) (\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}, \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}, const \mbox{\hyperlink{al_8h_a3a8eb9c919d2266a4d1a4e38151eb946}{ALdouble}} \texorpdfstring{$\ast$}{*})}
+
+\Hypertarget{alext_8h_ad4e70efb83446d5f77a968fd7b3d56cc}\label{alext_8h_ad4e70efb83446d5f77a968fd7b3d56cc} 
+\index{alext.h@{alext.h}!LPALSOURCEI64SOFT@{LPALSOURCEI64SOFT}}
+\index{LPALSOURCEI64SOFT@{LPALSOURCEI64SOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{LPALSOURCEI64SOFT}{LPALSOURCEI64SOFT}}
+{\footnotesize\ttfamily typedef void(\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} LPALSOURCEI64\+SOFT) (\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}, \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}, \mbox{\hyperlink{alext_8h_abf19b4a82344c0d24d95347f0016d44b}{ALint64\+SOFT}})}
+
+\Hypertarget{alext_8h_ab006e7d5140c510e9c979b70c48f6d1d}\label{alext_8h_ab006e7d5140c510e9c979b70c48f6d1d} 
+\index{alext.h@{alext.h}!LPALSOURCEI64VSOFT@{LPALSOURCEI64VSOFT}}
+\index{LPALSOURCEI64VSOFT@{LPALSOURCEI64VSOFT}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{LPALSOURCEI64VSOFT}{LPALSOURCEI64VSOFT}}
+{\footnotesize\ttfamily typedef void(\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} LPALSOURCEI64\+VSOFT) (\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}, \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}, const \mbox{\hyperlink{alext_8h_abf19b4a82344c0d24d95347f0016d44b}{ALint64\+SOFT}} \texorpdfstring{$\ast$}{*})}
+
+\Hypertarget{alext_8h_a8df6ceab1d78f8fbe93d76a2498b2867}\label{alext_8h_a8df6ceab1d78f8fbe93d76a2498b2867} 
+\index{alext.h@{alext.h}!PFNALBUFFERDATASTATICPROC@{PFNALBUFFERDATASTATICPROC}}
+\index{PFNALBUFFERDATASTATICPROC@{PFNALBUFFERDATASTATICPROC}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{PFNALBUFFERDATASTATICPROC}{PFNALBUFFERDATASTATICPROC}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{al_8h_a33f8bcbc68209e69bd2d597f0b5471d4}{ALvoid}}(\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} PFNALBUFFERDATASTATICPROC) (const \mbox{\hyperlink{al_8h_a8e95e1bad09d820d882e1bff068a33ef}{ALint}}, \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}, \mbox{\hyperlink{al_8h_a33f8bcbc68209e69bd2d597f0b5471d4}{ALvoid}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{al_8h_ab966c4d5d554fee3ae4e5c7774e83c7e}{ALsizei}}, \mbox{\hyperlink{al_8h_ab966c4d5d554fee3ae4e5c7774e83c7e}{ALsizei}})}
+
+\Hypertarget{alext_8h_a3536e53fdc337e9242d52c37aecac1c8}\label{alext_8h_a3536e53fdc337e9242d52c37aecac1c8} 
+\index{alext.h@{alext.h}!PFNALBUFFERSUBDATASOFTPROC@{PFNALBUFFERSUBDATASOFTPROC}}
+\index{PFNALBUFFERSUBDATASOFTPROC@{PFNALBUFFERSUBDATASOFTPROC}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{PFNALBUFFERSUBDATASOFTPROC}{PFNALBUFFERSUBDATASOFTPROC}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{al_8h_a33f8bcbc68209e69bd2d597f0b5471d4}{ALvoid}}(\mbox{\hyperlink{al_8h_ae0057de8bf8e46cc078aa33566b32778}{AL\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} PFNALBUFFERSUBDATASOFTPROC) (\mbox{\hyperlink{al_8h_ae0292edc5c1c47db9accee3f49933e6f}{ALuint}}, \mbox{\hyperlink{al_8h_a715098c13211f3570a9288a27f87fdfa}{ALenum}}, const \mbox{\hyperlink{al_8h_a33f8bcbc68209e69bd2d597f0b5471d4}{ALvoid}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{al_8h_ab966c4d5d554fee3ae4e5c7774e83c7e}{ALsizei}}, \mbox{\hyperlink{al_8h_ab966c4d5d554fee3ae4e5c7774e83c7e}{ALsizei}})}
+
+\Hypertarget{alext_8h_a6163e5befcb30d690471041dc46966c0}\label{alext_8h_a6163e5befcb30d690471041dc46966c0} 
+\index{alext.h@{alext.h}!PFNALCGETTHREADCONTEXTPROC@{PFNALCGETTHREADCONTEXTPROC}}
+\index{PFNALCGETTHREADCONTEXTPROC@{PFNALCGETTHREADCONTEXTPROC}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{PFNALCGETTHREADCONTEXTPROC}{PFNALCGETTHREADCONTEXTPROC}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{alc_8h_ad085cf94ff96646b5a2b5401c4489e23}{ALCcontext}} \texorpdfstring{$\ast$}{*}(\mbox{\hyperlink{alc_8h_ad26234a076d29e819fa6654429bc8b35}{ALC\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} PFNALCGETTHREADCONTEXTPROC) (void)}
+
+\Hypertarget{alext_8h_a4cb30011a8c41d0957dc86f9a450904d}\label{alext_8h_a4cb30011a8c41d0957dc86f9a450904d} 
+\index{alext.h@{alext.h}!PFNALCSETTHREADCONTEXTPROC@{PFNALCSETTHREADCONTEXTPROC}}
+\index{PFNALCSETTHREADCONTEXTPROC@{PFNALCSETTHREADCONTEXTPROC}!alext.h@{alext.h}}
+\doxysubsubsection{\texorpdfstring{PFNALCSETTHREADCONTEXTPROC}{PFNALCSETTHREADCONTEXTPROC}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{alc_8h_ab3f76bbb16c17231a6b15f2caf769606}{ALCboolean}}(\mbox{\hyperlink{alc_8h_ad26234a076d29e819fa6654429bc8b35}{ALC\+\_\+\+APIENTRY}} \texorpdfstring{$\ast$}{*} PFNALCSETTHREADCONTEXTPROC) (\mbox{\hyperlink{alc_8h_ad085cf94ff96646b5a2b5401c4489e23}{ALCcontext}} \texorpdfstring{$\ast$}{*}context)}
+

@@ -1,0 +1,170 @@
+\doxysection{Dokumentacja struktury ogg\+\_\+stream\+\_\+state}
+\hypertarget{structogg__stream__state}{}\label{structogg__stream__state}\index{ogg\_stream\_state@{ogg\_stream\_state}}
+
+
+{\ttfamily \#include $<$ogg.\+h$>$}
+
+
+
+Diagram współpracy dla ogg\+\_\+stream\+\_\+state\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{structogg__stream__state__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+unsigned char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structogg__stream__state_a70d03b6f99c1d1e57f55e800b087dae8}{body\+\_\+data}}
+\item 
+long \mbox{\hyperlink{structogg__stream__state_acc4cf19d7e31e1a6daab8f76fdb0afd6}{body\+\_\+storage}}
+\item 
+long \mbox{\hyperlink{structogg__stream__state_a19d45a7b5004f13ae02b5a9502354b93}{body\+\_\+fill}}
+\item 
+long \mbox{\hyperlink{structogg__stream__state_a602e02c9b0d5653eea5bd4f97bade116}{body\+\_\+returned}}
+\item 
+int \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structogg__stream__state_a55f3febfdfa9600b66fa2a990297813e}{lacing\+\_\+vals}}
+\item 
+\mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\+\_\+int64\+\_\+t}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structogg__stream__state_a5ddadad0bd4d5c5381b21da6f11a7d0c}{granule\+\_\+vals}}
+\item 
+long \mbox{\hyperlink{structogg__stream__state_a23844488216514760bc66b38dfd6d4ae}{lacing\+\_\+storage}}
+\item 
+long \mbox{\hyperlink{structogg__stream__state_a6090ad58db768aa90218b0bc421d6f0e}{lacing\+\_\+fill}}
+\item 
+long \mbox{\hyperlink{structogg__stream__state_add3aba822d7f0e2e23c1927a20aaa683}{lacing\+\_\+packet}}
+\item 
+long \mbox{\hyperlink{structogg__stream__state_a541d66311781b45cf37d87107d515602}{lacing\+\_\+returned}}
+\item 
+unsigned char \mbox{\hyperlink{structogg__stream__state_aeb8496ef8051c2760c5d57424f30171a}{header}} \mbox{[}282\mbox{]}
+\item 
+int \mbox{\hyperlink{structogg__stream__state_af37e7ffba5e7197c8bfabee7a1a6b641}{header\+\_\+fill}}
+\item 
+int \mbox{\hyperlink{structogg__stream__state_a366e94e72849e0e880d53a22bb9ee646}{e\+\_\+o\+\_\+s}}
+\item 
+int \mbox{\hyperlink{structogg__stream__state_a76fcc3bf6a59eff87ec3bee1d16fa0b5}{b\+\_\+o\+\_\+s}}
+\item 
+long \mbox{\hyperlink{structogg__stream__state_a79248e3f1f41cde5331909e8edd98e10}{serialno}}
+\item 
+long \mbox{\hyperlink{structogg__stream__state_a0ad3315203fcebdc2ccd3b050d28a65c}{pageno}}
+\item 
+\mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\+\_\+int64\+\_\+t}} \mbox{\hyperlink{structogg__stream__state_a1bebf380025b6ca0841497e7ab2b5c34}{packetno}}
+\item 
+\mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\+\_\+int64\+\_\+t}} \mbox{\hyperlink{structogg__stream__state_a5df750c600660686e29f24b4d1ce836c}{granulepos}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{structogg__stream__state_a76fcc3bf6a59eff87ec3bee1d16fa0b5}\label{structogg__stream__state_a76fcc3bf6a59eff87ec3bee1d16fa0b5} 
+\index{ogg\_stream\_state@{ogg\_stream\_state}!b\_o\_s@{b\_o\_s}}
+\index{b\_o\_s@{b\_o\_s}!ogg\_stream\_state@{ogg\_stream\_state}}
+\doxysubsubsection{\texorpdfstring{b\_o\_s}{b\_o\_s}}
+{\footnotesize\ttfamily int ogg\+\_\+stream\+\_\+state\+::b\+\_\+o\+\_\+s}
+
+\Hypertarget{structogg__stream__state_a70d03b6f99c1d1e57f55e800b087dae8}\label{structogg__stream__state_a70d03b6f99c1d1e57f55e800b087dae8} 
+\index{ogg\_stream\_state@{ogg\_stream\_state}!body\_data@{body\_data}}
+\index{body\_data@{body\_data}!ogg\_stream\_state@{ogg\_stream\_state}}
+\doxysubsubsection{\texorpdfstring{body\_data}{body\_data}}
+{\footnotesize\ttfamily unsigned char\texorpdfstring{$\ast$}{*} ogg\+\_\+stream\+\_\+state\+::body\+\_\+data}
+
+\Hypertarget{structogg__stream__state_a19d45a7b5004f13ae02b5a9502354b93}\label{structogg__stream__state_a19d45a7b5004f13ae02b5a9502354b93} 
+\index{ogg\_stream\_state@{ogg\_stream\_state}!body\_fill@{body\_fill}}
+\index{body\_fill@{body\_fill}!ogg\_stream\_state@{ogg\_stream\_state}}
+\doxysubsubsection{\texorpdfstring{body\_fill}{body\_fill}}
+{\footnotesize\ttfamily long ogg\+\_\+stream\+\_\+state\+::body\+\_\+fill}
+
+\Hypertarget{structogg__stream__state_a602e02c9b0d5653eea5bd4f97bade116}\label{structogg__stream__state_a602e02c9b0d5653eea5bd4f97bade116} 
+\index{ogg\_stream\_state@{ogg\_stream\_state}!body\_returned@{body\_returned}}
+\index{body\_returned@{body\_returned}!ogg\_stream\_state@{ogg\_stream\_state}}
+\doxysubsubsection{\texorpdfstring{body\_returned}{body\_returned}}
+{\footnotesize\ttfamily long ogg\+\_\+stream\+\_\+state\+::body\+\_\+returned}
+
+\Hypertarget{structogg__stream__state_acc4cf19d7e31e1a6daab8f76fdb0afd6}\label{structogg__stream__state_acc4cf19d7e31e1a6daab8f76fdb0afd6} 
+\index{ogg\_stream\_state@{ogg\_stream\_state}!body\_storage@{body\_storage}}
+\index{body\_storage@{body\_storage}!ogg\_stream\_state@{ogg\_stream\_state}}
+\doxysubsubsection{\texorpdfstring{body\_storage}{body\_storage}}
+{\footnotesize\ttfamily long ogg\+\_\+stream\+\_\+state\+::body\+\_\+storage}
+
+\Hypertarget{structogg__stream__state_a366e94e72849e0e880d53a22bb9ee646}\label{structogg__stream__state_a366e94e72849e0e880d53a22bb9ee646} 
+\index{ogg\_stream\_state@{ogg\_stream\_state}!e\_o\_s@{e\_o\_s}}
+\index{e\_o\_s@{e\_o\_s}!ogg\_stream\_state@{ogg\_stream\_state}}
+\doxysubsubsection{\texorpdfstring{e\_o\_s}{e\_o\_s}}
+{\footnotesize\ttfamily int ogg\+\_\+stream\+\_\+state\+::e\+\_\+o\+\_\+s}
+
+\Hypertarget{structogg__stream__state_a5ddadad0bd4d5c5381b21da6f11a7d0c}\label{structogg__stream__state_a5ddadad0bd4d5c5381b21da6f11a7d0c} 
+\index{ogg\_stream\_state@{ogg\_stream\_state}!granule\_vals@{granule\_vals}}
+\index{granule\_vals@{granule\_vals}!ogg\_stream\_state@{ogg\_stream\_state}}
+\doxysubsubsection{\texorpdfstring{granule\_vals}{granule\_vals}}
+{\footnotesize\ttfamily \mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\+\_\+int64\+\_\+t}}\texorpdfstring{$\ast$}{*} ogg\+\_\+stream\+\_\+state\+::granule\+\_\+vals}
+
+\Hypertarget{structogg__stream__state_a5df750c600660686e29f24b4d1ce836c}\label{structogg__stream__state_a5df750c600660686e29f24b4d1ce836c} 
+\index{ogg\_stream\_state@{ogg\_stream\_state}!granulepos@{granulepos}}
+\index{granulepos@{granulepos}!ogg\_stream\_state@{ogg\_stream\_state}}
+\doxysubsubsection{\texorpdfstring{granulepos}{granulepos}}
+{\footnotesize\ttfamily \mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\+\_\+int64\+\_\+t}} ogg\+\_\+stream\+\_\+state\+::granulepos}
+
+\Hypertarget{structogg__stream__state_aeb8496ef8051c2760c5d57424f30171a}\label{structogg__stream__state_aeb8496ef8051c2760c5d57424f30171a} 
+\index{ogg\_stream\_state@{ogg\_stream\_state}!header@{header}}
+\index{header@{header}!ogg\_stream\_state@{ogg\_stream\_state}}
+\doxysubsubsection{\texorpdfstring{header}{header}}
+{\footnotesize\ttfamily unsigned char ogg\+\_\+stream\+\_\+state\+::header\mbox{[}282\mbox{]}}
+
+\Hypertarget{structogg__stream__state_af37e7ffba5e7197c8bfabee7a1a6b641}\label{structogg__stream__state_af37e7ffba5e7197c8bfabee7a1a6b641} 
+\index{ogg\_stream\_state@{ogg\_stream\_state}!header\_fill@{header\_fill}}
+\index{header\_fill@{header\_fill}!ogg\_stream\_state@{ogg\_stream\_state}}
+\doxysubsubsection{\texorpdfstring{header\_fill}{header\_fill}}
+{\footnotesize\ttfamily int ogg\+\_\+stream\+\_\+state\+::header\+\_\+fill}
+
+\Hypertarget{structogg__stream__state_a6090ad58db768aa90218b0bc421d6f0e}\label{structogg__stream__state_a6090ad58db768aa90218b0bc421d6f0e} 
+\index{ogg\_stream\_state@{ogg\_stream\_state}!lacing\_fill@{lacing\_fill}}
+\index{lacing\_fill@{lacing\_fill}!ogg\_stream\_state@{ogg\_stream\_state}}
+\doxysubsubsection{\texorpdfstring{lacing\_fill}{lacing\_fill}}
+{\footnotesize\ttfamily long ogg\+\_\+stream\+\_\+state\+::lacing\+\_\+fill}
+
+\Hypertarget{structogg__stream__state_add3aba822d7f0e2e23c1927a20aaa683}\label{structogg__stream__state_add3aba822d7f0e2e23c1927a20aaa683} 
+\index{ogg\_stream\_state@{ogg\_stream\_state}!lacing\_packet@{lacing\_packet}}
+\index{lacing\_packet@{lacing\_packet}!ogg\_stream\_state@{ogg\_stream\_state}}
+\doxysubsubsection{\texorpdfstring{lacing\_packet}{lacing\_packet}}
+{\footnotesize\ttfamily long ogg\+\_\+stream\+\_\+state\+::lacing\+\_\+packet}
+
+\Hypertarget{structogg__stream__state_a541d66311781b45cf37d87107d515602}\label{structogg__stream__state_a541d66311781b45cf37d87107d515602} 
+\index{ogg\_stream\_state@{ogg\_stream\_state}!lacing\_returned@{lacing\_returned}}
+\index{lacing\_returned@{lacing\_returned}!ogg\_stream\_state@{ogg\_stream\_state}}
+\doxysubsubsection{\texorpdfstring{lacing\_returned}{lacing\_returned}}
+{\footnotesize\ttfamily long ogg\+\_\+stream\+\_\+state\+::lacing\+\_\+returned}
+
+\Hypertarget{structogg__stream__state_a23844488216514760bc66b38dfd6d4ae}\label{structogg__stream__state_a23844488216514760bc66b38dfd6d4ae} 
+\index{ogg\_stream\_state@{ogg\_stream\_state}!lacing\_storage@{lacing\_storage}}
+\index{lacing\_storage@{lacing\_storage}!ogg\_stream\_state@{ogg\_stream\_state}}
+\doxysubsubsection{\texorpdfstring{lacing\_storage}{lacing\_storage}}
+{\footnotesize\ttfamily long ogg\+\_\+stream\+\_\+state\+::lacing\+\_\+storage}
+
+\Hypertarget{structogg__stream__state_a55f3febfdfa9600b66fa2a990297813e}\label{structogg__stream__state_a55f3febfdfa9600b66fa2a990297813e} 
+\index{ogg\_stream\_state@{ogg\_stream\_state}!lacing\_vals@{lacing\_vals}}
+\index{lacing\_vals@{lacing\_vals}!ogg\_stream\_state@{ogg\_stream\_state}}
+\doxysubsubsection{\texorpdfstring{lacing\_vals}{lacing\_vals}}
+{\footnotesize\ttfamily int\texorpdfstring{$\ast$}{*} ogg\+\_\+stream\+\_\+state\+::lacing\+\_\+vals}
+
+\Hypertarget{structogg__stream__state_a1bebf380025b6ca0841497e7ab2b5c34}\label{structogg__stream__state_a1bebf380025b6ca0841497e7ab2b5c34} 
+\index{ogg\_stream\_state@{ogg\_stream\_state}!packetno@{packetno}}
+\index{packetno@{packetno}!ogg\_stream\_state@{ogg\_stream\_state}}
+\doxysubsubsection{\texorpdfstring{packetno}{packetno}}
+{\footnotesize\ttfamily \mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\+\_\+int64\+\_\+t}} ogg\+\_\+stream\+\_\+state\+::packetno}
+
+\Hypertarget{structogg__stream__state_a0ad3315203fcebdc2ccd3b050d28a65c}\label{structogg__stream__state_a0ad3315203fcebdc2ccd3b050d28a65c} 
+\index{ogg\_stream\_state@{ogg\_stream\_state}!pageno@{pageno}}
+\index{pageno@{pageno}!ogg\_stream\_state@{ogg\_stream\_state}}
+\doxysubsubsection{\texorpdfstring{pageno}{pageno}}
+{\footnotesize\ttfamily long ogg\+\_\+stream\+\_\+state\+::pageno}
+
+\Hypertarget{structogg__stream__state_a79248e3f1f41cde5331909e8edd98e10}\label{structogg__stream__state_a79248e3f1f41cde5331909e8edd98e10} 
+\index{ogg\_stream\_state@{ogg\_stream\_state}!serialno@{serialno}}
+\index{serialno@{serialno}!ogg\_stream\_state@{ogg\_stream\_state}}
+\doxysubsubsection{\texorpdfstring{serialno}{serialno}}
+{\footnotesize\ttfamily long ogg\+\_\+stream\+\_\+state\+::serialno}
+
+
+
+Dokumentacja dla tej struktury została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/extlibs/headers/ogg/\mbox{\hyperlink{ogg_8h}{ogg.\+h}}\end{DoxyCompactItemize}

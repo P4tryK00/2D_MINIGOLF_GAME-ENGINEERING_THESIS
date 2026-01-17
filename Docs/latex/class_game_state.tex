@@ -1,0 +1,720 @@
+\doxysection{Dokumentacja klasy Game\+State}
+\hypertarget{class_game_state}{}\label{class_game_state}\index{GameState@{GameState}}
+
+
+Główny stan rozgrywki.  
+
+
+
+
+{\ttfamily \#include $<$Game\+State.\+h$>$}
+
+
+
+Diagram dziedziczenia dla Game\+State\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_game_state__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagram współpracy dla Game\+State\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_game_state__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_state_a436947aa2ced210a30cab8a88e1e8ae8}{Game\+State}} (\mbox{\hyperlink{_game_8h_ae7efd7ef77698f16206f5c66180a389f}{Game\+Data\+Ref}} data, int level)
+\begin{DoxyCompactList}\small\item\em Konstruktor stanu gry. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_state_afd5d789bd58cc26b4e59265e7448fe12}{init}} () override
+\begin{DoxyCompactList}\small\item\em Inicjalizuje poziom\+: ładuje mapę, ustawia piłkę, UI i dźwięki. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_state_ab331bf3f5df91c89c2808a9ed6b6d868}{handle\+Input}} (sf\+::\+Event \&event) override
+\begin{DoxyCompactList}\small\item\em Obsługuje wejście (strzał, pauza, reset). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_state_a8f3d8828bc93b6df1c782cafc22316ef}{update}} (float dt) override
+\begin{DoxyCompactList}\small\item\em Główna pętla fizyki i logiki gry. Wykonuje kroki symulacji fizycznej, sprawdza warunki zwycięstwa/porażki. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_state_abdbfbc4986aa5ddc26c7f34e297c7884}{draw}} (float dt) override
+\begin{DoxyCompactList}\small\item\em Rysuje mapę, piłkę, UI i efekty. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{class_state}{State}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_state_a9ddc1df6f998184d6477b48fab90281c}{\texorpdfstring{$\sim$}{\string~}\+State}} ()
+\begin{DoxyCompactList}\small\item\em Wirtualny destruktor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_state_abad223d1066e95bd1b70e1341fb72a88}{pause}} ()
+\begin{DoxyCompactList}\small\item\em Wywoływana, gdy stan jest pauzowany (np. inny stan jest nakładany na wierzch). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_state_a8ef6d305e962afe41b0629255f0f58f9}{resume}} ()
+\begin{DoxyCompactList}\small\item\em Wywoływana, gdy stan jest wznawiany (np. stan powyżej został zdjęty ze stosu). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_game_state_a48af40983e0175cac7d3f988a5f97282}{init\+UI}} ()
+\begin{DoxyCompactList}\small\item\em Konfiguracja interfejsu użytkownika. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_state_a5530ab4f50c1717a065328f63bbba0b9}{init\+Sounds}} ()
+\begin{DoxyCompactList}\small\item\em Ładowanie i konfiguracja dźwięków. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_state_a7ec63b5e8b5d5eae73a2522ee1c598dd}{update\+Aim\+Line}} ()
+\begin{DoxyCompactList}\small\item\em Aktualizacja wizualizacji linii celowania. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_game_state_a44e0325b8932939a02979f317883a5cd}{get\+Tile\+At}} (sf\+::\+Vector2f position)
+\begin{DoxyCompactList}\small\item\em Pobiera ID kafelka na danej pozycji w świecie gry. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_state_a4c86765ff6465bab9c70fa1ee66f9257}{is\+Wall}} (int tile\+Id)
+\begin{DoxyCompactList}\small\item\em Sprawdza, czy dane ID kafelka jest ścianą. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_state_ac60aec9b3b50e6bb4a52756abdbfee18}{update\+Hearts}} ()
+\begin{DoxyCompactList}\small\item\em Aktualizacja tekstur serc (pełne/puste). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_state_aa16c19aae599d3ec88ff42780d8d2b31}{reset\+Level}} ()
+\begin{DoxyCompactList}\small\item\em Resetuje stan poziomu po utracie życia lub restarcie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_game_8h_ae7efd7ef77698f16206f5c66180a389f}{Game\+Data\+Ref}} \mbox{\hyperlink{class_game_state_af08289b46bf0c7474b6f8478c9ce6e5b}{m\+\_\+data}}
+\begin{DoxyCompactList}\small\item\em Dane gry. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_ball}{Ball}} \mbox{\hyperlink{class_game_state_a3bd2081ba9692f064f6e7ca060d36f81}{ball}}
+\begin{DoxyCompactList}\small\item\em Obiekt gracza (piłka). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_input_manager}{Input\+Manager}} \mbox{\hyperlink{class_game_state_acecdc4bcc6ef5b50b6fa4a9cdb6e780b}{input\+Manager}}
+\begin{DoxyCompactList}\small\item\em Menedżer sterowania (myszka). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_tile_map}{Tile\+Map}} \mbox{\hyperlink{class_game_state_ac096505a992cf64614ed182e615954d4}{tile\+Map}}
+\begin{DoxyCompactList}\small\item\em Mapa kafelkowa poziomu. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{class_game_state_ae8f3b4cc40a365d2c4ed8b8dc540cf20}{level\+Data}}
+\begin{DoxyCompactList}\small\item\em Surowe dane mapy (ID kafelków). \end{DoxyCompactList}\item 
+sf\+::\+Vector2f \mbox{\hyperlink{class_game_state_af12253e907426ca00febc2cdcff325ad}{last\+Safe\+Pos}}
+\begin{DoxyCompactList}\small\item\em Ostatnia bezpieczna pozycja (do respawnu). \end{DoxyCompactList}\item 
+sf\+::\+Vector2f \mbox{\hyperlink{class_game_state_af54511b35891c02d6ea26cd554e0db9d}{force\+Vector}}
+\begin{DoxyCompactList}\small\item\em Wektor siły uderzenia. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_game_state_ae19e23261b435f5f09d93663569074a0}{m\+\_\+level}}
+\begin{DoxyCompactList}\small\item\em Numer aktualnego poziomu. \end{DoxyCompactList}\item 
+sf\+::\+Circle\+Shape \mbox{\hyperlink{class_game_state_a5c9cae16f9e80b627c7c8ada41dec5b8}{m\+\_\+shadow}}
+\begin{DoxyCompactList}\small\item\em Cień pod piłką (używany przy skokach). \end{DoxyCompactList}\item 
+sf\+::\+Text \mbox{\hyperlink{class_game_state_ae64de7380a453da43528138160c67e7e}{score\+Text}}
+\begin{DoxyCompactList}\small\item\em Licznik uderzeń. \end{DoxyCompactList}\item 
+sf\+::\+Text \mbox{\hyperlink{class_game_state_a310f12c908ec305f410dfd0fac8a7fe7}{win\+Text}}
+\begin{DoxyCompactList}\small\item\em Tekst wygranej (opcjonalny). \end{DoxyCompactList}\item 
+sf\+::\+Rectangle\+Shape \mbox{\hyperlink{class_game_state_a8847bce8c464f0beeceb7561787cbe14}{aim\+Line}}
+\begin{DoxyCompactList}\small\item\em Linia celownicza. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_game_state_a7e52b4d7614874534b0fa4db3a524c14}{strokes}}
+\begin{DoxyCompactList}\small\item\em Liczba wykonanych uderzeń. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_state_a7cc87839d1cdf9689bf301613a82ccdc}{ball\+In\+Hole}}
+\begin{DoxyCompactList}\small\item\em Czy piłka wpadła do dołka. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_state_a0afee7ad6d75218b6261ddd50d5fe089}{was\+In\+Water}}
+\begin{DoxyCompactList}\small\item\em Czy odegrano dźwięk wpadnięcia do wody. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_state_a4625d809bc1bf49ab71840e1ceb329b0}{is\+Sinking}}
+\begin{DoxyCompactList}\small\item\em Czy trwa animacja tonięcia. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_state_a3c07a6398f7367591cb98737e0351732}{is\+Jumping}}
+\begin{DoxyCompactList}\small\item\em Czy piłka jest w powietrzu (skok z rampy). \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_game_state_a12bc0aba5ac59b33e0020b704592cd8c}{jump\+Timer}}
+\begin{DoxyCompactList}\small\item\em Czas pozostały do końca skoku. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_game_state_a704c1e027cf286b04343d2a8f1a0f821}{level\+Finish\+Timer}}
+\begin{DoxyCompactList}\small\item\em Opóźnienie po wpadnięciu do dołka przed zmianą stanu. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_game_state_af14b7973fffa065659f556a7c1b9ce33}{max\+Jump\+Time}}
+\begin{DoxyCompactList}\small\item\em Całkowity czas trwania aktualnego skoku (do obliczeń skali). \end{DoxyCompactList}\item 
+sf\+::\+Sound \mbox{\hyperlink{class_game_state_a20e19f0b4feb7f99ba3582dbaaf7b44e}{m\+\_\+hit\+Sound}}
+\begin{DoxyCompactList}\small\item\em Dźwięk uderzenia. \end{DoxyCompactList}\item 
+sf\+::\+Sound \mbox{\hyperlink{class_game_state_a4a91ded11982a0c6ce969e2ea70ba920}{m\+\_\+splash\+Sound}}
+\begin{DoxyCompactList}\small\item\em Dźwięk wpadnięcia do wody. \end{DoxyCompactList}\item 
+sf\+::\+Sound \mbox{\hyperlink{class_game_state_a71a02658bf0a003468ace5c90ca54c43}{m\+\_\+wall\+Hit\+Sound}}
+\begin{DoxyCompactList}\small\item\em Dźwięk uderzenia o ścianę. \end{DoxyCompactList}\item 
+sf\+::\+Sound \mbox{\hyperlink{class_game_state_a42f7c50a9cae1ee8a7938fcd4a898f96}{m\+\_\+win\+Sound}}
+\begin{DoxyCompactList}\small\item\em Dźwięk zwycięstwa. \end{DoxyCompactList}\item 
+sf\+::\+Rectangle\+Shape \mbox{\hyperlink{class_game_state_a74ceb55fda775271389eab291a152e69}{m\+\_\+fade\+Rect}}
+\item 
+float \mbox{\hyperlink{class_game_state_a426ff3b9db82ff374b6bde4b25ad29b5}{m\+\_\+alpha}}
+\item 
+int \mbox{\hyperlink{class_game_state_a8f76e31197507980d51caac9fab1a055}{lives}}
+\begin{DoxyCompactList}\small\item\em Liczba żyć (serc). \end{DoxyCompactList}\item 
+std\+::vector$<$ sf\+::\+Sprite $>$ \mbox{\hyperlink{class_game_state_a052759e9433373316680aa4997c7f075}{heart\+Sprites}}
+\begin{DoxyCompactList}\small\item\em Graficzna reprezentacja żyć. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Główny stan rozgrywki. 
+
+Klasa ta implementuje pętlę gry, w tym\+:
+\begin{DoxyItemize}
+\item Fizykę ruchu piłki (tarcie, odbicia, grawitacja przy skokach).
+\item Detekcję kolizji z mapą kafelkową (\doxylink{class_tile_map}{Tile\+Map}).
+\item Logikę interakcji z elementami specjalnymi (woda, piasek, rampy, dołek).
+\item Zarządzanie cyklem życia (śmierć, wygrana, pauza). 
+\end{DoxyItemize}
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{class_game_state_a436947aa2ced210a30cab8a88e1e8ae8}\label{class_game_state_a436947aa2ced210a30cab8a88e1e8ae8} 
+\index{GameState@{GameState}!GameState@{GameState}}
+\index{GameState@{GameState}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{GameState()}{GameState()}}
+{\footnotesize\ttfamily Game\+State\+::\+Game\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_game_8h_ae7efd7ef77698f16206f5c66180a389f}{Game\+Data\+Ref}}}]{data,  }\item[{int}]{level }\end{DoxyParamCaption})}
+
+
+
+Konstruktor stanu gry. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em data} & Dane gry. \\
+\hline
+{\em level} & Numer poziomu do załadowania. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_game_state_abdbfbc4986aa5ddc26c7f34e297c7884}\label{class_game_state_abdbfbc4986aa5ddc26c7f34e297c7884} 
+\index{GameState@{GameState}!draw@{draw}}
+\index{draw@{draw}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Game\+State\+::draw (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Rysuje mapę, piłkę, UI i efekty. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em dt} & Interpolacja klatki. \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \mbox{\hyperlink{class_state_a78efb743026712cbd78b8c07a45c2def}{State}}.
+
+Oto graf wywołań dla tej funkcji\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{class_game_state_abdbfbc4986aa5ddc26c7f34e297c7884_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_game_state_a44e0325b8932939a02979f317883a5cd}\label{class_game_state_a44e0325b8932939a02979f317883a5cd} 
+\index{GameState@{GameState}!getTileAt@{getTileAt}}
+\index{getTileAt@{getTileAt}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{getTileAt()}{getTileAt()}}
+{\footnotesize\ttfamily int Game\+State\+::get\+Tile\+At (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Pobiera ID kafelka na danej pozycji w świecie gry. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em position} & Współrzędne (x, y) w pikselach. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+ID kafelka (int). Zwraca ID ściany (3) jeśli poza zakresem. 
+\end{DoxyReturn}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{class_game_state_a44e0325b8932939a02979f317883a5cd_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_game_state_ab331bf3f5df91c89c2808a9ed6b6d868}\label{class_game_state_ab331bf3f5df91c89c2808a9ed6b6d868} 
+\index{GameState@{GameState}!handleInput@{handleInput}}
+\index{handleInput@{handleInput}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{handleInput()}{handleInput()}}
+{\footnotesize\ttfamily void Game\+State\+::handle\+Input (\begin{DoxyParamCaption}\item[{sf\+::\+Event \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Obsługuje wejście (strzał, pauza, reset). 
+
+
+\begin{DoxyParams}{Parametry}
+{\em event} & Zdarzenie SFML. \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \mbox{\hyperlink{class_state_ad0fcf10830377a1f673a714aa3b7944d}{State}}.
+
+Oto graf wywołań dla tej funkcji\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_ab331bf3f5df91c89c2808a9ed6b6d868_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_game_state_afd5d789bd58cc26b4e59265e7448fe12}\label{class_game_state_afd5d789bd58cc26b4e59265e7448fe12} 
+\index{GameState@{GameState}!init@{init}}
+\index{init@{init}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Game\+State\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Inicjalizuje poziom\+: ładuje mapę, ustawia piłkę, UI i dźwięki. 
+
+
+
+Implementuje \mbox{\hyperlink{class_state_a2ff5faa41a5811007e8d50542365640b}{State}}.
+
+Oto graf wywołań dla tej funkcji\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_afd5d789bd58cc26b4e59265e7448fe12_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_game_state_a5530ab4f50c1717a065328f63bbba0b9}\label{class_game_state_a5530ab4f50c1717a065328f63bbba0b9} 
+\index{GameState@{GameState}!initSounds@{initSounds}}
+\index{initSounds@{initSounds}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{initSounds()}{initSounds()}}
+{\footnotesize\ttfamily void Game\+State\+::init\+Sounds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Ładowanie i konfiguracja dźwięków. 
+
+Oto graf wywołań dla tej funkcji\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{class_game_state_a5530ab4f50c1717a065328f63bbba0b9_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{class_game_state_a5530ab4f50c1717a065328f63bbba0b9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_game_state_a48af40983e0175cac7d3f988a5f97282}\label{class_game_state_a48af40983e0175cac7d3f988a5f97282} 
+\index{GameState@{GameState}!initUI@{initUI}}
+\index{initUI@{initUI}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{initUI()}{initUI()}}
+{\footnotesize\ttfamily void Game\+State\+::init\+UI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Konfiguracja interfejsu użytkownika. 
+
+Oto graf wywołań dla tej funkcji\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{class_game_state_a48af40983e0175cac7d3f988a5f97282_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{class_game_state_a48af40983e0175cac7d3f988a5f97282_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_game_state_a4c86765ff6465bab9c70fa1ee66f9257}\label{class_game_state_a4c86765ff6465bab9c70fa1ee66f9257} 
+\index{GameState@{GameState}!isWall@{isWall}}
+\index{isWall@{isWall}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{isWall()}{isWall()}}
+{\footnotesize\ttfamily bool Game\+State\+::is\+Wall (\begin{DoxyParamCaption}\item[{int}]{tile\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Sprawdza, czy dane ID kafelka jest ścianą. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em tile\+Id} & ID kafelka. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+true jeśli kafelek jest przeszkodą stałą. 
+\end{DoxyReturn}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{class_game_state_a4c86765ff6465bab9c70fa1ee66f9257_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_game_state_aa16c19aae599d3ec88ff42780d8d2b31}\label{class_game_state_aa16c19aae599d3ec88ff42780d8d2b31} 
+\index{GameState@{GameState}!resetLevel@{resetLevel}}
+\index{resetLevel@{resetLevel}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{resetLevel()}{resetLevel()}}
+{\footnotesize\ttfamily void Game\+State\+::reset\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Resetuje stan poziomu po utracie życia lub restarcie. 
+
+Oto graf wywołań dla tej funkcji\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_aa16c19aae599d3ec88ff42780d8d2b31_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_aa16c19aae599d3ec88ff42780d8d2b31_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_game_state_a8f3d8828bc93b6df1c782cafc22316ef}\label{class_game_state_a8f3d8828bc93b6df1c782cafc22316ef} 
+\index{GameState@{GameState}!update@{update}}
+\index{update@{update}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Game\+State\+::update (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Główna pętla fizyki i logiki gry. Wykonuje kroki symulacji fizycznej, sprawdza warunki zwycięstwa/porażki. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em dt} & Czas klatki (Delta Time). \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \mbox{\hyperlink{class_state_a07b507523aaffc4cf78f3dd3174a68ea}{State}}.
+
+Oto graf wywołań dla tej funkcji\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_a8f3d8828bc93b6df1c782cafc22316ef_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_game_state_a7ec63b5e8b5d5eae73a2522ee1c598dd}\label{class_game_state_a7ec63b5e8b5d5eae73a2522ee1c598dd} 
+\index{GameState@{GameState}!updateAimLine@{updateAimLine}}
+\index{updateAimLine@{updateAimLine}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{updateAimLine()}{updateAimLine()}}
+{\footnotesize\ttfamily void Game\+State\+::update\+Aim\+Line (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Aktualizacja wizualizacji linii celowania. 
+
+Oto graf wywołań dla tej funkcji\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_a7ec63b5e8b5d5eae73a2522ee1c598dd_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_a7ec63b5e8b5d5eae73a2522ee1c598dd_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_game_state_ac60aec9b3b50e6bb4a52756abdbfee18}\label{class_game_state_ac60aec9b3b50e6bb4a52756abdbfee18} 
+\index{GameState@{GameState}!updateHearts@{updateHearts}}
+\index{updateHearts@{updateHearts}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{updateHearts()}{updateHearts()}}
+{\footnotesize\ttfamily void Game\+State\+::update\+Hearts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Aktualizacja tekstur serc (pełne/puste). 
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_ac60aec9b3b50e6bb4a52756abdbfee18_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_ac60aec9b3b50e6bb4a52756abdbfee18_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{class_game_state_a8847bce8c464f0beeceb7561787cbe14}\label{class_game_state_a8847bce8c464f0beeceb7561787cbe14} 
+\index{GameState@{GameState}!aimLine@{aimLine}}
+\index{aimLine@{aimLine}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{aimLine}{aimLine}}
+{\footnotesize\ttfamily sf\+::\+Rectangle\+Shape Game\+State\+::aim\+Line\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Linia celownicza. 
+
+\Hypertarget{class_game_state_a3bd2081ba9692f064f6e7ca060d36f81}\label{class_game_state_a3bd2081ba9692f064f6e7ca060d36f81} 
+\index{GameState@{GameState}!ball@{ball}}
+\index{ball@{ball}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{ball}{ball}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_ball}{Ball}} Game\+State\+::ball\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Obiekt gracza (piłka). 
+
+\Hypertarget{class_game_state_a7cc87839d1cdf9689bf301613a82ccdc}\label{class_game_state_a7cc87839d1cdf9689bf301613a82ccdc} 
+\index{GameState@{GameState}!ballInHole@{ballInHole}}
+\index{ballInHole@{ballInHole}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{ballInHole}{ballInHole}}
+{\footnotesize\ttfamily bool Game\+State\+::ball\+In\+Hole\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Czy piłka wpadła do dołka. 
+
+\Hypertarget{class_game_state_af54511b35891c02d6ea26cd554e0db9d}\label{class_game_state_af54511b35891c02d6ea26cd554e0db9d} 
+\index{GameState@{GameState}!forceVector@{forceVector}}
+\index{forceVector@{forceVector}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{forceVector}{forceVector}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Game\+State\+::force\+Vector\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Wektor siły uderzenia. 
+
+\Hypertarget{class_game_state_a052759e9433373316680aa4997c7f075}\label{class_game_state_a052759e9433373316680aa4997c7f075} 
+\index{GameState@{GameState}!heartSprites@{heartSprites}}
+\index{heartSprites@{heartSprites}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{heartSprites}{heartSprites}}
+{\footnotesize\ttfamily std\+::vector$<$sf\+::\+Sprite$>$ Game\+State\+::heart\+Sprites\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Graficzna reprezentacja żyć. 
+
+\Hypertarget{class_game_state_acecdc4bcc6ef5b50b6fa4a9cdb6e780b}\label{class_game_state_acecdc4bcc6ef5b50b6fa4a9cdb6e780b} 
+\index{GameState@{GameState}!inputManager@{inputManager}}
+\index{inputManager@{inputManager}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{inputManager}{inputManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_input_manager}{Input\+Manager}} Game\+State\+::input\+Manager\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Menedżer sterowania (myszka). 
+
+\Hypertarget{class_game_state_a3c07a6398f7367591cb98737e0351732}\label{class_game_state_a3c07a6398f7367591cb98737e0351732} 
+\index{GameState@{GameState}!isJumping@{isJumping}}
+\index{isJumping@{isJumping}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{isJumping}{isJumping}}
+{\footnotesize\ttfamily bool Game\+State\+::is\+Jumping\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Czy piłka jest w powietrzu (skok z rampy). 
+
+\Hypertarget{class_game_state_a4625d809bc1bf49ab71840e1ceb329b0}\label{class_game_state_a4625d809bc1bf49ab71840e1ceb329b0} 
+\index{GameState@{GameState}!isSinking@{isSinking}}
+\index{isSinking@{isSinking}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{isSinking}{isSinking}}
+{\footnotesize\ttfamily bool Game\+State\+::is\+Sinking\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Czy trwa animacja tonięcia. 
+
+\Hypertarget{class_game_state_a12bc0aba5ac59b33e0020b704592cd8c}\label{class_game_state_a12bc0aba5ac59b33e0020b704592cd8c} 
+\index{GameState@{GameState}!jumpTimer@{jumpTimer}}
+\index{jumpTimer@{jumpTimer}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{jumpTimer}{jumpTimer}}
+{\footnotesize\ttfamily float Game\+State\+::jump\+Timer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Czas pozostały do końca skoku. 
+
+\Hypertarget{class_game_state_af12253e907426ca00febc2cdcff325ad}\label{class_game_state_af12253e907426ca00febc2cdcff325ad} 
+\index{GameState@{GameState}!lastSafePos@{lastSafePos}}
+\index{lastSafePos@{lastSafePos}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{lastSafePos}{lastSafePos}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Game\+State\+::last\+Safe\+Pos\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Ostatnia bezpieczna pozycja (do respawnu). 
+
+\Hypertarget{class_game_state_ae8f3b4cc40a365d2c4ed8b8dc540cf20}\label{class_game_state_ae8f3b4cc40a365d2c4ed8b8dc540cf20} 
+\index{GameState@{GameState}!levelData@{levelData}}
+\index{levelData@{levelData}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{levelData}{levelData}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ Game\+State\+::level\+Data\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Surowe dane mapy (ID kafelków). 
+
+\Hypertarget{class_game_state_a704c1e027cf286b04343d2a8f1a0f821}\label{class_game_state_a704c1e027cf286b04343d2a8f1a0f821} 
+\index{GameState@{GameState}!levelFinishTimer@{levelFinishTimer}}
+\index{levelFinishTimer@{levelFinishTimer}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{levelFinishTimer}{levelFinishTimer}}
+{\footnotesize\ttfamily float Game\+State\+::level\+Finish\+Timer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Opóźnienie po wpadnięciu do dołka przed zmianą stanu. 
+
+\Hypertarget{class_game_state_a8f76e31197507980d51caac9fab1a055}\label{class_game_state_a8f76e31197507980d51caac9fab1a055} 
+\index{GameState@{GameState}!lives@{lives}}
+\index{lives@{lives}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{lives}{lives}}
+{\footnotesize\ttfamily int Game\+State\+::lives\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Liczba żyć (serc). 
+
+\Hypertarget{class_game_state_a426ff3b9db82ff374b6bde4b25ad29b5}\label{class_game_state_a426ff3b9db82ff374b6bde4b25ad29b5} 
+\index{GameState@{GameState}!m\_alpha@{m\_alpha}}
+\index{m\_alpha@{m\_alpha}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{m\_alpha}{m\_alpha}}
+{\footnotesize\ttfamily float Game\+State\+::m\+\_\+alpha\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_game_state_af08289b46bf0c7474b6f8478c9ce6e5b}\label{class_game_state_af08289b46bf0c7474b6f8478c9ce6e5b} 
+\index{GameState@{GameState}!m\_data@{m\_data}}
+\index{m\_data@{m\_data}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{m\_data}{m\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_game_8h_ae7efd7ef77698f16206f5c66180a389f}{Game\+Data\+Ref}} Game\+State\+::m\+\_\+data\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Dane gry. 
+
+\Hypertarget{class_game_state_a74ceb55fda775271389eab291a152e69}\label{class_game_state_a74ceb55fda775271389eab291a152e69} 
+\index{GameState@{GameState}!m\_fadeRect@{m\_fadeRect}}
+\index{m\_fadeRect@{m\_fadeRect}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{m\_fadeRect}{m\_fadeRect}}
+{\footnotesize\ttfamily sf\+::\+Rectangle\+Shape Game\+State\+::m\+\_\+fade\+Rect\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_game_state_a20e19f0b4feb7f99ba3582dbaaf7b44e}\label{class_game_state_a20e19f0b4feb7f99ba3582dbaaf7b44e} 
+\index{GameState@{GameState}!m\_hitSound@{m\_hitSound}}
+\index{m\_hitSound@{m\_hitSound}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{m\_hitSound}{m\_hitSound}}
+{\footnotesize\ttfamily sf\+::\+Sound Game\+State\+::m\+\_\+hit\+Sound\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Dźwięk uderzenia. 
+
+\Hypertarget{class_game_state_ae19e23261b435f5f09d93663569074a0}\label{class_game_state_ae19e23261b435f5f09d93663569074a0} 
+\index{GameState@{GameState}!m\_level@{m\_level}}
+\index{m\_level@{m\_level}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{m\_level}{m\_level}}
+{\footnotesize\ttfamily int Game\+State\+::m\+\_\+level\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Numer aktualnego poziomu. 
+
+\Hypertarget{class_game_state_a5c9cae16f9e80b627c7c8ada41dec5b8}\label{class_game_state_a5c9cae16f9e80b627c7c8ada41dec5b8} 
+\index{GameState@{GameState}!m\_shadow@{m\_shadow}}
+\index{m\_shadow@{m\_shadow}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{m\_shadow}{m\_shadow}}
+{\footnotesize\ttfamily sf\+::\+Circle\+Shape Game\+State\+::m\+\_\+shadow\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Cień pod piłką (używany przy skokach). 
+
+\Hypertarget{class_game_state_a4a91ded11982a0c6ce969e2ea70ba920}\label{class_game_state_a4a91ded11982a0c6ce969e2ea70ba920} 
+\index{GameState@{GameState}!m\_splashSound@{m\_splashSound}}
+\index{m\_splashSound@{m\_splashSound}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{m\_splashSound}{m\_splashSound}}
+{\footnotesize\ttfamily sf\+::\+Sound Game\+State\+::m\+\_\+splash\+Sound\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Dźwięk wpadnięcia do wody. 
+
+\Hypertarget{class_game_state_a71a02658bf0a003468ace5c90ca54c43}\label{class_game_state_a71a02658bf0a003468ace5c90ca54c43} 
+\index{GameState@{GameState}!m\_wallHitSound@{m\_wallHitSound}}
+\index{m\_wallHitSound@{m\_wallHitSound}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{m\_wallHitSound}{m\_wallHitSound}}
+{\footnotesize\ttfamily sf\+::\+Sound Game\+State\+::m\+\_\+wall\+Hit\+Sound\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Dźwięk uderzenia o ścianę. 
+
+\Hypertarget{class_game_state_a42f7c50a9cae1ee8a7938fcd4a898f96}\label{class_game_state_a42f7c50a9cae1ee8a7938fcd4a898f96} 
+\index{GameState@{GameState}!m\_winSound@{m\_winSound}}
+\index{m\_winSound@{m\_winSound}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{m\_winSound}{m\_winSound}}
+{\footnotesize\ttfamily sf\+::\+Sound Game\+State\+::m\+\_\+win\+Sound\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Dźwięk zwycięstwa. 
+
+\Hypertarget{class_game_state_af14b7973fffa065659f556a7c1b9ce33}\label{class_game_state_af14b7973fffa065659f556a7c1b9ce33} 
+\index{GameState@{GameState}!maxJumpTime@{maxJumpTime}}
+\index{maxJumpTime@{maxJumpTime}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{maxJumpTime}{maxJumpTime}}
+{\footnotesize\ttfamily float Game\+State\+::max\+Jump\+Time\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Całkowity czas trwania aktualnego skoku (do obliczeń skali). 
+
+\Hypertarget{class_game_state_ae64de7380a453da43528138160c67e7e}\label{class_game_state_ae64de7380a453da43528138160c67e7e} 
+\index{GameState@{GameState}!scoreText@{scoreText}}
+\index{scoreText@{scoreText}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{scoreText}{scoreText}}
+{\footnotesize\ttfamily sf\+::\+Text Game\+State\+::score\+Text\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Licznik uderzeń. 
+
+\Hypertarget{class_game_state_a7e52b4d7614874534b0fa4db3a524c14}\label{class_game_state_a7e52b4d7614874534b0fa4db3a524c14} 
+\index{GameState@{GameState}!strokes@{strokes}}
+\index{strokes@{strokes}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{strokes}{strokes}}
+{\footnotesize\ttfamily int Game\+State\+::strokes\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Liczba wykonanych uderzeń. 
+
+\Hypertarget{class_game_state_ac096505a992cf64614ed182e615954d4}\label{class_game_state_ac096505a992cf64614ed182e615954d4} 
+\index{GameState@{GameState}!tileMap@{tileMap}}
+\index{tileMap@{tileMap}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{tileMap}{tileMap}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_tile_map}{Tile\+Map}} Game\+State\+::tile\+Map\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Mapa kafelkowa poziomu. 
+
+\Hypertarget{class_game_state_a0afee7ad6d75218b6261ddd50d5fe089}\label{class_game_state_a0afee7ad6d75218b6261ddd50d5fe089} 
+\index{GameState@{GameState}!wasInWater@{wasInWater}}
+\index{wasInWater@{wasInWater}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{wasInWater}{wasInWater}}
+{\footnotesize\ttfamily bool Game\+State\+::was\+In\+Water\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Czy odegrano dźwięk wpadnięcia do wody. 
+
+\Hypertarget{class_game_state_a310f12c908ec305f410dfd0fac8a7fe7}\label{class_game_state_a310f12c908ec305f410dfd0fac8a7fe7} 
+\index{GameState@{GameState}!winText@{winText}}
+\index{winText@{winText}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{winText}{winText}}
+{\footnotesize\ttfamily sf\+::\+Text Game\+State\+::win\+Text\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Tekst wygranej (opcjonalny). 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_game_state_8h}{Game\+State.\+h}}\item 
+\mbox{\hyperlink{_game_state_8cpp}{Game\+State.\+cpp}}\end{DoxyCompactItemize}

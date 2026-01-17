@@ -1,0 +1,68 @@
+\doxysection{Dokumentacja klasy SFApplication\+Delegate}
+\hypertarget{interface_s_f_application_delegate}{}\label{interface_s_f_application_delegate}\index{SFApplicationDelegate@{SFApplicationDelegate}}
+
+
+Process some application specific events.  
+
+
+
+
+{\ttfamily \#include $<$SFApplication\+Delegate.\+h$>$}
+
+
+
+Diagram dziedziczenia dla SFApplication\+Delegate\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{interface_s_f_application_delegate__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagram współpracy dla SFApplication\+Delegate\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{interface_s_f_application_delegate__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(NSApplication\+Terminate\+Reply) -\/ \mbox{\hyperlink{interface_s_f_application_delegate_aae51ca08645c23e5819f11a1ac176f6e}{application\+Should\+Terminate\+:}}
+\begin{DoxyCompactList}\small\item\em React to a termination notification. \end{DoxyCompactList}\item 
+(BOOL) -\/ \mbox{\hyperlink{interface_s_f_application_delegate_a0b2ff7c0b2309be8ee65274ffa1fe547}{application\+Should\+Terminate\+After\+Last\+Window\+Closed\+:}}
+\begin{DoxyCompactList}\small\item\em Exit the app when all windows are closed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Process some application specific events. 
+
+\doxysubsection{Method Documentation}
+\Hypertarget{interface_s_f_application_delegate_aae51ca08645c23e5819f11a1ac176f6e}\label{interface_s_f_application_delegate_aae51ca08645c23e5819f11a1ac176f6e} 
+\index{SFApplicationDelegate@{SFApplicationDelegate}!applicationShouldTerminate:@{applicationShouldTerminate:}}
+\index{applicationShouldTerminate:@{applicationShouldTerminate:}!SFApplicationDelegate@{SFApplicationDelegate}}
+\doxysubsubsection{\texorpdfstring{applicationShouldTerminate:}{applicationShouldTerminate:}}
+{\footnotesize\ttfamily -\/ (NSApplication\+Terminate\+Reply) application\+Should\+Terminate\+: \begin{DoxyParamCaption}\item[{(NSApplication\texorpdfstring{$\ast$}{*})}]{sender }\end{DoxyParamCaption}}
+
+
+
+React to a termination notification. 
+
+Send a close message to all windows and cancel the termination. \Hypertarget{interface_s_f_application_delegate_a0b2ff7c0b2309be8ee65274ffa1fe547}\label{interface_s_f_application_delegate_a0b2ff7c0b2309be8ee65274ffa1fe547} 
+\index{SFApplicationDelegate@{SFApplicationDelegate}!applicationShouldTerminateAfterLastWindowClosed:@{applicationShouldTerminateAfterLastWindowClosed:}}
+\index{applicationShouldTerminateAfterLastWindowClosed:@{applicationShouldTerminateAfterLastWindowClosed:}!SFApplicationDelegate@{SFApplicationDelegate}}
+\doxysubsubsection{\texorpdfstring{applicationShouldTerminateAfterLastWindowClosed:}{applicationShouldTerminateAfterLastWindowClosed:}}
+{\footnotesize\ttfamily -\/ (BOOL) application\+Should\+Terminate\+After\+Last\+Window\+Closed\+: \begin{DoxyParamCaption}\item[{(NSApplication\texorpdfstring{$\ast$}{*})}]{the\+Application }\end{DoxyParamCaption}}
+
+
+
+Exit the app when all windows are closed. 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+OSX/\mbox{\hyperlink{_s_f_application_delegate_8h}{SFApplication\+Delegate.\+h}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+OSX/\mbox{\hyperlink{_s_f_application_delegate_8m}{SFApplication\+Delegate.\+m}}\end{DoxyCompactItemize}

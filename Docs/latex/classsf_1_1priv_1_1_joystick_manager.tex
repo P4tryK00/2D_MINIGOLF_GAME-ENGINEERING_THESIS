@@ -1,0 +1,250 @@
+\doxysection{Dokumentacja klasy sf\+::priv\+::Joystick\+Manager}
+\hypertarget{classsf_1_1priv_1_1_joystick_manager}{}\label{classsf_1_1priv_1_1_joystick_manager}\index{sf::priv::JoystickManager@{sf::priv::JoystickManager}}
+
+
+Global joystick manager.  
+
+
+
+
+{\ttfamily \#include $<$Joystick\+Manager.\+hpp$>$}
+
+
+
+Diagram dziedziczenia dla sf\+::priv\+::Joystick\+Manager\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{classsf_1_1priv_1_1_joystick_manager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagram współpracy dla sf\+::priv\+::Joystick\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classsf_1_1priv_1_1_joystick_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsf_1_1priv_1_1_joystick_manager_1_1_item}{Item}}
+\begin{DoxyCompactList}\small\item\em \doxylink{classsf_1_1_joystick}{Joystick} information and state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{structsf_1_1priv_1_1_joystick_caps}{Joystick\+Caps}} \& \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_manager_a8674fc183fa508394a169611e697693a}{get\+Capabilities}} (unsigned int joystick) const
+\begin{DoxyCompactList}\small\item\em Get the capabilities for an open joystick. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{structsf_1_1priv_1_1_joystick_state}{Joystick\+State}} \& \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_manager_a7e261e13ea4ac73150781832427cbf05}{get\+State}} (unsigned int joystick) const
+\begin{DoxyCompactList}\small\item\em Get the current state of an open joystick. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{structsf_1_1_joystick_1_1_identification}{Joystick\+::\+Identification}} \& \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_manager_a894d0bbf2d8df41bbae5027fd2c1289f}{get\+Identification}} (unsigned int joystick) const
+\begin{DoxyCompactList}\small\item\em Get the identification for an open joystick. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_manager_a6279080062f4ea10bf0593d51807af58}{update}} ()
+\begin{DoxyCompactList}\small\item\em Update the state of all the joysticks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Statyczne metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_manager}{Joystick\+Manager}} \& \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_manager_a77fcdba8a12a1fd747c22669f49d8a26}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Get the global unique instance of the manager. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsf_1_1priv_1_1_joystick_manager_af6f3a1148af5b85b40e04620e09a6319}{Joystick\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1priv_1_1_joystick_manager_a083dcfc43a811e8158f86003c7ceb8ec}{\texorpdfstring{$\sim$}{\string~}\+Joystick\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody prywatne dziedziczone z \mbox{\hyperlink{classsf_1_1_non_copyable}{sf\+::\+Non\+Copyable}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsf_1_1_non_copyable_a2110add170580fdb946f887719da6860}{Non\+Copyable}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1_non_copyable_a8274ffbf46014f5f7f364befb52c7728}{\texorpdfstring{$\sim$}{\string~}\+Non\+Copyable}} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsf_1_1priv_1_1_joystick_manager_1_1_item}{Item}} \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_manager_adad95ae3ff03606eec59f711734ff219}{m\+\_\+joysticks}} \mbox{[}\mbox{\hyperlink{classsf_1_1_joystick_ab2f321679e29b742f24eb0de91f30149a6e0a2a95bc1da277610c04d80f52715e}{Joystick\+::\+Count}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Joysticks information and state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Global joystick manager. 
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{classsf_1_1priv_1_1_joystick_manager_af6f3a1148af5b85b40e04620e09a6319}\label{classsf_1_1priv_1_1_joystick_manager_af6f3a1148af5b85b40e04620e09a6319} 
+\index{sf::priv::JoystickManager@{sf::priv::JoystickManager}!JoystickManager@{JoystickManager}}
+\index{JoystickManager@{JoystickManager}!sf::priv::JoystickManager@{sf::priv::JoystickManager}}
+\doxysubsubsection{\texorpdfstring{JoystickManager()}{JoystickManager()}}
+{\footnotesize\ttfamily sf\+::priv\+::\+Joystick\+Manager\+::\+Joystick\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Default constructor. 
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_joystick_manager_af6f3a1148af5b85b40e04620e09a6319_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_joystick_manager_a083dcfc43a811e8158f86003c7ceb8ec}\label{classsf_1_1priv_1_1_joystick_manager_a083dcfc43a811e8158f86003c7ceb8ec} 
+\index{sf::priv::JoystickManager@{sf::priv::JoystickManager}!````~JoystickManager@{\texorpdfstring{$\sim$}{\string~}JoystickManager}}
+\index{````~JoystickManager@{\texorpdfstring{$\sim$}{\string~}JoystickManager}!sf::priv::JoystickManager@{sf::priv::JoystickManager}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}JoystickManager()}{\string~JoystickManager()}}
+{\footnotesize\ttfamily sf\+::priv\+::\+Joystick\+Manager\+::\texorpdfstring{$\sim$}{\string~}\+Joystick\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Destructor. 
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_joystick_manager_a083dcfc43a811e8158f86003c7ceb8ec_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{classsf_1_1priv_1_1_joystick_manager_a8674fc183fa508394a169611e697693a}\label{classsf_1_1priv_1_1_joystick_manager_a8674fc183fa508394a169611e697693a} 
+\index{sf::priv::JoystickManager@{sf::priv::JoystickManager}!getCapabilities@{getCapabilities}}
+\index{getCapabilities@{getCapabilities}!sf::priv::JoystickManager@{sf::priv::JoystickManager}}
+\doxysubsubsection{\texorpdfstring{getCapabilities()}{getCapabilities()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structsf_1_1priv_1_1_joystick_caps}{Joystick\+Caps}} \& sf\+::priv\+::\+Joystick\+Manager\+::get\+Capabilities (\begin{DoxyParamCaption}\item[{unsigned int}]{joystick }\end{DoxyParamCaption}) const}
+
+
+
+Get the capabilities for an open joystick. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em joystick} & Index of the joystick\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Capabilities of the joystick 
+\end{DoxyReturn}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_joystick_manager_a8674fc183fa508394a169611e697693a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_joystick_manager_a894d0bbf2d8df41bbae5027fd2c1289f}\label{classsf_1_1priv_1_1_joystick_manager_a894d0bbf2d8df41bbae5027fd2c1289f} 
+\index{sf::priv::JoystickManager@{sf::priv::JoystickManager}!getIdentification@{getIdentification}}
+\index{getIdentification@{getIdentification}!sf::priv::JoystickManager@{sf::priv::JoystickManager}}
+\doxysubsubsection{\texorpdfstring{getIdentification()}{getIdentification()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structsf_1_1_joystick_1_1_identification}{Joystick\+::\+Identification}} \& sf\+::priv\+::\+Joystick\+Manager\+::get\+Identification (\begin{DoxyParamCaption}\item[{unsigned int}]{joystick }\end{DoxyParamCaption}) const}
+
+
+
+Get the identification for an open joystick. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em joystick} & Index of the joystick\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Identification for the joystick 
+\end{DoxyReturn}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_joystick_manager_a894d0bbf2d8df41bbae5027fd2c1289f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_joystick_manager_a77fcdba8a12a1fd747c22669f49d8a26}\label{classsf_1_1priv_1_1_joystick_manager_a77fcdba8a12a1fd747c22669f49d8a26} 
+\index{sf::priv::JoystickManager@{sf::priv::JoystickManager}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!sf::priv::JoystickManager@{sf::priv::JoystickManager}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_manager}{Joystick\+Manager}} \& sf\+::priv\+::\+Joystick\+Manager\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the global unique instance of the manager. 
+
+\begin{DoxyReturn}{Zwraca}
+Unique instance of the joystick manager 
+\end{DoxyReturn}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_joystick_manager_a77fcdba8a12a1fd747c22669f49d8a26_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_joystick_manager_a7e261e13ea4ac73150781832427cbf05}\label{classsf_1_1priv_1_1_joystick_manager_a7e261e13ea4ac73150781832427cbf05} 
+\index{sf::priv::JoystickManager@{sf::priv::JoystickManager}!getState@{getState}}
+\index{getState@{getState}!sf::priv::JoystickManager@{sf::priv::JoystickManager}}
+\doxysubsubsection{\texorpdfstring{getState()}{getState()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structsf_1_1priv_1_1_joystick_state}{Joystick\+State}} \& sf\+::priv\+::\+Joystick\+Manager\+::get\+State (\begin{DoxyParamCaption}\item[{unsigned int}]{joystick }\end{DoxyParamCaption}) const}
+
+
+
+Get the current state of an open joystick. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em joystick} & Index of the joystick\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Current state of the joystick 
+\end{DoxyReturn}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_joystick_manager_a7e261e13ea4ac73150781832427cbf05_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_joystick_manager_a6279080062f4ea10bf0593d51807af58}\label{classsf_1_1priv_1_1_joystick_manager_a6279080062f4ea10bf0593d51807af58} 
+\index{sf::priv::JoystickManager@{sf::priv::JoystickManager}!update@{update}}
+\index{update@{update}!sf::priv::JoystickManager@{sf::priv::JoystickManager}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Joystick\+Manager\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update the state of all the joysticks. 
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_joystick_manager_a6279080062f4ea10bf0593d51807af58_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_joystick_manager_a6279080062f4ea10bf0593d51807af58_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{classsf_1_1priv_1_1_joystick_manager_adad95ae3ff03606eec59f711734ff219}\label{classsf_1_1priv_1_1_joystick_manager_adad95ae3ff03606eec59f711734ff219} 
+\index{sf::priv::JoystickManager@{sf::priv::JoystickManager}!m\_joysticks@{m\_joysticks}}
+\index{m\_joysticks@{m\_joysticks}!sf::priv::JoystickManager@{sf::priv::JoystickManager}}
+\doxysubsubsection{\texorpdfstring{m\_joysticks}{m\_joysticks}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsf_1_1priv_1_1_joystick_manager_1_1_item}{Item}} sf\+::priv\+::\+Joystick\+Manager\+::m\+\_\+joysticks\mbox{[}\mbox{\hyperlink{classsf_1_1_joystick_ab2f321679e29b742f24eb0de91f30149a6e0a2a95bc1da277610c04d80f52715e}{Joystick\+::\+Count}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Joysticks information and state. 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\mbox{\hyperlink{_joystick_manager_8hpp}{Joystick\+Manager.\+hpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\mbox{\hyperlink{_joystick_manager_8cpp}{Joystick\+Manager.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,37 @@
+\doxysection{Dokumentacja struktury FLAC\+\_\+\+\_\+\+Stream\+Metadata\+\_\+\+Vorbis\+Comment\+\_\+\+Entry}
+\hypertarget{struct_f_l_a_c_____stream_metadata___vorbis_comment___entry}{}\label{struct_f_l_a_c_____stream_metadata___vorbis_comment___entry}\index{FLAC\_\_StreamMetadata\_VorbisComment\_Entry@{FLAC\_\_StreamMetadata\_VorbisComment\_Entry}}
+
+
+{\ttfamily \#include $<$format.\+h$>$}
+
+
+
+Diagram współpracy dla FLAC\+\_\+\+\_\+\+Stream\+Metadata\+\_\+\+Vorbis\+Comment\+\_\+\+Entry\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{struct_f_l_a_c_____stream_metadata___vorbis_comment___entry__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ordinals_8h_a9c4005ea7ef8d564b0cc993cdd0e4e5e}{FLAC\+\_\+\+\_\+uint32}} \mbox{\hyperlink{group__flac__format_gaa375f16819aaa4f7e08d8009167cb19e}{length}}
+\item 
+\mbox{\hyperlink{ordinals_8h_a5eb569b12d5b047cdacada4d57924ee3}{FLAC\+\_\+\+\_\+byte}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__flac__format_ga78944f78822b92e7a4e5f15f118f6132}{entry}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Vorbis comment entry structure used in VORBIS\+\_\+\+COMMENT blocks. (c.\+f. \href{../format.html\#metadata_block_vorbis_comment}{\texttt{ format specification}})
+
+For convenience, the APIs maintain a trailing NUL character at the end of {\itshape entry} which is not counted toward {\itshape length}, i.\+e. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{strlen(\mbox{\hyperlink{group__flac__format_ga78944f78822b92e7a4e5f15f118f6132}{entry}})\ ==\ \mbox{\hyperlink{group__flac__format_gaa375f16819aaa4f7e08d8009167cb19e}{length}}\ }
+
+\end{DoxyCode}
+ 
+
+Dokumentacja dla tej struktury została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/extlibs/headers/\+FLAC/\mbox{\hyperlink{format_8h}{format.\+h}}\end{DoxyCompactItemize}

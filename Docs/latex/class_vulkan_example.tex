@@ -1,0 +1,1067 @@
+\doxysection{Dokumentacja klasy Vulkan\+Example}
+\hypertarget{class_vulkan_example}{}\label{class_vulkan_example}\index{VulkanExample@{VulkanExample}}
+
+
+Diagram współpracy dla Vulkan\+Example\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_vulkan_example__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_vulkan_example_a9789a70a77e969496c2a66620a5f1c3e}{Vulkan\+Example}} ()
+\item 
+\mbox{\hyperlink{class_vulkan_example_aca75c136168f0ca2821ca5db08e79e3a}{\texorpdfstring{$\sim$}{\string~}\+Vulkan\+Example}} ()
+\item 
+void \mbox{\hyperlink{class_vulkan_example_afd4cc10c436deec8b7a56db00c61507e}{cleanup\+Swapchain}} ()
+\item 
+void \mbox{\hyperlink{class_vulkan_example_a8a2b6a30d8ede902417cbf934b17ebb6}{recreate\+Swapchain}} ()
+\item 
+void \mbox{\hyperlink{class_vulkan_example_a45d03c73010da81ce912b6920903f208}{setup\+Instance}} ()
+\item 
+void \mbox{\hyperlink{class_vulkan_example_a417f2cdf744ba4e07ffc0f6168d2bbdb}{setup\+Debug\+Report\+Callback}} ()
+\item 
+void \mbox{\hyperlink{class_vulkan_example_ad259081d5e71fbb555b59f4393f8d169}{setup\+Surface}} ()
+\item 
+void \mbox{\hyperlink{class_vulkan_example_af2a6ab87daa6d98d4c62f79fd1daa454}{setup\+Physical\+Device}} ()
+\item 
+void \mbox{\hyperlink{class_vulkan_example_abe7794d0fedbe83fffc551f952f804ad}{setup\+Logical\+Device}} ()
+\item 
+void \mbox{\hyperlink{class_vulkan_example_a6e911e3f41489c02952ec8d93beedec7}{setup\+Swapchain}} ()
+\item 
+void \mbox{\hyperlink{class_vulkan_example_a87917ff07923d322761f34297d319676}{setup\+Swapchain\+Images}} ()
+\item 
+void \mbox{\hyperlink{class_vulkan_example_aa587e3c51880217e6a6de06a4f78a357}{setup\+Shaders}} ()
+\item 
+void \mbox{\hyperlink{class_vulkan_example_a87c1978b2638ab1db42e38f1190d0514}{setup\+Renderpass}} ()
+\item 
+void \mbox{\hyperlink{class_vulkan_example_adf68a8a6bcc50cdcd79d5fac1306d15e}{setup\+Descriptor\+Set\+Layout}} ()
+\item 
+void \mbox{\hyperlink{class_vulkan_example_a7ec1f6505490da3bdf5bc8ab5b78c6ad}{setup\+Pipeline\+Layout}} ()
+\item 
+void \mbox{\hyperlink{class_vulkan_example_adfb8156359972c6aea79f9459a9d60c0}{setup\+Pipeline}} ()
+\item 
+void \mbox{\hyperlink{class_vulkan_example_a03e0d9d755a20b63432895011de86f40}{setup\+Framebuffers}} ()
+\item 
+void \mbox{\hyperlink{class_vulkan_example_abcd9b16cd0c57c8a384f7241779bcf28}{setup\+Command\+Pool}} ()
+\item 
+bool \mbox{\hyperlink{class_vulkan_example_abb34ed4a37ac3a7f56973e7d9b7d736d}{create\+Buffer}} (\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a459be4b1b89c972b0d6018bc483be9cc}{Vk\+Device\+Size}} size, \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_ab221f627433dcae79b6a004fc42b50a9}{Vk\+Buffer\+Usage\+Flags}} usage, \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a06f71178c68bf5712dbec35d6f124122}{Vk\+Memory\+Property\+Flags}} properties, Vk\+Buffer \&buffer, Vk\+Device\+Memory \&memory)
+\item 
+bool \mbox{\hyperlink{class_vulkan_example_a6065b4b7e86a4b6a685916f09fd4a2d5}{copy\+Buffer}} (Vk\+Buffer dst, Vk\+Buffer src, \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a459be4b1b89c972b0d6018bc483be9cc}{Vk\+Device\+Size}} size)
+\item 
+void \mbox{\hyperlink{class_vulkan_example_a892cefea62f854010c9f0b5569883344}{setup\+Vertex\+Buffer}} ()
+\item 
+void \mbox{\hyperlink{class_vulkan_example_a662a67511879bbf31021c5946c07aae4}{setup\+Index\+Buffer}} ()
+\item 
+void \mbox{\hyperlink{class_vulkan_example_aa39ec8127b6ba76823fe02107e6fce37}{setup\+Uniform\+Buffers}} ()
+\item 
+bool \mbox{\hyperlink{class_vulkan_example_a7a189d5c51c8df9b8a4b2de93d93dfef}{create\+Image}} (uint32\+\_\+t width, uint32\+\_\+t height, \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_ad61b5b94a526d0f9ae0db97072cf6b3f}{Vk\+Format}} format, \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a5456c8cb96f58d566fb71551a93fa8f4}{Vk\+Image\+Tiling}} tiling, \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a2c990c0c189d0a9bd02c5d911d5cc5f7}{Vk\+Image\+Usage\+Flags}} usage, \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a06f71178c68bf5712dbec35d6f124122}{Vk\+Memory\+Property\+Flags}} properties, Vk\+Image \&image, Vk\+Device\+Memory \&image\+Memory)
+\item 
+void \mbox{\hyperlink{class_vulkan_example_ae0639b4c189b6aa087184b6d0605d565}{setup\+Depth\+Image}} ()
+\item 
+void \mbox{\hyperlink{class_vulkan_example_ac182cc375a84f345420983d5e7fee1ed}{setup\+Depth\+Image\+View}} ()
+\item 
+void \mbox{\hyperlink{class_vulkan_example_aba04423f8e3f0abc4affdfabe1e03c37}{setup\+Texture\+Image}} ()
+\item 
+void \mbox{\hyperlink{class_vulkan_example_aa62e7f95e26e3af591315870e70d18d6}{setup\+Texture\+Image\+View}} ()
+\item 
+void \mbox{\hyperlink{class_vulkan_example_a165008de127bfd6da75f7338cf8839e5}{setup\+Texture\+Sampler}} ()
+\item 
+void \mbox{\hyperlink{class_vulkan_example_a74c2169204e9e6824406fde928e3e5ec}{setup\+Descriptor\+Pool}} ()
+\item 
+void \mbox{\hyperlink{class_vulkan_example_a8d7ae3b11559c1ee654cc5bdfd446efb}{setup\+Descriptor\+Sets}} ()
+\item 
+void \mbox{\hyperlink{class_vulkan_example_ab324633b39772944ed330405cb4c9ced}{setup\+Command\+Buffers}} ()
+\item 
+void \mbox{\hyperlink{class_vulkan_example_a720e0dc80223dd3319ca3277dd2d0f64}{setup\+Draw}} ()
+\item 
+void \mbox{\hyperlink{class_vulkan_example_a556b5914a82170bd1f50879cb1f31e93}{setup\+Semaphores}} ()
+\item 
+void \mbox{\hyperlink{class_vulkan_example_aaddfa451ed4c18dd20d0a691637a351b}{setup\+Fences}} ()
+\item 
+void \mbox{\hyperlink{class_vulkan_example_a1b991972fc0e1ef686d7cb0228a4586b}{update\+Uniform\+Buffer}} (float elapsed)
+\item 
+void \mbox{\hyperlink{class_vulkan_example_aa272c98d2f53c7dd516165b0949b2ed9}{draw}} ()
+\item 
+void \mbox{\hyperlink{class_vulkan_example_af80afbf68d5842f70c6164e2443cdeaf}{run}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsf_1_1_window_base}{sf\+::\+Window\+Base}} \mbox{\hyperlink{class_vulkan_example_aa02a6df92618a2b0a965b02d2fcc8b16}{window}}
+\item 
+bool \mbox{\hyperlink{class_vulkan_example_a42135faf0f5cb7b7ea60707d9d551831}{vulkan\+Available}}
+\item 
+const unsigned int \mbox{\hyperlink{class_vulkan_example_a6dd8e1f91b8af99e25b101a4e53d0390}{max\+Frames\+In\+Flight}}
+\item 
+unsigned int \mbox{\hyperlink{class_vulkan_example_ac97d824db442fb7373029cc302885022}{current\+Frame}}
+\item 
+bool \mbox{\hyperlink{class_vulkan_example_a61dca22519e4fe848d49bc3df829254d}{swapchain\+Out\+Of\+Date}}
+\item 
+\mbox{\hyperlink{_vulkan_8hpp_a6d9f7e27148712f2c97db45ca6991547}{Vk\+Instance}} \mbox{\hyperlink{class_vulkan_example_ae6fc30b36d3b10ffb722a9359b24b4d9}{instance}}
+\item 
+Vk\+Debug\+Report\+Callback\+EXT \mbox{\hyperlink{class_vulkan_example_a085feee3e8ba64e9700a814c8e025d6a}{debug\+Report\+Callback}}
+\item 
+\mbox{\hyperlink{_vulkan_8hpp_a09787d7da5f3146095ed80ceccc2d794}{Vk\+Surface\+KHR}} \mbox{\hyperlink{class_vulkan_example_a6a4d9d0eb0d64bc7ebfa712c28e5083b}{surface}}
+\item 
+Vk\+Physical\+Device \mbox{\hyperlink{class_vulkan_example_a656902174cea31c2bf715ed89596d968}{gpu}}
+\item 
+int \mbox{\hyperlink{class_vulkan_example_a869eb098fb89d24bf174745322c1b0e0}{queue\+Family\+Index}}
+\item 
+Vk\+Device \mbox{\hyperlink{class_vulkan_example_ae7402c40ab17ccae93f950aa321ba483}{device}}
+\item 
+Vk\+Queue \mbox{\hyperlink{class_vulkan_example_a21f16bc532f1c5bcfe9e128ba108661f}{queue}}
+\item 
+\mbox{\hyperlink{struct_vk_surface_format_k_h_r}{Vk\+Surface\+Format\+KHR}} \mbox{\hyperlink{class_vulkan_example_add8c60239b21670dc2e6af4671de7432}{swapchain\+Format}}
+\item 
+\mbox{\hyperlink{struct_vk_extent2_d}{Vk\+Extent2D}} \mbox{\hyperlink{class_vulkan_example_aec134c08364237ec5ffb46619e1db51e}{swapchain\+Extent}}
+\item 
+Vk\+Swapchain\+KHR \mbox{\hyperlink{class_vulkan_example_afac4dc03a5dd1b2dc79e6f1ae6e7fe49}{swapchain}}
+\item 
+std\+::vector$<$ Vk\+Image $>$ \mbox{\hyperlink{class_vulkan_example_a13eedd6ff0abcd592acd527558adb3e3}{swapchain\+Images}}
+\item 
+std\+::vector$<$ Vk\+Image\+View $>$ \mbox{\hyperlink{class_vulkan_example_a2dd0c2f46ce76acbe05525e4db866a66}{swapchain\+Image\+Views}}
+\item 
+\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_ad61b5b94a526d0f9ae0db97072cf6b3f}{Vk\+Format}} \mbox{\hyperlink{class_vulkan_example_ade26ea6417192dba4c9e2cdd8005a7bb}{depth\+Format}}
+\item 
+Vk\+Image \mbox{\hyperlink{class_vulkan_example_afd8d36a3d060bf57805b64d7b0e96fec}{depth\+Image}}
+\item 
+Vk\+Device\+Memory \mbox{\hyperlink{class_vulkan_example_a6d3e5629914fa5da8f814e766e31afe9}{depth\+Image\+Memory}}
+\item 
+Vk\+Image\+View \mbox{\hyperlink{class_vulkan_example_aedc8c0bcbb77c7f0ec3fdc7d8805c378}{depth\+Image\+View}}
+\item 
+Vk\+Shader\+Module \mbox{\hyperlink{class_vulkan_example_a3fc38e9d0d9b9ccfde6043c37d7f3717}{vertex\+Shader\+Module}}
+\item 
+Vk\+Shader\+Module \mbox{\hyperlink{class_vulkan_example_a4b5630977a169216f29ccefcfc1fd6fb}{fragment\+Shader\+Module}}
+\item 
+\mbox{\hyperlink{struct_vk_pipeline_shader_stage_create_info}{Vk\+Pipeline\+Shader\+Stage\+Create\+Info}} \mbox{\hyperlink{class_vulkan_example_a0aa52b43f56ca44c4bb6bbdecee7c7fa}{shader\+Stages}} \mbox{[}2\mbox{]}
+\item 
+Vk\+Descriptor\+Set\+Layout \mbox{\hyperlink{class_vulkan_example_a5d61cb816257314c8530c94e96759917}{descriptor\+Set\+Layout}}
+\item 
+Vk\+Pipeline\+Layout \mbox{\hyperlink{class_vulkan_example_ab798d6c7dba47e86fb749adf7c1610f1}{pipeline\+Layout}}
+\item 
+Vk\+Render\+Pass \mbox{\hyperlink{class_vulkan_example_a42c18ceaf118f1959a2a3fa8f932765e}{render\+Pass}}
+\item 
+Vk\+Pipeline \mbox{\hyperlink{class_vulkan_example_a9a99765f433e80f34e34c5c956eef1f3}{graphics\+Pipeline}}
+\item 
+std\+::vector$<$ Vk\+Framebuffer $>$ \mbox{\hyperlink{class_vulkan_example_abfe10d136f0f73f5384c8c6e430492f2}{swapchain\+Framebuffers}}
+\item 
+Vk\+Command\+Pool \mbox{\hyperlink{class_vulkan_example_ae004f9b8a06b4c56f0d95604732d4d56}{command\+Pool}}
+\item 
+Vk\+Buffer \mbox{\hyperlink{class_vulkan_example_a295dbd7db43d45e6cf28a48205349a85}{vertex\+Buffer}}
+\item 
+Vk\+Device\+Memory \mbox{\hyperlink{class_vulkan_example_a6c040a2c0cacebd550b30584a0b78e1f}{vertex\+Buffer\+Memory}}
+\item 
+Vk\+Buffer \mbox{\hyperlink{class_vulkan_example_a99115196f73cbf7280dd79776b43afda}{index\+Buffer}}
+\item 
+Vk\+Device\+Memory \mbox{\hyperlink{class_vulkan_example_aca21f36a32b269e0ef82c1ce476a6fcc}{index\+Buffer\+Memory}}
+\item 
+std\+::vector$<$ Vk\+Buffer $>$ \mbox{\hyperlink{class_vulkan_example_a2d2cfceaafff300f2cabbb6f16b5be3b}{uniform\+Buffers}}
+\item 
+std\+::vector$<$ Vk\+Device\+Memory $>$ \mbox{\hyperlink{class_vulkan_example_a86b002218e154953c5c321866106c30e}{uniform\+Buffers\+Memory}}
+\item 
+Vk\+Image \mbox{\hyperlink{class_vulkan_example_a2164ccb29ac0c805a1f4bb3f54acb095}{texture\+Image}}
+\item 
+Vk\+Device\+Memory \mbox{\hyperlink{class_vulkan_example_a7f0f7841349da91a33d4b2d1e32f8a78}{texture\+Image\+Memory}}
+\item 
+Vk\+Image\+View \mbox{\hyperlink{class_vulkan_example_ad30264c205fe93403536ab3de8ccdb4e}{texture\+Image\+View}}
+\item 
+Vk\+Sampler \mbox{\hyperlink{class_vulkan_example_acf655323da9c432b02f818a5c711d3d6}{texture\+Sampler}}
+\item 
+Vk\+Descriptor\+Pool \mbox{\hyperlink{class_vulkan_example_aa2ef9b6be3fc1f7fd6ee72d0eae32f6d}{descriptor\+Pool}}
+\item 
+std\+::vector$<$ Vk\+Descriptor\+Set $>$ \mbox{\hyperlink{class_vulkan_example_afc168b5495808d29d35c33feda0bae9f}{descriptor\+Sets}}
+\item 
+std\+::vector$<$ Vk\+Command\+Buffer $>$ \mbox{\hyperlink{class_vulkan_example_a4663a835fcc91ef2d7f7d8829195e5b5}{command\+Buffers}}
+\item 
+std\+::vector$<$ Vk\+Semaphore $>$ \mbox{\hyperlink{class_vulkan_example_a4e5c65989b2816f47ea93c4fe4002d56}{image\+Available\+Semaphores}}
+\item 
+std\+::vector$<$ Vk\+Semaphore $>$ \mbox{\hyperlink{class_vulkan_example_ae7d8a5ac19b847bbfc619d1d0ec50fe1}{render\+Finished\+Semaphores}}
+\item 
+std\+::vector$<$ Vk\+Fence $>$ \mbox{\hyperlink{class_vulkan_example_a6d1ab70ca7af068c8193f2b3f565c4f0}{fences}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{class_vulkan_example_a9789a70a77e969496c2a66620a5f1c3e}\label{class_vulkan_example_a9789a70a77e969496c2a66620a5f1c3e} 
+\index{VulkanExample@{VulkanExample}!VulkanExample@{VulkanExample}}
+\index{VulkanExample@{VulkanExample}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{VulkanExample()}{VulkanExample()}}
+{\footnotesize\ttfamily Vulkan\+Example\+::\+Vulkan\+Example (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_a9789a70a77e969496c2a66620a5f1c3e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_vulkan_example_aca75c136168f0ca2821ca5db08e79e3a}\label{class_vulkan_example_aca75c136168f0ca2821ca5db08e79e3a} 
+\index{VulkanExample@{VulkanExample}!````~VulkanExample@{\texorpdfstring{$\sim$}{\string~}VulkanExample}}
+\index{````~VulkanExample@{\texorpdfstring{$\sim$}{\string~}VulkanExample}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}VulkanExample()}{\string~VulkanExample()}}
+{\footnotesize\ttfamily Vulkan\+Example\+::\texorpdfstring{$\sim$}{\string~}\+Vulkan\+Example (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_aca75c136168f0ca2821ca5db08e79e3a_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_vulkan_example_afd4cc10c436deec8b7a56db00c61507e}\label{class_vulkan_example_afd4cc10c436deec8b7a56db00c61507e} 
+\index{VulkanExample@{VulkanExample}!cleanupSwapchain@{cleanupSwapchain}}
+\index{cleanupSwapchain@{cleanupSwapchain}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{cleanupSwapchain()}{cleanupSwapchain()}}
+{\footnotesize\ttfamily void Vulkan\+Example\+::cleanup\+Swapchain (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_afd4cc10c436deec8b7a56db00c61507e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_vulkan_example_a6065b4b7e86a4b6a685916f09fd4a2d5}\label{class_vulkan_example_a6065b4b7e86a4b6a685916f09fd4a2d5} 
+\index{VulkanExample@{VulkanExample}!copyBuffer@{copyBuffer}}
+\index{copyBuffer@{copyBuffer}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{copyBuffer()}{copyBuffer()}}
+{\footnotesize\ttfamily bool Vulkan\+Example\+::copy\+Buffer (\begin{DoxyParamCaption}\item[{Vk\+Buffer}]{dst,  }\item[{Vk\+Buffer}]{src,  }\item[{\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a459be4b1b89c972b0d6018bc483be9cc}{Vk\+Device\+Size}}}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_a6065b4b7e86a4b6a685916f09fd4a2d5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_vulkan_example_abb34ed4a37ac3a7f56973e7d9b7d736d}\label{class_vulkan_example_abb34ed4a37ac3a7f56973e7d9b7d736d} 
+\index{VulkanExample@{VulkanExample}!createBuffer@{createBuffer}}
+\index{createBuffer@{createBuffer}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{createBuffer()}{createBuffer()}}
+{\footnotesize\ttfamily bool Vulkan\+Example\+::create\+Buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a459be4b1b89c972b0d6018bc483be9cc}{Vk\+Device\+Size}}}]{size,  }\item[{\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_ab221f627433dcae79b6a004fc42b50a9}{Vk\+Buffer\+Usage\+Flags}}}]{usage,  }\item[{\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a06f71178c68bf5712dbec35d6f124122}{Vk\+Memory\+Property\+Flags}}}]{properties,  }\item[{Vk\+Buffer \&}]{buffer,  }\item[{Vk\+Device\+Memory \&}]{memory }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_abb34ed4a37ac3a7f56973e7d9b7d736d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_vulkan_example_a7a189d5c51c8df9b8a4b2de93d93dfef}\label{class_vulkan_example_a7a189d5c51c8df9b8a4b2de93d93dfef} 
+\index{VulkanExample@{VulkanExample}!createImage@{createImage}}
+\index{createImage@{createImage}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{createImage()}{createImage()}}
+{\footnotesize\ttfamily bool Vulkan\+Example\+::create\+Image (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{width,  }\item[{uint32\+\_\+t}]{height,  }\item[{\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_ad61b5b94a526d0f9ae0db97072cf6b3f}{Vk\+Format}}}]{format,  }\item[{\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a5456c8cb96f58d566fb71551a93fa8f4}{Vk\+Image\+Tiling}}}]{tiling,  }\item[{\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a2c990c0c189d0a9bd02c5d911d5cc5f7}{Vk\+Image\+Usage\+Flags}}}]{usage,  }\item[{\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a06f71178c68bf5712dbec35d6f124122}{Vk\+Memory\+Property\+Flags}}}]{properties,  }\item[{Vk\+Image \&}]{image,  }\item[{Vk\+Device\+Memory \&}]{image\+Memory }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_a7a189d5c51c8df9b8a4b2de93d93dfef_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_vulkan_example_aa272c98d2f53c7dd516165b0949b2ed9}\label{class_vulkan_example_aa272c98d2f53c7dd516165b0949b2ed9} 
+\index{VulkanExample@{VulkanExample}!draw@{draw}}
+\index{draw@{draw}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Vulkan\+Example\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_aa272c98d2f53c7dd516165b0949b2ed9_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_aa272c98d2f53c7dd516165b0949b2ed9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_vulkan_example_a8a2b6a30d8ede902417cbf934b17ebb6}\label{class_vulkan_example_a8a2b6a30d8ede902417cbf934b17ebb6} 
+\index{VulkanExample@{VulkanExample}!recreateSwapchain@{recreateSwapchain}}
+\index{recreateSwapchain@{recreateSwapchain}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{recreateSwapchain()}{recreateSwapchain()}}
+{\footnotesize\ttfamily void Vulkan\+Example\+::recreate\+Swapchain (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_a8a2b6a30d8ede902417cbf934b17ebb6_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_a8a2b6a30d8ede902417cbf934b17ebb6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_vulkan_example_af80afbf68d5842f70c6164e2443cdeaf}\label{class_vulkan_example_af80afbf68d5842f70c6164e2443cdeaf} 
+\index{VulkanExample@{VulkanExample}!run@{run}}
+\index{run@{run}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Vulkan\+Example\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_af80afbf68d5842f70c6164e2443cdeaf_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{class_vulkan_example_af80afbf68d5842f70c6164e2443cdeaf_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_vulkan_example_ab324633b39772944ed330405cb4c9ced}\label{class_vulkan_example_ab324633b39772944ed330405cb4c9ced} 
+\index{VulkanExample@{VulkanExample}!setupCommandBuffers@{setupCommandBuffers}}
+\index{setupCommandBuffers@{setupCommandBuffers}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{setupCommandBuffers()}{setupCommandBuffers()}}
+{\footnotesize\ttfamily void Vulkan\+Example\+::setup\+Command\+Buffers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_ab324633b39772944ed330405cb4c9ced_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_vulkan_example_abcd9b16cd0c57c8a384f7241779bcf28}\label{class_vulkan_example_abcd9b16cd0c57c8a384f7241779bcf28} 
+\index{VulkanExample@{VulkanExample}!setupCommandPool@{setupCommandPool}}
+\index{setupCommandPool@{setupCommandPool}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{setupCommandPool()}{setupCommandPool()}}
+{\footnotesize\ttfamily void Vulkan\+Example\+::setup\+Command\+Pool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_abcd9b16cd0c57c8a384f7241779bcf28_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_vulkan_example_a417f2cdf744ba4e07ffc0f6168d2bbdb}\label{class_vulkan_example_a417f2cdf744ba4e07ffc0f6168d2bbdb} 
+\index{VulkanExample@{VulkanExample}!setupDebugReportCallback@{setupDebugReportCallback}}
+\index{setupDebugReportCallback@{setupDebugReportCallback}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{setupDebugReportCallback()}{setupDebugReportCallback()}}
+{\footnotesize\ttfamily void Vulkan\+Example\+::setup\+Debug\+Report\+Callback (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_a417f2cdf744ba4e07ffc0f6168d2bbdb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_vulkan_example_ae0639b4c189b6aa087184b6d0605d565}\label{class_vulkan_example_ae0639b4c189b6aa087184b6d0605d565} 
+\index{VulkanExample@{VulkanExample}!setupDepthImage@{setupDepthImage}}
+\index{setupDepthImage@{setupDepthImage}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{setupDepthImage()}{setupDepthImage()}}
+{\footnotesize\ttfamily void Vulkan\+Example\+::setup\+Depth\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_ae0639b4c189b6aa087184b6d0605d565_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_ae0639b4c189b6aa087184b6d0605d565_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_vulkan_example_ac182cc375a84f345420983d5e7fee1ed}\label{class_vulkan_example_ac182cc375a84f345420983d5e7fee1ed} 
+\index{VulkanExample@{VulkanExample}!setupDepthImageView@{setupDepthImageView}}
+\index{setupDepthImageView@{setupDepthImageView}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{setupDepthImageView()}{setupDepthImageView()}}
+{\footnotesize\ttfamily void Vulkan\+Example\+::setup\+Depth\+Image\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_ac182cc375a84f345420983d5e7fee1ed_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_vulkan_example_a74c2169204e9e6824406fde928e3e5ec}\label{class_vulkan_example_a74c2169204e9e6824406fde928e3e5ec} 
+\index{VulkanExample@{VulkanExample}!setupDescriptorPool@{setupDescriptorPool}}
+\index{setupDescriptorPool@{setupDescriptorPool}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{setupDescriptorPool()}{setupDescriptorPool()}}
+{\footnotesize\ttfamily void Vulkan\+Example\+::setup\+Descriptor\+Pool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_a74c2169204e9e6824406fde928e3e5ec_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_vulkan_example_adf68a8a6bcc50cdcd79d5fac1306d15e}\label{class_vulkan_example_adf68a8a6bcc50cdcd79d5fac1306d15e} 
+\index{VulkanExample@{VulkanExample}!setupDescriptorSetLayout@{setupDescriptorSetLayout}}
+\index{setupDescriptorSetLayout@{setupDescriptorSetLayout}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{setupDescriptorSetLayout()}{setupDescriptorSetLayout()}}
+{\footnotesize\ttfamily void Vulkan\+Example\+::setup\+Descriptor\+Set\+Layout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_adf68a8a6bcc50cdcd79d5fac1306d15e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_vulkan_example_a8d7ae3b11559c1ee654cc5bdfd446efb}\label{class_vulkan_example_a8d7ae3b11559c1ee654cc5bdfd446efb} 
+\index{VulkanExample@{VulkanExample}!setupDescriptorSets@{setupDescriptorSets}}
+\index{setupDescriptorSets@{setupDescriptorSets}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{setupDescriptorSets()}{setupDescriptorSets()}}
+{\footnotesize\ttfamily void Vulkan\+Example\+::setup\+Descriptor\+Sets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_a8d7ae3b11559c1ee654cc5bdfd446efb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_vulkan_example_a720e0dc80223dd3319ca3277dd2d0f64}\label{class_vulkan_example_a720e0dc80223dd3319ca3277dd2d0f64} 
+\index{VulkanExample@{VulkanExample}!setupDraw@{setupDraw}}
+\index{setupDraw@{setupDraw}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{setupDraw()}{setupDraw()}}
+{\footnotesize\ttfamily void Vulkan\+Example\+::setup\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_a720e0dc80223dd3319ca3277dd2d0f64_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_vulkan_example_aaddfa451ed4c18dd20d0a691637a351b}\label{class_vulkan_example_aaddfa451ed4c18dd20d0a691637a351b} 
+\index{VulkanExample@{VulkanExample}!setupFences@{setupFences}}
+\index{setupFences@{setupFences}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{setupFences()}{setupFences()}}
+{\footnotesize\ttfamily void Vulkan\+Example\+::setup\+Fences (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_aaddfa451ed4c18dd20d0a691637a351b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_vulkan_example_a03e0d9d755a20b63432895011de86f40}\label{class_vulkan_example_a03e0d9d755a20b63432895011de86f40} 
+\index{VulkanExample@{VulkanExample}!setupFramebuffers@{setupFramebuffers}}
+\index{setupFramebuffers@{setupFramebuffers}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{setupFramebuffers()}{setupFramebuffers()}}
+{\footnotesize\ttfamily void Vulkan\+Example\+::setup\+Framebuffers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_a03e0d9d755a20b63432895011de86f40_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_vulkan_example_a662a67511879bbf31021c5946c07aae4}\label{class_vulkan_example_a662a67511879bbf31021c5946c07aae4} 
+\index{VulkanExample@{VulkanExample}!setupIndexBuffer@{setupIndexBuffer}}
+\index{setupIndexBuffer@{setupIndexBuffer}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{setupIndexBuffer()}{setupIndexBuffer()}}
+{\footnotesize\ttfamily void Vulkan\+Example\+::setup\+Index\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_a662a67511879bbf31021c5946c07aae4_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_a662a67511879bbf31021c5946c07aae4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_vulkan_example_a45d03c73010da81ce912b6920903f208}\label{class_vulkan_example_a45d03c73010da81ce912b6920903f208} 
+\index{VulkanExample@{VulkanExample}!setupInstance@{setupInstance}}
+\index{setupInstance@{setupInstance}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{setupInstance()}{setupInstance()}}
+{\footnotesize\ttfamily void Vulkan\+Example\+::setup\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_a45d03c73010da81ce912b6920903f208_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_a45d03c73010da81ce912b6920903f208_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_vulkan_example_abe7794d0fedbe83fffc551f952f804ad}\label{class_vulkan_example_abe7794d0fedbe83fffc551f952f804ad} 
+\index{VulkanExample@{VulkanExample}!setupLogicalDevice@{setupLogicalDevice}}
+\index{setupLogicalDevice@{setupLogicalDevice}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{setupLogicalDevice()}{setupLogicalDevice()}}
+{\footnotesize\ttfamily void Vulkan\+Example\+::setup\+Logical\+Device (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_abe7794d0fedbe83fffc551f952f804ad_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_vulkan_example_af2a6ab87daa6d98d4c62f79fd1daa454}\label{class_vulkan_example_af2a6ab87daa6d98d4c62f79fd1daa454} 
+\index{VulkanExample@{VulkanExample}!setupPhysicalDevice@{setupPhysicalDevice}}
+\index{setupPhysicalDevice@{setupPhysicalDevice}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{setupPhysicalDevice()}{setupPhysicalDevice()}}
+{\footnotesize\ttfamily void Vulkan\+Example\+::setup\+Physical\+Device (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_af2a6ab87daa6d98d4c62f79fd1daa454_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_af2a6ab87daa6d98d4c62f79fd1daa454_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_vulkan_example_adfb8156359972c6aea79f9459a9d60c0}\label{class_vulkan_example_adfb8156359972c6aea79f9459a9d60c0} 
+\index{VulkanExample@{VulkanExample}!setupPipeline@{setupPipeline}}
+\index{setupPipeline@{setupPipeline}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{setupPipeline()}{setupPipeline()}}
+{\footnotesize\ttfamily void Vulkan\+Example\+::setup\+Pipeline (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_adfb8156359972c6aea79f9459a9d60c0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_vulkan_example_a7ec1f6505490da3bdf5bc8ab5b78c6ad}\label{class_vulkan_example_a7ec1f6505490da3bdf5bc8ab5b78c6ad} 
+\index{VulkanExample@{VulkanExample}!setupPipelineLayout@{setupPipelineLayout}}
+\index{setupPipelineLayout@{setupPipelineLayout}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{setupPipelineLayout()}{setupPipelineLayout()}}
+{\footnotesize\ttfamily void Vulkan\+Example\+::setup\+Pipeline\+Layout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_a7ec1f6505490da3bdf5bc8ab5b78c6ad_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_vulkan_example_a87c1978b2638ab1db42e38f1190d0514}\label{class_vulkan_example_a87c1978b2638ab1db42e38f1190d0514} 
+\index{VulkanExample@{VulkanExample}!setupRenderpass@{setupRenderpass}}
+\index{setupRenderpass@{setupRenderpass}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{setupRenderpass()}{setupRenderpass()}}
+{\footnotesize\ttfamily void Vulkan\+Example\+::setup\+Renderpass (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_a87c1978b2638ab1db42e38f1190d0514_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_vulkan_example_a556b5914a82170bd1f50879cb1f31e93}\label{class_vulkan_example_a556b5914a82170bd1f50879cb1f31e93} 
+\index{VulkanExample@{VulkanExample}!setupSemaphores@{setupSemaphores}}
+\index{setupSemaphores@{setupSemaphores}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{setupSemaphores()}{setupSemaphores()}}
+{\footnotesize\ttfamily void Vulkan\+Example\+::setup\+Semaphores (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_a556b5914a82170bd1f50879cb1f31e93_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_vulkan_example_aa587e3c51880217e6a6de06a4f78a357}\label{class_vulkan_example_aa587e3c51880217e6a6de06a4f78a357} 
+\index{VulkanExample@{VulkanExample}!setupShaders@{setupShaders}}
+\index{setupShaders@{setupShaders}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{setupShaders()}{setupShaders()}}
+{\footnotesize\ttfamily void Vulkan\+Example\+::setup\+Shaders (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_aa587e3c51880217e6a6de06a4f78a357_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_aa587e3c51880217e6a6de06a4f78a357_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_vulkan_example_ad259081d5e71fbb555b59f4393f8d169}\label{class_vulkan_example_ad259081d5e71fbb555b59f4393f8d169} 
+\index{VulkanExample@{VulkanExample}!setupSurface@{setupSurface}}
+\index{setupSurface@{setupSurface}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{setupSurface()}{setupSurface()}}
+{\footnotesize\ttfamily void Vulkan\+Example\+::setup\+Surface (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_ad259081d5e71fbb555b59f4393f8d169_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_ad259081d5e71fbb555b59f4393f8d169_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_vulkan_example_a6e911e3f41489c02952ec8d93beedec7}\label{class_vulkan_example_a6e911e3f41489c02952ec8d93beedec7} 
+\index{VulkanExample@{VulkanExample}!setupSwapchain@{setupSwapchain}}
+\index{setupSwapchain@{setupSwapchain}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{setupSwapchain()}{setupSwapchain()}}
+{\footnotesize\ttfamily void Vulkan\+Example\+::setup\+Swapchain (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_a6e911e3f41489c02952ec8d93beedec7_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_a6e911e3f41489c02952ec8d93beedec7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_vulkan_example_a87917ff07923d322761f34297d319676}\label{class_vulkan_example_a87917ff07923d322761f34297d319676} 
+\index{VulkanExample@{VulkanExample}!setupSwapchainImages@{setupSwapchainImages}}
+\index{setupSwapchainImages@{setupSwapchainImages}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{setupSwapchainImages()}{setupSwapchainImages()}}
+{\footnotesize\ttfamily void Vulkan\+Example\+::setup\+Swapchain\+Images (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_a87917ff07923d322761f34297d319676_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_vulkan_example_aba04423f8e3f0abc4affdfabe1e03c37}\label{class_vulkan_example_aba04423f8e3f0abc4affdfabe1e03c37} 
+\index{VulkanExample@{VulkanExample}!setupTextureImage@{setupTextureImage}}
+\index{setupTextureImage@{setupTextureImage}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{setupTextureImage()}{setupTextureImage()}}
+{\footnotesize\ttfamily void Vulkan\+Example\+::setup\+Texture\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_aba04423f8e3f0abc4affdfabe1e03c37_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_aba04423f8e3f0abc4affdfabe1e03c37_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_vulkan_example_aa62e7f95e26e3af591315870e70d18d6}\label{class_vulkan_example_aa62e7f95e26e3af591315870e70d18d6} 
+\index{VulkanExample@{VulkanExample}!setupTextureImageView@{setupTextureImageView}}
+\index{setupTextureImageView@{setupTextureImageView}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{setupTextureImageView()}{setupTextureImageView()}}
+{\footnotesize\ttfamily void Vulkan\+Example\+::setup\+Texture\+Image\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_aa62e7f95e26e3af591315870e70d18d6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_vulkan_example_a165008de127bfd6da75f7338cf8839e5}\label{class_vulkan_example_a165008de127bfd6da75f7338cf8839e5} 
+\index{VulkanExample@{VulkanExample}!setupTextureSampler@{setupTextureSampler}}
+\index{setupTextureSampler@{setupTextureSampler}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{setupTextureSampler()}{setupTextureSampler()}}
+{\footnotesize\ttfamily void Vulkan\+Example\+::setup\+Texture\+Sampler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_a165008de127bfd6da75f7338cf8839e5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_vulkan_example_aa39ec8127b6ba76823fe02107e6fce37}\label{class_vulkan_example_aa39ec8127b6ba76823fe02107e6fce37} 
+\index{VulkanExample@{VulkanExample}!setupUniformBuffers@{setupUniformBuffers}}
+\index{setupUniformBuffers@{setupUniformBuffers}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{setupUniformBuffers()}{setupUniformBuffers()}}
+{\footnotesize\ttfamily void Vulkan\+Example\+::setup\+Uniform\+Buffers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_aa39ec8127b6ba76823fe02107e6fce37_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_aa39ec8127b6ba76823fe02107e6fce37_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_vulkan_example_a892cefea62f854010c9f0b5569883344}\label{class_vulkan_example_a892cefea62f854010c9f0b5569883344} 
+\index{VulkanExample@{VulkanExample}!setupVertexBuffer@{setupVertexBuffer}}
+\index{setupVertexBuffer@{setupVertexBuffer}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{setupVertexBuffer()}{setupVertexBuffer()}}
+{\footnotesize\ttfamily void Vulkan\+Example\+::setup\+Vertex\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_a892cefea62f854010c9f0b5569883344_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_a892cefea62f854010c9f0b5569883344_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_vulkan_example_a1b991972fc0e1ef686d7cb0228a4586b}\label{class_vulkan_example_a1b991972fc0e1ef686d7cb0228a4586b} 
+\index{VulkanExample@{VulkanExample}!updateUniformBuffer@{updateUniformBuffer}}
+\index{updateUniformBuffer@{updateUniformBuffer}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{updateUniformBuffer()}{updateUniformBuffer()}}
+{\footnotesize\ttfamily void Vulkan\+Example\+::update\+Uniform\+Buffer (\begin{DoxyParamCaption}\item[{float}]{elapsed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_a1b991972fc0e1ef686d7cb0228a4586b_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vulkan_example_a1b991972fc0e1ef686d7cb0228a4586b_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{class_vulkan_example_a4663a835fcc91ef2d7f7d8829195e5b5}\label{class_vulkan_example_a4663a835fcc91ef2d7f7d8829195e5b5} 
+\index{VulkanExample@{VulkanExample}!commandBuffers@{commandBuffers}}
+\index{commandBuffers@{commandBuffers}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{commandBuffers}{commandBuffers}}
+{\footnotesize\ttfamily std\+::vector$<$Vk\+Command\+Buffer$>$ Vulkan\+Example\+::command\+Buffers\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vulkan_example_ae004f9b8a06b4c56f0d95604732d4d56}\label{class_vulkan_example_ae004f9b8a06b4c56f0d95604732d4d56} 
+\index{VulkanExample@{VulkanExample}!commandPool@{commandPool}}
+\index{commandPool@{commandPool}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{commandPool}{commandPool}}
+{\footnotesize\ttfamily Vk\+Command\+Pool Vulkan\+Example\+::command\+Pool\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vulkan_example_ac97d824db442fb7373029cc302885022}\label{class_vulkan_example_ac97d824db442fb7373029cc302885022} 
+\index{VulkanExample@{VulkanExample}!currentFrame@{currentFrame}}
+\index{currentFrame@{currentFrame}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{currentFrame}{currentFrame}}
+{\footnotesize\ttfamily unsigned int Vulkan\+Example\+::current\+Frame\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vulkan_example_a085feee3e8ba64e9700a814c8e025d6a}\label{class_vulkan_example_a085feee3e8ba64e9700a814c8e025d6a} 
+\index{VulkanExample@{VulkanExample}!debugReportCallback@{debugReportCallback}}
+\index{debugReportCallback@{debugReportCallback}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{debugReportCallback}{debugReportCallback}}
+{\footnotesize\ttfamily Vk\+Debug\+Report\+Callback\+EXT Vulkan\+Example\+::debug\+Report\+Callback\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vulkan_example_ade26ea6417192dba4c9e2cdd8005a7bb}\label{class_vulkan_example_ade26ea6417192dba4c9e2cdd8005a7bb} 
+\index{VulkanExample@{VulkanExample}!depthFormat@{depthFormat}}
+\index{depthFormat@{depthFormat}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{depthFormat}{depthFormat}}
+{\footnotesize\ttfamily \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_ad61b5b94a526d0f9ae0db97072cf6b3f}{Vk\+Format}} Vulkan\+Example\+::depth\+Format\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vulkan_example_afd8d36a3d060bf57805b64d7b0e96fec}\label{class_vulkan_example_afd8d36a3d060bf57805b64d7b0e96fec} 
+\index{VulkanExample@{VulkanExample}!depthImage@{depthImage}}
+\index{depthImage@{depthImage}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{depthImage}{depthImage}}
+{\footnotesize\ttfamily Vk\+Image Vulkan\+Example\+::depth\+Image\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vulkan_example_a6d3e5629914fa5da8f814e766e31afe9}\label{class_vulkan_example_a6d3e5629914fa5da8f814e766e31afe9} 
+\index{VulkanExample@{VulkanExample}!depthImageMemory@{depthImageMemory}}
+\index{depthImageMemory@{depthImageMemory}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{depthImageMemory}{depthImageMemory}}
+{\footnotesize\ttfamily Vk\+Device\+Memory Vulkan\+Example\+::depth\+Image\+Memory\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vulkan_example_aedc8c0bcbb77c7f0ec3fdc7d8805c378}\label{class_vulkan_example_aedc8c0bcbb77c7f0ec3fdc7d8805c378} 
+\index{VulkanExample@{VulkanExample}!depthImageView@{depthImageView}}
+\index{depthImageView@{depthImageView}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{depthImageView}{depthImageView}}
+{\footnotesize\ttfamily Vk\+Image\+View Vulkan\+Example\+::depth\+Image\+View\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vulkan_example_aa2ef9b6be3fc1f7fd6ee72d0eae32f6d}\label{class_vulkan_example_aa2ef9b6be3fc1f7fd6ee72d0eae32f6d} 
+\index{VulkanExample@{VulkanExample}!descriptorPool@{descriptorPool}}
+\index{descriptorPool@{descriptorPool}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{descriptorPool}{descriptorPool}}
+{\footnotesize\ttfamily Vk\+Descriptor\+Pool Vulkan\+Example\+::descriptor\+Pool\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vulkan_example_a5d61cb816257314c8530c94e96759917}\label{class_vulkan_example_a5d61cb816257314c8530c94e96759917} 
+\index{VulkanExample@{VulkanExample}!descriptorSetLayout@{descriptorSetLayout}}
+\index{descriptorSetLayout@{descriptorSetLayout}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{descriptorSetLayout}{descriptorSetLayout}}
+{\footnotesize\ttfamily Vk\+Descriptor\+Set\+Layout Vulkan\+Example\+::descriptor\+Set\+Layout\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vulkan_example_afc168b5495808d29d35c33feda0bae9f}\label{class_vulkan_example_afc168b5495808d29d35c33feda0bae9f} 
+\index{VulkanExample@{VulkanExample}!descriptorSets@{descriptorSets}}
+\index{descriptorSets@{descriptorSets}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{descriptorSets}{descriptorSets}}
+{\footnotesize\ttfamily std\+::vector$<$Vk\+Descriptor\+Set$>$ Vulkan\+Example\+::descriptor\+Sets\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vulkan_example_ae7402c40ab17ccae93f950aa321ba483}\label{class_vulkan_example_ae7402c40ab17ccae93f950aa321ba483} 
+\index{VulkanExample@{VulkanExample}!device@{device}}
+\index{device@{device}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{device}{device}}
+{\footnotesize\ttfamily Vk\+Device Vulkan\+Example\+::device\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vulkan_example_a6d1ab70ca7af068c8193f2b3f565c4f0}\label{class_vulkan_example_a6d1ab70ca7af068c8193f2b3f565c4f0} 
+\index{VulkanExample@{VulkanExample}!fences@{fences}}
+\index{fences@{fences}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{fences}{fences}}
+{\footnotesize\ttfamily std\+::vector$<$Vk\+Fence$>$ Vulkan\+Example\+::fences\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vulkan_example_a4b5630977a169216f29ccefcfc1fd6fb}\label{class_vulkan_example_a4b5630977a169216f29ccefcfc1fd6fb} 
+\index{VulkanExample@{VulkanExample}!fragmentShaderModule@{fragmentShaderModule}}
+\index{fragmentShaderModule@{fragmentShaderModule}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{fragmentShaderModule}{fragmentShaderModule}}
+{\footnotesize\ttfamily Vk\+Shader\+Module Vulkan\+Example\+::fragment\+Shader\+Module\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vulkan_example_a656902174cea31c2bf715ed89596d968}\label{class_vulkan_example_a656902174cea31c2bf715ed89596d968} 
+\index{VulkanExample@{VulkanExample}!gpu@{gpu}}
+\index{gpu@{gpu}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{gpu}{gpu}}
+{\footnotesize\ttfamily Vk\+Physical\+Device Vulkan\+Example\+::gpu\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vulkan_example_a9a99765f433e80f34e34c5c956eef1f3}\label{class_vulkan_example_a9a99765f433e80f34e34c5c956eef1f3} 
+\index{VulkanExample@{VulkanExample}!graphicsPipeline@{graphicsPipeline}}
+\index{graphicsPipeline@{graphicsPipeline}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{graphicsPipeline}{graphicsPipeline}}
+{\footnotesize\ttfamily Vk\+Pipeline Vulkan\+Example\+::graphics\+Pipeline\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vulkan_example_a4e5c65989b2816f47ea93c4fe4002d56}\label{class_vulkan_example_a4e5c65989b2816f47ea93c4fe4002d56} 
+\index{VulkanExample@{VulkanExample}!imageAvailableSemaphores@{imageAvailableSemaphores}}
+\index{imageAvailableSemaphores@{imageAvailableSemaphores}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{imageAvailableSemaphores}{imageAvailableSemaphores}}
+{\footnotesize\ttfamily std\+::vector$<$Vk\+Semaphore$>$ Vulkan\+Example\+::image\+Available\+Semaphores\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vulkan_example_a99115196f73cbf7280dd79776b43afda}\label{class_vulkan_example_a99115196f73cbf7280dd79776b43afda} 
+\index{VulkanExample@{VulkanExample}!indexBuffer@{indexBuffer}}
+\index{indexBuffer@{indexBuffer}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{indexBuffer}{indexBuffer}}
+{\footnotesize\ttfamily Vk\+Buffer Vulkan\+Example\+::index\+Buffer\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vulkan_example_aca21f36a32b269e0ef82c1ce476a6fcc}\label{class_vulkan_example_aca21f36a32b269e0ef82c1ce476a6fcc} 
+\index{VulkanExample@{VulkanExample}!indexBufferMemory@{indexBufferMemory}}
+\index{indexBufferMemory@{indexBufferMemory}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{indexBufferMemory}{indexBufferMemory}}
+{\footnotesize\ttfamily Vk\+Device\+Memory Vulkan\+Example\+::index\+Buffer\+Memory\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vulkan_example_ae6fc30b36d3b10ffb722a9359b24b4d9}\label{class_vulkan_example_ae6fc30b36d3b10ffb722a9359b24b4d9} 
+\index{VulkanExample@{VulkanExample}!instance@{instance}}
+\index{instance@{instance}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{instance}{instance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_vulkan_8hpp_a6d9f7e27148712f2c97db45ca6991547}{Vk\+Instance}} Vulkan\+Example\+::instance\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vulkan_example_a6dd8e1f91b8af99e25b101a4e53d0390}\label{class_vulkan_example_a6dd8e1f91b8af99e25b101a4e53d0390} 
+\index{VulkanExample@{VulkanExample}!maxFramesInFlight@{maxFramesInFlight}}
+\index{maxFramesInFlight@{maxFramesInFlight}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{maxFramesInFlight}{maxFramesInFlight}}
+{\footnotesize\ttfamily const unsigned int Vulkan\+Example\+::max\+Frames\+In\+Flight\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vulkan_example_ab798d6c7dba47e86fb749adf7c1610f1}\label{class_vulkan_example_ab798d6c7dba47e86fb749adf7c1610f1} 
+\index{VulkanExample@{VulkanExample}!pipelineLayout@{pipelineLayout}}
+\index{pipelineLayout@{pipelineLayout}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{pipelineLayout}{pipelineLayout}}
+{\footnotesize\ttfamily Vk\+Pipeline\+Layout Vulkan\+Example\+::pipeline\+Layout\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vulkan_example_a21f16bc532f1c5bcfe9e128ba108661f}\label{class_vulkan_example_a21f16bc532f1c5bcfe9e128ba108661f} 
+\index{VulkanExample@{VulkanExample}!queue@{queue}}
+\index{queue@{queue}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{queue}{queue}}
+{\footnotesize\ttfamily Vk\+Queue Vulkan\+Example\+::queue\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vulkan_example_a869eb098fb89d24bf174745322c1b0e0}\label{class_vulkan_example_a869eb098fb89d24bf174745322c1b0e0} 
+\index{VulkanExample@{VulkanExample}!queueFamilyIndex@{queueFamilyIndex}}
+\index{queueFamilyIndex@{queueFamilyIndex}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{queueFamilyIndex}{queueFamilyIndex}}
+{\footnotesize\ttfamily int Vulkan\+Example\+::queue\+Family\+Index\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vulkan_example_ae7d8a5ac19b847bbfc619d1d0ec50fe1}\label{class_vulkan_example_ae7d8a5ac19b847bbfc619d1d0ec50fe1} 
+\index{VulkanExample@{VulkanExample}!renderFinishedSemaphores@{renderFinishedSemaphores}}
+\index{renderFinishedSemaphores@{renderFinishedSemaphores}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{renderFinishedSemaphores}{renderFinishedSemaphores}}
+{\footnotesize\ttfamily std\+::vector$<$Vk\+Semaphore$>$ Vulkan\+Example\+::render\+Finished\+Semaphores\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vulkan_example_a42c18ceaf118f1959a2a3fa8f932765e}\label{class_vulkan_example_a42c18ceaf118f1959a2a3fa8f932765e} 
+\index{VulkanExample@{VulkanExample}!renderPass@{renderPass}}
+\index{renderPass@{renderPass}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{renderPass}{renderPass}}
+{\footnotesize\ttfamily Vk\+Render\+Pass Vulkan\+Example\+::render\+Pass\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vulkan_example_a0aa52b43f56ca44c4bb6bbdecee7c7fa}\label{class_vulkan_example_a0aa52b43f56ca44c4bb6bbdecee7c7fa} 
+\index{VulkanExample@{VulkanExample}!shaderStages@{shaderStages}}
+\index{shaderStages@{shaderStages}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{shaderStages}{shaderStages}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_vk_pipeline_shader_stage_create_info}{Vk\+Pipeline\+Shader\+Stage\+Create\+Info}} Vulkan\+Example\+::shader\+Stages\mbox{[}2\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vulkan_example_a6a4d9d0eb0d64bc7ebfa712c28e5083b}\label{class_vulkan_example_a6a4d9d0eb0d64bc7ebfa712c28e5083b} 
+\index{VulkanExample@{VulkanExample}!surface@{surface}}
+\index{surface@{surface}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{surface}{surface}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_vulkan_8hpp_a09787d7da5f3146095ed80ceccc2d794}{Vk\+Surface\+KHR}} Vulkan\+Example\+::surface\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vulkan_example_afac4dc03a5dd1b2dc79e6f1ae6e7fe49}\label{class_vulkan_example_afac4dc03a5dd1b2dc79e6f1ae6e7fe49} 
+\index{VulkanExample@{VulkanExample}!swapchain@{swapchain}}
+\index{swapchain@{swapchain}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{swapchain}{swapchain}}
+{\footnotesize\ttfamily Vk\+Swapchain\+KHR Vulkan\+Example\+::swapchain\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vulkan_example_aec134c08364237ec5ffb46619e1db51e}\label{class_vulkan_example_aec134c08364237ec5ffb46619e1db51e} 
+\index{VulkanExample@{VulkanExample}!swapchainExtent@{swapchainExtent}}
+\index{swapchainExtent@{swapchainExtent}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{swapchainExtent}{swapchainExtent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_vk_extent2_d}{Vk\+Extent2D}} Vulkan\+Example\+::swapchain\+Extent\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vulkan_example_add8c60239b21670dc2e6af4671de7432}\label{class_vulkan_example_add8c60239b21670dc2e6af4671de7432} 
+\index{VulkanExample@{VulkanExample}!swapchainFormat@{swapchainFormat}}
+\index{swapchainFormat@{swapchainFormat}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{swapchainFormat}{swapchainFormat}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_vk_surface_format_k_h_r}{Vk\+Surface\+Format\+KHR}} Vulkan\+Example\+::swapchain\+Format\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vulkan_example_abfe10d136f0f73f5384c8c6e430492f2}\label{class_vulkan_example_abfe10d136f0f73f5384c8c6e430492f2} 
+\index{VulkanExample@{VulkanExample}!swapchainFramebuffers@{swapchainFramebuffers}}
+\index{swapchainFramebuffers@{swapchainFramebuffers}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{swapchainFramebuffers}{swapchainFramebuffers}}
+{\footnotesize\ttfamily std\+::vector$<$Vk\+Framebuffer$>$ Vulkan\+Example\+::swapchain\+Framebuffers\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vulkan_example_a13eedd6ff0abcd592acd527558adb3e3}\label{class_vulkan_example_a13eedd6ff0abcd592acd527558adb3e3} 
+\index{VulkanExample@{VulkanExample}!swapchainImages@{swapchainImages}}
+\index{swapchainImages@{swapchainImages}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{swapchainImages}{swapchainImages}}
+{\footnotesize\ttfamily std\+::vector$<$Vk\+Image$>$ Vulkan\+Example\+::swapchain\+Images\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vulkan_example_a2dd0c2f46ce76acbe05525e4db866a66}\label{class_vulkan_example_a2dd0c2f46ce76acbe05525e4db866a66} 
+\index{VulkanExample@{VulkanExample}!swapchainImageViews@{swapchainImageViews}}
+\index{swapchainImageViews@{swapchainImageViews}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{swapchainImageViews}{swapchainImageViews}}
+{\footnotesize\ttfamily std\+::vector$<$Vk\+Image\+View$>$ Vulkan\+Example\+::swapchain\+Image\+Views\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vulkan_example_a61dca22519e4fe848d49bc3df829254d}\label{class_vulkan_example_a61dca22519e4fe848d49bc3df829254d} 
+\index{VulkanExample@{VulkanExample}!swapchainOutOfDate@{swapchainOutOfDate}}
+\index{swapchainOutOfDate@{swapchainOutOfDate}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{swapchainOutOfDate}{swapchainOutOfDate}}
+{\footnotesize\ttfamily bool Vulkan\+Example\+::swapchain\+Out\+Of\+Date\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vulkan_example_a2164ccb29ac0c805a1f4bb3f54acb095}\label{class_vulkan_example_a2164ccb29ac0c805a1f4bb3f54acb095} 
+\index{VulkanExample@{VulkanExample}!textureImage@{textureImage}}
+\index{textureImage@{textureImage}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{textureImage}{textureImage}}
+{\footnotesize\ttfamily Vk\+Image Vulkan\+Example\+::texture\+Image\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vulkan_example_a7f0f7841349da91a33d4b2d1e32f8a78}\label{class_vulkan_example_a7f0f7841349da91a33d4b2d1e32f8a78} 
+\index{VulkanExample@{VulkanExample}!textureImageMemory@{textureImageMemory}}
+\index{textureImageMemory@{textureImageMemory}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{textureImageMemory}{textureImageMemory}}
+{\footnotesize\ttfamily Vk\+Device\+Memory Vulkan\+Example\+::texture\+Image\+Memory\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vulkan_example_ad30264c205fe93403536ab3de8ccdb4e}\label{class_vulkan_example_ad30264c205fe93403536ab3de8ccdb4e} 
+\index{VulkanExample@{VulkanExample}!textureImageView@{textureImageView}}
+\index{textureImageView@{textureImageView}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{textureImageView}{textureImageView}}
+{\footnotesize\ttfamily Vk\+Image\+View Vulkan\+Example\+::texture\+Image\+View\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vulkan_example_acf655323da9c432b02f818a5c711d3d6}\label{class_vulkan_example_acf655323da9c432b02f818a5c711d3d6} 
+\index{VulkanExample@{VulkanExample}!textureSampler@{textureSampler}}
+\index{textureSampler@{textureSampler}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{textureSampler}{textureSampler}}
+{\footnotesize\ttfamily Vk\+Sampler Vulkan\+Example\+::texture\+Sampler\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vulkan_example_a2d2cfceaafff300f2cabbb6f16b5be3b}\label{class_vulkan_example_a2d2cfceaafff300f2cabbb6f16b5be3b} 
+\index{VulkanExample@{VulkanExample}!uniformBuffers@{uniformBuffers}}
+\index{uniformBuffers@{uniformBuffers}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{uniformBuffers}{uniformBuffers}}
+{\footnotesize\ttfamily std\+::vector$<$Vk\+Buffer$>$ Vulkan\+Example\+::uniform\+Buffers\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vulkan_example_a86b002218e154953c5c321866106c30e}\label{class_vulkan_example_a86b002218e154953c5c321866106c30e} 
+\index{VulkanExample@{VulkanExample}!uniformBuffersMemory@{uniformBuffersMemory}}
+\index{uniformBuffersMemory@{uniformBuffersMemory}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{uniformBuffersMemory}{uniformBuffersMemory}}
+{\footnotesize\ttfamily std\+::vector$<$Vk\+Device\+Memory$>$ Vulkan\+Example\+::uniform\+Buffers\+Memory\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vulkan_example_a295dbd7db43d45e6cf28a48205349a85}\label{class_vulkan_example_a295dbd7db43d45e6cf28a48205349a85} 
+\index{VulkanExample@{VulkanExample}!vertexBuffer@{vertexBuffer}}
+\index{vertexBuffer@{vertexBuffer}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{vertexBuffer}{vertexBuffer}}
+{\footnotesize\ttfamily Vk\+Buffer Vulkan\+Example\+::vertex\+Buffer\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vulkan_example_a6c040a2c0cacebd550b30584a0b78e1f}\label{class_vulkan_example_a6c040a2c0cacebd550b30584a0b78e1f} 
+\index{VulkanExample@{VulkanExample}!vertexBufferMemory@{vertexBufferMemory}}
+\index{vertexBufferMemory@{vertexBufferMemory}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{vertexBufferMemory}{vertexBufferMemory}}
+{\footnotesize\ttfamily Vk\+Device\+Memory Vulkan\+Example\+::vertex\+Buffer\+Memory\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vulkan_example_a3fc38e9d0d9b9ccfde6043c37d7f3717}\label{class_vulkan_example_a3fc38e9d0d9b9ccfde6043c37d7f3717} 
+\index{VulkanExample@{VulkanExample}!vertexShaderModule@{vertexShaderModule}}
+\index{vertexShaderModule@{vertexShaderModule}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{vertexShaderModule}{vertexShaderModule}}
+{\footnotesize\ttfamily Vk\+Shader\+Module Vulkan\+Example\+::vertex\+Shader\+Module\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vulkan_example_a42135faf0f5cb7b7ea60707d9d551831}\label{class_vulkan_example_a42135faf0f5cb7b7ea60707d9d551831} 
+\index{VulkanExample@{VulkanExample}!vulkanAvailable@{vulkanAvailable}}
+\index{vulkanAvailable@{vulkanAvailable}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{vulkanAvailable}{vulkanAvailable}}
+{\footnotesize\ttfamily bool Vulkan\+Example\+::vulkan\+Available\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vulkan_example_aa02a6df92618a2b0a965b02d2fcc8b16}\label{class_vulkan_example_aa02a6df92618a2b0a965b02d2fcc8b16} 
+\index{VulkanExample@{VulkanExample}!window@{window}}
+\index{window@{window}!VulkanExample@{VulkanExample}}
+\doxysubsubsection{\texorpdfstring{window}{window}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1_window_base}{sf\+::\+Window\+Base}} Vulkan\+Example\+::window\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/examples/vulkan/\mbox{\hyperlink{examples_2vulkan_2_vulkan_8cpp}{Vulkan.\+cpp}}\end{DoxyCompactItemize}

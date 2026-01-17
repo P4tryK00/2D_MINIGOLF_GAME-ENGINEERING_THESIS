@@ -1,0 +1,61 @@
+\doxysection{Dokumentacja struktury Game\+Data}
+\hypertarget{struct_game_data}{}\label{struct_game_data}\index{GameData@{GameData}}
+
+
+Struktura przechowująca współdzielone dane gry.  
+
+
+
+
+{\ttfamily \#include $<$Game.\+h$>$}
+
+
+
+Diagram współpracy dla Game\+Data\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{struct_game_data__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_state_manager}{State\+Manager}} \mbox{\hyperlink{struct_game_data_a451c8e7b0caa23b03901f163cbf661a5}{machine}}
+\begin{DoxyCompactList}\small\item\em Maszyna stanów zarządzająca przejściami (Menu -\/\texorpdfstring{$>$}{>} Gra -\/\texorpdfstring{$>$}{>} Pauza). \end{DoxyCompactList}\item 
+sf\+::\+Render\+Window \mbox{\hyperlink{struct_game_data_ad3ebf49a95d78b14047b92b20d39b810}{window}}
+\begin{DoxyCompactList}\small\item\em Główne okno renderowania SFML. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Struktura przechowująca współdzielone dane gry. 
+
+Obiekt tej struktury jest przekazywany jako Smart Pointer (Game\+Data\+Ref) do wszystkich stanów gry, umożliwiając im dostęp do okna i maszyny stanów. 
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{struct_game_data_a451c8e7b0caa23b03901f163cbf661a5}\label{struct_game_data_a451c8e7b0caa23b03901f163cbf661a5} 
+\index{GameData@{GameData}!machine@{machine}}
+\index{machine@{machine}!GameData@{GameData}}
+\doxysubsubsection{\texorpdfstring{machine}{machine}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_state_manager}{State\+Manager}} Game\+Data\+::machine}
+
+
+
+Maszyna stanów zarządzająca przejściami (Menu -\/\texorpdfstring{$>$}{>} Gra -\/\texorpdfstring{$>$}{>} Pauza). 
+
+\Hypertarget{struct_game_data_ad3ebf49a95d78b14047b92b20d39b810}\label{struct_game_data_ad3ebf49a95d78b14047b92b20d39b810} 
+\index{GameData@{GameData}!window@{window}}
+\index{window@{window}!GameData@{GameData}}
+\doxysubsubsection{\texorpdfstring{window}{window}}
+{\footnotesize\ttfamily sf\+::\+Render\+Window Game\+Data\+::window}
+
+
+
+Główne okno renderowania SFML. 
+
+
+
+Dokumentacja dla tej struktury została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_game_8h}{Game.\+h}}\end{DoxyCompactItemize}

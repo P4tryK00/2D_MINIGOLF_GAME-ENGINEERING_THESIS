@@ -1,0 +1,97 @@
+\doxysection{Dokumentacja pliku cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/extlibs/headers/vulkan/vulkan\+\_\+mir.h}
+\hypertarget{vulkan__mir_8h}{}\label{vulkan__mir_8h}\index{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/vulkan/vulkan\_mir.h@{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/vulkan/vulkan\_mir.h}}
+\doxysubsubsection*{Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_vk_mir_surface_create_info_k_h_r}{Vk\+Mir\+Surface\+Create\+Info\+KHR}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Definicje}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{vulkan__mir_8h_a06d9667f8820310a99a8bce79abec78f}{VK\+\_\+\+KHR\+\_\+mir\+\_\+surface}}~1
+\item 
+\#define \mbox{\hyperlink{vulkan__mir_8h_a02b24074206feea448dfd328c6b24dc6}{VK\+\_\+\+KHR\+\_\+\+MIR\+\_\+\+SURFACE\+\_\+\+SPEC\+\_\+\+VERSION}}~4
+\item 
+\#define \mbox{\hyperlink{vulkan__mir_8h_a273e31c4228c150dbd1fad8d640b498b}{VK\+\_\+\+KHR\+\_\+\+MIR\+\_\+\+SURFACE\+\_\+\+EXTENSION\+\_\+\+NAME}}~"{}VK\+\_\+\+KHR\+\_\+mir\+\_\+surface"{}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Definicje typów}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abb605a7700670dd8420cc3841b939444}{Vk\+Flags}} \mbox{\hyperlink{vulkan__mir_8h_aac20add1bef88baababbac63fd9f8cca}{Vk\+Mir\+Surface\+Create\+Flags\+KHR}}
+\item 
+typedef struct Vk\+Mir\+Surface\+Create\+Info\+KHR \mbox{\hyperlink{vulkan__mir_8h_a40316b345aee58cdd8dbb0c42e9574f7}{Vk\+Mir\+Surface\+Create\+Info\+KHR}}
+\item 
+typedef \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{Vk\+Result}}(\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{vulkan__mir_8h_ae031974b98a66cd613ea7b2ad648f4d0}{PFN\+\_\+vk\+Create\+Mir\+Surface\+KHR}}) (\mbox{\hyperlink{_vulkan_8hpp_a6d9f7e27148712f2c97db45ca6991547}{Vk\+Instance}} instance, const \mbox{\hyperlink{struct_vk_mir_surface_create_info_k_h_r}{Vk\+Mir\+Surface\+Create\+Info\+KHR}} \texorpdfstring{$\ast$}{*}p\+Create\+Info, const \mbox{\hyperlink{struct_vk_allocation_callbacks}{Vk\+Allocation\+Callbacks}} \texorpdfstring{$\ast$}{*}p\+Allocator, \mbox{\hyperlink{_vulkan_8hpp_a09787d7da5f3146095ed80ceccc2d794}{Vk\+Surface\+KHR}} \texorpdfstring{$\ast$}{*}p\+Surface)
+\item 
+typedef \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_ae5d9faf75f583010e32ee49087a15326}{Vk\+Bool32}}(\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{vulkan__mir_8h_a2a9070dfef7efd32d203dff6a2080bdf}{PFN\+\_\+vk\+Get\+Physical\+Device\+Mir\+Presentation\+Support\+KHR}}) (Vk\+Physical\+Device physical\+Device, uint32\+\_\+t queue\+Family\+Index, Mir\+Connection \texorpdfstring{$\ast$}{*}connection)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a4394dd2421147ed91e838b086be25512}{VKAPI\+\_\+\+ATTR}} \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{Vk\+Result}} \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a3856c7761d8b7260870053d0f03a0a49}{VKAPI\+\_\+\+CALL}} \mbox{\hyperlink{vulkan__mir_8h_a230bf5be3d07653a9597e591a5bc6e34}{vk\+Create\+Mir\+Surface\+KHR}} (\mbox{\hyperlink{_vulkan_8hpp_a6d9f7e27148712f2c97db45ca6991547}{Vk\+Instance}} instance, const \mbox{\hyperlink{struct_vk_mir_surface_create_info_k_h_r}{Vk\+Mir\+Surface\+Create\+Info\+KHR}} \texorpdfstring{$\ast$}{*}p\+Create\+Info, const \mbox{\hyperlink{struct_vk_allocation_callbacks}{Vk\+Allocation\+Callbacks}} \texorpdfstring{$\ast$}{*}p\+Allocator, \mbox{\hyperlink{_vulkan_8hpp_a09787d7da5f3146095ed80ceccc2d794}{Vk\+Surface\+KHR}} \texorpdfstring{$\ast$}{*}p\+Surface)
+\item 
+\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a4394dd2421147ed91e838b086be25512}{VKAPI\+\_\+\+ATTR}} \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_ae5d9faf75f583010e32ee49087a15326}{Vk\+Bool32}} \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a3856c7761d8b7260870053d0f03a0a49}{VKAPI\+\_\+\+CALL}} \mbox{\hyperlink{vulkan__mir_8h_a8a33463eafb453bdad1757058665c441}{vk\+Get\+Physical\+Device\+Mir\+Presentation\+Support\+KHR}} (Vk\+Physical\+Device physical\+Device, uint32\+\_\+t queue\+Family\+Index, Mir\+Connection \texorpdfstring{$\ast$}{*}connection)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja definicji}
+\Hypertarget{vulkan__mir_8h_a06d9667f8820310a99a8bce79abec78f}\label{vulkan__mir_8h_a06d9667f8820310a99a8bce79abec78f} 
+\index{vulkan\_mir.h@{vulkan\_mir.h}!VK\_KHR\_mir\_surface@{VK\_KHR\_mir\_surface}}
+\index{VK\_KHR\_mir\_surface@{VK\_KHR\_mir\_surface}!vulkan\_mir.h@{vulkan\_mir.h}}
+\doxysubsubsection{\texorpdfstring{VK\_KHR\_mir\_surface}{VK\_KHR\_mir\_surface}}
+{\footnotesize\ttfamily \#define VK\+\_\+\+KHR\+\_\+mir\+\_\+surface~1}
+
+\Hypertarget{vulkan__mir_8h_a273e31c4228c150dbd1fad8d640b498b}\label{vulkan__mir_8h_a273e31c4228c150dbd1fad8d640b498b} 
+\index{vulkan\_mir.h@{vulkan\_mir.h}!VK\_KHR\_MIR\_SURFACE\_EXTENSION\_NAME@{VK\_KHR\_MIR\_SURFACE\_EXTENSION\_NAME}}
+\index{VK\_KHR\_MIR\_SURFACE\_EXTENSION\_NAME@{VK\_KHR\_MIR\_SURFACE\_EXTENSION\_NAME}!vulkan\_mir.h@{vulkan\_mir.h}}
+\doxysubsubsection{\texorpdfstring{VK\_KHR\_MIR\_SURFACE\_EXTENSION\_NAME}{VK\_KHR\_MIR\_SURFACE\_EXTENSION\_NAME}}
+{\footnotesize\ttfamily \#define VK\+\_\+\+KHR\+\_\+\+MIR\+\_\+\+SURFACE\+\_\+\+EXTENSION\+\_\+\+NAME~"{}VK\+\_\+\+KHR\+\_\+mir\+\_\+surface"{}}
+
+\Hypertarget{vulkan__mir_8h_a02b24074206feea448dfd328c6b24dc6}\label{vulkan__mir_8h_a02b24074206feea448dfd328c6b24dc6} 
+\index{vulkan\_mir.h@{vulkan\_mir.h}!VK\_KHR\_MIR\_SURFACE\_SPEC\_VERSION@{VK\_KHR\_MIR\_SURFACE\_SPEC\_VERSION}}
+\index{VK\_KHR\_MIR\_SURFACE\_SPEC\_VERSION@{VK\_KHR\_MIR\_SURFACE\_SPEC\_VERSION}!vulkan\_mir.h@{vulkan\_mir.h}}
+\doxysubsubsection{\texorpdfstring{VK\_KHR\_MIR\_SURFACE\_SPEC\_VERSION}{VK\_KHR\_MIR\_SURFACE\_SPEC\_VERSION}}
+{\footnotesize\ttfamily \#define VK\+\_\+\+KHR\+\_\+\+MIR\+\_\+\+SURFACE\+\_\+\+SPEC\+\_\+\+VERSION~4}
+
+
+
+\doxysubsection{Dokumentacja definicji typów}
+\Hypertarget{vulkan__mir_8h_ae031974b98a66cd613ea7b2ad648f4d0}\label{vulkan__mir_8h_ae031974b98a66cd613ea7b2ad648f4d0} 
+\index{vulkan\_mir.h@{vulkan\_mir.h}!PFN\_vkCreateMirSurfaceKHR@{PFN\_vkCreateMirSurfaceKHR}}
+\index{PFN\_vkCreateMirSurfaceKHR@{PFN\_vkCreateMirSurfaceKHR}!vulkan\_mir.h@{vulkan\_mir.h}}
+\doxysubsubsection{\texorpdfstring{PFN\_vkCreateMirSurfaceKHR}{PFN\_vkCreateMirSurfaceKHR}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{Vk\+Result}}(\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFN\+\_\+vk\+Create\+Mir\+Surface\+KHR) (\mbox{\hyperlink{_vulkan_8hpp_a6d9f7e27148712f2c97db45ca6991547}{Vk\+Instance}} instance, const \mbox{\hyperlink{struct_vk_mir_surface_create_info_k_h_r}{Vk\+Mir\+Surface\+Create\+Info\+KHR}} \texorpdfstring{$\ast$}{*}p\+Create\+Info, const \mbox{\hyperlink{struct_vk_allocation_callbacks}{Vk\+Allocation\+Callbacks}} \texorpdfstring{$\ast$}{*}p\+Allocator, \mbox{\hyperlink{_vulkan_8hpp_a09787d7da5f3146095ed80ceccc2d794}{Vk\+Surface\+KHR}} \texorpdfstring{$\ast$}{*}p\+Surface)}
+
+\Hypertarget{vulkan__mir_8h_a2a9070dfef7efd32d203dff6a2080bdf}\label{vulkan__mir_8h_a2a9070dfef7efd32d203dff6a2080bdf} 
+\index{vulkan\_mir.h@{vulkan\_mir.h}!PFN\_vkGetPhysicalDeviceMirPresentationSupportKHR@{PFN\_vkGetPhysicalDeviceMirPresentationSupportKHR}}
+\index{PFN\_vkGetPhysicalDeviceMirPresentationSupportKHR@{PFN\_vkGetPhysicalDeviceMirPresentationSupportKHR}!vulkan\_mir.h@{vulkan\_mir.h}}
+\doxysubsubsection{\texorpdfstring{PFN\_vkGetPhysicalDeviceMirPresentationSupportKHR}{PFN\_vkGetPhysicalDeviceMirPresentationSupportKHR}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_ae5d9faf75f583010e32ee49087a15326}{Vk\+Bool32}}(\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFN\+\_\+vk\+Get\+Physical\+Device\+Mir\+Presentation\+Support\+KHR) (Vk\+Physical\+Device physical\+Device, uint32\+\_\+t queue\+Family\+Index, Mir\+Connection \texorpdfstring{$\ast$}{*}connection)}
+
+\Hypertarget{vulkan__mir_8h_aac20add1bef88baababbac63fd9f8cca}\label{vulkan__mir_8h_aac20add1bef88baababbac63fd9f8cca} 
+\index{vulkan\_mir.h@{vulkan\_mir.h}!VkMirSurfaceCreateFlagsKHR@{VkMirSurfaceCreateFlagsKHR}}
+\index{VkMirSurfaceCreateFlagsKHR@{VkMirSurfaceCreateFlagsKHR}!vulkan\_mir.h@{vulkan\_mir.h}}
+\doxysubsubsection{\texorpdfstring{VkMirSurfaceCreateFlagsKHR}{VkMirSurfaceCreateFlagsKHR}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abb605a7700670dd8420cc3841b939444}{Vk\+Flags}} \mbox{\hyperlink{vulkan__mir_8h_aac20add1bef88baababbac63fd9f8cca}{Vk\+Mir\+Surface\+Create\+Flags\+KHR}}}
+
+\Hypertarget{vulkan__mir_8h_a40316b345aee58cdd8dbb0c42e9574f7}\label{vulkan__mir_8h_a40316b345aee58cdd8dbb0c42e9574f7} 
+\index{vulkan\_mir.h@{vulkan\_mir.h}!VkMirSurfaceCreateInfoKHR@{VkMirSurfaceCreateInfoKHR}}
+\index{VkMirSurfaceCreateInfoKHR@{VkMirSurfaceCreateInfoKHR}!vulkan\_mir.h@{vulkan\_mir.h}}
+\doxysubsubsection{\texorpdfstring{VkMirSurfaceCreateInfoKHR}{VkMirSurfaceCreateInfoKHR}}
+{\footnotesize\ttfamily typedef struct Vk\+Mir\+Surface\+Create\+Info\+KHR Vk\+Mir\+Surface\+Create\+Info\+KHR}
+
+
+
+\doxysubsection{Dokumentacja funkcji}
+\Hypertarget{vulkan__mir_8h_a230bf5be3d07653a9597e591a5bc6e34}\label{vulkan__mir_8h_a230bf5be3d07653a9597e591a5bc6e34} 
+\index{vulkan\_mir.h@{vulkan\_mir.h}!vkCreateMirSurfaceKHR@{vkCreateMirSurfaceKHR}}
+\index{vkCreateMirSurfaceKHR@{vkCreateMirSurfaceKHR}!vulkan\_mir.h@{vulkan\_mir.h}}
+\doxysubsubsection{\texorpdfstring{vkCreateMirSurfaceKHR()}{vkCreateMirSurfaceKHR()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a4394dd2421147ed91e838b086be25512}{VKAPI\+\_\+\+ATTR}} \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{Vk\+Result}} \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a3856c7761d8b7260870053d0f03a0a49}{VKAPI\+\_\+\+CALL}} vk\+Create\+Mir\+Surface\+KHR (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_vulkan_8hpp_a6d9f7e27148712f2c97db45ca6991547}{Vk\+Instance}}}]{instance,  }\item[{const \mbox{\hyperlink{struct_vk_mir_surface_create_info_k_h_r}{Vk\+Mir\+Surface\+Create\+Info\+KHR}} \texorpdfstring{$\ast$}{*}}]{p\+Create\+Info,  }\item[{const \mbox{\hyperlink{struct_vk_allocation_callbacks}{Vk\+Allocation\+Callbacks}} \texorpdfstring{$\ast$}{*}}]{p\+Allocator,  }\item[{\mbox{\hyperlink{_vulkan_8hpp_a09787d7da5f3146095ed80ceccc2d794}{Vk\+Surface\+KHR}} \texorpdfstring{$\ast$}{*}}]{p\+Surface }\end{DoxyParamCaption})}
+
+\Hypertarget{vulkan__mir_8h_a8a33463eafb453bdad1757058665c441}\label{vulkan__mir_8h_a8a33463eafb453bdad1757058665c441} 
+\index{vulkan\_mir.h@{vulkan\_mir.h}!vkGetPhysicalDeviceMirPresentationSupportKHR@{vkGetPhysicalDeviceMirPresentationSupportKHR}}
+\index{vkGetPhysicalDeviceMirPresentationSupportKHR@{vkGetPhysicalDeviceMirPresentationSupportKHR}!vulkan\_mir.h@{vulkan\_mir.h}}
+\doxysubsubsection{\texorpdfstring{vkGetPhysicalDeviceMirPresentationSupportKHR()}{vkGetPhysicalDeviceMirPresentationSupportKHR()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a4394dd2421147ed91e838b086be25512}{VKAPI\+\_\+\+ATTR}} \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_ae5d9faf75f583010e32ee49087a15326}{Vk\+Bool32}} \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a3856c7761d8b7260870053d0f03a0a49}{VKAPI\+\_\+\+CALL}} vk\+Get\+Physical\+Device\+Mir\+Presentation\+Support\+KHR (\begin{DoxyParamCaption}\item[{Vk\+Physical\+Device}]{physical\+Device,  }\item[{uint32\+\_\+t}]{queue\+Family\+Index,  }\item[{Mir\+Connection \texorpdfstring{$\ast$}{*}}]{connection }\end{DoxyParamCaption})}
+

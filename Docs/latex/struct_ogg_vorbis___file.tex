@@ -1,0 +1,202 @@
+\doxysection{Dokumentacja struktury Ogg\+Vorbis\+\_\+\+File}
+\hypertarget{struct_ogg_vorbis___file}{}\label{struct_ogg_vorbis___file}\index{OggVorbis\_File@{OggVorbis\_File}}
+
+
+{\ttfamily \#include $<$vorbisfile.\+h$>$}
+
+
+
+Diagram współpracy dla Ogg\+Vorbis\+\_\+\+File\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{struct_ogg_vorbis___file__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_ogg_vorbis___file_a46afb3dcc7aac5917573e41d7504c0d6}{datasource}}
+\item 
+int \mbox{\hyperlink{struct_ogg_vorbis___file_a2a390c4f15c0d1fe0cf9c90fd0bae087}{seekable}}
+\item 
+\mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\+\_\+int64\+\_\+t}} \mbox{\hyperlink{struct_ogg_vorbis___file_a36f8f9f012cd2e7ab8cb395b787376cb}{offset}}
+\item 
+\mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\+\_\+int64\+\_\+t}} \mbox{\hyperlink{struct_ogg_vorbis___file_ae56eb8bc78d2fc27c79d145a7c80a681}{end}}
+\item 
+\mbox{\hyperlink{structogg__sync__state}{ogg\+\_\+sync\+\_\+state}} \mbox{\hyperlink{struct_ogg_vorbis___file_ae35fa1e6f99edcb104566301324ecf94}{oy}}
+\item 
+int \mbox{\hyperlink{struct_ogg_vorbis___file_ad41f80ffaa6b48a14addef0a02639a87}{links}}
+\item 
+\mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\+\_\+int64\+\_\+t}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_ogg_vorbis___file_af9fe0ece4ff98e207682731b36951920}{offsets}}
+\item 
+\mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\+\_\+int64\+\_\+t}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_ogg_vorbis___file_af797824fb6e98c0248c19e6909dd680e}{dataoffsets}}
+\item 
+long \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_ogg_vorbis___file_abd5a9adc78abd620ce2c63bd153df150}{serialnos}}
+\item 
+\mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\+\_\+int64\+\_\+t}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_ogg_vorbis___file_a88a4e6a4ec6c9837d44e6cc0c864679e}{pcmlengths}}
+\item 
+\mbox{\hyperlink{structvorbis__info}{vorbis\+\_\+info}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_ogg_vorbis___file_aa5586b939d7c31c8eec83cf1380b45a6}{vi}}
+\item 
+\mbox{\hyperlink{structvorbis__comment}{vorbis\+\_\+comment}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_ogg_vorbis___file_a4467850c72aed93fe0a70e8f1fd6f20e}{vc}}
+\item 
+\mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\+\_\+int64\+\_\+t}} \mbox{\hyperlink{struct_ogg_vorbis___file_a23d5ba7ca52640ceb6f633a46304cdc5}{pcm\+\_\+offset}}
+\item 
+int \mbox{\hyperlink{struct_ogg_vorbis___file_ad304fe18bebc075c34f2e5ec7d1f2a99}{ready\+\_\+state}}
+\item 
+long \mbox{\hyperlink{struct_ogg_vorbis___file_ad7545f86b92a6d66641f3d04a2497763}{current\+\_\+serialno}}
+\item 
+int \mbox{\hyperlink{struct_ogg_vorbis___file_a9b2d64c3739364ac4c08070aac2e0588}{current\+\_\+link}}
+\item 
+double \mbox{\hyperlink{struct_ogg_vorbis___file_aa72a11d9f154636d4dc9edac4c9eb843}{bittrack}}
+\item 
+double \mbox{\hyperlink{struct_ogg_vorbis___file_a3fcbfeaad027ada99496dfcaf94866a9}{samptrack}}
+\item 
+\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} \mbox{\hyperlink{struct_ogg_vorbis___file_a8658f17a6f662a74f8763c47d560d712}{os}}
+\item 
+\mbox{\hyperlink{structvorbis__dsp__state}{vorbis\+\_\+dsp\+\_\+state}} \mbox{\hyperlink{struct_ogg_vorbis___file_acb9d38719f54642d1a39f24203b466d6}{vd}}
+\item 
+\mbox{\hyperlink{structvorbis__block}{vorbis\+\_\+block}} \mbox{\hyperlink{struct_ogg_vorbis___file_a3201599977a781b7bf559167cd892638}{vb}}
+\item 
+\mbox{\hyperlink{structov__callbacks}{ov\+\_\+callbacks}} \mbox{\hyperlink{struct_ogg_vorbis___file_afb1474e24193f577dd21395a76199415}{callbacks}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{struct_ogg_vorbis___file_aa72a11d9f154636d4dc9edac4c9eb843}\label{struct_ogg_vorbis___file_aa72a11d9f154636d4dc9edac4c9eb843} 
+\index{OggVorbis\_File@{OggVorbis\_File}!bittrack@{bittrack}}
+\index{bittrack@{bittrack}!OggVorbis\_File@{OggVorbis\_File}}
+\doxysubsubsection{\texorpdfstring{bittrack}{bittrack}}
+{\footnotesize\ttfamily double Ogg\+Vorbis\+\_\+\+File\+::bittrack}
+
+\Hypertarget{struct_ogg_vorbis___file_afb1474e24193f577dd21395a76199415}\label{struct_ogg_vorbis___file_afb1474e24193f577dd21395a76199415} 
+\index{OggVorbis\_File@{OggVorbis\_File}!callbacks@{callbacks}}
+\index{callbacks@{callbacks}!OggVorbis\_File@{OggVorbis\_File}}
+\doxysubsubsection{\texorpdfstring{callbacks}{callbacks}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structov__callbacks}{ov\+\_\+callbacks}} Ogg\+Vorbis\+\_\+\+File\+::callbacks}
+
+\Hypertarget{struct_ogg_vorbis___file_a9b2d64c3739364ac4c08070aac2e0588}\label{struct_ogg_vorbis___file_a9b2d64c3739364ac4c08070aac2e0588} 
+\index{OggVorbis\_File@{OggVorbis\_File}!current\_link@{current\_link}}
+\index{current\_link@{current\_link}!OggVorbis\_File@{OggVorbis\_File}}
+\doxysubsubsection{\texorpdfstring{current\_link}{current\_link}}
+{\footnotesize\ttfamily int Ogg\+Vorbis\+\_\+\+File\+::current\+\_\+link}
+
+\Hypertarget{struct_ogg_vorbis___file_ad7545f86b92a6d66641f3d04a2497763}\label{struct_ogg_vorbis___file_ad7545f86b92a6d66641f3d04a2497763} 
+\index{OggVorbis\_File@{OggVorbis\_File}!current\_serialno@{current\_serialno}}
+\index{current\_serialno@{current\_serialno}!OggVorbis\_File@{OggVorbis\_File}}
+\doxysubsubsection{\texorpdfstring{current\_serialno}{current\_serialno}}
+{\footnotesize\ttfamily long Ogg\+Vorbis\+\_\+\+File\+::current\+\_\+serialno}
+
+\Hypertarget{struct_ogg_vorbis___file_af797824fb6e98c0248c19e6909dd680e}\label{struct_ogg_vorbis___file_af797824fb6e98c0248c19e6909dd680e} 
+\index{OggVorbis\_File@{OggVorbis\_File}!dataoffsets@{dataoffsets}}
+\index{dataoffsets@{dataoffsets}!OggVorbis\_File@{OggVorbis\_File}}
+\doxysubsubsection{\texorpdfstring{dataoffsets}{dataoffsets}}
+{\footnotesize\ttfamily \mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\+\_\+int64\+\_\+t}}\texorpdfstring{$\ast$}{*} Ogg\+Vorbis\+\_\+\+File\+::dataoffsets}
+
+\Hypertarget{struct_ogg_vorbis___file_a46afb3dcc7aac5917573e41d7504c0d6}\label{struct_ogg_vorbis___file_a46afb3dcc7aac5917573e41d7504c0d6} 
+\index{OggVorbis\_File@{OggVorbis\_File}!datasource@{datasource}}
+\index{datasource@{datasource}!OggVorbis\_File@{OggVorbis\_File}}
+\doxysubsubsection{\texorpdfstring{datasource}{datasource}}
+{\footnotesize\ttfamily void\texorpdfstring{$\ast$}{*} Ogg\+Vorbis\+\_\+\+File\+::datasource}
+
+\Hypertarget{struct_ogg_vorbis___file_ae56eb8bc78d2fc27c79d145a7c80a681}\label{struct_ogg_vorbis___file_ae56eb8bc78d2fc27c79d145a7c80a681} 
+\index{OggVorbis\_File@{OggVorbis\_File}!end@{end}}
+\index{end@{end}!OggVorbis\_File@{OggVorbis\_File}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily \mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\+\_\+int64\+\_\+t}} Ogg\+Vorbis\+\_\+\+File\+::end}
+
+\Hypertarget{struct_ogg_vorbis___file_ad41f80ffaa6b48a14addef0a02639a87}\label{struct_ogg_vorbis___file_ad41f80ffaa6b48a14addef0a02639a87} 
+\index{OggVorbis\_File@{OggVorbis\_File}!links@{links}}
+\index{links@{links}!OggVorbis\_File@{OggVorbis\_File}}
+\doxysubsubsection{\texorpdfstring{links}{links}}
+{\footnotesize\ttfamily int Ogg\+Vorbis\+\_\+\+File\+::links}
+
+\Hypertarget{struct_ogg_vorbis___file_a36f8f9f012cd2e7ab8cb395b787376cb}\label{struct_ogg_vorbis___file_a36f8f9f012cd2e7ab8cb395b787376cb} 
+\index{OggVorbis\_File@{OggVorbis\_File}!offset@{offset}}
+\index{offset@{offset}!OggVorbis\_File@{OggVorbis\_File}}
+\doxysubsubsection{\texorpdfstring{offset}{offset}}
+{\footnotesize\ttfamily \mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\+\_\+int64\+\_\+t}} Ogg\+Vorbis\+\_\+\+File\+::offset}
+
+\Hypertarget{struct_ogg_vorbis___file_af9fe0ece4ff98e207682731b36951920}\label{struct_ogg_vorbis___file_af9fe0ece4ff98e207682731b36951920} 
+\index{OggVorbis\_File@{OggVorbis\_File}!offsets@{offsets}}
+\index{offsets@{offsets}!OggVorbis\_File@{OggVorbis\_File}}
+\doxysubsubsection{\texorpdfstring{offsets}{offsets}}
+{\footnotesize\ttfamily \mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\+\_\+int64\+\_\+t}}\texorpdfstring{$\ast$}{*} Ogg\+Vorbis\+\_\+\+File\+::offsets}
+
+\Hypertarget{struct_ogg_vorbis___file_a8658f17a6f662a74f8763c47d560d712}\label{struct_ogg_vorbis___file_a8658f17a6f662a74f8763c47d560d712} 
+\index{OggVorbis\_File@{OggVorbis\_File}!os@{os}}
+\index{os@{os}!OggVorbis\_File@{OggVorbis\_File}}
+\doxysubsubsection{\texorpdfstring{os}{os}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} Ogg\+Vorbis\+\_\+\+File\+::os}
+
+\Hypertarget{struct_ogg_vorbis___file_ae35fa1e6f99edcb104566301324ecf94}\label{struct_ogg_vorbis___file_ae35fa1e6f99edcb104566301324ecf94} 
+\index{OggVorbis\_File@{OggVorbis\_File}!oy@{oy}}
+\index{oy@{oy}!OggVorbis\_File@{OggVorbis\_File}}
+\doxysubsubsection{\texorpdfstring{oy}{oy}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structogg__sync__state}{ogg\+\_\+sync\+\_\+state}} Ogg\+Vorbis\+\_\+\+File\+::oy}
+
+\Hypertarget{struct_ogg_vorbis___file_a23d5ba7ca52640ceb6f633a46304cdc5}\label{struct_ogg_vorbis___file_a23d5ba7ca52640ceb6f633a46304cdc5} 
+\index{OggVorbis\_File@{OggVorbis\_File}!pcm\_offset@{pcm\_offset}}
+\index{pcm\_offset@{pcm\_offset}!OggVorbis\_File@{OggVorbis\_File}}
+\doxysubsubsection{\texorpdfstring{pcm\_offset}{pcm\_offset}}
+{\footnotesize\ttfamily \mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\+\_\+int64\+\_\+t}} Ogg\+Vorbis\+\_\+\+File\+::pcm\+\_\+offset}
+
+\Hypertarget{struct_ogg_vorbis___file_a88a4e6a4ec6c9837d44e6cc0c864679e}\label{struct_ogg_vorbis___file_a88a4e6a4ec6c9837d44e6cc0c864679e} 
+\index{OggVorbis\_File@{OggVorbis\_File}!pcmlengths@{pcmlengths}}
+\index{pcmlengths@{pcmlengths}!OggVorbis\_File@{OggVorbis\_File}}
+\doxysubsubsection{\texorpdfstring{pcmlengths}{pcmlengths}}
+{\footnotesize\ttfamily \mbox{\hyperlink{config__types_8h_a292432ede703993aa88db876e11b2306}{ogg\+\_\+int64\+\_\+t}}\texorpdfstring{$\ast$}{*} Ogg\+Vorbis\+\_\+\+File\+::pcmlengths}
+
+\Hypertarget{struct_ogg_vorbis___file_ad304fe18bebc075c34f2e5ec7d1f2a99}\label{struct_ogg_vorbis___file_ad304fe18bebc075c34f2e5ec7d1f2a99} 
+\index{OggVorbis\_File@{OggVorbis\_File}!ready\_state@{ready\_state}}
+\index{ready\_state@{ready\_state}!OggVorbis\_File@{OggVorbis\_File}}
+\doxysubsubsection{\texorpdfstring{ready\_state}{ready\_state}}
+{\footnotesize\ttfamily int Ogg\+Vorbis\+\_\+\+File\+::ready\+\_\+state}
+
+\Hypertarget{struct_ogg_vorbis___file_a3fcbfeaad027ada99496dfcaf94866a9}\label{struct_ogg_vorbis___file_a3fcbfeaad027ada99496dfcaf94866a9} 
+\index{OggVorbis\_File@{OggVorbis\_File}!samptrack@{samptrack}}
+\index{samptrack@{samptrack}!OggVorbis\_File@{OggVorbis\_File}}
+\doxysubsubsection{\texorpdfstring{samptrack}{samptrack}}
+{\footnotesize\ttfamily double Ogg\+Vorbis\+\_\+\+File\+::samptrack}
+
+\Hypertarget{struct_ogg_vorbis___file_a2a390c4f15c0d1fe0cf9c90fd0bae087}\label{struct_ogg_vorbis___file_a2a390c4f15c0d1fe0cf9c90fd0bae087} 
+\index{OggVorbis\_File@{OggVorbis\_File}!seekable@{seekable}}
+\index{seekable@{seekable}!OggVorbis\_File@{OggVorbis\_File}}
+\doxysubsubsection{\texorpdfstring{seekable}{seekable}}
+{\footnotesize\ttfamily int Ogg\+Vorbis\+\_\+\+File\+::seekable}
+
+\Hypertarget{struct_ogg_vorbis___file_abd5a9adc78abd620ce2c63bd153df150}\label{struct_ogg_vorbis___file_abd5a9adc78abd620ce2c63bd153df150} 
+\index{OggVorbis\_File@{OggVorbis\_File}!serialnos@{serialnos}}
+\index{serialnos@{serialnos}!OggVorbis\_File@{OggVorbis\_File}}
+\doxysubsubsection{\texorpdfstring{serialnos}{serialnos}}
+{\footnotesize\ttfamily long\texorpdfstring{$\ast$}{*} Ogg\+Vorbis\+\_\+\+File\+::serialnos}
+
+\Hypertarget{struct_ogg_vorbis___file_a3201599977a781b7bf559167cd892638}\label{struct_ogg_vorbis___file_a3201599977a781b7bf559167cd892638} 
+\index{OggVorbis\_File@{OggVorbis\_File}!vb@{vb}}
+\index{vb@{vb}!OggVorbis\_File@{OggVorbis\_File}}
+\doxysubsubsection{\texorpdfstring{vb}{vb}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structvorbis__block}{vorbis\+\_\+block}} Ogg\+Vorbis\+\_\+\+File\+::vb}
+
+\Hypertarget{struct_ogg_vorbis___file_a4467850c72aed93fe0a70e8f1fd6f20e}\label{struct_ogg_vorbis___file_a4467850c72aed93fe0a70e8f1fd6f20e} 
+\index{OggVorbis\_File@{OggVorbis\_File}!vc@{vc}}
+\index{vc@{vc}!OggVorbis\_File@{OggVorbis\_File}}
+\doxysubsubsection{\texorpdfstring{vc}{vc}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structvorbis__comment}{vorbis\+\_\+comment}}\texorpdfstring{$\ast$}{*} Ogg\+Vorbis\+\_\+\+File\+::vc}
+
+\Hypertarget{struct_ogg_vorbis___file_acb9d38719f54642d1a39f24203b466d6}\label{struct_ogg_vorbis___file_acb9d38719f54642d1a39f24203b466d6} 
+\index{OggVorbis\_File@{OggVorbis\_File}!vd@{vd}}
+\index{vd@{vd}!OggVorbis\_File@{OggVorbis\_File}}
+\doxysubsubsection{\texorpdfstring{vd}{vd}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structvorbis__dsp__state}{vorbis\+\_\+dsp\+\_\+state}} Ogg\+Vorbis\+\_\+\+File\+::vd}
+
+\Hypertarget{struct_ogg_vorbis___file_aa5586b939d7c31c8eec83cf1380b45a6}\label{struct_ogg_vorbis___file_aa5586b939d7c31c8eec83cf1380b45a6} 
+\index{OggVorbis\_File@{OggVorbis\_File}!vi@{vi}}
+\index{vi@{vi}!OggVorbis\_File@{OggVorbis\_File}}
+\doxysubsubsection{\texorpdfstring{vi}{vi}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structvorbis__info}{vorbis\+\_\+info}}\texorpdfstring{$\ast$}{*} Ogg\+Vorbis\+\_\+\+File\+::vi}
+
+
+
+Dokumentacja dla tej struktury została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/extlibs/headers/vorbis/\mbox{\hyperlink{vorbisfile_8h}{vorbisfile.\+h}}\end{DoxyCompactItemize}

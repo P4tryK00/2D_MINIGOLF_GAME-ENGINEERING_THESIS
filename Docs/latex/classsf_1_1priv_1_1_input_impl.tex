@@ -1,0 +1,1975 @@
+\doxysection{Dokumentacja klasy sf\+::priv\+::Input\+Impl}
+\hypertarget{classsf_1_1priv_1_1_input_impl}{}\label{classsf_1_1priv_1_1_input_impl}\index{sf::priv::InputImpl@{sf::priv::InputImpl}}
+
+
+i\+OS implementation of inputs (keyboard + mouse)  
+
+
+
+
+{\ttfamily \#include $<$Input\+Impl.\+hpp$>$}
+
+
+
+Diagram współpracy dla sf\+::priv\+::Input\+Impl\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classsf_1_1priv_1_1_input_impl__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Statyczne metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_a667e4652799ef6b1737ace2922630e09}{is\+Key\+Pressed}} (\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} key)
+\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_aa2438ddd5fef506d663a25a01371bfb5}{is\+Key\+Pressed}} (\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} code)
+\item 
+static \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_a03d0099d1e9af7df26e6f7ea4cce5068}{localize}} (\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} code)
+\begin{DoxyCompactList}\small\item\em Localize a physical key to a logical one.   \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_a40018b38d4a50a77b09684b996576b2f}{delocalize}} (\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} key)
+\begin{DoxyCompactList}\small\item\em Identify the physical key corresponding to a logical one.   \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classsf_1_1_string}{String}} \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_a00f1777e1e387d4467bb0cb47d346add}{get\+Description}} (\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} code)
+\begin{DoxyCompactList}\small\item\em Provide a string representation for a given scancode.   \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_a742edb44cb77f2970b5fc331d74241a7}{set\+Virtual\+Keyboard\+Visible}} (bool visible)
+\begin{DoxyCompactList}\small\item\em Show or hide the virtual keyboard.   \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_a7300409f00d469838bcea0d158fca206}{is\+Mouse\+Button\+Pressed}} (\mbox{\hyperlink{classsf_1_1_mouse_a4fb128be433f9aafe66bc0c605daaa90}{Mouse\+::\+Button}} \mbox{\hyperlink{_win32_8cpp_a92decbf8642d08b3993016451fdad8df}{button}})
+\begin{DoxyCompactList}\small\item\em Check if a mouse button is pressed. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_a1eefcc4765c84d959a56e3b4c818248b}{get\+Mouse\+Position}} ()
+\begin{DoxyCompactList}\small\item\em Get the current position of the mouse in desktop coordinates. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_a074488faaed6e7e73fe883d0cf025de3}{get\+Mouse\+Position}} (const \mbox{\hyperlink{classsf_1_1_window_base}{Window\+Base}} \&relative\+To)
+\begin{DoxyCompactList}\small\item\em Get the current position of the mouse in window coordinates. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_af0d8562ff84d71e50fb6dbc5bcd4f6f9}{set\+Mouse\+Position}} (const \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \&position)
+\begin{DoxyCompactList}\small\item\em Set the current position of the mouse in desktop coordinates. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_ae4a0638ccf9372772a77f95b18a02c32}{set\+Mouse\+Position}} (const \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \&position, const \mbox{\hyperlink{classsf_1_1_window_base}{Window\+Base}} \&relative\+To)
+\begin{DoxyCompactList}\small\item\em Set the current position of the mouse in window coordinates. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_a44f5e902ab67f297b99dab379199e3d2}{is\+Touch\+Down}} (unsigned int finger)
+\begin{DoxyCompactList}\small\item\em Check if a touch event is currently down. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_aede071143f664cb808dae28f956d5ced}{get\+Touch\+Position}} (unsigned int finger)
+\begin{DoxyCompactList}\small\item\em Get the current position of a touch in desktop coordinates. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_ae5679ab5eb9697de4ce62b42556b6872}{get\+Touch\+Position}} (unsigned int finger, const \mbox{\hyperlink{classsf_1_1_window_base}{Window\+Base}} \&relative\+To)
+\begin{DoxyCompactList}\small\item\em Get the current position of a touch in window coordinates. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_ae5c86fa42857d35943c83a6381b5889a}{is\+Key\+Pressed}} (\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} key)
+\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_ac55be0ad763994c71fdd6bf779abf306}{is\+Key\+Pressed}} (\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} code)
+\item 
+static \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_a2aa43c124fa95de999fbcc7c0a8bd951}{localize}} (\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} code)
+\begin{DoxyCompactList}\small\item\em Localize a physical key to a logical one.   \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_ad631f3baa9c59bf6e388145ad0a44b80}{delocalize}} (\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} key)
+\begin{DoxyCompactList}\small\item\em Identify the physical key corresponding to a logical one.   \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classsf_1_1_string}{String}} \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_abcbbbfbd8570a57d5ddd1666a48a7085}{get\+Description}} (\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} code)
+\begin{DoxyCompactList}\small\item\em Provide a string representation for a given scancode.   \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_abfa3c573f19de6769602269a62692b95}{set\+Virtual\+Keyboard\+Visible}} (bool visible)
+\begin{DoxyCompactList}\small\item\em Show or hide the virtual keyboard.   \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_a077e925a19e4f03d34485df55cc4fe01}{is\+Mouse\+Button\+Pressed}} (\mbox{\hyperlink{classsf_1_1_mouse_a4fb128be433f9aafe66bc0c605daaa90}{Mouse\+::\+Button}} \mbox{\hyperlink{_win32_8cpp_a92decbf8642d08b3993016451fdad8df}{button}})
+\begin{DoxyCompactList}\small\item\em Check if a mouse button is pressed. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_a8976c93cd6ae547583e977572e22a2a8}{get\+Mouse\+Position}} ()
+\begin{DoxyCompactList}\small\item\em Get the current position of the mouse in desktop coordinates. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_a783243fbd5022234be34cdc0812cd184}{get\+Mouse\+Position}} (const \mbox{\hyperlink{classsf_1_1_window_base}{Window\+Base}} \&relative\+To)
+\begin{DoxyCompactList}\small\item\em Get the current position of the mouse in window coordinates. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_a3026080ff6f4c1be4a4dc3459cae2ebb}{set\+Mouse\+Position}} (const \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \&position)
+\begin{DoxyCompactList}\small\item\em Set the current position of the mouse in desktop coordinates. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_adc737f03cc2cbeedf8fedcebdd2db1f7}{set\+Mouse\+Position}} (const \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \&position, const \mbox{\hyperlink{classsf_1_1_window_base}{Window\+Base}} \&relative\+To)
+\begin{DoxyCompactList}\small\item\em Set the current position of the mouse in window coordinates. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_a532ce9bf8fb379633d1765662e8ec3ed}{is\+Touch\+Down}} (unsigned int finger)
+\begin{DoxyCompactList}\small\item\em Check if a touch event is currently down. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_ae830a1752861900124a9eb30e353a2b2}{get\+Touch\+Position}} (unsigned int finger)
+\begin{DoxyCompactList}\small\item\em Get the current position of a touch in desktop coordinates. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_a58944c6217419de2a016dc6d954a2165}{get\+Touch\+Position}} (unsigned int finger, const \mbox{\hyperlink{classsf_1_1_window_base}{Window\+Base}} \&relative\+To)
+\begin{DoxyCompactList}\small\item\em Get the current position of a touch in window coordinates. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_ae5c86fa42857d35943c83a6381b5889a}{is\+Key\+Pressed}} (\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} key)
+\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_ac55be0ad763994c71fdd6bf779abf306}{is\+Key\+Pressed}} (\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} code)
+\item 
+static \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_a2aa43c124fa95de999fbcc7c0a8bd951}{localize}} (\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} code)
+\begin{DoxyCompactList}\small\item\em Localize a physical key to a logical one.   \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_ad631f3baa9c59bf6e388145ad0a44b80}{delocalize}} (\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} key)
+\begin{DoxyCompactList}\small\item\em Identify the physical key corresponding to a logical one.   \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classsf_1_1_string}{String}} \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_abcbbbfbd8570a57d5ddd1666a48a7085}{get\+Description}} (\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} code)
+\begin{DoxyCompactList}\small\item\em Provide a string representation for a given scancode.   \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_abfa3c573f19de6769602269a62692b95}{set\+Virtual\+Keyboard\+Visible}} (bool visible)
+\begin{DoxyCompactList}\small\item\em Show or hide the virtual keyboard.   \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_a077e925a19e4f03d34485df55cc4fe01}{is\+Mouse\+Button\+Pressed}} (\mbox{\hyperlink{classsf_1_1_mouse_a4fb128be433f9aafe66bc0c605daaa90}{Mouse\+::\+Button}} \mbox{\hyperlink{_win32_8cpp_a92decbf8642d08b3993016451fdad8df}{button}})
+\begin{DoxyCompactList}\small\item\em Check if a mouse button is pressed. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_a8976c93cd6ae547583e977572e22a2a8}{get\+Mouse\+Position}} ()
+\begin{DoxyCompactList}\small\item\em Get the current position of the mouse in desktop coordinates. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_a783243fbd5022234be34cdc0812cd184}{get\+Mouse\+Position}} (const \mbox{\hyperlink{classsf_1_1_window_base}{Window\+Base}} \&relative\+To)
+\begin{DoxyCompactList}\small\item\em Get the current position of the mouse in window coordinates. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_a3026080ff6f4c1be4a4dc3459cae2ebb}{set\+Mouse\+Position}} (const \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \&position)
+\begin{DoxyCompactList}\small\item\em Set the current position of the mouse in desktop coordinates. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_adc737f03cc2cbeedf8fedcebdd2db1f7}{set\+Mouse\+Position}} (const \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \&position, const \mbox{\hyperlink{classsf_1_1_window_base}{Window\+Base}} \&relative\+To)
+\begin{DoxyCompactList}\small\item\em Set the current position of the mouse in window coordinates. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_a532ce9bf8fb379633d1765662e8ec3ed}{is\+Touch\+Down}} (unsigned int finger)
+\begin{DoxyCompactList}\small\item\em Check if a touch event is currently down. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_ae830a1752861900124a9eb30e353a2b2}{get\+Touch\+Position}} (unsigned int finger)
+\begin{DoxyCompactList}\small\item\em Get the current position of a touch in desktop coordinates. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_a58944c6217419de2a016dc6d954a2165}{get\+Touch\+Position}} (unsigned int finger, const \mbox{\hyperlink{classsf_1_1_window_base}{Window\+Base}} \&relative\+To)
+\begin{DoxyCompactList}\small\item\em Get the current position of a touch in window coordinates. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_ae5c86fa42857d35943c83a6381b5889a}{is\+Key\+Pressed}} (\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} key)
+\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_ac55be0ad763994c71fdd6bf779abf306}{is\+Key\+Pressed}} (\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} code)
+\item 
+static \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_a2aa43c124fa95de999fbcc7c0a8bd951}{localize}} (\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} code)
+\begin{DoxyCompactList}\small\item\em Localize a physical key to a logical one.   \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_ad631f3baa9c59bf6e388145ad0a44b80}{delocalize}} (\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} key)
+\begin{DoxyCompactList}\small\item\em Identify the physical key corresponding to a logical one.   \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classsf_1_1_string}{String}} \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_abcbbbfbd8570a57d5ddd1666a48a7085}{get\+Description}} (\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} code)
+\begin{DoxyCompactList}\small\item\em Provide a string representation for a given scancode.   \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_abfa3c573f19de6769602269a62692b95}{set\+Virtual\+Keyboard\+Visible}} (bool visible)
+\begin{DoxyCompactList}\small\item\em Show or hide the virtual keyboard.   \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_a077e925a19e4f03d34485df55cc4fe01}{is\+Mouse\+Button\+Pressed}} (\mbox{\hyperlink{classsf_1_1_mouse_a4fb128be433f9aafe66bc0c605daaa90}{Mouse\+::\+Button}} \mbox{\hyperlink{_win32_8cpp_a92decbf8642d08b3993016451fdad8df}{button}})
+\begin{DoxyCompactList}\small\item\em Check if a mouse button is pressed. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_a8976c93cd6ae547583e977572e22a2a8}{get\+Mouse\+Position}} ()
+\begin{DoxyCompactList}\small\item\em Get the current position of the mouse in desktop coordinates. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_a783243fbd5022234be34cdc0812cd184}{get\+Mouse\+Position}} (const \mbox{\hyperlink{classsf_1_1_window_base}{Window\+Base}} \&relative\+To)
+\begin{DoxyCompactList}\small\item\em Get the current position of the mouse in window coordinates. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_a3026080ff6f4c1be4a4dc3459cae2ebb}{set\+Mouse\+Position}} (const \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \&position)
+\begin{DoxyCompactList}\small\item\em Set the current position of the mouse in desktop coordinates. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_adc737f03cc2cbeedf8fedcebdd2db1f7}{set\+Mouse\+Position}} (const \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \&position, const \mbox{\hyperlink{classsf_1_1_window_base}{Window\+Base}} \&relative\+To)
+\begin{DoxyCompactList}\small\item\em Set the current position of the mouse in window coordinates. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_a532ce9bf8fb379633d1765662e8ec3ed}{is\+Touch\+Down}} (unsigned int finger)
+\begin{DoxyCompactList}\small\item\em Check if a touch event is currently down. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_ae830a1752861900124a9eb30e353a2b2}{get\+Touch\+Position}} (unsigned int finger)
+\begin{DoxyCompactList}\small\item\em Get the current position of a touch in desktop coordinates. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_a58944c6217419de2a016dc6d954a2165}{get\+Touch\+Position}} (unsigned int finger, const \mbox{\hyperlink{classsf_1_1_window_base}{Window\+Base}} \&relative\+To)
+\begin{DoxyCompactList}\small\item\em Get the current position of a touch in window coordinates. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_ae5c86fa42857d35943c83a6381b5889a}{is\+Key\+Pressed}} (\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} key)
+\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_ac55be0ad763994c71fdd6bf779abf306}{is\+Key\+Pressed}} (\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} code)
+\item 
+static \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_a2aa43c124fa95de999fbcc7c0a8bd951}{localize}} (\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} code)
+\begin{DoxyCompactList}\small\item\em Localize a physical key to a logical one.   \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_ad631f3baa9c59bf6e388145ad0a44b80}{delocalize}} (\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} key)
+\begin{DoxyCompactList}\small\item\em Identify the physical key corresponding to a logical one.   \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classsf_1_1_string}{String}} \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_abcbbbfbd8570a57d5ddd1666a48a7085}{get\+Description}} (\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} code)
+\begin{DoxyCompactList}\small\item\em Provide a string representation for a given scancode.   \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_abfa3c573f19de6769602269a62692b95}{set\+Virtual\+Keyboard\+Visible}} (bool visible)
+\begin{DoxyCompactList}\small\item\em Show or hide the virtual keyboard.   \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_a077e925a19e4f03d34485df55cc4fe01}{is\+Mouse\+Button\+Pressed}} (\mbox{\hyperlink{classsf_1_1_mouse_a4fb128be433f9aafe66bc0c605daaa90}{Mouse\+::\+Button}} \mbox{\hyperlink{_win32_8cpp_a92decbf8642d08b3993016451fdad8df}{button}})
+\begin{DoxyCompactList}\small\item\em Check if a mouse button is pressed. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_a8976c93cd6ae547583e977572e22a2a8}{get\+Mouse\+Position}} ()
+\begin{DoxyCompactList}\small\item\em Get the current position of the mouse in desktop coordinates. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_a783243fbd5022234be34cdc0812cd184}{get\+Mouse\+Position}} (const \mbox{\hyperlink{classsf_1_1_window_base}{Window\+Base}} \&relative\+To)
+\begin{DoxyCompactList}\small\item\em Get the current position of the mouse in window coordinates. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_a3026080ff6f4c1be4a4dc3459cae2ebb}{set\+Mouse\+Position}} (const \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \&position)
+\begin{DoxyCompactList}\small\item\em Set the current position of the mouse in desktop coordinates. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_adc737f03cc2cbeedf8fedcebdd2db1f7}{set\+Mouse\+Position}} (const \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \&position, const \mbox{\hyperlink{classsf_1_1_window_base}{Window\+Base}} \&relative\+To)
+\begin{DoxyCompactList}\small\item\em Set the current position of the mouse in window coordinates. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_a532ce9bf8fb379633d1765662e8ec3ed}{is\+Touch\+Down}} (unsigned int finger)
+\begin{DoxyCompactList}\small\item\em Check if a touch event is currently down. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_ae830a1752861900124a9eb30e353a2b2}{get\+Touch\+Position}} (unsigned int finger)
+\begin{DoxyCompactList}\small\item\em Get the current position of a touch in desktop coordinates. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_a58944c6217419de2a016dc6d954a2165}{get\+Touch\+Position}} (unsigned int finger, const \mbox{\hyperlink{classsf_1_1_window_base}{Window\+Base}} \&relative\+To)
+\begin{DoxyCompactList}\small\item\em Get the current position of a touch in window coordinates. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_ae5c86fa42857d35943c83a6381b5889a}{is\+Key\+Pressed}} (\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} key)
+\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_ac55be0ad763994c71fdd6bf779abf306}{is\+Key\+Pressed}} (\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} code)
+\item 
+static \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_a2aa43c124fa95de999fbcc7c0a8bd951}{localize}} (\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} code)
+\begin{DoxyCompactList}\small\item\em Localize a physical key to a logical one.   \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_ad631f3baa9c59bf6e388145ad0a44b80}{delocalize}} (\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} key)
+\begin{DoxyCompactList}\small\item\em Identify the physical key corresponding to a logical one.   \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classsf_1_1_string}{String}} \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_abcbbbfbd8570a57d5ddd1666a48a7085}{get\+Description}} (\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} code)
+\begin{DoxyCompactList}\small\item\em Provide a string representation for a given scancode.   \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_abfa3c573f19de6769602269a62692b95}{set\+Virtual\+Keyboard\+Visible}} (bool visible)
+\begin{DoxyCompactList}\small\item\em Show or hide the virtual keyboard.   \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_a077e925a19e4f03d34485df55cc4fe01}{is\+Mouse\+Button\+Pressed}} (\mbox{\hyperlink{classsf_1_1_mouse_a4fb128be433f9aafe66bc0c605daaa90}{Mouse\+::\+Button}} \mbox{\hyperlink{_win32_8cpp_a92decbf8642d08b3993016451fdad8df}{button}})
+\begin{DoxyCompactList}\small\item\em Check if a mouse button is pressed. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_a8976c93cd6ae547583e977572e22a2a8}{get\+Mouse\+Position}} ()
+\begin{DoxyCompactList}\small\item\em Get the current position of the mouse in desktop coordinates. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_a783243fbd5022234be34cdc0812cd184}{get\+Mouse\+Position}} (const \mbox{\hyperlink{classsf_1_1_window_base}{Window\+Base}} \&relative\+To)
+\begin{DoxyCompactList}\small\item\em Get the current position of the mouse in window coordinates. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_a3026080ff6f4c1be4a4dc3459cae2ebb}{set\+Mouse\+Position}} (const \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \&position)
+\begin{DoxyCompactList}\small\item\em Set the current position of the mouse in desktop coordinates. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_adc737f03cc2cbeedf8fedcebdd2db1f7}{set\+Mouse\+Position}} (const \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \&position, const \mbox{\hyperlink{classsf_1_1_window_base}{Window\+Base}} \&relative\+To)
+\begin{DoxyCompactList}\small\item\em Set the current position of the mouse in window coordinates. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_a532ce9bf8fb379633d1765662e8ec3ed}{is\+Touch\+Down}} (unsigned int finger)
+\begin{DoxyCompactList}\small\item\em Check if a touch event is currently down. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_ae830a1752861900124a9eb30e353a2b2}{get\+Touch\+Position}} (unsigned int finger)
+\begin{DoxyCompactList}\small\item\em Get the current position of a touch in desktop coordinates. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_a58944c6217419de2a016dc6d954a2165}{get\+Touch\+Position}} (unsigned int finger, const \mbox{\hyperlink{classsf_1_1_window_base}{Window\+Base}} \&relative\+To)
+\begin{DoxyCompactList}\small\item\em Get the current position of a touch in window coordinates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Statyczne metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_aabcb64ac8f63d7b023ced75604baba4f}{check\+Event}} (\mbox{\hyperlink{classsf_1_1_event}{sf\+::\+Event}} \&event)
+\begin{DoxyCompactList}\small\item\em Fetch input event from event queue. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_af7c30501d8bb797892c0dcead172ebc5}{set\+Terminal\+Config}} ()
+\begin{DoxyCompactList}\small\item\em Backup terminal configuration and disable console feedback. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_ad0aff577769fcf6f403282efbe1a7b37}{restore\+Terminal\+Config}} ()
+\begin{DoxyCompactList}\small\item\em Restore terminal configuration from backup. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_a77e7b78082c571caa4bb6b4dd994dc71}{ensure\+Mappings}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Statyczne atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_ad04302fb4e6d2c5393cb5eef9dca9c25}{m\+\_\+key\+To\+Scancode\+Mapping}} \mbox{[}\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a93e6ffa0320fe9b2f29aec14a58be36b}{Keyboard\+::\+Key\+Count}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Mapping from Key to Scancode. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_a3a39f59797fb3af404325dca6c414a7e}{m\+\_\+scancode\+To\+Key\+Mapping}} \mbox{[}\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875a28c5ad8524e1e653b43440e660d441d0}{Keyboard\+::\+Scan\+::\+Scancode\+Count}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Mapping from Scancode to Key. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Przyjaciele}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_input_impl_acbbedfc6c1b2f9e476412aac518629a1}{Window\+Impl\+DRM}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+i\+OS implementation of inputs (keyboard + mouse) 
+
+Windows implementation of inputs (keyboard + mouse)
+
+Linux (X11) implementation of inputs (keyboard + mouse)
+
+Mac OS X implementation of inputs (keyboard + mouse)
+
+Linux (DRM) implementation of inputs (keyboard + mouse) 
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_aabcb64ac8f63d7b023ced75604baba4f}\label{classsf_1_1priv_1_1_input_impl_aabcb64ac8f63d7b023ced75604baba4f} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!checkEvent@{checkEvent}}
+\index{checkEvent@{checkEvent}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{checkEvent()}{checkEvent()}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Input\+Impl\+::check\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_event}{sf\+::\+Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Fetch input event from event queue. 
+
+\begin{DoxyReturn}{Zwraca}
+False if event queue is empty 
+\end{DoxyReturn}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{classsf_1_1priv_1_1_input_impl_aabcb64ac8f63d7b023ced75604baba4f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_a40018b38d4a50a77b09684b996576b2f}\label{classsf_1_1priv_1_1_input_impl_a40018b38d4a50a77b09684b996576b2f} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!delocalize@{delocalize}}
+\index{delocalize@{delocalize}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{delocalize()}{delocalize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} sf\+::priv\+::\+Input\+Impl\+::delocalize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}}}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Identify the physical key corresponding to a logical one.   
+
+
+\begin{DoxyParams}{Parametry}
+{\em key} & Key to "{}delocalize"{}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+The scancode corresponding to the key under the current keyboard layout used by the operating system, or \doxylink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875af29c5f0133653ccd3cbc947b51e97895}{sf\+::\+Keyboard\+::\+Scan\+::\+Unknown} when the key cannot be mapped to a \doxylink{classsf_1_1_keyboard_a9683c174456f62eb0faf3371c28f12d2}{sf\+::\+Keyboard\+::\+Scancode}.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{Zobacz również}
+\doxylink{classsf_1_1priv_1_1_input_impl_a03d0099d1e9af7df26e6f7ea4cce5068}{localize}   
+\end{DoxySeeAlso}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classsf_1_1priv_1_1_input_impl_a40018b38d4a50a77b09684b996576b2f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_ad631f3baa9c59bf6e388145ad0a44b80}\label{classsf_1_1priv_1_1_input_impl_ad631f3baa9c59bf6e388145ad0a44b80} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!delocalize@{delocalize}}
+\index{delocalize@{delocalize}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{delocalize()}{delocalize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} sf\+::priv\+::\+Input\+Impl\+::delocalize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}}}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Identify the physical key corresponding to a logical one.   
+
+
+\begin{DoxyParams}{Parametry}
+{\em key} & Key to "{}delocalize"{}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+The scancode corresponding to the key under the current keyboard layout used by the operating system, or \doxylink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875af29c5f0133653ccd3cbc947b51e97895}{sf\+::\+Keyboard\+::\+Scan\+::\+Unknown} when the key cannot be mapped to a \doxylink{classsf_1_1_keyboard_a9683c174456f62eb0faf3371c28f12d2}{sf\+::\+Keyboard\+::\+Scancode}.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{Zobacz również}
+\doxylink{classsf_1_1priv_1_1_input_impl_a03d0099d1e9af7df26e6f7ea4cce5068}{localize}   
+\end{DoxySeeAlso}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_ad631f3baa9c59bf6e388145ad0a44b80}\label{classsf_1_1priv_1_1_input_impl_ad631f3baa9c59bf6e388145ad0a44b80} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!delocalize@{delocalize}}
+\index{delocalize@{delocalize}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{delocalize()}{delocalize()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} sf\+::priv\+::\+Input\+Impl\+::delocalize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}}}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Identify the physical key corresponding to a logical one.   
+
+
+\begin{DoxyParams}{Parametry}
+{\em key} & Key to "{}delocalize"{}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+The scancode corresponding to the key under the current keyboard layout used by the operating system, or \doxylink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875af29c5f0133653ccd3cbc947b51e97895}{sf\+::\+Keyboard\+::\+Scan\+::\+Unknown} when the key cannot be mapped to a \doxylink{classsf_1_1_keyboard_a9683c174456f62eb0faf3371c28f12d2}{sf\+::\+Keyboard\+::\+Scancode}.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{Zobacz również}
+\doxylink{classsf_1_1priv_1_1_input_impl_a03d0099d1e9af7df26e6f7ea4cce5068}{localize}   
+\end{DoxySeeAlso}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_ad631f3baa9c59bf6e388145ad0a44b80}\label{classsf_1_1priv_1_1_input_impl_ad631f3baa9c59bf6e388145ad0a44b80} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!delocalize@{delocalize}}
+\index{delocalize@{delocalize}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{delocalize()}{delocalize()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} sf\+::priv\+::\+Input\+Impl\+::delocalize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}}}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Identify the physical key corresponding to a logical one.   
+
+
+\begin{DoxyParams}{Parametry}
+{\em key} & Key to "{}delocalize"{}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+The scancode corresponding to the key under the current keyboard layout used by the operating system, or \doxylink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875af29c5f0133653ccd3cbc947b51e97895}{sf\+::\+Keyboard\+::\+Scan\+::\+Unknown} when the key cannot be mapped to a \doxylink{classsf_1_1_keyboard_a9683c174456f62eb0faf3371c28f12d2}{sf\+::\+Keyboard\+::\+Scancode}.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{Zobacz również}
+\doxylink{classsf_1_1priv_1_1_input_impl_a03d0099d1e9af7df26e6f7ea4cce5068}{localize}   
+\end{DoxySeeAlso}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_ad631f3baa9c59bf6e388145ad0a44b80}\label{classsf_1_1priv_1_1_input_impl_ad631f3baa9c59bf6e388145ad0a44b80} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!delocalize@{delocalize}}
+\index{delocalize@{delocalize}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{delocalize()}{delocalize()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} sf\+::priv\+::\+Input\+Impl\+::delocalize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}}}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Identify the physical key corresponding to a logical one.   
+
+
+\begin{DoxyParams}{Parametry}
+{\em key} & Key to "{}delocalize"{}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+The scancode corresponding to the key under the current keyboard layout used by the operating system, or \doxylink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875af29c5f0133653ccd3cbc947b51e97895}{sf\+::\+Keyboard\+::\+Scan\+::\+Unknown} when the key cannot be mapped to a \doxylink{classsf_1_1_keyboard_a9683c174456f62eb0faf3371c28f12d2}{sf\+::\+Keyboard\+::\+Scancode}.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{Zobacz również}
+\doxylink{classsf_1_1priv_1_1_input_impl_a03d0099d1e9af7df26e6f7ea4cce5068}{localize}   
+\end{DoxySeeAlso}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_ad631f3baa9c59bf6e388145ad0a44b80}\label{classsf_1_1priv_1_1_input_impl_ad631f3baa9c59bf6e388145ad0a44b80} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!delocalize@{delocalize}}
+\index{delocalize@{delocalize}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{delocalize()}{delocalize()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} sf\+::priv\+::\+Input\+Impl\+::delocalize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}}}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Identify the physical key corresponding to a logical one.   
+
+
+\begin{DoxyParams}{Parametry}
+{\em key} & Key to "{}delocalize"{}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+The scancode corresponding to the key under the current keyboard layout used by the operating system, or \doxylink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875af29c5f0133653ccd3cbc947b51e97895}{sf\+::\+Keyboard\+::\+Scan\+::\+Unknown} when the key cannot be mapped to a \doxylink{classsf_1_1_keyboard_a9683c174456f62eb0faf3371c28f12d2}{sf\+::\+Keyboard\+::\+Scancode}.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{Zobacz również}
+\doxylink{classsf_1_1priv_1_1_input_impl_a03d0099d1e9af7df26e6f7ea4cce5068}{localize}   
+\end{DoxySeeAlso}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_a77e7b78082c571caa4bb6b4dd994dc71}\label{classsf_1_1priv_1_1_input_impl_a77e7b78082c571caa4bb6b4dd994dc71} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!ensureMappings@{ensureMappings}}
+\index{ensureMappings@{ensureMappings}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{ensureMappings()}{ensureMappings()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Input\+Impl\+::ensure\+Mappings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Ensure the mappings are generated from/to Key and Scancode. Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_input_impl_a77e7b78082c571caa4bb6b4dd994dc71_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_a00f1777e1e387d4467bb0cb47d346add}\label{classsf_1_1priv_1_1_input_impl_a00f1777e1e387d4467bb0cb47d346add} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!getDescription@{getDescription}}
+\index{getDescription@{getDescription}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{getDescription()}{getDescription()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1_string}{String}} sf\+::priv\+::\+Input\+Impl\+::get\+Description (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}}}]{code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Provide a string representation for a given scancode.   
+
+The returned string is a short, non-\/technical description of the key represented with the given scancode. Most effectively used in user interfaces, as the description for the key takes the users keyboard layout into consideration.
+
+\begin{DoxyWarning}{Ostrzeżenie}
+The result is OS-\/dependent\+: for example, \doxylink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875a5e1b12c4476475396c6f04eccbbf04f7}{sf\+::\+Keyboard\+::\+Scan\+::\+LSystem} is "{}\+Left Meta"{} on Linux, "{}\+Left Windows"{} on Windows and "{}\+Left Command"{} on mac\+OS.
+\end{DoxyWarning}
+The current keyboard layout set by the operating system is used to interpret the scancode\+: for example, \doxylink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142ab50635b9c913837d1bd4453eec7cb506}{sf\+::\+Keyboard\+::\+Semicolon} is mapped to "{};"{} for layout and to "{}é"{} for others.
+
+\begin{DoxyReturn}{Zwraca}
+The localized description of the code   
+\end{DoxyReturn}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{classsf_1_1priv_1_1_input_impl_a00f1777e1e387d4467bb0cb47d346add_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_abcbbbfbd8570a57d5ddd1666a48a7085}\label{classsf_1_1priv_1_1_input_impl_abcbbbfbd8570a57d5ddd1666a48a7085} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!getDescription@{getDescription}}
+\index{getDescription@{getDescription}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{getDescription()}{getDescription()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classsf_1_1_string}{String}} sf\+::priv\+::\+Input\+Impl\+::get\+Description (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}}}]{code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Provide a string representation for a given scancode.   
+
+The returned string is a short, non-\/technical description of the key represented with the given scancode. Most effectively used in user interfaces, as the description for the key takes the users keyboard layout into consideration.
+
+\begin{DoxyWarning}{Ostrzeżenie}
+The result is OS-\/dependent\+: for example, \doxylink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875a5e1b12c4476475396c6f04eccbbf04f7}{sf\+::\+Keyboard\+::\+Scan\+::\+LSystem} is "{}\+Left Meta"{} on Linux, "{}\+Left Windows"{} on Windows and "{}\+Left Command"{} on mac\+OS.
+\end{DoxyWarning}
+The current keyboard layout set by the operating system is used to interpret the scancode\+: for example, \doxylink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142ab50635b9c913837d1bd4453eec7cb506}{sf\+::\+Keyboard\+::\+Semicolon} is mapped to "{};"{} for layout and to "{}é"{} for others.
+
+\begin{DoxyReturn}{Zwraca}
+The localized description of the code   
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_abcbbbfbd8570a57d5ddd1666a48a7085}\label{classsf_1_1priv_1_1_input_impl_abcbbbfbd8570a57d5ddd1666a48a7085} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!getDescription@{getDescription}}
+\index{getDescription@{getDescription}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{getDescription()}{getDescription()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classsf_1_1_string}{String}} sf\+::priv\+::\+Input\+Impl\+::get\+Description (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}}}]{code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Provide a string representation for a given scancode.   
+
+The returned string is a short, non-\/technical description of the key represented with the given scancode. Most effectively used in user interfaces, as the description for the key takes the users keyboard layout into consideration.
+
+\begin{DoxyWarning}{Ostrzeżenie}
+The result is OS-\/dependent\+: for example, \doxylink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875a5e1b12c4476475396c6f04eccbbf04f7}{sf\+::\+Keyboard\+::\+Scan\+::\+LSystem} is "{}\+Left Meta"{} on Linux, "{}\+Left Windows"{} on Windows and "{}\+Left Command"{} on mac\+OS.
+\end{DoxyWarning}
+The current keyboard layout set by the operating system is used to interpret the scancode\+: for example, \doxylink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142ab50635b9c913837d1bd4453eec7cb506}{sf\+::\+Keyboard\+::\+Semicolon} is mapped to "{};"{} for layout and to "{}é"{} for others.
+
+\begin{DoxyReturn}{Zwraca}
+The localized description of the code   
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_abcbbbfbd8570a57d5ddd1666a48a7085}\label{classsf_1_1priv_1_1_input_impl_abcbbbfbd8570a57d5ddd1666a48a7085} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!getDescription@{getDescription}}
+\index{getDescription@{getDescription}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{getDescription()}{getDescription()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classsf_1_1_string}{String}} sf\+::priv\+::\+Input\+Impl\+::get\+Description (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}}}]{code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Provide a string representation for a given scancode.   
+
+The returned string is a short, non-\/technical description of the key represented with the given scancode. Most effectively used in user interfaces, as the description for the key takes the users keyboard layout into consideration.
+
+\begin{DoxyWarning}{Ostrzeżenie}
+The result is OS-\/dependent\+: for example, \doxylink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875a5e1b12c4476475396c6f04eccbbf04f7}{sf\+::\+Keyboard\+::\+Scan\+::\+LSystem} is "{}\+Left Meta"{} on Linux, "{}\+Left Windows"{} on Windows and "{}\+Left Command"{} on mac\+OS.
+\end{DoxyWarning}
+The current keyboard layout set by the operating system is used to interpret the scancode\+: for example, \doxylink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142ab50635b9c913837d1bd4453eec7cb506}{sf\+::\+Keyboard\+::\+Semicolon} is mapped to "{};"{} for layout and to "{}é"{} for others.
+
+\begin{DoxyReturn}{Zwraca}
+The localized description of the code   
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_abcbbbfbd8570a57d5ddd1666a48a7085}\label{classsf_1_1priv_1_1_input_impl_abcbbbfbd8570a57d5ddd1666a48a7085} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!getDescription@{getDescription}}
+\index{getDescription@{getDescription}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{getDescription()}{getDescription()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classsf_1_1_string}{String}} sf\+::priv\+::\+Input\+Impl\+::get\+Description (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}}}]{code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Provide a string representation for a given scancode.   
+
+The returned string is a short, non-\/technical description of the key represented with the given scancode. Most effectively used in user interfaces, as the description for the key takes the users keyboard layout into consideration.
+
+\begin{DoxyWarning}{Ostrzeżenie}
+The result is OS-\/dependent\+: for example, \doxylink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875a5e1b12c4476475396c6f04eccbbf04f7}{sf\+::\+Keyboard\+::\+Scan\+::\+LSystem} is "{}\+Left Meta"{} on Linux, "{}\+Left Windows"{} on Windows and "{}\+Left Command"{} on mac\+OS.
+\end{DoxyWarning}
+The current keyboard layout set by the operating system is used to interpret the scancode\+: for example, \doxylink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142ab50635b9c913837d1bd4453eec7cb506}{sf\+::\+Keyboard\+::\+Semicolon} is mapped to "{};"{} for layout and to "{}é"{} for others.
+
+\begin{DoxyReturn}{Zwraca}
+The localized description of the code   
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_abcbbbfbd8570a57d5ddd1666a48a7085}\label{classsf_1_1priv_1_1_input_impl_abcbbbfbd8570a57d5ddd1666a48a7085} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!getDescription@{getDescription}}
+\index{getDescription@{getDescription}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{getDescription()}{getDescription()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classsf_1_1_string}{String}} sf\+::priv\+::\+Input\+Impl\+::get\+Description (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}}}]{code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Provide a string representation for a given scancode.   
+
+The returned string is a short, non-\/technical description of the key represented with the given scancode. Most effectively used in user interfaces, as the description for the key takes the users keyboard layout into consideration.
+
+\begin{DoxyWarning}{Ostrzeżenie}
+The result is OS-\/dependent\+: for example, \doxylink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875a5e1b12c4476475396c6f04eccbbf04f7}{sf\+::\+Keyboard\+::\+Scan\+::\+LSystem} is "{}\+Left Meta"{} on Linux, "{}\+Left Windows"{} on Windows and "{}\+Left Command"{} on mac\+OS.
+\end{DoxyWarning}
+The current keyboard layout set by the operating system is used to interpret the scancode\+: for example, \doxylink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142ab50635b9c913837d1bd4453eec7cb506}{sf\+::\+Keyboard\+::\+Semicolon} is mapped to "{};"{} for layout and to "{}é"{} for others.
+
+\begin{DoxyReturn}{Zwraca}
+The localized description of the code   
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_a1eefcc4765c84d959a56e3b4c818248b}\label{classsf_1_1priv_1_1_input_impl_a1eefcc4765c84d959a56e3b4c818248b} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!getMousePosition@{getMousePosition}}
+\index{getMousePosition@{getMousePosition}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{getMousePosition()}{getMousePosition()}\hspace{0.1cm}{\footnotesize\ttfamily [1/12]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} sf\+::priv\+::\+Input\+Impl\+::get\+Mouse\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the current position of the mouse in desktop coordinates. 
+
+This function returns the current position of the mouse cursor, in global (desktop) coordinates.
+
+\begin{DoxyReturn}{Zwraca}
+Current position of the mouse 
+\end{DoxyReturn}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_input_impl_a1eefcc4765c84d959a56e3b4c818248b_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_input_impl_a1eefcc4765c84d959a56e3b4c818248b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_a8976c93cd6ae547583e977572e22a2a8}\label{classsf_1_1priv_1_1_input_impl_a8976c93cd6ae547583e977572e22a2a8} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!getMousePosition@{getMousePosition}}
+\index{getMousePosition@{getMousePosition}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{getMousePosition()}{getMousePosition()}\hspace{0.1cm}{\footnotesize\ttfamily [2/12]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} sf\+::priv\+::\+Input\+Impl\+::get\+Mouse\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the current position of the mouse in desktop coordinates. 
+
+This function returns the current position of the mouse cursor, in global (desktop) coordinates.
+
+\begin{DoxyReturn}{Zwraca}
+Current position of the mouse 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_a8976c93cd6ae547583e977572e22a2a8}\label{classsf_1_1priv_1_1_input_impl_a8976c93cd6ae547583e977572e22a2a8} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!getMousePosition@{getMousePosition}}
+\index{getMousePosition@{getMousePosition}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{getMousePosition()}{getMousePosition()}\hspace{0.1cm}{\footnotesize\ttfamily [3/12]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} sf\+::priv\+::\+Input\+Impl\+::get\+Mouse\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the current position of the mouse in desktop coordinates. 
+
+This function returns the current position of the mouse cursor, in global (desktop) coordinates.
+
+\begin{DoxyReturn}{Zwraca}
+Current position of the mouse 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_a8976c93cd6ae547583e977572e22a2a8}\label{classsf_1_1priv_1_1_input_impl_a8976c93cd6ae547583e977572e22a2a8} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!getMousePosition@{getMousePosition}}
+\index{getMousePosition@{getMousePosition}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{getMousePosition()}{getMousePosition()}\hspace{0.1cm}{\footnotesize\ttfamily [4/12]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} sf\+::priv\+::\+Input\+Impl\+::get\+Mouse\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the current position of the mouse in desktop coordinates. 
+
+This function returns the current position of the mouse cursor, in global (desktop) coordinates.
+
+\begin{DoxyReturn}{Zwraca}
+Current position of the mouse 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_a8976c93cd6ae547583e977572e22a2a8}\label{classsf_1_1priv_1_1_input_impl_a8976c93cd6ae547583e977572e22a2a8} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!getMousePosition@{getMousePosition}}
+\index{getMousePosition@{getMousePosition}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{getMousePosition()}{getMousePosition()}\hspace{0.1cm}{\footnotesize\ttfamily [5/12]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} sf\+::priv\+::\+Input\+Impl\+::get\+Mouse\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the current position of the mouse in desktop coordinates. 
+
+This function returns the current position of the mouse cursor, in global (desktop) coordinates.
+
+\begin{DoxyReturn}{Zwraca}
+Current position of the mouse 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_a8976c93cd6ae547583e977572e22a2a8}\label{classsf_1_1priv_1_1_input_impl_a8976c93cd6ae547583e977572e22a2a8} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!getMousePosition@{getMousePosition}}
+\index{getMousePosition@{getMousePosition}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{getMousePosition()}{getMousePosition()}\hspace{0.1cm}{\footnotesize\ttfamily [6/12]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} sf\+::priv\+::\+Input\+Impl\+::get\+Mouse\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the current position of the mouse in desktop coordinates. 
+
+This function returns the current position of the mouse cursor, in global (desktop) coordinates.
+
+\begin{DoxyReturn}{Zwraca}
+Current position of the mouse 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_a074488faaed6e7e73fe883d0cf025de3}\label{classsf_1_1priv_1_1_input_impl_a074488faaed6e7e73fe883d0cf025de3} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!getMousePosition@{getMousePosition}}
+\index{getMousePosition@{getMousePosition}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{getMousePosition()}{getMousePosition()}\hspace{0.1cm}{\footnotesize\ttfamily [7/12]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} sf\+::priv\+::\+Input\+Impl\+::get\+Mouse\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsf_1_1_window_base}{Window\+Base}} \&}]{relative\+To }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the current position of the mouse in window coordinates. 
+
+This function returns the current position of the mouse cursor, relative to the given window. If no window is used, it returns desktop coordinates.
+
+
+\begin{DoxyParams}{Parametry}
+{\em relative\+To} & Reference window\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Current position of the mouse 
+\end{DoxyReturn}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_input_impl_a074488faaed6e7e73fe883d0cf025de3_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_a783243fbd5022234be34cdc0812cd184}\label{classsf_1_1priv_1_1_input_impl_a783243fbd5022234be34cdc0812cd184} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!getMousePosition@{getMousePosition}}
+\index{getMousePosition@{getMousePosition}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{getMousePosition()}{getMousePosition()}\hspace{0.1cm}{\footnotesize\ttfamily [8/12]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} sf\+::priv\+::\+Input\+Impl\+::get\+Mouse\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsf_1_1_window_base}{Window\+Base}} \&}]{relative\+To }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the current position of the mouse in window coordinates. 
+
+This function returns the current position of the mouse cursor, relative to the given window. If no window is used, it returns desktop coordinates.
+
+
+\begin{DoxyParams}{Parametry}
+{\em relative\+To} & Reference window\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Current position of the mouse 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_a783243fbd5022234be34cdc0812cd184}\label{classsf_1_1priv_1_1_input_impl_a783243fbd5022234be34cdc0812cd184} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!getMousePosition@{getMousePosition}}
+\index{getMousePosition@{getMousePosition}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{getMousePosition()}{getMousePosition()}\hspace{0.1cm}{\footnotesize\ttfamily [9/12]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} sf\+::priv\+::\+Input\+Impl\+::get\+Mouse\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsf_1_1_window_base}{Window\+Base}} \&}]{relative\+To }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the current position of the mouse in window coordinates. 
+
+This function returns the current position of the mouse cursor, relative to the given window. If no window is used, it returns desktop coordinates.
+
+
+\begin{DoxyParams}{Parametry}
+{\em relative\+To} & Reference window\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Current position of the mouse 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_a783243fbd5022234be34cdc0812cd184}\label{classsf_1_1priv_1_1_input_impl_a783243fbd5022234be34cdc0812cd184} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!getMousePosition@{getMousePosition}}
+\index{getMousePosition@{getMousePosition}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{getMousePosition()}{getMousePosition()}\hspace{0.1cm}{\footnotesize\ttfamily [10/12]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} sf\+::priv\+::\+Input\+Impl\+::get\+Mouse\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsf_1_1_window_base}{Window\+Base}} \&}]{relative\+To }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the current position of the mouse in window coordinates. 
+
+This function returns the current position of the mouse cursor, relative to the given window. If no window is used, it returns desktop coordinates.
+
+
+\begin{DoxyParams}{Parametry}
+{\em relative\+To} & Reference window\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Current position of the mouse 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_a783243fbd5022234be34cdc0812cd184}\label{classsf_1_1priv_1_1_input_impl_a783243fbd5022234be34cdc0812cd184} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!getMousePosition@{getMousePosition}}
+\index{getMousePosition@{getMousePosition}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{getMousePosition()}{getMousePosition()}\hspace{0.1cm}{\footnotesize\ttfamily [11/12]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} sf\+::priv\+::\+Input\+Impl\+::get\+Mouse\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsf_1_1_window_base}{Window\+Base}} \&}]{relative\+To }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the current position of the mouse in window coordinates. 
+
+This function returns the current position of the mouse cursor, relative to the given window. If no window is used, it returns desktop coordinates.
+
+
+\begin{DoxyParams}{Parametry}
+{\em relative\+To} & Reference window\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Current position of the mouse 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_a783243fbd5022234be34cdc0812cd184}\label{classsf_1_1priv_1_1_input_impl_a783243fbd5022234be34cdc0812cd184} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!getMousePosition@{getMousePosition}}
+\index{getMousePosition@{getMousePosition}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{getMousePosition()}{getMousePosition()}\hspace{0.1cm}{\footnotesize\ttfamily [12/12]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} sf\+::priv\+::\+Input\+Impl\+::get\+Mouse\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsf_1_1_window_base}{Window\+Base}} \&}]{relative\+To }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the current position of the mouse in window coordinates. 
+
+This function returns the current position of the mouse cursor, relative to the given window. If no window is used, it returns desktop coordinates.
+
+
+\begin{DoxyParams}{Parametry}
+{\em relative\+To} & Reference window\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Current position of the mouse 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_aede071143f664cb808dae28f956d5ced}\label{classsf_1_1priv_1_1_input_impl_aede071143f664cb808dae28f956d5ced} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!getTouchPosition@{getTouchPosition}}
+\index{getTouchPosition@{getTouchPosition}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{getTouchPosition()}{getTouchPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [1/12]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} sf\+::priv\+::\+Input\+Impl\+::get\+Touch\+Position (\begin{DoxyParamCaption}\item[{unsigned int}]{finger }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the current position of a touch in desktop coordinates. 
+
+This function returns the current touch position in global (desktop) coordinates.
+
+
+\begin{DoxyParams}{Parametry}
+{\em finger} & Finger index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Current position of {\itshape finger}, or undefined if it\textquotesingle{}s not down 
+\end{DoxyReturn}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_input_impl_aede071143f664cb808dae28f956d5ced_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_input_impl_aede071143f664cb808dae28f956d5ced_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_ae830a1752861900124a9eb30e353a2b2}\label{classsf_1_1priv_1_1_input_impl_ae830a1752861900124a9eb30e353a2b2} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!getTouchPosition@{getTouchPosition}}
+\index{getTouchPosition@{getTouchPosition}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{getTouchPosition()}{getTouchPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [2/12]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} sf\+::priv\+::\+Input\+Impl\+::get\+Touch\+Position (\begin{DoxyParamCaption}\item[{unsigned int}]{finger }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the current position of a touch in desktop coordinates. 
+
+This function returns the current touch position in global (desktop) coordinates.
+
+
+\begin{DoxyParams}{Parametry}
+{\em finger} & Finger index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Current position of {\itshape finger}, or undefined if it\textquotesingle{}s not down 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_ae830a1752861900124a9eb30e353a2b2}\label{classsf_1_1priv_1_1_input_impl_ae830a1752861900124a9eb30e353a2b2} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!getTouchPosition@{getTouchPosition}}
+\index{getTouchPosition@{getTouchPosition}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{getTouchPosition()}{getTouchPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [3/12]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} sf\+::priv\+::\+Input\+Impl\+::get\+Touch\+Position (\begin{DoxyParamCaption}\item[{unsigned int}]{finger }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the current position of a touch in desktop coordinates. 
+
+This function returns the current touch position in global (desktop) coordinates.
+
+
+\begin{DoxyParams}{Parametry}
+{\em finger} & Finger index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Current position of {\itshape finger}, or undefined if it\textquotesingle{}s not down 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_ae830a1752861900124a9eb30e353a2b2}\label{classsf_1_1priv_1_1_input_impl_ae830a1752861900124a9eb30e353a2b2} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!getTouchPosition@{getTouchPosition}}
+\index{getTouchPosition@{getTouchPosition}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{getTouchPosition()}{getTouchPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [4/12]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} sf\+::priv\+::\+Input\+Impl\+::get\+Touch\+Position (\begin{DoxyParamCaption}\item[{unsigned int}]{finger }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the current position of a touch in desktop coordinates. 
+
+This function returns the current touch position in global (desktop) coordinates.
+
+
+\begin{DoxyParams}{Parametry}
+{\em finger} & Finger index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Current position of {\itshape finger}, or undefined if it\textquotesingle{}s not down 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_ae830a1752861900124a9eb30e353a2b2}\label{classsf_1_1priv_1_1_input_impl_ae830a1752861900124a9eb30e353a2b2} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!getTouchPosition@{getTouchPosition}}
+\index{getTouchPosition@{getTouchPosition}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{getTouchPosition()}{getTouchPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [5/12]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} sf\+::priv\+::\+Input\+Impl\+::get\+Touch\+Position (\begin{DoxyParamCaption}\item[{unsigned int}]{finger }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the current position of a touch in desktop coordinates. 
+
+This function returns the current touch position in global (desktop) coordinates.
+
+
+\begin{DoxyParams}{Parametry}
+{\em finger} & Finger index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Current position of {\itshape finger}, or undefined if it\textquotesingle{}s not down 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_ae830a1752861900124a9eb30e353a2b2}\label{classsf_1_1priv_1_1_input_impl_ae830a1752861900124a9eb30e353a2b2} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!getTouchPosition@{getTouchPosition}}
+\index{getTouchPosition@{getTouchPosition}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{getTouchPosition()}{getTouchPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [6/12]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} sf\+::priv\+::\+Input\+Impl\+::get\+Touch\+Position (\begin{DoxyParamCaption}\item[{unsigned int}]{finger }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the current position of a touch in desktop coordinates. 
+
+This function returns the current touch position in global (desktop) coordinates.
+
+
+\begin{DoxyParams}{Parametry}
+{\em finger} & Finger index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Current position of {\itshape finger}, or undefined if it\textquotesingle{}s not down 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_ae5679ab5eb9697de4ce62b42556b6872}\label{classsf_1_1priv_1_1_input_impl_ae5679ab5eb9697de4ce62b42556b6872} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!getTouchPosition@{getTouchPosition}}
+\index{getTouchPosition@{getTouchPosition}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{getTouchPosition()}{getTouchPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [7/12]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} sf\+::priv\+::\+Input\+Impl\+::get\+Touch\+Position (\begin{DoxyParamCaption}\item[{unsigned int}]{finger,  }\item[{const \mbox{\hyperlink{classsf_1_1_window_base}{Window\+Base}} \&}]{relative\+To }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the current position of a touch in window coordinates. 
+
+This function returns the current touch position in global (desktop) coordinates.
+
+
+\begin{DoxyParams}{Parametry}
+{\em finger} & Finger index \\
+\hline
+{\em relative\+To} & Reference window\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Current position of {\itshape finger}, or undefined if it\textquotesingle{}s not down 
+\end{DoxyReturn}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_input_impl_ae5679ab5eb9697de4ce62b42556b6872_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_a58944c6217419de2a016dc6d954a2165}\label{classsf_1_1priv_1_1_input_impl_a58944c6217419de2a016dc6d954a2165} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!getTouchPosition@{getTouchPosition}}
+\index{getTouchPosition@{getTouchPosition}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{getTouchPosition()}{getTouchPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [8/12]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} sf\+::priv\+::\+Input\+Impl\+::get\+Touch\+Position (\begin{DoxyParamCaption}\item[{unsigned int}]{finger,  }\item[{const \mbox{\hyperlink{classsf_1_1_window_base}{Window\+Base}} \&}]{relative\+To }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the current position of a touch in window coordinates. 
+
+This function returns the current touch position in global (desktop) coordinates.
+
+
+\begin{DoxyParams}{Parametry}
+{\em finger} & Finger index \\
+\hline
+{\em relative\+To} & Reference window\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Current position of {\itshape finger}, or undefined if it\textquotesingle{}s not down 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_a58944c6217419de2a016dc6d954a2165}\label{classsf_1_1priv_1_1_input_impl_a58944c6217419de2a016dc6d954a2165} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!getTouchPosition@{getTouchPosition}}
+\index{getTouchPosition@{getTouchPosition}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{getTouchPosition()}{getTouchPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [9/12]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} sf\+::priv\+::\+Input\+Impl\+::get\+Touch\+Position (\begin{DoxyParamCaption}\item[{unsigned int}]{finger,  }\item[{const \mbox{\hyperlink{classsf_1_1_window_base}{Window\+Base}} \&}]{relative\+To }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the current position of a touch in window coordinates. 
+
+This function returns the current touch position in global (desktop) coordinates.
+
+
+\begin{DoxyParams}{Parametry}
+{\em finger} & Finger index \\
+\hline
+{\em relative\+To} & Reference window\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Current position of {\itshape finger}, or undefined if it\textquotesingle{}s not down 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_a58944c6217419de2a016dc6d954a2165}\label{classsf_1_1priv_1_1_input_impl_a58944c6217419de2a016dc6d954a2165} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!getTouchPosition@{getTouchPosition}}
+\index{getTouchPosition@{getTouchPosition}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{getTouchPosition()}{getTouchPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [10/12]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} sf\+::priv\+::\+Input\+Impl\+::get\+Touch\+Position (\begin{DoxyParamCaption}\item[{unsigned int}]{finger,  }\item[{const \mbox{\hyperlink{classsf_1_1_window_base}{Window\+Base}} \&}]{relative\+To }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the current position of a touch in window coordinates. 
+
+This function returns the current touch position in global (desktop) coordinates.
+
+
+\begin{DoxyParams}{Parametry}
+{\em finger} & Finger index \\
+\hline
+{\em relative\+To} & Reference window\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Current position of {\itshape finger}, or undefined if it\textquotesingle{}s not down 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_a58944c6217419de2a016dc6d954a2165}\label{classsf_1_1priv_1_1_input_impl_a58944c6217419de2a016dc6d954a2165} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!getTouchPosition@{getTouchPosition}}
+\index{getTouchPosition@{getTouchPosition}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{getTouchPosition()}{getTouchPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [11/12]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} sf\+::priv\+::\+Input\+Impl\+::get\+Touch\+Position (\begin{DoxyParamCaption}\item[{unsigned int}]{finger,  }\item[{const \mbox{\hyperlink{classsf_1_1_window_base}{Window\+Base}} \&}]{relative\+To }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the current position of a touch in window coordinates. 
+
+This function returns the current touch position in global (desktop) coordinates.
+
+
+\begin{DoxyParams}{Parametry}
+{\em finger} & Finger index \\
+\hline
+{\em relative\+To} & Reference window\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Current position of {\itshape finger}, or undefined if it\textquotesingle{}s not down 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_a58944c6217419de2a016dc6d954a2165}\label{classsf_1_1priv_1_1_input_impl_a58944c6217419de2a016dc6d954a2165} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!getTouchPosition@{getTouchPosition}}
+\index{getTouchPosition@{getTouchPosition}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{getTouchPosition()}{getTouchPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [12/12]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} sf\+::priv\+::\+Input\+Impl\+::get\+Touch\+Position (\begin{DoxyParamCaption}\item[{unsigned int}]{finger,  }\item[{const \mbox{\hyperlink{classsf_1_1_window_base}{Window\+Base}} \&}]{relative\+To }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the current position of a touch in window coordinates. 
+
+This function returns the current touch position in global (desktop) coordinates.
+
+
+\begin{DoxyParams}{Parametry}
+{\em finger} & Finger index \\
+\hline
+{\em relative\+To} & Reference window\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Current position of {\itshape finger}, or undefined if it\textquotesingle{}s not down 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_a667e4652799ef6b1737ace2922630e09}\label{classsf_1_1priv_1_1_input_impl_a667e4652799ef6b1737ace2922630e09} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!isKeyPressed@{isKeyPressed}}
+\index{isKeyPressed@{isKeyPressed}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{isKeyPressed()}{isKeyPressed()}\hspace{0.1cm}{\footnotesize\ttfamily [1/12]}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Input\+Impl\+::is\+Key\+Pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}}}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_input_impl_a667e4652799ef6b1737ace2922630e09_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_ae5c86fa42857d35943c83a6381b5889a}\label{classsf_1_1priv_1_1_input_impl_ae5c86fa42857d35943c83a6381b5889a} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!isKeyPressed@{isKeyPressed}}
+\index{isKeyPressed@{isKeyPressed}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{isKeyPressed()}{isKeyPressed()}\hspace{0.1cm}{\footnotesize\ttfamily [2/12]}}
+{\footnotesize\ttfamily static bool sf\+::priv\+::\+Input\+Impl\+::is\+Key\+Pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}}}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+
+
+\Hypertarget{classsf_1_1priv_1_1_input_impl_ae5c86fa42857d35943c83a6381b5889a}\label{classsf_1_1priv_1_1_input_impl_ae5c86fa42857d35943c83a6381b5889a} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!isKeyPressed@{isKeyPressed}}
+\index{isKeyPressed@{isKeyPressed}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{isKeyPressed()}{isKeyPressed()}\hspace{0.1cm}{\footnotesize\ttfamily [3/12]}}
+{\footnotesize\ttfamily static bool sf\+::priv\+::\+Input\+Impl\+::is\+Key\+Pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}}}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+
+
+\Hypertarget{classsf_1_1priv_1_1_input_impl_ae5c86fa42857d35943c83a6381b5889a}\label{classsf_1_1priv_1_1_input_impl_ae5c86fa42857d35943c83a6381b5889a} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!isKeyPressed@{isKeyPressed}}
+\index{isKeyPressed@{isKeyPressed}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{isKeyPressed()}{isKeyPressed()}\hspace{0.1cm}{\footnotesize\ttfamily [4/12]}}
+{\footnotesize\ttfamily static bool sf\+::priv\+::\+Input\+Impl\+::is\+Key\+Pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}}}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+
+
+\Hypertarget{classsf_1_1priv_1_1_input_impl_ae5c86fa42857d35943c83a6381b5889a}\label{classsf_1_1priv_1_1_input_impl_ae5c86fa42857d35943c83a6381b5889a} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!isKeyPressed@{isKeyPressed}}
+\index{isKeyPressed@{isKeyPressed}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{isKeyPressed()}{isKeyPressed()}\hspace{0.1cm}{\footnotesize\ttfamily [5/12]}}
+{\footnotesize\ttfamily static bool sf\+::priv\+::\+Input\+Impl\+::is\+Key\+Pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}}}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+
+
+\Hypertarget{classsf_1_1priv_1_1_input_impl_ae5c86fa42857d35943c83a6381b5889a}\label{classsf_1_1priv_1_1_input_impl_ae5c86fa42857d35943c83a6381b5889a} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!isKeyPressed@{isKeyPressed}}
+\index{isKeyPressed@{isKeyPressed}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{isKeyPressed()}{isKeyPressed()}\hspace{0.1cm}{\footnotesize\ttfamily [6/12]}}
+{\footnotesize\ttfamily static bool sf\+::priv\+::\+Input\+Impl\+::is\+Key\+Pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}}}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+
+
+\Hypertarget{classsf_1_1priv_1_1_input_impl_aa2438ddd5fef506d663a25a01371bfb5}\label{classsf_1_1priv_1_1_input_impl_aa2438ddd5fef506d663a25a01371bfb5} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!isKeyPressed@{isKeyPressed}}
+\index{isKeyPressed@{isKeyPressed}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{isKeyPressed()}{isKeyPressed()}\hspace{0.1cm}{\footnotesize\ttfamily [7/12]}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Input\+Impl\+::is\+Key\+Pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}}}]{code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+
+
+\Hypertarget{classsf_1_1priv_1_1_input_impl_ac55be0ad763994c71fdd6bf779abf306}\label{classsf_1_1priv_1_1_input_impl_ac55be0ad763994c71fdd6bf779abf306} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!isKeyPressed@{isKeyPressed}}
+\index{isKeyPressed@{isKeyPressed}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{isKeyPressed()}{isKeyPressed()}\hspace{0.1cm}{\footnotesize\ttfamily [8/12]}}
+{\footnotesize\ttfamily static bool sf\+::priv\+::\+Input\+Impl\+::is\+Key\+Pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}}}]{code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+
+
+\Hypertarget{classsf_1_1priv_1_1_input_impl_ac55be0ad763994c71fdd6bf779abf306}\label{classsf_1_1priv_1_1_input_impl_ac55be0ad763994c71fdd6bf779abf306} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!isKeyPressed@{isKeyPressed}}
+\index{isKeyPressed@{isKeyPressed}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{isKeyPressed()}{isKeyPressed()}\hspace{0.1cm}{\footnotesize\ttfamily [9/12]}}
+{\footnotesize\ttfamily static bool sf\+::priv\+::\+Input\+Impl\+::is\+Key\+Pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}}}]{code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+
+
+\Hypertarget{classsf_1_1priv_1_1_input_impl_ac55be0ad763994c71fdd6bf779abf306}\label{classsf_1_1priv_1_1_input_impl_ac55be0ad763994c71fdd6bf779abf306} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!isKeyPressed@{isKeyPressed}}
+\index{isKeyPressed@{isKeyPressed}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{isKeyPressed()}{isKeyPressed()}\hspace{0.1cm}{\footnotesize\ttfamily [10/12]}}
+{\footnotesize\ttfamily static bool sf\+::priv\+::\+Input\+Impl\+::is\+Key\+Pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}}}]{code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+
+
+\Hypertarget{classsf_1_1priv_1_1_input_impl_ac55be0ad763994c71fdd6bf779abf306}\label{classsf_1_1priv_1_1_input_impl_ac55be0ad763994c71fdd6bf779abf306} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!isKeyPressed@{isKeyPressed}}
+\index{isKeyPressed@{isKeyPressed}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{isKeyPressed()}{isKeyPressed()}\hspace{0.1cm}{\footnotesize\ttfamily [11/12]}}
+{\footnotesize\ttfamily static bool sf\+::priv\+::\+Input\+Impl\+::is\+Key\+Pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}}}]{code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+
+
+\Hypertarget{classsf_1_1priv_1_1_input_impl_ac55be0ad763994c71fdd6bf779abf306}\label{classsf_1_1priv_1_1_input_impl_ac55be0ad763994c71fdd6bf779abf306} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!isKeyPressed@{isKeyPressed}}
+\index{isKeyPressed@{isKeyPressed}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{isKeyPressed()}{isKeyPressed()}\hspace{0.1cm}{\footnotesize\ttfamily [12/12]}}
+{\footnotesize\ttfamily static bool sf\+::priv\+::\+Input\+Impl\+::is\+Key\+Pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}}}]{code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+
+
+\Hypertarget{classsf_1_1priv_1_1_input_impl_a7300409f00d469838bcea0d158fca206}\label{classsf_1_1priv_1_1_input_impl_a7300409f00d469838bcea0d158fca206} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!isMouseButtonPressed@{isMouseButtonPressed}}
+\index{isMouseButtonPressed@{isMouseButtonPressed}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{isMouseButtonPressed()}{isMouseButtonPressed()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Input\+Impl\+::is\+Mouse\+Button\+Pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_mouse_a4fb128be433f9aafe66bc0c605daaa90}{Mouse\+::\+Button}}}]{button }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Check if a mouse button is pressed. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em button} & Button to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True if the button is pressed, false otherwise 
+\end{DoxyReturn}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_input_impl_a7300409f00d469838bcea0d158fca206_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_input_impl_a7300409f00d469838bcea0d158fca206_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_a077e925a19e4f03d34485df55cc4fe01}\label{classsf_1_1priv_1_1_input_impl_a077e925a19e4f03d34485df55cc4fe01} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!isMouseButtonPressed@{isMouseButtonPressed}}
+\index{isMouseButtonPressed@{isMouseButtonPressed}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{isMouseButtonPressed()}{isMouseButtonPressed()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily static bool sf\+::priv\+::\+Input\+Impl\+::is\+Mouse\+Button\+Pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_mouse_a4fb128be433f9aafe66bc0c605daaa90}{Mouse\+::\+Button}}}]{button }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Check if a mouse button is pressed. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em button} & Button to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True if the button is pressed, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_a077e925a19e4f03d34485df55cc4fe01}\label{classsf_1_1priv_1_1_input_impl_a077e925a19e4f03d34485df55cc4fe01} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!isMouseButtonPressed@{isMouseButtonPressed}}
+\index{isMouseButtonPressed@{isMouseButtonPressed}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{isMouseButtonPressed()}{isMouseButtonPressed()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily static bool sf\+::priv\+::\+Input\+Impl\+::is\+Mouse\+Button\+Pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_mouse_a4fb128be433f9aafe66bc0c605daaa90}{Mouse\+::\+Button}}}]{button }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Check if a mouse button is pressed. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em button} & Button to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True if the button is pressed, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_a077e925a19e4f03d34485df55cc4fe01}\label{classsf_1_1priv_1_1_input_impl_a077e925a19e4f03d34485df55cc4fe01} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!isMouseButtonPressed@{isMouseButtonPressed}}
+\index{isMouseButtonPressed@{isMouseButtonPressed}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{isMouseButtonPressed()}{isMouseButtonPressed()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily static bool sf\+::priv\+::\+Input\+Impl\+::is\+Mouse\+Button\+Pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_mouse_a4fb128be433f9aafe66bc0c605daaa90}{Mouse\+::\+Button}}}]{button }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Check if a mouse button is pressed. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em button} & Button to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True if the button is pressed, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_a077e925a19e4f03d34485df55cc4fe01}\label{classsf_1_1priv_1_1_input_impl_a077e925a19e4f03d34485df55cc4fe01} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!isMouseButtonPressed@{isMouseButtonPressed}}
+\index{isMouseButtonPressed@{isMouseButtonPressed}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{isMouseButtonPressed()}{isMouseButtonPressed()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily static bool sf\+::priv\+::\+Input\+Impl\+::is\+Mouse\+Button\+Pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_mouse_a4fb128be433f9aafe66bc0c605daaa90}{Mouse\+::\+Button}}}]{button }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Check if a mouse button is pressed. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em button} & Button to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True if the button is pressed, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_a077e925a19e4f03d34485df55cc4fe01}\label{classsf_1_1priv_1_1_input_impl_a077e925a19e4f03d34485df55cc4fe01} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!isMouseButtonPressed@{isMouseButtonPressed}}
+\index{isMouseButtonPressed@{isMouseButtonPressed}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{isMouseButtonPressed()}{isMouseButtonPressed()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily static bool sf\+::priv\+::\+Input\+Impl\+::is\+Mouse\+Button\+Pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_mouse_a4fb128be433f9aafe66bc0c605daaa90}{Mouse\+::\+Button}}}]{button }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Check if a mouse button is pressed. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em button} & Button to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True if the button is pressed, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_a44f5e902ab67f297b99dab379199e3d2}\label{classsf_1_1priv_1_1_input_impl_a44f5e902ab67f297b99dab379199e3d2} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!isTouchDown@{isTouchDown}}
+\index{isTouchDown@{isTouchDown}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{isTouchDown()}{isTouchDown()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Input\+Impl\+::is\+Touch\+Down (\begin{DoxyParamCaption}\item[{unsigned int}]{finger }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Check if a touch event is currently down. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em finger} & Finger index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True if {\itshape finger} is currently touching the screen, false otherwise 
+\end{DoxyReturn}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_input_impl_a44f5e902ab67f297b99dab379199e3d2_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_input_impl_a44f5e902ab67f297b99dab379199e3d2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_a532ce9bf8fb379633d1765662e8ec3ed}\label{classsf_1_1priv_1_1_input_impl_a532ce9bf8fb379633d1765662e8ec3ed} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!isTouchDown@{isTouchDown}}
+\index{isTouchDown@{isTouchDown}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{isTouchDown()}{isTouchDown()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily static bool sf\+::priv\+::\+Input\+Impl\+::is\+Touch\+Down (\begin{DoxyParamCaption}\item[{unsigned int}]{finger }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Check if a touch event is currently down. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em finger} & Finger index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True if {\itshape finger} is currently touching the screen, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_a532ce9bf8fb379633d1765662e8ec3ed}\label{classsf_1_1priv_1_1_input_impl_a532ce9bf8fb379633d1765662e8ec3ed} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!isTouchDown@{isTouchDown}}
+\index{isTouchDown@{isTouchDown}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{isTouchDown()}{isTouchDown()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily static bool sf\+::priv\+::\+Input\+Impl\+::is\+Touch\+Down (\begin{DoxyParamCaption}\item[{unsigned int}]{finger }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Check if a touch event is currently down. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em finger} & Finger index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True if {\itshape finger} is currently touching the screen, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_a532ce9bf8fb379633d1765662e8ec3ed}\label{classsf_1_1priv_1_1_input_impl_a532ce9bf8fb379633d1765662e8ec3ed} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!isTouchDown@{isTouchDown}}
+\index{isTouchDown@{isTouchDown}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{isTouchDown()}{isTouchDown()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily static bool sf\+::priv\+::\+Input\+Impl\+::is\+Touch\+Down (\begin{DoxyParamCaption}\item[{unsigned int}]{finger }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Check if a touch event is currently down. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em finger} & Finger index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True if {\itshape finger} is currently touching the screen, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_a532ce9bf8fb379633d1765662e8ec3ed}\label{classsf_1_1priv_1_1_input_impl_a532ce9bf8fb379633d1765662e8ec3ed} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!isTouchDown@{isTouchDown}}
+\index{isTouchDown@{isTouchDown}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{isTouchDown()}{isTouchDown()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily static bool sf\+::priv\+::\+Input\+Impl\+::is\+Touch\+Down (\begin{DoxyParamCaption}\item[{unsigned int}]{finger }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Check if a touch event is currently down. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em finger} & Finger index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True if {\itshape finger} is currently touching the screen, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_a532ce9bf8fb379633d1765662e8ec3ed}\label{classsf_1_1priv_1_1_input_impl_a532ce9bf8fb379633d1765662e8ec3ed} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!isTouchDown@{isTouchDown}}
+\index{isTouchDown@{isTouchDown}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{isTouchDown()}{isTouchDown()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily static bool sf\+::priv\+::\+Input\+Impl\+::is\+Touch\+Down (\begin{DoxyParamCaption}\item[{unsigned int}]{finger }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Check if a touch event is currently down. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em finger} & Finger index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True if {\itshape finger} is currently touching the screen, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_a03d0099d1e9af7df26e6f7ea4cce5068}\label{classsf_1_1priv_1_1_input_impl_a03d0099d1e9af7df26e6f7ea4cce5068} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!localize@{localize}}
+\index{localize@{localize}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{localize()}{localize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} sf\+::priv\+::\+Input\+Impl\+::localize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}}}]{code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Localize a physical key to a logical one.   
+
+
+\begin{DoxyParams}{Parametry}
+{\em code} & Scancode to localize\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+The key corresponding to the scancode under the current keyboard layout used by the operating system, or \doxylink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a840c43fa8e05ff854f6fe9a86c7c939e}{sf\+::\+Keyboard\+::\+Unknown} when the scancode cannot be mapped to a Key.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{Zobacz również}
+\doxylink{classsf_1_1priv_1_1_input_impl_a40018b38d4a50a77b09684b996576b2f}{delocalize}   
+\end{DoxySeeAlso}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{classsf_1_1priv_1_1_input_impl_a03d0099d1e9af7df26e6f7ea4cce5068_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_a2aa43c124fa95de999fbcc7c0a8bd951}\label{classsf_1_1priv_1_1_input_impl_a2aa43c124fa95de999fbcc7c0a8bd951} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!localize@{localize}}
+\index{localize@{localize}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{localize()}{localize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} sf\+::priv\+::\+Input\+Impl\+::localize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}}}]{code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Localize a physical key to a logical one.   
+
+
+\begin{DoxyParams}{Parametry}
+{\em code} & Scancode to localize\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+The key corresponding to the scancode under the current keyboard layout used by the operating system, or \doxylink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a840c43fa8e05ff854f6fe9a86c7c939e}{sf\+::\+Keyboard\+::\+Unknown} when the scancode cannot be mapped to a Key.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{Zobacz również}
+\doxylink{classsf_1_1priv_1_1_input_impl_a40018b38d4a50a77b09684b996576b2f}{delocalize}   
+\end{DoxySeeAlso}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_a2aa43c124fa95de999fbcc7c0a8bd951}\label{classsf_1_1priv_1_1_input_impl_a2aa43c124fa95de999fbcc7c0a8bd951} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!localize@{localize}}
+\index{localize@{localize}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{localize()}{localize()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} sf\+::priv\+::\+Input\+Impl\+::localize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}}}]{code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Localize a physical key to a logical one.   
+
+
+\begin{DoxyParams}{Parametry}
+{\em code} & Scancode to localize\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+The key corresponding to the scancode under the current keyboard layout used by the operating system, or \doxylink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a840c43fa8e05ff854f6fe9a86c7c939e}{sf\+::\+Keyboard\+::\+Unknown} when the scancode cannot be mapped to a Key.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{Zobacz również}
+\doxylink{classsf_1_1priv_1_1_input_impl_a40018b38d4a50a77b09684b996576b2f}{delocalize}   
+\end{DoxySeeAlso}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_a2aa43c124fa95de999fbcc7c0a8bd951}\label{classsf_1_1priv_1_1_input_impl_a2aa43c124fa95de999fbcc7c0a8bd951} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!localize@{localize}}
+\index{localize@{localize}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{localize()}{localize()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} sf\+::priv\+::\+Input\+Impl\+::localize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}}}]{code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Localize a physical key to a logical one.   
+
+
+\begin{DoxyParams}{Parametry}
+{\em code} & Scancode to localize\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+The key corresponding to the scancode under the current keyboard layout used by the operating system, or \doxylink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a840c43fa8e05ff854f6fe9a86c7c939e}{sf\+::\+Keyboard\+::\+Unknown} when the scancode cannot be mapped to a Key.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{Zobacz również}
+\doxylink{classsf_1_1priv_1_1_input_impl_a40018b38d4a50a77b09684b996576b2f}{delocalize}   
+\end{DoxySeeAlso}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_a2aa43c124fa95de999fbcc7c0a8bd951}\label{classsf_1_1priv_1_1_input_impl_a2aa43c124fa95de999fbcc7c0a8bd951} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!localize@{localize}}
+\index{localize@{localize}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{localize()}{localize()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} sf\+::priv\+::\+Input\+Impl\+::localize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}}}]{code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Localize a physical key to a logical one.   
+
+
+\begin{DoxyParams}{Parametry}
+{\em code} & Scancode to localize\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+The key corresponding to the scancode under the current keyboard layout used by the operating system, or \doxylink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a840c43fa8e05ff854f6fe9a86c7c939e}{sf\+::\+Keyboard\+::\+Unknown} when the scancode cannot be mapped to a Key.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{Zobacz również}
+\doxylink{classsf_1_1priv_1_1_input_impl_a40018b38d4a50a77b09684b996576b2f}{delocalize}   
+\end{DoxySeeAlso}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_a2aa43c124fa95de999fbcc7c0a8bd951}\label{classsf_1_1priv_1_1_input_impl_a2aa43c124fa95de999fbcc7c0a8bd951} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!localize@{localize}}
+\index{localize@{localize}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{localize()}{localize()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} sf\+::priv\+::\+Input\+Impl\+::localize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}}}]{code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Localize a physical key to a logical one.   
+
+
+\begin{DoxyParams}{Parametry}
+{\em code} & Scancode to localize\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+The key corresponding to the scancode under the current keyboard layout used by the operating system, or \doxylink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a840c43fa8e05ff854f6fe9a86c7c939e}{sf\+::\+Keyboard\+::\+Unknown} when the scancode cannot be mapped to a Key.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{Zobacz również}
+\doxylink{classsf_1_1priv_1_1_input_impl_a40018b38d4a50a77b09684b996576b2f}{delocalize}   
+\end{DoxySeeAlso}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_ad0aff577769fcf6f403282efbe1a7b37}\label{classsf_1_1priv_1_1_input_impl_ad0aff577769fcf6f403282efbe1a7b37} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!restoreTerminalConfig@{restoreTerminalConfig}}
+\index{restoreTerminalConfig@{restoreTerminalConfig}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{restoreTerminalConfig()}{restoreTerminalConfig()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Input\+Impl\+::restore\+Terminal\+Config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Restore terminal configuration from backup. 
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_input_impl_ad0aff577769fcf6f403282efbe1a7b37_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_af0d8562ff84d71e50fb6dbc5bcd4f6f9}\label{classsf_1_1priv_1_1_input_impl_af0d8562ff84d71e50fb6dbc5bcd4f6f9} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!setMousePosition@{setMousePosition}}
+\index{setMousePosition@{setMousePosition}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{setMousePosition()}{setMousePosition()}\hspace{0.1cm}{\footnotesize\ttfamily [1/12]}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Input\+Impl\+::set\+Mouse\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \&}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Set the current position of the mouse in desktop coordinates. 
+
+This function sets the current position of the mouse cursor in global (desktop) coordinates. If no window is used, it sets the position in desktop coordinates.
+
+
+\begin{DoxyParams}{Parametry}
+{\em position} & New position of the mouse \\
+\hline
+\end{DoxyParams}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classsf_1_1priv_1_1_input_impl_af0d8562ff84d71e50fb6dbc5bcd4f6f9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_a3026080ff6f4c1be4a4dc3459cae2ebb}\label{classsf_1_1priv_1_1_input_impl_a3026080ff6f4c1be4a4dc3459cae2ebb} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!setMousePosition@{setMousePosition}}
+\index{setMousePosition@{setMousePosition}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{setMousePosition()}{setMousePosition()}\hspace{0.1cm}{\footnotesize\ttfamily [2/12]}}
+{\footnotesize\ttfamily static void sf\+::priv\+::\+Input\+Impl\+::set\+Mouse\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \&}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Set the current position of the mouse in desktop coordinates. 
+
+This function sets the current position of the mouse cursor in global (desktop) coordinates. If no window is used, it sets the position in desktop coordinates.
+
+
+\begin{DoxyParams}{Parametry}
+{\em position} & New position of the mouse \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_a3026080ff6f4c1be4a4dc3459cae2ebb}\label{classsf_1_1priv_1_1_input_impl_a3026080ff6f4c1be4a4dc3459cae2ebb} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!setMousePosition@{setMousePosition}}
+\index{setMousePosition@{setMousePosition}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{setMousePosition()}{setMousePosition()}\hspace{0.1cm}{\footnotesize\ttfamily [3/12]}}
+{\footnotesize\ttfamily static void sf\+::priv\+::\+Input\+Impl\+::set\+Mouse\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \&}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Set the current position of the mouse in desktop coordinates. 
+
+This function sets the current position of the mouse cursor in global (desktop) coordinates. If no window is used, it sets the position in desktop coordinates.
+
+
+\begin{DoxyParams}{Parametry}
+{\em position} & New position of the mouse \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_a3026080ff6f4c1be4a4dc3459cae2ebb}\label{classsf_1_1priv_1_1_input_impl_a3026080ff6f4c1be4a4dc3459cae2ebb} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!setMousePosition@{setMousePosition}}
+\index{setMousePosition@{setMousePosition}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{setMousePosition()}{setMousePosition()}\hspace{0.1cm}{\footnotesize\ttfamily [4/12]}}
+{\footnotesize\ttfamily static void sf\+::priv\+::\+Input\+Impl\+::set\+Mouse\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \&}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Set the current position of the mouse in desktop coordinates. 
+
+This function sets the current position of the mouse cursor in global (desktop) coordinates. If no window is used, it sets the position in desktop coordinates.
+
+
+\begin{DoxyParams}{Parametry}
+{\em position} & New position of the mouse \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_a3026080ff6f4c1be4a4dc3459cae2ebb}\label{classsf_1_1priv_1_1_input_impl_a3026080ff6f4c1be4a4dc3459cae2ebb} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!setMousePosition@{setMousePosition}}
+\index{setMousePosition@{setMousePosition}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{setMousePosition()}{setMousePosition()}\hspace{0.1cm}{\footnotesize\ttfamily [5/12]}}
+{\footnotesize\ttfamily static void sf\+::priv\+::\+Input\+Impl\+::set\+Mouse\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \&}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Set the current position of the mouse in desktop coordinates. 
+
+This function sets the current position of the mouse cursor in global (desktop) coordinates. If no window is used, it sets the position in desktop coordinates.
+
+
+\begin{DoxyParams}{Parametry}
+{\em position} & New position of the mouse \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_a3026080ff6f4c1be4a4dc3459cae2ebb}\label{classsf_1_1priv_1_1_input_impl_a3026080ff6f4c1be4a4dc3459cae2ebb} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!setMousePosition@{setMousePosition}}
+\index{setMousePosition@{setMousePosition}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{setMousePosition()}{setMousePosition()}\hspace{0.1cm}{\footnotesize\ttfamily [6/12]}}
+{\footnotesize\ttfamily static void sf\+::priv\+::\+Input\+Impl\+::set\+Mouse\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \&}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Set the current position of the mouse in desktop coordinates. 
+
+This function sets the current position of the mouse cursor in global (desktop) coordinates. If no window is used, it sets the position in desktop coordinates.
+
+
+\begin{DoxyParams}{Parametry}
+{\em position} & New position of the mouse \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_ae4a0638ccf9372772a77f95b18a02c32}\label{classsf_1_1priv_1_1_input_impl_ae4a0638ccf9372772a77f95b18a02c32} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!setMousePosition@{setMousePosition}}
+\index{setMousePosition@{setMousePosition}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{setMousePosition()}{setMousePosition()}\hspace{0.1cm}{\footnotesize\ttfamily [7/12]}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Input\+Impl\+::set\+Mouse\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \&}]{position,  }\item[{const \mbox{\hyperlink{classsf_1_1_window_base}{Window\+Base}} \&}]{relative\+To }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Set the current position of the mouse in window coordinates. 
+
+This function sets the current position of the mouse cursor, relative to the given window. If no window is used, it sets the position in desktop coordinates.
+
+
+\begin{DoxyParams}{Parametry}
+{\em position} & New position of the mouse \\
+\hline
+{\em relative\+To} & Reference window \\
+\hline
+\end{DoxyParams}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{classsf_1_1priv_1_1_input_impl_ae4a0638ccf9372772a77f95b18a02c32_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_adc737f03cc2cbeedf8fedcebdd2db1f7}\label{classsf_1_1priv_1_1_input_impl_adc737f03cc2cbeedf8fedcebdd2db1f7} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!setMousePosition@{setMousePosition}}
+\index{setMousePosition@{setMousePosition}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{setMousePosition()}{setMousePosition()}\hspace{0.1cm}{\footnotesize\ttfamily [8/12]}}
+{\footnotesize\ttfamily static void sf\+::priv\+::\+Input\+Impl\+::set\+Mouse\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \&}]{position,  }\item[{const \mbox{\hyperlink{classsf_1_1_window_base}{Window\+Base}} \&}]{relative\+To }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Set the current position of the mouse in window coordinates. 
+
+This function sets the current position of the mouse cursor, relative to the given window. If no window is used, it sets the position in desktop coordinates.
+
+
+\begin{DoxyParams}{Parametry}
+{\em position} & New position of the mouse \\
+\hline
+{\em relative\+To} & Reference window \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_adc737f03cc2cbeedf8fedcebdd2db1f7}\label{classsf_1_1priv_1_1_input_impl_adc737f03cc2cbeedf8fedcebdd2db1f7} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!setMousePosition@{setMousePosition}}
+\index{setMousePosition@{setMousePosition}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{setMousePosition()}{setMousePosition()}\hspace{0.1cm}{\footnotesize\ttfamily [9/12]}}
+{\footnotesize\ttfamily static void sf\+::priv\+::\+Input\+Impl\+::set\+Mouse\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \&}]{position,  }\item[{const \mbox{\hyperlink{classsf_1_1_window_base}{Window\+Base}} \&}]{relative\+To }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Set the current position of the mouse in window coordinates. 
+
+This function sets the current position of the mouse cursor, relative to the given window. If no window is used, it sets the position in desktop coordinates.
+
+
+\begin{DoxyParams}{Parametry}
+{\em position} & New position of the mouse \\
+\hline
+{\em relative\+To} & Reference window \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_adc737f03cc2cbeedf8fedcebdd2db1f7}\label{classsf_1_1priv_1_1_input_impl_adc737f03cc2cbeedf8fedcebdd2db1f7} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!setMousePosition@{setMousePosition}}
+\index{setMousePosition@{setMousePosition}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{setMousePosition()}{setMousePosition()}\hspace{0.1cm}{\footnotesize\ttfamily [10/12]}}
+{\footnotesize\ttfamily static void sf\+::priv\+::\+Input\+Impl\+::set\+Mouse\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \&}]{position,  }\item[{const \mbox{\hyperlink{classsf_1_1_window_base}{Window\+Base}} \&}]{relative\+To }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Set the current position of the mouse in window coordinates. 
+
+This function sets the current position of the mouse cursor, relative to the given window. If no window is used, it sets the position in desktop coordinates.
+
+
+\begin{DoxyParams}{Parametry}
+{\em position} & New position of the mouse \\
+\hline
+{\em relative\+To} & Reference window \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_adc737f03cc2cbeedf8fedcebdd2db1f7}\label{classsf_1_1priv_1_1_input_impl_adc737f03cc2cbeedf8fedcebdd2db1f7} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!setMousePosition@{setMousePosition}}
+\index{setMousePosition@{setMousePosition}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{setMousePosition()}{setMousePosition()}\hspace{0.1cm}{\footnotesize\ttfamily [11/12]}}
+{\footnotesize\ttfamily static void sf\+::priv\+::\+Input\+Impl\+::set\+Mouse\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \&}]{position,  }\item[{const \mbox{\hyperlink{classsf_1_1_window_base}{Window\+Base}} \&}]{relative\+To }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Set the current position of the mouse in window coordinates. 
+
+This function sets the current position of the mouse cursor, relative to the given window. If no window is used, it sets the position in desktop coordinates.
+
+
+\begin{DoxyParams}{Parametry}
+{\em position} & New position of the mouse \\
+\hline
+{\em relative\+To} & Reference window \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_adc737f03cc2cbeedf8fedcebdd2db1f7}\label{classsf_1_1priv_1_1_input_impl_adc737f03cc2cbeedf8fedcebdd2db1f7} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!setMousePosition@{setMousePosition}}
+\index{setMousePosition@{setMousePosition}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{setMousePosition()}{setMousePosition()}\hspace{0.1cm}{\footnotesize\ttfamily [12/12]}}
+{\footnotesize\ttfamily static void sf\+::priv\+::\+Input\+Impl\+::set\+Mouse\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \&}]{position,  }\item[{const \mbox{\hyperlink{classsf_1_1_window_base}{Window\+Base}} \&}]{relative\+To }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Set the current position of the mouse in window coordinates. 
+
+This function sets the current position of the mouse cursor, relative to the given window. If no window is used, it sets the position in desktop coordinates.
+
+
+\begin{DoxyParams}{Parametry}
+{\em position} & New position of the mouse \\
+\hline
+{\em relative\+To} & Reference window \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_af7c30501d8bb797892c0dcead172ebc5}\label{classsf_1_1priv_1_1_input_impl_af7c30501d8bb797892c0dcead172ebc5} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!setTerminalConfig@{setTerminalConfig}}
+\index{setTerminalConfig@{setTerminalConfig}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{setTerminalConfig()}{setTerminalConfig()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Input\+Impl\+::set\+Terminal\+Config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Backup terminal configuration and disable console feedback. 
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{classsf_1_1priv_1_1_input_impl_af7c30501d8bb797892c0dcead172ebc5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_a742edb44cb77f2970b5fc331d74241a7}\label{classsf_1_1priv_1_1_input_impl_a742edb44cb77f2970b5fc331d74241a7} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!setVirtualKeyboardVisible@{setVirtualKeyboardVisible}}
+\index{setVirtualKeyboardVisible@{setVirtualKeyboardVisible}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{setVirtualKeyboardVisible()}{setVirtualKeyboardVisible()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Input\+Impl\+::set\+Virtual\+Keyboard\+Visible (\begin{DoxyParamCaption}\item[{bool}]{visible }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Show or hide the virtual keyboard.   
+
+\begin{DoxyWarning}{Ostrzeżenie}
+The virtual keyboard is not supported on all systems. It will typically be implemented on mobile OSes (Android, i\+OS) but not on desktop OSes (Windows, Linux, ...).
+\end{DoxyWarning}
+If the virtual keyboard is not available, this function does nothing.
+
+
+\begin{DoxyParams}{Parametry}
+{\em visible} & True to show, false to hide   \\
+\hline
+\end{DoxyParams}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_input_impl_a742edb44cb77f2970b5fc331d74241a7_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_input_impl_a742edb44cb77f2970b5fc331d74241a7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_abfa3c573f19de6769602269a62692b95}\label{classsf_1_1priv_1_1_input_impl_abfa3c573f19de6769602269a62692b95} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!setVirtualKeyboardVisible@{setVirtualKeyboardVisible}}
+\index{setVirtualKeyboardVisible@{setVirtualKeyboardVisible}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{setVirtualKeyboardVisible()}{setVirtualKeyboardVisible()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily static void sf\+::priv\+::\+Input\+Impl\+::set\+Virtual\+Keyboard\+Visible (\begin{DoxyParamCaption}\item[{bool}]{visible }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Show or hide the virtual keyboard.   
+
+\begin{DoxyWarning}{Ostrzeżenie}
+The virtual keyboard is not supported on all systems. It will typically be implemented on mobile OSes (Android, i\+OS) but not on desktop OSes (Windows, Linux, ...).
+\end{DoxyWarning}
+If the virtual keyboard is not available, this function does nothing.
+
+
+\begin{DoxyParams}{Parametry}
+{\em visible} & True to show, false to hide   \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_abfa3c573f19de6769602269a62692b95}\label{classsf_1_1priv_1_1_input_impl_abfa3c573f19de6769602269a62692b95} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!setVirtualKeyboardVisible@{setVirtualKeyboardVisible}}
+\index{setVirtualKeyboardVisible@{setVirtualKeyboardVisible}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{setVirtualKeyboardVisible()}{setVirtualKeyboardVisible()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily static void sf\+::priv\+::\+Input\+Impl\+::set\+Virtual\+Keyboard\+Visible (\begin{DoxyParamCaption}\item[{bool}]{visible }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Show or hide the virtual keyboard.   
+
+\begin{DoxyWarning}{Ostrzeżenie}
+The virtual keyboard is not supported on all systems. It will typically be implemented on mobile OSes (Android, i\+OS) but not on desktop OSes (Windows, Linux, ...).
+\end{DoxyWarning}
+If the virtual keyboard is not available, this function does nothing.
+
+
+\begin{DoxyParams}{Parametry}
+{\em visible} & True to show, false to hide   \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_abfa3c573f19de6769602269a62692b95}\label{classsf_1_1priv_1_1_input_impl_abfa3c573f19de6769602269a62692b95} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!setVirtualKeyboardVisible@{setVirtualKeyboardVisible}}
+\index{setVirtualKeyboardVisible@{setVirtualKeyboardVisible}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{setVirtualKeyboardVisible()}{setVirtualKeyboardVisible()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily static void sf\+::priv\+::\+Input\+Impl\+::set\+Virtual\+Keyboard\+Visible (\begin{DoxyParamCaption}\item[{bool}]{visible }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Show or hide the virtual keyboard.   
+
+\begin{DoxyWarning}{Ostrzeżenie}
+The virtual keyboard is not supported on all systems. It will typically be implemented on mobile OSes (Android, i\+OS) but not on desktop OSes (Windows, Linux, ...).
+\end{DoxyWarning}
+If the virtual keyboard is not available, this function does nothing.
+
+
+\begin{DoxyParams}{Parametry}
+{\em visible} & True to show, false to hide   \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_abfa3c573f19de6769602269a62692b95}\label{classsf_1_1priv_1_1_input_impl_abfa3c573f19de6769602269a62692b95} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!setVirtualKeyboardVisible@{setVirtualKeyboardVisible}}
+\index{setVirtualKeyboardVisible@{setVirtualKeyboardVisible}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{setVirtualKeyboardVisible()}{setVirtualKeyboardVisible()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily static void sf\+::priv\+::\+Input\+Impl\+::set\+Virtual\+Keyboard\+Visible (\begin{DoxyParamCaption}\item[{bool}]{visible }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Show or hide the virtual keyboard.   
+
+\begin{DoxyWarning}{Ostrzeżenie}
+The virtual keyboard is not supported on all systems. It will typically be implemented on mobile OSes (Android, i\+OS) but not on desktop OSes (Windows, Linux, ...).
+\end{DoxyWarning}
+If the virtual keyboard is not available, this function does nothing.
+
+
+\begin{DoxyParams}{Parametry}
+{\em visible} & True to show, false to hide   \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_abfa3c573f19de6769602269a62692b95}\label{classsf_1_1priv_1_1_input_impl_abfa3c573f19de6769602269a62692b95} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!setVirtualKeyboardVisible@{setVirtualKeyboardVisible}}
+\index{setVirtualKeyboardVisible@{setVirtualKeyboardVisible}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{setVirtualKeyboardVisible()}{setVirtualKeyboardVisible()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily static void sf\+::priv\+::\+Input\+Impl\+::set\+Virtual\+Keyboard\+Visible (\begin{DoxyParamCaption}\item[{bool}]{visible }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Show or hide the virtual keyboard.   
+
+\begin{DoxyWarning}{Ostrzeżenie}
+The virtual keyboard is not supported on all systems. It will typically be implemented on mobile OSes (Android, i\+OS) but not on desktop OSes (Windows, Linux, ...).
+\end{DoxyWarning}
+If the virtual keyboard is not available, this function does nothing.
+
+
+\begin{DoxyParams}{Parametry}
+{\em visible} & True to show, false to hide   \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Dokumentacja przyjaciół i funkcji związanych}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_acbbedfc6c1b2f9e476412aac518629a1}\label{classsf_1_1priv_1_1_input_impl_acbbedfc6c1b2f9e476412aac518629a1} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!WindowImplDRM@{WindowImplDRM}}
+\index{WindowImplDRM@{WindowImplDRM}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{WindowImplDRM}{WindowImplDRM}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_d_r_m}{Window\+Impl\+DRM}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{classsf_1_1priv_1_1_input_impl_ad04302fb4e6d2c5393cb5eef9dca9c25}\label{classsf_1_1priv_1_1_input_impl_ad04302fb4e6d2c5393cb5eef9dca9c25} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!m\_keyToScancodeMapping@{m\_keyToScancodeMapping}}
+\index{m\_keyToScancodeMapping@{m\_keyToScancodeMapping}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{m\_keyToScancodeMapping}{m\_keyToScancodeMapping}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} sf\+::priv\+::\+Input\+Impl\+::m\+\_\+key\+To\+Scancode\+Mapping\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Mapping from Key to Scancode. 
+
+\Hypertarget{classsf_1_1priv_1_1_input_impl_a3a39f59797fb3af404325dca6c414a7e}\label{classsf_1_1priv_1_1_input_impl_a3a39f59797fb3af404325dca6c414a7e} 
+\index{sf::priv::InputImpl@{sf::priv::InputImpl}!m\_scancodeToKeyMapping@{m\_scancodeToKeyMapping}}
+\index{m\_scancodeToKeyMapping@{m\_scancodeToKeyMapping}!sf::priv::InputImpl@{sf::priv::InputImpl}}
+\doxysubsubsection{\texorpdfstring{m\_scancodeToKeyMapping}{m\_scancodeToKeyMapping}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} sf\+::priv\+::\+Input\+Impl\+::m\+\_\+scancode\+To\+Key\+Mapping\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Mapping from Scancode to Key. 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+Android/\mbox{\hyperlink{_android_2_input_impl_8hpp}{Input\+Impl.\+hpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+DRM/\mbox{\hyperlink{_input_impl_u_dev_8hpp}{Input\+Impl\+UDev.\+hpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+Win32/\mbox{\hyperlink{_win32_2_input_impl_8hpp}{Input\+Impl.\+hpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/i\+OS/\mbox{\hyperlink{i_o_s_2_input_impl_8hpp}{Input\+Impl.\+hpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+OSX/\mbox{\hyperlink{_o_s_x_2_input_impl_8hpp}{Input\+Impl.\+hpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+Unix/\mbox{\hyperlink{_unix_2_input_impl_8hpp}{Input\+Impl.\+hpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+Android/\mbox{\hyperlink{_android_2_input_impl_8cpp}{Input\+Impl.\+cpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+DRM/\mbox{\hyperlink{_input_impl_u_dev_8cpp}{Input\+Impl\+UDev.\+cpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/i\+OS/\mbox{\hyperlink{i_o_s_2_input_impl_8mm}{Input\+Impl.\+mm}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+OSX/\mbox{\hyperlink{_o_s_x_2_input_impl_8mm}{Input\+Impl.\+mm}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+Unix/\mbox{\hyperlink{_unix_2_input_impl_8cpp}{Input\+Impl.\+cpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+Win32/\mbox{\hyperlink{_win32_2_input_impl_8cpp}{Input\+Impl.\+cpp}}\end{DoxyCompactItemize}

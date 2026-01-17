@@ -1,0 +1,373 @@
+\doxysection{Dokumentacja pliku cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/extlibs/headers/freetype2/fttypes.h}
+\hypertarget{fttypes_8h}{}\label{fttypes_8h}\index{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/freetype2/fttypes.h@{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/freetype2/fttypes.h}}
+{\ttfamily \#include $<$ft2build.\+h$>$}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+Wykres zależności załączania dla fttypes.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{fttypes_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_f_t___unit_vector__}{FT\+\_\+\+Unit\+Vector\+\_\+}}
+\item 
+struct \mbox{\hyperlink{struct_f_t___matrix__}{FT\+\_\+\+Matrix\+\_\+}}
+\item 
+struct \mbox{\hyperlink{struct_f_t___data__}{FT\+\_\+\+Data\+\_\+}}
+\item 
+struct \mbox{\hyperlink{struct_f_t___generic__}{FT\+\_\+\+Generic\+\_\+}}
+\item 
+struct \mbox{\hyperlink{struct_f_t___list_node_rec__}{FT\+\_\+\+List\+Node\+Rec\+\_\+}}
+\item 
+struct \mbox{\hyperlink{struct_f_t___list_rec__}{FT\+\_\+\+List\+Rec\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Definicje}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{fttypes_8h_ae115fc8c5f7280f599d1b2ae713f6db0}{FT\+\_\+\+MAKE\+\_\+\+TAG}}(\+\_\+x1,  \+\_\+x2,  \+\_\+x3,  \+\_\+x4)
+\item 
+\#define \mbox{\hyperlink{fttypes_8h_a9764414c233608bcb9eadec7b0176b81}{FT\+\_\+\+IS\+\_\+\+EMPTY}}(list)~( (list).head == 0 )
+\item 
+\#define \mbox{\hyperlink{fttypes_8h_adf712510036d534403cbddf4f18c2083}{FT\+\_\+\+BOOL}}(x)~( (\mbox{\hyperlink{fttypes_8h_a1a832a256bb5a7e6e884afaa1a07f3ae}{FT\+\_\+\+Bool}})( x ) )
+\item 
+\#define \mbox{\hyperlink{fttypes_8h_ab2283544b5c90d6d47aaf2be14e81b4a}{FT\+\_\+\+ERR\+\_\+\+XCAT}}(x,  y)~x \#\# y
+\item 
+\#define \mbox{\hyperlink{fttypes_8h_a68551f6a26f7a08610c35fc8f0b6b8bc}{FT\+\_\+\+ERR\+\_\+\+CAT}}(x,  y)~\mbox{\hyperlink{fttypes_8h_ab2283544b5c90d6d47aaf2be14e81b4a}{FT\+\_\+\+ERR\+\_\+\+XCAT}}( x, y )
+\item 
+\#define \mbox{\hyperlink{fttypes_8h_a92754aa65898484be40143bc6c9865df}{FT\+\_\+\+ERR}}(e)~\mbox{\hyperlink{fttypes_8h_a68551f6a26f7a08610c35fc8f0b6b8bc}{FT\+\_\+\+ERR\+\_\+\+CAT}}( \mbox{\hyperlink{fterrors_8h_af0eb185e421716db7b56371e80dfcaa1}{FT\+\_\+\+ERR\+\_\+\+PREFIX}}, e )
+\item 
+\#define \mbox{\hyperlink{fttypes_8h_afff9449b4bfddb61e84999323e0a63cb}{FT\+\_\+\+ERROR\+\_\+\+BASE}}(x)~( (x) \& 0x\+FF )
+\item 
+\#define \mbox{\hyperlink{fttypes_8h_abbc7eeaf0bd79560c628796882db0979}{FT\+\_\+\+ERROR\+\_\+\+MODULE}}(x)~( (x) \& 0x\+FF00U )
+\item 
+\#define \mbox{\hyperlink{fttypes_8h_a5b5171d660b3f1a06dea40ba5c407b1f}{FT\+\_\+\+ERR\+\_\+\+EQ}}(x,  e)~          ( \mbox{\hyperlink{fttypes_8h_afff9449b4bfddb61e84999323e0a63cb}{FT\+\_\+\+ERROR\+\_\+\+BASE}}( x ) == \mbox{\hyperlink{fttypes_8h_afff9449b4bfddb61e84999323e0a63cb}{FT\+\_\+\+ERROR\+\_\+\+BASE}}( \mbox{\hyperlink{fttypes_8h_a92754aa65898484be40143bc6c9865df}{FT\+\_\+\+ERR}}( e ) ) )
+\item 
+\#define \mbox{\hyperlink{fttypes_8h_a8c717404f70743060d52c9c8517aa244}{FT\+\_\+\+ERR\+\_\+\+NEQ}}(x,  e)~          ( \mbox{\hyperlink{fttypes_8h_afff9449b4bfddb61e84999323e0a63cb}{FT\+\_\+\+ERROR\+\_\+\+BASE}}( x ) != \mbox{\hyperlink{fttypes_8h_afff9449b4bfddb61e84999323e0a63cb}{FT\+\_\+\+ERROR\+\_\+\+BASE}}( \mbox{\hyperlink{fttypes_8h_a92754aa65898484be40143bc6c9865df}{FT\+\_\+\+ERR}}( e ) ) )
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Definicje typów}
+\begin{DoxyCompactItemize}
+\item 
+typedef signed short \mbox{\hyperlink{fttypes_8h_a9d5217c79dbe2bd92c67d16b0d990871}{FT\+\_\+\+FWord}}
+\item 
+typedef unsigned short \mbox{\hyperlink{fttypes_8h_a9bef318099bda61f71a06401600eaf99}{FT\+\_\+\+UFWord}}
+\item 
+typedef signed char \mbox{\hyperlink{fttypes_8h_a0f851552b050883885f0a0855771f39d}{FT\+\_\+\+Char}}
+\item 
+typedef unsigned char \mbox{\hyperlink{fttypes_8h_a51f26183ca0c9f4af958939648caeccd}{FT\+\_\+\+Byte}}
+\item 
+typedef const \mbox{\hyperlink{fttypes_8h_a51f26183ca0c9f4af958939648caeccd}{FT\+\_\+\+Byte}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{fttypes_8h_ac9cc3bb4d2035d3fc310baacd1bdd2d0}{FT\+\_\+\+Bytes}}
+\item 
+typedef FT\+\_\+\+UInt32 \mbox{\hyperlink{fttypes_8h_a2f5309d952d5dd1322fde413fc1c6b33}{FT\+\_\+\+Tag}}
+\item 
+typedef char \mbox{\hyperlink{fttypes_8h_a9846214585359eb2ba6bbb0e6de30639}{FT\+\_\+\+String}}
+\item 
+typedef signed short \mbox{\hyperlink{fttypes_8h_aa7279be89046a2563cd3d4d6651fbdcf}{FT\+\_\+\+Short}}
+\item 
+typedef unsigned short \mbox{\hyperlink{fttypes_8h_a937f6c17cf5ffd09086d8610c37b9f58}{FT\+\_\+\+UShort}}
+\item 
+typedef signed int \mbox{\hyperlink{fttypes_8h_af90e5fb0d07e21be9fe6faa33f02484c}{FT\+\_\+\+Int}}
+\item 
+typedef unsigned int \mbox{\hyperlink{fttypes_8h_abcb8db4dbf35d2b55a9e8c7b0926dc52}{FT\+\_\+\+UInt}}
+\item 
+typedef signed long \mbox{\hyperlink{fttypes_8h_a7fa72a1f0e79fb1860c5965789024d6f}{FT\+\_\+\+Long}}
+\item 
+typedef unsigned long \mbox{\hyperlink{fttypes_8h_a4fac88bdba78eb76b505efa6e4fbf3f5}{FT\+\_\+\+ULong}}
+\item 
+typedef signed short \mbox{\hyperlink{fttypes_8h_a430d070e946e531a607ae350e822ffca}{FT\+\_\+\+F2\+Dot14}}
+\item 
+typedef signed long \mbox{\hyperlink{fttypes_8h_a382164b17e99c3184911d941b2586853}{FT\+\_\+\+F26\+Dot6}}
+\item 
+typedef signed long \mbox{\hyperlink{fttypes_8h_a5f5a679cc09f758efdd0d1c5feed3c3d}{FT\+\_\+\+Fixed}}
+\item 
+typedef int \mbox{\hyperlink{fttypes_8h_a64c8060bdb3d6eec844a1bf670e06bdd}{FT\+\_\+\+Error}}
+\item 
+typedef void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{fttypes_8h_a00f9e6a0ddd7bc55f79b2f4b5b867266}{FT\+\_\+\+Pointer}}
+\item 
+typedef size\+\_\+t \mbox{\hyperlink{fttypes_8h_af7b5edd727ac01b0d4729ac848bd4175}{FT\+\_\+\+Offset}}
+\item 
+typedef \mbox{\hyperlink{ftstdlib_8h_a63186b10caa756b947299d85c1d20155}{ft\+\_\+ptrdiff\+\_\+t}} \mbox{\hyperlink{fttypes_8h_a2469cb02129d36e468be22f7a8bf5b33}{FT\+\_\+\+Ptr\+Dist}}
+\item 
+typedef struct \mbox{\hyperlink{struct_f_t___unit_vector__}{FT\+\_\+\+Unit\+Vector\+\_\+}} \mbox{\hyperlink{fttypes_8h_acd8b92a121bd5d9a79ad4c6b103aa7c1}{FT\+\_\+\+Unit\+Vector}}
+\item 
+typedef struct \mbox{\hyperlink{struct_f_t___matrix__}{FT\+\_\+\+Matrix\+\_\+}} \mbox{\hyperlink{fttypes_8h_aa6f56f1da1b9036f07db19fbc39c8aea}{FT\+\_\+\+Matrix}}
+\item 
+typedef struct \mbox{\hyperlink{struct_f_t___data__}{FT\+\_\+\+Data\+\_\+}} \mbox{\hyperlink{fttypes_8h_a86506a3d92867a5611b4493c145ab794}{FT\+\_\+\+Data}}
+\item 
+typedef void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{fttypes_8h_a9f7f3174a89e80b1d9eff58620121b3f}{FT\+\_\+\+Generic\+\_\+\+Finalizer}}) (void \texorpdfstring{$\ast$}{*}object)
+\item 
+typedef struct \mbox{\hyperlink{struct_f_t___generic__}{FT\+\_\+\+Generic\+\_\+}} \mbox{\hyperlink{fttypes_8h_a6fddceba92aa481008f68bad54cb8c0b}{FT\+\_\+\+Generic}}
+\item 
+typedef struct \mbox{\hyperlink{struct_f_t___list_node_rec__}{FT\+\_\+\+List\+Node\+Rec\+\_\+}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{fttypes_8h_a155e4980a42c16fbc221ad40b2b59695}{FT\+\_\+\+List\+Node}}
+\item 
+typedef struct \mbox{\hyperlink{struct_f_t___list_rec__}{FT\+\_\+\+List\+Rec\+\_\+}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{fttypes_8h_a9443166f293e01a3cb6346f3d499b755}{FT\+\_\+\+List}}
+\item 
+typedef struct \mbox{\hyperlink{struct_f_t___list_node_rec__}{FT\+\_\+\+List\+Node\+Rec\+\_\+}} \mbox{\hyperlink{fttypes_8h_a2c5d17b4ed9134b1ac00a4dfa1ef46e0}{FT\+\_\+\+List\+Node\+Rec}}
+\item 
+typedef struct \mbox{\hyperlink{struct_f_t___list_rec__}{FT\+\_\+\+List\+Rec\+\_\+}} \mbox{\hyperlink{fttypes_8h_ac5fd26b50609e459cc828b6e5008867c}{FT\+\_\+\+List\+Rec}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Zmienne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ftheader_8h_a72ee5814b3ae378ebb7fd3a8e3ddec14}{FT\+\_\+\+BEGIN\+\_\+\+HEADER}} typedef unsigned char \mbox{\hyperlink{fttypes_8h_a1a832a256bb5a7e6e884afaa1a07f3ae}{FT\+\_\+\+Bool}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja definicji}
+\Hypertarget{fttypes_8h_adf712510036d534403cbddf4f18c2083}\label{fttypes_8h_adf712510036d534403cbddf4f18c2083} 
+\index{fttypes.h@{fttypes.h}!FT\_BOOL@{FT\_BOOL}}
+\index{FT\_BOOL@{FT\_BOOL}!fttypes.h@{fttypes.h}}
+\doxysubsubsection{\texorpdfstring{FT\_BOOL}{FT\_BOOL}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+BOOL(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~( (\mbox{\hyperlink{fttypes_8h_a1a832a256bb5a7e6e884afaa1a07f3ae}{FT\+\_\+\+Bool}})( x ) )}
+
+\Hypertarget{fttypes_8h_a92754aa65898484be40143bc6c9865df}\label{fttypes_8h_a92754aa65898484be40143bc6c9865df} 
+\index{fttypes.h@{fttypes.h}!FT\_ERR@{FT\_ERR}}
+\index{FT\_ERR@{FT\_ERR}!fttypes.h@{fttypes.h}}
+\doxysubsubsection{\texorpdfstring{FT\_ERR}{FT\_ERR}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+ERR(\begin{DoxyParamCaption}\item[{}]{e }\end{DoxyParamCaption})~\mbox{\hyperlink{fttypes_8h_a68551f6a26f7a08610c35fc8f0b6b8bc}{FT\+\_\+\+ERR\+\_\+\+CAT}}( \mbox{\hyperlink{fterrors_8h_af0eb185e421716db7b56371e80dfcaa1}{FT\+\_\+\+ERR\+\_\+\+PREFIX}}, e )}
+
+\Hypertarget{fttypes_8h_a68551f6a26f7a08610c35fc8f0b6b8bc}\label{fttypes_8h_a68551f6a26f7a08610c35fc8f0b6b8bc} 
+\index{fttypes.h@{fttypes.h}!FT\_ERR\_CAT@{FT\_ERR\_CAT}}
+\index{FT\_ERR\_CAT@{FT\_ERR\_CAT}!fttypes.h@{fttypes.h}}
+\doxysubsubsection{\texorpdfstring{FT\_ERR\_CAT}{FT\_ERR\_CAT}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+ERR\+\_\+\+CAT(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y }\end{DoxyParamCaption})~\mbox{\hyperlink{fttypes_8h_ab2283544b5c90d6d47aaf2be14e81b4a}{FT\+\_\+\+ERR\+\_\+\+XCAT}}( x, y )}
+
+\Hypertarget{fttypes_8h_a5b5171d660b3f1a06dea40ba5c407b1f}\label{fttypes_8h_a5b5171d660b3f1a06dea40ba5c407b1f} 
+\index{fttypes.h@{fttypes.h}!FT\_ERR\_EQ@{FT\_ERR\_EQ}}
+\index{FT\_ERR\_EQ@{FT\_ERR\_EQ}!fttypes.h@{fttypes.h}}
+\doxysubsubsection{\texorpdfstring{FT\_ERR\_EQ}{FT\_ERR\_EQ}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+ERR\+\_\+\+EQ(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{e }\end{DoxyParamCaption})~          ( \mbox{\hyperlink{fttypes_8h_afff9449b4bfddb61e84999323e0a63cb}{FT\+\_\+\+ERROR\+\_\+\+BASE}}( x ) == \mbox{\hyperlink{fttypes_8h_afff9449b4bfddb61e84999323e0a63cb}{FT\+\_\+\+ERROR\+\_\+\+BASE}}( \mbox{\hyperlink{fttypes_8h_a92754aa65898484be40143bc6c9865df}{FT\+\_\+\+ERR}}( e ) ) )}
+
+\Hypertarget{fttypes_8h_a8c717404f70743060d52c9c8517aa244}\label{fttypes_8h_a8c717404f70743060d52c9c8517aa244} 
+\index{fttypes.h@{fttypes.h}!FT\_ERR\_NEQ@{FT\_ERR\_NEQ}}
+\index{FT\_ERR\_NEQ@{FT\_ERR\_NEQ}!fttypes.h@{fttypes.h}}
+\doxysubsubsection{\texorpdfstring{FT\_ERR\_NEQ}{FT\_ERR\_NEQ}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+ERR\+\_\+\+NEQ(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{e }\end{DoxyParamCaption})~          ( \mbox{\hyperlink{fttypes_8h_afff9449b4bfddb61e84999323e0a63cb}{FT\+\_\+\+ERROR\+\_\+\+BASE}}( x ) != \mbox{\hyperlink{fttypes_8h_afff9449b4bfddb61e84999323e0a63cb}{FT\+\_\+\+ERROR\+\_\+\+BASE}}( \mbox{\hyperlink{fttypes_8h_a92754aa65898484be40143bc6c9865df}{FT\+\_\+\+ERR}}( e ) ) )}
+
+\Hypertarget{fttypes_8h_ab2283544b5c90d6d47aaf2be14e81b4a}\label{fttypes_8h_ab2283544b5c90d6d47aaf2be14e81b4a} 
+\index{fttypes.h@{fttypes.h}!FT\_ERR\_XCAT@{FT\_ERR\_XCAT}}
+\index{FT\_ERR\_XCAT@{FT\_ERR\_XCAT}!fttypes.h@{fttypes.h}}
+\doxysubsubsection{\texorpdfstring{FT\_ERR\_XCAT}{FT\_ERR\_XCAT}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+ERR\+\_\+\+XCAT(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y }\end{DoxyParamCaption})~x \#\# y}
+
+\Hypertarget{fttypes_8h_afff9449b4bfddb61e84999323e0a63cb}\label{fttypes_8h_afff9449b4bfddb61e84999323e0a63cb} 
+\index{fttypes.h@{fttypes.h}!FT\_ERROR\_BASE@{FT\_ERROR\_BASE}}
+\index{FT\_ERROR\_BASE@{FT\_ERROR\_BASE}!fttypes.h@{fttypes.h}}
+\doxysubsubsection{\texorpdfstring{FT\_ERROR\_BASE}{FT\_ERROR\_BASE}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+ERROR\+\_\+\+BASE(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~( (x) \& 0x\+FF )}
+
+\Hypertarget{fttypes_8h_abbc7eeaf0bd79560c628796882db0979}\label{fttypes_8h_abbc7eeaf0bd79560c628796882db0979} 
+\index{fttypes.h@{fttypes.h}!FT\_ERROR\_MODULE@{FT\_ERROR\_MODULE}}
+\index{FT\_ERROR\_MODULE@{FT\_ERROR\_MODULE}!fttypes.h@{fttypes.h}}
+\doxysubsubsection{\texorpdfstring{FT\_ERROR\_MODULE}{FT\_ERROR\_MODULE}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+ERROR\+\_\+\+MODULE(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~( (x) \& 0x\+FF00U )}
+
+\Hypertarget{fttypes_8h_a9764414c233608bcb9eadec7b0176b81}\label{fttypes_8h_a9764414c233608bcb9eadec7b0176b81} 
+\index{fttypes.h@{fttypes.h}!FT\_IS\_EMPTY@{FT\_IS\_EMPTY}}
+\index{FT\_IS\_EMPTY@{FT\_IS\_EMPTY}!fttypes.h@{fttypes.h}}
+\doxysubsubsection{\texorpdfstring{FT\_IS\_EMPTY}{FT\_IS\_EMPTY}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+IS\+\_\+\+EMPTY(\begin{DoxyParamCaption}\item[{}]{list }\end{DoxyParamCaption})~( (list).head == 0 )}
+
+\Hypertarget{fttypes_8h_ae115fc8c5f7280f599d1b2ae713f6db0}\label{fttypes_8h_ae115fc8c5f7280f599d1b2ae713f6db0} 
+\index{fttypes.h@{fttypes.h}!FT\_MAKE\_TAG@{FT\_MAKE\_TAG}}
+\index{FT\_MAKE\_TAG@{FT\_MAKE\_TAG}!fttypes.h@{fttypes.h}}
+\doxysubsubsection{\texorpdfstring{FT\_MAKE\_TAG}{FT\_MAKE\_TAG}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+MAKE\+\_\+\+TAG(\begin{DoxyParamCaption}\item[{}]{\+\_\+x1,  }\item[{}]{\+\_\+x2,  }\item[{}]{\+\_\+x3,  }\item[{}]{\+\_\+x4 }\end{DoxyParamCaption})}
+
+{\bfseries Wartość\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ (\mbox{\hyperlink{fttypes_8h_a2f5309d952d5dd1322fde413fc1c6b33}{FT\_Tag}})\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ (\ (\ (\mbox{\hyperlink{fttypes_8h_a4fac88bdba78eb76b505efa6e4fbf3f5}{FT\_ULong}})\_x1\ <<\ 24\ )\ |\ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ (\ (\mbox{\hyperlink{fttypes_8h_a4fac88bdba78eb76b505efa6e4fbf3f5}{FT\_ULong}})\_x2\ <<\ 16\ )\ |\ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ (\ (\mbox{\hyperlink{fttypes_8h_a4fac88bdba78eb76b505efa6e4fbf3f5}{FT\_ULong}})\_x3\ <<\ \ 8\ )\ |\ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ (\mbox{\hyperlink{fttypes_8h_a4fac88bdba78eb76b505efa6e4fbf3f5}{FT\_ULong}})\_x4\ \ \ \ \ \ \ \ \ )}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Dokumentacja definicji typów}
+\Hypertarget{fttypes_8h_a51f26183ca0c9f4af958939648caeccd}\label{fttypes_8h_a51f26183ca0c9f4af958939648caeccd} 
+\index{fttypes.h@{fttypes.h}!FT\_Byte@{FT\_Byte}}
+\index{FT\_Byte@{FT\_Byte}!fttypes.h@{fttypes.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Byte}{FT\_Byte}}
+{\footnotesize\ttfamily typedef unsigned char \mbox{\hyperlink{fttypes_8h_a51f26183ca0c9f4af958939648caeccd}{FT\+\_\+\+Byte}}}
+
+\Hypertarget{fttypes_8h_ac9cc3bb4d2035d3fc310baacd1bdd2d0}\label{fttypes_8h_ac9cc3bb4d2035d3fc310baacd1bdd2d0} 
+\index{fttypes.h@{fttypes.h}!FT\_Bytes@{FT\_Bytes}}
+\index{FT\_Bytes@{FT\_Bytes}!fttypes.h@{fttypes.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Bytes}{FT\_Bytes}}
+{\footnotesize\ttfamily typedef const \mbox{\hyperlink{fttypes_8h_a51f26183ca0c9f4af958939648caeccd}{FT\+\_\+\+Byte}}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{fttypes_8h_ac9cc3bb4d2035d3fc310baacd1bdd2d0}{FT\+\_\+\+Bytes}}}
+
+\Hypertarget{fttypes_8h_a0f851552b050883885f0a0855771f39d}\label{fttypes_8h_a0f851552b050883885f0a0855771f39d} 
+\index{fttypes.h@{fttypes.h}!FT\_Char@{FT\_Char}}
+\index{FT\_Char@{FT\_Char}!fttypes.h@{fttypes.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Char}{FT\_Char}}
+{\footnotesize\ttfamily typedef signed char \mbox{\hyperlink{fttypes_8h_a0f851552b050883885f0a0855771f39d}{FT\+\_\+\+Char}}}
+
+\Hypertarget{fttypes_8h_a86506a3d92867a5611b4493c145ab794}\label{fttypes_8h_a86506a3d92867a5611b4493c145ab794} 
+\index{fttypes.h@{fttypes.h}!FT\_Data@{FT\_Data}}
+\index{FT\_Data@{FT\_Data}!fttypes.h@{fttypes.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Data}{FT\_Data}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_f_t___data__}{FT\+\_\+\+Data\+\_\+}} \mbox{\hyperlink{fttypes_8h_a86506a3d92867a5611b4493c145ab794}{FT\+\_\+\+Data}}}
+
+\Hypertarget{fttypes_8h_a64c8060bdb3d6eec844a1bf670e06bdd}\label{fttypes_8h_a64c8060bdb3d6eec844a1bf670e06bdd} 
+\index{fttypes.h@{fttypes.h}!FT\_Error@{FT\_Error}}
+\index{FT\_Error@{FT\_Error}!fttypes.h@{fttypes.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Error}{FT\_Error}}
+{\footnotesize\ttfamily typedef int \mbox{\hyperlink{fttypes_8h_a64c8060bdb3d6eec844a1bf670e06bdd}{FT\+\_\+\+Error}}}
+
+\Hypertarget{fttypes_8h_a382164b17e99c3184911d941b2586853}\label{fttypes_8h_a382164b17e99c3184911d941b2586853} 
+\index{fttypes.h@{fttypes.h}!FT\_F26Dot6@{FT\_F26Dot6}}
+\index{FT\_F26Dot6@{FT\_F26Dot6}!fttypes.h@{fttypes.h}}
+\doxysubsubsection{\texorpdfstring{FT\_F26Dot6}{FT\_F26Dot6}}
+{\footnotesize\ttfamily typedef signed long \mbox{\hyperlink{fttypes_8h_a382164b17e99c3184911d941b2586853}{FT\+\_\+\+F26\+Dot6}}}
+
+\Hypertarget{fttypes_8h_a430d070e946e531a607ae350e822ffca}\label{fttypes_8h_a430d070e946e531a607ae350e822ffca} 
+\index{fttypes.h@{fttypes.h}!FT\_F2Dot14@{FT\_F2Dot14}}
+\index{FT\_F2Dot14@{FT\_F2Dot14}!fttypes.h@{fttypes.h}}
+\doxysubsubsection{\texorpdfstring{FT\_F2Dot14}{FT\_F2Dot14}}
+{\footnotesize\ttfamily typedef signed short \mbox{\hyperlink{fttypes_8h_a430d070e946e531a607ae350e822ffca}{FT\+\_\+\+F2\+Dot14}}}
+
+\Hypertarget{fttypes_8h_a5f5a679cc09f758efdd0d1c5feed3c3d}\label{fttypes_8h_a5f5a679cc09f758efdd0d1c5feed3c3d} 
+\index{fttypes.h@{fttypes.h}!FT\_Fixed@{FT\_Fixed}}
+\index{FT\_Fixed@{FT\_Fixed}!fttypes.h@{fttypes.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Fixed}{FT\_Fixed}}
+{\footnotesize\ttfamily typedef signed long \mbox{\hyperlink{fttypes_8h_a5f5a679cc09f758efdd0d1c5feed3c3d}{FT\+\_\+\+Fixed}}}
+
+\Hypertarget{fttypes_8h_a9d5217c79dbe2bd92c67d16b0d990871}\label{fttypes_8h_a9d5217c79dbe2bd92c67d16b0d990871} 
+\index{fttypes.h@{fttypes.h}!FT\_FWord@{FT\_FWord}}
+\index{FT\_FWord@{FT\_FWord}!fttypes.h@{fttypes.h}}
+\doxysubsubsection{\texorpdfstring{FT\_FWord}{FT\_FWord}}
+{\footnotesize\ttfamily typedef signed short \mbox{\hyperlink{fttypes_8h_a9d5217c79dbe2bd92c67d16b0d990871}{FT\+\_\+\+FWord}}}
+
+\Hypertarget{fttypes_8h_a6fddceba92aa481008f68bad54cb8c0b}\label{fttypes_8h_a6fddceba92aa481008f68bad54cb8c0b} 
+\index{fttypes.h@{fttypes.h}!FT\_Generic@{FT\_Generic}}
+\index{FT\_Generic@{FT\_Generic}!fttypes.h@{fttypes.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Generic}{FT\_Generic}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_f_t___generic__}{FT\+\_\+\+Generic\+\_\+}} \mbox{\hyperlink{fttypes_8h_a6fddceba92aa481008f68bad54cb8c0b}{FT\+\_\+\+Generic}}}
+
+\Hypertarget{fttypes_8h_a9f7f3174a89e80b1d9eff58620121b3f}\label{fttypes_8h_a9f7f3174a89e80b1d9eff58620121b3f} 
+\index{fttypes.h@{fttypes.h}!FT\_Generic\_Finalizer@{FT\_Generic\_Finalizer}}
+\index{FT\_Generic\_Finalizer@{FT\_Generic\_Finalizer}!fttypes.h@{fttypes.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Generic\_Finalizer}{FT\_Generic\_Finalizer}}
+{\footnotesize\ttfamily typedef void(\texorpdfstring{$\ast$}{*} FT\+\_\+\+Generic\+\_\+\+Finalizer) (void \texorpdfstring{$\ast$}{*}object)}
+
+\Hypertarget{fttypes_8h_af90e5fb0d07e21be9fe6faa33f02484c}\label{fttypes_8h_af90e5fb0d07e21be9fe6faa33f02484c} 
+\index{fttypes.h@{fttypes.h}!FT\_Int@{FT\_Int}}
+\index{FT\_Int@{FT\_Int}!fttypes.h@{fttypes.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Int}{FT\_Int}}
+{\footnotesize\ttfamily typedef signed int \mbox{\hyperlink{fttypes_8h_af90e5fb0d07e21be9fe6faa33f02484c}{FT\+\_\+\+Int}}}
+
+\Hypertarget{fttypes_8h_a9443166f293e01a3cb6346f3d499b755}\label{fttypes_8h_a9443166f293e01a3cb6346f3d499b755} 
+\index{fttypes.h@{fttypes.h}!FT\_List@{FT\_List}}
+\index{FT\_List@{FT\_List}!fttypes.h@{fttypes.h}}
+\doxysubsubsection{\texorpdfstring{FT\_List}{FT\_List}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_f_t___list_rec__}{FT\+\_\+\+List\+Rec\+\_\+}}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{fttypes_8h_a9443166f293e01a3cb6346f3d499b755}{FT\+\_\+\+List}}}
+
+\Hypertarget{fttypes_8h_a155e4980a42c16fbc221ad40b2b59695}\label{fttypes_8h_a155e4980a42c16fbc221ad40b2b59695} 
+\index{fttypes.h@{fttypes.h}!FT\_ListNode@{FT\_ListNode}}
+\index{FT\_ListNode@{FT\_ListNode}!fttypes.h@{fttypes.h}}
+\doxysubsubsection{\texorpdfstring{FT\_ListNode}{FT\_ListNode}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_f_t___list_node_rec__}{FT\+\_\+\+List\+Node\+Rec\+\_\+}}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{fttypes_8h_a155e4980a42c16fbc221ad40b2b59695}{FT\+\_\+\+List\+Node}}}
+
+\Hypertarget{fttypes_8h_a2c5d17b4ed9134b1ac00a4dfa1ef46e0}\label{fttypes_8h_a2c5d17b4ed9134b1ac00a4dfa1ef46e0} 
+\index{fttypes.h@{fttypes.h}!FT\_ListNodeRec@{FT\_ListNodeRec}}
+\index{FT\_ListNodeRec@{FT\_ListNodeRec}!fttypes.h@{fttypes.h}}
+\doxysubsubsection{\texorpdfstring{FT\_ListNodeRec}{FT\_ListNodeRec}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_f_t___list_node_rec__}{FT\+\_\+\+List\+Node\+Rec\+\_\+}} \mbox{\hyperlink{fttypes_8h_a2c5d17b4ed9134b1ac00a4dfa1ef46e0}{FT\+\_\+\+List\+Node\+Rec}}}
+
+\Hypertarget{fttypes_8h_ac5fd26b50609e459cc828b6e5008867c}\label{fttypes_8h_ac5fd26b50609e459cc828b6e5008867c} 
+\index{fttypes.h@{fttypes.h}!FT\_ListRec@{FT\_ListRec}}
+\index{FT\_ListRec@{FT\_ListRec}!fttypes.h@{fttypes.h}}
+\doxysubsubsection{\texorpdfstring{FT\_ListRec}{FT\_ListRec}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_f_t___list_rec__}{FT\+\_\+\+List\+Rec\+\_\+}} \mbox{\hyperlink{fttypes_8h_ac5fd26b50609e459cc828b6e5008867c}{FT\+\_\+\+List\+Rec}}}
+
+\Hypertarget{fttypes_8h_a7fa72a1f0e79fb1860c5965789024d6f}\label{fttypes_8h_a7fa72a1f0e79fb1860c5965789024d6f} 
+\index{fttypes.h@{fttypes.h}!FT\_Long@{FT\_Long}}
+\index{FT\_Long@{FT\_Long}!fttypes.h@{fttypes.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Long}{FT\_Long}}
+{\footnotesize\ttfamily typedef signed long \mbox{\hyperlink{fttypes_8h_a7fa72a1f0e79fb1860c5965789024d6f}{FT\+\_\+\+Long}}}
+
+\Hypertarget{fttypes_8h_aa6f56f1da1b9036f07db19fbc39c8aea}\label{fttypes_8h_aa6f56f1da1b9036f07db19fbc39c8aea} 
+\index{fttypes.h@{fttypes.h}!FT\_Matrix@{FT\_Matrix}}
+\index{FT\_Matrix@{FT\_Matrix}!fttypes.h@{fttypes.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Matrix}{FT\_Matrix}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_f_t___matrix__}{FT\+\_\+\+Matrix\+\_\+}} \mbox{\hyperlink{fttypes_8h_aa6f56f1da1b9036f07db19fbc39c8aea}{FT\+\_\+\+Matrix}}}
+
+\Hypertarget{fttypes_8h_af7b5edd727ac01b0d4729ac848bd4175}\label{fttypes_8h_af7b5edd727ac01b0d4729ac848bd4175} 
+\index{fttypes.h@{fttypes.h}!FT\_Offset@{FT\_Offset}}
+\index{FT\_Offset@{FT\_Offset}!fttypes.h@{fttypes.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Offset}{FT\_Offset}}
+{\footnotesize\ttfamily typedef size\+\_\+t \mbox{\hyperlink{fttypes_8h_af7b5edd727ac01b0d4729ac848bd4175}{FT\+\_\+\+Offset}}}
+
+\Hypertarget{fttypes_8h_a00f9e6a0ddd7bc55f79b2f4b5b867266}\label{fttypes_8h_a00f9e6a0ddd7bc55f79b2f4b5b867266} 
+\index{fttypes.h@{fttypes.h}!FT\_Pointer@{FT\_Pointer}}
+\index{FT\_Pointer@{FT\_Pointer}!fttypes.h@{fttypes.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Pointer}{FT\_Pointer}}
+{\footnotesize\ttfamily typedef void\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{fttypes_8h_a00f9e6a0ddd7bc55f79b2f4b5b867266}{FT\+\_\+\+Pointer}}}
+
+\Hypertarget{fttypes_8h_a2469cb02129d36e468be22f7a8bf5b33}\label{fttypes_8h_a2469cb02129d36e468be22f7a8bf5b33} 
+\index{fttypes.h@{fttypes.h}!FT\_PtrDist@{FT\_PtrDist}}
+\index{FT\_PtrDist@{FT\_PtrDist}!fttypes.h@{fttypes.h}}
+\doxysubsubsection{\texorpdfstring{FT\_PtrDist}{FT\_PtrDist}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{ftstdlib_8h_a63186b10caa756b947299d85c1d20155}{ft\+\_\+ptrdiff\+\_\+t}} \mbox{\hyperlink{fttypes_8h_a2469cb02129d36e468be22f7a8bf5b33}{FT\+\_\+\+Ptr\+Dist}}}
+
+\Hypertarget{fttypes_8h_aa7279be89046a2563cd3d4d6651fbdcf}\label{fttypes_8h_aa7279be89046a2563cd3d4d6651fbdcf} 
+\index{fttypes.h@{fttypes.h}!FT\_Short@{FT\_Short}}
+\index{FT\_Short@{FT\_Short}!fttypes.h@{fttypes.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Short}{FT\_Short}}
+{\footnotesize\ttfamily typedef signed short \mbox{\hyperlink{fttypes_8h_aa7279be89046a2563cd3d4d6651fbdcf}{FT\+\_\+\+Short}}}
+
+\Hypertarget{fttypes_8h_a9846214585359eb2ba6bbb0e6de30639}\label{fttypes_8h_a9846214585359eb2ba6bbb0e6de30639} 
+\index{fttypes.h@{fttypes.h}!FT\_String@{FT\_String}}
+\index{FT\_String@{FT\_String}!fttypes.h@{fttypes.h}}
+\doxysubsubsection{\texorpdfstring{FT\_String}{FT\_String}}
+{\footnotesize\ttfamily typedef char \mbox{\hyperlink{fttypes_8h_a9846214585359eb2ba6bbb0e6de30639}{FT\+\_\+\+String}}}
+
+\Hypertarget{fttypes_8h_a2f5309d952d5dd1322fde413fc1c6b33}\label{fttypes_8h_a2f5309d952d5dd1322fde413fc1c6b33} 
+\index{fttypes.h@{fttypes.h}!FT\_Tag@{FT\_Tag}}
+\index{FT\_Tag@{FT\_Tag}!fttypes.h@{fttypes.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Tag}{FT\_Tag}}
+{\footnotesize\ttfamily typedef FT\+\_\+\+UInt32 \mbox{\hyperlink{fttypes_8h_a2f5309d952d5dd1322fde413fc1c6b33}{FT\+\_\+\+Tag}}}
+
+\Hypertarget{fttypes_8h_a9bef318099bda61f71a06401600eaf99}\label{fttypes_8h_a9bef318099bda61f71a06401600eaf99} 
+\index{fttypes.h@{fttypes.h}!FT\_UFWord@{FT\_UFWord}}
+\index{FT\_UFWord@{FT\_UFWord}!fttypes.h@{fttypes.h}}
+\doxysubsubsection{\texorpdfstring{FT\_UFWord}{FT\_UFWord}}
+{\footnotesize\ttfamily typedef unsigned short \mbox{\hyperlink{fttypes_8h_a9bef318099bda61f71a06401600eaf99}{FT\+\_\+\+UFWord}}}
+
+\Hypertarget{fttypes_8h_abcb8db4dbf35d2b55a9e8c7b0926dc52}\label{fttypes_8h_abcb8db4dbf35d2b55a9e8c7b0926dc52} 
+\index{fttypes.h@{fttypes.h}!FT\_UInt@{FT\_UInt}}
+\index{FT\_UInt@{FT\_UInt}!fttypes.h@{fttypes.h}}
+\doxysubsubsection{\texorpdfstring{FT\_UInt}{FT\_UInt}}
+{\footnotesize\ttfamily typedef unsigned int \mbox{\hyperlink{fttypes_8h_abcb8db4dbf35d2b55a9e8c7b0926dc52}{FT\+\_\+\+UInt}}}
+
+\Hypertarget{fttypes_8h_a4fac88bdba78eb76b505efa6e4fbf3f5}\label{fttypes_8h_a4fac88bdba78eb76b505efa6e4fbf3f5} 
+\index{fttypes.h@{fttypes.h}!FT\_ULong@{FT\_ULong}}
+\index{FT\_ULong@{FT\_ULong}!fttypes.h@{fttypes.h}}
+\doxysubsubsection{\texorpdfstring{FT\_ULong}{FT\_ULong}}
+{\footnotesize\ttfamily typedef unsigned long \mbox{\hyperlink{fttypes_8h_a4fac88bdba78eb76b505efa6e4fbf3f5}{FT\+\_\+\+ULong}}}
+
+\Hypertarget{fttypes_8h_acd8b92a121bd5d9a79ad4c6b103aa7c1}\label{fttypes_8h_acd8b92a121bd5d9a79ad4c6b103aa7c1} 
+\index{fttypes.h@{fttypes.h}!FT\_UnitVector@{FT\_UnitVector}}
+\index{FT\_UnitVector@{FT\_UnitVector}!fttypes.h@{fttypes.h}}
+\doxysubsubsection{\texorpdfstring{FT\_UnitVector}{FT\_UnitVector}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_f_t___unit_vector__}{FT\+\_\+\+Unit\+Vector\+\_\+}} \mbox{\hyperlink{fttypes_8h_acd8b92a121bd5d9a79ad4c6b103aa7c1}{FT\+\_\+\+Unit\+Vector}}}
+
+\Hypertarget{fttypes_8h_a937f6c17cf5ffd09086d8610c37b9f58}\label{fttypes_8h_a937f6c17cf5ffd09086d8610c37b9f58} 
+\index{fttypes.h@{fttypes.h}!FT\_UShort@{FT\_UShort}}
+\index{FT\_UShort@{FT\_UShort}!fttypes.h@{fttypes.h}}
+\doxysubsubsection{\texorpdfstring{FT\_UShort}{FT\_UShort}}
+{\footnotesize\ttfamily typedef unsigned short \mbox{\hyperlink{fttypes_8h_a937f6c17cf5ffd09086d8610c37b9f58}{FT\+\_\+\+UShort}}}
+
+
+
+\doxysubsection{Dokumentacja zmiennych}
+\Hypertarget{fttypes_8h_a1a832a256bb5a7e6e884afaa1a07f3ae}\label{fttypes_8h_a1a832a256bb5a7e6e884afaa1a07f3ae} 
+\index{fttypes.h@{fttypes.h}!FT\_Bool@{FT\_Bool}}
+\index{FT\_Bool@{FT\_Bool}!fttypes.h@{fttypes.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Bool}{FT\_Bool}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ftheader_8h_a72ee5814b3ae378ebb7fd3a8e3ddec14}{FT\+\_\+\+BEGIN\+\_\+\+HEADER}} typedef unsigned char FT\+\_\+\+Bool}
+

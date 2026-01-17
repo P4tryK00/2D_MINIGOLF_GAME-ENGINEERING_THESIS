@@ -1,0 +1,343 @@
+\doxysection{Dokumentacja pliku cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/extlibs/headers/minimp3/minimp3\+\_\+ex.h}
+\hypertarget{minimp3__ex_8h}{}\label{minimp3__ex_8h}\index{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/minimp3/minimp3\_ex.h@{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/minimp3/minimp3\_ex.h}}
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include "{}minimp3.\+h"{}}\newline
+Wykres zależności załączania dla minimp3\+\_\+ex.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{minimp3__ex_8h__incl}
+\end{center}
+\end{figure}
+Ten wykres pokazuje, które pliki bezpośrednio lub pośrednio załączają ten plik\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{minimp3__ex_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmp3dec__file__info__t}{mp3dec\+\_\+file\+\_\+info\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structmp3dec__map__info__t}{mp3dec\+\_\+map\+\_\+info\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structmp3dec__frame__t}{mp3dec\+\_\+frame\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structmp3dec__index__t}{mp3dec\+\_\+index\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structmp3dec__io__t}{mp3dec\+\_\+io\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structmp3dec__ex__t}{mp3dec\+\_\+ex\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Definicje}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{minimp3__ex_8h_af00bc5a5bb5eba35fffa90b113ffbf05}{MP3\+D\+\_\+\+SEEK\+\_\+\+TO\+\_\+\+BYTE}}~0      /\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{minimp3__ex_8h_a3e752561690923dc798f2adfbc2c38fb}{mp3dec\+\_\+ex\+\_\+seek}} seeks to byte in stream \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{minimp3__ex_8h_a309a16e14a997a1e9537f06eb0683090}{MP3\+D\+\_\+\+SEEK\+\_\+\+TO\+\_\+\+SAMPLE}}~1      /\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{minimp3__ex_8h_a3e752561690923dc798f2adfbc2c38fb}{mp3dec\+\_\+ex\+\_\+seek}} precisely seeks to sample using index (created during duration calculation scan or when \mbox{\hyperlink{minimp3__ex_8h_a3e752561690923dc798f2adfbc2c38fb}{mp3dec\+\_\+ex\+\_\+seek}} called) \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{minimp3__ex_8h_ab3736544a0373fb51274e8db4fc81eb7}{MP3\+D\+\_\+\+DO\+\_\+\+NOT\+\_\+\+SCAN}}~2      /\texorpdfstring{$\ast$}{*} do not scan whole stream for duration if vbrtag not found, \mbox{\hyperlink{structmp3dec__ex__t_a138bf7485e7f4f20c481b46051a0a8bf}{mp3dec\+\_\+ex\+\_\+t\+::samples}} will be filled only if \mbox{\hyperlink{structmp3dec__ex__t_a56111cda542372126c53b751bb231b2b}{mp3dec\+\_\+ex\+\_\+t\+::vbr\+\_\+tag\+\_\+found}} == 1 \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{minimp3__ex_8h_a07f562452236ba6b6355556feced9fc4}{MP3\+D\+\_\+\+FLAGS\+\_\+\+MASK}}~3
+\item 
+\#define \mbox{\hyperlink{minimp3__ex_8h_a55fe6667787e5eb588b93d7171ee7633}{MINIMP3\+\_\+\+PREDECODE\+\_\+\+FRAMES}}~2 /\texorpdfstring{$\ast$}{*} frames to pre-\/decode and skip after seek (to fill internal structures) \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{minimp3__ex_8h_ae0420263594b9f726dcb99f43b5bd23f}{MINIMP3\+\_\+\+IO\+\_\+\+SIZE}}~(128\texorpdfstring{$\ast$}{*}1024) /\texorpdfstring{$\ast$}{*} io buffer size for streaming functions, must be greater than \mbox{\hyperlink{minimp3__ex_8h_a2ef248c7aff5a5e0cd5fffc6127d5849}{MINIMP3\+\_\+\+BUF\+\_\+\+SIZE}} \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{minimp3__ex_8h_a2ef248c7aff5a5e0cd5fffc6127d5849}{MINIMP3\+\_\+\+BUF\+\_\+\+SIZE}}~(16\texorpdfstring{$\ast$}{*}1024) /\texorpdfstring{$\ast$}{*} buffer which can hold minimum 10 consecutive mp3 frames (\texorpdfstring{$\sim$}{\string~}16KB) worst case \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{minimp3__ex_8h_a0be6d8a12aee6bdd1f4412b31c27f3c1}{MINIMP3\+\_\+\+ENABLE\+\_\+\+RING}}~0      /\texorpdfstring{$\ast$}{*} WIP enable hardware magic ring buffer if available, to make less input buffer memmove(s) in callback IO mode \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{minimp3__ex_8h_afd17086858bde25da30f8bd57e1a6458}{MP3\+D\+\_\+\+E\+\_\+\+PARAM}}~-\/1
+\item 
+\#define \mbox{\hyperlink{minimp3__ex_8h_a96830e024e302925507882cf8afb7460}{MP3\+D\+\_\+\+E\+\_\+\+MEMORY}}~-\/2
+\item 
+\#define \mbox{\hyperlink{minimp3__ex_8h_a4ef2cff7a0b403032f48129a8e413435}{MP3\+D\+\_\+\+E\+\_\+\+IOERROR}}~-\/3
+\item 
+\#define \mbox{\hyperlink{minimp3__ex_8h_acf47112101ece200a15c8b5f27a06fc9}{MP3\+D\+\_\+\+E\+\_\+\+USER}}~-\/4  /\texorpdfstring{$\ast$}{*} can be used to stop processing from callbacks without indicating specific error \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{minimp3__ex_8h_ad76cefcd8fb27ef5bc5d70210a122c9a}{MP3\+D\+\_\+\+E\+\_\+\+DECODE}}~-\/5  /\texorpdfstring{$\ast$}{*} decode error which can\textquotesingle{}t be safely skipped, such as sample rate, layer and channels change \texorpdfstring{$\ast$}{*}/
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Definicje typów}
+\begin{DoxyCompactItemize}
+\item 
+typedef size\+\_\+t(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{minimp3__ex_8h_ada634939bf52a295948fdfd81215890c}{MP3\+D\+\_\+\+READ\+\_\+\+CB}}) (void \texorpdfstring{$\ast$}{*}buf, size\+\_\+t size, void \texorpdfstring{$\ast$}{*}user\+\_\+data)
+\item 
+typedef int(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{minimp3__ex_8h_a3e193046daa6269ace8729aba645a595}{MP3\+D\+\_\+\+SEEK\+\_\+\+CB}}) (uint64\+\_\+t position, void \texorpdfstring{$\ast$}{*}user\+\_\+data)
+\item 
+typedef int(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{minimp3__ex_8h_a156201e8e590ced254c0ec1a113dbd1f}{MP3\+D\+\_\+\+ITERATE\+\_\+\+CB}}) (void \texorpdfstring{$\ast$}{*}user\+\_\+data, const uint8\+\_\+t \texorpdfstring{$\ast$}{*}frame, int frame\+\_\+size, int free\+\_\+format\+\_\+bytes, size\+\_\+t buf\+\_\+size, uint64\+\_\+t offset, \mbox{\hyperlink{structmp3dec__frame__info__t}{mp3dec\+\_\+frame\+\_\+info\+\_\+t}} \texorpdfstring{$\ast$}{*}info)
+\item 
+typedef int(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{minimp3__ex_8h_a7f1fc690609a81b717359a77027490cf}{MP3\+D\+\_\+\+PROGRESS\+\_\+\+CB}}) (void \texorpdfstring{$\ast$}{*}user\+\_\+data, size\+\_\+t file\+\_\+size, uint64\+\_\+t offset, \mbox{\hyperlink{structmp3dec__frame__info__t}{mp3dec\+\_\+frame\+\_\+info\+\_\+t}} \texorpdfstring{$\ast$}{*}info)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{minimp3__ex_8h_ad69b7539cb2a643e400825aaa92434f5}{mp3dec\+\_\+detect\+\_\+buf}} (const uint8\+\_\+t \texorpdfstring{$\ast$}{*}buf, size\+\_\+t buf\+\_\+size)
+\item 
+int \mbox{\hyperlink{minimp3__ex_8h_aae8b00fa74ad03095b8b99087cbbb889}{mp3dec\+\_\+detect\+\_\+cb}} (\mbox{\hyperlink{structmp3dec__io__t}{mp3dec\+\_\+io\+\_\+t}} \texorpdfstring{$\ast$}{*}io, uint8\+\_\+t \texorpdfstring{$\ast$}{*}buf, size\+\_\+t buf\+\_\+size)
+\item 
+int \mbox{\hyperlink{minimp3__ex_8h_a5af86015446ded7c5345230705f24e5b}{mp3dec\+\_\+load\+\_\+buf}} (\mbox{\hyperlink{structmp3dec__t}{mp3dec\+\_\+t}} \texorpdfstring{$\ast$}{*}dec, const uint8\+\_\+t \texorpdfstring{$\ast$}{*}buf, size\+\_\+t buf\+\_\+size, \mbox{\hyperlink{structmp3dec__file__info__t}{mp3dec\+\_\+file\+\_\+info\+\_\+t}} \texorpdfstring{$\ast$}{*}info, \mbox{\hyperlink{minimp3__ex_8h_a7f1fc690609a81b717359a77027490cf}{MP3\+D\+\_\+\+PROGRESS\+\_\+\+CB}} progress\+\_\+cb, void \texorpdfstring{$\ast$}{*}user\+\_\+data)
+\item 
+int \mbox{\hyperlink{minimp3__ex_8h_a4845a5b2bea51db3761151f60c18d4b6}{mp3dec\+\_\+load\+\_\+cb}} (\mbox{\hyperlink{structmp3dec__t}{mp3dec\+\_\+t}} \texorpdfstring{$\ast$}{*}dec, \mbox{\hyperlink{structmp3dec__io__t}{mp3dec\+\_\+io\+\_\+t}} \texorpdfstring{$\ast$}{*}io, uint8\+\_\+t \texorpdfstring{$\ast$}{*}buf, size\+\_\+t buf\+\_\+size, \mbox{\hyperlink{structmp3dec__file__info__t}{mp3dec\+\_\+file\+\_\+info\+\_\+t}} \texorpdfstring{$\ast$}{*}info, \mbox{\hyperlink{minimp3__ex_8h_a7f1fc690609a81b717359a77027490cf}{MP3\+D\+\_\+\+PROGRESS\+\_\+\+CB}} progress\+\_\+cb, void \texorpdfstring{$\ast$}{*}user\+\_\+data)
+\item 
+int \mbox{\hyperlink{minimp3__ex_8h_ac4f6c8c305339b3675c60014871f091d}{mp3dec\+\_\+iterate\+\_\+buf}} (const uint8\+\_\+t \texorpdfstring{$\ast$}{*}buf, size\+\_\+t buf\+\_\+size, \mbox{\hyperlink{minimp3__ex_8h_a156201e8e590ced254c0ec1a113dbd1f}{MP3\+D\+\_\+\+ITERATE\+\_\+\+CB}} callback, void \texorpdfstring{$\ast$}{*}user\+\_\+data)
+\item 
+int \mbox{\hyperlink{minimp3__ex_8h_ad284dbfa591ea90c94190ab58ecdf97a}{mp3dec\+\_\+iterate\+\_\+cb}} (\mbox{\hyperlink{structmp3dec__io__t}{mp3dec\+\_\+io\+\_\+t}} \texorpdfstring{$\ast$}{*}io, uint8\+\_\+t \texorpdfstring{$\ast$}{*}buf, size\+\_\+t buf\+\_\+size, \mbox{\hyperlink{minimp3__ex_8h_a156201e8e590ced254c0ec1a113dbd1f}{MP3\+D\+\_\+\+ITERATE\+\_\+\+CB}} callback, void \texorpdfstring{$\ast$}{*}user\+\_\+data)
+\item 
+int \mbox{\hyperlink{minimp3__ex_8h_a4b4ebe8965d000c52a60f4f87b215e31}{mp3dec\+\_\+ex\+\_\+open\+\_\+buf}} (\mbox{\hyperlink{structmp3dec__ex__t}{mp3dec\+\_\+ex\+\_\+t}} \texorpdfstring{$\ast$}{*}dec, const uint8\+\_\+t \texorpdfstring{$\ast$}{*}buf, size\+\_\+t buf\+\_\+size, int flags)
+\item 
+int \mbox{\hyperlink{minimp3__ex_8h_a9608642546e6038ad87eb511453fcf0c}{mp3dec\+\_\+ex\+\_\+open\+\_\+cb}} (\mbox{\hyperlink{structmp3dec__ex__t}{mp3dec\+\_\+ex\+\_\+t}} \texorpdfstring{$\ast$}{*}dec, \mbox{\hyperlink{structmp3dec__io__t}{mp3dec\+\_\+io\+\_\+t}} \texorpdfstring{$\ast$}{*}io, int flags)
+\item 
+void \mbox{\hyperlink{minimp3__ex_8h_a9d28e71470f01d65509956310b34833f}{mp3dec\+\_\+ex\+\_\+close}} (\mbox{\hyperlink{structmp3dec__ex__t}{mp3dec\+\_\+ex\+\_\+t}} \texorpdfstring{$\ast$}{*}dec)
+\item 
+int \mbox{\hyperlink{minimp3__ex_8h_a3e752561690923dc798f2adfbc2c38fb}{mp3dec\+\_\+ex\+\_\+seek}} (\mbox{\hyperlink{structmp3dec__ex__t}{mp3dec\+\_\+ex\+\_\+t}} \texorpdfstring{$\ast$}{*}dec, uint64\+\_\+t position)
+\item 
+size\+\_\+t \mbox{\hyperlink{minimp3__ex_8h_a228d3b327580d49e0665f0f16986fe5b}{mp3dec\+\_\+ex\+\_\+read\+\_\+frame}} (\mbox{\hyperlink{structmp3dec__ex__t}{mp3dec\+\_\+ex\+\_\+t}} \texorpdfstring{$\ast$}{*}dec, \mbox{\hyperlink{minimp3_8h_a829d503db4023edb6b1705acc319b008}{mp3d\+\_\+sample\+\_\+t}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}buf, \mbox{\hyperlink{structmp3dec__frame__info__t}{mp3dec\+\_\+frame\+\_\+info\+\_\+t}} \texorpdfstring{$\ast$}{*}frame\+\_\+info, size\+\_\+t max\+\_\+samples)
+\item 
+size\+\_\+t \mbox{\hyperlink{minimp3__ex_8h_ad85d7a52068f4701d135e38f1031c98c}{mp3dec\+\_\+ex\+\_\+read}} (\mbox{\hyperlink{structmp3dec__ex__t}{mp3dec\+\_\+ex\+\_\+t}} \texorpdfstring{$\ast$}{*}dec, \mbox{\hyperlink{minimp3_8h_a829d503db4023edb6b1705acc319b008}{mp3d\+\_\+sample\+\_\+t}} \texorpdfstring{$\ast$}{*}buf, size\+\_\+t samples)
+\item 
+int \mbox{\hyperlink{minimp3__ex_8h_aff0f4bc6c05f79e646b33e3ca1a679b6}{mp3dec\+\_\+detect}} (const char \texorpdfstring{$\ast$}{*}file\+\_\+name)
+\item 
+int \mbox{\hyperlink{minimp3__ex_8h_a3dc291be4901f8d51496f298d777d15f}{mp3dec\+\_\+load}} (\mbox{\hyperlink{structmp3dec__t}{mp3dec\+\_\+t}} \texorpdfstring{$\ast$}{*}dec, const char \texorpdfstring{$\ast$}{*}file\+\_\+name, \mbox{\hyperlink{structmp3dec__file__info__t}{mp3dec\+\_\+file\+\_\+info\+\_\+t}} \texorpdfstring{$\ast$}{*}info, \mbox{\hyperlink{minimp3__ex_8h_a7f1fc690609a81b717359a77027490cf}{MP3\+D\+\_\+\+PROGRESS\+\_\+\+CB}} progress\+\_\+cb, void \texorpdfstring{$\ast$}{*}user\+\_\+data)
+\item 
+int \mbox{\hyperlink{minimp3__ex_8h_a2f298c21365d8c05e04fdeb8156ac3ca}{mp3dec\+\_\+iterate}} (const char \texorpdfstring{$\ast$}{*}file\+\_\+name, \mbox{\hyperlink{minimp3__ex_8h_a156201e8e590ced254c0ec1a113dbd1f}{MP3\+D\+\_\+\+ITERATE\+\_\+\+CB}} callback, void \texorpdfstring{$\ast$}{*}user\+\_\+data)
+\item 
+int \mbox{\hyperlink{minimp3__ex_8h_ae961a541c7b84c6af375d19cce9f03a2}{mp3dec\+\_\+ex\+\_\+open}} (\mbox{\hyperlink{structmp3dec__ex__t}{mp3dec\+\_\+ex\+\_\+t}} \texorpdfstring{$\ast$}{*}dec, const char \texorpdfstring{$\ast$}{*}file\+\_\+name, int flags)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja definicji}
+\Hypertarget{minimp3__ex_8h_a2ef248c7aff5a5e0cd5fffc6127d5849}\label{minimp3__ex_8h_a2ef248c7aff5a5e0cd5fffc6127d5849} 
+\index{minimp3\_ex.h@{minimp3\_ex.h}!MINIMP3\_BUF\_SIZE@{MINIMP3\_BUF\_SIZE}}
+\index{MINIMP3\_BUF\_SIZE@{MINIMP3\_BUF\_SIZE}!minimp3\_ex.h@{minimp3\_ex.h}}
+\doxysubsubsection{\texorpdfstring{MINIMP3\_BUF\_SIZE}{MINIMP3\_BUF\_SIZE}}
+{\footnotesize\ttfamily \#define MINIMP3\+\_\+\+BUF\+\_\+\+SIZE~(16\texorpdfstring{$\ast$}{*}1024) /\texorpdfstring{$\ast$}{*} buffer which can hold minimum 10 consecutive mp3 frames (\texorpdfstring{$\sim$}{\string~}16KB) worst case \texorpdfstring{$\ast$}{*}/}
+
+\Hypertarget{minimp3__ex_8h_a0be6d8a12aee6bdd1f4412b31c27f3c1}\label{minimp3__ex_8h_a0be6d8a12aee6bdd1f4412b31c27f3c1} 
+\index{minimp3\_ex.h@{minimp3\_ex.h}!MINIMP3\_ENABLE\_RING@{MINIMP3\_ENABLE\_RING}}
+\index{MINIMP3\_ENABLE\_RING@{MINIMP3\_ENABLE\_RING}!minimp3\_ex.h@{minimp3\_ex.h}}
+\doxysubsubsection{\texorpdfstring{MINIMP3\_ENABLE\_RING}{MINIMP3\_ENABLE\_RING}}
+{\footnotesize\ttfamily \#define MINIMP3\+\_\+\+ENABLE\+\_\+\+RING~0      /\texorpdfstring{$\ast$}{*} WIP enable hardware magic ring buffer if available, to make less input buffer memmove(s) in callback IO mode \texorpdfstring{$\ast$}{*}/}
+
+\Hypertarget{minimp3__ex_8h_ae0420263594b9f726dcb99f43b5bd23f}\label{minimp3__ex_8h_ae0420263594b9f726dcb99f43b5bd23f} 
+\index{minimp3\_ex.h@{minimp3\_ex.h}!MINIMP3\_IO\_SIZE@{MINIMP3\_IO\_SIZE}}
+\index{MINIMP3\_IO\_SIZE@{MINIMP3\_IO\_SIZE}!minimp3\_ex.h@{minimp3\_ex.h}}
+\doxysubsubsection{\texorpdfstring{MINIMP3\_IO\_SIZE}{MINIMP3\_IO\_SIZE}}
+{\footnotesize\ttfamily \#define MINIMP3\+\_\+\+IO\+\_\+\+SIZE~(128\texorpdfstring{$\ast$}{*}1024) /\texorpdfstring{$\ast$}{*} io buffer size for streaming functions, must be greater than \mbox{\hyperlink{minimp3__ex_8h_a2ef248c7aff5a5e0cd5fffc6127d5849}{MINIMP3\+\_\+\+BUF\+\_\+\+SIZE}} \texorpdfstring{$\ast$}{*}/}
+
+\Hypertarget{minimp3__ex_8h_a55fe6667787e5eb588b93d7171ee7633}\label{minimp3__ex_8h_a55fe6667787e5eb588b93d7171ee7633} 
+\index{minimp3\_ex.h@{minimp3\_ex.h}!MINIMP3\_PREDECODE\_FRAMES@{MINIMP3\_PREDECODE\_FRAMES}}
+\index{MINIMP3\_PREDECODE\_FRAMES@{MINIMP3\_PREDECODE\_FRAMES}!minimp3\_ex.h@{minimp3\_ex.h}}
+\doxysubsubsection{\texorpdfstring{MINIMP3\_PREDECODE\_FRAMES}{MINIMP3\_PREDECODE\_FRAMES}}
+{\footnotesize\ttfamily \#define MINIMP3\+\_\+\+PREDECODE\+\_\+\+FRAMES~2 /\texorpdfstring{$\ast$}{*} frames to pre-\/decode and skip after seek (to fill internal structures) \texorpdfstring{$\ast$}{*}/}
+
+\Hypertarget{minimp3__ex_8h_ab3736544a0373fb51274e8db4fc81eb7}\label{minimp3__ex_8h_ab3736544a0373fb51274e8db4fc81eb7} 
+\index{minimp3\_ex.h@{minimp3\_ex.h}!MP3D\_DO\_NOT\_SCAN@{MP3D\_DO\_NOT\_SCAN}}
+\index{MP3D\_DO\_NOT\_SCAN@{MP3D\_DO\_NOT\_SCAN}!minimp3\_ex.h@{minimp3\_ex.h}}
+\doxysubsubsection{\texorpdfstring{MP3D\_DO\_NOT\_SCAN}{MP3D\_DO\_NOT\_SCAN}}
+{\footnotesize\ttfamily \#define MP3\+D\+\_\+\+DO\+\_\+\+NOT\+\_\+\+SCAN~2      /\texorpdfstring{$\ast$}{*} do not scan whole stream for duration if vbrtag not found, \mbox{\hyperlink{structmp3dec__ex__t_a138bf7485e7f4f20c481b46051a0a8bf}{mp3dec\+\_\+ex\+\_\+t\+::samples}} will be filled only if \mbox{\hyperlink{structmp3dec__ex__t_a56111cda542372126c53b751bb231b2b}{mp3dec\+\_\+ex\+\_\+t\+::vbr\+\_\+tag\+\_\+found}} == 1 \texorpdfstring{$\ast$}{*}/}
+
+\Hypertarget{minimp3__ex_8h_ad76cefcd8fb27ef5bc5d70210a122c9a}\label{minimp3__ex_8h_ad76cefcd8fb27ef5bc5d70210a122c9a} 
+\index{minimp3\_ex.h@{minimp3\_ex.h}!MP3D\_E\_DECODE@{MP3D\_E\_DECODE}}
+\index{MP3D\_E\_DECODE@{MP3D\_E\_DECODE}!minimp3\_ex.h@{minimp3\_ex.h}}
+\doxysubsubsection{\texorpdfstring{MP3D\_E\_DECODE}{MP3D\_E\_DECODE}}
+{\footnotesize\ttfamily \#define MP3\+D\+\_\+\+E\+\_\+\+DECODE~-\/5  /\texorpdfstring{$\ast$}{*} decode error which can\textquotesingle{}t be safely skipped, such as sample rate, layer and channels change \texorpdfstring{$\ast$}{*}/}
+
+\Hypertarget{minimp3__ex_8h_a4ef2cff7a0b403032f48129a8e413435}\label{minimp3__ex_8h_a4ef2cff7a0b403032f48129a8e413435} 
+\index{minimp3\_ex.h@{minimp3\_ex.h}!MP3D\_E\_IOERROR@{MP3D\_E\_IOERROR}}
+\index{MP3D\_E\_IOERROR@{MP3D\_E\_IOERROR}!minimp3\_ex.h@{minimp3\_ex.h}}
+\doxysubsubsection{\texorpdfstring{MP3D\_E\_IOERROR}{MP3D\_E\_IOERROR}}
+{\footnotesize\ttfamily \#define MP3\+D\+\_\+\+E\+\_\+\+IOERROR~-\/3}
+
+\Hypertarget{minimp3__ex_8h_a96830e024e302925507882cf8afb7460}\label{minimp3__ex_8h_a96830e024e302925507882cf8afb7460} 
+\index{minimp3\_ex.h@{minimp3\_ex.h}!MP3D\_E\_MEMORY@{MP3D\_E\_MEMORY}}
+\index{MP3D\_E\_MEMORY@{MP3D\_E\_MEMORY}!minimp3\_ex.h@{minimp3\_ex.h}}
+\doxysubsubsection{\texorpdfstring{MP3D\_E\_MEMORY}{MP3D\_E\_MEMORY}}
+{\footnotesize\ttfamily \#define MP3\+D\+\_\+\+E\+\_\+\+MEMORY~-\/2}
+
+\Hypertarget{minimp3__ex_8h_afd17086858bde25da30f8bd57e1a6458}\label{minimp3__ex_8h_afd17086858bde25da30f8bd57e1a6458} 
+\index{minimp3\_ex.h@{minimp3\_ex.h}!MP3D\_E\_PARAM@{MP3D\_E\_PARAM}}
+\index{MP3D\_E\_PARAM@{MP3D\_E\_PARAM}!minimp3\_ex.h@{minimp3\_ex.h}}
+\doxysubsubsection{\texorpdfstring{MP3D\_E\_PARAM}{MP3D\_E\_PARAM}}
+{\footnotesize\ttfamily \#define MP3\+D\+\_\+\+E\+\_\+\+PARAM~-\/1}
+
+\Hypertarget{minimp3__ex_8h_acf47112101ece200a15c8b5f27a06fc9}\label{minimp3__ex_8h_acf47112101ece200a15c8b5f27a06fc9} 
+\index{minimp3\_ex.h@{minimp3\_ex.h}!MP3D\_E\_USER@{MP3D\_E\_USER}}
+\index{MP3D\_E\_USER@{MP3D\_E\_USER}!minimp3\_ex.h@{minimp3\_ex.h}}
+\doxysubsubsection{\texorpdfstring{MP3D\_E\_USER}{MP3D\_E\_USER}}
+{\footnotesize\ttfamily \#define MP3\+D\+\_\+\+E\+\_\+\+USER~-\/4  /\texorpdfstring{$\ast$}{*} can be used to stop processing from callbacks without indicating specific error \texorpdfstring{$\ast$}{*}/}
+
+\Hypertarget{minimp3__ex_8h_a07f562452236ba6b6355556feced9fc4}\label{minimp3__ex_8h_a07f562452236ba6b6355556feced9fc4} 
+\index{minimp3\_ex.h@{minimp3\_ex.h}!MP3D\_FLAGS\_MASK@{MP3D\_FLAGS\_MASK}}
+\index{MP3D\_FLAGS\_MASK@{MP3D\_FLAGS\_MASK}!minimp3\_ex.h@{minimp3\_ex.h}}
+\doxysubsubsection{\texorpdfstring{MP3D\_FLAGS\_MASK}{MP3D\_FLAGS\_MASK}}
+{\footnotesize\ttfamily \#define MP3\+D\+\_\+\+FLAGS\+\_\+\+MASK~3}
+
+\Hypertarget{minimp3__ex_8h_af00bc5a5bb5eba35fffa90b113ffbf05}\label{minimp3__ex_8h_af00bc5a5bb5eba35fffa90b113ffbf05} 
+\index{minimp3\_ex.h@{minimp3\_ex.h}!MP3D\_SEEK\_TO\_BYTE@{MP3D\_SEEK\_TO\_BYTE}}
+\index{MP3D\_SEEK\_TO\_BYTE@{MP3D\_SEEK\_TO\_BYTE}!minimp3\_ex.h@{minimp3\_ex.h}}
+\doxysubsubsection{\texorpdfstring{MP3D\_SEEK\_TO\_BYTE}{MP3D\_SEEK\_TO\_BYTE}}
+{\footnotesize\ttfamily \#define MP3\+D\+\_\+\+SEEK\+\_\+\+TO\+\_\+\+BYTE~0      /\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{minimp3__ex_8h_a3e752561690923dc798f2adfbc2c38fb}{mp3dec\+\_\+ex\+\_\+seek}} seeks to byte in stream \texorpdfstring{$\ast$}{*}/}
+
+\Hypertarget{minimp3__ex_8h_a309a16e14a997a1e9537f06eb0683090}\label{minimp3__ex_8h_a309a16e14a997a1e9537f06eb0683090} 
+\index{minimp3\_ex.h@{minimp3\_ex.h}!MP3D\_SEEK\_TO\_SAMPLE@{MP3D\_SEEK\_TO\_SAMPLE}}
+\index{MP3D\_SEEK\_TO\_SAMPLE@{MP3D\_SEEK\_TO\_SAMPLE}!minimp3\_ex.h@{minimp3\_ex.h}}
+\doxysubsubsection{\texorpdfstring{MP3D\_SEEK\_TO\_SAMPLE}{MP3D\_SEEK\_TO\_SAMPLE}}
+{\footnotesize\ttfamily \#define MP3\+D\+\_\+\+SEEK\+\_\+\+TO\+\_\+\+SAMPLE~1      /\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{minimp3__ex_8h_a3e752561690923dc798f2adfbc2c38fb}{mp3dec\+\_\+ex\+\_\+seek}} precisely seeks to sample using index (created during duration calculation scan or when \mbox{\hyperlink{minimp3__ex_8h_a3e752561690923dc798f2adfbc2c38fb}{mp3dec\+\_\+ex\+\_\+seek}} called) \texorpdfstring{$\ast$}{*}/}
+
+
+
+\doxysubsection{Dokumentacja definicji typów}
+\Hypertarget{minimp3__ex_8h_a156201e8e590ced254c0ec1a113dbd1f}\label{minimp3__ex_8h_a156201e8e590ced254c0ec1a113dbd1f} 
+\index{minimp3\_ex.h@{minimp3\_ex.h}!MP3D\_ITERATE\_CB@{MP3D\_ITERATE\_CB}}
+\index{MP3D\_ITERATE\_CB@{MP3D\_ITERATE\_CB}!minimp3\_ex.h@{minimp3\_ex.h}}
+\doxysubsubsection{\texorpdfstring{MP3D\_ITERATE\_CB}{MP3D\_ITERATE\_CB}}
+{\footnotesize\ttfamily typedef int(\texorpdfstring{$\ast$}{*} MP3\+D\+\_\+\+ITERATE\+\_\+\+CB) (void \texorpdfstring{$\ast$}{*}user\+\_\+data, const uint8\+\_\+t \texorpdfstring{$\ast$}{*}frame, int frame\+\_\+size, int free\+\_\+format\+\_\+bytes, size\+\_\+t buf\+\_\+size, uint64\+\_\+t offset, \mbox{\hyperlink{structmp3dec__frame__info__t}{mp3dec\+\_\+frame\+\_\+info\+\_\+t}} \texorpdfstring{$\ast$}{*}info)}
+
+\Hypertarget{minimp3__ex_8h_a7f1fc690609a81b717359a77027490cf}\label{minimp3__ex_8h_a7f1fc690609a81b717359a77027490cf} 
+\index{minimp3\_ex.h@{minimp3\_ex.h}!MP3D\_PROGRESS\_CB@{MP3D\_PROGRESS\_CB}}
+\index{MP3D\_PROGRESS\_CB@{MP3D\_PROGRESS\_CB}!minimp3\_ex.h@{minimp3\_ex.h}}
+\doxysubsubsection{\texorpdfstring{MP3D\_PROGRESS\_CB}{MP3D\_PROGRESS\_CB}}
+{\footnotesize\ttfamily typedef int(\texorpdfstring{$\ast$}{*} MP3\+D\+\_\+\+PROGRESS\+\_\+\+CB) (void \texorpdfstring{$\ast$}{*}user\+\_\+data, size\+\_\+t file\+\_\+size, uint64\+\_\+t offset, \mbox{\hyperlink{structmp3dec__frame__info__t}{mp3dec\+\_\+frame\+\_\+info\+\_\+t}} \texorpdfstring{$\ast$}{*}info)}
+
+\Hypertarget{minimp3__ex_8h_ada634939bf52a295948fdfd81215890c}\label{minimp3__ex_8h_ada634939bf52a295948fdfd81215890c} 
+\index{minimp3\_ex.h@{minimp3\_ex.h}!MP3D\_READ\_CB@{MP3D\_READ\_CB}}
+\index{MP3D\_READ\_CB@{MP3D\_READ\_CB}!minimp3\_ex.h@{minimp3\_ex.h}}
+\doxysubsubsection{\texorpdfstring{MP3D\_READ\_CB}{MP3D\_READ\_CB}}
+{\footnotesize\ttfamily typedef size\+\_\+t(\texorpdfstring{$\ast$}{*} MP3\+D\+\_\+\+READ\+\_\+\+CB) (void \texorpdfstring{$\ast$}{*}buf, size\+\_\+t size, void \texorpdfstring{$\ast$}{*}user\+\_\+data)}
+
+\Hypertarget{minimp3__ex_8h_a3e193046daa6269ace8729aba645a595}\label{minimp3__ex_8h_a3e193046daa6269ace8729aba645a595} 
+\index{minimp3\_ex.h@{minimp3\_ex.h}!MP3D\_SEEK\_CB@{MP3D\_SEEK\_CB}}
+\index{MP3D\_SEEK\_CB@{MP3D\_SEEK\_CB}!minimp3\_ex.h@{minimp3\_ex.h}}
+\doxysubsubsection{\texorpdfstring{MP3D\_SEEK\_CB}{MP3D\_SEEK\_CB}}
+{\footnotesize\ttfamily typedef int(\texorpdfstring{$\ast$}{*} MP3\+D\+\_\+\+SEEK\+\_\+\+CB) (uint64\+\_\+t position, void \texorpdfstring{$\ast$}{*}user\+\_\+data)}
+
+
+
+\doxysubsection{Dokumentacja funkcji}
+\Hypertarget{minimp3__ex_8h_aff0f4bc6c05f79e646b33e3ca1a679b6}\label{minimp3__ex_8h_aff0f4bc6c05f79e646b33e3ca1a679b6} 
+\index{minimp3\_ex.h@{minimp3\_ex.h}!mp3dec\_detect@{mp3dec\_detect}}
+\index{mp3dec\_detect@{mp3dec\_detect}!minimp3\_ex.h@{minimp3\_ex.h}}
+\doxysubsubsection{\texorpdfstring{mp3dec\_detect()}{mp3dec\_detect()}}
+{\footnotesize\ttfamily int mp3dec\+\_\+detect (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{file\+\_\+name }\end{DoxyParamCaption})}
+
+\Hypertarget{minimp3__ex_8h_ad69b7539cb2a643e400825aaa92434f5}\label{minimp3__ex_8h_ad69b7539cb2a643e400825aaa92434f5} 
+\index{minimp3\_ex.h@{minimp3\_ex.h}!mp3dec\_detect\_buf@{mp3dec\_detect\_buf}}
+\index{mp3dec\_detect\_buf@{mp3dec\_detect\_buf}!minimp3\_ex.h@{minimp3\_ex.h}}
+\doxysubsubsection{\texorpdfstring{mp3dec\_detect\_buf()}{mp3dec\_detect\_buf()}}
+{\footnotesize\ttfamily int mp3dec\+\_\+detect\+\_\+buf (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{buf,  }\item[{size\+\_\+t}]{buf\+\_\+size }\end{DoxyParamCaption})}
+
+\Hypertarget{minimp3__ex_8h_aae8b00fa74ad03095b8b99087cbbb889}\label{minimp3__ex_8h_aae8b00fa74ad03095b8b99087cbbb889} 
+\index{minimp3\_ex.h@{minimp3\_ex.h}!mp3dec\_detect\_cb@{mp3dec\_detect\_cb}}
+\index{mp3dec\_detect\_cb@{mp3dec\_detect\_cb}!minimp3\_ex.h@{minimp3\_ex.h}}
+\doxysubsubsection{\texorpdfstring{mp3dec\_detect\_cb()}{mp3dec\_detect\_cb()}}
+{\footnotesize\ttfamily int mp3dec\+\_\+detect\+\_\+cb (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmp3dec__io__t}{mp3dec\+\_\+io\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{io,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{buf,  }\item[{size\+\_\+t}]{buf\+\_\+size }\end{DoxyParamCaption})}
+
+\Hypertarget{minimp3__ex_8h_a9d28e71470f01d65509956310b34833f}\label{minimp3__ex_8h_a9d28e71470f01d65509956310b34833f} 
+\index{minimp3\_ex.h@{minimp3\_ex.h}!mp3dec\_ex\_close@{mp3dec\_ex\_close}}
+\index{mp3dec\_ex\_close@{mp3dec\_ex\_close}!minimp3\_ex.h@{minimp3\_ex.h}}
+\doxysubsubsection{\texorpdfstring{mp3dec\_ex\_close()}{mp3dec\_ex\_close()}}
+{\footnotesize\ttfamily void mp3dec\+\_\+ex\+\_\+close (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmp3dec__ex__t}{mp3dec\+\_\+ex\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{dec }\end{DoxyParamCaption})}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{minimp3__ex_8h_a9d28e71470f01d65509956310b34833f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{minimp3__ex_8h_ae961a541c7b84c6af375d19cce9f03a2}\label{minimp3__ex_8h_ae961a541c7b84c6af375d19cce9f03a2} 
+\index{minimp3\_ex.h@{minimp3\_ex.h}!mp3dec\_ex\_open@{mp3dec\_ex\_open}}
+\index{mp3dec\_ex\_open@{mp3dec\_ex\_open}!minimp3\_ex.h@{minimp3\_ex.h}}
+\doxysubsubsection{\texorpdfstring{mp3dec\_ex\_open()}{mp3dec\_ex\_open()}}
+{\footnotesize\ttfamily int mp3dec\+\_\+ex\+\_\+open (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmp3dec__ex__t}{mp3dec\+\_\+ex\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{dec,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{file\+\_\+name,  }\item[{int}]{flags }\end{DoxyParamCaption})}
+
+\Hypertarget{minimp3__ex_8h_a4b4ebe8965d000c52a60f4f87b215e31}\label{minimp3__ex_8h_a4b4ebe8965d000c52a60f4f87b215e31} 
+\index{minimp3\_ex.h@{minimp3\_ex.h}!mp3dec\_ex\_open\_buf@{mp3dec\_ex\_open\_buf}}
+\index{mp3dec\_ex\_open\_buf@{mp3dec\_ex\_open\_buf}!minimp3\_ex.h@{minimp3\_ex.h}}
+\doxysubsubsection{\texorpdfstring{mp3dec\_ex\_open\_buf()}{mp3dec\_ex\_open\_buf()}}
+{\footnotesize\ttfamily int mp3dec\+\_\+ex\+\_\+open\+\_\+buf (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmp3dec__ex__t}{mp3dec\+\_\+ex\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{dec,  }\item[{const uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{buf,  }\item[{size\+\_\+t}]{buf\+\_\+size,  }\item[{int}]{flags }\end{DoxyParamCaption})}
+
+\Hypertarget{minimp3__ex_8h_a9608642546e6038ad87eb511453fcf0c}\label{minimp3__ex_8h_a9608642546e6038ad87eb511453fcf0c} 
+\index{minimp3\_ex.h@{minimp3\_ex.h}!mp3dec\_ex\_open\_cb@{mp3dec\_ex\_open\_cb}}
+\index{mp3dec\_ex\_open\_cb@{mp3dec\_ex\_open\_cb}!minimp3\_ex.h@{minimp3\_ex.h}}
+\doxysubsubsection{\texorpdfstring{mp3dec\_ex\_open\_cb()}{mp3dec\_ex\_open\_cb()}}
+{\footnotesize\ttfamily int mp3dec\+\_\+ex\+\_\+open\+\_\+cb (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmp3dec__ex__t}{mp3dec\+\_\+ex\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{dec,  }\item[{\mbox{\hyperlink{structmp3dec__io__t}{mp3dec\+\_\+io\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{io,  }\item[{int}]{flags }\end{DoxyParamCaption})}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{minimp3__ex_8h_a9608642546e6038ad87eb511453fcf0c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{minimp3__ex_8h_ad85d7a52068f4701d135e38f1031c98c}\label{minimp3__ex_8h_ad85d7a52068f4701d135e38f1031c98c} 
+\index{minimp3\_ex.h@{minimp3\_ex.h}!mp3dec\_ex\_read@{mp3dec\_ex\_read}}
+\index{mp3dec\_ex\_read@{mp3dec\_ex\_read}!minimp3\_ex.h@{minimp3\_ex.h}}
+\doxysubsubsection{\texorpdfstring{mp3dec\_ex\_read()}{mp3dec\_ex\_read()}}
+{\footnotesize\ttfamily size\+\_\+t mp3dec\+\_\+ex\+\_\+read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmp3dec__ex__t}{mp3dec\+\_\+ex\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{dec,  }\item[{\mbox{\hyperlink{minimp3_8h_a829d503db4023edb6b1705acc319b008}{mp3d\+\_\+sample\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{buf,  }\item[{size\+\_\+t}]{samples }\end{DoxyParamCaption})}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{minimp3__ex_8h_ad85d7a52068f4701d135e38f1031c98c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{minimp3__ex_8h_a228d3b327580d49e0665f0f16986fe5b}\label{minimp3__ex_8h_a228d3b327580d49e0665f0f16986fe5b} 
+\index{minimp3\_ex.h@{minimp3\_ex.h}!mp3dec\_ex\_read\_frame@{mp3dec\_ex\_read\_frame}}
+\index{mp3dec\_ex\_read\_frame@{mp3dec\_ex\_read\_frame}!minimp3\_ex.h@{minimp3\_ex.h}}
+\doxysubsubsection{\texorpdfstring{mp3dec\_ex\_read\_frame()}{mp3dec\_ex\_read\_frame()}}
+{\footnotesize\ttfamily size\+\_\+t mp3dec\+\_\+ex\+\_\+read\+\_\+frame (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmp3dec__ex__t}{mp3dec\+\_\+ex\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{dec,  }\item[{\mbox{\hyperlink{minimp3_8h_a829d503db4023edb6b1705acc319b008}{mp3d\+\_\+sample\+\_\+t}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{buf,  }\item[{\mbox{\hyperlink{structmp3dec__frame__info__t}{mp3dec\+\_\+frame\+\_\+info\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{frame\+\_\+info,  }\item[{size\+\_\+t}]{max\+\_\+samples }\end{DoxyParamCaption})}
+
+\Hypertarget{minimp3__ex_8h_a3e752561690923dc798f2adfbc2c38fb}\label{minimp3__ex_8h_a3e752561690923dc798f2adfbc2c38fb} 
+\index{minimp3\_ex.h@{minimp3\_ex.h}!mp3dec\_ex\_seek@{mp3dec\_ex\_seek}}
+\index{mp3dec\_ex\_seek@{mp3dec\_ex\_seek}!minimp3\_ex.h@{minimp3\_ex.h}}
+\doxysubsubsection{\texorpdfstring{mp3dec\_ex\_seek()}{mp3dec\_ex\_seek()}}
+{\footnotesize\ttfamily int mp3dec\+\_\+ex\+\_\+seek (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmp3dec__ex__t}{mp3dec\+\_\+ex\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{dec,  }\item[{uint64\+\_\+t}]{position }\end{DoxyParamCaption})}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{minimp3__ex_8h_a3e752561690923dc798f2adfbc2c38fb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{minimp3__ex_8h_a2f298c21365d8c05e04fdeb8156ac3ca}\label{minimp3__ex_8h_a2f298c21365d8c05e04fdeb8156ac3ca} 
+\index{minimp3\_ex.h@{minimp3\_ex.h}!mp3dec\_iterate@{mp3dec\_iterate}}
+\index{mp3dec\_iterate@{mp3dec\_iterate}!minimp3\_ex.h@{minimp3\_ex.h}}
+\doxysubsubsection{\texorpdfstring{mp3dec\_iterate()}{mp3dec\_iterate()}}
+{\footnotesize\ttfamily int mp3dec\+\_\+iterate (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{file\+\_\+name,  }\item[{\mbox{\hyperlink{minimp3__ex_8h_a156201e8e590ced254c0ec1a113dbd1f}{MP3\+D\+\_\+\+ITERATE\+\_\+\+CB}}}]{callback,  }\item[{void \texorpdfstring{$\ast$}{*}}]{user\+\_\+data }\end{DoxyParamCaption})}
+
+\Hypertarget{minimp3__ex_8h_ac4f6c8c305339b3675c60014871f091d}\label{minimp3__ex_8h_ac4f6c8c305339b3675c60014871f091d} 
+\index{minimp3\_ex.h@{minimp3\_ex.h}!mp3dec\_iterate\_buf@{mp3dec\_iterate\_buf}}
+\index{mp3dec\_iterate\_buf@{mp3dec\_iterate\_buf}!minimp3\_ex.h@{minimp3\_ex.h}}
+\doxysubsubsection{\texorpdfstring{mp3dec\_iterate\_buf()}{mp3dec\_iterate\_buf()}}
+{\footnotesize\ttfamily int mp3dec\+\_\+iterate\+\_\+buf (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{buf,  }\item[{size\+\_\+t}]{buf\+\_\+size,  }\item[{\mbox{\hyperlink{minimp3__ex_8h_a156201e8e590ced254c0ec1a113dbd1f}{MP3\+D\+\_\+\+ITERATE\+\_\+\+CB}}}]{callback,  }\item[{void \texorpdfstring{$\ast$}{*}}]{user\+\_\+data }\end{DoxyParamCaption})}
+
+\Hypertarget{minimp3__ex_8h_ad284dbfa591ea90c94190ab58ecdf97a}\label{minimp3__ex_8h_ad284dbfa591ea90c94190ab58ecdf97a} 
+\index{minimp3\_ex.h@{minimp3\_ex.h}!mp3dec\_iterate\_cb@{mp3dec\_iterate\_cb}}
+\index{mp3dec\_iterate\_cb@{mp3dec\_iterate\_cb}!minimp3\_ex.h@{minimp3\_ex.h}}
+\doxysubsubsection{\texorpdfstring{mp3dec\_iterate\_cb()}{mp3dec\_iterate\_cb()}}
+{\footnotesize\ttfamily int mp3dec\+\_\+iterate\+\_\+cb (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmp3dec__io__t}{mp3dec\+\_\+io\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{io,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{buf,  }\item[{size\+\_\+t}]{buf\+\_\+size,  }\item[{\mbox{\hyperlink{minimp3__ex_8h_a156201e8e590ced254c0ec1a113dbd1f}{MP3\+D\+\_\+\+ITERATE\+\_\+\+CB}}}]{callback,  }\item[{void \texorpdfstring{$\ast$}{*}}]{user\+\_\+data }\end{DoxyParamCaption})}
+
+\Hypertarget{minimp3__ex_8h_a3dc291be4901f8d51496f298d777d15f}\label{minimp3__ex_8h_a3dc291be4901f8d51496f298d777d15f} 
+\index{minimp3\_ex.h@{minimp3\_ex.h}!mp3dec\_load@{mp3dec\_load}}
+\index{mp3dec\_load@{mp3dec\_load}!minimp3\_ex.h@{minimp3\_ex.h}}
+\doxysubsubsection{\texorpdfstring{mp3dec\_load()}{mp3dec\_load()}}
+{\footnotesize\ttfamily int mp3dec\+\_\+load (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmp3dec__t}{mp3dec\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{dec,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{file\+\_\+name,  }\item[{\mbox{\hyperlink{structmp3dec__file__info__t}{mp3dec\+\_\+file\+\_\+info\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{info,  }\item[{\mbox{\hyperlink{minimp3__ex_8h_a7f1fc690609a81b717359a77027490cf}{MP3\+D\+\_\+\+PROGRESS\+\_\+\+CB}}}]{progress\+\_\+cb,  }\item[{void \texorpdfstring{$\ast$}{*}}]{user\+\_\+data }\end{DoxyParamCaption})}
+
+\Hypertarget{minimp3__ex_8h_a5af86015446ded7c5345230705f24e5b}\label{minimp3__ex_8h_a5af86015446ded7c5345230705f24e5b} 
+\index{minimp3\_ex.h@{minimp3\_ex.h}!mp3dec\_load\_buf@{mp3dec\_load\_buf}}
+\index{mp3dec\_load\_buf@{mp3dec\_load\_buf}!minimp3\_ex.h@{minimp3\_ex.h}}
+\doxysubsubsection{\texorpdfstring{mp3dec\_load\_buf()}{mp3dec\_load\_buf()}}
+{\footnotesize\ttfamily int mp3dec\+\_\+load\+\_\+buf (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmp3dec__t}{mp3dec\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{dec,  }\item[{const uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{buf,  }\item[{size\+\_\+t}]{buf\+\_\+size,  }\item[{\mbox{\hyperlink{structmp3dec__file__info__t}{mp3dec\+\_\+file\+\_\+info\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{info,  }\item[{\mbox{\hyperlink{minimp3__ex_8h_a7f1fc690609a81b717359a77027490cf}{MP3\+D\+\_\+\+PROGRESS\+\_\+\+CB}}}]{progress\+\_\+cb,  }\item[{void \texorpdfstring{$\ast$}{*}}]{user\+\_\+data }\end{DoxyParamCaption})}
+
+\Hypertarget{minimp3__ex_8h_a4845a5b2bea51db3761151f60c18d4b6}\label{minimp3__ex_8h_a4845a5b2bea51db3761151f60c18d4b6} 
+\index{minimp3\_ex.h@{minimp3\_ex.h}!mp3dec\_load\_cb@{mp3dec\_load\_cb}}
+\index{mp3dec\_load\_cb@{mp3dec\_load\_cb}!minimp3\_ex.h@{minimp3\_ex.h}}
+\doxysubsubsection{\texorpdfstring{mp3dec\_load\_cb()}{mp3dec\_load\_cb()}}
+{\footnotesize\ttfamily int mp3dec\+\_\+load\+\_\+cb (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmp3dec__t}{mp3dec\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{dec,  }\item[{\mbox{\hyperlink{structmp3dec__io__t}{mp3dec\+\_\+io\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{io,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{buf,  }\item[{size\+\_\+t}]{buf\+\_\+size,  }\item[{\mbox{\hyperlink{structmp3dec__file__info__t}{mp3dec\+\_\+file\+\_\+info\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{info,  }\item[{\mbox{\hyperlink{minimp3__ex_8h_a7f1fc690609a81b717359a77027490cf}{MP3\+D\+\_\+\+PROGRESS\+\_\+\+CB}}}]{progress\+\_\+cb,  }\item[{void \texorpdfstring{$\ast$}{*}}]{user\+\_\+data }\end{DoxyParamCaption})}
+

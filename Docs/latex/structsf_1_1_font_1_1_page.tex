@@ -1,0 +1,100 @@
+\doxysection{Dokumentacja struktury sf\+::Font\+::Page}
+\hypertarget{structsf_1_1_font_1_1_page}{}\label{structsf_1_1_font_1_1_page}\index{sf::Font::Page@{sf::Font::Page}}
+
+
+Structure defining a page of glyphs.  
+
+
+
+
+Diagram współpracy dla sf\+::Font\+::Page\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{structsf_1_1_font_1_1_page__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsf_1_1_font_1_1_page_a8887d4770075341ae98cd2df6d38ef29}{Page}} (bool smooth)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsf_1_1_font_a952841b9f01447562e2cd9c6e41d3a58}{Glyph\+Table}} \mbox{\hyperlink{structsf_1_1_font_1_1_page_aa18080b87d7485ead1d4a03b97a76a14}{glyphs}}
+\begin{DoxyCompactList}\small\item\em Table mapping code points to their corresponding glyph. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1_texture}{Texture}} \mbox{\hyperlink{structsf_1_1_font_1_1_page_a8225fe677a1759c3b3995af8a11ac3bf}{texture}}
+\begin{DoxyCompactList}\small\item\em \doxylink{classsf_1_1_texture}{Texture} containing the pixels of the glyphs. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{structsf_1_1_font_1_1_page_a936ba5f21d0b3e22d34bc00231fb6cfa}{next\+Row}}
+\begin{DoxyCompactList}\small\item\em Y position of the next new row in the texture. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{structsf_1_1_font_1_1_row}{Row}} $>$ \mbox{\hyperlink{structsf_1_1_font_1_1_page_a85c391fe41dba5f50cc5d80116e3a2fe}{rows}}
+\begin{DoxyCompactList}\small\item\em List containing the position of all the existing rows. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Structure defining a page of glyphs. 
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{structsf_1_1_font_1_1_page_a8887d4770075341ae98cd2df6d38ef29}\label{structsf_1_1_font_1_1_page_a8887d4770075341ae98cd2df6d38ef29} 
+\index{sf::Font::Page@{sf::Font::Page}!Page@{Page}}
+\index{Page@{Page}!sf::Font::Page@{sf::Font::Page}}
+\doxysubsubsection{\texorpdfstring{Page()}{Page()}}
+{\footnotesize\ttfamily sf\+::\+Font\+::\+Page\+::\+Page (\begin{DoxyParamCaption}\item[{bool}]{smooth }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsf_1_1_font_1_1_page_a8887d4770075341ae98cd2df6d38ef29_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{structsf_1_1_font_1_1_page_aa18080b87d7485ead1d4a03b97a76a14}\label{structsf_1_1_font_1_1_page_aa18080b87d7485ead1d4a03b97a76a14} 
+\index{sf::Font::Page@{sf::Font::Page}!glyphs@{glyphs}}
+\index{glyphs@{glyphs}!sf::Font::Page@{sf::Font::Page}}
+\doxysubsubsection{\texorpdfstring{glyphs}{glyphs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1_font_a952841b9f01447562e2cd9c6e41d3a58}{Glyph\+Table}} sf\+::\+Font\+::\+Page\+::glyphs}
+
+
+
+Table mapping code points to their corresponding glyph. 
+
+\Hypertarget{structsf_1_1_font_1_1_page_a936ba5f21d0b3e22d34bc00231fb6cfa}\label{structsf_1_1_font_1_1_page_a936ba5f21d0b3e22d34bc00231fb6cfa} 
+\index{sf::Font::Page@{sf::Font::Page}!nextRow@{nextRow}}
+\index{nextRow@{nextRow}!sf::Font::Page@{sf::Font::Page}}
+\doxysubsubsection{\texorpdfstring{nextRow}{nextRow}}
+{\footnotesize\ttfamily unsigned int sf\+::\+Font\+::\+Page\+::next\+Row}
+
+
+
+Y position of the next new row in the texture. 
+
+\Hypertarget{structsf_1_1_font_1_1_page_a85c391fe41dba5f50cc5d80116e3a2fe}\label{structsf_1_1_font_1_1_page_a85c391fe41dba5f50cc5d80116e3a2fe} 
+\index{sf::Font::Page@{sf::Font::Page}!rows@{rows}}
+\index{rows@{rows}!sf::Font::Page@{sf::Font::Page}}
+\doxysubsubsection{\texorpdfstring{rows}{rows}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structsf_1_1_font_1_1_row}{Row}}$>$ sf\+::\+Font\+::\+Page\+::rows}
+
+
+
+List containing the position of all the existing rows. 
+
+\Hypertarget{structsf_1_1_font_1_1_page_a8225fe677a1759c3b3995af8a11ac3bf}\label{structsf_1_1_font_1_1_page_a8225fe677a1759c3b3995af8a11ac3bf} 
+\index{sf::Font::Page@{sf::Font::Page}!texture@{texture}}
+\index{texture@{texture}!sf::Font::Page@{sf::Font::Page}}
+\doxysubsubsection{\texorpdfstring{texture}{texture}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1_texture}{Texture}} sf\+::\+Font\+::\+Page\+::texture}
+
+
+
+\doxylink{classsf_1_1_texture}{Texture} containing the pixels of the glyphs. 
+
+
+
+Dokumentacja dla tej struktury została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/include/\+SFML/\+Graphics/\mbox{\hyperlink{_font_8hpp}{Font.\+hpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Graphics/\mbox{\hyperlink{_font_8cpp}{Font.\+cpp}}\end{DoxyCompactItemize}

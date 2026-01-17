@@ -1,0 +1,105 @@
+\doxysection{Activity.\+hpp}
+\hypertarget{_activity_8hpp_source}{}\label{_activity_8hpp_source}\index{cmake-\/build-\/debug/\_deps/sfml-\/src/src/SFML/System/Android/Activity.hpp@{cmake-\/build-\/debug/\_deps/sfml-\/src/src/SFML/System/Android/Activity.hpp}}
+\mbox{\hyperlink{_activity_8hpp}{Idź do dokumentacji tego pliku.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ SFML\ -\/\ Simple\ and\ Fast\ Multimedia\ Library}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ Copyright\ (C)\ 2013\ Jonathan\ De\ Wachter\ (dewachter.jonathan@gmail.com)}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ This\ software\ is\ provided\ 'as-\/is',\ without\ any\ express\ or\ implied\ warranty.}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ In\ no\ event\ will\ the\ authors\ be\ held\ liable\ for\ any\ damages\ arising\ from\ the\ use\ of\ this\ software.}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ Permission\ is\ granted\ to\ anyone\ to\ use\ this\ software\ for\ any\ purpose,}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ including\ commercial\ applications,\ and\ to\ alter\ it\ and\ redistribute\ it\ freely,}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ subject\ to\ the\ following\ restrictions:}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ 1.\ The\ origin\ of\ this\ software\ must\ not\ be\ misrepresented;}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ \ \ you\ must\ not\ claim\ that\ you\ wrote\ the\ original\ software.}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ \ \ If\ you\ use\ this\ software\ in\ a\ product,\ an\ acknowledgment}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ \ \ \ in\ the\ product\ documentation\ would\ be\ appreciated\ but\ is\ not\ required.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ 2.\ Altered\ source\ versions\ must\ be\ plainly\ marked\ as\ such,}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ \ \ and\ must\ not\ be\ misrepresented\ as\ being\ the\ original\ software.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ 3.\ This\ notice\ may\ not\ be\ removed\ or\ altered\ from\ any\ source\ distribution.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#ifndef\ SFML\_ACTIVITY\_HPP}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ SFML\_ACTIVITY\_HPP}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00029\ \textcolor{comment}{//\ Headers}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_event_8hpp}{SFML/Window/Event.hpp}}>}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_egl_context_8hpp}{SFML/Window/EglContext.hpp}}>}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_mutex_8hpp}{SFML/System/Mutex.hpp}}>}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ <android/native\_activity.h>}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#include\ <android/configuration.h>}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{class\ }\mbox{\hyperlink{_system_2_export_8hpp_a6476c9e422606477a4c23d92b1d79a1f}{SFML\_SYSTEM\_API}}\ \mbox{\hyperlink{class_logcat_stream}{LogcatStream}}\ :\ \textcolor{keyword}{public}\ std::streambuf}
+\DoxyCodeLine{00042\ \{}
+\DoxyCodeLine{00043\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{class_logcat_stream}{LogcatStream}}();}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ std::streambuf::int\_type\ overflow\ (std::streambuf::int\_type\ c);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00049\ \ \ \ \ std::string\ \mbox{\hyperlink{class_logcat_stream_a823ff3cf36c1f002226efc36d48d828e}{m\_message}};}
+\DoxyCodeLine{00050\ \};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacesf}{sf}}}
+\DoxyCodeLine{00053\ \{}
+\DoxyCodeLine{00054\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacepriv}{priv}}}
+\DoxyCodeLine{00055\ \{}
+\DoxyCodeLine{00056\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structsf_1_1priv_1_1_activity_states}{ActivityStates}}}
+\DoxyCodeLine{00057\ \{}
+\DoxyCodeLine{00058\ \ \ \ \ ANativeActivity*\ \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states_a01f1bfadecf18f23e2ab435d46ab16ef}{activity}};}
+\DoxyCodeLine{00059\ \ \ \ \ ANativeWindow*\ \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states_a7fa62f37d5583e681dfe1d77eb6b438b}{window}};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ ALooper*\ \ \ \ \ \ \ \ \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states_ab00f1e28ef63987f600e6981eb199fa6}{looper}};}
+\DoxyCodeLine{00062\ \ \ \ \ AInputQueue*\ \ \ \ \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states_ad9c8bc8ff659edfd0be52be1c37fd10e}{inputQueue}};}
+\DoxyCodeLine{00063\ \ \ \ \ AConfiguration*\ \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states_a7efbaa390344b9dc83435eeff7aee321}{config}};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \mbox{\hyperlink{egl_8h_a87d55554aa13accdcb0e10eab910c72e}{EGLDisplay}}\ \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states_af07bc3cb25f963f7ad1610564bac1951}{display}};}
+\DoxyCodeLine{00066\ \ \ \ \ \mbox{\hyperlink{classsf_1_1priv_1_1_egl_context}{EglContext}}*\ \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states_aeceb5405e1f1d6a5061dc17257adda18}{context}};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}*\ \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states_a2186e1bdf225984b33a0b883f6310426}{savedState}};}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states_a0b5468c1e67e96d47e60ca0be4ebd407}{savedStateSize}};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \mbox{\hyperlink{classsf_1_1_mutex}{Mutex}}\ \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states_a696e95adcff618144c92950d7d23a426}{mutex}};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ void\ (*\mbox{\hyperlink{structsf_1_1priv_1_1_activity_states_a064db4959ae5bcafe2f3d5994e89118e}{forwardEvent}})(\textcolor{keyword}{const}\ \mbox{\hyperlink{classsf_1_1_event}{Event}}\&\ event);}
+\DoxyCodeLine{00074\ \ \ \ \ int\ (*\mbox{\hyperlink{structsf_1_1priv_1_1_activity_states_a28168946cc3f7678848141b9af732fcf}{processEvent}})(\textcolor{keywordtype}{int}\ fd,\ \textcolor{keywordtype}{int}\ events,\ \textcolor{keywordtype}{void}*\ data);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ std::map<int,\ Vector2i>\ \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states_a84b8c5251e9c1bc7bedb0a07c0db30f6}{touchEvents}};}
+\DoxyCodeLine{00077\ \ \ \ \ \mbox{\hyperlink{classsf_1_1_vector2}{Vector2i}}\ \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states_a32ded3673dde802c16df4a4d5cb52fb6}{mousePosition}};}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states_a624f8a598fd51108b95359dc0882a5b7}{isButtonPressed}}[\mbox{\hyperlink{classsf_1_1_mouse_a4fb128be433f9aafe66bc0c605daaa90a52a1d434289774240ddaa22496762402}{Mouse::ButtonCount}}];}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states_aebdde944f4bd5a4dbaff0d61ce23d411}{mainOver}};}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \mbox{\hyperlink{classsf_1_1_vector2}{Vector2i}}\ \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states_ac4574cfb981b7c22a2bf1a3c559e49b2}{screenSize}};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states_a02ee62adb122d5622f3c6bc2f68cd98b}{initialized}};}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states_a289bd06c37641badf7fbf88c2bbc3fe6}{terminated}};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states_a168a93552991ec32e297a6b64a969332}{fullscreen}};}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states_a6e0783c242f8d7113db4deb93386c5fb}{updated}};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \mbox{\hyperlink{class_logcat_stream}{LogcatStream}}\ \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states_a689164e7ddd0e3ed18725398bcc27618}{logcat}};}
+\DoxyCodeLine{00092\ \};}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \mbox{\hyperlink{_system_2_export_8hpp_a6476c9e422606477a4c23d92b1d79a1f}{SFML\_SYSTEM\_API}}\ \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states}{ActivityStates}}*\&\ \mbox{\hyperlink{namespacesf_1_1priv_a82677e5663a38d124a86a49455dd6b29}{getActivityStatesPtr}}();}
+\DoxyCodeLine{00095\ \mbox{\hyperlink{_system_2_export_8hpp_a6476c9e422606477a4c23d92b1d79a1f}{SFML\_SYSTEM\_API}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespacesf_1_1priv_af2530d4821c6e4dc30445b60a95e4cd3}{resetActivity}}(\mbox{\hyperlink{structsf_1_1priv_1_1_activity_states}{ActivityStates}}*\ initializedStates);}
+\DoxyCodeLine{00096\ \mbox{\hyperlink{_system_2_export_8hpp_a6476c9e422606477a4c23d92b1d79a1f}{SFML\_SYSTEM\_API}}\ \mbox{\hyperlink{structsf_1_1priv_1_1_activity_states}{ActivityStates}}\&\ \mbox{\hyperlink{namespacesf_1_1priv_a2b5832cc441beb17d16925723306050c}{getActivity}}();}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \}\ \textcolor{comment}{//\ namespace\ priv}}
+\DoxyCodeLine{00099\ \}\ \textcolor{comment}{//\ namespace\ sf}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SFML\_ACTIVITY\_HPP}}
+
+\end{DoxyCode}

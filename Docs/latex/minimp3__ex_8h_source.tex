@@ -1,0 +1,1403 @@
+\doxysection{minimp3\+\_\+ex.\+h}
+\hypertarget{minimp3__ex_8h_source}{}\label{minimp3__ex_8h_source}\index{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/minimp3/minimp3\_ex.h@{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/minimp3/minimp3\_ex.h}}
+\mbox{\hyperlink{minimp3__ex_8h}{Idź do dokumentacji tego pliku.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MINIMP3\_EXT\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MINIMP3\_EXT\_H}}
+\DoxyCodeLine{00003\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ \ \ \ https://github.com/lieff/minimp3}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ \ \ \ To\ the\ extent\ possible\ under\ law,\ the\ author(s)\ have\ dedicated\ all\ copyright\ and\ related\ and\ neighboring\ rights\ to\ this\ software\ to\ the\ public\ domain\ worldwide.}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ \ \ \ This\ software\ is\ distributed\ without\ any\ warranty.}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ \ \ \ See\ <http://creativecommons.org/publicdomain/zero/1.0/>.}}
+\DoxyCodeLine{00008\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <stddef.h>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{minimp3_8h}{minimp3.h}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{comment}{/*\ flags\ for\ mp3dec\_ex\_open\_*\ functions\ */}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ MP3D\_SEEK\_TO\_BYTE\ \ \ 0\ \ \ \ \ \ }\textcolor{comment}{/*\ mp3dec\_ex\_seek\ seeks\ to\ byte\ in\ stream\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ MP3D\_SEEK\_TO\_SAMPLE\ 1\ \ \ \ \ \ }\textcolor{comment}{/*\ mp3dec\_ex\_seek\ precisely\ seeks\ to\ sample\ using\ index\ (created\ during\ duration\ calculation\ scan\ or\ when\ mp3dec\_ex\_seek\ called)\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ MP3D\_DO\_NOT\_SCAN\ \ \ \ 2\ \ \ \ \ \ }\textcolor{comment}{/*\ do\ not\ scan\ whole\ stream\ for\ duration\ if\ vbrtag\ not\ found,\ mp3dec\_ex\_t::samples\ will\ be\ filled\ only\ if\ mp3dec\_ex\_t::vbr\_tag\_found\ ==\ 1\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#ifdef\ MINIMP3\_ALLOW\_MONO\_STEREO\_TRANSITION}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ MP3D\_ALLOW\_MONO\_STEREO\_TRANSITION\ \ 4}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ MP3D\_FLAGS\_MASK\ 7}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ MP3D\_FLAGS\_MASK\ 3}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{comment}{/*\ compile-\/time\ config\ */}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ MINIMP3\_PREDECODE\_FRAMES\ 2\ }\textcolor{comment}{/*\ frames\ to\ pre-\/decode\ and\ skip\ after\ seek\ (to\ fill\ internal\ structures)\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00025\ \textcolor{comment}{/*\#define\ MINIMP3\_SEEK\_IDX\_LINEAR\_SEARCH*/}\ \textcolor{comment}{/*\ define\ to\ use\ linear\ index\ search\ instead\ of\ binary\ search\ on\ seek\ */}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ MINIMP3\_IO\_SIZE\ (128*1024)\ }\textcolor{comment}{/*\ io\ buffer\ size\ for\ streaming\ functions,\ must\ be\ greater\ than\ MINIMP3\_BUF\_SIZE\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ MINIMP3\_BUF\_SIZE\ (16*1024)\ }\textcolor{comment}{/*\ buffer\ which\ can\ hold\ minimum\ 10\ consecutive\ mp3\ frames\ (\string~16KB)\ worst\ case\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00028\ \textcolor{comment}{/*\#define\ MINIMP3\_SCAN\_LIMIT\ (256*1024)*/}\ \textcolor{comment}{/*\ how\ many\ bytes\ will\ be\ scanned\ to\ search\ first\ valid\ mp3\ frame,\ to\ prevent\ stall\ on\ large\ non-\/mp3\ files\ */}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#define\ MINIMP3\_ENABLE\_RING\ 0\ \ \ \ \ \ }\textcolor{comment}{/*\ WIP\ enable\ hardware\ magic\ ring\ buffer\ if\ available,\ to\ make\ less\ input\ buffer\ memmove(s)\ in\ callback\ IO\ mode\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{comment}{/*\ return\ error\ codes\ */}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ MP3D\_E\_PARAM\ \ \ -\/1}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ MP3D\_E\_MEMORY\ \ -\/2}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ MP3D\_E\_IOERROR\ -\/3}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#define\ MP3D\_E\_USER\ \ \ \ -\/4\ \ }\textcolor{comment}{/*\ can\ be\ used\ to\ stop\ processing\ from\ callbacks\ without\ indicating\ specific\ error\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#define\ MP3D\_E\_DECODE\ \ -\/5\ \ }\textcolor{comment}{/*\ decode\ error\ which\ can't\ be\ safely\ skipped,\ such\ as\ sample\ rate,\ layer\ and\ channels\ change\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00039\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{minimp3_8h_a829d503db4023edb6b1705acc319b008}{mp3d\_sample\_t}}\ *\mbox{\hyperlink{structmp3dec__file__info__t_a612db05198ef1159be72217c5a2479c2}{buffer}};}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structmp3dec__file__info__t_adfe9c48c8d9598de73d5adc99d7a4a29}{samples}};\ \textcolor{comment}{/*\ channels\ included,\ byte\ size\ =\ samples*sizeof(mp3d\_sample\_t)\ */}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{int}\ channels,\ hz,\ layer,\ \mbox{\hyperlink{structmp3dec__file__info__t_a09e43c74f163e3f690216f47841ccee7}{avg\_bitrate\_kbps}};}
+\DoxyCodeLine{00043\ \}\ \mbox{\hyperlink{structmp3dec__file__info__t}{mp3dec\_file\_info\_t}};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00046\ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{const}\ uint8\_t\ *\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}};}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structmp3dec__map__info__t_a3b7009a8a777a4cdae12a805db0fa4ab}{size}};}
+\DoxyCodeLine{00049\ \}\ \mbox{\hyperlink{structmp3dec__map__info__t}{mp3dec\_map\_info\_t}};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00052\ \{}
+\DoxyCodeLine{00053\ \ \ \ \ uint64\_t\ \mbox{\hyperlink{structmp3dec__frame__t_aac1acca4e33a1b46f175ab13abe04b5b}{sample}};}
+\DoxyCodeLine{00054\ \ \ \ \ uint64\_t\ \mbox{\hyperlink{structmp3dec__frame__t_a69e9429014223e9a3f5acf989e0e52eb}{offset}};}
+\DoxyCodeLine{00055\ \}\ \mbox{\hyperlink{structmp3dec__frame__t}{mp3dec\_frame\_t}};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00058\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \mbox{\hyperlink{structmp3dec__frame__t}{mp3dec\_frame\_t}}\ *\mbox{\hyperlink{structmp3dec__index__t_a40ff06448948d11cec9dba6e892e8baa}{frames}};}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ num\_frames,\ \mbox{\hyperlink{structmp3dec__index__t_ab797b249602deda2455f6e2aae5b87fa}{capacity}};}
+\DoxyCodeLine{00061\ \}\ \mbox{\hyperlink{structmp3dec__index__t}{mp3dec\_index\_t}};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{keyword}{typedef}\ size\_t\ (*\mbox{\hyperlink{minimp3__ex_8h_ada634939bf52a295948fdfd81215890c}{MP3D\_READ\_CB}})(\textcolor{keywordtype}{void}\ *buf,\ \textcolor{keywordtype}{size\_t}\ size,\ \textcolor{keywordtype}{void}\ *user\_data);}
+\DoxyCodeLine{00064\ \textcolor{keyword}{typedef}\ int\ (*\mbox{\hyperlink{minimp3__ex_8h_a3e193046daa6269ace8729aba645a595}{MP3D\_SEEK\_CB}})(uint64\_t\ position,\ \textcolor{keywordtype}{void}\ *user\_data);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00067\ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \mbox{\hyperlink{minimp3__ex_8h_ada634939bf52a295948fdfd81215890c}{MP3D\_READ\_CB}}\ \mbox{\hyperlink{structmp3dec__io__t_a1fae2df5bd36c3b25473e6e2e4c03436}{read}};}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{structmp3dec__io__t_a3ac281b6104d8675a736720832eb2502}{read\_data}};}
+\DoxyCodeLine{00070\ \ \ \ \ \mbox{\hyperlink{minimp3__ex_8h_a3e193046daa6269ace8729aba645a595}{MP3D\_SEEK\_CB}}\ \mbox{\hyperlink{structmp3dec__io__t_a166467a856d8f19a9beae1489f0ce435}{seek}};}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{structmp3dec__io__t_a3d42d7298e026aff6eb4d46cf11332a5}{seek\_data}};}
+\DoxyCodeLine{00072\ \}\ \mbox{\hyperlink{structmp3dec__io__t}{mp3dec\_io\_t}};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00075\ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \mbox{\hyperlink{structmp3dec__t}{mp3dec\_t}}\ \mbox{\hyperlink{structmp3dec__ex__t_a17a9729ae1728c919876d6fd8693914a}{mp3d}};}
+\DoxyCodeLine{00077\ \ \ \ \ \mbox{\hyperlink{structmp3dec__map__info__t}{mp3dec\_map\_info\_t}}\ \mbox{\hyperlink{structmp3dec__ex__t_aa83ce3f305ad2239de2c2167b8a51bc8}{file}};}
+\DoxyCodeLine{00078\ \ \ \ \ \mbox{\hyperlink{structmp3dec__io__t}{mp3dec\_io\_t}}\ *\mbox{\hyperlink{structmp3dec__ex__t_a2e32856a712086490fa8167a7f99b4ae}{io}};}
+\DoxyCodeLine{00079\ \ \ \ \ \mbox{\hyperlink{structmp3dec__index__t}{mp3dec\_index\_t}}\ \mbox{\hyperlink{structmp3dec__ex__t_a3a9c9e9dbe68b24a397a921404b598ea}{index}};}
+\DoxyCodeLine{00080\ \ \ \ \ uint64\_t\ offset,\ samples,\ detected\_samples,\ \mbox{\hyperlink{structmp3dec__ex__t_a028bbd1ac0bb11138c8e0ba11e38eadb}{cur\_sample}},\ start\_offset,\ end\_offset;}
+\DoxyCodeLine{00081\ \ \ \ \ \mbox{\hyperlink{structmp3dec__frame__info__t}{mp3dec\_frame\_info\_t}}\ \mbox{\hyperlink{structmp3dec__ex__t_a227aeba45d7295665e6eb6eb5203c56d}{info}};}
+\DoxyCodeLine{00082\ \ \ \ \ \mbox{\hyperlink{minimp3_8h_a829d503db4023edb6b1705acc319b008}{mp3d\_sample\_t}}\ buffer[\mbox{\hyperlink{minimp3_8h_a60ef7262cf8772c101938ce095ecd482}{MINIMP3\_MAX\_SAMPLES\_PER\_FRAME}}];}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structmp3dec__ex__t_aceffd88f33a7210f8272297836c467ba}{input\_consumed}},\ input\_filled;}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{int}\ is\_file,\ \mbox{\hyperlink{structmp3dec__ex__t_a1fbba373f884d9a1bcee655104070e87}{flags}},\ vbr\_tag\_found,\ indexes\_built;}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structmp3dec__ex__t_a2dacee877a4c0bee52369036233ef402}{free\_format\_bytes}};}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{int}\ buffer\_samples,\ \mbox{\hyperlink{structmp3dec__ex__t_ae9599790d074f45d47a44a394a92273e}{buffer\_consumed}},\ to\_skip,\ start\_delay;}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structmp3dec__ex__t_ac0ae50bbcde19affd18d8e88da7cd13b}{last\_error}};}
+\DoxyCodeLine{00088\ \}\ \mbox{\hyperlink{structmp3dec__ex__t}{mp3dec\_ex\_t}};}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \textcolor{keyword}{typedef}\ int\ (*\mbox{\hyperlink{minimp3__ex_8h_a156201e8e590ced254c0ec1a113dbd1f}{MP3D\_ITERATE\_CB}})(\textcolor{keywordtype}{void}\ *user\_data,\ \textcolor{keyword}{const}\ uint8\_t\ *frame,\ \textcolor{keywordtype}{int}\ frame\_size,\ \textcolor{keywordtype}{int}\ free\_format\_bytes,\ \textcolor{keywordtype}{size\_t}\ buf\_size,\ uint64\_t\ offset,\ \mbox{\hyperlink{structmp3dec__frame__info__t}{mp3dec\_frame\_info\_t}}\ *info);}
+\DoxyCodeLine{00091\ \textcolor{keyword}{typedef}\ int\ (*\mbox{\hyperlink{minimp3__ex_8h_a7f1fc690609a81b717359a77027490cf}{MP3D\_PROGRESS\_CB}})(\textcolor{keywordtype}{void}\ *user\_data,\ \textcolor{keywordtype}{size\_t}\ file\_size,\ uint64\_t\ offset,\ \mbox{\hyperlink{structmp3dec__frame__info__t}{mp3dec\_frame\_info\_t}}\ *info);}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00094\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00095\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \textcolor{comment}{/*\ detect\ mp3/mpa\ format\ */}}
+\DoxyCodeLine{00098\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{minimp3__ex_8h_ad69b7539cb2a643e400825aaa92434f5}{mp3dec\_detect\_buf}}(\textcolor{keyword}{const}\ uint8\_t\ *buf,\ \textcolor{keywordtype}{size\_t}\ buf\_size);}
+\DoxyCodeLine{00099\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{minimp3__ex_8h_aae8b00fa74ad03095b8b99087cbbb889}{mp3dec\_detect\_cb}}(\mbox{\hyperlink{structmp3dec__io__t}{mp3dec\_io\_t}}\ *io,\ uint8\_t\ *buf,\ \textcolor{keywordtype}{size\_t}\ buf\_size);}
+\DoxyCodeLine{00100\ \textcolor{comment}{/*\ decode\ whole\ buffer\ block\ */}}
+\DoxyCodeLine{00101\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{minimp3__ex_8h_a5af86015446ded7c5345230705f24e5b}{mp3dec\_load\_buf}}(\mbox{\hyperlink{structmp3dec__t}{mp3dec\_t}}\ *dec,\ \textcolor{keyword}{const}\ uint8\_t\ *buf,\ \textcolor{keywordtype}{size\_t}\ buf\_size,\ \mbox{\hyperlink{structmp3dec__file__info__t}{mp3dec\_file\_info\_t}}\ *info,\ \mbox{\hyperlink{minimp3__ex_8h_a7f1fc690609a81b717359a77027490cf}{MP3D\_PROGRESS\_CB}}\ progress\_cb,\ \textcolor{keywordtype}{void}\ *user\_data);}
+\DoxyCodeLine{00102\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{minimp3__ex_8h_a4845a5b2bea51db3761151f60c18d4b6}{mp3dec\_load\_cb}}(\mbox{\hyperlink{structmp3dec__t}{mp3dec\_t}}\ *dec,\ \mbox{\hyperlink{structmp3dec__io__t}{mp3dec\_io\_t}}\ *io,\ uint8\_t\ *buf,\ \textcolor{keywordtype}{size\_t}\ buf\_size,\ \mbox{\hyperlink{structmp3dec__file__info__t}{mp3dec\_file\_info\_t}}\ *info,\ \mbox{\hyperlink{minimp3__ex_8h_a7f1fc690609a81b717359a77027490cf}{MP3D\_PROGRESS\_CB}}\ progress\_cb,\ \textcolor{keywordtype}{void}\ *user\_data);}
+\DoxyCodeLine{00103\ \textcolor{comment}{/*\ iterate\ through\ frames\ */}}
+\DoxyCodeLine{00104\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{minimp3__ex_8h_ac4f6c8c305339b3675c60014871f091d}{mp3dec\_iterate\_buf}}(\textcolor{keyword}{const}\ uint8\_t\ *buf,\ \textcolor{keywordtype}{size\_t}\ buf\_size,\ \mbox{\hyperlink{minimp3__ex_8h_a156201e8e590ced254c0ec1a113dbd1f}{MP3D\_ITERATE\_CB}}\ callback,\ \textcolor{keywordtype}{void}\ *user\_data);}
+\DoxyCodeLine{00105\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{minimp3__ex_8h_ad284dbfa591ea90c94190ab58ecdf97a}{mp3dec\_iterate\_cb}}(\mbox{\hyperlink{structmp3dec__io__t}{mp3dec\_io\_t}}\ *io,\ uint8\_t\ *buf,\ \textcolor{keywordtype}{size\_t}\ buf\_size,\ \mbox{\hyperlink{minimp3__ex_8h_a156201e8e590ced254c0ec1a113dbd1f}{MP3D\_ITERATE\_CB}}\ callback,\ \textcolor{keywordtype}{void}\ *user\_data);}
+\DoxyCodeLine{00106\ \textcolor{comment}{/*\ streaming\ decoder\ with\ seeking\ capability\ */}}
+\DoxyCodeLine{00107\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{minimp3__ex_8h_a4b4ebe8965d000c52a60f4f87b215e31}{mp3dec\_ex\_open\_buf}}(\mbox{\hyperlink{structmp3dec__ex__t}{mp3dec\_ex\_t}}\ *dec,\ \textcolor{keyword}{const}\ uint8\_t\ *buf,\ \textcolor{keywordtype}{size\_t}\ buf\_size,\ \textcolor{keywordtype}{int}\ flags);}
+\DoxyCodeLine{00108\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{minimp3__ex_8h_a9608642546e6038ad87eb511453fcf0c}{mp3dec\_ex\_open\_cb}}(\mbox{\hyperlink{structmp3dec__ex__t}{mp3dec\_ex\_t}}\ *dec,\ \mbox{\hyperlink{structmp3dec__io__t}{mp3dec\_io\_t}}\ *io,\ \textcolor{keywordtype}{int}\ flags);}
+\DoxyCodeLine{00109\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{minimp3__ex_8h_a9d28e71470f01d65509956310b34833f}{mp3dec\_ex\_close}}(\mbox{\hyperlink{structmp3dec__ex__t}{mp3dec\_ex\_t}}\ *dec);}
+\DoxyCodeLine{00110\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{minimp3__ex_8h_a3e752561690923dc798f2adfbc2c38fb}{mp3dec\_ex\_seek}}(\mbox{\hyperlink{structmp3dec__ex__t}{mp3dec\_ex\_t}}\ *dec,\ uint64\_t\ position);}
+\DoxyCodeLine{00111\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{minimp3__ex_8h_a228d3b327580d49e0665f0f16986fe5b}{mp3dec\_ex\_read\_frame}}(\mbox{\hyperlink{structmp3dec__ex__t}{mp3dec\_ex\_t}}\ *dec,\ \mbox{\hyperlink{minimp3_8h_a829d503db4023edb6b1705acc319b008}{mp3d\_sample\_t}}\ **buf,\ \mbox{\hyperlink{structmp3dec__frame__info__t}{mp3dec\_frame\_info\_t}}\ *frame\_info,\ \textcolor{keywordtype}{size\_t}\ max\_samples);}
+\DoxyCodeLine{00112\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{minimp3__ex_8h_ad85d7a52068f4701d135e38f1031c98c}{mp3dec\_ex\_read}}(\mbox{\hyperlink{structmp3dec__ex__t}{mp3dec\_ex\_t}}\ *dec,\ \mbox{\hyperlink{minimp3_8h_a829d503db4023edb6b1705acc319b008}{mp3d\_sample\_t}}\ *buf,\ \textcolor{keywordtype}{size\_t}\ samples);}
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\#ifndef\ MINIMP3\_NO\_STDIO}}
+\DoxyCodeLine{00114\ \textcolor{comment}{/*\ stdio\ versions\ of\ file\ detect,\ load,\ iterate\ and\ stream\ */}}
+\DoxyCodeLine{00115\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{minimp3__ex_8h_aff0f4bc6c05f79e646b33e3ca1a679b6}{mp3dec\_detect}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *file\_name);}
+\DoxyCodeLine{00116\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{minimp3__ex_8h_a3dc291be4901f8d51496f298d777d15f}{mp3dec\_load}}(\mbox{\hyperlink{structmp3dec__t}{mp3dec\_t}}\ *dec,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *file\_name,\ \mbox{\hyperlink{structmp3dec__file__info__t}{mp3dec\_file\_info\_t}}\ *info,\ \mbox{\hyperlink{minimp3__ex_8h_a7f1fc690609a81b717359a77027490cf}{MP3D\_PROGRESS\_CB}}\ progress\_cb,\ \textcolor{keywordtype}{void}\ *user\_data);}
+\DoxyCodeLine{00117\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{minimp3__ex_8h_a2f298c21365d8c05e04fdeb8156ac3ca}{mp3dec\_iterate}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *file\_name,\ \mbox{\hyperlink{minimp3__ex_8h_a156201e8e590ced254c0ec1a113dbd1f}{MP3D\_ITERATE\_CB}}\ callback,\ \textcolor{keywordtype}{void}\ *user\_data);}
+\DoxyCodeLine{00118\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{minimp3__ex_8h_ae961a541c7b84c6af375d19cce9f03a2}{mp3dec\_ex\_open}}(\mbox{\hyperlink{structmp3dec__ex__t}{mp3dec\_ex\_t}}\ *dec,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *file\_name,\ \textcolor{keywordtype}{int}\ flags);}
+\DoxyCodeLine{00119\ \textcolor{preprocessor}{\#ifdef\ \_WIN32}}
+\DoxyCodeLine{00120\ \textcolor{keywordtype}{int}\ mp3dec\_detect\_w(\textcolor{keyword}{const}\ \textcolor{keywordtype}{wchar\_t}\ *file\_name);}
+\DoxyCodeLine{00121\ \textcolor{keywordtype}{int}\ mp3dec\_load\_w(\mbox{\hyperlink{structmp3dec__t}{mp3dec\_t}}\ *dec,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{wchar\_t}\ *file\_name,\ \mbox{\hyperlink{structmp3dec__file__info__t}{mp3dec\_file\_info\_t}}\ *info,\ \mbox{\hyperlink{minimp3__ex_8h_a7f1fc690609a81b717359a77027490cf}{MP3D\_PROGRESS\_CB}}\ progress\_cb,\ \textcolor{keywordtype}{void}\ *user\_data);}
+\DoxyCodeLine{00122\ \textcolor{keywordtype}{int}\ mp3dec\_iterate\_w(\textcolor{keyword}{const}\ \textcolor{keywordtype}{wchar\_t}\ *file\_name,\ \mbox{\hyperlink{minimp3__ex_8h_a156201e8e590ced254c0ec1a113dbd1f}{MP3D\_ITERATE\_CB}}\ callback,\ \textcolor{keywordtype}{void}\ *user\_data);}
+\DoxyCodeLine{00123\ \textcolor{keywordtype}{int}\ mp3dec\_ex\_open\_w(\mbox{\hyperlink{structmp3dec__ex__t}{mp3dec\_ex\_t}}\ *dec,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{wchar\_t}\ *file\_name,\ \textcolor{keywordtype}{int}\ flags);}
+\DoxyCodeLine{00124\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00125\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00128\ \}}
+\DoxyCodeLine{00129\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00130\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*MINIMP3\_EXT\_H*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \textcolor{preprocessor}{\#if\ defined(MINIMP3\_IMPLEMENTATION)\ \&\&\ !defined(\_MINIMP3\_EX\_IMPLEMENTATION\_GUARD)}}
+\DoxyCodeLine{00133\ \textcolor{preprocessor}{\#define\ \_MINIMP3\_EX\_IMPLEMENTATION\_GUARD}}
+\DoxyCodeLine{00134\ \textcolor{preprocessor}{\#include\ <limits.h>}}
+\DoxyCodeLine{00135\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{minimp3_8h}{minimp3.h}}"{}}}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ mp3dec\_skip\_id3v1(\textcolor{keyword}{const}\ uint8\_t\ *buf,\ \textcolor{keywordtype}{size\_t}\ *pbuf\_size)}
+\DoxyCodeLine{00138\ \{}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ buf\_size\ =\ *pbuf\_size;}
+\DoxyCodeLine{00140\ \textcolor{preprocessor}{\#ifndef\ MINIMP3\_NOSKIP\_ID3V1}}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordflow}{if}\ (buf\_size\ >=\ 128\ \&\&\ !memcmp(buf\ +\ buf\_size\ -\/\ 128,\ \textcolor{stringliteral}{"{}TAG"{}},\ 3))}
+\DoxyCodeLine{00142\ \ \ \ \ \{}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ buf\_size\ -\/=\ 128;}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (buf\_size\ >=\ 227\ \&\&\ !memcmp(buf\ +\ buf\_size\ -\/\ 227,\ \textcolor{stringliteral}{"{}TAG+"{}},\ 4))}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ buf\_size\ -\/=\ 227;}
+\DoxyCodeLine{00146\ \ \ \ \ \}}
+\DoxyCodeLine{00147\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00148\ \textcolor{preprocessor}{\#ifndef\ MINIMP3\_NOSKIP\_APEV2}}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordflow}{if}\ (buf\_size\ >\ 32\ \&\&\ !memcmp(buf\ +\ buf\_size\ -\/\ 32,\ \textcolor{stringliteral}{"{}APETAGEX"{}},\ 8))}
+\DoxyCodeLine{00150\ \ \ \ \ \{}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ buf\_size\ -\/=\ 32;}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ uint8\_t\ *tag\ =\ buf\ +\ buf\_size\ +\ 8\ +\ 4;}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ uint32\_t\ tag\_size\ =\ (uint32\_t)(tag[3]\ <<\ 24)\ |\ (tag[2]\ <<\ 16)\ |\ (tag[1]\ <<\ 8)\ |\ tag[0];}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (buf\_size\ >=\ tag\_size)}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ buf\_size\ -\/=\ tag\_size;}
+\DoxyCodeLine{00156\ \ \ \ \ \}}
+\DoxyCodeLine{00157\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00158\ \ \ \ \ *pbuf\_size\ =\ buf\_size;}
+\DoxyCodeLine{00159\ \}}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{size\_t}\ mp3dec\_skip\_id3v2(\textcolor{keyword}{const}\ uint8\_t\ *buf,\ \textcolor{keywordtype}{size\_t}\ buf\_size)}
+\DoxyCodeLine{00162\ \{}
+\DoxyCodeLine{00163\ \textcolor{preprocessor}{\#define\ MINIMP3\_ID3\_DETECT\_SIZE\ 10}}
+\DoxyCodeLine{00164\ \textcolor{preprocessor}{\#ifndef\ MINIMP3\_NOSKIP\_ID3V2}}
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{keywordflow}{if}\ (buf\_size\ >=\ MINIMP3\_ID3\_DETECT\_SIZE\ \&\&\ !memcmp(buf,\ \textcolor{stringliteral}{"{}ID3"{}},\ 3)\ \&\&\ !((buf[5]\ \&\ 15)\ ||\ (buf[6]\ \&\ 0x80)\ ||\ (buf[7]\ \&\ 0x80)\ ||\ (buf[8]\ \&\ 0x80)\ ||\ (buf[9]\ \&\ 0x80)))}
+\DoxyCodeLine{00166\ \ \ \ \ \{}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ id3v2size\ =\ (((buf[6]\ \&\ 0x7f)\ <<\ 21)\ |\ ((buf[7]\ \&\ 0x7f)\ <<\ 14)\ |\ ((buf[8]\ \&\ 0x7f)\ <<\ 7)\ |\ (buf[9]\ \&\ 0x7f))\ +\ 10;}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((buf[5]\ \&\ 16))}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ id3v2size\ +=\ 10;\ \textcolor{comment}{/*\ footer\ */}}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ id3v2size;}
+\DoxyCodeLine{00171\ \ \ \ \ \}}
+\DoxyCodeLine{00172\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00174\ \}}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ mp3dec\_skip\_id3(\textcolor{keyword}{const}\ uint8\_t\ **pbuf,\ \textcolor{keywordtype}{size\_t}\ *pbuf\_size)}
+\DoxyCodeLine{00177\ \{}
+\DoxyCodeLine{00178\ \ \ \ \ uint8\_t\ *buf\ =\ (uint8\_t\ *)(*pbuf);}
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ buf\_size\ =\ *pbuf\_size;}
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ id3v2size\ =\ mp3dec\_skip\_id3v2(buf,\ buf\_size);}
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{keywordflow}{if}\ (id3v2size)}
+\DoxyCodeLine{00182\ \ \ \ \ \{}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (id3v2size\ >=\ buf\_size)}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ id3v2size\ =\ buf\_size;}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ buf\ \ \ \ \ \ +=\ id3v2size;}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ buf\_size\ -\/=\ id3v2size;}
+\DoxyCodeLine{00187\ \ \ \ \ \}}
+\DoxyCodeLine{00188\ \ \ \ \ mp3dec\_skip\_id3v1(buf,\ \&buf\_size);}
+\DoxyCodeLine{00189\ \ \ \ \ *pbuf\ =\ (\textcolor{keyword}{const}\ uint8\_t\ *)buf;}
+\DoxyCodeLine{00190\ \ \ \ \ *pbuf\_size\ =\ buf\_size;}
+\DoxyCodeLine{00191\ \}}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00193\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ mp3dec\_check\_vbrtag(\textcolor{keyword}{const}\ uint8\_t\ *frame,\ \textcolor{keywordtype}{int}\ frame\_size,\ uint32\_t\ *frames,\ \textcolor{keywordtype}{int}\ *delay,\ \textcolor{keywordtype}{int}\ *padding)}
+\DoxyCodeLine{00194\ \{}
+\DoxyCodeLine{00195\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ g\_xing\_tag[4]\ =\ \{\ \textcolor{charliteral}{'X'},\ \textcolor{charliteral}{'i'},\ \textcolor{charliteral}{'n'},\ \textcolor{charliteral}{'g'}\ \};}
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ g\_info\_tag[4]\ =\ \{\ \textcolor{charliteral}{'I'},\ \textcolor{charliteral}{'n'},\ \textcolor{charliteral}{'f'},\ \textcolor{charliteral}{'o'}\ \};}
+\DoxyCodeLine{00197\ \textcolor{preprocessor}{\#define\ FRAMES\_FLAG\ \ \ \ \ 1}}
+\DoxyCodeLine{00198\ \textcolor{preprocessor}{\#define\ BYTES\_FLAG\ \ \ \ \ \ 2}}
+\DoxyCodeLine{00199\ \textcolor{preprocessor}{\#define\ TOC\_FLAG\ \ \ \ \ \ \ \ 4}}
+\DoxyCodeLine{00200\ \textcolor{preprocessor}{\#define\ VBR\_SCALE\_FLAG\ \ 8}}
+\DoxyCodeLine{00201\ \ \ \ \ \textcolor{comment}{/*\ Side\ info\ offsets\ after\ header:}}
+\DoxyCodeLine{00202\ \textcolor{comment}{\ \ \ \ /\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Mono\ \ Stereo}}
+\DoxyCodeLine{00203\ \textcolor{comment}{\ \ \ \ /\ \ MPEG1\ \ \ \ \ \ \ \ \ \ 17\ \ \ \ \ 32}}
+\DoxyCodeLine{00204\ \textcolor{comment}{\ \ \ \ /\ \ MPEG2\ \&\ 2.5\ \ \ \ \ 9\ \ \ \ \ 17*/}}
+\DoxyCodeLine{00205\ \ \ \ \ bs\_t\ bs[1];}
+\DoxyCodeLine{00206\ \ \ \ \ L3\_gr\_info\_t\ gr\_info[4];}
+\DoxyCodeLine{00207\ \ \ \ \ bs\_init(bs,\ frame\ +\ HDR\_SIZE,\ frame\_size\ -\/\ HDR\_SIZE);}
+\DoxyCodeLine{00208\ \ \ \ \ \textcolor{keywordflow}{if}\ (HDR\_IS\_CRC(frame))}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ get\_bits(bs,\ 16);}
+\DoxyCodeLine{00210\ \ \ \ \ \textcolor{keywordflow}{if}\ (L3\_read\_side\_info(bs,\ gr\_info,\ frame)\ <\ 0)}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;\ \textcolor{comment}{/*\ side\ info\ corrupted\ */}}
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00213\ \ \ \ \ \textcolor{keyword}{const}\ uint8\_t\ *tag\ =\ frame\ +\ HDR\_SIZE\ +\ bs-\/>pos/8;}
+\DoxyCodeLine{00214\ \ \ \ \ \textcolor{keywordflow}{if}\ (memcmp(g\_xing\_tag,\ tag,\ 4)\ \&\&\ memcmp(g\_info\_tag,\ tag,\ 4))}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00216\ \ \ \ \ \textcolor{keywordtype}{int}\ flags\ =\ tag[7];}
+\DoxyCodeLine{00217\ \ \ \ \ \textcolor{keywordflow}{if}\ (!((flags\ \&\ FRAMES\_FLAG)))}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{00219\ \ \ \ \ tag\ +=\ 8;}
+\DoxyCodeLine{00220\ \ \ \ \ *frames\ =\ (uint32\_t)(tag[0]\ <<\ 24)\ |\ (tag[1]\ <<\ 16)\ |\ (tag[2]\ <<\ 8)\ |\ tag[3];}
+\DoxyCodeLine{00221\ \ \ \ \ tag\ +=\ 4;}
+\DoxyCodeLine{00222\ \ \ \ \ \textcolor{keywordflow}{if}\ (flags\ \&\ BYTES\_FLAG)}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ tag\ +=\ 4;}
+\DoxyCodeLine{00224\ \ \ \ \ \textcolor{keywordflow}{if}\ (flags\ \&\ TOC\_FLAG)}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ tag\ +=\ 100;}
+\DoxyCodeLine{00226\ \ \ \ \ \textcolor{keywordflow}{if}\ (flags\ \&\ VBR\_SCALE\_FLAG)}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ tag\ +=\ 4;}
+\DoxyCodeLine{00228\ \ \ \ \ *delay\ =\ *padding\ =\ 0;}
+\DoxyCodeLine{00229\ \ \ \ \ \textcolor{keywordflow}{if}\ (*tag)}
+\DoxyCodeLine{00230\ \ \ \ \ \{\ \ \ \textcolor{comment}{/*\ extension,\ LAME,\ Lavc,\ etc.\ Should\ be\ the\ same\ structure.\ */}}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ tag\ +=\ 21;}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (tag\ -\/\ frame\ +\ 14\ >=\ frame\_size)}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ *delay\ \ \ =\ ((tag[0]\ <<\ 4)\ |\ (tag[1]\ >>\ 4))\ +\ (528\ +\ 1);}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ *padding\ =\ (((tag[1]\ \&\ 0xF)\ <<\ 8)\ |\ tag[2])\ -\/\ (528\ +\ 1);}
+\DoxyCodeLine{00236\ \ \ \ \ \}}
+\DoxyCodeLine{00237\ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00238\ \}}
+\DoxyCodeLine{00239\ }
+\DoxyCodeLine{00240\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{minimp3__ex_8h_ad69b7539cb2a643e400825aaa92434f5}{mp3dec\_detect\_buf}}(\textcolor{keyword}{const}\ uint8\_t\ *buf,\ \textcolor{keywordtype}{size\_t}\ buf\_size)}
+\DoxyCodeLine{00241\ \{}
+\DoxyCodeLine{00242\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_aae8b00fa74ad03095b8b99087cbbb889}{mp3dec\_detect\_cb}}(0,\ (uint8\_t\ *)buf,\ buf\_size);}
+\DoxyCodeLine{00243\ \}}
+\DoxyCodeLine{00244\ }
+\DoxyCodeLine{00245\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{minimp3__ex_8h_aae8b00fa74ad03095b8b99087cbbb889}{mp3dec\_detect\_cb}}(\mbox{\hyperlink{structmp3dec__io__t}{mp3dec\_io\_t}}\ *io,\ uint8\_t\ *buf,\ \textcolor{keywordtype}{size\_t}\ buf\_size)}
+\DoxyCodeLine{00246\ \{}
+\DoxyCodeLine{00247\ \ \ \ \ \textcolor{keywordflow}{if}\ (!buf\ ||\ (\textcolor{keywordtype}{size\_t})-\/1\ ==\ buf\_size\ ||\ (io\ \&\&\ buf\_size\ <\ \mbox{\hyperlink{minimp3__ex_8h_a2ef248c7aff5a5e0cd5fffc6127d5849}{MINIMP3\_BUF\_SIZE}}))}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_afd17086858bde25da30f8bd57e1a6458}{MP3D\_E\_PARAM}};}
+\DoxyCodeLine{00249\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ filled\ =\ buf\_size;}
+\DoxyCodeLine{00250\ \ \ \ \ \textcolor{keywordflow}{if}\ (io)}
+\DoxyCodeLine{00251\ \ \ \ \ \{}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (io-\/>\mbox{\hyperlink{structmp3dec__io__t_a166467a856d8f19a9beae1489f0ce435}{seek}}(0,\ io-\/>\mbox{\hyperlink{structmp3dec__io__t_a3d42d7298e026aff6eb4d46cf11332a5}{seek\_data}}))}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_a4ef2cff7a0b403032f48129a8e413435}{MP3D\_E\_IOERROR}};}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ filled\ =\ io-\/>\mbox{\hyperlink{structmp3dec__io__t_a1fae2df5bd36c3b25473e6e2e4c03436}{read}}(buf,\ MINIMP3\_ID3\_DETECT\_SIZE,\ io-\/>\mbox{\hyperlink{structmp3dec__io__t_a3ac281b6104d8675a736720832eb2502}{read\_data}});}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (filled\ >\ MINIMP3\_ID3\_DETECT\_SIZE)}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_a4ef2cff7a0b403032f48129a8e413435}{MP3D\_E\_IOERROR}};}
+\DoxyCodeLine{00257\ \ \ \ \ \}}
+\DoxyCodeLine{00258\ \ \ \ \ \textcolor{keywordflow}{if}\ (filled\ <\ MINIMP3\_ID3\_DETECT\_SIZE)}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_acf47112101ece200a15c8b5f27a06fc9}{MP3D\_E\_USER}};\ \textcolor{comment}{/*\ too\ small,\ can't\ be\ mp3/mpa\ */}}
+\DoxyCodeLine{00260\ \ \ \ \ \textcolor{keywordflow}{if}\ (mp3dec\_skip\_id3v2(buf,\ filled))}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;\ \textcolor{comment}{/*\ id3v2\ tag\ is\ enough\ evidence\ */}}
+\DoxyCodeLine{00262\ \ \ \ \ \textcolor{keywordflow}{if}\ (io)}
+\DoxyCodeLine{00263\ \ \ \ \ \{}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ readed\ =\ io-\/>\mbox{\hyperlink{structmp3dec__io__t_a1fae2df5bd36c3b25473e6e2e4c03436}{read}}(buf\ +\ MINIMP3\_ID3\_DETECT\_SIZE,\ buf\_size\ -\/\ MINIMP3\_ID3\_DETECT\_SIZE,\ io-\/>\mbox{\hyperlink{structmp3dec__io__t_a3ac281b6104d8675a736720832eb2502}{read\_data}});}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (readed\ >\ (buf\_size\ -\/\ MINIMP3\_ID3\_DETECT\_SIZE))}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_a4ef2cff7a0b403032f48129a8e413435}{MP3D\_E\_IOERROR}};}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ filled\ +=\ readed;}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (filled\ <\ \mbox{\hyperlink{minimp3__ex_8h_a2ef248c7aff5a5e0cd5fffc6127d5849}{MINIMP3\_BUF\_SIZE}})}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \ \ \ \ mp3dec\_skip\_id3v1(buf,\ \&filled);}
+\DoxyCodeLine{00270\ \ \ \ \ \}\ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00271\ \ \ \ \ \{}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ mp3dec\_skip\_id3v1(buf,\ \&filled);}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (filled\ >\ \mbox{\hyperlink{minimp3__ex_8h_a2ef248c7aff5a5e0cd5fffc6127d5849}{MINIMP3\_BUF\_SIZE}})}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \ \ \ \ filled\ =\ \mbox{\hyperlink{minimp3__ex_8h_a2ef248c7aff5a5e0cd5fffc6127d5849}{MINIMP3\_BUF\_SIZE}};}
+\DoxyCodeLine{00275\ \ \ \ \ \}}
+\DoxyCodeLine{00276\ \ \ \ \ \textcolor{keywordtype}{int}\ free\_format\_bytes,\ frame\_size;}
+\DoxyCodeLine{00277\ \ \ \ \ mp3d\_find\_frame(buf,\ filled,\ \&free\_format\_bytes,\ \&frame\_size);}
+\DoxyCodeLine{00278\ \ \ \ \ \textcolor{keywordflow}{if}\ (frame\_size)}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;\ \textcolor{comment}{/*\ MAX\_FRAME\_SYNC\_MATCHES\ consecutive\ frames\ found\ */}}
+\DoxyCodeLine{00280\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_acf47112101ece200a15c8b5f27a06fc9}{MP3D\_E\_USER}};}
+\DoxyCodeLine{00281\ \}}
+\DoxyCodeLine{00282\ }
+\DoxyCodeLine{00283\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{minimp3__ex_8h_a5af86015446ded7c5345230705f24e5b}{mp3dec\_load\_buf}}(\mbox{\hyperlink{structmp3dec__t}{mp3dec\_t}}\ *dec,\ \textcolor{keyword}{const}\ uint8\_t\ *buf,\ \textcolor{keywordtype}{size\_t}\ buf\_size,\ \mbox{\hyperlink{structmp3dec__file__info__t}{mp3dec\_file\_info\_t}}\ *info,\ \mbox{\hyperlink{minimp3__ex_8h_a7f1fc690609a81b717359a77027490cf}{MP3D\_PROGRESS\_CB}}\ progress\_cb,\ \textcolor{keywordtype}{void}\ *user\_data)}
+\DoxyCodeLine{00284\ \{}
+\DoxyCodeLine{00285\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_a4845a5b2bea51db3761151f60c18d4b6}{mp3dec\_load\_cb}}(dec,\ 0,\ (uint8\_t\ *)buf,\ buf\_size,\ info,\ progress\_cb,\ user\_data);}
+\DoxyCodeLine{00286\ \}}
+\DoxyCodeLine{00287\ }
+\DoxyCodeLine{00288\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{minimp3__ex_8h_a4845a5b2bea51db3761151f60c18d4b6}{mp3dec\_load\_cb}}(\mbox{\hyperlink{structmp3dec__t}{mp3dec\_t}}\ *dec,\ \mbox{\hyperlink{structmp3dec__io__t}{mp3dec\_io\_t}}\ *io,\ uint8\_t\ *buf,\ \textcolor{keywordtype}{size\_t}\ buf\_size,\ \mbox{\hyperlink{structmp3dec__file__info__t}{mp3dec\_file\_info\_t}}\ *info,\ \mbox{\hyperlink{minimp3__ex_8h_a7f1fc690609a81b717359a77027490cf}{MP3D\_PROGRESS\_CB}}\ progress\_cb,\ \textcolor{keywordtype}{void}\ *user\_data)}
+\DoxyCodeLine{00289\ \{}
+\DoxyCodeLine{00290\ \ \ \ \ \textcolor{keywordflow}{if}\ (!dec\ ||\ !buf\ ||\ !info\ ||\ (\textcolor{keywordtype}{size\_t})-\/1\ ==\ buf\_size\ ||\ (io\ \&\&\ buf\_size\ <\ \mbox{\hyperlink{minimp3__ex_8h_a2ef248c7aff5a5e0cd5fffc6127d5849}{MINIMP3\_BUF\_SIZE}}))}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_afd17086858bde25da30f8bd57e1a6458}{MP3D\_E\_PARAM}};}
+\DoxyCodeLine{00292\ \ \ \ \ uint64\_t\ detected\_samples\ =\ 0;}
+\DoxyCodeLine{00293\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ orig\_buf\_size\ =\ buf\_size;}
+\DoxyCodeLine{00294\ \ \ \ \ \textcolor{keywordtype}{int}\ to\_skip\ =\ 0;}
+\DoxyCodeLine{00295\ \ \ \ \ \mbox{\hyperlink{structmp3dec__frame__info__t}{mp3dec\_frame\_info\_t}}\ frame\_info;}
+\DoxyCodeLine{00296\ \ \ \ \ memset(info,\ 0,\ \textcolor{keyword}{sizeof}(*info));}
+\DoxyCodeLine{00297\ \ \ \ \ memset(\&frame\_info,\ 0,\ \textcolor{keyword}{sizeof}(frame\_info));}
+\DoxyCodeLine{00298\ }
+\DoxyCodeLine{00299\ \ \ \ \ \textcolor{comment}{/*\ skip\ id3\ */}}
+\DoxyCodeLine{00300\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ filled\ =\ 0,\ consumed\ =\ 0;}
+\DoxyCodeLine{00301\ \ \ \ \ \textcolor{keywordtype}{int}\ eof\ =\ 0,\ ret\ =\ 0;}
+\DoxyCodeLine{00302\ \ \ \ \ \textcolor{keywordflow}{if}\ (io)}
+\DoxyCodeLine{00303\ \ \ \ \ \{}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (io-\/>\mbox{\hyperlink{structmp3dec__io__t_a166467a856d8f19a9beae1489f0ce435}{seek}}(0,\ io-\/>\mbox{\hyperlink{structmp3dec__io__t_a3d42d7298e026aff6eb4d46cf11332a5}{seek\_data}}))}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_a4ef2cff7a0b403032f48129a8e413435}{MP3D\_E\_IOERROR}};}
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ filled\ =\ io-\/>\mbox{\hyperlink{structmp3dec__io__t_a1fae2df5bd36c3b25473e6e2e4c03436}{read}}(buf,\ MINIMP3\_ID3\_DETECT\_SIZE,\ io-\/>\mbox{\hyperlink{structmp3dec__io__t_a3ac281b6104d8675a736720832eb2502}{read\_data}});}
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (filled\ >\ MINIMP3\_ID3\_DETECT\_SIZE)}
+\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_a4ef2cff7a0b403032f48129a8e413435}{MP3D\_E\_IOERROR}};}
+\DoxyCodeLine{00309\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (MINIMP3\_ID3\_DETECT\_SIZE\ !=\ filled)}
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ id3v2size\ =\ mp3dec\_skip\_id3v2(buf,\ filled);}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (id3v2size)}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (io-\/>\mbox{\hyperlink{structmp3dec__io__t_a166467a856d8f19a9beae1489f0ce435}{seek}}(id3v2size,\ io-\/>\mbox{\hyperlink{structmp3dec__io__t_a3d42d7298e026aff6eb4d46cf11332a5}{seek\_data}}))}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_a4ef2cff7a0b403032f48129a8e413435}{MP3D\_E\_IOERROR}};}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \ \ \ \ filled\ =\ io-\/>\mbox{\hyperlink{structmp3dec__io__t_a1fae2df5bd36c3b25473e6e2e4c03436}{read}}(buf,\ buf\_size,\ io-\/>\mbox{\hyperlink{structmp3dec__io__t_a3ac281b6104d8675a736720832eb2502}{read\_data}});}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (filled\ >\ buf\_size)}
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_a4ef2cff7a0b403032f48129a8e413435}{MP3D\_E\_IOERROR}};}
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00320\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ readed\ =\ io-\/>\mbox{\hyperlink{structmp3dec__io__t_a1fae2df5bd36c3b25473e6e2e4c03436}{read}}(buf\ +\ MINIMP3\_ID3\_DETECT\_SIZE,\ buf\_size\ -\/\ MINIMP3\_ID3\_DETECT\_SIZE,\ io-\/>\mbox{\hyperlink{structmp3dec__io__t_a3ac281b6104d8675a736720832eb2502}{read\_data}});}
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (readed\ >\ (buf\_size\ -\/\ MINIMP3\_ID3\_DETECT\_SIZE))}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_a4ef2cff7a0b403032f48129a8e413435}{MP3D\_E\_IOERROR}};}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ \ \ \ \ filled\ +=\ readed;}
+\DoxyCodeLine{00325\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00326\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (filled\ <\ \mbox{\hyperlink{minimp3__ex_8h_a2ef248c7aff5a5e0cd5fffc6127d5849}{MINIMP3\_BUF\_SIZE}})}
+\DoxyCodeLine{00327\ \ \ \ \ \ \ \ \ \ \ \ \ mp3dec\_skip\_id3v1(buf,\ \&filled);}
+\DoxyCodeLine{00328\ \ \ \ \ \}\ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00329\ \ \ \ \ \{}
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \ \ mp3dec\_skip\_id3((\textcolor{keyword}{const}\ uint8\_t\ **)\&buf,\ \&buf\_size);}
+\DoxyCodeLine{00331\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!buf\_size)}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00333\ \ \ \ \ \}}
+\DoxyCodeLine{00334\ \ \ \ \ \textcolor{comment}{/*\ try\ to\ make\ allocation\ size\ assumption\ by\ first\ frame\ or\ vbr\ tag\ */}}
+\DoxyCodeLine{00335\ \ \ \ \ \mbox{\hyperlink{minimp3_8h_aca77f543f7ddc47bfb8cc180d0ba17f0}{mp3dec\_init}}(dec);}
+\DoxyCodeLine{00336\ \ \ \ \ \textcolor{keywordtype}{int}\ samples;}
+\DoxyCodeLine{00337\ \ \ \ \ \textcolor{keywordflow}{do}}
+\DoxyCodeLine{00338\ \ \ \ \ \{}
+\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ uint32\_t\ frames;}
+\DoxyCodeLine{00340\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i,\ delay,\ padding,\ free\_format\_bytes\ =\ 0,\ frame\_size\ =\ 0;}
+\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ uint8\_t\ *hdr;}
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (io)}
+\DoxyCodeLine{00343\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00344\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!eof\ \&\&\ filled\ -\/\ consumed\ <\ \mbox{\hyperlink{minimp3__ex_8h_a2ef248c7aff5a5e0cd5fffc6127d5849}{MINIMP3\_BUF\_SIZE}})}
+\DoxyCodeLine{00345\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \ \ \textcolor{comment}{/*\ keep\ minimum\ 10\ consecutive\ mp3\ frames\ (\string~16KB)\ worst\ case\ */}}
+\DoxyCodeLine{00346\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ memmove(buf,\ buf\ +\ consumed,\ filled\ -\/\ consumed);}
+\DoxyCodeLine{00347\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ filled\ -\/=\ consumed;}
+\DoxyCodeLine{00348\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ consumed\ =\ 0;}
+\DoxyCodeLine{00349\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ readed\ =\ io-\/>\mbox{\hyperlink{structmp3dec__io__t_a1fae2df5bd36c3b25473e6e2e4c03436}{read}}(buf\ +\ filled,\ buf\_size\ -\/\ filled,\ io-\/>\mbox{\hyperlink{structmp3dec__io__t_a3ac281b6104d8675a736720832eb2502}{read\_data}});}
+\DoxyCodeLine{00350\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (readed\ >\ (buf\_size\ -\/\ filled))}
+\DoxyCodeLine{00351\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_a4ef2cff7a0b403032f48129a8e413435}{MP3D\_E\_IOERROR}};}
+\DoxyCodeLine{00352\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (readed\ !=\ (buf\_size\ -\/\ filled))}
+\DoxyCodeLine{00353\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ eof\ =\ 1;}
+\DoxyCodeLine{00354\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ filled\ +=\ readed;}
+\DoxyCodeLine{00355\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (eof)}
+\DoxyCodeLine{00356\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mp3dec\_skip\_id3v1(buf,\ \&filled);}
+\DoxyCodeLine{00357\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00358\ \ \ \ \ \ \ \ \ \ \ \ \ i\ =\ mp3d\_find\_frame(buf\ +\ consumed,\ filled\ -\/\ consumed,\ \&free\_format\_bytes,\ \&frame\_size);}
+\DoxyCodeLine{00359\ \ \ \ \ \ \ \ \ \ \ \ \ consumed\ +=\ i;}
+\DoxyCodeLine{00360\ \ \ \ \ \ \ \ \ \ \ \ \ hdr\ =\ buf\ +\ consumed;}
+\DoxyCodeLine{00361\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00362\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00363\ \ \ \ \ \ \ \ \ \ \ \ \ i\ =\ mp3d\_find\_frame(buf,\ buf\_size,\ \&free\_format\_bytes,\ \&frame\_size);}
+\DoxyCodeLine{00364\ \ \ \ \ \ \ \ \ \ \ \ \ buf\ \ \ \ \ \ +=\ i;}
+\DoxyCodeLine{00365\ \ \ \ \ \ \ \ \ \ \ \ \ buf\_size\ -\/=\ i;}
+\DoxyCodeLine{00366\ \ \ \ \ \ \ \ \ \ \ \ \ hdr\ =\ buf;}
+\DoxyCodeLine{00367\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00368\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ \&\&\ !frame\_size)}
+\DoxyCodeLine{00369\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00370\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!frame\_size)}
+\DoxyCodeLine{00371\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00372\ \ \ \ \ \ \ \ \ frame\_info.\mbox{\hyperlink{structmp3dec__frame__info__t_a7c67f19d55d903e3dd9658c20ab1d5c3}{channels}}\ =\ HDR\_IS\_MONO(hdr)\ ?\ 1\ :\ 2;}
+\DoxyCodeLine{00373\ \ \ \ \ \ \ \ \ frame\_info.\mbox{\hyperlink{structmp3dec__frame__info__t_a8f8f5714bd67f14af72c9d33c0be0e02}{hz}}\ =\ hdr\_sample\_rate\_hz(hdr);}
+\DoxyCodeLine{00374\ \ \ \ \ \ \ \ \ frame\_info.\mbox{\hyperlink{structmp3dec__frame__info__t_af50496e720830dd261aae35f88e8de43}{layer}}\ =\ 4\ -\/\ HDR\_GET\_LAYER(hdr);}
+\DoxyCodeLine{00375\ \ \ \ \ \ \ \ \ frame\_info.\mbox{\hyperlink{structmp3dec__frame__info__t_a42ba646658439ad02739169d87fa7f29}{bitrate\_kbps}}\ =\ hdr\_bitrate\_kbps(hdr);}
+\DoxyCodeLine{00376\ \ \ \ \ \ \ \ \ frame\_info.\mbox{\hyperlink{structmp3dec__frame__info__t_a6c95ac545adf8edf5d25fcc6d8e31928}{frame\_bytes}}\ =\ frame\_size;}
+\DoxyCodeLine{00377\ \ \ \ \ \ \ \ \ samples\ =\ hdr\_frame\_samples(hdr)*frame\_info.\mbox{\hyperlink{structmp3dec__frame__info__t_a7c67f19d55d903e3dd9658c20ab1d5c3}{channels}};}
+\DoxyCodeLine{00378\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (3\ !=\ frame\_info.\mbox{\hyperlink{structmp3dec__frame__info__t_af50496e720830dd261aae35f88e8de43}{layer}})}
+\DoxyCodeLine{00379\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00380\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ ret\ =\ mp3dec\_check\_vbrtag(hdr,\ frame\_size,\ \&frames,\ \&delay,\ \&padding);}
+\DoxyCodeLine{00381\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ret\ >\ 0)}
+\DoxyCodeLine{00382\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00383\ \ \ \ \ \ \ \ \ \ \ \ \ padding\ *=\ frame\_info.\mbox{\hyperlink{structmp3dec__frame__info__t_a7c67f19d55d903e3dd9658c20ab1d5c3}{channels}};}
+\DoxyCodeLine{00384\ \ \ \ \ \ \ \ \ \ \ \ \ to\_skip\ =\ delay*frame\_info.\mbox{\hyperlink{structmp3dec__frame__info__t_a7c67f19d55d903e3dd9658c20ab1d5c3}{channels}};}
+\DoxyCodeLine{00385\ \ \ \ \ \ \ \ \ \ \ \ \ detected\_samples\ =\ samples*(uint64\_t)frames;}
+\DoxyCodeLine{00386\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (detected\_samples\ >=\ (uint64\_t)to\_skip)}
+\DoxyCodeLine{00387\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ detected\_samples\ -\/=\ to\_skip;}
+\DoxyCodeLine{00388\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (padding\ >\ 0\ \&\&\ detected\_samples\ >=\ (uint64\_t)padding)}
+\DoxyCodeLine{00389\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ detected\_samples\ -\/=\ padding;}
+\DoxyCodeLine{00390\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!detected\_samples)}
+\DoxyCodeLine{00391\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00392\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00393\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ret)}
+\DoxyCodeLine{00394\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00395\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (io)}
+\DoxyCodeLine{00396\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00397\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ consumed\ +=\ frame\_size;}
+\DoxyCodeLine{00398\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00399\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00400\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ buf\ \ \ \ \ \ +=\ frame\_size;}
+\DoxyCodeLine{00401\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ buf\_size\ -\/=\ frame\_size;}
+\DoxyCodeLine{00402\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00403\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00404\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00405\ \ \ \ \ \}\ \textcolor{keywordflow}{while}(1);}
+\DoxyCodeLine{00406\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ allocated\ =\ \mbox{\hyperlink{minimp3_8h_a60ef7262cf8772c101938ce095ecd482}{MINIMP3\_MAX\_SAMPLES\_PER\_FRAME}}*\textcolor{keyword}{sizeof}(\mbox{\hyperlink{minimp3_8h_a829d503db4023edb6b1705acc319b008}{mp3d\_sample\_t}});}
+\DoxyCodeLine{00407\ \ \ \ \ \textcolor{keywordflow}{if}\ (detected\_samples)}
+\DoxyCodeLine{00408\ \ \ \ \ \ \ \ \ allocated\ +=\ detected\_samples*\textcolor{keyword}{sizeof}(\mbox{\hyperlink{minimp3_8h_a829d503db4023edb6b1705acc319b008}{mp3d\_sample\_t}});}
+\DoxyCodeLine{00409\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00410\ \ \ \ \ \ \ \ \ allocated\ +=\ (buf\_size/frame\_info.\mbox{\hyperlink{structmp3dec__frame__info__t_a6c95ac545adf8edf5d25fcc6d8e31928}{frame\_bytes}})*samples*\textcolor{keyword}{sizeof}(\mbox{\hyperlink{minimp3_8h_a829d503db4023edb6b1705acc319b008}{mp3d\_sample\_t}});}
+\DoxyCodeLine{00411\ \ \ \ \ info-\/>\mbox{\hyperlink{structmp3dec__file__info__t_a612db05198ef1159be72217c5a2479c2}{buffer}}\ =\ (\mbox{\hyperlink{minimp3_8h_a829d503db4023edb6b1705acc319b008}{mp3d\_sample\_t}}*)malloc(allocated);}
+\DoxyCodeLine{00412\ \ \ \ \ \textcolor{keywordflow}{if}\ (!info-\/>\mbox{\hyperlink{structmp3dec__file__info__t_a612db05198ef1159be72217c5a2479c2}{buffer}})}
+\DoxyCodeLine{00413\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_a96830e024e302925507882cf8afb7460}{MP3D\_E\_MEMORY}};}
+\DoxyCodeLine{00414\ \ \ \ \ \textcolor{comment}{/*\ save\ info\ */}}
+\DoxyCodeLine{00415\ \ \ \ \ info-\/>\mbox{\hyperlink{structmp3dec__file__info__t_a821c832ae0a3f88d4c9f8420d6fafc13}{channels}}\ =\ frame\_info.\mbox{\hyperlink{structmp3dec__frame__info__t_a7c67f19d55d903e3dd9658c20ab1d5c3}{channels}};}
+\DoxyCodeLine{00416\ \ \ \ \ info-\/>\mbox{\hyperlink{structmp3dec__file__info__t_ade0925cfe44ec8a8b84b92d8bdde21de}{hz}}\ \ \ \ \ \ \ =\ frame\_info.\mbox{\hyperlink{structmp3dec__frame__info__t_a8f8f5714bd67f14af72c9d33c0be0e02}{hz}};}
+\DoxyCodeLine{00417\ \ \ \ \ info-\/>\mbox{\hyperlink{structmp3dec__file__info__t_a9e6c3657d5e2f8ebad5a68cd8b9a34b1}{layer}}\ \ \ \ =\ frame\_info.\mbox{\hyperlink{structmp3dec__frame__info__t_af50496e720830dd261aae35f88e8de43}{layer}};}
+\DoxyCodeLine{00418\ \ \ \ \ \textcolor{comment}{/*\ decode\ all\ frames\ */}}
+\DoxyCodeLine{00419\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ avg\_bitrate\_kbps\ =\ 0,\ frames\ =\ 0;}
+\DoxyCodeLine{00420\ \ \ \ \ \textcolor{keywordflow}{do}}
+\DoxyCodeLine{00421\ \ \ \ \ \{}
+\DoxyCodeLine{00422\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((allocated\ -\/\ info-\/>\mbox{\hyperlink{structmp3dec__file__info__t_adfe9c48c8d9598de73d5adc99d7a4a29}{samples}}*\textcolor{keyword}{sizeof}(\mbox{\hyperlink{minimp3_8h_a829d503db4023edb6b1705acc319b008}{mp3d\_sample\_t}}))\ <\ \mbox{\hyperlink{minimp3_8h_a60ef7262cf8772c101938ce095ecd482}{MINIMP3\_MAX\_SAMPLES\_PER\_FRAME}}*\textcolor{keyword}{sizeof}(\mbox{\hyperlink{minimp3_8h_a829d503db4023edb6b1705acc319b008}{mp3d\_sample\_t}}))}
+\DoxyCodeLine{00423\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00424\ \ \ \ \ \ \ \ \ \ \ \ \ allocated\ *=\ 2;}
+\DoxyCodeLine{00425\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{minimp3_8h_a829d503db4023edb6b1705acc319b008}{mp3d\_sample\_t}}\ *alloc\_buf\ =\ (\mbox{\hyperlink{minimp3_8h_a829d503db4023edb6b1705acc319b008}{mp3d\_sample\_t}}*)realloc(info-\/>\mbox{\hyperlink{structmp3dec__file__info__t_a612db05198ef1159be72217c5a2479c2}{buffer}},\ allocated);}
+\DoxyCodeLine{00426\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!alloc\_buf)}
+\DoxyCodeLine{00427\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_a96830e024e302925507882cf8afb7460}{MP3D\_E\_MEMORY}};}
+\DoxyCodeLine{00428\ \ \ \ \ \ \ \ \ \ \ \ \ info-\/>\mbox{\hyperlink{structmp3dec__file__info__t_a612db05198ef1159be72217c5a2479c2}{buffer}}\ =\ alloc\_buf;}
+\DoxyCodeLine{00429\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00430\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (io)}
+\DoxyCodeLine{00431\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00432\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!eof\ \&\&\ filled\ -\/\ consumed\ <\ \mbox{\hyperlink{minimp3__ex_8h_a2ef248c7aff5a5e0cd5fffc6127d5849}{MINIMP3\_BUF\_SIZE}})}
+\DoxyCodeLine{00433\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \ \ \textcolor{comment}{/*\ keep\ minimum\ 10\ consecutive\ mp3\ frames\ (\string~16KB)\ worst\ case\ */}}
+\DoxyCodeLine{00434\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ memmove(buf,\ buf\ +\ consumed,\ filled\ -\/\ consumed);}
+\DoxyCodeLine{00435\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ filled\ -\/=\ consumed;}
+\DoxyCodeLine{00436\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ consumed\ =\ 0;}
+\DoxyCodeLine{00437\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ readed\ =\ io-\/>\mbox{\hyperlink{structmp3dec__io__t_a1fae2df5bd36c3b25473e6e2e4c03436}{read}}(buf\ +\ filled,\ buf\_size\ -\/\ filled,\ io-\/>\mbox{\hyperlink{structmp3dec__io__t_a3ac281b6104d8675a736720832eb2502}{read\_data}});}
+\DoxyCodeLine{00438\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (readed\ !=\ (buf\_size\ -\/\ filled))}
+\DoxyCodeLine{00439\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ eof\ =\ 1;}
+\DoxyCodeLine{00440\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ filled\ +=\ readed;}
+\DoxyCodeLine{00441\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (eof)}
+\DoxyCodeLine{00442\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mp3dec\_skip\_id3v1(buf,\ \&filled);}
+\DoxyCodeLine{00443\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00444\ \ \ \ \ \ \ \ \ \ \ \ \ samples\ =\ \mbox{\hyperlink{minimp3_8h_ae2aa8926ba887fad5315b6d538e751df}{mp3dec\_decode\_frame}}(dec,\ buf\ +\ consumed,\ filled\ -\/\ consumed,\ info-\/>\mbox{\hyperlink{structmp3dec__file__info__t_a612db05198ef1159be72217c5a2479c2}{buffer}}\ +\ info-\/>\mbox{\hyperlink{structmp3dec__file__info__t_adfe9c48c8d9598de73d5adc99d7a4a29}{samples}},\ \&frame\_info);}
+\DoxyCodeLine{00445\ \ \ \ \ \ \ \ \ \ \ \ \ consumed\ +=\ frame\_info.\mbox{\hyperlink{structmp3dec__frame__info__t_a6c95ac545adf8edf5d25fcc6d8e31928}{frame\_bytes}};}
+\DoxyCodeLine{00446\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00447\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00448\ \ \ \ \ \ \ \ \ \ \ \ \ samples\ =\ \mbox{\hyperlink{minimp3_8h_ae2aa8926ba887fad5315b6d538e751df}{mp3dec\_decode\_frame}}(dec,\ buf,\ MINIMP3\_MIN(buf\_size,\ (\textcolor{keywordtype}{size\_t})INT\_MAX),\ info-\/>\mbox{\hyperlink{structmp3dec__file__info__t_a612db05198ef1159be72217c5a2479c2}{buffer}}\ +\ info-\/>\mbox{\hyperlink{structmp3dec__file__info__t_adfe9c48c8d9598de73d5adc99d7a4a29}{samples}},\ \&frame\_info);}
+\DoxyCodeLine{00449\ \ \ \ \ \ \ \ \ \ \ \ \ buf\ \ \ \ \ \ +=\ frame\_info.\mbox{\hyperlink{structmp3dec__frame__info__t_a6c95ac545adf8edf5d25fcc6d8e31928}{frame\_bytes}};}
+\DoxyCodeLine{00450\ \ \ \ \ \ \ \ \ \ \ \ \ buf\_size\ -\/=\ frame\_info.\mbox{\hyperlink{structmp3dec__frame__info__t_a6c95ac545adf8edf5d25fcc6d8e31928}{frame\_bytes}};}
+\DoxyCodeLine{00451\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00452\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (samples)}
+\DoxyCodeLine{00453\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00454\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (info-\/>\mbox{\hyperlink{structmp3dec__file__info__t_ade0925cfe44ec8a8b84b92d8bdde21de}{hz}}\ !=\ frame\_info.\mbox{\hyperlink{structmp3dec__frame__info__t_a8f8f5714bd67f14af72c9d33c0be0e02}{hz}}\ ||\ info-\/>\mbox{\hyperlink{structmp3dec__file__info__t_a9e6c3657d5e2f8ebad5a68cd8b9a34b1}{layer}}\ !=\ frame\_info.\mbox{\hyperlink{structmp3dec__frame__info__t_af50496e720830dd261aae35f88e8de43}{layer}})}
+\DoxyCodeLine{00455\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00456\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ret\ =\ \mbox{\hyperlink{minimp3__ex_8h_ad76cefcd8fb27ef5bc5d70210a122c9a}{MP3D\_E\_DECODE}};}
+\DoxyCodeLine{00457\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00458\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00459\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (info-\/>\mbox{\hyperlink{structmp3dec__file__info__t_a821c832ae0a3f88d4c9f8420d6fafc13}{channels}}\ \&\&\ info-\/>\mbox{\hyperlink{structmp3dec__file__info__t_a821c832ae0a3f88d4c9f8420d6fafc13}{channels}}\ !=\ frame\_info.\mbox{\hyperlink{structmp3dec__frame__info__t_a7c67f19d55d903e3dd9658c20ab1d5c3}{channels}})}
+\DoxyCodeLine{00460\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00461\ \textcolor{preprocessor}{\#ifdef\ MINIMP3\_ALLOW\_MONO\_STEREO\_TRANSITION}}
+\DoxyCodeLine{00462\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ info-\/>\mbox{\hyperlink{structmp3dec__file__info__t_a821c832ae0a3f88d4c9f8420d6fafc13}{channels}}\ =\ 0;\ \textcolor{comment}{/*\ mark\ file\ with\ mono-\/stereo\ transition\ */}}
+\DoxyCodeLine{00463\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00464\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ret\ =\ \mbox{\hyperlink{minimp3__ex_8h_ad76cefcd8fb27ef5bc5d70210a122c9a}{MP3D\_E\_DECODE}};}
+\DoxyCodeLine{00465\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00466\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00467\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00468\ \ \ \ \ \ \ \ \ \ \ \ \ samples\ *=\ frame\_info.\mbox{\hyperlink{structmp3dec__frame__info__t_a7c67f19d55d903e3dd9658c20ab1d5c3}{channels}};}
+\DoxyCodeLine{00469\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (to\_skip)}
+\DoxyCodeLine{00470\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00471\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ skip\ =\ MINIMP3\_MIN(samples,\ to\_skip);}
+\DoxyCodeLine{00472\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ to\_skip\ -\/=\ skip;}
+\DoxyCodeLine{00473\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ samples\ -\/=\ skip;}
+\DoxyCodeLine{00474\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ memmove(info-\/>\mbox{\hyperlink{structmp3dec__file__info__t_a612db05198ef1159be72217c5a2479c2}{buffer}},\ info-\/>\mbox{\hyperlink{structmp3dec__file__info__t_a612db05198ef1159be72217c5a2479c2}{buffer}}\ +\ skip,\ samples*\textcolor{keyword}{sizeof}(\mbox{\hyperlink{minimp3_8h_a829d503db4023edb6b1705acc319b008}{mp3d\_sample\_t}}));}
+\DoxyCodeLine{00475\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00476\ \ \ \ \ \ \ \ \ \ \ \ \ info-\/>\mbox{\hyperlink{structmp3dec__file__info__t_adfe9c48c8d9598de73d5adc99d7a4a29}{samples}}\ +=\ samples;}
+\DoxyCodeLine{00477\ \ \ \ \ \ \ \ \ \ \ \ \ avg\_bitrate\_kbps\ +=\ frame\_info.\mbox{\hyperlink{structmp3dec__frame__info__t_a42ba646658439ad02739169d87fa7f29}{bitrate\_kbps}};}
+\DoxyCodeLine{00478\ \ \ \ \ \ \ \ \ \ \ \ \ frames++;}
+\DoxyCodeLine{00479\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (progress\_cb)}
+\DoxyCodeLine{00480\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00481\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ret\ =\ progress\_cb(user\_data,\ orig\_buf\_size,\ orig\_buf\_size\ -\/\ buf\_size,\ \&frame\_info);}
+\DoxyCodeLine{00482\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ret)}
+\DoxyCodeLine{00483\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00484\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00485\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00486\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (frame\_info.\mbox{\hyperlink{structmp3dec__frame__info__t_a6c95ac545adf8edf5d25fcc6d8e31928}{frame\_bytes}});}
+\DoxyCodeLine{00487\ \ \ \ \ \textcolor{keywordflow}{if}\ (detected\_samples\ \&\&\ info-\/>\mbox{\hyperlink{structmp3dec__file__info__t_adfe9c48c8d9598de73d5adc99d7a4a29}{samples}}\ >\ detected\_samples)}
+\DoxyCodeLine{00488\ \ \ \ \ \ \ \ \ info-\/>\mbox{\hyperlink{structmp3dec__file__info__t_adfe9c48c8d9598de73d5adc99d7a4a29}{samples}}\ =\ detected\_samples;\ \textcolor{comment}{/*\ cut\ padding\ */}}
+\DoxyCodeLine{00489\ \ \ \ \ \textcolor{comment}{/*\ reallocate\ to\ normal\ buffer\ size\ */}}
+\DoxyCodeLine{00490\ \ \ \ \ \textcolor{keywordflow}{if}\ (allocated\ !=\ info-\/>\mbox{\hyperlink{structmp3dec__file__info__t_adfe9c48c8d9598de73d5adc99d7a4a29}{samples}}*\textcolor{keyword}{sizeof}(\mbox{\hyperlink{minimp3_8h_a829d503db4023edb6b1705acc319b008}{mp3d\_sample\_t}}))}
+\DoxyCodeLine{00491\ \ \ \ \ \{}
+\DoxyCodeLine{00492\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{minimp3_8h_a829d503db4023edb6b1705acc319b008}{mp3d\_sample\_t}}\ *alloc\_buf\ =\ (\mbox{\hyperlink{minimp3_8h_a829d503db4023edb6b1705acc319b008}{mp3d\_sample\_t}}*)realloc(info-\/>\mbox{\hyperlink{structmp3dec__file__info__t_a612db05198ef1159be72217c5a2479c2}{buffer}},\ info-\/>\mbox{\hyperlink{structmp3dec__file__info__t_adfe9c48c8d9598de73d5adc99d7a4a29}{samples}}*\textcolor{keyword}{sizeof}(\mbox{\hyperlink{minimp3_8h_a829d503db4023edb6b1705acc319b008}{mp3d\_sample\_t}}));}
+\DoxyCodeLine{00493\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!alloc\_buf\ \&\&\ info-\/>\mbox{\hyperlink{structmp3dec__file__info__t_adfe9c48c8d9598de73d5adc99d7a4a29}{samples}})}
+\DoxyCodeLine{00494\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_a96830e024e302925507882cf8afb7460}{MP3D\_E\_MEMORY}};}
+\DoxyCodeLine{00495\ \ \ \ \ \ \ \ \ info-\/>\mbox{\hyperlink{structmp3dec__file__info__t_a612db05198ef1159be72217c5a2479c2}{buffer}}\ =\ alloc\_buf;}
+\DoxyCodeLine{00496\ \ \ \ \ \}}
+\DoxyCodeLine{00497\ \ \ \ \ \textcolor{keywordflow}{if}\ (frames)}
+\DoxyCodeLine{00498\ \ \ \ \ \ \ \ \ info-\/>\mbox{\hyperlink{structmp3dec__file__info__t_a09e43c74f163e3f690216f47841ccee7}{avg\_bitrate\_kbps}}\ =\ avg\_bitrate\_kbps/frames;}
+\DoxyCodeLine{00499\ \ \ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{00500\ \}}
+\DoxyCodeLine{00501\ }
+\DoxyCodeLine{00502\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{minimp3__ex_8h_ac4f6c8c305339b3675c60014871f091d}{mp3dec\_iterate\_buf}}(\textcolor{keyword}{const}\ uint8\_t\ *buf,\ \textcolor{keywordtype}{size\_t}\ buf\_size,\ \mbox{\hyperlink{minimp3__ex_8h_a156201e8e590ced254c0ec1a113dbd1f}{MP3D\_ITERATE\_CB}}\ callback,\ \textcolor{keywordtype}{void}\ *user\_data)}
+\DoxyCodeLine{00503\ \{}
+\DoxyCodeLine{00504\ \ \ \ \ \textcolor{keyword}{const}\ uint8\_t\ *orig\_buf\ =\ buf;}
+\DoxyCodeLine{00505\ \ \ \ \ \textcolor{keywordflow}{if}\ (!buf\ ||\ (\textcolor{keywordtype}{size\_t})-\/1\ ==\ buf\_size\ ||\ !callback)}
+\DoxyCodeLine{00506\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_afd17086858bde25da30f8bd57e1a6458}{MP3D\_E\_PARAM}};}
+\DoxyCodeLine{00507\ \ \ \ \ \textcolor{comment}{/*\ skip\ id3\ */}}
+\DoxyCodeLine{00508\ \ \ \ \ mp3dec\_skip\_id3(\&buf,\ \&buf\_size);}
+\DoxyCodeLine{00509\ \ \ \ \ \textcolor{keywordflow}{if}\ (!buf\_size)}
+\DoxyCodeLine{00510\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00511\ \ \ \ \ \mbox{\hyperlink{structmp3dec__frame__info__t}{mp3dec\_frame\_info\_t}}\ frame\_info;}
+\DoxyCodeLine{00512\ \ \ \ \ memset(\&frame\_info,\ 0,\ \textcolor{keyword}{sizeof}(frame\_info));}
+\DoxyCodeLine{00513\ \ \ \ \ \textcolor{keywordflow}{do}}
+\DoxyCodeLine{00514\ \ \ \ \ \{}
+\DoxyCodeLine{00515\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ free\_format\_bytes\ =\ 0,\ frame\_size\ =\ 0,\ ret;}
+\DoxyCodeLine{00516\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i\ =\ mp3d\_find\_frame(buf,\ buf\_size,\ \&free\_format\_bytes,\ \&frame\_size);}
+\DoxyCodeLine{00517\ \ \ \ \ \ \ \ \ buf\ \ \ \ \ \ +=\ i;}
+\DoxyCodeLine{00518\ \ \ \ \ \ \ \ \ buf\_size\ -\/=\ i;}
+\DoxyCodeLine{00519\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ \&\&\ !frame\_size)}
+\DoxyCodeLine{00520\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00521\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!frame\_size)}
+\DoxyCodeLine{00522\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00523\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ uint8\_t\ *hdr\ =\ buf;}
+\DoxyCodeLine{00524\ \ \ \ \ \ \ \ \ frame\_info.\mbox{\hyperlink{structmp3dec__frame__info__t_a7c67f19d55d903e3dd9658c20ab1d5c3}{channels}}\ =\ HDR\_IS\_MONO(hdr)\ ?\ 1\ :\ 2;}
+\DoxyCodeLine{00525\ \ \ \ \ \ \ \ \ frame\_info.\mbox{\hyperlink{structmp3dec__frame__info__t_a8f8f5714bd67f14af72c9d33c0be0e02}{hz}}\ =\ hdr\_sample\_rate\_hz(hdr);}
+\DoxyCodeLine{00526\ \ \ \ \ \ \ \ \ frame\_info.\mbox{\hyperlink{structmp3dec__frame__info__t_af50496e720830dd261aae35f88e8de43}{layer}}\ =\ 4\ -\/\ HDR\_GET\_LAYER(hdr);}
+\DoxyCodeLine{00527\ \ \ \ \ \ \ \ \ frame\_info.\mbox{\hyperlink{structmp3dec__frame__info__t_a42ba646658439ad02739169d87fa7f29}{bitrate\_kbps}}\ =\ hdr\_bitrate\_kbps(hdr);}
+\DoxyCodeLine{00528\ \ \ \ \ \ \ \ \ frame\_info.\mbox{\hyperlink{structmp3dec__frame__info__t_a6c95ac545adf8edf5d25fcc6d8e31928}{frame\_bytes}}\ =\ frame\_size;}
+\DoxyCodeLine{00529\ }
+\DoxyCodeLine{00530\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (callback)}
+\DoxyCodeLine{00531\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00532\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((ret\ =\ callback(user\_data,\ hdr,\ frame\_size,\ free\_format\_bytes,\ buf\_size,\ hdr\ -\/\ orig\_buf,\ \&frame\_info)))}
+\DoxyCodeLine{00533\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{00534\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00535\ \ \ \ \ \ \ \ \ buf\ \ \ \ \ \ +=\ frame\_size;}
+\DoxyCodeLine{00536\ \ \ \ \ \ \ \ \ buf\_size\ -\/=\ frame\_size;}
+\DoxyCodeLine{00537\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (1);}
+\DoxyCodeLine{00538\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00539\ \}}
+\DoxyCodeLine{00540\ }
+\DoxyCodeLine{00541\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{minimp3__ex_8h_ad284dbfa591ea90c94190ab58ecdf97a}{mp3dec\_iterate\_cb}}(\mbox{\hyperlink{structmp3dec__io__t}{mp3dec\_io\_t}}\ *io,\ uint8\_t\ *buf,\ \textcolor{keywordtype}{size\_t}\ buf\_size,\ \mbox{\hyperlink{minimp3__ex_8h_a156201e8e590ced254c0ec1a113dbd1f}{MP3D\_ITERATE\_CB}}\ callback,\ \textcolor{keywordtype}{void}\ *user\_data)}
+\DoxyCodeLine{00542\ \{}
+\DoxyCodeLine{00543\ \ \ \ \ \textcolor{keywordflow}{if}\ (!io\ ||\ !buf\ ||\ (\textcolor{keywordtype}{size\_t})-\/1\ ==\ buf\_size\ ||\ buf\_size\ <\ \mbox{\hyperlink{minimp3__ex_8h_a2ef248c7aff5a5e0cd5fffc6127d5849}{MINIMP3\_BUF\_SIZE}}\ ||\ !callback)}
+\DoxyCodeLine{00544\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_afd17086858bde25da30f8bd57e1a6458}{MP3D\_E\_PARAM}};}
+\DoxyCodeLine{00545\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ filled\ =\ io-\/>\mbox{\hyperlink{structmp3dec__io__t_a1fae2df5bd36c3b25473e6e2e4c03436}{read}}(buf,\ MINIMP3\_ID3\_DETECT\_SIZE,\ io-\/>\mbox{\hyperlink{structmp3dec__io__t_a3ac281b6104d8675a736720832eb2502}{read\_data}}),\ consumed\ =\ 0;}
+\DoxyCodeLine{00546\ \ \ \ \ uint64\_t\ readed\ =\ 0;}
+\DoxyCodeLine{00547\ \ \ \ \ \mbox{\hyperlink{structmp3dec__frame__info__t}{mp3dec\_frame\_info\_t}}\ frame\_info;}
+\DoxyCodeLine{00548\ \ \ \ \ \textcolor{keywordtype}{int}\ eof\ =\ 0;}
+\DoxyCodeLine{00549\ \ \ \ \ memset(\&frame\_info,\ 0,\ \textcolor{keyword}{sizeof}(frame\_info));}
+\DoxyCodeLine{00550\ \ \ \ \ \textcolor{keywordflow}{if}\ (filled\ >\ MINIMP3\_ID3\_DETECT\_SIZE)}
+\DoxyCodeLine{00551\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_a4ef2cff7a0b403032f48129a8e413435}{MP3D\_E\_IOERROR}};}
+\DoxyCodeLine{00552\ \ \ \ \ \textcolor{keywordflow}{if}\ (MINIMP3\_ID3\_DETECT\_SIZE\ !=\ filled)}
+\DoxyCodeLine{00553\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00554\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ id3v2size\ =\ mp3dec\_skip\_id3v2(buf,\ filled);}
+\DoxyCodeLine{00555\ \ \ \ \ \textcolor{keywordflow}{if}\ (id3v2size)}
+\DoxyCodeLine{00556\ \ \ \ \ \{}
+\DoxyCodeLine{00557\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (io-\/>\mbox{\hyperlink{structmp3dec__io__t_a166467a856d8f19a9beae1489f0ce435}{seek}}(id3v2size,\ io-\/>\mbox{\hyperlink{structmp3dec__io__t_a3d42d7298e026aff6eb4d46cf11332a5}{seek\_data}}))}
+\DoxyCodeLine{00558\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_a4ef2cff7a0b403032f48129a8e413435}{MP3D\_E\_IOERROR}};}
+\DoxyCodeLine{00559\ \ \ \ \ \ \ \ \ filled\ =\ io-\/>\mbox{\hyperlink{structmp3dec__io__t_a1fae2df5bd36c3b25473e6e2e4c03436}{read}}(buf,\ buf\_size,\ io-\/>\mbox{\hyperlink{structmp3dec__io__t_a3ac281b6104d8675a736720832eb2502}{read\_data}});}
+\DoxyCodeLine{00560\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (filled\ >\ buf\_size)}
+\DoxyCodeLine{00561\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_a4ef2cff7a0b403032f48129a8e413435}{MP3D\_E\_IOERROR}};}
+\DoxyCodeLine{00562\ \ \ \ \ \ \ \ \ readed\ +=\ id3v2size;}
+\DoxyCodeLine{00563\ \ \ \ \ \}\ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00564\ \ \ \ \ \{}
+\DoxyCodeLine{00565\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ readed\ =\ io-\/>\mbox{\hyperlink{structmp3dec__io__t_a1fae2df5bd36c3b25473e6e2e4c03436}{read}}(buf\ +\ MINIMP3\_ID3\_DETECT\_SIZE,\ buf\_size\ -\/\ MINIMP3\_ID3\_DETECT\_SIZE,\ io-\/>\mbox{\hyperlink{structmp3dec__io__t_a3ac281b6104d8675a736720832eb2502}{read\_data}});}
+\DoxyCodeLine{00566\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (readed\ >\ (buf\_size\ -\/\ MINIMP3\_ID3\_DETECT\_SIZE))}
+\DoxyCodeLine{00567\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_a4ef2cff7a0b403032f48129a8e413435}{MP3D\_E\_IOERROR}};}
+\DoxyCodeLine{00568\ \ \ \ \ \ \ \ \ filled\ +=\ readed;}
+\DoxyCodeLine{00569\ \ \ \ \ \}}
+\DoxyCodeLine{00570\ \ \ \ \ \textcolor{keywordflow}{if}\ (filled\ <\ \mbox{\hyperlink{minimp3__ex_8h_a2ef248c7aff5a5e0cd5fffc6127d5849}{MINIMP3\_BUF\_SIZE}})}
+\DoxyCodeLine{00571\ \ \ \ \ \ \ \ \ mp3dec\_skip\_id3v1(buf,\ \&filled);}
+\DoxyCodeLine{00572\ \ \ \ \ \textcolor{keywordflow}{do}}
+\DoxyCodeLine{00573\ \ \ \ \ \{}
+\DoxyCodeLine{00574\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ free\_format\_bytes\ =\ 0,\ frame\_size\ =\ 0,\ ret;}
+\DoxyCodeLine{00575\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i\ =\ mp3d\_find\_frame(buf\ +\ consumed,\ filled\ -\/\ consumed,\ \&free\_format\_bytes,\ \&frame\_size);}
+\DoxyCodeLine{00576\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ \&\&\ !frame\_size)}
+\DoxyCodeLine{00577\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00578\ \ \ \ \ \ \ \ \ \ \ \ \ consumed\ +=\ i;}
+\DoxyCodeLine{00579\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00580\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00581\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!frame\_size)}
+\DoxyCodeLine{00582\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00583\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ uint8\_t\ *hdr\ =\ buf\ +\ consumed\ +\ i;}
+\DoxyCodeLine{00584\ \ \ \ \ \ \ \ \ frame\_info.\mbox{\hyperlink{structmp3dec__frame__info__t_a7c67f19d55d903e3dd9658c20ab1d5c3}{channels}}\ =\ HDR\_IS\_MONO(hdr)\ ?\ 1\ :\ 2;}
+\DoxyCodeLine{00585\ \ \ \ \ \ \ \ \ frame\_info.\mbox{\hyperlink{structmp3dec__frame__info__t_a8f8f5714bd67f14af72c9d33c0be0e02}{hz}}\ =\ hdr\_sample\_rate\_hz(hdr);}
+\DoxyCodeLine{00586\ \ \ \ \ \ \ \ \ frame\_info.\mbox{\hyperlink{structmp3dec__frame__info__t_af50496e720830dd261aae35f88e8de43}{layer}}\ =\ 4\ -\/\ HDR\_GET\_LAYER(hdr);}
+\DoxyCodeLine{00587\ \ \ \ \ \ \ \ \ frame\_info.\mbox{\hyperlink{structmp3dec__frame__info__t_a42ba646658439ad02739169d87fa7f29}{bitrate\_kbps}}\ =\ hdr\_bitrate\_kbps(hdr);}
+\DoxyCodeLine{00588\ \ \ \ \ \ \ \ \ frame\_info.\mbox{\hyperlink{structmp3dec__frame__info__t_a6c95ac545adf8edf5d25fcc6d8e31928}{frame\_bytes}}\ =\ frame\_size;}
+\DoxyCodeLine{00589\ }
+\DoxyCodeLine{00590\ \ \ \ \ \ \ \ \ readed\ +=\ i;}
+\DoxyCodeLine{00591\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (callback)}
+\DoxyCodeLine{00592\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00593\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((ret\ =\ callback(user\_data,\ hdr,\ frame\_size,\ free\_format\_bytes,\ filled\ -\/\ consumed,\ readed,\ \&frame\_info)))}
+\DoxyCodeLine{00594\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{00595\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00596\ \ \ \ \ \ \ \ \ readed\ +=\ frame\_size;}
+\DoxyCodeLine{00597\ \ \ \ \ \ \ \ \ consumed\ +=\ i\ +\ frame\_size;}
+\DoxyCodeLine{00598\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!eof\ \&\&\ filled\ -\/\ consumed\ <\ \mbox{\hyperlink{minimp3__ex_8h_a2ef248c7aff5a5e0cd5fffc6127d5849}{MINIMP3\_BUF\_SIZE}})}
+\DoxyCodeLine{00599\ \ \ \ \ \ \ \ \ \{\ \ \ \textcolor{comment}{/*\ keep\ minimum\ 10\ consecutive\ mp3\ frames\ (\string~16KB)\ worst\ case\ */}}
+\DoxyCodeLine{00600\ \ \ \ \ \ \ \ \ \ \ \ \ memmove(buf,\ buf\ +\ consumed,\ filled\ -\/\ consumed);}
+\DoxyCodeLine{00601\ \ \ \ \ \ \ \ \ \ \ \ \ filled\ -\/=\ consumed;}
+\DoxyCodeLine{00602\ \ \ \ \ \ \ \ \ \ \ \ \ consumed\ =\ 0;}
+\DoxyCodeLine{00603\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ readed\ =\ io-\/>\mbox{\hyperlink{structmp3dec__io__t_a1fae2df5bd36c3b25473e6e2e4c03436}{read}}(buf\ +\ filled,\ buf\_size\ -\/\ filled,\ io-\/>\mbox{\hyperlink{structmp3dec__io__t_a3ac281b6104d8675a736720832eb2502}{read\_data}});}
+\DoxyCodeLine{00604\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (readed\ >\ (buf\_size\ -\/\ filled))}
+\DoxyCodeLine{00605\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_a4ef2cff7a0b403032f48129a8e413435}{MP3D\_E\_IOERROR}};}
+\DoxyCodeLine{00606\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (readed\ !=\ (buf\_size\ -\/\ filled))}
+\DoxyCodeLine{00607\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ eof\ =\ 1;}
+\DoxyCodeLine{00608\ \ \ \ \ \ \ \ \ \ \ \ \ filled\ +=\ readed;}
+\DoxyCodeLine{00609\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (eof)}
+\DoxyCodeLine{00610\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mp3dec\_skip\_id3v1(buf,\ \&filled);}
+\DoxyCodeLine{00611\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00612\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (1);}
+\DoxyCodeLine{00613\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00614\ \}}
+\DoxyCodeLine{00615\ }
+\DoxyCodeLine{00616\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ mp3dec\_load\_index(\textcolor{keywordtype}{void}\ *user\_data,\ \textcolor{keyword}{const}\ uint8\_t\ *frame,\ \textcolor{keywordtype}{int}\ frame\_size,\ \textcolor{keywordtype}{int}\ free\_format\_bytes,\ \textcolor{keywordtype}{size\_t}\ buf\_size,\ uint64\_t\ offset,\ \mbox{\hyperlink{structmp3dec__frame__info__t}{mp3dec\_frame\_info\_t}}\ *info)}
+\DoxyCodeLine{00617\ \{}
+\DoxyCodeLine{00618\ \ \ \ \ \mbox{\hyperlink{structmp3dec__frame__t}{mp3dec\_frame\_t}}\ *idx\_frame;}
+\DoxyCodeLine{00619\ \ \ \ \ \mbox{\hyperlink{structmp3dec__ex__t}{mp3dec\_ex\_t}}\ *dec\ =\ (\mbox{\hyperlink{structmp3dec__ex__t}{mp3dec\_ex\_t}}\ *)user\_data;}
+\DoxyCodeLine{00620\ \ \ \ \ \textcolor{keywordflow}{if}\ (!dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a3a9c9e9dbe68b24a397a921404b598ea}{index}}.\mbox{\hyperlink{structmp3dec__index__t_a40ff06448948d11cec9dba6e892e8baa}{frames}}\ \&\&\ !dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a7884cfda5fa124a6994468e69681a203}{start\_offset}})}
+\DoxyCodeLine{00621\ \ \ \ \ \{\ \ \ \textcolor{comment}{/*\ detect\ VBR\ tag\ and\ try\ to\ avoid\ full\ scan\ */}}
+\DoxyCodeLine{00622\ \ \ \ \ \ \ \ \ uint32\_t\ frames;}
+\DoxyCodeLine{00623\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ delay,\ padding;}
+\DoxyCodeLine{00624\ \ \ \ \ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a227aeba45d7295665e6eb6eb5203c56d}{info}}\ =\ *info;}
+\DoxyCodeLine{00625\ \ \ \ \ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a7884cfda5fa124a6994468e69681a203}{start\_offset}}\ =\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a33d2308a3bdaf5dc0738a6a7be91493f}{offset}}\ =\ offset;}
+\DoxyCodeLine{00626\ \ \ \ \ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a19da317bf596134c8a2397edbf90c061}{end\_offset}}\ \ \ =\ offset\ +\ buf\_size;}
+\DoxyCodeLine{00627\ \ \ \ \ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a2dacee877a4c0bee52369036233ef402}{free\_format\_bytes}}\ =\ free\_format\_bytes;\ \textcolor{comment}{/*\ should\ not\ change\ */}}
+\DoxyCodeLine{00628\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (3\ ==\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a227aeba45d7295665e6eb6eb5203c56d}{info}}.\mbox{\hyperlink{structmp3dec__frame__info__t_af50496e720830dd261aae35f88e8de43}{layer}})}
+\DoxyCodeLine{00629\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00630\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ ret\ =\ mp3dec\_check\_vbrtag(frame,\ frame\_size,\ \&frames,\ \&delay,\ \&padding);}
+\DoxyCodeLine{00631\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ret)}
+\DoxyCodeLine{00632\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a7884cfda5fa124a6994468e69681a203}{start\_offset}}\ =\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a33d2308a3bdaf5dc0738a6a7be91493f}{offset}}\ =\ offset\ +\ frame\_size;}
+\DoxyCodeLine{00633\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ret\ >\ 0)}
+\DoxyCodeLine{00634\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00635\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ padding\ *=\ info-\/>\mbox{\hyperlink{structmp3dec__frame__info__t_a7c67f19d55d903e3dd9658c20ab1d5c3}{channels}};}
+\DoxyCodeLine{00636\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_abb7c22db7aa7fdd657edb68a14cc0f60}{start\_delay}}\ =\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a09fd3fb5e70266fca05d7167e614bfee}{to\_skip}}\ =\ delay*info-\/>\mbox{\hyperlink{structmp3dec__frame__info__t_a7c67f19d55d903e3dd9658c20ab1d5c3}{channels}};}
+\DoxyCodeLine{00637\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a138bf7485e7f4f20c481b46051a0a8bf}{samples}}\ =\ hdr\_frame\_samples(frame)*info-\/>\mbox{\hyperlink{structmp3dec__frame__info__t_a7c67f19d55d903e3dd9658c20ab1d5c3}{channels}}*(uint64\_t)frames;}
+\DoxyCodeLine{00638\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a138bf7485e7f4f20c481b46051a0a8bf}{samples}}\ >=\ (uint64\_t)dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_abb7c22db7aa7fdd657edb68a14cc0f60}{start\_delay}})}
+\DoxyCodeLine{00639\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a138bf7485e7f4f20c481b46051a0a8bf}{samples}}\ -\/=\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_abb7c22db7aa7fdd657edb68a14cc0f60}{start\_delay}};}
+\DoxyCodeLine{00640\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (padding\ >\ 0\ \&\&\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a138bf7485e7f4f20c481b46051a0a8bf}{samples}}\ >=\ (uint64\_t)padding)}
+\DoxyCodeLine{00641\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a138bf7485e7f4f20c481b46051a0a8bf}{samples}}\ -\/=\ padding;}
+\DoxyCodeLine{00642\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_ae16315bdda132a17b9e71d75f9f5cc16}{detected\_samples}}\ =\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a138bf7485e7f4f20c481b46051a0a8bf}{samples}};}
+\DoxyCodeLine{00643\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a56111cda542372126c53b751bb231b2b}{vbr\_tag\_found}}\ =\ 1;}
+\DoxyCodeLine{00644\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_acf47112101ece200a15c8b5f27a06fc9}{MP3D\_E\_USER}};}
+\DoxyCodeLine{00645\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (ret\ <\ 0)}
+\DoxyCodeLine{00646\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00647\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00648\ \ \ \ \ \}}
+\DoxyCodeLine{00649\ \ \ \ \ \textcolor{keywordflow}{if}\ (dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a1fbba373f884d9a1bcee655104070e87}{flags}}\ \&\ \mbox{\hyperlink{minimp3__ex_8h_ab3736544a0373fb51274e8db4fc81eb7}{MP3D\_DO\_NOT\_SCAN}})}
+\DoxyCodeLine{00650\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_acf47112101ece200a15c8b5f27a06fc9}{MP3D\_E\_USER}};}
+\DoxyCodeLine{00651\ \ \ \ \ \textcolor{keywordflow}{if}\ (dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a3a9c9e9dbe68b24a397a921404b598ea}{index}}.\mbox{\hyperlink{structmp3dec__index__t_a8fcf9faa7b38a0448bc8ed2b3e5e9eb9}{num\_frames}}\ +\ 1\ >\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a3a9c9e9dbe68b24a397a921404b598ea}{index}}.\mbox{\hyperlink{structmp3dec__index__t_ab797b249602deda2455f6e2aae5b87fa}{capacity}})}
+\DoxyCodeLine{00652\ \ \ \ \ \{}
+\DoxyCodeLine{00653\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a3a9c9e9dbe68b24a397a921404b598ea}{index}}.\mbox{\hyperlink{structmp3dec__index__t_ab797b249602deda2455f6e2aae5b87fa}{capacity}})}
+\DoxyCodeLine{00654\ \ \ \ \ \ \ \ \ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a3a9c9e9dbe68b24a397a921404b598ea}{index}}.\mbox{\hyperlink{structmp3dec__index__t_ab797b249602deda2455f6e2aae5b87fa}{capacity}}\ =\ 4096;}
+\DoxyCodeLine{00655\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00656\ \ \ \ \ \ \ \ \ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a3a9c9e9dbe68b24a397a921404b598ea}{index}}.\mbox{\hyperlink{structmp3dec__index__t_ab797b249602deda2455f6e2aae5b87fa}{capacity}}\ *=\ 2;}
+\DoxyCodeLine{00657\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structmp3dec__frame__t}{mp3dec\_frame\_t}}\ *alloc\_buf\ =\ (\mbox{\hyperlink{structmp3dec__frame__t}{mp3dec\_frame\_t}}\ *)realloc((\textcolor{keywordtype}{void}*)dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a3a9c9e9dbe68b24a397a921404b598ea}{index}}.\mbox{\hyperlink{structmp3dec__index__t_a40ff06448948d11cec9dba6e892e8baa}{frames}},\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{structmp3dec__frame__t}{mp3dec\_frame\_t}})*dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a3a9c9e9dbe68b24a397a921404b598ea}{index}}.\mbox{\hyperlink{structmp3dec__index__t_ab797b249602deda2455f6e2aae5b87fa}{capacity}});}
+\DoxyCodeLine{00658\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!alloc\_buf)}
+\DoxyCodeLine{00659\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_a96830e024e302925507882cf8afb7460}{MP3D\_E\_MEMORY}};}
+\DoxyCodeLine{00660\ \ \ \ \ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a3a9c9e9dbe68b24a397a921404b598ea}{index}}.\mbox{\hyperlink{structmp3dec__index__t_a40ff06448948d11cec9dba6e892e8baa}{frames}}\ =\ alloc\_buf;}
+\DoxyCodeLine{00661\ \ \ \ \ \}}
+\DoxyCodeLine{00662\ \ \ \ \ idx\_frame\ =\ \&dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a3a9c9e9dbe68b24a397a921404b598ea}{index}}.\mbox{\hyperlink{structmp3dec__index__t_a40ff06448948d11cec9dba6e892e8baa}{frames}}[dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a3a9c9e9dbe68b24a397a921404b598ea}{index}}.\mbox{\hyperlink{structmp3dec__index__t_a8fcf9faa7b38a0448bc8ed2b3e5e9eb9}{num\_frames}}++];}
+\DoxyCodeLine{00663\ \ \ \ \ idx\_frame-\/>\mbox{\hyperlink{structmp3dec__frame__t_a69e9429014223e9a3f5acf989e0e52eb}{offset}}\ =\ offset;}
+\DoxyCodeLine{00664\ \ \ \ \ idx\_frame-\/>\mbox{\hyperlink{structmp3dec__frame__t_aac1acca4e33a1b46f175ab13abe04b5b}{sample}}\ =\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a138bf7485e7f4f20c481b46051a0a8bf}{samples}};}
+\DoxyCodeLine{00665\ \ \ \ \ \textcolor{keywordflow}{if}\ (!dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a80e64fa71e0ec9aad9654038baf2dd4a}{buffer\_samples}}\ \&\&\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a3a9c9e9dbe68b24a397a921404b598ea}{index}}.\mbox{\hyperlink{structmp3dec__index__t_a8fcf9faa7b38a0448bc8ed2b3e5e9eb9}{num\_frames}}\ <\ 256)}
+\DoxyCodeLine{00666\ \ \ \ \ \{\ \ \ \textcolor{comment}{/*\ for\ some\ cutted\ mp3\ frames,\ bit-\/reservoir\ not\ filled\ and\ decoding\ can't\ be\ started\ from\ first\ frames\ */}}
+\DoxyCodeLine{00667\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ try\ to\ decode\ up\ to\ 255\ first\ frames\ till\ samples\ starts\ to\ decode\ */}}
+\DoxyCodeLine{00668\ \ \ \ \ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a80e64fa71e0ec9aad9654038baf2dd4a}{buffer\_samples}}\ =\ \mbox{\hyperlink{minimp3_8h_ae2aa8926ba887fad5315b6d538e751df}{mp3dec\_decode\_frame}}(\&dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a17a9729ae1728c919876d6fd8693914a}{mp3d}},\ frame,\ MINIMP3\_MIN(buf\_size,\ (\textcolor{keywordtype}{size\_t})INT\_MAX),\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a9b80b49c5d1672fd01d49fc27c8a1861}{buffer}},\ info);}
+\DoxyCodeLine{00669\ \ \ \ \ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a138bf7485e7f4f20c481b46051a0a8bf}{samples}}\ +=\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a80e64fa71e0ec9aad9654038baf2dd4a}{buffer\_samples}}*info-\/>\mbox{\hyperlink{structmp3dec__frame__info__t_a7c67f19d55d903e3dd9658c20ab1d5c3}{channels}};}
+\DoxyCodeLine{00670\ \ \ \ \ \}\ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00671\ \ \ \ \ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a138bf7485e7f4f20c481b46051a0a8bf}{samples}}\ +=\ hdr\_frame\_samples(frame)*info-\/>\mbox{\hyperlink{structmp3dec__frame__info__t_a7c67f19d55d903e3dd9658c20ab1d5c3}{channels}};}
+\DoxyCodeLine{00672\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00673\ \}}
+\DoxyCodeLine{00674\ }
+\DoxyCodeLine{00675\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{minimp3__ex_8h_a4b4ebe8965d000c52a60f4f87b215e31}{mp3dec\_ex\_open\_buf}}(\mbox{\hyperlink{structmp3dec__ex__t}{mp3dec\_ex\_t}}\ *dec,\ \textcolor{keyword}{const}\ uint8\_t\ *buf,\ \textcolor{keywordtype}{size\_t}\ buf\_size,\ \textcolor{keywordtype}{int}\ flags)}
+\DoxyCodeLine{00676\ \{}
+\DoxyCodeLine{00677\ \ \ \ \ \textcolor{keywordflow}{if}\ (!dec\ ||\ !buf\ ||\ (\textcolor{keywordtype}{size\_t})-\/1\ ==\ buf\_size\ ||\ (flags\ \&\ (\string~\mbox{\hyperlink{minimp3__ex_8h_a07f562452236ba6b6355556feced9fc4}{MP3D\_FLAGS\_MASK}})))}
+\DoxyCodeLine{00678\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_afd17086858bde25da30f8bd57e1a6458}{MP3D\_E\_PARAM}};}
+\DoxyCodeLine{00679\ \ \ \ \ memset(dec,\ 0,\ \textcolor{keyword}{sizeof}(*dec));}
+\DoxyCodeLine{00680\ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aa83ce3f305ad2239de2c2167b8a51bc8}{file}}.\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}}\ =\ buf;}
+\DoxyCodeLine{00681\ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aa83ce3f305ad2239de2c2167b8a51bc8}{file}}.\mbox{\hyperlink{structmp3dec__map__info__t_a3b7009a8a777a4cdae12a805db0fa4ab}{size}}\ \ \ =\ buf\_size;}
+\DoxyCodeLine{00682\ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a1fbba373f884d9a1bcee655104070e87}{flags}}\ \ \ \ \ \ \ =\ flags;}
+\DoxyCodeLine{00683\ \ \ \ \ \mbox{\hyperlink{minimp3_8h_aca77f543f7ddc47bfb8cc180d0ba17f0}{mp3dec\_init}}(\&dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a17a9729ae1728c919876d6fd8693914a}{mp3d}});}
+\DoxyCodeLine{00684\ \ \ \ \ \textcolor{keywordtype}{int}\ ret\ =\ \mbox{\hyperlink{minimp3__ex_8h_ac4f6c8c305339b3675c60014871f091d}{mp3dec\_iterate\_buf}}(dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aa83ce3f305ad2239de2c2167b8a51bc8}{file}}.\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}},\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aa83ce3f305ad2239de2c2167b8a51bc8}{file}}.\mbox{\hyperlink{structmp3dec__map__info__t_a3b7009a8a777a4cdae12a805db0fa4ab}{size}},\ mp3dec\_load\_index,\ dec);}
+\DoxyCodeLine{00685\ \ \ \ \ \textcolor{keywordflow}{if}\ (ret\ \&\&\ \mbox{\hyperlink{minimp3__ex_8h_acf47112101ece200a15c8b5f27a06fc9}{MP3D\_E\_USER}}\ !=\ ret)}
+\DoxyCodeLine{00686\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{00687\ \ \ \ \ \mbox{\hyperlink{minimp3_8h_aca77f543f7ddc47bfb8cc180d0ba17f0}{mp3dec\_init}}(\&dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a17a9729ae1728c919876d6fd8693914a}{mp3d}});}
+\DoxyCodeLine{00688\ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a80e64fa71e0ec9aad9654038baf2dd4a}{buffer\_samples}}\ =\ 0;}
+\DoxyCodeLine{00689\ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a3a3ed982119a5322a0a1690c312662a2}{indexes\_built}}\ =\ !(dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a56111cda542372126c53b751bb231b2b}{vbr\_tag\_found}}\ ||\ (flags\ \&\ \mbox{\hyperlink{minimp3__ex_8h_ab3736544a0373fb51274e8db4fc81eb7}{MP3D\_DO\_NOT\_SCAN}}));}
+\DoxyCodeLine{00690\ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a1fbba373f884d9a1bcee655104070e87}{flags}}\ \&=\ (\string~MP3D\_DO\_NOT\_SCAN);}
+\DoxyCodeLine{00691\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00692\ \}}
+\DoxyCodeLine{00693\ }
+\DoxyCodeLine{00694\ \textcolor{preprocessor}{\#ifndef\ MINIMP3\_SEEK\_IDX\_LINEAR\_SEARCH}}
+\DoxyCodeLine{00695\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{size\_t}\ mp3dec\_idx\_binary\_search(\mbox{\hyperlink{structmp3dec__index__t}{mp3dec\_index\_t}}\ *idx,\ uint64\_t\ position)}
+\DoxyCodeLine{00696\ \{}
+\DoxyCodeLine{00697\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ end\ =\ idx-\/>\mbox{\hyperlink{structmp3dec__index__t_a8fcf9faa7b38a0448bc8ed2b3e5e9eb9}{num\_frames}},\ start\ =\ 0,\ index\ =\ 0;}
+\DoxyCodeLine{00698\ \ \ \ \ \textcolor{keywordflow}{while}\ (start\ <=\ end)}
+\DoxyCodeLine{00699\ \ \ \ \ \{}
+\DoxyCodeLine{00700\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ mid\ =\ (start\ +\ end)\ /\ 2;}
+\DoxyCodeLine{00701\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (idx-\/>\mbox{\hyperlink{structmp3dec__index__t_a40ff06448948d11cec9dba6e892e8baa}{frames}}[mid].\mbox{\hyperlink{structmp3dec__frame__t_aac1acca4e33a1b46f175ab13abe04b5b}{sample}}\ >=\ position)}
+\DoxyCodeLine{00702\ \ \ \ \ \ \ \ \ \{\ \ \ \textcolor{comment}{/*\ move\ left\ side.\ */}}
+\DoxyCodeLine{00703\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (idx-\/>\mbox{\hyperlink{structmp3dec__index__t_a40ff06448948d11cec9dba6e892e8baa}{frames}}[mid].\mbox{\hyperlink{structmp3dec__frame__t_aac1acca4e33a1b46f175ab13abe04b5b}{sample}}\ ==\ position)}
+\DoxyCodeLine{00704\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ mid;}
+\DoxyCodeLine{00705\ \ \ \ \ \ \ \ \ \ \ \ \ end\ =\ mid\ -\/\ 1;}
+\DoxyCodeLine{00706\ \ \ \ \ \ \ \ \ \}\ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00707\ \ \ \ \ \ \ \ \ \{\ \ \ \textcolor{comment}{/*\ move\ to\ right\ side\ */}}
+\DoxyCodeLine{00708\ \ \ \ \ \ \ \ \ \ \ \ \ index\ =\ mid;}
+\DoxyCodeLine{00709\ \ \ \ \ \ \ \ \ \ \ \ \ start\ =\ mid\ +\ 1;}
+\DoxyCodeLine{00710\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (start\ ==\ idx-\/>\mbox{\hyperlink{structmp3dec__index__t_a8fcf9faa7b38a0448bc8ed2b3e5e9eb9}{num\_frames}})}
+\DoxyCodeLine{00711\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00712\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00713\ \ \ \ \ \}}
+\DoxyCodeLine{00714\ \ \ \ \ \textcolor{keywordflow}{return}\ index;}
+\DoxyCodeLine{00715\ \}}
+\DoxyCodeLine{00716\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00717\ }
+\DoxyCodeLine{00718\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{minimp3__ex_8h_a3e752561690923dc798f2adfbc2c38fb}{mp3dec\_ex\_seek}}(\mbox{\hyperlink{structmp3dec__ex__t}{mp3dec\_ex\_t}}\ *dec,\ uint64\_t\ position)}
+\DoxyCodeLine{00719\ \{}
+\DoxyCodeLine{00720\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ i;}
+\DoxyCodeLine{00721\ \ \ \ \ \textcolor{keywordflow}{if}\ (!dec)}
+\DoxyCodeLine{00722\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_afd17086858bde25da30f8bd57e1a6458}{MP3D\_E\_PARAM}};}
+\DoxyCodeLine{00723\ \ \ \ \ \textcolor{keywordflow}{if}\ (!(dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a1fbba373f884d9a1bcee655104070e87}{flags}}\ \&\ \mbox{\hyperlink{minimp3__ex_8h_a309a16e14a997a1e9537f06eb0683090}{MP3D\_SEEK\_TO\_SAMPLE}}))}
+\DoxyCodeLine{00724\ \ \ \ \ \{}
+\DoxyCodeLine{00725\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a2e32856a712086490fa8167a7f99b4ae}{io}})}
+\DoxyCodeLine{00726\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00727\ \ \ \ \ \ \ \ \ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a33d2308a3bdaf5dc0738a6a7be91493f}{offset}}\ =\ position;}
+\DoxyCodeLine{00728\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00729\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00730\ \ \ \ \ \ \ \ \ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a33d2308a3bdaf5dc0738a6a7be91493f}{offset}}\ =\ MINIMP3\_MIN(position,\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aa83ce3f305ad2239de2c2167b8a51bc8}{file}}.\mbox{\hyperlink{structmp3dec__map__info__t_a3b7009a8a777a4cdae12a805db0fa4ab}{size}});}
+\DoxyCodeLine{00731\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00732\ \ \ \ \ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a028bbd1ac0bb11138c8e0ba11e38eadb}{cur\_sample}}\ =\ 0;}
+\DoxyCodeLine{00733\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{goto}\ do\_exit;}
+\DoxyCodeLine{00734\ \ \ \ \ \}}
+\DoxyCodeLine{00735\ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a028bbd1ac0bb11138c8e0ba11e38eadb}{cur\_sample}}\ =\ position;}
+\DoxyCodeLine{00736\ \ \ \ \ position\ +=\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_abb7c22db7aa7fdd657edb68a14cc0f60}{start\_delay}};}
+\DoxyCodeLine{00737\ \ \ \ \ \textcolor{keywordflow}{if}\ (0\ ==\ position)}
+\DoxyCodeLine{00738\ \ \ \ \ \{\ \ \ \textcolor{comment}{/*\ optimize\ seek\ to\ zero,\ no\ index\ needed\ */}}
+\DoxyCodeLine{00739\ seek\_zero:}
+\DoxyCodeLine{00740\ \ \ \ \ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a33d2308a3bdaf5dc0738a6a7be91493f}{offset}}\ \ =\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a7884cfda5fa124a6994468e69681a203}{start\_offset}};}
+\DoxyCodeLine{00741\ \ \ \ \ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a09fd3fb5e70266fca05d7167e614bfee}{to\_skip}}\ =\ 0;}
+\DoxyCodeLine{00742\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{goto}\ do\_exit;}
+\DoxyCodeLine{00743\ \ \ \ \ \}}
+\DoxyCodeLine{00744\ \ \ \ \ \textcolor{keywordflow}{if}\ (!dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a3a3ed982119a5322a0a1690c312662a2}{indexes\_built}})}
+\DoxyCodeLine{00745\ \ \ \ \ \{\ \ \ \textcolor{comment}{/*\ no\ index\ created\ yet\ (vbr\ tag\ used\ to\ calculate\ track\ length\ or\ MP3D\_DO\_NOT\_SCAN\ open\ flag\ used)\ */}}
+\DoxyCodeLine{00746\ \ \ \ \ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a3a3ed982119a5322a0a1690c312662a2}{indexes\_built}}\ =\ 1;}
+\DoxyCodeLine{00747\ \ \ \ \ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a138bf7485e7f4f20c481b46051a0a8bf}{samples}}\ =\ 0;}
+\DoxyCodeLine{00748\ \ \ \ \ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a80e64fa71e0ec9aad9654038baf2dd4a}{buffer\_samples}}\ =\ 0;}
+\DoxyCodeLine{00749\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a2e32856a712086490fa8167a7f99b4ae}{io}})}
+\DoxyCodeLine{00750\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00751\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a2e32856a712086490fa8167a7f99b4ae}{io}}-\/>\mbox{\hyperlink{structmp3dec__io__t_a166467a856d8f19a9beae1489f0ce435}{seek}}(dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a7884cfda5fa124a6994468e69681a203}{start\_offset}},\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a2e32856a712086490fa8167a7f99b4ae}{io}}-\/>\mbox{\hyperlink{structmp3dec__io__t_a3d42d7298e026aff6eb4d46cf11332a5}{seek\_data}}))}
+\DoxyCodeLine{00752\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_a4ef2cff7a0b403032f48129a8e413435}{MP3D\_E\_IOERROR}};}
+\DoxyCodeLine{00753\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ ret\ =\ \mbox{\hyperlink{minimp3__ex_8h_ad284dbfa591ea90c94190ab58ecdf97a}{mp3dec\_iterate\_cb}}(dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a2e32856a712086490fa8167a7f99b4ae}{io}},\ (uint8\_t\ *)dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aa83ce3f305ad2239de2c2167b8a51bc8}{file}}.\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}},\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aa83ce3f305ad2239de2c2167b8a51bc8}{file}}.\mbox{\hyperlink{structmp3dec__map__info__t_a3b7009a8a777a4cdae12a805db0fa4ab}{size}},\ mp3dec\_load\_index,\ dec);}
+\DoxyCodeLine{00754\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ret\ \&\&\ \mbox{\hyperlink{minimp3__ex_8h_acf47112101ece200a15c8b5f27a06fc9}{MP3D\_E\_USER}}\ !=\ ret)}
+\DoxyCodeLine{00755\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{00756\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00757\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00758\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ ret\ =\ \mbox{\hyperlink{minimp3__ex_8h_ac4f6c8c305339b3675c60014871f091d}{mp3dec\_iterate\_buf}}(dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aa83ce3f305ad2239de2c2167b8a51bc8}{file}}.\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}}\ +\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a7884cfda5fa124a6994468e69681a203}{start\_offset}},\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aa83ce3f305ad2239de2c2167b8a51bc8}{file}}.\mbox{\hyperlink{structmp3dec__map__info__t_a3b7009a8a777a4cdae12a805db0fa4ab}{size}}\ -\/\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a7884cfda5fa124a6994468e69681a203}{start\_offset}},\ mp3dec\_load\_index,\ dec);}
+\DoxyCodeLine{00759\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ret\ \&\&\ \mbox{\hyperlink{minimp3__ex_8h_acf47112101ece200a15c8b5f27a06fc9}{MP3D\_E\_USER}}\ !=\ ret)}
+\DoxyCodeLine{00760\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{00761\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00762\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a3a9c9e9dbe68b24a397a921404b598ea}{index}}.\mbox{\hyperlink{structmp3dec__index__t_a8fcf9faa7b38a0448bc8ed2b3e5e9eb9}{num\_frames}};\ i++)}
+\DoxyCodeLine{00763\ \ \ \ \ \ \ \ \ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a3a9c9e9dbe68b24a397a921404b598ea}{index}}.\mbox{\hyperlink{structmp3dec__index__t_a40ff06448948d11cec9dba6e892e8baa}{frames}}[i].\mbox{\hyperlink{structmp3dec__frame__t_a69e9429014223e9a3f5acf989e0e52eb}{offset}}\ +=\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a7884cfda5fa124a6994468e69681a203}{start\_offset}};}
+\DoxyCodeLine{00764\ \ \ \ \ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a138bf7485e7f4f20c481b46051a0a8bf}{samples}}\ =\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_ae16315bdda132a17b9e71d75f9f5cc16}{detected\_samples}};}
+\DoxyCodeLine{00765\ \ \ \ \ \}}
+\DoxyCodeLine{00766\ \ \ \ \ \textcolor{keywordflow}{if}\ (!dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a3a9c9e9dbe68b24a397a921404b598ea}{index}}.\mbox{\hyperlink{structmp3dec__index__t_a40ff06448948d11cec9dba6e892e8baa}{frames}})}
+\DoxyCodeLine{00767\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{goto}\ seek\_zero;\ \textcolor{comment}{/*\ no\ frames\ in\ file\ -\/\ seek\ to\ zero\ */}}
+\DoxyCodeLine{00768\ \textcolor{preprocessor}{\#ifdef\ MINIMP3\_SEEK\_IDX\_LINEAR\_SEARCH}}
+\DoxyCodeLine{00769\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a3a9c9e9dbe68b24a397a921404b598ea}{index}}.\mbox{\hyperlink{structmp3dec__index__t_a8fcf9faa7b38a0448bc8ed2b3e5e9eb9}{num\_frames}};\ i++)}
+\DoxyCodeLine{00770\ \ \ \ \ \{}
+\DoxyCodeLine{00771\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a3a9c9e9dbe68b24a397a921404b598ea}{index}}.\mbox{\hyperlink{structmp3dec__index__t_a40ff06448948d11cec9dba6e892e8baa}{frames}}[i].\mbox{\hyperlink{structmp3dec__frame__t_aac1acca4e33a1b46f175ab13abe04b5b}{sample}}\ >=\ position)}
+\DoxyCodeLine{00772\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00773\ \ \ \ \ \}}
+\DoxyCodeLine{00774\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00775\ \ \ \ \ i\ =\ mp3dec\_idx\_binary\_search(\&dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a3a9c9e9dbe68b24a397a921404b598ea}{index}},\ position);}
+\DoxyCodeLine{00776\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00777\ \ \ \ \ \textcolor{keywordflow}{if}\ (i)}
+\DoxyCodeLine{00778\ \ \ \ \ \{}
+\DoxyCodeLine{00779\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ to\_fill\_bytes\ =\ 511;}
+\DoxyCodeLine{00780\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ skip\_frames\ =\ \mbox{\hyperlink{minimp3__ex_8h_a55fe6667787e5eb588b93d7171ee7633}{MINIMP3\_PREDECODE\_FRAMES}}}
+\DoxyCodeLine{00781\ \textcolor{preprocessor}{\#ifdef\ MINIMP3\_SEEK\_IDX\_LINEAR\_SEARCH}}
+\DoxyCodeLine{00782\ \ \ \ \ \ \ \ \ \ +\ ((dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a3a9c9e9dbe68b24a397a921404b598ea}{index}}.\mbox{\hyperlink{structmp3dec__index__t_a40ff06448948d11cec9dba6e892e8baa}{frames}}[i].\mbox{\hyperlink{structmp3dec__frame__t_aac1acca4e33a1b46f175ab13abe04b5b}{sample}}\ ==\ position)\ ?\ 0\ :\ 1)}
+\DoxyCodeLine{00783\ \#endif}
+\DoxyCodeLine{00784\ \ \ \ \ \ \ \ \ ;}
+\DoxyCodeLine{00785\ \ \ \ \ \ \ \ \ i\ -\/=\ MINIMP3\_MIN(i,\ (\textcolor{keywordtype}{size\_t})skip\_frames);}
+\DoxyCodeLine{00786\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (3\ ==\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a227aeba45d7295665e6eb6eb5203c56d}{info}}.\mbox{\hyperlink{structmp3dec__frame__info__t_af50496e720830dd261aae35f88e8de43}{layer}})}
+\DoxyCodeLine{00787\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00788\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (i\ \&\&\ to\_fill\_bytes)}
+\DoxyCodeLine{00789\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \ \ \textcolor{comment}{/*\ make\ sure\ bit-\/reservoir\ is\ filled\ when\ we\ start\ decoding\ */}}
+\DoxyCodeLine{00790\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bs\_t\ bs[1];}
+\DoxyCodeLine{00791\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ L3\_gr\_info\_t\ gr\_info[4];}
+\DoxyCodeLine{00792\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ frame\_bytes,\ frame\_size;}
+\DoxyCodeLine{00793\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ uint8\_t\ *hdr;}
+\DoxyCodeLine{00794\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a2e32856a712086490fa8167a7f99b4ae}{io}})}
+\DoxyCodeLine{00795\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00796\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ hdr\ =\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aa83ce3f305ad2239de2c2167b8a51bc8}{file}}.\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}};}
+\DoxyCodeLine{00797\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a2e32856a712086490fa8167a7f99b4ae}{io}}-\/>\mbox{\hyperlink{structmp3dec__io__t_a166467a856d8f19a9beae1489f0ce435}{seek}}(dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a3a9c9e9dbe68b24a397a921404b598ea}{index}}.\mbox{\hyperlink{structmp3dec__index__t_a40ff06448948d11cec9dba6e892e8baa}{frames}}[i\ -\/\ 1].\mbox{\hyperlink{structmp3dec__frame__t_a69e9429014223e9a3f5acf989e0e52eb}{offset}},\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a2e32856a712086490fa8167a7f99b4ae}{io}}-\/>\mbox{\hyperlink{structmp3dec__io__t_a3d42d7298e026aff6eb4d46cf11332a5}{seek\_data}}))}
+\DoxyCodeLine{00798\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_a4ef2cff7a0b403032f48129a8e413435}{MP3D\_E\_IOERROR}};}
+\DoxyCodeLine{00799\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ readed\ =\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a2e32856a712086490fa8167a7f99b4ae}{io}}-\/>\mbox{\hyperlink{structmp3dec__io__t_a1fae2df5bd36c3b25473e6e2e4c03436}{read}}((uint8\_t\ *)hdr,\ HDR\_SIZE,\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a2e32856a712086490fa8167a7f99b4ae}{io}}-\/>\mbox{\hyperlink{structmp3dec__io__t_a3ac281b6104d8675a736720832eb2502}{read\_data}});}
+\DoxyCodeLine{00800\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (readed\ !=\ HDR\_SIZE)}
+\DoxyCodeLine{00801\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_a4ef2cff7a0b403032f48129a8e413435}{MP3D\_E\_IOERROR}};}
+\DoxyCodeLine{00802\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ frame\_size\ =\ hdr\_frame\_bytes(hdr,\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a2dacee877a4c0bee52369036233ef402}{free\_format\_bytes}})\ +\ hdr\_padding(hdr);}
+\DoxyCodeLine{00803\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ readed\ =\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a2e32856a712086490fa8167a7f99b4ae}{io}}-\/>\mbox{\hyperlink{structmp3dec__io__t_a1fae2df5bd36c3b25473e6e2e4c03436}{read}}((uint8\_t\ *)hdr\ +\ HDR\_SIZE,\ frame\_size\ -\/\ HDR\_SIZE,\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a2e32856a712086490fa8167a7f99b4ae}{io}}-\/>\mbox{\hyperlink{structmp3dec__io__t_a3ac281b6104d8675a736720832eb2502}{read\_data}});}
+\DoxyCodeLine{00804\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (readed\ !=\ (\textcolor{keywordtype}{size\_t})(frame\_size\ -\/\ HDR\_SIZE))}
+\DoxyCodeLine{00805\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_a4ef2cff7a0b403032f48129a8e413435}{MP3D\_E\_IOERROR}};}
+\DoxyCodeLine{00806\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bs\_init(bs,\ hdr\ +\ HDR\_SIZE,\ frame\_size\ -\/\ HDR\_SIZE);}
+\DoxyCodeLine{00807\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00808\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00809\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ hdr\ =\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aa83ce3f305ad2239de2c2167b8a51bc8}{file}}.\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}}\ +\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a3a9c9e9dbe68b24a397a921404b598ea}{index}}.\mbox{\hyperlink{structmp3dec__index__t_a40ff06448948d11cec9dba6e892e8baa}{frames}}[i\ -\/\ 1].\mbox{\hyperlink{structmp3dec__frame__t_a69e9429014223e9a3f5acf989e0e52eb}{offset}};}
+\DoxyCodeLine{00810\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ frame\_size\ =\ hdr\_frame\_bytes(hdr,\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a2dacee877a4c0bee52369036233ef402}{free\_format\_bytes}})\ +\ hdr\_padding(hdr);}
+\DoxyCodeLine{00811\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bs\_init(bs,\ hdr\ +\ HDR\_SIZE,\ frame\_size\ -\/\ HDR\_SIZE);}
+\DoxyCodeLine{00812\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00813\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (HDR\_IS\_CRC(hdr))}
+\DoxyCodeLine{00814\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ get\_bits(bs,\ 16);}
+\DoxyCodeLine{00815\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ i-\/-\/;}
+\DoxyCodeLine{00816\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (L3\_read\_side\_info(bs,\ gr\_info,\ hdr)\ <\ 0)}
+\DoxyCodeLine{00817\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};\ \textcolor{comment}{/*\ frame\ not\ decodable,\ we\ can\ start\ from\ here\ */}}
+\DoxyCodeLine{00818\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ frame\_bytes\ =\ (bs-\/>limit\ -\/\ bs-\/>pos)/8;}
+\DoxyCodeLine{00819\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ to\_fill\_bytes\ -\/=\ MINIMP3\_MIN(to\_fill\_bytes,\ frame\_bytes);}
+\DoxyCodeLine{00820\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00821\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00822\ \ \ \ \ \}}
+\DoxyCodeLine{00823\ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a33d2308a3bdaf5dc0738a6a7be91493f}{offset}}\ =\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a3a9c9e9dbe68b24a397a921404b598ea}{index}}.\mbox{\hyperlink{structmp3dec__index__t_a40ff06448948d11cec9dba6e892e8baa}{frames}}[i].\mbox{\hyperlink{structmp3dec__frame__t_a69e9429014223e9a3f5acf989e0e52eb}{offset}};}
+\DoxyCodeLine{00824\ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a09fd3fb5e70266fca05d7167e614bfee}{to\_skip}}\ =\ position\ -\/\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a3a9c9e9dbe68b24a397a921404b598ea}{index}}.\mbox{\hyperlink{structmp3dec__index__t_a40ff06448948d11cec9dba6e892e8baa}{frames}}[i].\mbox{\hyperlink{structmp3dec__frame__t_aac1acca4e33a1b46f175ab13abe04b5b}{sample}};}
+\DoxyCodeLine{00825\ \ \ \ \ \textcolor{keywordflow}{while}\ ((i\ +\ 1)\ <\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a3a9c9e9dbe68b24a397a921404b598ea}{index}}.\mbox{\hyperlink{structmp3dec__index__t_a8fcf9faa7b38a0448bc8ed2b3e5e9eb9}{num\_frames}}\ \&\&\ !dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a3a9c9e9dbe68b24a397a921404b598ea}{index}}.\mbox{\hyperlink{structmp3dec__index__t_a40ff06448948d11cec9dba6e892e8baa}{frames}}[i].\mbox{\hyperlink{structmp3dec__frame__t_aac1acca4e33a1b46f175ab13abe04b5b}{sample}}\ \&\&\ !dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a3a9c9e9dbe68b24a397a921404b598ea}{index}}.\mbox{\hyperlink{structmp3dec__index__t_a40ff06448948d11cec9dba6e892e8baa}{frames}}[i\ +\ 1].\mbox{\hyperlink{structmp3dec__frame__t_aac1acca4e33a1b46f175ab13abe04b5b}{sample}})}
+\DoxyCodeLine{00826\ \ \ \ \ \{\ \ \ \textcolor{comment}{/*\ skip\ not\ decodable\ first\ frames\ */}}
+\DoxyCodeLine{00827\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ uint8\_t\ *hdr;}
+\DoxyCodeLine{00828\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a2e32856a712086490fa8167a7f99b4ae}{io}})}
+\DoxyCodeLine{00829\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00830\ \ \ \ \ \ \ \ \ \ \ \ \ hdr\ =\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aa83ce3f305ad2239de2c2167b8a51bc8}{file}}.\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}};}
+\DoxyCodeLine{00831\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a2e32856a712086490fa8167a7f99b4ae}{io}}-\/>\mbox{\hyperlink{structmp3dec__io__t_a166467a856d8f19a9beae1489f0ce435}{seek}}(dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a3a9c9e9dbe68b24a397a921404b598ea}{index}}.\mbox{\hyperlink{structmp3dec__index__t_a40ff06448948d11cec9dba6e892e8baa}{frames}}[i].\mbox{\hyperlink{structmp3dec__frame__t_a69e9429014223e9a3f5acf989e0e52eb}{offset}},\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a2e32856a712086490fa8167a7f99b4ae}{io}}-\/>\mbox{\hyperlink{structmp3dec__io__t_a3d42d7298e026aff6eb4d46cf11332a5}{seek\_data}}))}
+\DoxyCodeLine{00832\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_a4ef2cff7a0b403032f48129a8e413435}{MP3D\_E\_IOERROR}};}
+\DoxyCodeLine{00833\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ readed\ =\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a2e32856a712086490fa8167a7f99b4ae}{io}}-\/>\mbox{\hyperlink{structmp3dec__io__t_a1fae2df5bd36c3b25473e6e2e4c03436}{read}}((uint8\_t\ *)hdr,\ HDR\_SIZE,\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a2e32856a712086490fa8167a7f99b4ae}{io}}-\/>\mbox{\hyperlink{structmp3dec__io__t_a3ac281b6104d8675a736720832eb2502}{read\_data}});}
+\DoxyCodeLine{00834\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (readed\ !=\ HDR\_SIZE)}
+\DoxyCodeLine{00835\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_a4ef2cff7a0b403032f48129a8e413435}{MP3D\_E\_IOERROR}};}
+\DoxyCodeLine{00836\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00837\ \ \ \ \ \ \ \ \ \ \ \ \ hdr\ =\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aa83ce3f305ad2239de2c2167b8a51bc8}{file}}.\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}}\ +\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a3a9c9e9dbe68b24a397a921404b598ea}{index}}.\mbox{\hyperlink{structmp3dec__index__t_a40ff06448948d11cec9dba6e892e8baa}{frames}}[i].\mbox{\hyperlink{structmp3dec__frame__t_a69e9429014223e9a3f5acf989e0e52eb}{offset}};}
+\DoxyCodeLine{00838\ \ \ \ \ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a09fd3fb5e70266fca05d7167e614bfee}{to\_skip}}\ +=\ hdr\_frame\_samples(hdr)*dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a227aeba45d7295665e6eb6eb5203c56d}{info}}.\mbox{\hyperlink{structmp3dec__frame__info__t_a7c67f19d55d903e3dd9658c20ab1d5c3}{channels}};}
+\DoxyCodeLine{00839\ \ \ \ \ \ \ \ \ i++;}
+\DoxyCodeLine{00840\ \ \ \ \ \}}
+\DoxyCodeLine{00841\ do\_exit:}
+\DoxyCodeLine{00842\ \ \ \ \ \textcolor{keywordflow}{if}\ (dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a2e32856a712086490fa8167a7f99b4ae}{io}})}
+\DoxyCodeLine{00843\ \ \ \ \ \{}
+\DoxyCodeLine{00844\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a2e32856a712086490fa8167a7f99b4ae}{io}}-\/>\mbox{\hyperlink{structmp3dec__io__t_a166467a856d8f19a9beae1489f0ce435}{seek}}(dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a33d2308a3bdaf5dc0738a6a7be91493f}{offset}},\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a2e32856a712086490fa8167a7f99b4ae}{io}}-\/>\mbox{\hyperlink{structmp3dec__io__t_a3d42d7298e026aff6eb4d46cf11332a5}{seek\_data}}))}
+\DoxyCodeLine{00845\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_a4ef2cff7a0b403032f48129a8e413435}{MP3D\_E\_IOERROR}};}
+\DoxyCodeLine{00846\ \ \ \ \ \}}
+\DoxyCodeLine{00847\ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a80e64fa71e0ec9aad9654038baf2dd4a}{buffer\_samples}}\ \ =\ 0;}
+\DoxyCodeLine{00848\ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_ae9599790d074f45d47a44a394a92273e}{buffer\_consumed}}\ =\ 0;}
+\DoxyCodeLine{00849\ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aceffd88f33a7210f8272297836c467ba}{input\_consumed}}\ \ =\ 0;}
+\DoxyCodeLine{00850\ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a3ef1f3115304bd3c2ef745f3b26f0c28}{input\_filled}}\ \ \ \ =\ 0;}
+\DoxyCodeLine{00851\ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_ac0ae50bbcde19affd18d8e88da7cd13b}{last\_error}}\ \ \ \ \ \ =\ 0;}
+\DoxyCodeLine{00852\ \ \ \ \ \mbox{\hyperlink{minimp3_8h_aca77f543f7ddc47bfb8cc180d0ba17f0}{mp3dec\_init}}(\&dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a17a9729ae1728c919876d6fd8693914a}{mp3d}});}
+\DoxyCodeLine{00853\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00854\ \}}
+\DoxyCodeLine{00855\ }
+\DoxyCodeLine{00856\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{minimp3__ex_8h_a228d3b327580d49e0665f0f16986fe5b}{mp3dec\_ex\_read\_frame}}(\mbox{\hyperlink{structmp3dec__ex__t}{mp3dec\_ex\_t}}\ *dec,\ \mbox{\hyperlink{minimp3_8h_a829d503db4023edb6b1705acc319b008}{mp3d\_sample\_t}}\ **buf,\ \mbox{\hyperlink{structmp3dec__frame__info__t}{mp3dec\_frame\_info\_t}}\ *frame\_info,\ \textcolor{keywordtype}{size\_t}\ max\_samples)}
+\DoxyCodeLine{00857\ \{}
+\DoxyCodeLine{00858\ \ \ \ \ \textcolor{keywordflow}{if}\ (!dec\ ||\ !buf\ ||\ !frame\_info)}
+\DoxyCodeLine{00859\ \ \ \ \ \{}
+\DoxyCodeLine{00860\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dec)}
+\DoxyCodeLine{00861\ \ \ \ \ \ \ \ \ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_ac0ae50bbcde19affd18d8e88da7cd13b}{last\_error}}\ =\ \mbox{\hyperlink{minimp3__ex_8h_afd17086858bde25da30f8bd57e1a6458}{MP3D\_E\_PARAM}};}
+\DoxyCodeLine{00862\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00863\ \ \ \ \ \}}
+\DoxyCodeLine{00864\ \ \ \ \ \textcolor{keywordflow}{if}\ (dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_ae16315bdda132a17b9e71d75f9f5cc16}{detected\_samples}}\ \&\&\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a028bbd1ac0bb11138c8e0ba11e38eadb}{cur\_sample}}\ >=\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_ae16315bdda132a17b9e71d75f9f5cc16}{detected\_samples}})}
+\DoxyCodeLine{00865\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;\ \textcolor{comment}{/*\ at\ end\ of\ stream\ */}}
+\DoxyCodeLine{00866\ \ \ \ \ \textcolor{keywordflow}{if}\ (dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_ac0ae50bbcde19affd18d8e88da7cd13b}{last\_error}})}
+\DoxyCodeLine{00867\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;\ \textcolor{comment}{/*\ error\ eof\ state,\ seek\ can\ reset\ it\ */}}
+\DoxyCodeLine{00868\ \ \ \ \ *buf\ =\ NULL;}
+\DoxyCodeLine{00869\ \ \ \ \ uint64\_t\ end\_offset\ =\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a19da317bf596134c8a2397edbf90c061}{end\_offset}}\ ?\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a19da317bf596134c8a2397edbf90c061}{end\_offset}}\ :\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aa83ce3f305ad2239de2c2167b8a51bc8}{file}}.\mbox{\hyperlink{structmp3dec__map__info__t_a3b7009a8a777a4cdae12a805db0fa4ab}{size}};}
+\DoxyCodeLine{00870\ \ \ \ \ \textcolor{keywordtype}{int}\ eof\ =\ 0;}
+\DoxyCodeLine{00871\ \ \ \ \ \textcolor{keywordflow}{while}\ (dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_ae9599790d074f45d47a44a394a92273e}{buffer\_consumed}}\ ==\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a80e64fa71e0ec9aad9654038baf2dd4a}{buffer\_samples}})}
+\DoxyCodeLine{00872\ \ \ \ \ \{}
+\DoxyCodeLine{00873\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ uint8\_t\ *dec\_buf;}
+\DoxyCodeLine{00874\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a2e32856a712086490fa8167a7f99b4ae}{io}})}
+\DoxyCodeLine{00875\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00876\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!eof\ \&\&\ (dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a3ef1f3115304bd3c2ef745f3b26f0c28}{input\_filled}}\ -\/\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aceffd88f33a7210f8272297836c467ba}{input\_consumed}})\ <\ \mbox{\hyperlink{minimp3__ex_8h_a2ef248c7aff5a5e0cd5fffc6127d5849}{MINIMP3\_BUF\_SIZE}})}
+\DoxyCodeLine{00877\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \ \ \textcolor{comment}{/*\ keep\ minimum\ 10\ consecutive\ mp3\ frames\ (\string~16KB)\ worst\ case\ */}}
+\DoxyCodeLine{00878\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ memmove((uint8\_t*)dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aa83ce3f305ad2239de2c2167b8a51bc8}{file}}.\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}},\ (uint8\_t*)dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aa83ce3f305ad2239de2c2167b8a51bc8}{file}}.\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}}\ +\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aceffd88f33a7210f8272297836c467ba}{input\_consumed}},\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a3ef1f3115304bd3c2ef745f3b26f0c28}{input\_filled}}\ -\/\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aceffd88f33a7210f8272297836c467ba}{input\_consumed}});}
+\DoxyCodeLine{00879\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a3ef1f3115304bd3c2ef745f3b26f0c28}{input\_filled}}\ -\/=\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aceffd88f33a7210f8272297836c467ba}{input\_consumed}};}
+\DoxyCodeLine{00880\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aceffd88f33a7210f8272297836c467ba}{input\_consumed}}\ =\ 0;}
+\DoxyCodeLine{00881\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ readed\ =\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a2e32856a712086490fa8167a7f99b4ae}{io}}-\/>\mbox{\hyperlink{structmp3dec__io__t_a1fae2df5bd36c3b25473e6e2e4c03436}{read}}((uint8\_t*)dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aa83ce3f305ad2239de2c2167b8a51bc8}{file}}.\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}}\ +\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a3ef1f3115304bd3c2ef745f3b26f0c28}{input\_filled}},\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aa83ce3f305ad2239de2c2167b8a51bc8}{file}}.\mbox{\hyperlink{structmp3dec__map__info__t_a3b7009a8a777a4cdae12a805db0fa4ab}{size}}\ -\/\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a3ef1f3115304bd3c2ef745f3b26f0c28}{input\_filled}},\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a2e32856a712086490fa8167a7f99b4ae}{io}}-\/>\mbox{\hyperlink{structmp3dec__io__t_a3ac281b6104d8675a736720832eb2502}{read\_data}});}
+\DoxyCodeLine{00882\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (readed\ >\ (dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aa83ce3f305ad2239de2c2167b8a51bc8}{file}}.\mbox{\hyperlink{structmp3dec__map__info__t_a3b7009a8a777a4cdae12a805db0fa4ab}{size}}\ -\/\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a3ef1f3115304bd3c2ef745f3b26f0c28}{input\_filled}}))}
+\DoxyCodeLine{00883\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00884\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_ac0ae50bbcde19affd18d8e88da7cd13b}{last\_error}}\ =\ \mbox{\hyperlink{minimp3__ex_8h_a4ef2cff7a0b403032f48129a8e413435}{MP3D\_E\_IOERROR}};}
+\DoxyCodeLine{00885\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ readed\ =\ 0;}
+\DoxyCodeLine{00886\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00887\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (readed\ !=\ (dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aa83ce3f305ad2239de2c2167b8a51bc8}{file}}.\mbox{\hyperlink{structmp3dec__map__info__t_a3b7009a8a777a4cdae12a805db0fa4ab}{size}}\ -\/\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a3ef1f3115304bd3c2ef745f3b26f0c28}{input\_filled}}))}
+\DoxyCodeLine{00888\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ eof\ =\ 1;}
+\DoxyCodeLine{00889\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a3ef1f3115304bd3c2ef745f3b26f0c28}{input\_filled}}\ +=\ readed;}
+\DoxyCodeLine{00890\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (eof)}
+\DoxyCodeLine{00891\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mp3dec\_skip\_id3v1((uint8\_t*)dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aa83ce3f305ad2239de2c2167b8a51bc8}{file}}.\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}},\ \&dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a3ef1f3115304bd3c2ef745f3b26f0c28}{input\_filled}});}
+\DoxyCodeLine{00892\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00893\ \ \ \ \ \ \ \ \ \ \ \ \ dec\_buf\ =\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aa83ce3f305ad2239de2c2167b8a51bc8}{file}}.\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}}\ +\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aceffd88f33a7210f8272297836c467ba}{input\_consumed}};}
+\DoxyCodeLine{00894\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!(dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a3ef1f3115304bd3c2ef745f3b26f0c28}{input\_filled}}\ -\/\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aceffd88f33a7210f8272297836c467ba}{input\_consumed}}))}
+\DoxyCodeLine{00895\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00896\ \ \ \ \ \ \ \ \ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a80e64fa71e0ec9aad9654038baf2dd4a}{buffer\_samples}}\ =\ \mbox{\hyperlink{minimp3_8h_ae2aa8926ba887fad5315b6d538e751df}{mp3dec\_decode\_frame}}(\&dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a17a9729ae1728c919876d6fd8693914a}{mp3d}},\ dec\_buf,\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a3ef1f3115304bd3c2ef745f3b26f0c28}{input\_filled}}\ -\/\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aceffd88f33a7210f8272297836c467ba}{input\_consumed}},\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a9b80b49c5d1672fd01d49fc27c8a1861}{buffer}},\ frame\_info);}
+\DoxyCodeLine{00897\ \ \ \ \ \ \ \ \ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aceffd88f33a7210f8272297836c467ba}{input\_consumed}}\ +=\ frame\_info-\/>\mbox{\hyperlink{structmp3dec__frame__info__t_a6c95ac545adf8edf5d25fcc6d8e31928}{frame\_bytes}};}
+\DoxyCodeLine{00898\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00899\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00900\ \ \ \ \ \ \ \ \ \ \ \ \ dec\_buf\ =\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aa83ce3f305ad2239de2c2167b8a51bc8}{file}}.\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}}\ +\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a33d2308a3bdaf5dc0738a6a7be91493f}{offset}};}
+\DoxyCodeLine{00901\ \ \ \ \ \ \ \ \ \ \ \ \ uint64\_t\ buf\_size\ =\ end\_offset\ -\/\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a33d2308a3bdaf5dc0738a6a7be91493f}{offset}};}
+\DoxyCodeLine{00902\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!buf\_size)}
+\DoxyCodeLine{00903\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00904\ \ \ \ \ \ \ \ \ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a80e64fa71e0ec9aad9654038baf2dd4a}{buffer\_samples}}\ =\ \mbox{\hyperlink{minimp3_8h_ae2aa8926ba887fad5315b6d538e751df}{mp3dec\_decode\_frame}}(\&dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a17a9729ae1728c919876d6fd8693914a}{mp3d}},\ dec\_buf,\ MINIMP3\_MIN(buf\_size,\ (uint64\_t)INT\_MAX),\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a9b80b49c5d1672fd01d49fc27c8a1861}{buffer}},\ frame\_info);}
+\DoxyCodeLine{00905\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00906\ \ \ \ \ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_ae9599790d074f45d47a44a394a92273e}{buffer\_consumed}}\ =\ 0;}
+\DoxyCodeLine{00907\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a227aeba45d7295665e6eb6eb5203c56d}{info}}.\mbox{\hyperlink{structmp3dec__frame__info__t_a8f8f5714bd67f14af72c9d33c0be0e02}{hz}}\ !=\ frame\_info-\/>\mbox{\hyperlink{structmp3dec__frame__info__t_a8f8f5714bd67f14af72c9d33c0be0e02}{hz}}\ ||\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a227aeba45d7295665e6eb6eb5203c56d}{info}}.\mbox{\hyperlink{structmp3dec__frame__info__t_af50496e720830dd261aae35f88e8de43}{layer}}\ !=\ frame\_info-\/>\mbox{\hyperlink{structmp3dec__frame__info__t_af50496e720830dd261aae35f88e8de43}{layer}})}
+\DoxyCodeLine{00908\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00909\ return\_e\_decode:}
+\DoxyCodeLine{00910\ \ \ \ \ \ \ \ \ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_ac0ae50bbcde19affd18d8e88da7cd13b}{last\_error}}\ =\ \mbox{\hyperlink{minimp3__ex_8h_ad76cefcd8fb27ef5bc5d70210a122c9a}{MP3D\_E\_DECODE}};}
+\DoxyCodeLine{00911\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00912\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00913\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a80e64fa71e0ec9aad9654038baf2dd4a}{buffer\_samples}})}
+\DoxyCodeLine{00914\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00915\ \ \ \ \ \ \ \ \ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a80e64fa71e0ec9aad9654038baf2dd4a}{buffer\_samples}}\ *=\ frame\_info-\/>\mbox{\hyperlink{structmp3dec__frame__info__t_a7c67f19d55d903e3dd9658c20ab1d5c3}{channels}};}
+\DoxyCodeLine{00916\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a09fd3fb5e70266fca05d7167e614bfee}{to\_skip}})}
+\DoxyCodeLine{00917\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00918\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ skip\ =\ MINIMP3\_MIN(dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a80e64fa71e0ec9aad9654038baf2dd4a}{buffer\_samples}},\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a09fd3fb5e70266fca05d7167e614bfee}{to\_skip}});}
+\DoxyCodeLine{00919\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_ae9599790d074f45d47a44a394a92273e}{buffer\_consumed}}\ +=\ skip;}
+\DoxyCodeLine{00920\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a09fd3fb5e70266fca05d7167e614bfee}{to\_skip}}\ -\/=\ skip;}
+\DoxyCodeLine{00921\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00922\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (}
+\DoxyCodeLine{00923\ \#ifdef\ MINIMP3\_ALLOW\_MONO\_STEREO\_TRANSITION}
+\DoxyCodeLine{00924\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ !(dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a1fbba373f884d9a1bcee655104070e87}{flags}}\ \&\ MP3D\_ALLOW\_MONO\_STEREO\_TRANSITION)\ \&\&}
+\DoxyCodeLine{00925\ \#endif}
+\DoxyCodeLine{00926\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_ae9599790d074f45d47a44a394a92273e}{buffer\_consumed}}\ !=\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a80e64fa71e0ec9aad9654038baf2dd4a}{buffer\_samples}}\ \&\&\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a227aeba45d7295665e6eb6eb5203c56d}{info}}.\mbox{\hyperlink{structmp3dec__frame__info__t_a7c67f19d55d903e3dd9658c20ab1d5c3}{channels}}\ !=\ frame\_info-\/>\mbox{\hyperlink{structmp3dec__frame__info__t_a7c67f19d55d903e3dd9658c20ab1d5c3}{channels}})}
+\DoxyCodeLine{00927\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00928\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{goto}\ return\_e\_decode;}
+\DoxyCodeLine{00929\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00930\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a09fd3fb5e70266fca05d7167e614bfee}{to\_skip}})}
+\DoxyCodeLine{00931\ \ \ \ \ \ \ \ \ \{\ \ \ \textcolor{comment}{/*\ In\ mp3\ decoding\ not\ always\ can\ start\ decode\ from\ any\ frame\ because\ of\ bit\ reservoir,}}
+\DoxyCodeLine{00932\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ count\ skip\ samples\ for\ such\ frames\ */}}
+\DoxyCodeLine{00933\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ frame\_samples\ =\ hdr\_frame\_samples(dec\_buf)*frame\_info-\/>\mbox{\hyperlink{structmp3dec__frame__info__t_a7c67f19d55d903e3dd9658c20ab1d5c3}{channels}};}
+\DoxyCodeLine{00934\ \ \ \ \ \ \ \ \ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a09fd3fb5e70266fca05d7167e614bfee}{to\_skip}}\ -\/=\ MINIMP3\_MIN(frame\_samples,\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a09fd3fb5e70266fca05d7167e614bfee}{to\_skip}});}
+\DoxyCodeLine{00935\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00936\ \ \ \ \ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a33d2308a3bdaf5dc0738a6a7be91493f}{offset}}\ +=\ frame\_info-\/>\mbox{\hyperlink{structmp3dec__frame__info__t_a6c95ac545adf8edf5d25fcc6d8e31928}{frame\_bytes}};}
+\DoxyCodeLine{00937\ \ \ \ \ \}}
+\DoxyCodeLine{00938\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ out\_samples\ =\ MINIMP3\_MIN((\textcolor{keywordtype}{size\_t})(dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a80e64fa71e0ec9aad9654038baf2dd4a}{buffer\_samples}}\ -\/\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_ae9599790d074f45d47a44a394a92273e}{buffer\_consumed}}),\ max\_samples);}
+\DoxyCodeLine{00939\ \ \ \ \ \textcolor{keywordflow}{if}\ (dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_ae16315bdda132a17b9e71d75f9f5cc16}{detected\_samples}})}
+\DoxyCodeLine{00940\ \ \ \ \ \{\ \ \ \textcolor{comment}{/*\ count\ decoded\ samples\ to\ properly\ cut\ padding\ */}}
+\DoxyCodeLine{00941\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a028bbd1ac0bb11138c8e0ba11e38eadb}{cur\_sample}}\ +\ out\_samples\ >=\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_ae16315bdda132a17b9e71d75f9f5cc16}{detected\_samples}})}
+\DoxyCodeLine{00942\ \ \ \ \ \ \ \ \ \ \ \ \ out\_samples\ =\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_ae16315bdda132a17b9e71d75f9f5cc16}{detected\_samples}}\ -\/\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a028bbd1ac0bb11138c8e0ba11e38eadb}{cur\_sample}};}
+\DoxyCodeLine{00943\ \ \ \ \ \}}
+\DoxyCodeLine{00944\ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a028bbd1ac0bb11138c8e0ba11e38eadb}{cur\_sample}}\ +=\ out\_samples;}
+\DoxyCodeLine{00945\ \ \ \ \ *buf\ =\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a9b80b49c5d1672fd01d49fc27c8a1861}{buffer}}\ +\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_ae9599790d074f45d47a44a394a92273e}{buffer\_consumed}};}
+\DoxyCodeLine{00946\ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_ae9599790d074f45d47a44a394a92273e}{buffer\_consumed}}\ +=\ out\_samples;}
+\DoxyCodeLine{00947\ \ \ \ \ \textcolor{keywordflow}{return}\ out\_samples;}
+\DoxyCodeLine{00948\ \}}
+\DoxyCodeLine{00949\ }
+\DoxyCodeLine{00950\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{minimp3__ex_8h_ad85d7a52068f4701d135e38f1031c98c}{mp3dec\_ex\_read}}(\mbox{\hyperlink{structmp3dec__ex__t}{mp3dec\_ex\_t}}\ *dec,\ \mbox{\hyperlink{minimp3_8h_a829d503db4023edb6b1705acc319b008}{mp3d\_sample\_t}}\ *buf,\ \textcolor{keywordtype}{size\_t}\ samples)}
+\DoxyCodeLine{00951\ \{}
+\DoxyCodeLine{00952\ \ \ \ \ \textcolor{keywordflow}{if}\ (!dec\ ||\ !buf)}
+\DoxyCodeLine{00953\ \ \ \ \ \{}
+\DoxyCodeLine{00954\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dec)}
+\DoxyCodeLine{00955\ \ \ \ \ \ \ \ \ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_ac0ae50bbcde19affd18d8e88da7cd13b}{last\_error}}\ =\ \mbox{\hyperlink{minimp3__ex_8h_afd17086858bde25da30f8bd57e1a6458}{MP3D\_E\_PARAM}};}
+\DoxyCodeLine{00956\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00957\ \ \ \ \ \}}
+\DoxyCodeLine{00958\ \ \ \ \ \mbox{\hyperlink{structmp3dec__frame__info__t}{mp3dec\_frame\_info\_t}}\ frame\_info;}
+\DoxyCodeLine{00959\ \ \ \ \ memset(\&frame\_info,\ 0,\ \textcolor{keyword}{sizeof}(frame\_info));}
+\DoxyCodeLine{00960\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ samples\_requested\ =\ samples;}
+\DoxyCodeLine{00961\ \ \ \ \ \textcolor{keywordflow}{while}\ (samples)}
+\DoxyCodeLine{00962\ \ \ \ \ \{}
+\DoxyCodeLine{00963\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{minimp3_8h_a829d503db4023edb6b1705acc319b008}{mp3d\_sample\_t}}\ *buf\_frame\ =\ NULL;}
+\DoxyCodeLine{00964\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ read\_samples\ =\ \mbox{\hyperlink{minimp3__ex_8h_a228d3b327580d49e0665f0f16986fe5b}{mp3dec\_ex\_read\_frame}}(dec,\ \&buf\_frame,\ \&frame\_info,\ samples);}
+\DoxyCodeLine{00965\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!read\_samples)}
+\DoxyCodeLine{00966\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00967\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00968\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00969\ \ \ \ \ \ \ \ \ memcpy(buf,\ buf\_frame,\ read\_samples\ *\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{minimp3_8h_a829d503db4023edb6b1705acc319b008}{mp3d\_sample\_t}}));}
+\DoxyCodeLine{00970\ \ \ \ \ \ \ \ \ buf\ +=\ read\_samples;}
+\DoxyCodeLine{00971\ \ \ \ \ \ \ \ \ samples\ -\/=\ read\_samples;}
+\DoxyCodeLine{00972\ \ \ \ \ \}}
+\DoxyCodeLine{00973\ \ \ \ \ \textcolor{keywordflow}{return}\ samples\_requested\ -\/\ samples;}
+\DoxyCodeLine{00974\ \}}
+\DoxyCodeLine{00975\ }
+\DoxyCodeLine{00976\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{minimp3__ex_8h_a9608642546e6038ad87eb511453fcf0c}{mp3dec\_ex\_open\_cb}}(\mbox{\hyperlink{structmp3dec__ex__t}{mp3dec\_ex\_t}}\ *dec,\ \mbox{\hyperlink{structmp3dec__io__t}{mp3dec\_io\_t}}\ *io,\ \textcolor{keywordtype}{int}\ flags)}
+\DoxyCodeLine{00977\ \{}
+\DoxyCodeLine{00978\ \ \ \ \ \textcolor{keywordflow}{if}\ (!dec\ ||\ !io\ ||\ (flags\ \&\ (\string~\mbox{\hyperlink{minimp3__ex_8h_a07f562452236ba6b6355556feced9fc4}{MP3D\_FLAGS\_MASK}})))}
+\DoxyCodeLine{00979\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_afd17086858bde25da30f8bd57e1a6458}{MP3D\_E\_PARAM}};}
+\DoxyCodeLine{00980\ \ \ \ \ memset(dec,\ 0,\ \textcolor{keyword}{sizeof}(*dec));}
+\DoxyCodeLine{00981\ \textcolor{preprocessor}{\#ifdef\ MINIMP3\_HAVE\_RING}}
+\DoxyCodeLine{00982\ \ \ \ \ \textcolor{keywordtype}{int}\ ret;}
+\DoxyCodeLine{00983\ \ \ \ \ \textcolor{keywordflow}{if}\ (ret\ =\ mp3dec\_open\_ring(\&dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aa83ce3f305ad2239de2c2167b8a51bc8}{file}},\ \mbox{\hyperlink{minimp3__ex_8h_ae0420263594b9f726dcb99f43b5bd23f}{MINIMP3\_IO\_SIZE}}))}
+\DoxyCodeLine{00984\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{00985\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00986\ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aa83ce3f305ad2239de2c2167b8a51bc8}{file}}.\mbox{\hyperlink{structmp3dec__map__info__t_a3b7009a8a777a4cdae12a805db0fa4ab}{size}}\ =\ \mbox{\hyperlink{minimp3__ex_8h_ae0420263594b9f726dcb99f43b5bd23f}{MINIMP3\_IO\_SIZE}};}
+\DoxyCodeLine{00987\ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aa83ce3f305ad2239de2c2167b8a51bc8}{file}}.\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}}\ =\ (\textcolor{keyword}{const}\ uint8\_t*)malloc(dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aa83ce3f305ad2239de2c2167b8a51bc8}{file}}.\mbox{\hyperlink{structmp3dec__map__info__t_a3b7009a8a777a4cdae12a805db0fa4ab}{size}});}
+\DoxyCodeLine{00988\ \ \ \ \ \textcolor{keywordflow}{if}\ (!dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aa83ce3f305ad2239de2c2167b8a51bc8}{file}}.\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}})}
+\DoxyCodeLine{00989\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_a96830e024e302925507882cf8afb7460}{MP3D\_E\_MEMORY}};}
+\DoxyCodeLine{00990\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00991\ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a1fbba373f884d9a1bcee655104070e87}{flags}}\ =\ flags;}
+\DoxyCodeLine{00992\ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a2e32856a712086490fa8167a7f99b4ae}{io}}\ =\ io;}
+\DoxyCodeLine{00993\ \ \ \ \ \mbox{\hyperlink{minimp3_8h_aca77f543f7ddc47bfb8cc180d0ba17f0}{mp3dec\_init}}(\&dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a17a9729ae1728c919876d6fd8693914a}{mp3d}});}
+\DoxyCodeLine{00994\ \ \ \ \ \textcolor{keywordflow}{if}\ (io-\/>\mbox{\hyperlink{structmp3dec__io__t_a166467a856d8f19a9beae1489f0ce435}{seek}}(0,\ io-\/>\mbox{\hyperlink{structmp3dec__io__t_a3d42d7298e026aff6eb4d46cf11332a5}{seek\_data}}))}
+\DoxyCodeLine{00995\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_a4ef2cff7a0b403032f48129a8e413435}{MP3D\_E\_IOERROR}};}
+\DoxyCodeLine{00996\ \ \ \ \ \textcolor{keywordtype}{int}\ ret\ =\ \mbox{\hyperlink{minimp3__ex_8h_ad284dbfa591ea90c94190ab58ecdf97a}{mp3dec\_iterate\_cb}}(io,\ (uint8\_t\ *)dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aa83ce3f305ad2239de2c2167b8a51bc8}{file}}.\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}},\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aa83ce3f305ad2239de2c2167b8a51bc8}{file}}.\mbox{\hyperlink{structmp3dec__map__info__t_a3b7009a8a777a4cdae12a805db0fa4ab}{size}},\ mp3dec\_load\_index,\ dec);}
+\DoxyCodeLine{00997\ \ \ \ \ \textcolor{keywordflow}{if}\ (ret\ \&\&\ \mbox{\hyperlink{minimp3__ex_8h_acf47112101ece200a15c8b5f27a06fc9}{MP3D\_E\_USER}}\ !=\ ret)}
+\DoxyCodeLine{00998\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{00999\ \ \ \ \ \textcolor{keywordflow}{if}\ (dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a2e32856a712086490fa8167a7f99b4ae}{io}}-\/>\mbox{\hyperlink{structmp3dec__io__t_a166467a856d8f19a9beae1489f0ce435}{seek}}(dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a7884cfda5fa124a6994468e69681a203}{start\_offset}},\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a2e32856a712086490fa8167a7f99b4ae}{io}}-\/>\mbox{\hyperlink{structmp3dec__io__t_a3d42d7298e026aff6eb4d46cf11332a5}{seek\_data}}))}
+\DoxyCodeLine{01000\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_a4ef2cff7a0b403032f48129a8e413435}{MP3D\_E\_IOERROR}};}
+\DoxyCodeLine{01001\ \ \ \ \ \mbox{\hyperlink{minimp3_8h_aca77f543f7ddc47bfb8cc180d0ba17f0}{mp3dec\_init}}(\&dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a17a9729ae1728c919876d6fd8693914a}{mp3d}});}
+\DoxyCodeLine{01002\ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a80e64fa71e0ec9aad9654038baf2dd4a}{buffer\_samples}}\ =\ 0;}
+\DoxyCodeLine{01003\ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a3a3ed982119a5322a0a1690c312662a2}{indexes\_built}}\ =\ !(dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a56111cda542372126c53b751bb231b2b}{vbr\_tag\_found}}\ ||\ (flags\ \&\ \mbox{\hyperlink{minimp3__ex_8h_ab3736544a0373fb51274e8db4fc81eb7}{MP3D\_DO\_NOT\_SCAN}}));}
+\DoxyCodeLine{01004\ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a1fbba373f884d9a1bcee655104070e87}{flags}}\ \&=\ (\string~MP3D\_DO\_NOT\_SCAN);}
+\DoxyCodeLine{01005\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{01006\ \}}
+\DoxyCodeLine{01007\ }
+\DoxyCodeLine{01008\ }
+\DoxyCodeLine{01009\ \textcolor{preprocessor}{\#ifndef\ MINIMP3\_NO\_STDIO}}
+\DoxyCodeLine{01010\ }
+\DoxyCodeLine{01011\ \textcolor{preprocessor}{\#if\ defined(\_\_linux\_\_)\ ||\ defined(\_\_FreeBSD\_\_)}}
+\DoxyCodeLine{01012\ \textcolor{preprocessor}{\#include\ <errno.h>}}
+\DoxyCodeLine{01013\ \textcolor{preprocessor}{\#include\ <sys/mman.h>}}
+\DoxyCodeLine{01014\ \textcolor{preprocessor}{\#include\ <sys/types.h>}}
+\DoxyCodeLine{01015\ \textcolor{preprocessor}{\#include\ <sys/stat.h>}}
+\DoxyCodeLine{01016\ \textcolor{preprocessor}{\#include\ <unistd.h>}}
+\DoxyCodeLine{01017\ \textcolor{preprocessor}{\#include\ <fcntl.h>}}
+\DoxyCodeLine{01018\ \textcolor{preprocessor}{\#if\ !defined(\_GNU\_SOURCE)}}
+\DoxyCodeLine{01019\ \textcolor{preprocessor}{\#include\ <sys/ipc.h>}}
+\DoxyCodeLine{01020\ \textcolor{preprocessor}{\#include\ <sys/shm.h>}}
+\DoxyCodeLine{01021\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{01022\ \textcolor{preprocessor}{\#if\ !defined(MAP\_POPULATE)\ \&\&\ defined(\_\_linux\_\_)}}
+\DoxyCodeLine{01023\ \textcolor{preprocessor}{\#define\ MAP\_POPULATE\ 0x08000}}
+\DoxyCodeLine{01024\ \textcolor{preprocessor}{\#elif\ !defined(MAP\_POPULATE)}}
+\DoxyCodeLine{01025\ \textcolor{preprocessor}{\#define\ MAP\_POPULATE\ 0}}
+\DoxyCodeLine{01026\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{01027\ }
+\DoxyCodeLine{01028\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ mp3dec\_close\_file(\mbox{\hyperlink{structmp3dec__map__info__t}{mp3dec\_map\_info\_t}}\ *map\_info)}
+\DoxyCodeLine{01029\ \{}
+\DoxyCodeLine{01030\ \ \ \ \ \textcolor{keywordflow}{if}\ (map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}}\ \&\&\ MAP\_FAILED\ !=\ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}})}
+\DoxyCodeLine{01031\ \ \ \ \ \ \ \ \ munmap((\textcolor{keywordtype}{void}\ *)map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}},\ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a3b7009a8a777a4cdae12a805db0fa4ab}{size}});}
+\DoxyCodeLine{01032\ \ \ \ \ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}}\ =\ 0;}
+\DoxyCodeLine{01033\ \ \ \ \ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a3b7009a8a777a4cdae12a805db0fa4ab}{size}}\ \ \ =\ 0;}
+\DoxyCodeLine{01034\ \}}
+\DoxyCodeLine{01035\ }
+\DoxyCodeLine{01036\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ mp3dec\_open\_file(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *file\_name,\ \mbox{\hyperlink{structmp3dec__map__info__t}{mp3dec\_map\_info\_t}}\ *map\_info)}
+\DoxyCodeLine{01037\ \{}
+\DoxyCodeLine{01038\ \ \ \ \ \textcolor{keywordflow}{if}\ (!file\_name)}
+\DoxyCodeLine{01039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_afd17086858bde25da30f8bd57e1a6458}{MP3D\_E\_PARAM}};}
+\DoxyCodeLine{01040\ \ \ \ \ \textcolor{keywordtype}{int}\ file;}
+\DoxyCodeLine{01041\ \ \ \ \ \textcolor{keyword}{struct\ }stat\ st;}
+\DoxyCodeLine{01042\ \ \ \ \ memset(map\_info,\ 0,\ \textcolor{keyword}{sizeof}(*map\_info));}
+\DoxyCodeLine{01043\ retry\_open:}
+\DoxyCodeLine{01044\ \ \ \ \ file\ =\ open(file\_name,\ O\_RDONLY);}
+\DoxyCodeLine{01045\ \ \ \ \ \textcolor{keywordflow}{if}\ (file\ <\ 0\ \&\&\ (errno\ ==\ EAGAIN\ ||\ errno\ ==\ EINTR))}
+\DoxyCodeLine{01046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{goto}\ retry\_open;}
+\DoxyCodeLine{01047\ \ \ \ \ \textcolor{keywordflow}{if}\ (file\ <\ 0\ ||\ fstat(file,\ \&st)\ <\ 0)}
+\DoxyCodeLine{01048\ \ \ \ \ \{}
+\DoxyCodeLine{01049\ \ \ \ \ \ \ \ \ close(file);}
+\DoxyCodeLine{01050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_a4ef2cff7a0b403032f48129a8e413435}{MP3D\_E\_IOERROR}};}
+\DoxyCodeLine{01051\ \ \ \ \ \}}
+\DoxyCodeLine{01052\ }
+\DoxyCodeLine{01053\ \ \ \ \ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a3b7009a8a777a4cdae12a805db0fa4ab}{size}}\ =\ st.st\_size;}
+\DoxyCodeLine{01054\ retry\_mmap:}
+\DoxyCodeLine{01055\ \ \ \ \ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}}\ =\ (\textcolor{keyword}{const}\ uint8\_t\ *)mmap(NULL,\ st.st\_size,\ PROT\_READ,\ MAP\_PRIVATE\ |\ MAP\_POPULATE,\ file,\ 0);}
+\DoxyCodeLine{01056\ \ \ \ \ \textcolor{keywordflow}{if}\ (MAP\_FAILED\ ==\ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}}\ \&\&\ (errno\ ==\ EAGAIN\ ||\ errno\ ==\ EINTR))}
+\DoxyCodeLine{01057\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{goto}\ retry\_mmap;}
+\DoxyCodeLine{01058\ \ \ \ \ close(file);}
+\DoxyCodeLine{01059\ \ \ \ \ \textcolor{keywordflow}{if}\ (MAP\_FAILED\ ==\ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}})}
+\DoxyCodeLine{01060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_a4ef2cff7a0b403032f48129a8e413435}{MP3D\_E\_IOERROR}};}
+\DoxyCodeLine{01061\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{01062\ \}}
+\DoxyCodeLine{01063\ }
+\DoxyCodeLine{01064\ \textcolor{preprocessor}{\#if\ MINIMP3\_ENABLE\_RING\ \&\&\ defined(\_\_linux\_\_)\ \&\&\ defined(\_GNU\_SOURCE)}}
+\DoxyCodeLine{01065\ \textcolor{preprocessor}{\#define\ MINIMP3\_HAVE\_RING}}
+\DoxyCodeLine{01066\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ mp3dec\_close\_ring(\mbox{\hyperlink{structmp3dec__map__info__t}{mp3dec\_map\_info\_t}}\ *map\_info)}
+\DoxyCodeLine{01067\ \{}
+\DoxyCodeLine{01068\ \textcolor{preprocessor}{\#if\ defined(\_\_linux\_\_)\ \&\&\ defined(\_GNU\_SOURCE)}}
+\DoxyCodeLine{01069\ \ \ \ \ \textcolor{keywordflow}{if}\ (map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}}\ \&\&\ MAP\_FAILED\ !=\ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}})}
+\DoxyCodeLine{01070\ \ \ \ \ \ \ \ \ munmap((\textcolor{keywordtype}{void}\ *)map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}},\ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a3b7009a8a777a4cdae12a805db0fa4ab}{size}}*2);}
+\DoxyCodeLine{01071\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{01072\ \ \ \ \ \textcolor{keywordflow}{if}\ (map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}})}
+\DoxyCodeLine{01073\ \ \ \ \ \{}
+\DoxyCodeLine{01074\ \ \ \ \ \ \ \ \ shmdt(map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}});}
+\DoxyCodeLine{01075\ \ \ \ \ \ \ \ \ shmdt(map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}}\ +\ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a3b7009a8a777a4cdae12a805db0fa4ab}{size}});}
+\DoxyCodeLine{01076\ \ \ \ \ \}}
+\DoxyCodeLine{01077\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{01078\ \ \ \ \ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}}\ =\ 0;}
+\DoxyCodeLine{01079\ \ \ \ \ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a3b7009a8a777a4cdae12a805db0fa4ab}{size}}\ \ \ =\ 0;}
+\DoxyCodeLine{01080\ \}}
+\DoxyCodeLine{01081\ }
+\DoxyCodeLine{01082\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ mp3dec\_open\_ring(\mbox{\hyperlink{structmp3dec__map__info__t}{mp3dec\_map\_info\_t}}\ *map\_info,\ \textcolor{keywordtype}{size\_t}\ size)}
+\DoxyCodeLine{01083\ \{}
+\DoxyCodeLine{01084\ \ \ \ \ \textcolor{keywordtype}{int}\ memfd,\ page\_size;}
+\DoxyCodeLine{01085\ \textcolor{preprocessor}{\#if\ defined(\_\_linux\_\_)\ \&\&\ defined(\_GNU\_SOURCE)}}
+\DoxyCodeLine{01086\ \ \ \ \ \textcolor{keywordtype}{void}\ *buffer;}
+\DoxyCodeLine{01087\ \ \ \ \ \textcolor{keywordtype}{int}\ res;}
+\DoxyCodeLine{01088\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{01089\ \ \ \ \ memset(map\_info,\ 0,\ \textcolor{keyword}{sizeof}(*map\_info));}
+\DoxyCodeLine{01090\ }
+\DoxyCodeLine{01091\ \textcolor{preprocessor}{\#ifdef\ \_SC\_PAGESIZE}}
+\DoxyCodeLine{01092\ \ \ \ \ page\_size\ =\ sysconf(\_SC\_PAGESIZE);}
+\DoxyCodeLine{01093\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{01094\ \ \ \ \ page\_size\ =\ getpagesize();}
+\DoxyCodeLine{01095\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{01096\ \ \ \ \ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a3b7009a8a777a4cdae12a805db0fa4ab}{size}}\ =\ (size\ +\ page\_size\ -\/\ 1)/page\_size*page\_size;}
+\DoxyCodeLine{01097\ }
+\DoxyCodeLine{01098\ \textcolor{preprocessor}{\#if\ defined(\_\_linux\_\_)\ \&\&\ defined(\_GNU\_SOURCE)}}
+\DoxyCodeLine{01099\ \ \ \ \ memfd\ =\ memfd\_create(\textcolor{stringliteral}{"{}mp3\_ring"{}},\ 0);}
+\DoxyCodeLine{01100\ \ \ \ \ \textcolor{keywordflow}{if}\ (memfd\ <\ 0)}
+\DoxyCodeLine{01101\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_a96830e024e302925507882cf8afb7460}{MP3D\_E\_MEMORY}};}
+\DoxyCodeLine{01102\ }
+\DoxyCodeLine{01103\ retry\_ftruncate:}
+\DoxyCodeLine{01104\ \ \ \ \ res\ =\ ftruncate(memfd,\ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a3b7009a8a777a4cdae12a805db0fa4ab}{size}});}
+\DoxyCodeLine{01105\ \ \ \ \ \textcolor{keywordflow}{if}\ (res\ \&\&\ (errno\ ==\ EAGAIN\ ||\ errno\ ==\ EINTR))}
+\DoxyCodeLine{01106\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{goto}\ retry\_ftruncate;}
+\DoxyCodeLine{01107\ \ \ \ \ \textcolor{keywordflow}{if}\ (res)}
+\DoxyCodeLine{01108\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{goto}\ error;}
+\DoxyCodeLine{01109\ }
+\DoxyCodeLine{01110\ retry\_mmap:}
+\DoxyCodeLine{01111\ \ \ \ \ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}}\ =\ (\textcolor{keyword}{const}\ uint8\_t\ *)mmap(NULL,\ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a3b7009a8a777a4cdae12a805db0fa4ab}{size}}*2,\ PROT\_NONE,\ MAP\_ANONYMOUS\ |\ MAP\_PRIVATE,\ -\/1,\ 0);}
+\DoxyCodeLine{01112\ \ \ \ \ \textcolor{keywordflow}{if}\ (MAP\_FAILED\ ==\ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}}\ \&\&\ (errno\ ==\ EAGAIN\ ||\ errno\ ==\ EINTR))}
+\DoxyCodeLine{01113\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{goto}\ retry\_mmap;}
+\DoxyCodeLine{01114\ \ \ \ \ \textcolor{keywordflow}{if}\ (MAP\_FAILED\ ==\ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}}\ ||\ !map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}})}
+\DoxyCodeLine{01115\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{goto}\ error;}
+\DoxyCodeLine{01116\ retry\_mmap2:}
+\DoxyCodeLine{01117\ \ \ \ \ buffer\ =\ mmap((\textcolor{keywordtype}{void}\ *)map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}},\ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a3b7009a8a777a4cdae12a805db0fa4ab}{size}},\ PROT\_READ\ |\ PROT\_WRITE,\ MAP\_FIXED\ |\ MAP\_SHARED,\ memfd,\ 0);}
+\DoxyCodeLine{01118\ \ \ \ \ \textcolor{keywordflow}{if}\ (MAP\_FAILED\ ==\ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}}\ \&\&\ (errno\ ==\ EAGAIN\ ||\ errno\ ==\ EINTR))}
+\DoxyCodeLine{01119\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{goto}\ retry\_mmap2;}
+\DoxyCodeLine{01120\ \ \ \ \ \textcolor{keywordflow}{if}\ (MAP\_FAILED\ ==\ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}}\ ||\ buffer\ !=\ (\textcolor{keywordtype}{void}\ *)map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}})}
+\DoxyCodeLine{01121\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{goto}\ error;}
+\DoxyCodeLine{01122\ retry\_mmap3:}
+\DoxyCodeLine{01123\ \ \ \ \ buffer\ =\ mmap((\textcolor{keywordtype}{void}\ *)map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}}\ +\ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a3b7009a8a777a4cdae12a805db0fa4ab}{size}},\ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a3b7009a8a777a4cdae12a805db0fa4ab}{size}},\ PROT\_READ\ |\ PROT\_WRITE,\ MAP\_FIXED\ |\ MAP\_SHARED,\ memfd,\ 0);}
+\DoxyCodeLine{01124\ \ \ \ \ \textcolor{keywordflow}{if}\ (MAP\_FAILED\ ==\ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}}\ \&\&\ (errno\ ==\ EAGAIN\ ||\ errno\ ==\ EINTR))}
+\DoxyCodeLine{01125\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{goto}\ retry\_mmap3;}
+\DoxyCodeLine{01126\ \ \ \ \ \textcolor{keywordflow}{if}\ (MAP\_FAILED\ ==\ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}}\ ||\ buffer\ !=\ (\textcolor{keywordtype}{void}\ *)(map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}}\ +\ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a3b7009a8a777a4cdae12a805db0fa4ab}{size}}))}
+\DoxyCodeLine{01127\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{goto}\ error;}
+\DoxyCodeLine{01128\ }
+\DoxyCodeLine{01129\ \ \ \ \ close(memfd);}
+\DoxyCodeLine{01130\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{01131\ error:}
+\DoxyCodeLine{01132\ \ \ \ \ close(memfd);}
+\DoxyCodeLine{01133\ \ \ \ \ mp3dec\_close\_ring(map\_info);}
+\DoxyCodeLine{01134\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_a96830e024e302925507882cf8afb7460}{MP3D\_E\_MEMORY}};}
+\DoxyCodeLine{01135\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{01136\ \ \ \ \ memfd\ =\ shmget(IPC\_PRIVATE,\ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a3b7009a8a777a4cdae12a805db0fa4ab}{size}},\ IPC\_CREAT\ |\ 0700);}
+\DoxyCodeLine{01137\ \ \ \ \ \textcolor{keywordflow}{if}\ (memfd\ <\ 0)}
+\DoxyCodeLine{01138\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_a96830e024e302925507882cf8afb7460}{MP3D\_E\_MEMORY}};}
+\DoxyCodeLine{01139\ retry\_mmap:}
+\DoxyCodeLine{01140\ \ \ \ \ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}}\ =\ (\textcolor{keyword}{const}\ uint8\_t\ *)mmap(NULL,\ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a3b7009a8a777a4cdae12a805db0fa4ab}{size}}*2,\ PROT\_NONE,\ MAP\_PRIVATE,\ -\/1,\ 0);}
+\DoxyCodeLine{01141\ \ \ \ \ \textcolor{keywordflow}{if}\ (MAP\_FAILED\ ==\ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}}\ \&\&\ (errno\ ==\ EAGAIN\ ||\ errno\ ==\ EINTR))}
+\DoxyCodeLine{01142\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{goto}\ retry\_mmap;}
+\DoxyCodeLine{01143\ \ \ \ \ \textcolor{keywordflow}{if}\ (MAP\_FAILED\ ==\ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}})}
+\DoxyCodeLine{01144\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{goto}\ error;}
+\DoxyCodeLine{01145\ \ \ \ \ \textcolor{keywordflow}{if}\ (map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}}\ !=\ shmat(memfd,\ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}},\ 0))}
+\DoxyCodeLine{01146\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{goto}\ error;}
+\DoxyCodeLine{01147\ \ \ \ \ \textcolor{keywordflow}{if}\ ((map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}}\ +\ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a3b7009a8a777a4cdae12a805db0fa4ab}{size}})\ !=\ shmat(memfd,\ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}}\ +\ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a3b7009a8a777a4cdae12a805db0fa4ab}{size}},\ 0))}
+\DoxyCodeLine{01148\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{goto}\ error;}
+\DoxyCodeLine{01149\ \ \ \ \ \textcolor{keywordflow}{if}\ (shmctl(memfd,\ IPC\_RMID,\ NULL)\ <\ 0)}
+\DoxyCodeLine{01150\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_a96830e024e302925507882cf8afb7460}{MP3D\_E\_MEMORY}};}
+\DoxyCodeLine{01151\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{01152\ error:}
+\DoxyCodeLine{01153\ \ \ \ \ shmctl(memfd,\ IPC\_RMID,\ NULL);}
+\DoxyCodeLine{01154\ \ \ \ \ mp3dec\_close\_ring(map\_info);}
+\DoxyCodeLine{01155\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_a96830e024e302925507882cf8afb7460}{MP3D\_E\_MEMORY}};}
+\DoxyCodeLine{01156\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{01157\ \}}
+\DoxyCodeLine{01158\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*MINIMP3\_ENABLE\_RING*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{01159\ \textcolor{preprocessor}{\#elif\ defined(\_WIN32)}}
+\DoxyCodeLine{01160\ \textcolor{preprocessor}{\#include\ <windows.h>}}
+\DoxyCodeLine{01161\ }
+\DoxyCodeLine{01162\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ mp3dec\_close\_file(\mbox{\hyperlink{structmp3dec__map__info__t}{mp3dec\_map\_info\_t}}\ *map\_info)}
+\DoxyCodeLine{01163\ \{}
+\DoxyCodeLine{01164\ \ \ \ \ \textcolor{keywordflow}{if}\ (map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}})}
+\DoxyCodeLine{01165\ \ \ \ \ \ \ \ \ UnmapViewOfFile(map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}});}
+\DoxyCodeLine{01166\ \ \ \ \ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}}\ =\ 0;}
+\DoxyCodeLine{01167\ \ \ \ \ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a3b7009a8a777a4cdae12a805db0fa4ab}{size}}\ \ \ =\ 0;}
+\DoxyCodeLine{01168\ \}}
+\DoxyCodeLine{01169\ }
+\DoxyCodeLine{01170\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ mp3dec\_open\_file\_h(HANDLE\ file,\ \mbox{\hyperlink{structmp3dec__map__info__t}{mp3dec\_map\_info\_t}}\ *map\_info)}
+\DoxyCodeLine{01171\ \{}
+\DoxyCodeLine{01172\ \ \ \ \ memset(map\_info,\ 0,\ \textcolor{keyword}{sizeof}(*map\_info));}
+\DoxyCodeLine{01173\ }
+\DoxyCodeLine{01174\ \ \ \ \ HANDLE\ mapping\ =\ NULL;}
+\DoxyCodeLine{01175\ \ \ \ \ LARGE\_INTEGER\ s;}
+\DoxyCodeLine{01176\ \ \ \ \ s.LowPart\ =\ GetFileSize(file,\ (DWORD*)\&s.HighPart);}
+\DoxyCodeLine{01177\ \ \ \ \ \textcolor{keywordflow}{if}\ (s.LowPart\ ==\ INVALID\_FILE\_SIZE\ \&\&\ GetLastError()\ !=\ NO\_ERROR)}
+\DoxyCodeLine{01178\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{goto}\ error;}
+\DoxyCodeLine{01179\ \ \ \ \ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a3b7009a8a777a4cdae12a805db0fa4ab}{size}}\ =\ s.QuadPart;}
+\DoxyCodeLine{01180\ }
+\DoxyCodeLine{01181\ \ \ \ \ mapping\ =\ CreateFileMapping(file,\ NULL,\ PAGE\_READONLY,\ 0,\ 0,\ NULL);}
+\DoxyCodeLine{01182\ \ \ \ \ \textcolor{keywordflow}{if}\ (!mapping)}
+\DoxyCodeLine{01183\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{goto}\ error;}
+\DoxyCodeLine{01184\ \ \ \ \ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}}\ =\ (\textcolor{keyword}{const}\ uint8\_t*)MapViewOfFile(mapping,\ FILE\_MAP\_READ,\ 0,\ 0,\ s.QuadPart);}
+\DoxyCodeLine{01185\ \ \ \ \ CloseHandle(mapping);}
+\DoxyCodeLine{01186\ \ \ \ \ \textcolor{keywordflow}{if}\ (!map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}})}
+\DoxyCodeLine{01187\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{goto}\ error;}
+\DoxyCodeLine{01188\ }
+\DoxyCodeLine{01189\ \ \ \ \ CloseHandle(file);}
+\DoxyCodeLine{01190\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{01191\ error:}
+\DoxyCodeLine{01192\ \ \ \ \ mp3dec\_close\_file(map\_info);}
+\DoxyCodeLine{01193\ \ \ \ \ CloseHandle(file);}
+\DoxyCodeLine{01194\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_a4ef2cff7a0b403032f48129a8e413435}{MP3D\_E\_IOERROR}};}
+\DoxyCodeLine{01195\ \}}
+\DoxyCodeLine{01196\ }
+\DoxyCodeLine{01197\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ mp3dec\_open\_file(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *file\_name,\ \mbox{\hyperlink{structmp3dec__map__info__t}{mp3dec\_map\_info\_t}}\ *map\_info)}
+\DoxyCodeLine{01198\ \{}
+\DoxyCodeLine{01199\ \ \ \ \ \textcolor{keywordflow}{if}\ (!file\_name)}
+\DoxyCodeLine{01200\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_afd17086858bde25da30f8bd57e1a6458}{MP3D\_E\_PARAM}};}
+\DoxyCodeLine{01201\ \ \ \ \ HANDLE\ file\ =\ CreateFileA(file\_name,\ GENERIC\_READ,\ FILE\_SHARE\_READ,\ 0,\ OPEN\_EXISTING,\ 0,\ 0);}
+\DoxyCodeLine{01202\ \ \ \ \ \textcolor{keywordflow}{if}\ (INVALID\_HANDLE\_VALUE\ ==\ file)}
+\DoxyCodeLine{01203\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_a4ef2cff7a0b403032f48129a8e413435}{MP3D\_E\_IOERROR}};}
+\DoxyCodeLine{01204\ \ \ \ \ \textcolor{keywordflow}{return}\ mp3dec\_open\_file\_h(file,\ map\_info);}
+\DoxyCodeLine{01205\ \}}
+\DoxyCodeLine{01206\ }
+\DoxyCodeLine{01207\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ mp3dec\_open\_file\_w(\textcolor{keyword}{const}\ \textcolor{keywordtype}{wchar\_t}\ *file\_name,\ \mbox{\hyperlink{structmp3dec__map__info__t}{mp3dec\_map\_info\_t}}\ *map\_info)}
+\DoxyCodeLine{01208\ \{}
+\DoxyCodeLine{01209\ \ \ \ \ \textcolor{keywordflow}{if}\ (!file\_name)}
+\DoxyCodeLine{01210\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_afd17086858bde25da30f8bd57e1a6458}{MP3D\_E\_PARAM}};}
+\DoxyCodeLine{01211\ \ \ \ \ HANDLE\ file\ =\ CreateFileW(file\_name,\ GENERIC\_READ,\ FILE\_SHARE\_READ,\ 0,\ OPEN\_EXISTING,\ 0,\ 0);}
+\DoxyCodeLine{01212\ \ \ \ \ \textcolor{keywordflow}{if}\ (INVALID\_HANDLE\_VALUE\ ==\ file)}
+\DoxyCodeLine{01213\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_a4ef2cff7a0b403032f48129a8e413435}{MP3D\_E\_IOERROR}};}
+\DoxyCodeLine{01214\ \ \ \ \ \textcolor{keywordflow}{return}\ mp3dec\_open\_file\_h(file,\ map\_info);}
+\DoxyCodeLine{01215\ \}}
+\DoxyCodeLine{01216\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{01217\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{01218\ }
+\DoxyCodeLine{01219\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ mp3dec\_close\_file(\mbox{\hyperlink{structmp3dec__map__info__t}{mp3dec\_map\_info\_t}}\ *map\_info)}
+\DoxyCodeLine{01220\ \{}
+\DoxyCodeLine{01221\ \ \ \ \ \textcolor{keywordflow}{if}\ (map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}})}
+\DoxyCodeLine{01222\ \ \ \ \ \ \ \ \ free((\textcolor{keywordtype}{void}\ *)map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}});}
+\DoxyCodeLine{01223\ \ \ \ \ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}}\ =\ 0;}
+\DoxyCodeLine{01224\ \ \ \ \ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a3b7009a8a777a4cdae12a805db0fa4ab}{size}}\ =\ 0;}
+\DoxyCodeLine{01225\ \}}
+\DoxyCodeLine{01226\ }
+\DoxyCodeLine{01227\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ mp3dec\_open\_file(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *file\_name,\ \mbox{\hyperlink{structmp3dec__map__info__t}{mp3dec\_map\_info\_t}}\ *map\_info)}
+\DoxyCodeLine{01228\ \{}
+\DoxyCodeLine{01229\ \ \ \ \ \textcolor{keywordflow}{if}\ (!file\_name)}
+\DoxyCodeLine{01230\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_afd17086858bde25da30f8bd57e1a6458}{MP3D\_E\_PARAM}};}
+\DoxyCodeLine{01231\ \ \ \ \ memset(map\_info,\ 0,\ \textcolor{keyword}{sizeof}(*map\_info));}
+\DoxyCodeLine{01232\ \ \ \ \ FILE\ *file\ =\ fopen(file\_name,\ \textcolor{stringliteral}{"{}rb"{}});}
+\DoxyCodeLine{01233\ \ \ \ \ \textcolor{keywordflow}{if}\ (!file)}
+\DoxyCodeLine{01234\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_a4ef2cff7a0b403032f48129a8e413435}{MP3D\_E\_IOERROR}};}
+\DoxyCodeLine{01235\ \ \ \ \ \textcolor{keywordtype}{int}\ res\ =\ \mbox{\hyperlink{minimp3__ex_8h_a4ef2cff7a0b403032f48129a8e413435}{MP3D\_E\_IOERROR}};}
+\DoxyCodeLine{01236\ \ \ \ \ \textcolor{keywordtype}{long}\ size\ =\ -\/1;}
+\DoxyCodeLine{01237\ \ \ \ \ \textcolor{keywordflow}{if}\ (fseek(file,\ 0,\ SEEK\_END))}
+\DoxyCodeLine{01238\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{goto}\ error;}
+\DoxyCodeLine{01239\ \ \ \ \ size\ =\ ftell(file);}
+\DoxyCodeLine{01240\ \ \ \ \ \textcolor{keywordflow}{if}\ (size\ <\ 0)}
+\DoxyCodeLine{01241\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{goto}\ error;}
+\DoxyCodeLine{01242\ \ \ \ \ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a3b7009a8a777a4cdae12a805db0fa4ab}{size}}\ =\ (size\_t)size;}
+\DoxyCodeLine{01243\ \ \ \ \ \textcolor{keywordflow}{if}\ (fseek(file,\ 0,\ SEEK\_SET))}
+\DoxyCodeLine{01244\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{goto}\ error;}
+\DoxyCodeLine{01245\ \ \ \ \ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}}\ =\ (uint8\_t\ *)malloc(map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a3b7009a8a777a4cdae12a805db0fa4ab}{size}});}
+\DoxyCodeLine{01246\ \ \ \ \ \textcolor{keywordflow}{if}\ (!map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}})}
+\DoxyCodeLine{01247\ \ \ \ \ \{}
+\DoxyCodeLine{01248\ \ \ \ \ \ \ \ \ res\ =\ \mbox{\hyperlink{minimp3__ex_8h_a96830e024e302925507882cf8afb7460}{MP3D\_E\_MEMORY}};}
+\DoxyCodeLine{01249\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{goto}\ error;}
+\DoxyCodeLine{01250\ \ \ \ \ \}}
+\DoxyCodeLine{01251\ \ \ \ \ \textcolor{keywordflow}{if}\ (fread((\textcolor{keywordtype}{void}\ *)map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}},\ 1,\ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a3b7009a8a777a4cdae12a805db0fa4ab}{size}},\ file)\ !=\ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a3b7009a8a777a4cdae12a805db0fa4ab}{size}})}
+\DoxyCodeLine{01252\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{goto}\ error;}
+\DoxyCodeLine{01253\ \ \ \ \ fclose(file);}
+\DoxyCodeLine{01254\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{01255\ error:}
+\DoxyCodeLine{01256\ \ \ \ \ mp3dec\_close\_file(map\_info);}
+\DoxyCodeLine{01257\ \ \ \ \ fclose(file);}
+\DoxyCodeLine{01258\ \ \ \ \ \textcolor{keywordflow}{return}\ res;}
+\DoxyCodeLine{01259\ \}}
+\DoxyCodeLine{01260\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{01261\ }
+\DoxyCodeLine{01262\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ mp3dec\_detect\_mapinfo(\mbox{\hyperlink{structmp3dec__map__info__t}{mp3dec\_map\_info\_t}}\ *map\_info)}
+\DoxyCodeLine{01263\ \{}
+\DoxyCodeLine{01264\ \ \ \ \ \textcolor{keywordtype}{int}\ ret\ =\ \mbox{\hyperlink{minimp3__ex_8h_ad69b7539cb2a643e400825aaa92434f5}{mp3dec\_detect\_buf}}(map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}},\ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a3b7009a8a777a4cdae12a805db0fa4ab}{size}});}
+\DoxyCodeLine{01265\ \ \ \ \ mp3dec\_close\_file(map\_info);}
+\DoxyCodeLine{01266\ \ \ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{01267\ \}}
+\DoxyCodeLine{01268\ }
+\DoxyCodeLine{01269\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ mp3dec\_load\_mapinfo(\mbox{\hyperlink{structmp3dec__t}{mp3dec\_t}}\ *dec,\ \mbox{\hyperlink{structmp3dec__map__info__t}{mp3dec\_map\_info\_t}}\ *map\_info,\ \mbox{\hyperlink{structmp3dec__file__info__t}{mp3dec\_file\_info\_t}}\ *info,\ \mbox{\hyperlink{minimp3__ex_8h_a7f1fc690609a81b717359a77027490cf}{MP3D\_PROGRESS\_CB}}\ progress\_cb,\ \textcolor{keywordtype}{void}\ *user\_data)}
+\DoxyCodeLine{01270\ \{}
+\DoxyCodeLine{01271\ \ \ \ \ \textcolor{keywordtype}{int}\ ret\ =\ \mbox{\hyperlink{minimp3__ex_8h_a5af86015446ded7c5345230705f24e5b}{mp3dec\_load\_buf}}(dec,\ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}},\ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a3b7009a8a777a4cdae12a805db0fa4ab}{size}},\ info,\ progress\_cb,\ user\_data);}
+\DoxyCodeLine{01272\ \ \ \ \ mp3dec\_close\_file(map\_info);}
+\DoxyCodeLine{01273\ \ \ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{01274\ \}}
+\DoxyCodeLine{01275\ }
+\DoxyCodeLine{01276\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ mp3dec\_iterate\_mapinfo(\mbox{\hyperlink{structmp3dec__map__info__t}{mp3dec\_map\_info\_t}}\ *map\_info,\ \mbox{\hyperlink{minimp3__ex_8h_a156201e8e590ced254c0ec1a113dbd1f}{MP3D\_ITERATE\_CB}}\ callback,\ \textcolor{keywordtype}{void}\ *user\_data)}
+\DoxyCodeLine{01277\ \{}
+\DoxyCodeLine{01278\ \ \ \ \ \textcolor{keywordtype}{int}\ ret\ =\ \mbox{\hyperlink{minimp3__ex_8h_ac4f6c8c305339b3675c60014871f091d}{mp3dec\_iterate\_buf}}(map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}},\ map\_info-\/>\mbox{\hyperlink{structmp3dec__map__info__t_a3b7009a8a777a4cdae12a805db0fa4ab}{size}},\ callback,\ user\_data);}
+\DoxyCodeLine{01279\ \ \ \ \ mp3dec\_close\_file(map\_info);}
+\DoxyCodeLine{01280\ \ \ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{01281\ \}}
+\DoxyCodeLine{01282\ }
+\DoxyCodeLine{01283\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ mp3dec\_ex\_open\_mapinfo(\mbox{\hyperlink{structmp3dec__ex__t}{mp3dec\_ex\_t}}\ *dec,\ \textcolor{keywordtype}{int}\ flags)}
+\DoxyCodeLine{01284\ \{}
+\DoxyCodeLine{01285\ \ \ \ \ \textcolor{keywordtype}{int}\ ret\ =\ \mbox{\hyperlink{minimp3__ex_8h_a4b4ebe8965d000c52a60f4f87b215e31}{mp3dec\_ex\_open\_buf}}(dec,\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aa83ce3f305ad2239de2c2167b8a51bc8}{file}}.\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}},\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aa83ce3f305ad2239de2c2167b8a51bc8}{file}}.\mbox{\hyperlink{structmp3dec__map__info__t_a3b7009a8a777a4cdae12a805db0fa4ab}{size}},\ flags);}
+\DoxyCodeLine{01286\ \ \ \ \ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_ae82b3fcc75ebb41c91ba8a5c286c71f8}{is\_file}}\ =\ 1;}
+\DoxyCodeLine{01287\ \ \ \ \ \textcolor{keywordflow}{if}\ (ret)}
+\DoxyCodeLine{01288\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{minimp3__ex_8h_a9d28e71470f01d65509956310b34833f}{mp3dec\_ex\_close}}(dec);}
+\DoxyCodeLine{01289\ \ \ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{01290\ \}}
+\DoxyCodeLine{01291\ }
+\DoxyCodeLine{01292\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{minimp3__ex_8h_aff0f4bc6c05f79e646b33e3ca1a679b6}{mp3dec\_detect}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *file\_name)}
+\DoxyCodeLine{01293\ \{}
+\DoxyCodeLine{01294\ \ \ \ \ \textcolor{keywordtype}{int}\ ret;}
+\DoxyCodeLine{01295\ \ \ \ \ \mbox{\hyperlink{structmp3dec__map__info__t}{mp3dec\_map\_info\_t}}\ map\_info;}
+\DoxyCodeLine{01296\ \ \ \ \ \textcolor{keywordflow}{if}\ ((ret\ =\ mp3dec\_open\_file(file\_name,\ \&map\_info)))}
+\DoxyCodeLine{01297\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{01298\ \ \ \ \ \textcolor{keywordflow}{return}\ mp3dec\_detect\_mapinfo(\&map\_info);}
+\DoxyCodeLine{01299\ \}}
+\DoxyCodeLine{01300\ }
+\DoxyCodeLine{01301\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{minimp3__ex_8h_a3dc291be4901f8d51496f298d777d15f}{mp3dec\_load}}(\mbox{\hyperlink{structmp3dec__t}{mp3dec\_t}}\ *dec,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *file\_name,\ \mbox{\hyperlink{structmp3dec__file__info__t}{mp3dec\_file\_info\_t}}\ *info,\ \mbox{\hyperlink{minimp3__ex_8h_a7f1fc690609a81b717359a77027490cf}{MP3D\_PROGRESS\_CB}}\ progress\_cb,\ \textcolor{keywordtype}{void}\ *user\_data)}
+\DoxyCodeLine{01302\ \{}
+\DoxyCodeLine{01303\ \ \ \ \ \textcolor{keywordtype}{int}\ ret;}
+\DoxyCodeLine{01304\ \ \ \ \ \mbox{\hyperlink{structmp3dec__map__info__t}{mp3dec\_map\_info\_t}}\ map\_info;}
+\DoxyCodeLine{01305\ \ \ \ \ \textcolor{keywordflow}{if}\ ((ret\ =\ mp3dec\_open\_file(file\_name,\ \&map\_info)))}
+\DoxyCodeLine{01306\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{01307\ \ \ \ \ \textcolor{keywordflow}{return}\ mp3dec\_load\_mapinfo(dec,\ \&map\_info,\ info,\ progress\_cb,\ user\_data);}
+\DoxyCodeLine{01308\ \}}
+\DoxyCodeLine{01309\ }
+\DoxyCodeLine{01310\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{minimp3__ex_8h_a2f298c21365d8c05e04fdeb8156ac3ca}{mp3dec\_iterate}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *file\_name,\ \mbox{\hyperlink{minimp3__ex_8h_a156201e8e590ced254c0ec1a113dbd1f}{MP3D\_ITERATE\_CB}}\ callback,\ \textcolor{keywordtype}{void}\ *user\_data)}
+\DoxyCodeLine{01311\ \{}
+\DoxyCodeLine{01312\ \ \ \ \ \textcolor{keywordtype}{int}\ ret;}
+\DoxyCodeLine{01313\ \ \ \ \ \mbox{\hyperlink{structmp3dec__map__info__t}{mp3dec\_map\_info\_t}}\ map\_info;}
+\DoxyCodeLine{01314\ \ \ \ \ \textcolor{keywordflow}{if}\ ((ret\ =\ mp3dec\_open\_file(file\_name,\ \&map\_info)))}
+\DoxyCodeLine{01315\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{01316\ \ \ \ \ \textcolor{keywordflow}{return}\ mp3dec\_iterate\_mapinfo(\&map\_info,\ callback,\ user\_data);}
+\DoxyCodeLine{01317\ \}}
+\DoxyCodeLine{01318\ }
+\DoxyCodeLine{01319\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{minimp3__ex_8h_ae961a541c7b84c6af375d19cce9f03a2}{mp3dec\_ex\_open}}(\mbox{\hyperlink{structmp3dec__ex__t}{mp3dec\_ex\_t}}\ *dec,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *file\_name,\ \textcolor{keywordtype}{int}\ flags)}
+\DoxyCodeLine{01320\ \{}
+\DoxyCodeLine{01321\ \ \ \ \ \textcolor{keywordtype}{int}\ ret;}
+\DoxyCodeLine{01322\ \ \ \ \ \textcolor{keywordflow}{if}\ (!dec)}
+\DoxyCodeLine{01323\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{minimp3__ex_8h_afd17086858bde25da30f8bd57e1a6458}{MP3D\_E\_PARAM}};}
+\DoxyCodeLine{01324\ \ \ \ \ \textcolor{keywordflow}{if}\ ((ret\ =\ mp3dec\_open\_file(file\_name,\ \&dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aa83ce3f305ad2239de2c2167b8a51bc8}{file}})))}
+\DoxyCodeLine{01325\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{01326\ \ \ \ \ \textcolor{keywordflow}{return}\ mp3dec\_ex\_open\_mapinfo(dec,\ flags);}
+\DoxyCodeLine{01327\ \}}
+\DoxyCodeLine{01328\ }
+\DoxyCodeLine{01329\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{minimp3__ex_8h_a9d28e71470f01d65509956310b34833f}{mp3dec\_ex\_close}}(\mbox{\hyperlink{structmp3dec__ex__t}{mp3dec\_ex\_t}}\ *dec)}
+\DoxyCodeLine{01330\ \{}
+\DoxyCodeLine{01331\ \textcolor{preprocessor}{\#ifdef\ MINIMP3\_HAVE\_RING}}
+\DoxyCodeLine{01332\ \ \ \ \ \textcolor{keywordflow}{if}\ (dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a2e32856a712086490fa8167a7f99b4ae}{io}})}
+\DoxyCodeLine{01333\ \ \ \ \ \ \ \ \ mp3dec\_close\_ring(\&dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aa83ce3f305ad2239de2c2167b8a51bc8}{file}});}
+\DoxyCodeLine{01334\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{01335\ \ \ \ \ \textcolor{keywordflow}{if}\ (dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a2e32856a712086490fa8167a7f99b4ae}{io}}\ \&\&\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aa83ce3f305ad2239de2c2167b8a51bc8}{file}}.\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}})}
+\DoxyCodeLine{01336\ \ \ \ \ \ \ \ \ free((\textcolor{keywordtype}{void}*)dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aa83ce3f305ad2239de2c2167b8a51bc8}{file}}.\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}});}
+\DoxyCodeLine{01337\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{01338\ \ \ \ \ \textcolor{keywordflow}{if}\ (dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_ae82b3fcc75ebb41c91ba8a5c286c71f8}{is\_file}})}
+\DoxyCodeLine{01339\ \ \ \ \ \ \ \ \ mp3dec\_close\_file(\&dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aa83ce3f305ad2239de2c2167b8a51bc8}{file}});}
+\DoxyCodeLine{01340\ \ \ \ \ \textcolor{keywordflow}{if}\ (dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a3a9c9e9dbe68b24a397a921404b598ea}{index}}.\mbox{\hyperlink{structmp3dec__index__t_a40ff06448948d11cec9dba6e892e8baa}{frames}})}
+\DoxyCodeLine{01341\ \ \ \ \ \ \ \ \ free(dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a3a9c9e9dbe68b24a397a921404b598ea}{index}}.\mbox{\hyperlink{structmp3dec__index__t_a40ff06448948d11cec9dba6e892e8baa}{frames}});}
+\DoxyCodeLine{01342\ \ \ \ \ memset(dec,\ 0,\ \textcolor{keyword}{sizeof}(*dec));}
+\DoxyCodeLine{01343\ \}}
+\DoxyCodeLine{01344\ }
+\DoxyCodeLine{01345\ \textcolor{preprocessor}{\#ifdef\ \_WIN32}}
+\DoxyCodeLine{01346\ \textcolor{keywordtype}{int}\ mp3dec\_detect\_w(\textcolor{keyword}{const}\ \textcolor{keywordtype}{wchar\_t}\ *file\_name)}
+\DoxyCodeLine{01347\ \{}
+\DoxyCodeLine{01348\ \ \ \ \ \textcolor{keywordtype}{int}\ ret;}
+\DoxyCodeLine{01349\ \ \ \ \ \mbox{\hyperlink{structmp3dec__map__info__t}{mp3dec\_map\_info\_t}}\ map\_info;}
+\DoxyCodeLine{01350\ \ \ \ \ \textcolor{keywordflow}{if}\ ((ret\ =\ mp3dec\_open\_file\_w(file\_name,\ \&map\_info)))}
+\DoxyCodeLine{01351\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{01352\ \ \ \ \ \textcolor{keywordflow}{return}\ mp3dec\_detect\_mapinfo(\&map\_info);}
+\DoxyCodeLine{01353\ \}}
+\DoxyCodeLine{01354\ }
+\DoxyCodeLine{01355\ \textcolor{keywordtype}{int}\ mp3dec\_load\_w(\mbox{\hyperlink{structmp3dec__t}{mp3dec\_t}}\ *dec,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{wchar\_t}\ *file\_name,\ \mbox{\hyperlink{structmp3dec__file__info__t}{mp3dec\_file\_info\_t}}\ *info,\ \mbox{\hyperlink{minimp3__ex_8h_a7f1fc690609a81b717359a77027490cf}{MP3D\_PROGRESS\_CB}}\ progress\_cb,\ \textcolor{keywordtype}{void}\ *user\_data)}
+\DoxyCodeLine{01356\ \{}
+\DoxyCodeLine{01357\ \ \ \ \ \textcolor{keywordtype}{int}\ ret;}
+\DoxyCodeLine{01358\ \ \ \ \ \mbox{\hyperlink{structmp3dec__map__info__t}{mp3dec\_map\_info\_t}}\ map\_info;}
+\DoxyCodeLine{01359\ \ \ \ \ \textcolor{keywordflow}{if}\ ((ret\ =\ mp3dec\_open\_file\_w(file\_name,\ \&map\_info)))}
+\DoxyCodeLine{01360\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{01361\ \ \ \ \ \textcolor{keywordflow}{return}\ mp3dec\_load\_mapinfo(dec,\ \&map\_info,\ info,\ progress\_cb,\ user\_data);}
+\DoxyCodeLine{01362\ \}}
+\DoxyCodeLine{01363\ }
+\DoxyCodeLine{01364\ \textcolor{keywordtype}{int}\ mp3dec\_iterate\_w(\textcolor{keyword}{const}\ \textcolor{keywordtype}{wchar\_t}\ *file\_name,\ \mbox{\hyperlink{minimp3__ex_8h_a156201e8e590ced254c0ec1a113dbd1f}{MP3D\_ITERATE\_CB}}\ callback,\ \textcolor{keywordtype}{void}\ *user\_data)}
+\DoxyCodeLine{01365\ \{}
+\DoxyCodeLine{01366\ \ \ \ \ \textcolor{keywordtype}{int}\ ret;}
+\DoxyCodeLine{01367\ \ \ \ \ \mbox{\hyperlink{structmp3dec__map__info__t}{mp3dec\_map\_info\_t}}\ map\_info;}
+\DoxyCodeLine{01368\ \ \ \ \ \textcolor{keywordflow}{if}\ ((ret\ =\ mp3dec\_open\_file\_w(file\_name,\ \&map\_info)))}
+\DoxyCodeLine{01369\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{01370\ \ \ \ \ \textcolor{keywordflow}{return}\ mp3dec\_iterate\_mapinfo(\&map\_info,\ callback,\ user\_data);}
+\DoxyCodeLine{01371\ \}}
+\DoxyCodeLine{01372\ }
+\DoxyCodeLine{01373\ \textcolor{keywordtype}{int}\ mp3dec\_ex\_open\_w(\mbox{\hyperlink{structmp3dec__ex__t}{mp3dec\_ex\_t}}\ *dec,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{wchar\_t}\ *file\_name,\ \textcolor{keywordtype}{int}\ flags)}
+\DoxyCodeLine{01374\ \{}
+\DoxyCodeLine{01375\ \ \ \ \ \textcolor{keywordtype}{int}\ ret;}
+\DoxyCodeLine{01376\ \ \ \ \ \textcolor{keywordflow}{if}\ ((ret\ =\ mp3dec\_open\_file\_w(file\_name,\ \&dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aa83ce3f305ad2239de2c2167b8a51bc8}{file}})))}
+\DoxyCodeLine{01377\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{01378\ \ \ \ \ \textcolor{keywordflow}{return}\ mp3dec\_ex\_open\_mapinfo(dec,\ flags);}
+\DoxyCodeLine{01379\ \}}
+\DoxyCodeLine{01380\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{01381\ \textcolor{preprocessor}{\#else\ }\textcolor{comment}{/*\ MINIMP3\_NO\_STDIO\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{01382\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{minimp3__ex_8h_a9d28e71470f01d65509956310b34833f}{mp3dec\_ex\_close}}(\mbox{\hyperlink{structmp3dec__ex__t}{mp3dec\_ex\_t}}\ *dec)}
+\DoxyCodeLine{01383\ \{}
+\DoxyCodeLine{01384\ \textcolor{preprocessor}{\#ifdef\ MINIMP3\_HAVE\_RING}}
+\DoxyCodeLine{01385\ \ \ \ \ \textcolor{keywordflow}{if}\ (dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a2e32856a712086490fa8167a7f99b4ae}{io}})}
+\DoxyCodeLine{01386\ \ \ \ \ \ \ \ \ mp3dec\_close\_ring(\&dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aa83ce3f305ad2239de2c2167b8a51bc8}{file}});}
+\DoxyCodeLine{01387\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{01388\ \ \ \ \ \textcolor{keywordflow}{if}\ (dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a2e32856a712086490fa8167a7f99b4ae}{io}}\ \&\&\ dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aa83ce3f305ad2239de2c2167b8a51bc8}{file}}.\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}})}
+\DoxyCodeLine{01389\ \ \ \ \ \ \ \ \ free((\textcolor{keywordtype}{void}*)dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_aa83ce3f305ad2239de2c2167b8a51bc8}{file}}.\mbox{\hyperlink{structmp3dec__map__info__t_a4afbdfb44a26e7b5c1ae07a62655f3d1}{buffer}});}
+\DoxyCodeLine{01390\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{01391\ \ \ \ \ \textcolor{keywordflow}{if}\ (dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a3a9c9e9dbe68b24a397a921404b598ea}{index}}.\mbox{\hyperlink{structmp3dec__index__t_a40ff06448948d11cec9dba6e892e8baa}{frames}})}
+\DoxyCodeLine{01392\ \ \ \ \ \ \ \ \ free(dec-\/>\mbox{\hyperlink{structmp3dec__ex__t_a3a9c9e9dbe68b24a397a921404b598ea}{index}}.\mbox{\hyperlink{structmp3dec__index__t_a40ff06448948d11cec9dba6e892e8baa}{frames}});}
+\DoxyCodeLine{01393\ \ \ \ \ memset(dec,\ 0,\ \textcolor{keyword}{sizeof}(*dec));}
+\DoxyCodeLine{01394\ \}}
+\DoxyCodeLine{01395\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{01396\ }
+\DoxyCodeLine{01397\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ MINIMP3\_IMPLEMENTATION\ \&\&\ !\_MINIMP3\_EX\_IMPLEMENTATION\_GUARD\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

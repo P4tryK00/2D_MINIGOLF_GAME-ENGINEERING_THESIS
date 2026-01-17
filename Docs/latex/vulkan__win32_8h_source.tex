@@ -1,0 +1,282 @@
+\doxysection{vulkan\+\_\+win32.\+h}
+\hypertarget{vulkan__win32_8h_source}{}\label{vulkan__win32_8h_source}\index{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/vulkan/vulkan\_win32.h@{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/vulkan/vulkan\_win32.h}}
+\mbox{\hyperlink{vulkan__win32_8h}{Idź do dokumentacji tego pliku.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ VULKAN\_WIN32\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ VULKAN\_WIN32\_H\_\ 1}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00005\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00009\ \textcolor{comment}{**\ Copyright\ (c)\ 2015-\/2018\ The\ Khronos\ Group\ Inc.}}
+\DoxyCodeLine{00010\ \textcolor{comment}{**}}
+\DoxyCodeLine{00011\ \textcolor{comment}{**\ Licensed\ under\ the\ Apache\ License,\ Version\ 2.0\ (the\ "{}License"{});}}
+\DoxyCodeLine{00012\ \textcolor{comment}{**\ you\ may\ not\ use\ this\ file\ except\ in\ compliance\ with\ the\ License.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{**\ You\ may\ obtain\ a\ copy\ of\ the\ License\ at}}
+\DoxyCodeLine{00014\ \textcolor{comment}{**}}
+\DoxyCodeLine{00015\ \textcolor{comment}{**\ \ \ \ \ http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{00016\ \textcolor{comment}{**}}
+\DoxyCodeLine{00017\ \textcolor{comment}{**\ Unless\ required\ by\ applicable\ law\ or\ agreed\ to\ in\ writing,\ software}}
+\DoxyCodeLine{00018\ \textcolor{comment}{**\ distributed\ under\ the\ License\ is\ distributed\ on\ an\ "{}AS\ IS"{}\ BASIS,}}
+\DoxyCodeLine{00019\ \textcolor{comment}{**\ WITHOUT\ WARRANTIES\ OR\ CONDITIONS\ OF\ ANY\ KIND,\ either\ express\ or\ implied.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{**\ See\ the\ License\ for\ the\ specific\ language\ governing\ permissions\ and}}
+\DoxyCodeLine{00021\ \textcolor{comment}{**\ limitations\ under\ the\ License.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00025\ \textcolor{comment}{**\ This\ header\ is\ generated\ from\ the\ Khronos\ Vulkan\ XML\ API\ Registry.}}
+\DoxyCodeLine{00026\ \textcolor{comment}{**}}
+\DoxyCodeLine{00027\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ VK\_KHR\_win32\_surface\ 1}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#define\ VK\_KHR\_WIN32\_SURFACE\_SPEC\_VERSION\ 6}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ VK\_KHR\_WIN32\_SURFACE\_EXTENSION\_NAME\ "{}VK\_KHR\_win32\_surface"{}}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abb605a7700670dd8420cc3841b939444}{VkFlags}}\ \mbox{\hyperlink{vulkan__win32_8h_ab89ca237e210dcda06c93ef3acc5caaa}{VkWin32SurfaceCreateFlagsKHR}};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vk_win32_surface_create_info_k_h_r}{VkWin32SurfaceCreateInfoKHR}}\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_aff9f2b99398eb80a2b5a146bc5534ce8}{VkStructureType}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_win32_surface_create_info_k_h_r_a84412cd00fdce3a59f9fef14d32e2419}{sType}};}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_win32_surface_create_info_k_h_r_a113d72d9f2a2b973037774cbf3d977c8}{pNext}};}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{vulkan__win32_8h_ab89ca237e210dcda06c93ef3acc5caaa}{VkWin32SurfaceCreateFlagsKHR}}\ \ \ \ \mbox{\hyperlink{struct_vk_win32_surface_create_info_k_h_r_aac29ce4120fbf7635bb7deed9369e499}{flags}};}
+\DoxyCodeLine{00040\ \ \ \ \ HINSTANCE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_win32_surface_create_info_k_h_r_a4931b55db25c4ab97f3efc60d5cb764c}{hinstance}};}
+\DoxyCodeLine{00041\ \ \ \ \ HWND\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_win32_surface_create_info_k_h_r_a5633124f624ab7bbb2bb42ceb65d45dc}{hwnd}};}
+\DoxyCodeLine{00042\ \}\ \mbox{\hyperlink{vulkan__win32_8h_a020658817e5a625228e410cc2e1b57a0}{VkWin32SurfaceCreateInfoKHR}};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{VkResult}}\ (\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\_PTR}}\ *\mbox{\hyperlink{vulkan__win32_8h_a629a6894f89017ccde196f75c52d504d}{PFN\_vkCreateWin32SurfaceKHR}})(\mbox{\hyperlink{_vulkan_8hpp_a6d9f7e27148712f2c97db45ca6991547}{VkInstance}}\ instance,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_vk_win32_surface_create_info_k_h_r}{VkWin32SurfaceCreateInfoKHR}}*\ pCreateInfo,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_vk_allocation_callbacks}{VkAllocationCallbacks}}*\ pAllocator,\ \mbox{\hyperlink{_vulkan_8hpp_a09787d7da5f3146095ed80ceccc2d794}{VkSurfaceKHR}}*\ pSurface);}
+\DoxyCodeLine{00046\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_ae5d9faf75f583010e32ee49087a15326}{VkBool32}}\ (\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\_PTR}}\ *\mbox{\hyperlink{vulkan__win32_8h_a928e0e3c3df0c8b45688218028d482ba}{PFN\_vkGetPhysicalDeviceWin32PresentationSupportKHR}})(VkPhysicalDevice\ physicalDevice,\ uint32\_t\ queueFamilyIndex);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#ifndef\ VK\_NO\_PROTOTYPES}}
+\DoxyCodeLine{00049\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a4394dd2421147ed91e838b086be25512}{VKAPI\_ATTR}}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{VkResult}}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a3856c7761d8b7260870053d0f03a0a49}{VKAPI\_CALL}}\ \mbox{\hyperlink{vulkan__win32_8h_a82d8b5f471a4b42187f092c3fedada15}{vkCreateWin32SurfaceKHR}}(}
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{_vulkan_8hpp_a6d9f7e27148712f2c97db45ca6991547}{VkInstance}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ instance,}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_vk_win32_surface_create_info_k_h_r}{VkWin32SurfaceCreateInfoKHR}}*\ \ \ \ \ \ \ \ \ \ pCreateInfo,}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_vk_allocation_callbacks}{VkAllocationCallbacks}}*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pAllocator,}
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{_vulkan_8hpp_a09787d7da5f3146095ed80ceccc2d794}{VkSurfaceKHR}}*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pSurface);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a4394dd2421147ed91e838b086be25512}{VKAPI\_ATTR}}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_ae5d9faf75f583010e32ee49087a15326}{VkBool32}}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a3856c7761d8b7260870053d0f03a0a49}{VKAPI\_CALL}}\ \mbox{\hyperlink{vulkan__win32_8h_a8ef1f1c3548aafebcf21870a838f609f}{vkGetPhysicalDeviceWin32PresentationSupportKHR}}(}
+\DoxyCodeLine{00056\ \ \ \ \ VkPhysicalDevice\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ physicalDevice,}
+\DoxyCodeLine{00057\ \ \ \ \ uint32\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ queueFamilyIndex);}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#define\ VK\_KHR\_external\_memory\_win32\ 1}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#define\ VK\_KHR\_EXTERNAL\_MEMORY\_WIN32\_SPEC\_VERSION\ 1}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#define\ VK\_KHR\_EXTERNAL\_MEMORY\_WIN32\_EXTENSION\_NAME\ "{}VK\_KHR\_external\_memory\_win32"{}}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vk_import_memory_win32_handle_info_k_h_r}{VkImportMemoryWin32HandleInfoKHR}}\ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_aff9f2b99398eb80a2b5a146bc5534ce8}{VkStructureType}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_import_memory_win32_handle_info_k_h_r_a09771f87c7c42bf14ac4b7127be999a0}{sType}};}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_import_memory_win32_handle_info_k_h_r_ae08e4255d70ec10a09db3da21e6b4c22}{pNext}};}
+\DoxyCodeLine{00067\ \ \ \ \ \mbox{\hyperlink{vulkan__core_8h_a79950eb7b6768e50d3f442d4619b011a}{VkExternalMemoryHandleTypeFlagBits}}\ \ \ \ \mbox{\hyperlink{struct_vk_import_memory_win32_handle_info_k_h_r_aaabfc971fe3d4c5a14e6146bf9f10302}{handleType}};}
+\DoxyCodeLine{00068\ \ \ \ \ HANDLE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_import_memory_win32_handle_info_k_h_r_aed26a3e32722a5c30aaf9114cefdafbb}{handle}};}
+\DoxyCodeLine{00069\ \ \ \ \ LPCWSTR\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_import_memory_win32_handle_info_k_h_r_a6bc9d6898ba25d243aa146c73b215c62}{name}};}
+\DoxyCodeLine{00070\ \}\ \mbox{\hyperlink{vulkan__win32_8h_aa14342a86e9f4be38cf437e99f69419f}{VkImportMemoryWin32HandleInfoKHR}};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vk_export_memory_win32_handle_info_k_h_r}{VkExportMemoryWin32HandleInfoKHR}}\ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_aff9f2b99398eb80a2b5a146bc5534ce8}{VkStructureType}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_export_memory_win32_handle_info_k_h_r_a14311034de45d9ed7a93370943c9b1dc}{sType}};}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_export_memory_win32_handle_info_k_h_r_a9546c605ae1290021f355501b304b6db}{pNext}};}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keyword}{const}\ SECURITY\_ATTRIBUTES*\ \ \ \ \mbox{\hyperlink{struct_vk_export_memory_win32_handle_info_k_h_r_a8c5fde59e1bafd4f5814a60e00d9b338}{pAttributes}};}
+\DoxyCodeLine{00076\ \ \ \ \ DWORD\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_export_memory_win32_handle_info_k_h_r_af3a6bfb2656cea2bf82a9f70465d5bf7}{dwAccess}};}
+\DoxyCodeLine{00077\ \ \ \ \ LPCWSTR\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_export_memory_win32_handle_info_k_h_r_af84cbe4aa975b8a2d525da9ace379645}{name}};}
+\DoxyCodeLine{00078\ \}\ \mbox{\hyperlink{vulkan__win32_8h_af196bd289023d5ad77750f574288cdfa}{VkExportMemoryWin32HandleInfoKHR}};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vk_memory_win32_handle_properties_k_h_r}{VkMemoryWin32HandlePropertiesKHR}}\ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_aff9f2b99398eb80a2b5a146bc5534ce8}{VkStructureType}}\ \ \ \ \mbox{\hyperlink{struct_vk_memory_win32_handle_properties_k_h_r_aa562f39b137ed3532c70a4fb08706182}{sType}};}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_memory_win32_handle_properties_k_h_r_a4e23fd4318bc327c8829e0bb4daea6c8}{pNext}};}
+\DoxyCodeLine{00083\ \ \ \ \ uint32\_t\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_memory_win32_handle_properties_k_h_r_a3b7477f50e76a806d781a4919b03a387}{memoryTypeBits}};}
+\DoxyCodeLine{00084\ \}\ \mbox{\hyperlink{vulkan__win32_8h_aa40a6e323c282847051d7a9871d1b419}{VkMemoryWin32HandlePropertiesKHR}};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vk_memory_get_win32_handle_info_k_h_r}{VkMemoryGetWin32HandleInfoKHR}}\ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_aff9f2b99398eb80a2b5a146bc5534ce8}{VkStructureType}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_memory_get_win32_handle_info_k_h_r_ae5871f95f20e0d693a53f07681fd8041}{sType}};}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_memory_get_win32_handle_info_k_h_r_a581d29966f3d5c9b8570680a494e2d7e}{pNext}};}
+\DoxyCodeLine{00089\ \ \ \ \ VkDeviceMemory\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_memory_get_win32_handle_info_k_h_r_ac3a0d5fb62d06af5c320951777f624e5}{memory}};}
+\DoxyCodeLine{00090\ \ \ \ \ \mbox{\hyperlink{vulkan__core_8h_a79950eb7b6768e50d3f442d4619b011a}{VkExternalMemoryHandleTypeFlagBits}}\ \ \ \ \mbox{\hyperlink{struct_vk_memory_get_win32_handle_info_k_h_r_a5dd25a2c960476e508f149fe829a75ed}{handleType}};}
+\DoxyCodeLine{00091\ \}\ \mbox{\hyperlink{vulkan__win32_8h_a0645d372fb682c396f55a606c3e2558e}{VkMemoryGetWin32HandleInfoKHR}};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{VkResult}}\ (\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\_PTR}}\ *\mbox{\hyperlink{vulkan__win32_8h_a58d1ee5735642bed66c85d5a2b96ef83}{PFN\_vkGetMemoryWin32HandleKHR}})(VkDevice\ device,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_vk_memory_get_win32_handle_info_k_h_r}{VkMemoryGetWin32HandleInfoKHR}}*\ pGetWin32HandleInfo,\ HANDLE*\ pHandle);}
+\DoxyCodeLine{00095\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{VkResult}}\ (\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\_PTR}}\ *\mbox{\hyperlink{vulkan__win32_8h_a19c79ca3ff1006f76eae0a0c7eee253e}{PFN\_vkGetMemoryWin32HandlePropertiesKHR}})(VkDevice\ device,\ \mbox{\hyperlink{vulkan__core_8h_a79950eb7b6768e50d3f442d4619b011a}{VkExternalMemoryHandleTypeFlagBits}}\ handleType,\ HANDLE\ handle,\ \mbox{\hyperlink{struct_vk_memory_win32_handle_properties_k_h_r}{VkMemoryWin32HandlePropertiesKHR}}*\ pMemoryWin32HandleProperties);}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\#ifndef\ VK\_NO\_PROTOTYPES}}
+\DoxyCodeLine{00098\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a4394dd2421147ed91e838b086be25512}{VKAPI\_ATTR}}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{VkResult}}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a3856c7761d8b7260870053d0f03a0a49}{VKAPI\_CALL}}\ \mbox{\hyperlink{vulkan__win32_8h_a1f89614c0b7339390eda8706272d838b}{vkGetMemoryWin32HandleKHR}}(}
+\DoxyCodeLine{00099\ \ \ \ \ VkDevice\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ device,}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_vk_memory_get_win32_handle_info_k_h_r}{VkMemoryGetWin32HandleInfoKHR}}*\ \ \ \ \ \ \ \ pGetWin32HandleInfo,}
+\DoxyCodeLine{00101\ \ \ \ \ HANDLE*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pHandle);}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a4394dd2421147ed91e838b086be25512}{VKAPI\_ATTR}}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{VkResult}}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a3856c7761d8b7260870053d0f03a0a49}{VKAPI\_CALL}}\ \mbox{\hyperlink{vulkan__win32_8h_ad1d8348fee00bfd2af8bd765a9f85eff}{vkGetMemoryWin32HandlePropertiesKHR}}(}
+\DoxyCodeLine{00104\ \ \ \ \ VkDevice\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ device,}
+\DoxyCodeLine{00105\ \ \ \ \ \mbox{\hyperlink{vulkan__core_8h_a79950eb7b6768e50d3f442d4619b011a}{VkExternalMemoryHandleTypeFlagBits}}\ \ \ \ \ \ \ \ \ \ handleType,}
+\DoxyCodeLine{00106\ \ \ \ \ HANDLE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ handle,}
+\DoxyCodeLine{00107\ \ \ \ \ \mbox{\hyperlink{struct_vk_memory_win32_handle_properties_k_h_r}{VkMemoryWin32HandlePropertiesKHR}}*\ \ \ \ \ \ \ \ \ \ \ pMemoryWin32HandleProperties);}
+\DoxyCodeLine{00108\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \textcolor{preprocessor}{\#define\ VK\_KHR\_win32\_keyed\_mutex\ 1}}
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\#define\ VK\_KHR\_WIN32\_KEYED\_MUTEX\_SPEC\_VERSION\ 1}}
+\DoxyCodeLine{00112\ \textcolor{preprocessor}{\#define\ VK\_KHR\_WIN32\_KEYED\_MUTEX\_EXTENSION\_NAME\ "{}VK\_KHR\_win32\_keyed\_mutex"{}}}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vk_win32_keyed_mutex_acquire_release_info_k_h_r}{VkWin32KeyedMutexAcquireReleaseInfoKHR}}\ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_aff9f2b99398eb80a2b5a146bc5534ce8}{VkStructureType}}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_win32_keyed_mutex_acquire_release_info_k_h_r_a5a164b8249a49b4901261b76a7fd5810}{sType}};}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_win32_keyed_mutex_acquire_release_info_k_h_r_a49bda6178c00bf2e107acb858248e49e}{pNext}};}
+\DoxyCodeLine{00117\ \ \ \ \ uint32\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_win32_keyed_mutex_acquire_release_info_k_h_r_a27894fbe57f555806883f795adc46d54}{acquireCount}};}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keyword}{const}\ VkDeviceMemory*\ \ \ \ \mbox{\hyperlink{struct_vk_win32_keyed_mutex_acquire_release_info_k_h_r_af2728c0622a8db050d9784d4808de9a6}{pAcquireSyncs}};}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keyword}{const}\ uint64\_t*\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_win32_keyed_mutex_acquire_release_info_k_h_r_a2c3147da6f6207378082d4db5f77e01b}{pAcquireKeys}};}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keyword}{const}\ uint32\_t*\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_win32_keyed_mutex_acquire_release_info_k_h_r_a0a1ea3331fd9a6deb18c06e17410927e}{pAcquireTimeouts}};}
+\DoxyCodeLine{00121\ \ \ \ \ uint32\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_win32_keyed_mutex_acquire_release_info_k_h_r_a8dd32bd90f8ba2220d46eb60fbd8dd04}{releaseCount}};}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keyword}{const}\ VkDeviceMemory*\ \ \ \ \mbox{\hyperlink{struct_vk_win32_keyed_mutex_acquire_release_info_k_h_r_a4ccf88865345ca966a828987f2f44c8f}{pReleaseSyncs}};}
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keyword}{const}\ uint64\_t*\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_win32_keyed_mutex_acquire_release_info_k_h_r_a0e6254a15fbbc0af292cbd57c1c6cc4a}{pReleaseKeys}};}
+\DoxyCodeLine{00124\ \}\ \mbox{\hyperlink{vulkan__win32_8h_a3ed7be244da8ab1a6418ececc61e24d5}{VkWin32KeyedMutexAcquireReleaseInfoKHR}};}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \textcolor{preprocessor}{\#define\ VK\_KHR\_external\_semaphore\_win32\ 1}}
+\DoxyCodeLine{00129\ \textcolor{preprocessor}{\#define\ VK\_KHR\_EXTERNAL\_SEMAPHORE\_WIN32\_SPEC\_VERSION\ 1}}
+\DoxyCodeLine{00130\ \textcolor{preprocessor}{\#define\ VK\_KHR\_EXTERNAL\_SEMAPHORE\_WIN32\_EXTENSION\_NAME\ "{}VK\_KHR\_external\_semaphore\_win32"{}}}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vk_import_semaphore_win32_handle_info_k_h_r}{VkImportSemaphoreWin32HandleInfoKHR}}\ \{}
+\DoxyCodeLine{00133\ \ \ \ \ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_aff9f2b99398eb80a2b5a146bc5534ce8}{VkStructureType}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_import_semaphore_win32_handle_info_k_h_r_a0b4d61163d963bbe6d2afbe6dcf91e9f}{sType}};}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_import_semaphore_win32_handle_info_k_h_r_a97646829c878e9014930316761a1a995}{pNext}};}
+\DoxyCodeLine{00135\ \ \ \ \ VkSemaphore\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_import_semaphore_win32_handle_info_k_h_r_aabc6f4d00d312d66cc0a5684c4383e33}{semaphore}};}
+\DoxyCodeLine{00136\ \ \ \ \ \mbox{\hyperlink{vulkan__core_8h_a9e66df69e9634907d5192f12a38a922e}{VkSemaphoreImportFlags}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_import_semaphore_win32_handle_info_k_h_r_ab7e6eac91c339603ec3bd326d0eac6e2}{flags}};}
+\DoxyCodeLine{00137\ \ \ \ \ \mbox{\hyperlink{vulkan__core_8h_af6acf664394c96f2ada89ce7cf9c540f}{VkExternalSemaphoreHandleTypeFlagBits}}\ \ \ \ \mbox{\hyperlink{struct_vk_import_semaphore_win32_handle_info_k_h_r_a0bda981e8ae6b70ec7a67c52a0561386}{handleType}};}
+\DoxyCodeLine{00138\ \ \ \ \ HANDLE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_import_semaphore_win32_handle_info_k_h_r_adbf8046f5928f9c448a671cd8bdc4da6}{handle}};}
+\DoxyCodeLine{00139\ \ \ \ \ LPCWSTR\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_import_semaphore_win32_handle_info_k_h_r_a7df93a94c0447441860147277345dfe2}{name}};}
+\DoxyCodeLine{00140\ \}\ \mbox{\hyperlink{vulkan__win32_8h_aac91016a32b603d3256ebd23c81d52d2}{VkImportSemaphoreWin32HandleInfoKHR}};}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vk_export_semaphore_win32_handle_info_k_h_r}{VkExportSemaphoreWin32HandleInfoKHR}}\ \{}
+\DoxyCodeLine{00143\ \ \ \ \ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_aff9f2b99398eb80a2b5a146bc5534ce8}{VkStructureType}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_export_semaphore_win32_handle_info_k_h_r_a35acf4488b31a4b45552fc0ad6b67809}{sType}};}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_export_semaphore_win32_handle_info_k_h_r_a30d47095513aa72f4e89526abc25a1ea}{pNext}};}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keyword}{const}\ SECURITY\_ATTRIBUTES*\ \ \ \ \mbox{\hyperlink{struct_vk_export_semaphore_win32_handle_info_k_h_r_aec3a27749e93fbeb14e643c6246126fb}{pAttributes}};}
+\DoxyCodeLine{00146\ \ \ \ \ DWORD\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_export_semaphore_win32_handle_info_k_h_r_add42c4a5876054ea47f04d81b04726d4}{dwAccess}};}
+\DoxyCodeLine{00147\ \ \ \ \ LPCWSTR\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_export_semaphore_win32_handle_info_k_h_r_a7c46315c7a415deff042dd7878b187ff}{name}};}
+\DoxyCodeLine{00148\ \}\ \mbox{\hyperlink{vulkan__win32_8h_ac432733ba9b9a74d67e03db91b5666c0}{VkExportSemaphoreWin32HandleInfoKHR}};}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vk_d3_d12_fence_submit_info_k_h_r}{VkD3D12FenceSubmitInfoKHR}}\ \{}
+\DoxyCodeLine{00151\ \ \ \ \ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_aff9f2b99398eb80a2b5a146bc5534ce8}{VkStructureType}}\ \ \ \ \mbox{\hyperlink{struct_vk_d3_d12_fence_submit_info_k_h_r_a4cf0daff2298f3aa91cde55b6a027e96}{sType}};}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_d3_d12_fence_submit_info_k_h_r_af488abf7e4a0ae6cfe79af7325449445}{pNext}};}
+\DoxyCodeLine{00153\ \ \ \ \ uint32\_t\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_d3_d12_fence_submit_info_k_h_r_a490d150d8a934cf6d64403546a465db5}{waitSemaphoreValuesCount}};}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keyword}{const}\ uint64\_t*\ \ \ \ \mbox{\hyperlink{struct_vk_d3_d12_fence_submit_info_k_h_r_a7d73472ef64c8aaf0a2766b02ea3668a}{pWaitSemaphoreValues}};}
+\DoxyCodeLine{00155\ \ \ \ \ uint32\_t\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_d3_d12_fence_submit_info_k_h_r_adbec098ebb94c12e9dd700dabfce8354}{signalSemaphoreValuesCount}};}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keyword}{const}\ uint64\_t*\ \ \ \ \mbox{\hyperlink{struct_vk_d3_d12_fence_submit_info_k_h_r_a92491c3bb33ca70550a90c6e21f09460}{pSignalSemaphoreValues}};}
+\DoxyCodeLine{00157\ \}\ \mbox{\hyperlink{vulkan__win32_8h_ada9dd5a1bb9dbebb6c577c91a6ec07e2}{VkD3D12FenceSubmitInfoKHR}};}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vk_semaphore_get_win32_handle_info_k_h_r}{VkSemaphoreGetWin32HandleInfoKHR}}\ \{}
+\DoxyCodeLine{00160\ \ \ \ \ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_aff9f2b99398eb80a2b5a146bc5534ce8}{VkStructureType}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_semaphore_get_win32_handle_info_k_h_r_a124097483b7a9c4354c1957a1b237989}{sType}};}
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_semaphore_get_win32_handle_info_k_h_r_a60745f232745d1104c3f51fe5cd56e8f}{pNext}};}
+\DoxyCodeLine{00162\ \ \ \ \ VkSemaphore\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_semaphore_get_win32_handle_info_k_h_r_ad70100dcc9bc9cc78da7945e898c1da9}{semaphore}};}
+\DoxyCodeLine{00163\ \ \ \ \ \mbox{\hyperlink{vulkan__core_8h_af6acf664394c96f2ada89ce7cf9c540f}{VkExternalSemaphoreHandleTypeFlagBits}}\ \ \ \ \mbox{\hyperlink{struct_vk_semaphore_get_win32_handle_info_k_h_r_a707e59260d6f27f5fab57cd1785dd629}{handleType}};}
+\DoxyCodeLine{00164\ \}\ \mbox{\hyperlink{vulkan__win32_8h_a8952d9929bf75ada4b321647c16256a3}{VkSemaphoreGetWin32HandleInfoKHR}};}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{VkResult}}\ (\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\_PTR}}\ *\mbox{\hyperlink{vulkan__win32_8h_acac89312de11ca916346450ea029d66d}{PFN\_vkImportSemaphoreWin32HandleKHR}})(VkDevice\ device,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_vk_import_semaphore_win32_handle_info_k_h_r}{VkImportSemaphoreWin32HandleInfoKHR}}*\ pImportSemaphoreWin32HandleInfo);}
+\DoxyCodeLine{00168\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{VkResult}}\ (\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\_PTR}}\ *\mbox{\hyperlink{vulkan__win32_8h_a10920525a25fa0b477efd0fa750c9251}{PFN\_vkGetSemaphoreWin32HandleKHR}})(VkDevice\ device,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_vk_semaphore_get_win32_handle_info_k_h_r}{VkSemaphoreGetWin32HandleInfoKHR}}*\ pGetWin32HandleInfo,\ HANDLE*\ pHandle);}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ \textcolor{preprocessor}{\#ifndef\ VK\_NO\_PROTOTYPES}}
+\DoxyCodeLine{00171\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a4394dd2421147ed91e838b086be25512}{VKAPI\_ATTR}}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{VkResult}}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a3856c7761d8b7260870053d0f03a0a49}{VKAPI\_CALL}}\ \mbox{\hyperlink{vulkan__win32_8h_a2fd6470e473d9e2a2b45e856d96a4758}{vkImportSemaphoreWin32HandleKHR}}(}
+\DoxyCodeLine{00172\ \ \ \ \ VkDevice\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ device,}
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_vk_import_semaphore_win32_handle_info_k_h_r}{VkImportSemaphoreWin32HandleInfoKHR}}*\ \ pImportSemaphoreWin32HandleInfo);}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a4394dd2421147ed91e838b086be25512}{VKAPI\_ATTR}}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{VkResult}}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a3856c7761d8b7260870053d0f03a0a49}{VKAPI\_CALL}}\ \mbox{\hyperlink{vulkan__win32_8h_a05e6cf0a6862934265bf17eccdd192ab}{vkGetSemaphoreWin32HandleKHR}}(}
+\DoxyCodeLine{00176\ \ \ \ \ VkDevice\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ device,}
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_vk_semaphore_get_win32_handle_info_k_h_r}{VkSemaphoreGetWin32HandleInfoKHR}}*\ \ \ \ \ pGetWin32HandleInfo,}
+\DoxyCodeLine{00178\ \ \ \ \ HANDLE*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pHandle);}
+\DoxyCodeLine{00179\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ \textcolor{preprocessor}{\#define\ VK\_KHR\_external\_fence\_win32\ 1}}
+\DoxyCodeLine{00182\ \textcolor{preprocessor}{\#define\ VK\_KHR\_EXTERNAL\_FENCE\_WIN32\_SPEC\_VERSION\ 1}}
+\DoxyCodeLine{00183\ \textcolor{preprocessor}{\#define\ VK\_KHR\_EXTERNAL\_FENCE\_WIN32\_EXTENSION\_NAME\ "{}VK\_KHR\_external\_fence\_win32"{}}}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00185\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vk_import_fence_win32_handle_info_k_h_r}{VkImportFenceWin32HandleInfoKHR}}\ \{}
+\DoxyCodeLine{00186\ \ \ \ \ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_aff9f2b99398eb80a2b5a146bc5534ce8}{VkStructureType}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_import_fence_win32_handle_info_k_h_r_a335458b6b1ab05f07bf6e3636ccda843}{sType}};}
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_import_fence_win32_handle_info_k_h_r_acfc5384cb5c517bb385e8eee3588d574}{pNext}};}
+\DoxyCodeLine{00188\ \ \ \ \ VkFence\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_import_fence_win32_handle_info_k_h_r_a3cd789dfd05e6af4e42ef03edd7d7b04}{fence}};}
+\DoxyCodeLine{00189\ \ \ \ \ \mbox{\hyperlink{vulkan__core_8h_a7bc8ce9acaa4360c11f6b58d5ad53833}{VkFenceImportFlags}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_import_fence_win32_handle_info_k_h_r_ab8bdc580d7fcbd38834b37441325e704}{flags}};}
+\DoxyCodeLine{00190\ \ \ \ \ \mbox{\hyperlink{vulkan__core_8h_aad7eb47e920881ae3c109d412585b01b}{VkExternalFenceHandleTypeFlagBits}}\ \ \ \ \mbox{\hyperlink{struct_vk_import_fence_win32_handle_info_k_h_r_ab725828bc3a617c15efc22ea04cd5a69}{handleType}};}
+\DoxyCodeLine{00191\ \ \ \ \ HANDLE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_import_fence_win32_handle_info_k_h_r_abbf24bfbdef973b810e0ff53d193e0e1}{handle}};}
+\DoxyCodeLine{00192\ \ \ \ \ LPCWSTR\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_import_fence_win32_handle_info_k_h_r_ac344a5969f265808a7e5818c52b64ec0}{name}};}
+\DoxyCodeLine{00193\ \}\ \mbox{\hyperlink{vulkan__win32_8h_a5c0aefb2c0fe7685452ab7fa3e7586c0}{VkImportFenceWin32HandleInfoKHR}};}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00195\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vk_export_fence_win32_handle_info_k_h_r}{VkExportFenceWin32HandleInfoKHR}}\ \{}
+\DoxyCodeLine{00196\ \ \ \ \ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_aff9f2b99398eb80a2b5a146bc5534ce8}{VkStructureType}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_export_fence_win32_handle_info_k_h_r_a39181d8323d2ca4c35189c92a345f5b2}{sType}};}
+\DoxyCodeLine{00197\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_export_fence_win32_handle_info_k_h_r_a963bf70710bc828fbdd4482507f3f8de}{pNext}};}
+\DoxyCodeLine{00198\ \ \ \ \ \textcolor{keyword}{const}\ SECURITY\_ATTRIBUTES*\ \ \ \ \mbox{\hyperlink{struct_vk_export_fence_win32_handle_info_k_h_r_a16e1c1748eac10a12d71e998c4c7f8e6}{pAttributes}};}
+\DoxyCodeLine{00199\ \ \ \ \ DWORD\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_export_fence_win32_handle_info_k_h_r_ad7a02062996f1a82e7873b38eb21c259}{dwAccess}};}
+\DoxyCodeLine{00200\ \ \ \ \ LPCWSTR\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_export_fence_win32_handle_info_k_h_r_aef65775529e162e17c49c6194b6d153e}{name}};}
+\DoxyCodeLine{00201\ \}\ \mbox{\hyperlink{vulkan__win32_8h_a532f7d107ce5479390c56eb64b54068a}{VkExportFenceWin32HandleInfoKHR}};}
+\DoxyCodeLine{00202\ }
+\DoxyCodeLine{00203\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vk_fence_get_win32_handle_info_k_h_r}{VkFenceGetWin32HandleInfoKHR}}\ \{}
+\DoxyCodeLine{00204\ \ \ \ \ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_aff9f2b99398eb80a2b5a146bc5534ce8}{VkStructureType}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_fence_get_win32_handle_info_k_h_r_a055ff3c080316a90cd8e12af10928efe}{sType}};}
+\DoxyCodeLine{00205\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_fence_get_win32_handle_info_k_h_r_a5aec4b7e3899921a9b9f9f1c82a0ece9}{pNext}};}
+\DoxyCodeLine{00206\ \ \ \ \ VkFence\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_fence_get_win32_handle_info_k_h_r_a25962cb121f8d6e15f581753b8ee75e9}{fence}};}
+\DoxyCodeLine{00207\ \ \ \ \ \mbox{\hyperlink{vulkan__core_8h_aad7eb47e920881ae3c109d412585b01b}{VkExternalFenceHandleTypeFlagBits}}\ \ \ \ \mbox{\hyperlink{struct_vk_fence_get_win32_handle_info_k_h_r_a5c73dea4d7ac333646cd924259e52a05}{handleType}};}
+\DoxyCodeLine{00208\ \}\ \mbox{\hyperlink{vulkan__win32_8h_a6f37a2549158d2400b9d09a556d41a89}{VkFenceGetWin32HandleInfoKHR}};}
+\DoxyCodeLine{00209\ }
+\DoxyCodeLine{00210\ }
+\DoxyCodeLine{00211\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{VkResult}}\ (\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\_PTR}}\ *\mbox{\hyperlink{vulkan__win32_8h_ac1616ba407f703d43fc69aa313ae1a12}{PFN\_vkImportFenceWin32HandleKHR}})(VkDevice\ device,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_vk_import_fence_win32_handle_info_k_h_r}{VkImportFenceWin32HandleInfoKHR}}*\ pImportFenceWin32HandleInfo);}
+\DoxyCodeLine{00212\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{VkResult}}\ (\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\_PTR}}\ *\mbox{\hyperlink{vulkan__win32_8h_ae14b93f4ac8e584a0665bfaad3f62cb4}{PFN\_vkGetFenceWin32HandleKHR}})(VkDevice\ device,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_vk_fence_get_win32_handle_info_k_h_r}{VkFenceGetWin32HandleInfoKHR}}*\ pGetWin32HandleInfo,\ HANDLE*\ pHandle);}
+\DoxyCodeLine{00213\ }
+\DoxyCodeLine{00214\ \textcolor{preprocessor}{\#ifndef\ VK\_NO\_PROTOTYPES}}
+\DoxyCodeLine{00215\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a4394dd2421147ed91e838b086be25512}{VKAPI\_ATTR}}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{VkResult}}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a3856c7761d8b7260870053d0f03a0a49}{VKAPI\_CALL}}\ \mbox{\hyperlink{vulkan__win32_8h_a463701a6f4d32e6021eca42006623862}{vkImportFenceWin32HandleKHR}}(}
+\DoxyCodeLine{00216\ \ \ \ \ VkDevice\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ device,}
+\DoxyCodeLine{00217\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_vk_import_fence_win32_handle_info_k_h_r}{VkImportFenceWin32HandleInfoKHR}}*\ \ \ \ \ \ pImportFenceWin32HandleInfo);}
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00219\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a4394dd2421147ed91e838b086be25512}{VKAPI\_ATTR}}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{VkResult}}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a3856c7761d8b7260870053d0f03a0a49}{VKAPI\_CALL}}\ \mbox{\hyperlink{vulkan__win32_8h_a0eca8002468bc9707e4b2bdd16b6f861}{vkGetFenceWin32HandleKHR}}(}
+\DoxyCodeLine{00220\ \ \ \ \ VkDevice\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ device,}
+\DoxyCodeLine{00221\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_vk_fence_get_win32_handle_info_k_h_r}{VkFenceGetWin32HandleInfoKHR}}*\ \ \ \ \ \ \ \ \ pGetWin32HandleInfo,}
+\DoxyCodeLine{00222\ \ \ \ \ HANDLE*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pHandle);}
+\DoxyCodeLine{00223\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00224\ }
+\DoxyCodeLine{00225\ \textcolor{preprocessor}{\#define\ VK\_NV\_external\_memory\_win32\ 1}}
+\DoxyCodeLine{00226\ \textcolor{preprocessor}{\#define\ VK\_NV\_EXTERNAL\_MEMORY\_WIN32\_SPEC\_VERSION\ 1}}
+\DoxyCodeLine{00227\ \textcolor{preprocessor}{\#define\ VK\_NV\_EXTERNAL\_MEMORY\_WIN32\_EXTENSION\_NAME\ "{}VK\_NV\_external\_memory\_win32"{}}}
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00229\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vk_import_memory_win32_handle_info_n_v}{VkImportMemoryWin32HandleInfoNV}}\ \{}
+\DoxyCodeLine{00230\ \ \ \ \ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_aff9f2b99398eb80a2b5a146bc5534ce8}{VkStructureType}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_import_memory_win32_handle_info_n_v_abf9ca24f76ddf92fde2e138b38a1dc67}{sType}};}
+\DoxyCodeLine{00231\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_import_memory_win32_handle_info_n_v_a7d4b1708b6ff1faf37620b79ede7ae31}{pNext}};}
+\DoxyCodeLine{00232\ \ \ \ \ \mbox{\hyperlink{vulkan__core_8h_a50765158ba9f29f4e205d3dcf164d7e6}{VkExternalMemoryHandleTypeFlagsNV}}\ \ \ \ \mbox{\hyperlink{struct_vk_import_memory_win32_handle_info_n_v_a830968c34ffc6a4c1d954c977c4f986e}{handleType}};}
+\DoxyCodeLine{00233\ \ \ \ \ HANDLE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_import_memory_win32_handle_info_n_v_ae399fde8fbb554cd5dca52853e6044c2}{handle}};}
+\DoxyCodeLine{00234\ \}\ \mbox{\hyperlink{vulkan__win32_8h_a9a5fea02df90087240fc637568eeb65c}{VkImportMemoryWin32HandleInfoNV}};}
+\DoxyCodeLine{00235\ }
+\DoxyCodeLine{00236\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vk_export_memory_win32_handle_info_n_v}{VkExportMemoryWin32HandleInfoNV}}\ \{}
+\DoxyCodeLine{00237\ \ \ \ \ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_aff9f2b99398eb80a2b5a146bc5534ce8}{VkStructureType}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_export_memory_win32_handle_info_n_v_a2d429297173cf7371ea796f943c40436}{sType}};}
+\DoxyCodeLine{00238\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_export_memory_win32_handle_info_n_v_a76a22623388da8c9308ad3a87040da4f}{pNext}};}
+\DoxyCodeLine{00239\ \ \ \ \ \textcolor{keyword}{const}\ SECURITY\_ATTRIBUTES*\ \ \ \ \mbox{\hyperlink{struct_vk_export_memory_win32_handle_info_n_v_a9493d5e36f0811c5df4677799a0316e8}{pAttributes}};}
+\DoxyCodeLine{00240\ \ \ \ \ DWORD\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_export_memory_win32_handle_info_n_v_a182e7b31ae1045acd24a856a159a9135}{dwAccess}};}
+\DoxyCodeLine{00241\ \}\ \mbox{\hyperlink{vulkan__win32_8h_a9376ac7fc68c06ecf6d4077fec4191e5}{VkExportMemoryWin32HandleInfoNV}};}
+\DoxyCodeLine{00242\ }
+\DoxyCodeLine{00243\ }
+\DoxyCodeLine{00244\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{VkResult}}\ (\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\_PTR}}\ *\mbox{\hyperlink{vulkan__win32_8h_a4dc46e506ac986e022724eb537b71eef}{PFN\_vkGetMemoryWin32HandleNV}})(VkDevice\ device,\ VkDeviceMemory\ memory,\ \mbox{\hyperlink{vulkan__core_8h_a50765158ba9f29f4e205d3dcf164d7e6}{VkExternalMemoryHandleTypeFlagsNV}}\ handleType,\ HANDLE*\ pHandle);}
+\DoxyCodeLine{00245\ }
+\DoxyCodeLine{00246\ \textcolor{preprocessor}{\#ifndef\ VK\_NO\_PROTOTYPES}}
+\DoxyCodeLine{00247\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a4394dd2421147ed91e838b086be25512}{VKAPI\_ATTR}}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{VkResult}}\ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a3856c7761d8b7260870053d0f03a0a49}{VKAPI\_CALL}}\ \mbox{\hyperlink{vulkan__win32_8h_ad7c53122740d5fef46151d3f9b76f977}{vkGetMemoryWin32HandleNV}}(}
+\DoxyCodeLine{00248\ \ \ \ \ VkDevice\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ device,}
+\DoxyCodeLine{00249\ \ \ \ \ VkDeviceMemory\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ memory,}
+\DoxyCodeLine{00250\ \ \ \ \ \mbox{\hyperlink{vulkan__core_8h_a50765158ba9f29f4e205d3dcf164d7e6}{VkExternalMemoryHandleTypeFlagsNV}}\ \ \ \ \ \ \ \ \ \ \ handleType,}
+\DoxyCodeLine{00251\ \ \ \ \ HANDLE*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pHandle);}
+\DoxyCodeLine{00252\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00253\ }
+\DoxyCodeLine{00254\ \textcolor{preprocessor}{\#define\ VK\_NV\_win32\_keyed\_mutex\ 1}}
+\DoxyCodeLine{00255\ \textcolor{preprocessor}{\#define\ VK\_NV\_WIN32\_KEYED\_MUTEX\_SPEC\_VERSION\ 1}}
+\DoxyCodeLine{00256\ \textcolor{preprocessor}{\#define\ VK\_NV\_WIN32\_KEYED\_MUTEX\_EXTENSION\_NAME\ "{}VK\_NV\_win32\_keyed\_mutex"{}}}
+\DoxyCodeLine{00257\ }
+\DoxyCodeLine{00258\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vk_win32_keyed_mutex_acquire_release_info_n_v}{VkWin32KeyedMutexAcquireReleaseInfoNV}}\ \{}
+\DoxyCodeLine{00259\ \ \ \ \ \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_aff9f2b99398eb80a2b5a146bc5534ce8}{VkStructureType}}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_win32_keyed_mutex_acquire_release_info_n_v_a91a6b2968aba3a5d3df4c532d7757215}{sType}};}
+\DoxyCodeLine{00260\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_win32_keyed_mutex_acquire_release_info_n_v_ab37e3276e9e923396eb97600d73596cf}{pNext}};}
+\DoxyCodeLine{00261\ \ \ \ \ uint32\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_win32_keyed_mutex_acquire_release_info_n_v_ab97822ac3a522c9996e24d7df0a147de}{acquireCount}};}
+\DoxyCodeLine{00262\ \ \ \ \ \textcolor{keyword}{const}\ VkDeviceMemory*\ \ \ \ \mbox{\hyperlink{struct_vk_win32_keyed_mutex_acquire_release_info_n_v_a1b207fd2b1ebd4c652b7708513cc07d3}{pAcquireSyncs}};}
+\DoxyCodeLine{00263\ \ \ \ \ \textcolor{keyword}{const}\ uint64\_t*\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_win32_keyed_mutex_acquire_release_info_n_v_ac345675e8992da5b3c90633292717a4c}{pAcquireKeys}};}
+\DoxyCodeLine{00264\ \ \ \ \ \textcolor{keyword}{const}\ uint32\_t*\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_win32_keyed_mutex_acquire_release_info_n_v_a56056663a29b711a17724a95234e9aa5}{pAcquireTimeoutMilliseconds}};}
+\DoxyCodeLine{00265\ \ \ \ \ uint32\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_win32_keyed_mutex_acquire_release_info_n_v_a946645b8cd5da9df88fcda74ca64f30f}{releaseCount}};}
+\DoxyCodeLine{00266\ \ \ \ \ \textcolor{keyword}{const}\ VkDeviceMemory*\ \ \ \ \mbox{\hyperlink{struct_vk_win32_keyed_mutex_acquire_release_info_n_v_a86ae77bc6a1fde5aa7f209f3276e1abf}{pReleaseSyncs}};}
+\DoxyCodeLine{00267\ \ \ \ \ \textcolor{keyword}{const}\ uint64\_t*\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_vk_win32_keyed_mutex_acquire_release_info_n_v_a6738ae245524f4f3988946ad76b0db43}{pReleaseKeys}};}
+\DoxyCodeLine{00268\ \}\ \mbox{\hyperlink{vulkan__win32_8h_a0465783293beabf201cd8ac4d50e4325}{VkWin32KeyedMutexAcquireReleaseInfoNV}};}
+\DoxyCodeLine{00269\ }
+\DoxyCodeLine{00270\ }
+\DoxyCodeLine{00271\ }
+\DoxyCodeLine{00272\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00273\ \}}
+\DoxyCodeLine{00274\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00275\ }
+\DoxyCodeLine{00276\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

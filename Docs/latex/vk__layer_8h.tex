@@ -1,0 +1,303 @@
+\doxysection{Dokumentacja pliku cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/extlibs/headers/vulkan/vk\+\_\+layer.h}
+\hypertarget{vk__layer_8h}{}\label{vk__layer_8h}\index{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/vulkan/vk\_layer.h@{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/vulkan/vk\_layer.h}}
+{\ttfamily \#include "{}vulkan.\+h"{}}\newline
+Wykres zależności załączania dla vk\+\_\+layer.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{vk__layer_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_vk_negotiate_layer_interface}{Vk\+Negotiate\+Layer\+Interface}}
+\item 
+struct \mbox{\hyperlink{struct_vk_layer_instance_link__}{Vk\+Layer\+Instance\+Link\+\_\+}}
+\item 
+struct \mbox{\hyperlink{struct_vk_layer_device_info__}{Vk\+Layer\+Device\+Info\+\_\+}}
+\item 
+struct \mbox{\hyperlink{struct_vk_layer_instance_create_info}{Vk\+Layer\+Instance\+Create\+Info}}
+\item 
+struct \mbox{\hyperlink{struct_vk_layer_device_link__}{Vk\+Layer\+Device\+Link\+\_\+}}
+\item 
+struct \mbox{\hyperlink{struct_vk_layer_device_create_info}{Vk\+Layer\+Device\+Create\+Info}}
+\item 
+struct \mbox{\hyperlink{struct_vk_chain_header}{Vk\+Chain\+Header}}
+\item 
+struct \mbox{\hyperlink{struct_vk_enumerate_instance_extension_properties_chain}{Vk\+Enumerate\+Instance\+Extension\+Properties\+Chain}}
+\item 
+struct \mbox{\hyperlink{struct_vk_enumerate_instance_layer_properties_chain}{Vk\+Enumerate\+Instance\+Layer\+Properties\+Chain}}
+\item 
+struct \mbox{\hyperlink{struct_vk_enumerate_instance_version_chain}{Vk\+Enumerate\+Instance\+Version\+Chain}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Definicje}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{vk__layer_8h_a1e9bb7f50255204a0fad5e5e8de7304b}{VK\+\_\+\+LAYER\+\_\+\+EXPORT}}
+\item 
+\#define \mbox{\hyperlink{vk__layer_8h_a7f53a5b38e8cd531fe269e264e29038c}{MAX\+\_\+\+NUM\+\_\+\+UNKNOWN\+\_\+\+EXTS}}~250
+\item 
+\#define \mbox{\hyperlink{vk__layer_8h_a9714937d688d291f0cdd0558bbbf6173}{CURRENT\+\_\+\+LOADER\+\_\+\+LAYER\+\_\+\+INTERFACE\+\_\+\+VERSION}}~2
+\item 
+\#define \mbox{\hyperlink{vk__layer_8h_a2b4f8c10c79c80b68e9ab05d8f435d70}{MIN\+\_\+\+SUPPORTED\+\_\+\+LOADER\+\_\+\+LAYER\+\_\+\+INTERFACE\+\_\+\+VERSION}}~1
+\item 
+\#define \mbox{\hyperlink{vk__layer_8h_aa4b02eb714a34dfb8f70ba96b48f4767}{VK\+\_\+\+CURRENT\+\_\+\+CHAIN\+\_\+\+VERSION}}~1
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Definicje typów}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_ac604c97c18d2ad5be6edb8de8f31e7a1}{PFN\+\_\+vk\+Void\+Function}}(\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{vk__layer_8h_a78010facedd4c56be14502dc5ec5b1c1}{PFN\+\_\+\+Get\+Physical\+Device\+Proc\+Addr}}) (\mbox{\hyperlink{_vulkan_8hpp_a6d9f7e27148712f2c97db45ca6991547}{Vk\+Instance}} instance, const char \texorpdfstring{$\ast$}{*}p\+Name)
+\item 
+typedef enum \mbox{\hyperlink{vk__layer_8h_a849621b540e5e25e6d32d448e28c6563}{Vk\+Negotiate\+Layer\+Struct\+Type}} \mbox{\hyperlink{vk__layer_8h_a532bbf3e6fac0e2818e4c1b3b71f1b68}{Vk\+Negotiate\+Layer\+Struct\+Type}}
+\item 
+typedef struct Vk\+Negotiate\+Layer\+Interface \mbox{\hyperlink{vk__layer_8h_a7316be887f4d72dc4895400a1913184f}{Vk\+Negotiate\+Layer\+Interface}}
+\item 
+typedef \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{Vk\+Result}}(\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{vk__layer_8h_a7f669fe20558f92c2154f3ced9fb8dc9}{PFN\+\_\+vk\+Negotiate\+Loader\+Layer\+Interface\+Version}}) (\mbox{\hyperlink{struct_vk_negotiate_layer_interface}{Vk\+Negotiate\+Layer\+Interface}} \texorpdfstring{$\ast$}{*}p\+Version\+Struct)
+\item 
+typedef \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{Vk\+Result}}(\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{vk__layer_8h_a42d8e7a487b2fe7e49a58f1f96dc9f5e}{PFN\+\_\+\+Phys\+Dev\+Ext}}) (Vk\+Physical\+Device phys\+\_\+device)
+\item 
+typedef enum \mbox{\hyperlink{vk__layer_8h_ab270d1bd32a4500763cc09043100dc88}{Vk\+Layer\+Function\+\_\+}} \mbox{\hyperlink{vk__layer_8h_adcd2ac904ad4273a84dc18f78f4b3a26}{Vk\+Layer\+Function}}
+\item 
+typedef struct \mbox{\hyperlink{struct_vk_layer_instance_link__}{Vk\+Layer\+Instance\+Link\+\_\+}} \mbox{\hyperlink{vk__layer_8h_aa2fdd080aa99903bb337384ef9d94279}{Vk\+Layer\+Instance\+Link}}
+\item 
+typedef struct \mbox{\hyperlink{struct_vk_layer_device_info__}{Vk\+Layer\+Device\+Info\+\_\+}} \mbox{\hyperlink{vk__layer_8h_a2355db6c36658ef2e8297019b61a585c}{Vk\+Layer\+Device\+Info}}
+\item 
+typedef \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{Vk\+Result}}(\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{vk__layer_8h_a77b3020dd97e8355e1eb34047bbc8dae}{PFN\+\_\+vk\+Set\+Instance\+Loader\+Data}}) (\mbox{\hyperlink{_vulkan_8hpp_a6d9f7e27148712f2c97db45ca6991547}{Vk\+Instance}} instance, void \texorpdfstring{$\ast$}{*}object)
+\item 
+typedef \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{Vk\+Result}}(\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{vk__layer_8h_a095137e225a0b60b7f88a937b3d44079}{PFN\+\_\+vk\+Set\+Device\+Loader\+Data}}) (Vk\+Device device, void \texorpdfstring{$\ast$}{*}object)
+\item 
+typedef struct \mbox{\hyperlink{struct_vk_layer_device_link__}{Vk\+Layer\+Device\+Link\+\_\+}} \mbox{\hyperlink{vk__layer_8h_adf176deef20502590e6cfe34ca000795}{Vk\+Layer\+Device\+Link}}
+\item 
+typedef enum \mbox{\hyperlink{vk__layer_8h_a4c0023d4d744805af0711caf714d02eb}{Vk\+Chain\+Type}} \mbox{\hyperlink{vk__layer_8h_ace837a0bf261b1042bab9f7c1d139538}{Vk\+Chain\+Type}}
+\item 
+typedef struct Vk\+Chain\+Header \mbox{\hyperlink{vk__layer_8h_a2a63fda3b658440b4fa7a6e74b291fd2}{Vk\+Chain\+Header}}
+\item 
+typedef struct Vk\+Enumerate\+Instance\+Extension\+Properties\+Chain \mbox{\hyperlink{vk__layer_8h_a606a7ddad3317c788dc9cfff0fe60385}{Vk\+Enumerate\+Instance\+Extension\+Properties\+Chain}}
+\item 
+typedef struct Vk\+Enumerate\+Instance\+Layer\+Properties\+Chain \mbox{\hyperlink{vk__layer_8h_aab5262e4537bb96c2bccd7fee8d5c4e4}{Vk\+Enumerate\+Instance\+Layer\+Properties\+Chain}}
+\item 
+typedef struct Vk\+Enumerate\+Instance\+Version\+Chain \mbox{\hyperlink{vk__layer_8h_a0b6f52fbdfbf802c2e25449be922a09e}{Vk\+Enumerate\+Instance\+Version\+Chain}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Wyliczenia}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{vk__layer_8h_a849621b540e5e25e6d32d448e28c6563}{Vk\+Negotiate\+Layer\+Struct\+Type}} \{ \mbox{\hyperlink{vk__layer_8h_a849621b540e5e25e6d32d448e28c6563aae793c267586f651cf33fa7ad354ef6a}{LAYER\+\_\+\+NEGOTIATE\+\_\+\+UNINTIALIZED}} = 0
+, \mbox{\hyperlink{vk__layer_8h_a849621b540e5e25e6d32d448e28c6563a12d24eb0fa770572a8b183712af8b918}{LAYER\+\_\+\+NEGOTIATE\+\_\+\+INTERFACE\+\_\+\+STRUCT}} = 1
+ \}
+\item 
+enum \mbox{\hyperlink{vk__layer_8h_ab270d1bd32a4500763cc09043100dc88}{Vk\+Layer\+Function\+\_\+}} \{ \mbox{\hyperlink{vk__layer_8h_ab270d1bd32a4500763cc09043100dc88a3fda55cea8ac5712172f0e6ada2805ab}{VK\+\_\+\+LAYER\+\_\+\+LINK\+\_\+\+INFO}} = 0
+, \mbox{\hyperlink{vk__layer_8h_ab270d1bd32a4500763cc09043100dc88a87224e10fecf68e6bbbd5e4adbadd45f}{VK\+\_\+\+LOADER\+\_\+\+DATA\+\_\+\+CALLBACK}} = 1
+ \}
+\item 
+enum \mbox{\hyperlink{vk__layer_8h_a4c0023d4d744805af0711caf714d02eb}{Vk\+Chain\+Type}} \{ \mbox{\hyperlink{vk__layer_8h_a4c0023d4d744805af0711caf714d02eba0e9c6520fa8a7fd6de4a607bcf363f26}{VK\+\_\+\+CHAIN\+\_\+\+TYPE\+\_\+\+UNKNOWN}} = 0
+, \mbox{\hyperlink{vk__layer_8h_a4c0023d4d744805af0711caf714d02ebadab96836c0cfc22bbcf4895bb9787bc4}{VK\+\_\+\+CHAIN\+\_\+\+TYPE\+\_\+\+ENUMERATE\+\_\+\+INSTANCE\+\_\+\+EXTENSION\+\_\+\+PROPERTIES}} = 1
+, \mbox{\hyperlink{vk__layer_8h_a4c0023d4d744805af0711caf714d02ebaa266b55a5feb75febfe0c03f916c9b9a}{VK\+\_\+\+CHAIN\+\_\+\+TYPE\+\_\+\+ENUMERATE\+\_\+\+INSTANCE\+\_\+\+LAYER\+\_\+\+PROPERTIES}} = 2
+, \mbox{\hyperlink{vk__layer_8h_a4c0023d4d744805af0711caf714d02eba237e9516c88632c2626b84053a5408c4}{VK\+\_\+\+CHAIN\+\_\+\+TYPE\+\_\+\+ENUMERATE\+\_\+\+INSTANCE\+\_\+\+VERSION}} = 3
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a4394dd2421147ed91e838b086be25512}{VKAPI\+\_\+\+ATTR}} \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{Vk\+Result}} \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a3856c7761d8b7260870053d0f03a0a49}{VKAPI\+\_\+\+CALL}} \mbox{\hyperlink{vk__layer_8h_a0946d1803d036247a9fc2465d06735ad}{vk\+Negotiate\+Loader\+Layer\+Interface\+Version}} (\mbox{\hyperlink{struct_vk_negotiate_layer_interface}{Vk\+Negotiate\+Layer\+Interface}} \texorpdfstring{$\ast$}{*}p\+Version\+Struct)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja definicji}
+\Hypertarget{vk__layer_8h_a9714937d688d291f0cdd0558bbbf6173}\label{vk__layer_8h_a9714937d688d291f0cdd0558bbbf6173} 
+\index{vk\_layer.h@{vk\_layer.h}!CURRENT\_LOADER\_LAYER\_INTERFACE\_VERSION@{CURRENT\_LOADER\_LAYER\_INTERFACE\_VERSION}}
+\index{CURRENT\_LOADER\_LAYER\_INTERFACE\_VERSION@{CURRENT\_LOADER\_LAYER\_INTERFACE\_VERSION}!vk\_layer.h@{vk\_layer.h}}
+\doxysubsubsection{\texorpdfstring{CURRENT\_LOADER\_LAYER\_INTERFACE\_VERSION}{CURRENT\_LOADER\_LAYER\_INTERFACE\_VERSION}}
+{\footnotesize\ttfamily \#define CURRENT\+\_\+\+LOADER\+\_\+\+LAYER\+\_\+\+INTERFACE\+\_\+\+VERSION~2}
+
+\Hypertarget{vk__layer_8h_a7f53a5b38e8cd531fe269e264e29038c}\label{vk__layer_8h_a7f53a5b38e8cd531fe269e264e29038c} 
+\index{vk\_layer.h@{vk\_layer.h}!MAX\_NUM\_UNKNOWN\_EXTS@{MAX\_NUM\_UNKNOWN\_EXTS}}
+\index{MAX\_NUM\_UNKNOWN\_EXTS@{MAX\_NUM\_UNKNOWN\_EXTS}!vk\_layer.h@{vk\_layer.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_NUM\_UNKNOWN\_EXTS}{MAX\_NUM\_UNKNOWN\_EXTS}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+NUM\+\_\+\+UNKNOWN\+\_\+\+EXTS~250}
+
+\Hypertarget{vk__layer_8h_a2b4f8c10c79c80b68e9ab05d8f435d70}\label{vk__layer_8h_a2b4f8c10c79c80b68e9ab05d8f435d70} 
+\index{vk\_layer.h@{vk\_layer.h}!MIN\_SUPPORTED\_LOADER\_LAYER\_INTERFACE\_VERSION@{MIN\_SUPPORTED\_LOADER\_LAYER\_INTERFACE\_VERSION}}
+\index{MIN\_SUPPORTED\_LOADER\_LAYER\_INTERFACE\_VERSION@{MIN\_SUPPORTED\_LOADER\_LAYER\_INTERFACE\_VERSION}!vk\_layer.h@{vk\_layer.h}}
+\doxysubsubsection{\texorpdfstring{MIN\_SUPPORTED\_LOADER\_LAYER\_INTERFACE\_VERSION}{MIN\_SUPPORTED\_LOADER\_LAYER\_INTERFACE\_VERSION}}
+{\footnotesize\ttfamily \#define MIN\+\_\+\+SUPPORTED\+\_\+\+LOADER\+\_\+\+LAYER\+\_\+\+INTERFACE\+\_\+\+VERSION~1}
+
+\Hypertarget{vk__layer_8h_aa4b02eb714a34dfb8f70ba96b48f4767}\label{vk__layer_8h_aa4b02eb714a34dfb8f70ba96b48f4767} 
+\index{vk\_layer.h@{vk\_layer.h}!VK\_CURRENT\_CHAIN\_VERSION@{VK\_CURRENT\_CHAIN\_VERSION}}
+\index{VK\_CURRENT\_CHAIN\_VERSION@{VK\_CURRENT\_CHAIN\_VERSION}!vk\_layer.h@{vk\_layer.h}}
+\doxysubsubsection{\texorpdfstring{VK\_CURRENT\_CHAIN\_VERSION}{VK\_CURRENT\_CHAIN\_VERSION}}
+{\footnotesize\ttfamily \#define VK\+\_\+\+CURRENT\+\_\+\+CHAIN\+\_\+\+VERSION~1}
+
+\Hypertarget{vk__layer_8h_a1e9bb7f50255204a0fad5e5e8de7304b}\label{vk__layer_8h_a1e9bb7f50255204a0fad5e5e8de7304b} 
+\index{vk\_layer.h@{vk\_layer.h}!VK\_LAYER\_EXPORT@{VK\_LAYER\_EXPORT}}
+\index{VK\_LAYER\_EXPORT@{VK\_LAYER\_EXPORT}!vk\_layer.h@{vk\_layer.h}}
+\doxysubsubsection{\texorpdfstring{VK\_LAYER\_EXPORT}{VK\_LAYER\_EXPORT}}
+{\footnotesize\ttfamily \#define VK\+\_\+\+LAYER\+\_\+\+EXPORT}
+
+
+
+\doxysubsection{Dokumentacja definicji typów}
+\Hypertarget{vk__layer_8h_a78010facedd4c56be14502dc5ec5b1c1}\label{vk__layer_8h_a78010facedd4c56be14502dc5ec5b1c1} 
+\index{vk\_layer.h@{vk\_layer.h}!PFN\_GetPhysicalDeviceProcAddr@{PFN\_GetPhysicalDeviceProcAddr}}
+\index{PFN\_GetPhysicalDeviceProcAddr@{PFN\_GetPhysicalDeviceProcAddr}!vk\_layer.h@{vk\_layer.h}}
+\doxysubsubsection{\texorpdfstring{PFN\_GetPhysicalDeviceProcAddr}{PFN\_GetPhysicalDeviceProcAddr}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_ac604c97c18d2ad5be6edb8de8f31e7a1}{PFN\+\_\+vk\+Void\+Function}}(\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFN\+\_\+\+Get\+Physical\+Device\+Proc\+Addr) (\mbox{\hyperlink{_vulkan_8hpp_a6d9f7e27148712f2c97db45ca6991547}{Vk\+Instance}} instance, const char \texorpdfstring{$\ast$}{*}p\+Name)}
+
+\Hypertarget{vk__layer_8h_a42d8e7a487b2fe7e49a58f1f96dc9f5e}\label{vk__layer_8h_a42d8e7a487b2fe7e49a58f1f96dc9f5e} 
+\index{vk\_layer.h@{vk\_layer.h}!PFN\_PhysDevExt@{PFN\_PhysDevExt}}
+\index{PFN\_PhysDevExt@{PFN\_PhysDevExt}!vk\_layer.h@{vk\_layer.h}}
+\doxysubsubsection{\texorpdfstring{PFN\_PhysDevExt}{PFN\_PhysDevExt}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{Vk\+Result}}(\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFN\+\_\+\+Phys\+Dev\+Ext) (Vk\+Physical\+Device phys\+\_\+device)}
+
+\Hypertarget{vk__layer_8h_a7f669fe20558f92c2154f3ced9fb8dc9}\label{vk__layer_8h_a7f669fe20558f92c2154f3ced9fb8dc9} 
+\index{vk\_layer.h@{vk\_layer.h}!PFN\_vkNegotiateLoaderLayerInterfaceVersion@{PFN\_vkNegotiateLoaderLayerInterfaceVersion}}
+\index{PFN\_vkNegotiateLoaderLayerInterfaceVersion@{PFN\_vkNegotiateLoaderLayerInterfaceVersion}!vk\_layer.h@{vk\_layer.h}}
+\doxysubsubsection{\texorpdfstring{PFN\_vkNegotiateLoaderLayerInterfaceVersion}{PFN\_vkNegotiateLoaderLayerInterfaceVersion}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{Vk\+Result}}(\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFN\+\_\+vk\+Negotiate\+Loader\+Layer\+Interface\+Version) (\mbox{\hyperlink{struct_vk_negotiate_layer_interface}{Vk\+Negotiate\+Layer\+Interface}} \texorpdfstring{$\ast$}{*}p\+Version\+Struct)}
+
+\Hypertarget{vk__layer_8h_a095137e225a0b60b7f88a937b3d44079}\label{vk__layer_8h_a095137e225a0b60b7f88a937b3d44079} 
+\index{vk\_layer.h@{vk\_layer.h}!PFN\_vkSetDeviceLoaderData@{PFN\_vkSetDeviceLoaderData}}
+\index{PFN\_vkSetDeviceLoaderData@{PFN\_vkSetDeviceLoaderData}!vk\_layer.h@{vk\_layer.h}}
+\doxysubsubsection{\texorpdfstring{PFN\_vkSetDeviceLoaderData}{PFN\_vkSetDeviceLoaderData}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{Vk\+Result}}(\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFN\+\_\+vk\+Set\+Device\+Loader\+Data) (Vk\+Device device, void \texorpdfstring{$\ast$}{*}object)}
+
+\Hypertarget{vk__layer_8h_a77b3020dd97e8355e1eb34047bbc8dae}\label{vk__layer_8h_a77b3020dd97e8355e1eb34047bbc8dae} 
+\index{vk\_layer.h@{vk\_layer.h}!PFN\_vkSetInstanceLoaderData@{PFN\_vkSetInstanceLoaderData}}
+\index{PFN\_vkSetInstanceLoaderData@{PFN\_vkSetInstanceLoaderData}!vk\_layer.h@{vk\_layer.h}}
+\doxysubsubsection{\texorpdfstring{PFN\_vkSetInstanceLoaderData}{PFN\_vkSetInstanceLoaderData}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{Vk\+Result}}(\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFN\+\_\+vk\+Set\+Instance\+Loader\+Data) (\mbox{\hyperlink{_vulkan_8hpp_a6d9f7e27148712f2c97db45ca6991547}{Vk\+Instance}} instance, void \texorpdfstring{$\ast$}{*}object)}
+
+\Hypertarget{vk__layer_8h_a2a63fda3b658440b4fa7a6e74b291fd2}\label{vk__layer_8h_a2a63fda3b658440b4fa7a6e74b291fd2} 
+\index{vk\_layer.h@{vk\_layer.h}!VkChainHeader@{VkChainHeader}}
+\index{VkChainHeader@{VkChainHeader}!vk\_layer.h@{vk\_layer.h}}
+\doxysubsubsection{\texorpdfstring{VkChainHeader}{VkChainHeader}}
+{\footnotesize\ttfamily typedef struct Vk\+Chain\+Header Vk\+Chain\+Header}
+
+\Hypertarget{vk__layer_8h_ace837a0bf261b1042bab9f7c1d139538}\label{vk__layer_8h_ace837a0bf261b1042bab9f7c1d139538} 
+\index{vk\_layer.h@{vk\_layer.h}!VkChainType@{VkChainType}}
+\index{VkChainType@{VkChainType}!vk\_layer.h@{vk\_layer.h}}
+\doxysubsubsection{\texorpdfstring{VkChainType}{VkChainType}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{vk__layer_8h_a4c0023d4d744805af0711caf714d02eb}{Vk\+Chain\+Type}} \mbox{\hyperlink{vk__layer_8h_a4c0023d4d744805af0711caf714d02eb}{Vk\+Chain\+Type}}}
+
+\Hypertarget{vk__layer_8h_a606a7ddad3317c788dc9cfff0fe60385}\label{vk__layer_8h_a606a7ddad3317c788dc9cfff0fe60385} 
+\index{vk\_layer.h@{vk\_layer.h}!VkEnumerateInstanceExtensionPropertiesChain@{VkEnumerateInstanceExtensionPropertiesChain}}
+\index{VkEnumerateInstanceExtensionPropertiesChain@{VkEnumerateInstanceExtensionPropertiesChain}!vk\_layer.h@{vk\_layer.h}}
+\doxysubsubsection{\texorpdfstring{VkEnumerateInstanceExtensionPropertiesChain}{VkEnumerateInstanceExtensionPropertiesChain}}
+{\footnotesize\ttfamily typedef struct Vk\+Enumerate\+Instance\+Extension\+Properties\+Chain Vk\+Enumerate\+Instance\+Extension\+Properties\+Chain}
+
+\Hypertarget{vk__layer_8h_aab5262e4537bb96c2bccd7fee8d5c4e4}\label{vk__layer_8h_aab5262e4537bb96c2bccd7fee8d5c4e4} 
+\index{vk\_layer.h@{vk\_layer.h}!VkEnumerateInstanceLayerPropertiesChain@{VkEnumerateInstanceLayerPropertiesChain}}
+\index{VkEnumerateInstanceLayerPropertiesChain@{VkEnumerateInstanceLayerPropertiesChain}!vk\_layer.h@{vk\_layer.h}}
+\doxysubsubsection{\texorpdfstring{VkEnumerateInstanceLayerPropertiesChain}{VkEnumerateInstanceLayerPropertiesChain}}
+{\footnotesize\ttfamily typedef struct Vk\+Enumerate\+Instance\+Layer\+Properties\+Chain Vk\+Enumerate\+Instance\+Layer\+Properties\+Chain}
+
+\Hypertarget{vk__layer_8h_a0b6f52fbdfbf802c2e25449be922a09e}\label{vk__layer_8h_a0b6f52fbdfbf802c2e25449be922a09e} 
+\index{vk\_layer.h@{vk\_layer.h}!VkEnumerateInstanceVersionChain@{VkEnumerateInstanceVersionChain}}
+\index{VkEnumerateInstanceVersionChain@{VkEnumerateInstanceVersionChain}!vk\_layer.h@{vk\_layer.h}}
+\doxysubsubsection{\texorpdfstring{VkEnumerateInstanceVersionChain}{VkEnumerateInstanceVersionChain}}
+{\footnotesize\ttfamily typedef struct Vk\+Enumerate\+Instance\+Version\+Chain Vk\+Enumerate\+Instance\+Version\+Chain}
+
+\Hypertarget{vk__layer_8h_a2355db6c36658ef2e8297019b61a585c}\label{vk__layer_8h_a2355db6c36658ef2e8297019b61a585c} 
+\index{vk\_layer.h@{vk\_layer.h}!VkLayerDeviceInfo@{VkLayerDeviceInfo}}
+\index{VkLayerDeviceInfo@{VkLayerDeviceInfo}!vk\_layer.h@{vk\_layer.h}}
+\doxysubsubsection{\texorpdfstring{VkLayerDeviceInfo}{VkLayerDeviceInfo}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_vk_layer_device_info__}{Vk\+Layer\+Device\+Info\+\_\+}} \mbox{\hyperlink{vk__layer_8h_a2355db6c36658ef2e8297019b61a585c}{Vk\+Layer\+Device\+Info}}}
+
+\Hypertarget{vk__layer_8h_adf176deef20502590e6cfe34ca000795}\label{vk__layer_8h_adf176deef20502590e6cfe34ca000795} 
+\index{vk\_layer.h@{vk\_layer.h}!VkLayerDeviceLink@{VkLayerDeviceLink}}
+\index{VkLayerDeviceLink@{VkLayerDeviceLink}!vk\_layer.h@{vk\_layer.h}}
+\doxysubsubsection{\texorpdfstring{VkLayerDeviceLink}{VkLayerDeviceLink}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_vk_layer_device_link__}{Vk\+Layer\+Device\+Link\+\_\+}} \mbox{\hyperlink{vk__layer_8h_adf176deef20502590e6cfe34ca000795}{Vk\+Layer\+Device\+Link}}}
+
+\Hypertarget{vk__layer_8h_adcd2ac904ad4273a84dc18f78f4b3a26}\label{vk__layer_8h_adcd2ac904ad4273a84dc18f78f4b3a26} 
+\index{vk\_layer.h@{vk\_layer.h}!VkLayerFunction@{VkLayerFunction}}
+\index{VkLayerFunction@{VkLayerFunction}!vk\_layer.h@{vk\_layer.h}}
+\doxysubsubsection{\texorpdfstring{VkLayerFunction}{VkLayerFunction}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{vk__layer_8h_ab270d1bd32a4500763cc09043100dc88}{Vk\+Layer\+Function\+\_\+}} \mbox{\hyperlink{vk__layer_8h_adcd2ac904ad4273a84dc18f78f4b3a26}{Vk\+Layer\+Function}}}
+
+\Hypertarget{vk__layer_8h_aa2fdd080aa99903bb337384ef9d94279}\label{vk__layer_8h_aa2fdd080aa99903bb337384ef9d94279} 
+\index{vk\_layer.h@{vk\_layer.h}!VkLayerInstanceLink@{VkLayerInstanceLink}}
+\index{VkLayerInstanceLink@{VkLayerInstanceLink}!vk\_layer.h@{vk\_layer.h}}
+\doxysubsubsection{\texorpdfstring{VkLayerInstanceLink}{VkLayerInstanceLink}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_vk_layer_instance_link__}{Vk\+Layer\+Instance\+Link\+\_\+}} \mbox{\hyperlink{vk__layer_8h_aa2fdd080aa99903bb337384ef9d94279}{Vk\+Layer\+Instance\+Link}}}
+
+\Hypertarget{vk__layer_8h_a7316be887f4d72dc4895400a1913184f}\label{vk__layer_8h_a7316be887f4d72dc4895400a1913184f} 
+\index{vk\_layer.h@{vk\_layer.h}!VkNegotiateLayerInterface@{VkNegotiateLayerInterface}}
+\index{VkNegotiateLayerInterface@{VkNegotiateLayerInterface}!vk\_layer.h@{vk\_layer.h}}
+\doxysubsubsection{\texorpdfstring{VkNegotiateLayerInterface}{VkNegotiateLayerInterface}}
+{\footnotesize\ttfamily typedef struct Vk\+Negotiate\+Layer\+Interface Vk\+Negotiate\+Layer\+Interface}
+
+\Hypertarget{vk__layer_8h_a532bbf3e6fac0e2818e4c1b3b71f1b68}\label{vk__layer_8h_a532bbf3e6fac0e2818e4c1b3b71f1b68} 
+\index{vk\_layer.h@{vk\_layer.h}!VkNegotiateLayerStructType@{VkNegotiateLayerStructType}}
+\index{VkNegotiateLayerStructType@{VkNegotiateLayerStructType}!vk\_layer.h@{vk\_layer.h}}
+\doxysubsubsection{\texorpdfstring{VkNegotiateLayerStructType}{VkNegotiateLayerStructType}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{vk__layer_8h_a849621b540e5e25e6d32d448e28c6563}{Vk\+Negotiate\+Layer\+Struct\+Type}} \mbox{\hyperlink{vk__layer_8h_a849621b540e5e25e6d32d448e28c6563}{Vk\+Negotiate\+Layer\+Struct\+Type}}}
+
+
+
+\doxysubsection{Dokumentacja typów wyliczanych}
+\Hypertarget{vk__layer_8h_a4c0023d4d744805af0711caf714d02eb}\label{vk__layer_8h_a4c0023d4d744805af0711caf714d02eb} 
+\index{vk\_layer.h@{vk\_layer.h}!VkChainType@{VkChainType}}
+\index{VkChainType@{VkChainType}!vk\_layer.h@{vk\_layer.h}}
+\doxysubsubsection{\texorpdfstring{VkChainType}{VkChainType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{vk__layer_8h_a4c0023d4d744805af0711caf714d02eb}{Vk\+Chain\+Type}}}
+
+\begin{DoxyEnumFields}{Wartości wyliczeń}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VK\_CHAIN\_TYPE\_UNKNOWN@{VK\_CHAIN\_TYPE\_UNKNOWN}!vk\_layer.h@{vk\_layer.h}}\index{vk\_layer.h@{vk\_layer.h}!VK\_CHAIN\_TYPE\_UNKNOWN@{VK\_CHAIN\_TYPE\_UNKNOWN}}}\Hypertarget{vk__layer_8h_a4c0023d4d744805af0711caf714d02eba0e9c6520fa8a7fd6de4a607bcf363f26}\label{vk__layer_8h_a4c0023d4d744805af0711caf714d02eba0e9c6520fa8a7fd6de4a607bcf363f26} 
+VK\+\_\+\+CHAIN\+\_\+\+TYPE\+\_\+\+UNKNOWN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VK\_CHAIN\_TYPE\_ENUMERATE\_INSTANCE\_EXTENSION\_PROPERTIES@{VK\_CHAIN\_TYPE\_ENUMERATE\_INSTANCE\_EXTENSION\_PROPERTIES}!vk\_layer.h@{vk\_layer.h}}\index{vk\_layer.h@{vk\_layer.h}!VK\_CHAIN\_TYPE\_ENUMERATE\_INSTANCE\_EXTENSION\_PROPERTIES@{VK\_CHAIN\_TYPE\_ENUMERATE\_INSTANCE\_EXTENSION\_PROPERTIES}}}\Hypertarget{vk__layer_8h_a4c0023d4d744805af0711caf714d02ebadab96836c0cfc22bbcf4895bb9787bc4}\label{vk__layer_8h_a4c0023d4d744805af0711caf714d02ebadab96836c0cfc22bbcf4895bb9787bc4} 
+VK\+\_\+\+CHAIN\+\_\+\+TYPE\+\_\+\+ENUMERATE\+\_\+\+INSTANCE\+\_\+\+EXTENSION\+\_\+\+PROPERTIES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VK\_CHAIN\_TYPE\_ENUMERATE\_INSTANCE\_LAYER\_PROPERTIES@{VK\_CHAIN\_TYPE\_ENUMERATE\_INSTANCE\_LAYER\_PROPERTIES}!vk\_layer.h@{vk\_layer.h}}\index{vk\_layer.h@{vk\_layer.h}!VK\_CHAIN\_TYPE\_ENUMERATE\_INSTANCE\_LAYER\_PROPERTIES@{VK\_CHAIN\_TYPE\_ENUMERATE\_INSTANCE\_LAYER\_PROPERTIES}}}\Hypertarget{vk__layer_8h_a4c0023d4d744805af0711caf714d02ebaa266b55a5feb75febfe0c03f916c9b9a}\label{vk__layer_8h_a4c0023d4d744805af0711caf714d02ebaa266b55a5feb75febfe0c03f916c9b9a} 
+VK\+\_\+\+CHAIN\+\_\+\+TYPE\+\_\+\+ENUMERATE\+\_\+\+INSTANCE\+\_\+\+LAYER\+\_\+\+PROPERTIES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VK\_CHAIN\_TYPE\_ENUMERATE\_INSTANCE\_VERSION@{VK\_CHAIN\_TYPE\_ENUMERATE\_INSTANCE\_VERSION}!vk\_layer.h@{vk\_layer.h}}\index{vk\_layer.h@{vk\_layer.h}!VK\_CHAIN\_TYPE\_ENUMERATE\_INSTANCE\_VERSION@{VK\_CHAIN\_TYPE\_ENUMERATE\_INSTANCE\_VERSION}}}\Hypertarget{vk__layer_8h_a4c0023d4d744805af0711caf714d02eba237e9516c88632c2626b84053a5408c4}\label{vk__layer_8h_a4c0023d4d744805af0711caf714d02eba237e9516c88632c2626b84053a5408c4} 
+VK\+\_\+\+CHAIN\+\_\+\+TYPE\+\_\+\+ENUMERATE\+\_\+\+INSTANCE\+\_\+\+VERSION&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{vk__layer_8h_ab270d1bd32a4500763cc09043100dc88}\label{vk__layer_8h_ab270d1bd32a4500763cc09043100dc88} 
+\index{vk\_layer.h@{vk\_layer.h}!VkLayerFunction\_@{VkLayerFunction\_}}
+\index{VkLayerFunction\_@{VkLayerFunction\_}!vk\_layer.h@{vk\_layer.h}}
+\doxysubsubsection{\texorpdfstring{VkLayerFunction\_}{VkLayerFunction\_}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{vk__layer_8h_ab270d1bd32a4500763cc09043100dc88}{Vk\+Layer\+Function\+\_\+}}}
+
+\begin{DoxyEnumFields}{Wartości wyliczeń}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VK\_LAYER\_LINK\_INFO@{VK\_LAYER\_LINK\_INFO}!vk\_layer.h@{vk\_layer.h}}\index{vk\_layer.h@{vk\_layer.h}!VK\_LAYER\_LINK\_INFO@{VK\_LAYER\_LINK\_INFO}}}\Hypertarget{vk__layer_8h_ab270d1bd32a4500763cc09043100dc88a3fda55cea8ac5712172f0e6ada2805ab}\label{vk__layer_8h_ab270d1bd32a4500763cc09043100dc88a3fda55cea8ac5712172f0e6ada2805ab} 
+VK\+\_\+\+LAYER\+\_\+\+LINK\+\_\+\+INFO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VK\_LOADER\_DATA\_CALLBACK@{VK\_LOADER\_DATA\_CALLBACK}!vk\_layer.h@{vk\_layer.h}}\index{vk\_layer.h@{vk\_layer.h}!VK\_LOADER\_DATA\_CALLBACK@{VK\_LOADER\_DATA\_CALLBACK}}}\Hypertarget{vk__layer_8h_ab270d1bd32a4500763cc09043100dc88a87224e10fecf68e6bbbd5e4adbadd45f}\label{vk__layer_8h_ab270d1bd32a4500763cc09043100dc88a87224e10fecf68e6bbbd5e4adbadd45f} 
+VK\+\_\+\+LOADER\+\_\+\+DATA\+\_\+\+CALLBACK&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{vk__layer_8h_a849621b540e5e25e6d32d448e28c6563}\label{vk__layer_8h_a849621b540e5e25e6d32d448e28c6563} 
+\index{vk\_layer.h@{vk\_layer.h}!VkNegotiateLayerStructType@{VkNegotiateLayerStructType}}
+\index{VkNegotiateLayerStructType@{VkNegotiateLayerStructType}!vk\_layer.h@{vk\_layer.h}}
+\doxysubsubsection{\texorpdfstring{VkNegotiateLayerStructType}{VkNegotiateLayerStructType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{vk__layer_8h_a849621b540e5e25e6d32d448e28c6563}{Vk\+Negotiate\+Layer\+Struct\+Type}}}
+
+\begin{DoxyEnumFields}{Wartości wyliczeń}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LAYER\_NEGOTIATE\_UNINTIALIZED@{LAYER\_NEGOTIATE\_UNINTIALIZED}!vk\_layer.h@{vk\_layer.h}}\index{vk\_layer.h@{vk\_layer.h}!LAYER\_NEGOTIATE\_UNINTIALIZED@{LAYER\_NEGOTIATE\_UNINTIALIZED}}}\Hypertarget{vk__layer_8h_a849621b540e5e25e6d32d448e28c6563aae793c267586f651cf33fa7ad354ef6a}\label{vk__layer_8h_a849621b540e5e25e6d32d448e28c6563aae793c267586f651cf33fa7ad354ef6a} 
+LAYER\+\_\+\+NEGOTIATE\+\_\+\+UNINTIALIZED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LAYER\_NEGOTIATE\_INTERFACE\_STRUCT@{LAYER\_NEGOTIATE\_INTERFACE\_STRUCT}!vk\_layer.h@{vk\_layer.h}}\index{vk\_layer.h@{vk\_layer.h}!LAYER\_NEGOTIATE\_INTERFACE\_STRUCT@{LAYER\_NEGOTIATE\_INTERFACE\_STRUCT}}}\Hypertarget{vk__layer_8h_a849621b540e5e25e6d32d448e28c6563a12d24eb0fa770572a8b183712af8b918}\label{vk__layer_8h_a849621b540e5e25e6d32d448e28c6563a12d24eb0fa770572a8b183712af8b918} 
+LAYER\+\_\+\+NEGOTIATE\+\_\+\+INTERFACE\+\_\+\+STRUCT&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Dokumentacja funkcji}
+\Hypertarget{vk__layer_8h_a0946d1803d036247a9fc2465d06735ad}\label{vk__layer_8h_a0946d1803d036247a9fc2465d06735ad} 
+\index{vk\_layer.h@{vk\_layer.h}!vkNegotiateLoaderLayerInterfaceVersion@{vkNegotiateLoaderLayerInterfaceVersion}}
+\index{vkNegotiateLoaderLayerInterfaceVersion@{vkNegotiateLoaderLayerInterfaceVersion}!vk\_layer.h@{vk\_layer.h}}
+\doxysubsubsection{\texorpdfstring{vkNegotiateLoaderLayerInterfaceVersion()}{vkNegotiateLoaderLayerInterfaceVersion()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a4394dd2421147ed91e838b086be25512}{VKAPI\+\_\+\+ATTR}} \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{Vk\+Result}} \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a3856c7761d8b7260870053d0f03a0a49}{VKAPI\+\_\+\+CALL}} vk\+Negotiate\+Loader\+Layer\+Interface\+Version (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vk_negotiate_layer_interface}{Vk\+Negotiate\+Layer\+Interface}} \texorpdfstring{$\ast$}{*}}]{p\+Version\+Struct }\end{DoxyParamCaption})}
+

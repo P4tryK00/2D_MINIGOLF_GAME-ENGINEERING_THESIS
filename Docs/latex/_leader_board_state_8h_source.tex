@@ -1,0 +1,41 @@
+\doxysection{Leader\+Board\+State.\+h}
+\hypertarget{_leader_board_state_8h_source}{}\label{_leader_board_state_8h_source}\mbox{\hyperlink{_leader_board_state_8h}{Idź do dokumentacji tego pliku.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ patry\ on\ 17.01.2026.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ MINI\_GOLF\_LEADERBOARDSTATE\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ MINI\_GOLF\_LEADERBOARDSTATE\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_state_8h}{State.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_game_8h}{Game.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_leaderboard_state}{LeaderboardState}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_state}{State}}\ \{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_leaderboard_state_a18b835959725becf0b64fdc0b5b37bcb}{LeaderboardState}}(\mbox{\hyperlink{_game_8h_ae7efd7ef77698f16206f5c66180a389f}{GameDataRef}}\ data);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_leaderboard_state_a819338e9c0a2281d9a9197819c0bd0cf}{init}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_leaderboard_state_a7cb25b3cc24078d36015c866ed4ce7da}{handleInput}}(sf::Event\&\ event)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_leaderboard_state_a5fc5b23370466e8eb3dcbf7579d843b9}{update}}(\textcolor{keywordtype}{float}\ dt)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_leaderboard_state_a8a686419a940b3e6d136e935df7e327c}{draw}}(\textcolor{keywordtype}{float}\ dt)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{_game_8h_ae7efd7ef77698f16206f5c66180a389f}{GameDataRef}}\ \mbox{\hyperlink{class_leaderboard_state_a4473cafac4d6746bd6cb5f2ae1d68365}{m\_data}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00048\ \ \ \ \ sf::Text\ \mbox{\hyperlink{class_leaderboard_state_a2cdbedf2458717dab966e54987280fb4}{m\_title}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00049\ \ \ \ \ sf::Text\ \mbox{\hyperlink{class_leaderboard_state_aecafd2183caf79f4007540d8e03a02c7}{m\_backButton}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00050\ \ \ \ \ std::vector<sf::Text>\ \mbox{\hyperlink{class_leaderboard_state_a45ab3e2de83ac57adb0b777d79a1b3ba}{m\_scoreTexts}};\ }
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ sf::RectangleShape\ \mbox{\hyperlink{class_leaderboard_state_a03e48014e29f75f14ecada8674987640}{m\_fadeRect}};\ \ \ \ \ \ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_leaderboard_state_a56cd9ac590ba7e4db7f32c1dd934be1e}{m\_alpha}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_leaderboard_state_ab8a9d7f4fb56712840a93de2b0a7ef97}{m\_isFadingIn}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_leaderboard_state_a3abf0ae7fbc97c8d609907add0dbe193}{m\_isGoingBack}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00056\ \};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//MINI\_GOLF\_LEADERBOARDSTATE\_H}}
+
+\end{DoxyCode}

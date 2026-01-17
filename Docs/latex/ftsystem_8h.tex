@@ -1,0 +1,97 @@
+\doxysection{Dokumentacja pliku cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/extlibs/headers/freetype2/ftsystem.h}
+\hypertarget{ftsystem_8h}{}\label{ftsystem_8h}\index{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/freetype2/ftsystem.h@{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/freetype2/ftsystem.h}}
+{\ttfamily \#include $<$ft2build.\+h$>$}\newline
+Wykres zależności załączania dla ftsystem.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{ftsystem_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_f_t___memory_rec__}{FT\+\_\+\+Memory\+Rec\+\_\+}}
+\item 
+union \mbox{\hyperlink{union_f_t___stream_desc__}{FT\+\_\+\+Stream\+Desc\+\_\+}}
+\item 
+struct \mbox{\hyperlink{struct_f_t___stream_rec__}{FT\+\_\+\+Stream\+Rec\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Definicje typów}
+\begin{DoxyCompactItemize}
+\item 
+typedef typedef\+FT\+\_\+\+BEGIN\+\_\+\+HEADER struct \mbox{\hyperlink{struct_f_t___memory_rec__}{FT\+\_\+\+Memory\+Rec\+\_\+}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{ftsystem_8h_a67ec7ea35cde99a89a65e9f827a9ad3a}{FT\+\_\+\+Memory}}
+\item 
+typedef void \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{ftsystem_8h_a3022e34c346d3c076e05df3952923e7f}{FT\+\_\+\+Alloc\+\_\+\+Func}}) (\mbox{\hyperlink{ftsystem_8h_a67ec7ea35cde99a89a65e9f827a9ad3a}{FT\+\_\+\+Memory}} memory, long size)
+\item 
+typedef void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{ftsystem_8h_abbf66b34e6c3a7f9564cbe3d6fa6c6fb}{FT\+\_\+\+Free\+\_\+\+Func}}) (\mbox{\hyperlink{ftsystem_8h_a67ec7ea35cde99a89a65e9f827a9ad3a}{FT\+\_\+\+Memory}} memory, void \texorpdfstring{$\ast$}{*}block)
+\item 
+typedef void \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{ftsystem_8h_a7bce40b59dbc237d86decf6ebd81b4a2}{FT\+\_\+\+Realloc\+\_\+\+Func}}) (\mbox{\hyperlink{ftsystem_8h_a67ec7ea35cde99a89a65e9f827a9ad3a}{FT\+\_\+\+Memory}} memory, long cur\+\_\+size, long new\+\_\+size, void \texorpdfstring{$\ast$}{*}block)
+\item 
+typedef struct \mbox{\hyperlink{struct_f_t___stream_rec__}{FT\+\_\+\+Stream\+Rec\+\_\+}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{ftsystem_8h_a788b32c932932f7411a8dfa7f6c794bf}{FT\+\_\+\+Stream}}
+\item 
+typedef union \mbox{\hyperlink{union_f_t___stream_desc__}{FT\+\_\+\+Stream\+Desc\+\_\+}} \mbox{\hyperlink{ftsystem_8h_a302b58ffa36ab8ca08cadb2629bb8e8f}{FT\+\_\+\+Stream\+Desc}}
+\item 
+typedef unsigned long(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{ftsystem_8h_a1909d9c00ba62592c047a9868e5a6b0b}{FT\+\_\+\+Stream\+\_\+\+Io\+Func}}) (\mbox{\hyperlink{ftsystem_8h_a788b32c932932f7411a8dfa7f6c794bf}{FT\+\_\+\+Stream}} stream, unsigned long offset, unsigned char \texorpdfstring{$\ast$}{*}buffer, unsigned long count)
+\item 
+typedef void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{ftsystem_8h_a9ab6151513724c69e5493d520d43135f}{FT\+\_\+\+Stream\+\_\+\+Close\+Func}}) (\mbox{\hyperlink{ftsystem_8h_a788b32c932932f7411a8dfa7f6c794bf}{FT\+\_\+\+Stream}} stream)
+\item 
+typedef struct \mbox{\hyperlink{struct_f_t___stream_rec__}{FT\+\_\+\+Stream\+Rec\+\_\+}} \mbox{\hyperlink{ftsystem_8h_a0ac77b1942c2bf23e05e4f95976a993a}{FT\+\_\+\+Stream\+Rec}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja definicji typów}
+\Hypertarget{ftsystem_8h_a3022e34c346d3c076e05df3952923e7f}\label{ftsystem_8h_a3022e34c346d3c076e05df3952923e7f} 
+\index{ftsystem.h@{ftsystem.h}!FT\_Alloc\_Func@{FT\_Alloc\_Func}}
+\index{FT\_Alloc\_Func@{FT\_Alloc\_Func}!ftsystem.h@{ftsystem.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Alloc\_Func}{FT\_Alloc\_Func}}
+{\footnotesize\ttfamily typedef void \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} FT\+\_\+\+Alloc\+\_\+\+Func) (\mbox{\hyperlink{ftsystem_8h_a67ec7ea35cde99a89a65e9f827a9ad3a}{FT\+\_\+\+Memory}} memory, long size)}
+
+\Hypertarget{ftsystem_8h_abbf66b34e6c3a7f9564cbe3d6fa6c6fb}\label{ftsystem_8h_abbf66b34e6c3a7f9564cbe3d6fa6c6fb} 
+\index{ftsystem.h@{ftsystem.h}!FT\_Free\_Func@{FT\_Free\_Func}}
+\index{FT\_Free\_Func@{FT\_Free\_Func}!ftsystem.h@{ftsystem.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Free\_Func}{FT\_Free\_Func}}
+{\footnotesize\ttfamily typedef void(\texorpdfstring{$\ast$}{*} FT\+\_\+\+Free\+\_\+\+Func) (\mbox{\hyperlink{ftsystem_8h_a67ec7ea35cde99a89a65e9f827a9ad3a}{FT\+\_\+\+Memory}} memory, void \texorpdfstring{$\ast$}{*}block)}
+
+\Hypertarget{ftsystem_8h_a67ec7ea35cde99a89a65e9f827a9ad3a}\label{ftsystem_8h_a67ec7ea35cde99a89a65e9f827a9ad3a} 
+\index{ftsystem.h@{ftsystem.h}!FT\_Memory@{FT\_Memory}}
+\index{FT\_Memory@{FT\_Memory}!ftsystem.h@{ftsystem.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Memory}{FT\_Memory}}
+{\footnotesize\ttfamily typedef typedef\+FT\+\_\+\+BEGIN\+\_\+\+HEADER struct \mbox{\hyperlink{struct_f_t___memory_rec__}{FT\+\_\+\+Memory\+Rec\+\_\+}}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{ftsystem_8h_a67ec7ea35cde99a89a65e9f827a9ad3a}{FT\+\_\+\+Memory}}}
+
+\Hypertarget{ftsystem_8h_a7bce40b59dbc237d86decf6ebd81b4a2}\label{ftsystem_8h_a7bce40b59dbc237d86decf6ebd81b4a2} 
+\index{ftsystem.h@{ftsystem.h}!FT\_Realloc\_Func@{FT\_Realloc\_Func}}
+\index{FT\_Realloc\_Func@{FT\_Realloc\_Func}!ftsystem.h@{ftsystem.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Realloc\_Func}{FT\_Realloc\_Func}}
+{\footnotesize\ttfamily typedef void \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} FT\+\_\+\+Realloc\+\_\+\+Func) (\mbox{\hyperlink{ftsystem_8h_a67ec7ea35cde99a89a65e9f827a9ad3a}{FT\+\_\+\+Memory}} memory, long cur\+\_\+size, long new\+\_\+size, void \texorpdfstring{$\ast$}{*}block)}
+
+\Hypertarget{ftsystem_8h_a788b32c932932f7411a8dfa7f6c794bf}\label{ftsystem_8h_a788b32c932932f7411a8dfa7f6c794bf} 
+\index{ftsystem.h@{ftsystem.h}!FT\_Stream@{FT\_Stream}}
+\index{FT\_Stream@{FT\_Stream}!ftsystem.h@{ftsystem.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Stream}{FT\_Stream}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_f_t___stream_rec__}{FT\+\_\+\+Stream\+Rec\+\_\+}}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{ftsystem_8h_a788b32c932932f7411a8dfa7f6c794bf}{FT\+\_\+\+Stream}}}
+
+\Hypertarget{ftsystem_8h_a9ab6151513724c69e5493d520d43135f}\label{ftsystem_8h_a9ab6151513724c69e5493d520d43135f} 
+\index{ftsystem.h@{ftsystem.h}!FT\_Stream\_CloseFunc@{FT\_Stream\_CloseFunc}}
+\index{FT\_Stream\_CloseFunc@{FT\_Stream\_CloseFunc}!ftsystem.h@{ftsystem.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Stream\_CloseFunc}{FT\_Stream\_CloseFunc}}
+{\footnotesize\ttfamily typedef void(\texorpdfstring{$\ast$}{*} FT\+\_\+\+Stream\+\_\+\+Close\+Func) (\mbox{\hyperlink{ftsystem_8h_a788b32c932932f7411a8dfa7f6c794bf}{FT\+\_\+\+Stream}} stream)}
+
+\Hypertarget{ftsystem_8h_a1909d9c00ba62592c047a9868e5a6b0b}\label{ftsystem_8h_a1909d9c00ba62592c047a9868e5a6b0b} 
+\index{ftsystem.h@{ftsystem.h}!FT\_Stream\_IoFunc@{FT\_Stream\_IoFunc}}
+\index{FT\_Stream\_IoFunc@{FT\_Stream\_IoFunc}!ftsystem.h@{ftsystem.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Stream\_IoFunc}{FT\_Stream\_IoFunc}}
+{\footnotesize\ttfamily typedef unsigned long(\texorpdfstring{$\ast$}{*} FT\+\_\+\+Stream\+\_\+\+Io\+Func) (\mbox{\hyperlink{ftsystem_8h_a788b32c932932f7411a8dfa7f6c794bf}{FT\+\_\+\+Stream}} stream, unsigned long offset, unsigned char \texorpdfstring{$\ast$}{*}buffer, unsigned long count)}
+
+\Hypertarget{ftsystem_8h_a302b58ffa36ab8ca08cadb2629bb8e8f}\label{ftsystem_8h_a302b58ffa36ab8ca08cadb2629bb8e8f} 
+\index{ftsystem.h@{ftsystem.h}!FT\_StreamDesc@{FT\_StreamDesc}}
+\index{FT\_StreamDesc@{FT\_StreamDesc}!ftsystem.h@{ftsystem.h}}
+\doxysubsubsection{\texorpdfstring{FT\_StreamDesc}{FT\_StreamDesc}}
+{\footnotesize\ttfamily typedef union \mbox{\hyperlink{union_f_t___stream_desc__}{FT\+\_\+\+Stream\+Desc\+\_\+}} \mbox{\hyperlink{ftsystem_8h_a302b58ffa36ab8ca08cadb2629bb8e8f}{FT\+\_\+\+Stream\+Desc}}}
+
+\Hypertarget{ftsystem_8h_a0ac77b1942c2bf23e05e4f95976a993a}\label{ftsystem_8h_a0ac77b1942c2bf23e05e4f95976a993a} 
+\index{ftsystem.h@{ftsystem.h}!FT\_StreamRec@{FT\_StreamRec}}
+\index{FT\_StreamRec@{FT\_StreamRec}!ftsystem.h@{ftsystem.h}}
+\doxysubsubsection{\texorpdfstring{FT\_StreamRec}{FT\_StreamRec}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_f_t___stream_rec__}{FT\+\_\+\+Stream\+Rec\+\_\+}} \mbox{\hyperlink{ftsystem_8h_a0ac77b1942c2bf23e05e4f95976a993a}{FT\+\_\+\+Stream\+Rec}}}
+

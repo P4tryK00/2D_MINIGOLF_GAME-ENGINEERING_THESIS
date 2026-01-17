@@ -1,0 +1,85 @@
+\doxysection{Dokumentacja struktury Catch\+::IMutable\+Context}
+\hypertarget{struct_catch_1_1_i_mutable_context}{}\label{struct_catch_1_1_i_mutable_context}\index{Catch::IMutableContext@{Catch::IMutableContext}}
+
+
+{\ttfamily \#include $<$catch.\+hpp$>$}
+
+
+
+Diagram dziedziczenia dla Catch\+::IMutable\+Context\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{struct_catch_1_1_i_mutable_context__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagram współpracy dla Catch\+::IMutable\+Context\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{struct_catch_1_1_i_mutable_context__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{struct_catch_1_1_i_mutable_context_a93f32b2ab6d0fb83637059240be799ab}{\texorpdfstring{$\sim$}{\string~}\+IMutable\+Context}} ()
+\item 
+virtual void \mbox{\hyperlink{struct_catch_1_1_i_mutable_context_a4a80afd0525b7def21bee8d9b48f2d39}{set\+Result\+Capture}} (\mbox{\hyperlink{struct_catch_1_1_i_result_capture}{IResult\+Capture}} \texorpdfstring{$\ast$}{*}result\+Capture)=0
+\item 
+virtual void \mbox{\hyperlink{struct_catch_1_1_i_mutable_context_af2e53b1dea4527a2587cff266a730f6e}{set\+Runner}} (\mbox{\hyperlink{struct_catch_1_1_i_runner}{IRunner}} \texorpdfstring{$\ast$}{*}runner)=0
+\item 
+virtual void \mbox{\hyperlink{struct_catch_1_1_i_mutable_context_a013e8f688a8ea7970262d07ead542a63}{set\+Config}} (\mbox{\hyperlink{class_catch_1_1_ptr}{Ptr}}$<$ IConfig const $>$ const \&config)=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{struct_catch_1_1_i_context}{Catch\+::\+IContext}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{struct_catch_1_1_i_context_aeb17355c1be6c2ced5407cad7202628d}{\texorpdfstring{$\sim$}{\string~}\+IContext}} ()
+\item 
+virtual \mbox{\hyperlink{struct_catch_1_1_i_result_capture}{IResult\+Capture}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_catch_1_1_i_context_a950f10a5f6d3c9385f9493ba6298b174}{get\+Result\+Capture}} ()=0
+\item 
+virtual \mbox{\hyperlink{struct_catch_1_1_i_runner}{IRunner}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_catch_1_1_i_context_ace6ece997b27c76d70563272f9e93f2f}{get\+Runner}} ()=0
+\item 
+virtual size\+\_\+t \mbox{\hyperlink{struct_catch_1_1_i_context_a43e07088db43299ba129fbe6d3106e95}{get\+Generator\+Index}} (std\+::string const \&file\+Info, size\+\_\+t total\+Size)=0
+\item 
+virtual bool \mbox{\hyperlink{struct_catch_1_1_i_context_a806f7c4ed24d51adae90418e661b24b7}{advance\+Generators\+For\+Current\+Test}} ()=0
+\item 
+virtual \mbox{\hyperlink{class_catch_1_1_ptr}{Ptr}}$<$ IConfig const $>$ \mbox{\hyperlink{struct_catch_1_1_i_context_aafdb3fc54906ee6164f28c247f057507}{get\+Config}} () const =0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{struct_catch_1_1_i_mutable_context_a93f32b2ab6d0fb83637059240be799ab}\label{struct_catch_1_1_i_mutable_context_a93f32b2ab6d0fb83637059240be799ab} 
+\index{Catch::IMutableContext@{Catch::IMutableContext}!````~IMutableContext@{\texorpdfstring{$\sim$}{\string~}IMutableContext}}
+\index{````~IMutableContext@{\texorpdfstring{$\sim$}{\string~}IMutableContext}!Catch::IMutableContext@{Catch::IMutableContext}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}IMutableContext()}{\string~IMutableContext()}}
+{\footnotesize\ttfamily virtual Catch\+::\+IMutable\+Context\+::\texorpdfstring{$\sim$}{\string~}\+IMutable\+Context (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{struct_catch_1_1_i_mutable_context_a013e8f688a8ea7970262d07ead542a63}\label{struct_catch_1_1_i_mutable_context_a013e8f688a8ea7970262d07ead542a63} 
+\index{Catch::IMutableContext@{Catch::IMutableContext}!setConfig@{setConfig}}
+\index{setConfig@{setConfig}!Catch::IMutableContext@{Catch::IMutableContext}}
+\doxysubsubsection{\texorpdfstring{setConfig()}{setConfig()}}
+{\footnotesize\ttfamily virtual void Catch\+::\+IMutable\+Context\+::set\+Config (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_catch_1_1_ptr}{Ptr}}$<$ IConfig const $>$ const \&}]{config }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\Hypertarget{struct_catch_1_1_i_mutable_context_a4a80afd0525b7def21bee8d9b48f2d39}\label{struct_catch_1_1_i_mutable_context_a4a80afd0525b7def21bee8d9b48f2d39} 
+\index{Catch::IMutableContext@{Catch::IMutableContext}!setResultCapture@{setResultCapture}}
+\index{setResultCapture@{setResultCapture}!Catch::IMutableContext@{Catch::IMutableContext}}
+\doxysubsubsection{\texorpdfstring{setResultCapture()}{setResultCapture()}}
+{\footnotesize\ttfamily virtual void Catch\+::\+IMutable\+Context\+::set\+Result\+Capture (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_catch_1_1_i_result_capture}{IResult\+Capture}} \texorpdfstring{$\ast$}{*}}]{result\+Capture }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\Hypertarget{struct_catch_1_1_i_mutable_context_af2e53b1dea4527a2587cff266a730f6e}\label{struct_catch_1_1_i_mutable_context_af2e53b1dea4527a2587cff266a730f6e} 
+\index{Catch::IMutableContext@{Catch::IMutableContext}!setRunner@{setRunner}}
+\index{setRunner@{setRunner}!Catch::IMutableContext@{Catch::IMutableContext}}
+\doxysubsubsection{\texorpdfstring{setRunner()}{setRunner()}}
+{\footnotesize\ttfamily virtual void Catch\+::\+IMutable\+Context\+::set\+Runner (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_catch_1_1_i_runner}{IRunner}} \texorpdfstring{$\ast$}{*}}]{runner }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Dokumentacja dla tej struktury została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/extlibs/headers/\mbox{\hyperlink{catch_8hpp}{catch.\+hpp}}\end{DoxyCompactItemize}

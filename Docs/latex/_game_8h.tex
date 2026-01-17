@@ -1,0 +1,47 @@
+\doxysection{Dokumentacja pliku Game.\+h}
+\hypertarget{_game_8h}{}\label{_game_8h}\index{Game.h@{Game.h}}
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$SFML/\+Graphics.\+hpp$>$}\newline
+{\ttfamily \#include "{}State\+Manager.\+h"{}}\newline
+{\ttfamily \#include "{}DEFINITIONS.\+h"{}}\newline
+Wykres zależności załączania dla Game.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_game_8h__incl}
+\end{center}
+\end{figure}
+Ten wykres pokazuje, które pliki bezpośrednio lub pośrednio załączają ten plik\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_game_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_game_data}{Game\+Data}}
+\begin{DoxyCompactList}\small\item\em Struktura przechowująca współdzielone dane gry. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_game}{Game}}
+\begin{DoxyCompactList}\small\item\em Główna klasa silnika gry. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Definicje typów}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_data}{Game\+Data}} $>$ \mbox{\hyperlink{_game_8h_ae7efd7ef77698f16206f5c66180a389f}{Game\+Data\+Ref}}
+\begin{DoxyCompactList}\small\item\em Alias dla std\+::shared\+\_\+ptr$<$\+Game\+Data$>$. Ułatwia przekazywanie danych gry. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja definicji typów}
+\Hypertarget{_game_8h_ae7efd7ef77698f16206f5c66180a389f}\label{_game_8h_ae7efd7ef77698f16206f5c66180a389f} 
+\index{Game.h@{Game.h}!GameDataRef@{GameDataRef}}
+\index{GameDataRef@{GameDataRef}!Game.h@{Game.h}}
+\doxysubsubsection{\texorpdfstring{GameDataRef}{GameDataRef}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_game_8h_ae7efd7ef77698f16206f5c66180a389f}{Game\+Data\+Ref}}}
+
+
+
+Alias dla std\+::shared\+\_\+ptr$<$\+Game\+Data$>$. Ułatwia przekazywanie danych gry. 
+

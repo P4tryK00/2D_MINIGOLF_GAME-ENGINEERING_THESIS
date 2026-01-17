@@ -1,0 +1,38 @@
+\doxysection{Dokumentacja pliku cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Network/\+Ip\+Address.cpp}
+\hypertarget{_ip_address_8cpp}{}\label{_ip_address_8cpp}\index{cmake-\/build-\/debug/\_deps/sfml-\/src/src/SFML/Network/IpAddress.cpp@{cmake-\/build-\/debug/\_deps/sfml-\/src/src/SFML/Network/IpAddress.cpp}}
+{\ttfamily \#include $<$SFML/\+Network/\+Ip\+Address.\+hpp$>$}\newline
+{\ttfamily \#include $<$SFML/\+Network/\+Http.\+hpp$>$}\newline
+{\ttfamily \#include $<$SFML/\+Network/\+Socket\+Impl.\+hpp$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+Wykres zależności załączania dla Ip\+Address.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_ip_address_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Przestrzenie nazw}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacesf}{sf}}
+\begin{DoxyCompactList}\small\item\em Predefine some classes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_network_2_export_8hpp_ac5d46d4ffd98e947e28c54d051b338e7}{SFML\+\_\+\+NETWORK\+\_\+\+API}} bool \mbox{\hyperlink{namespacesf_a1c7342603d3a758144298b70d8166923}{sf\+::operator==}} (const \mbox{\hyperlink{classsf_1_1_ip_address}{Ip\+Address}} \&left, const \mbox{\hyperlink{classsf_1_1_ip_address}{Ip\+Address}} \&right)
+\begin{DoxyCompactList}\small\item\em Overload of == operator to compare two IP addresses. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_network_2_export_8hpp_ac5d46d4ffd98e947e28c54d051b338e7}{SFML\+\_\+\+NETWORK\+\_\+\+API}} bool \mbox{\hyperlink{namespacesf_a7e9416575ff1e62467c692e00a3290e1}{sf\+::operator!=}} (const \mbox{\hyperlink{classsf_1_1_ip_address}{Ip\+Address}} \&left, const \mbox{\hyperlink{classsf_1_1_ip_address}{Ip\+Address}} \&right)
+\begin{DoxyCompactList}\small\item\em Overload of != operator to compare two IP addresses. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_network_2_export_8hpp_ac5d46d4ffd98e947e28c54d051b338e7}{SFML\+\_\+\+NETWORK\+\_\+\+API}} bool \mbox{\hyperlink{namespacesf_ae761c09191acb8e31cce343197fec0b9}{sf\+::operator$<$}} (const \mbox{\hyperlink{classsf_1_1_ip_address}{Ip\+Address}} \&left, const \mbox{\hyperlink{classsf_1_1_ip_address}{Ip\+Address}} \&right)
+\begin{DoxyCompactList}\small\item\em Overload of \texorpdfstring{$<$}{<} operator to compare two IP addresses. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_network_2_export_8hpp_ac5d46d4ffd98e947e28c54d051b338e7}{SFML\+\_\+\+NETWORK\+\_\+\+API}} bool \mbox{\hyperlink{namespacesf_af142e40929bb8cc96d79c48af19bd045}{sf\+::operator$>$}} (const \mbox{\hyperlink{classsf_1_1_ip_address}{Ip\+Address}} \&left, const \mbox{\hyperlink{classsf_1_1_ip_address}{Ip\+Address}} \&right)
+\begin{DoxyCompactList}\small\item\em Overload of \texorpdfstring{$>$}{>} operator to compare two IP addresses. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_network_2_export_8hpp_ac5d46d4ffd98e947e28c54d051b338e7}{SFML\+\_\+\+NETWORK\+\_\+\+API}} bool \mbox{\hyperlink{namespacesf_a9c0477225ec01865c550da5b3b2b6cc5}{sf\+::operator$<$=}} (const \mbox{\hyperlink{classsf_1_1_ip_address}{Ip\+Address}} \&left, const \mbox{\hyperlink{classsf_1_1_ip_address}{Ip\+Address}} \&right)
+\begin{DoxyCompactList}\small\item\em Overload of \texorpdfstring{$<$}{<}= operator to compare two IP addresses. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_network_2_export_8hpp_ac5d46d4ffd98e947e28c54d051b338e7}{SFML\+\_\+\+NETWORK\+\_\+\+API}} bool \mbox{\hyperlink{namespacesf_a68124f60ee7ee08073bd1894d69b0ed2}{sf\+::operator$>$=}} (const \mbox{\hyperlink{classsf_1_1_ip_address}{Ip\+Address}} \&left, const \mbox{\hyperlink{classsf_1_1_ip_address}{Ip\+Address}} \&right)
+\begin{DoxyCompactList}\small\item\em Overload of \texorpdfstring{$>$}{>}= operator to compare two IP addresses. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_network_2_export_8hpp_ac5d46d4ffd98e947e28c54d051b338e7}{SFML\+\_\+\+NETWORK\+\_\+\+API}} std\+::istream \& \mbox{\hyperlink{namespacesf_a6a79ef337fc5bca4fb054e15dee675c0}{sf\+::operator$>$$>$}} (std\+::istream \&stream, \mbox{\hyperlink{classsf_1_1_ip_address}{Ip\+Address}} \&address)
+\begin{DoxyCompactList}\small\item\em Overload of \texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>} operator to extract an IP address from an input stream. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_network_2_export_8hpp_ac5d46d4ffd98e947e28c54d051b338e7}{SFML\+\_\+\+NETWORK\+\_\+\+API}} std\+::ostream \& \mbox{\hyperlink{namespacesf_ab76f5a287dd4b6885eb083e9c5985753}{sf\+::operator$<$$<$}} (std\+::ostream \&stream, const \mbox{\hyperlink{classsf_1_1_ip_address}{Ip\+Address}} \&address)
+\begin{DoxyCompactList}\small\item\em Overload of \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} operator to print an IP address to an output stream. \end{DoxyCompactList}\end{DoxyCompactItemize}

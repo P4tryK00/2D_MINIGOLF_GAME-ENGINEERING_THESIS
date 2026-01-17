@@ -1,0 +1,258 @@
+\doxysection{Dokumentacja klasy sf\+::Sound\+Buffer\+Recorder}
+\hypertarget{classsf_1_1_sound_buffer_recorder}{}\label{classsf_1_1_sound_buffer_recorder}\index{sf::SoundBufferRecorder@{sf::SoundBufferRecorder}}
+
+
+Specialized \doxylink{classsf_1_1_sound_recorder}{Sound\+Recorder} which stores the captured audio data into a sound buffer.  
+
+
+
+
+{\ttfamily \#include $<$Sound\+Buffer\+Recorder.\+hpp$>$}
+
+
+
+Diagram dziedziczenia dla sf\+::Sound\+Buffer\+Recorder\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classsf_1_1_sound_buffer_recorder__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagram współpracy dla sf\+::Sound\+Buffer\+Recorder\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classsf_1_1_sound_buffer_recorder__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsf_1_1_sound_buffer_recorder_a350f7f885ccfd12b4c6c120c23695637}{\texorpdfstring{$\sim$}{\string~}\+Sound\+Buffer\+Recorder}} ()
+\begin{DoxyCompactList}\small\item\em destructor \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classsf_1_1_sound_buffer}{Sound\+Buffer}} \& \mbox{\hyperlink{classsf_1_1_sound_buffer_recorder_a1befea2bfa3959ff6fabbf7e33cbc864}{get\+Buffer}} () const
+\begin{DoxyCompactList}\small\item\em Get the sound buffer containing the captured audio data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{classsf_1_1_sound_recorder}{sf\+::\+Sound\+Recorder}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classsf_1_1_sound_recorder_ae83953cce24c5245c0672d150d280b64}{\texorpdfstring{$\sim$}{\string~}\+Sound\+Recorder}} ()
+\begin{DoxyCompactList}\small\item\em destructor \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1_sound_recorder_a715f0fd2f228c83d79aaedca562ae51f}{start}} (unsigned int sample\+Rate=44100)
+\begin{DoxyCompactList}\small\item\em Start the capture. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1_sound_recorder_a8d9c8346aa9aa409cfed4a1101159c4c}{stop}} ()
+\begin{DoxyCompactList}\small\item\em Stop the capture. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classsf_1_1_sound_recorder_aed292c297a3e0d627db4eb5c18f58c44}{get\+Sample\+Rate}} () const
+\begin{DoxyCompactList}\small\item\em Get the sample rate. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1_sound_recorder_a8eb3e473292c16e874322815836d3cd3}{set\+Device}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Set the audio capture device. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classsf_1_1_sound_recorder_a13d7d97b3ca67efa18f5ee0aa5884f1f}{get\+Device}} () const
+\begin{DoxyCompactList}\small\item\em Get the name of the current audio capture device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1_sound_recorder_ae4e22ba67d12a74966eb05fad55a317c}{set\+Channel\+Count}} (unsigned int channel\+Count)
+\begin{DoxyCompactList}\small\item\em Set the channel count of the audio capture device. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classsf_1_1_sound_recorder_a610e98e7a73b316ce26b7c55234f86e9}{get\+Channel\+Count}} () const
+\begin{DoxyCompactList}\small\item\em Get the number of channels used by this recorder. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Metody chronione}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classsf_1_1_sound_buffer_recorder_a8daaee1b55bd83212348ed8fa7cebd13}{on\+Start}} ()
+\begin{DoxyCompactList}\small\item\em Start capturing audio data. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classsf_1_1_sound_buffer_recorder_a8a12b7282f542edf7d70a5e8e2902129}{on\+Process\+Samples}} (const \mbox{\hyperlink{namespacesf_a3c8e10435e2a310a7741755e66b5c94e}{Int16}} \texorpdfstring{$\ast$}{*}samples, std\+::size\+\_\+t sample\+Count)
+\begin{DoxyCompactList}\small\item\em Process a new chunk of recorded samples. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1_sound_buffer_recorder_a146b2d746fb639dde4a59607169fb947}{on\+Stop}} ()
+\begin{DoxyCompactList}\small\item\em Stop capturing audio data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody chronione dziedziczone z \mbox{\hyperlink{classsf_1_1_sound_recorder}{sf\+::\+Sound\+Recorder}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsf_1_1_sound_recorder_a50ebad413c4f157408a0fa49f23212a9}{Sound\+Recorder}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1_sound_recorder_a85b7fb8a86c08b5084f8f142767bccf6}{set\+Processing\+Interval}} (\mbox{\hyperlink{classsf_1_1_time}{Time}} interval)
+\begin{DoxyCompactList}\small\item\em Set the processing interval. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{namespacesf_a3c8e10435e2a310a7741755e66b5c94e}{Int16}} $>$ \mbox{\hyperlink{classsf_1_1_sound_buffer_recorder_a87080790cf294e1dc921bb90b7b352bf}{m\+\_\+samples}}
+\begin{DoxyCompactList}\small\item\em Temporary sample buffer to hold the recorded data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1_sound_buffer}{Sound\+Buffer}} \mbox{\hyperlink{classsf_1_1_sound_buffer_recorder_aacf0812e6e930cbd815073911da4626b}{m\+\_\+buffer}}
+\begin{DoxyCompactList}\small\item\em \doxylink{classsf_1_1_sound}{Sound} buffer that will contain the recorded data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Dodatkowe Dziedziczone Składowe}
+\doxysubsection*{Statyczne metody publiczne dziedziczone z \mbox{\hyperlink{classsf_1_1_sound_recorder}{sf\+::\+Sound\+Recorder}}}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classsf_1_1_sound_recorder_ae9f70e886e4945164c09dfb9f05dd2c5}{get\+Available\+Devices}} ()
+\begin{DoxyCompactList}\small\item\em Get a list of the names of all available audio capture devices. \end{DoxyCompactList}\item 
+static std\+::string \mbox{\hyperlink{classsf_1_1_sound_recorder_a966a0fbaac28c9f70f7de7e41ed09600}{get\+Default\+Device}} ()
+\begin{DoxyCompactList}\small\item\em Get the name of the default audio capture device. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classsf_1_1_sound_recorder_a6bc51e3641b43fc6b3a094a93bfff38d}{is\+Available}} ()
+\begin{DoxyCompactList}\small\item\em Check if the system supports audio capture. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Specialized \doxylink{classsf_1_1_sound_recorder}{Sound\+Recorder} which stores the captured audio data into a sound buffer. 
+
+\doxylink{classsf_1_1_sound_buffer_recorder}{sf\+::\+Sound\+Buffer\+Recorder} allows to access a recorded sound through a \doxylink{classsf_1_1_sound_buffer}{sf\+::\+Sound\+Buffer}, so that it can be played, saved to a file, etc.
+
+It has the same simple interface as its base class (\doxylink{classsf_1_1_sound_recorder_a715f0fd2f228c83d79aaedca562ae51f}{start()}, \doxylink{classsf_1_1_sound_recorder_a8d9c8346aa9aa409cfed4a1101159c4c}{stop()}) and adds a function to retrieve the recorded sound buffer (\doxylink{classsf_1_1_sound_buffer_recorder_a1befea2bfa3959ff6fabbf7e33cbc864}{get\+Buffer()}).
+
+As usual, don\textquotesingle{}t forget to call the \doxylink{classsf_1_1_sound_recorder_a6bc51e3641b43fc6b3a094a93bfff38d}{is\+Available()} function before using this class (see \doxylink{classsf_1_1_sound_recorder}{sf\+::\+Sound\+Recorder} for more details about this).
+
+Usage example\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classsf_1_1_sound_recorder_a6bc51e3641b43fc6b3a094a93bfff38d}{sf::SoundBufferRecorder::isAvailable}}())}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Record\ some\ audio\ data}}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{classsf_1_1_sound_buffer_recorder}{sf::SoundBufferRecorder}}\ recorder;}
+\DoxyCodeLine{\ \ \ \ recorder.\mbox{\hyperlink{classsf_1_1_sound_recorder_a715f0fd2f228c83d79aaedca562ae51f}{start}}();}
+\DoxyCodeLine{\ \ \ \ ...}
+\DoxyCodeLine{\ \ \ \ recorder.\mbox{\hyperlink{classsf_1_1_sound_recorder_a8d9c8346aa9aa409cfed4a1101159c4c}{stop}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Get\ the\ buffer\ containing\ the\ captured\ audio\ data}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classsf_1_1_sound_buffer}{sf::SoundBuffer}}\&\ buffer\ =\ recorder.\mbox{\hyperlink{classsf_1_1_sound_buffer_recorder_a1befea2bfa3959ff6fabbf7e33cbc864}{getBuffer}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Save\ it\ to\ a\ file\ (for\ example...)}}
+\DoxyCodeLine{\ \ \ \ buffer.\mbox{\hyperlink{classsf_1_1_sound_buffer_aade64260c6375580a085314a30be007e}{saveToFile}}(\textcolor{stringliteral}{"{}my\_record.ogg"{}});}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{Zobacz również}
+\doxylink{classsf_1_1_sound_recorder}{sf\+::\+Sound\+Recorder} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{classsf_1_1_sound_buffer_recorder_a350f7f885ccfd12b4c6c120c23695637}\label{classsf_1_1_sound_buffer_recorder_a350f7f885ccfd12b4c6c120c23695637} 
+\index{sf::SoundBufferRecorder@{sf::SoundBufferRecorder}!````~SoundBufferRecorder@{\texorpdfstring{$\sim$}{\string~}SoundBufferRecorder}}
+\index{````~SoundBufferRecorder@{\texorpdfstring{$\sim$}{\string~}SoundBufferRecorder}!sf::SoundBufferRecorder@{sf::SoundBufferRecorder}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}SoundBufferRecorder()}{\string~SoundBufferRecorder()}}
+{\footnotesize\ttfamily sf\+::\+Sound\+Buffer\+Recorder\+::\texorpdfstring{$\sim$}{\string~}\+Sound\+Buffer\+Recorder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+destructor 
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1_sound_buffer_recorder_a350f7f885ccfd12b4c6c120c23695637_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{classsf_1_1_sound_buffer_recorder_a1befea2bfa3959ff6fabbf7e33cbc864}\label{classsf_1_1_sound_buffer_recorder_a1befea2bfa3959ff6fabbf7e33cbc864} 
+\index{sf::SoundBufferRecorder@{sf::SoundBufferRecorder}!getBuffer@{getBuffer}}
+\index{getBuffer@{getBuffer}!sf::SoundBufferRecorder@{sf::SoundBufferRecorder}}
+\doxysubsubsection{\texorpdfstring{getBuffer()}{getBuffer()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classsf_1_1_sound_buffer}{Sound\+Buffer}} \& sf\+::\+Sound\+Buffer\+Recorder\+::get\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the sound buffer containing the captured audio data. 
+
+The sound buffer is valid only after the capture has ended. This function provides a read-\/only access to the internal sound buffer, but it can be copied if you need to make any modification to it.
+
+\begin{DoxyReturn}{Zwraca}
+Read-\/only access to the sound buffer 
+\end{DoxyReturn}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{classsf_1_1_sound_buffer_recorder_a1befea2bfa3959ff6fabbf7e33cbc864_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1_sound_buffer_recorder_a8a12b7282f542edf7d70a5e8e2902129}\label{classsf_1_1_sound_buffer_recorder_a8a12b7282f542edf7d70a5e8e2902129} 
+\index{sf::SoundBufferRecorder@{sf::SoundBufferRecorder}!onProcessSamples@{onProcessSamples}}
+\index{onProcessSamples@{onProcessSamples}!sf::SoundBufferRecorder@{sf::SoundBufferRecorder}}
+\doxysubsubsection{\texorpdfstring{onProcessSamples()}{onProcessSamples()}}
+{\footnotesize\ttfamily bool sf\+::\+Sound\+Buffer\+Recorder\+::on\+Process\+Samples (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacesf_a3c8e10435e2a310a7741755e66b5c94e}{Int16}} \texorpdfstring{$\ast$}{*}}]{samples,  }\item[{std\+::size\+\_\+t}]{sample\+Count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Process a new chunk of recorded samples. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em samples} & Pointer to the new chunk of recorded samples \\
+\hline
+{\em sample\+Count} & Number of samples pointed by {\itshape samples} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True to continue the capture, or false to stop it 
+\end{DoxyReturn}
+
+
+Implementuje \mbox{\hyperlink{classsf_1_1_sound_recorder_a2670124cbe7a87c7e46b4840807f4fd7}{sf\+::\+Sound\+Recorder}}.
+
+\Hypertarget{classsf_1_1_sound_buffer_recorder_a8daaee1b55bd83212348ed8fa7cebd13}\label{classsf_1_1_sound_buffer_recorder_a8daaee1b55bd83212348ed8fa7cebd13} 
+\index{sf::SoundBufferRecorder@{sf::SoundBufferRecorder}!onStart@{onStart}}
+\index{onStart@{onStart}!sf::SoundBufferRecorder@{sf::SoundBufferRecorder}}
+\doxysubsubsection{\texorpdfstring{onStart()}{onStart()}}
+{\footnotesize\ttfamily bool sf\+::\+Sound\+Buffer\+Recorder\+::on\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Start capturing audio data. 
+
+\begin{DoxyReturn}{Zwraca}
+True to start the capture, or false to abort it 
+\end{DoxyReturn}
+
+
+Reimplementowana z \mbox{\hyperlink{classsf_1_1_sound_recorder_ace00a2df7d4ff0206f10a27d32ae9da4}{sf\+::\+Sound\+Recorder}}.
+
+\Hypertarget{classsf_1_1_sound_buffer_recorder_a146b2d746fb639dde4a59607169fb947}\label{classsf_1_1_sound_buffer_recorder_a146b2d746fb639dde4a59607169fb947} 
+\index{sf::SoundBufferRecorder@{sf::SoundBufferRecorder}!onStop@{onStop}}
+\index{onStop@{onStop}!sf::SoundBufferRecorder@{sf::SoundBufferRecorder}}
+\doxysubsubsection{\texorpdfstring{onStop()}{onStop()}}
+{\footnotesize\ttfamily void sf\+::\+Sound\+Buffer\+Recorder\+::on\+Stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Stop capturing audio data. 
+
+
+
+Reimplementowana z \mbox{\hyperlink{classsf_1_1_sound_recorder_afd03be464ca37d472bfadc114eb70856}{sf\+::\+Sound\+Recorder}}.
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1_sound_buffer_recorder_a146b2d746fb639dde4a59607169fb947_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{classsf_1_1_sound_buffer_recorder_aacf0812e6e930cbd815073911da4626b}\label{classsf_1_1_sound_buffer_recorder_aacf0812e6e930cbd815073911da4626b} 
+\index{sf::SoundBufferRecorder@{sf::SoundBufferRecorder}!m\_buffer@{m\_buffer}}
+\index{m\_buffer@{m\_buffer}!sf::SoundBufferRecorder@{sf::SoundBufferRecorder}}
+\doxysubsubsection{\texorpdfstring{m\_buffer}{m\_buffer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1_sound_buffer}{Sound\+Buffer}} sf\+::\+Sound\+Buffer\+Recorder\+::m\+\_\+buffer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxylink{classsf_1_1_sound}{Sound} buffer that will contain the recorded data. 
+
+\Hypertarget{classsf_1_1_sound_buffer_recorder_a87080790cf294e1dc921bb90b7b352bf}\label{classsf_1_1_sound_buffer_recorder_a87080790cf294e1dc921bb90b7b352bf} 
+\index{sf::SoundBufferRecorder@{sf::SoundBufferRecorder}!m\_samples@{m\_samples}}
+\index{m\_samples@{m\_samples}!sf::SoundBufferRecorder@{sf::SoundBufferRecorder}}
+\doxysubsubsection{\texorpdfstring{m\_samples}{m\_samples}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{namespacesf_a3c8e10435e2a310a7741755e66b5c94e}{Int16}}$>$ sf\+::\+Sound\+Buffer\+Recorder\+::m\+\_\+samples\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Temporary sample buffer to hold the recorded data. 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/include/\+SFML/\+Audio/\mbox{\hyperlink{_sound_buffer_recorder_8hpp}{Sound\+Buffer\+Recorder.\+hpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Audio/\mbox{\hyperlink{_sound_buffer_recorder_8cpp}{Sound\+Buffer\+Recorder.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,32 @@
+\doxysection{Save\+Manager.\+h}
+\hypertarget{_save_manager_8h_source}{}\label{_save_manager_8h_source}\mbox{\hyperlink{_save_manager_8h}{Idź do dokumentacji tego pliku.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MINI\_GOLF\_SAVEMANAGER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MINI\_GOLF\_SAVEMANAGER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_save_manager}{SaveManager}}\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_save_manager_abd27374d78d301996c97596115e6f918}{init}}();}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_save_manager_a715b806bb960263067e4127b30bf321c}{getUnlockedLevel}}();}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_save_manager_a754a97aa5a82eeb4285c59194fe117a2}{getBestScore}}(\textcolor{keywordtype}{int}\ level);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_save_manager_a45976462fb4b88d38743bd9b44df1dfe}{submitScore}}(\textcolor{keywordtype}{int}\ level,\ \textcolor{keywordtype}{int}\ score);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_save_manager_a29d7514c18f7a66cfbb37998499a9d63}{save}}();}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_save_manager_abc9a37974b05b890b61a4f87c076b381}{load}}();}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{static}\ std::string\ \mbox{\hyperlink{class_save_manager_a21f5f8bb2552a6f57567844966c4fad6}{fileName}};\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_save_manager_aa9dac6f7cafb6437eaf861d37777cc35}{unlockedLevel}};\ \ \ \ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{static}\ std::vector<int>\ \mbox{\hyperlink{class_save_manager_a0ea66c8edcdd119b7a502524911b6278}{bestScores}};\ }
+\DoxyCodeLine{00058\ \};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//MINI\_GOLF\_SAVEMANAGER\_H}}
+
+\end{DoxyCode}

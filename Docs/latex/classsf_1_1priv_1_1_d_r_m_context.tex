@@ -1,0 +1,594 @@
+\doxysection{Dokumentacja klasy sf\+::priv\+::DRMContext}
+\hypertarget{classsf_1_1priv_1_1_d_r_m_context}{}\label{classsf_1_1priv_1_1_d_r_m_context}\index{sf::priv::DRMContext@{sf::priv::DRMContext}}
+
+
+{\ttfamily \#include $<$DRMContext.\+hpp$>$}
+
+
+
+Diagram dziedziczenia dla sf\+::priv\+::DRMContext\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classsf_1_1priv_1_1_d_r_m_context__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagram współpracy dla sf\+::priv\+::DRMContext\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classsf_1_1priv_1_1_d_r_m_context__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsf_1_1priv_1_1_d_r_m_context_a1c123bbed20df3936e35acb757f82c39}{DRMContext}} (\mbox{\hyperlink{classsf_1_1priv_1_1_d_r_m_context}{DRMContext}} \texorpdfstring{$\ast$}{*}shared)
+\begin{DoxyCompactList}\small\item\em Create a new context, not associated to a window. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1priv_1_1_d_r_m_context_a18713254720be6e968db355e9ab05258}{DRMContext}} (\mbox{\hyperlink{classsf_1_1priv_1_1_d_r_m_context}{DRMContext}} \texorpdfstring{$\ast$}{*}shared, const \mbox{\hyperlink{structsf_1_1_context_settings}{Context\+Settings}} \&settings, const \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl}{Window\+Impl}} \texorpdfstring{$\ast$}{*}owner, unsigned int bits\+Per\+Pixel)
+\begin{DoxyCompactList}\small\item\em Create a new context attached to a window. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1priv_1_1_d_r_m_context_a53bbc8f2b5007f96666ac8a3e616d846}{DRMContext}} (\mbox{\hyperlink{classsf_1_1priv_1_1_d_r_m_context}{DRMContext}} \texorpdfstring{$\ast$}{*}shared, const \mbox{\hyperlink{structsf_1_1_context_settings}{Context\+Settings}} \&settings, unsigned int width, unsigned int height)
+\begin{DoxyCompactList}\small\item\em Create a new context that embeds its own rendering target. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1priv_1_1_d_r_m_context_a7be45ca2f85ba6923ff074d3ccf69059}{\texorpdfstring{$\sim$}{\string~}\+DRMContext}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classsf_1_1priv_1_1_d_r_m_context_a6c275325bc2926f013c18c8e3fa9716c}{make\+Current}} (bool current)
+\begin{DoxyCompactList}\small\item\em Activate the context as the current target for rendering. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_d_r_m_context_a1d030128286270bb94faf2894ae1387c}{display}} ()
+\begin{DoxyCompactList}\small\item\em Display what has been rendered to the context so far. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_d_r_m_context_a1440980667ed796f1218daad35188934}{set\+Vertical\+Sync\+Enabled}} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Enable or disable vertical synchronization. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_d_r_m_context_a4e46ad9cf32752bc61d4ba2b7a72542e}{create\+Context}} (\mbox{\hyperlink{classsf_1_1priv_1_1_d_r_m_context}{DRMContext}} \texorpdfstring{$\ast$}{*}shared)
+\begin{DoxyCompactList}\small\item\em Create the EGL context. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_d_r_m_context_a9f6cff4cc19cf613a79396a84d8d21d4}{create\+Surface}} (unsigned int width, unsigned int height, unsigned int bpp, bool scanout)
+\begin{DoxyCompactList}\small\item\em Create the EGL surface. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_d_r_m_context_a7a02341bb5042d1bbd99e64111c56ce6}{destroy\+Surface}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the EGL surface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context}{sf\+::priv\+::\+Gl\+Context}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context_a05eb811836d6a08a8099bb4fc7c31c61}{\texorpdfstring{$\sim$}{\string~}\+Gl\+Context}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{structsf_1_1_context_settings}{Context\+Settings}} \& \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context_abcda11cfbfa53c59db8056f23aacf147}{get\+Settings}} () const
+\begin{DoxyCompactList}\small\item\em Get the settings of the context. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context_a8d0fa09683a8a1adaabd20e01d03e72c}{set\+Active}} (bool active)
+\begin{DoxyCompactList}\small\item\em Activate or deactivate the context as the current target for rendering. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Statyczne metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{egl_8h_a691766e6d867e15207ec0a6d6e46253c}{EGLConfig}} \mbox{\hyperlink{classsf_1_1priv_1_1_d_r_m_context_a2683e50c5c6589692132fac8dc42f355}{get\+Best\+Config}} (\mbox{\hyperlink{egl_8h_a87d55554aa13accdcb0e10eab910c72e}{EGLDisplay}} \mbox{\hyperlink{classsf_1_1priv_1_1_d_r_m_context_a1d030128286270bb94faf2894ae1387c}{display}}, unsigned int bits\+Per\+Pixel, const \mbox{\hyperlink{structsf_1_1_context_settings}{Context\+Settings}} \&settings)
+\begin{DoxyCompactList}\small\item\em Get the best EGL visual for a given set of video settings. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{namespacesf_a0187a0b60bae499f24a4949973657f60}{Gl\+Function\+Pointer}} \mbox{\hyperlink{classsf_1_1priv_1_1_d_r_m_context_a138dce57cdaf32a08c2c18f1a3072b05}{get\+Function}} (const char \texorpdfstring{$\ast$}{*}name)
+\begin{DoxyCompactList}\small\item\em Get the address of an Open\+GL function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Statyczne metody publiczne dziedziczone z \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context}{sf\+::priv\+::\+Gl\+Context}}}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context_a4718cb115022db132fd378825098e194}{init\+Resource}} ()
+\begin{DoxyCompactList}\small\item\em Perform resource initialization. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context_a606524edac2af085d8b84fbd8d727bad}{cleanup\+Resource}} ()
+\begin{DoxyCompactList}\small\item\em Perform resource cleanup. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context_a85f9d69bc21f225de81e1770ebca0044}{register\+Context\+Destroy\+Callback}} (\mbox{\hyperlink{namespacesf_a90389f466699a5737ffa91d2a94b0166}{Context\+Destroy\+Callback}} callback, void \texorpdfstring{$\ast$}{*}arg)
+\begin{DoxyCompactList}\small\item\em Register a function to be called when a context is destroyed. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context_a6de095f2abcb01b0beb066116833737e}{acquire\+Transient\+Context}} ()
+\begin{DoxyCompactList}\small\item\em Acquires a context for short-\/term use on the current thread. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context_ac449e9982a1ac69e7c165fdad4940f7b}{release\+Transient\+Context}} ()
+\begin{DoxyCompactList}\small\item\em Releases a context after short-\/term use on the current thread. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context}{Gl\+Context}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context_a508de1c154301406e1f8ee3f4ca19bd2}{create}} ()
+\begin{DoxyCompactList}\small\item\em Create a new context, not associated to a window. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context}{Gl\+Context}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context_a4da9acecd374cf132161b1d40468660a}{create}} (const \mbox{\hyperlink{structsf_1_1_context_settings}{Context\+Settings}} \&settings, const \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl}{Window\+Impl}} \texorpdfstring{$\ast$}{*}owner, unsigned int bits\+Per\+Pixel)
+\begin{DoxyCompactList}\small\item\em Create a new context attached to a window. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context}{Gl\+Context}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context_ac1e01ff02e65e2a94665ef77d33ad019}{create}} (const \mbox{\hyperlink{structsf_1_1_context_settings}{Context\+Settings}} \&settings, unsigned int width, unsigned int height)
+\begin{DoxyCompactList}\small\item\em Create a new context that embeds its own rendering target. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context_a2fb661dfceef810ce13473962eb22775}{is\+Extension\+Available}} (const char \texorpdfstring{$\ast$}{*}name)
+\begin{DoxyCompactList}\small\item\em Check whether a given Open\+GL extension is available. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{namespacesf_a0187a0b60bae499f24a4949973657f60}{Gl\+Function\+Pointer}} \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context_af316730aba4cb7da8f8f857c4b953a31}{get\+Function}} (const char \texorpdfstring{$\ast$}{*}name)
+\begin{DoxyCompactList}\small\item\em Get the address of an Open\+GL function. \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context}{Gl\+Context}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context_a412f919fcd06ef2e145c6d5f7284c9e4}{get\+Active\+Context}} ()
+\begin{DoxyCompactList}\small\item\em Get the currently active context. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{namespacesf_add9ac83466d96b9f50a009b9f4064266}{Uint64}} \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context_ab52450881372fb98aebec9a8d1d87bea}{get\+Active\+Context\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Get the currently active context\textquotesingle{}s ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Statyczne metody chronione}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structsf_1_1priv_1_1_drm}{Drm}} \& \mbox{\hyperlink{classsf_1_1priv_1_1_d_r_m_context_aa49a27047aa6287e393319bd4773cb59}{get\+DRM}} ()
+\begin{DoxyCompactList}\small\item\em Get Direct Rendering Manager pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Statyczne metody chronione dziedziczone z \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context}{sf\+::priv\+::\+Gl\+Context}}}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context_aa2b17884ad02fef59c5e641838ce7bf8}{evaluate\+Format}} (unsigned int bits\+Per\+Pixel, const \mbox{\hyperlink{structsf_1_1_context_settings}{Context\+Settings}} \&settings, int color\+Bits, int depth\+Bits, int stencil\+Bits, int antialiasing, bool accelerated, bool s\+Rgb)
+\begin{DoxyCompactList}\small\item\em Evaluate a pixel format configuration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_d_r_m_context_a0dbd481f893a3a6de4f8221bb79b8e3e}{update\+Settings}} ()
+\begin{DoxyCompactList}\small\item\em Helper to copy the picked EGL configuration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{egl_8h_a87d55554aa13accdcb0e10eab910c72e}{EGLDisplay}} \mbox{\hyperlink{classsf_1_1priv_1_1_d_r_m_context_a5ad9f2ca24628c0448dec84f9166f282}{m\+\_\+display}}
+\begin{DoxyCompactList}\small\item\em The internal EGL display. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{egl_8h_a5105beca2335557d2a9507727cdc78d5}{EGLContext}} \mbox{\hyperlink{classsf_1_1priv_1_1_d_r_m_context_abee5f90370930663f44e7ddc1e3f4bb4}{m\+\_\+context}}
+\begin{DoxyCompactList}\small\item\em The internal EGL context. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{egl_8h_a1bd45435703af31ea10bc2f2229f337b}{EGLSurface}} \mbox{\hyperlink{classsf_1_1priv_1_1_d_r_m_context_a21d80fc8623a8b5557be255a5dfb75b2}{m\+\_\+surface}}
+\begin{DoxyCompactList}\small\item\em The internal EGL surface. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{egl_8h_a691766e6d867e15207ec0a6d6e46253c}{EGLConfig}} \mbox{\hyperlink{classsf_1_1priv_1_1_d_r_m_context_aa3497adf99508ae65dbbbe3dbfc3d0f0}{m\+\_\+config}}
+\begin{DoxyCompactList}\small\item\em The internal EGL config. \end{DoxyCompactList}\item 
+gbm\+\_\+bo \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classsf_1_1priv_1_1_d_r_m_context_a91fa624dfa5d3a43704b83a543af1346}{m\+\_\+current\+BO}}
+\item 
+gbm\+\_\+bo \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classsf_1_1priv_1_1_d_r_m_context_abe62149f1e3e68eea0869c2bcb774cab}{m\+\_\+next\+BO}}
+\item 
+gbm\+\_\+surface \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classsf_1_1priv_1_1_d_r_m_context_a4cbacf50f67e1670ccf62903eaa0ba1f}{m\+\_\+gbm\+Surface}}
+\item 
+unsigned int \mbox{\hyperlink{classsf_1_1priv_1_1_d_r_m_context_ab7325bc8da70cfe04f3a85d56de7ff19}{m\+\_\+width}}
+\item 
+unsigned int \mbox{\hyperlink{classsf_1_1priv_1_1_d_r_m_context_ae79dd442759c0acb70c7fca959673e47}{m\+\_\+height}}
+\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_d_r_m_context_ac58cae9496529719c72df85f021f4126}{m\+\_\+shown}}
+\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_d_r_m_context_a61180d0957e6a9c1694a8abe50eebc46}{m\+\_\+scan\+Out}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Przyjaciele}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_d_r_m_context_aff5c2acc44bc298ec29b3d2c356485ee}{Video\+Mode\+Impl}}
+\item 
+class \mbox{\hyperlink{classsf_1_1priv_1_1_d_r_m_context_acbbedfc6c1b2f9e476412aac518629a1}{Window\+Impl\+DRM}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Dodatkowe Dziedziczone Składowe}
+\doxysubsection*{Metody chronione dziedziczone z \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context}{sf\+::priv\+::\+Gl\+Context}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsf_1_1priv_1_1_gl_context_a286cd2741faff509387c1c40940303d2}{Gl\+Context}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context_adbd990d07ffa9a8bdddcfe5b80a2c5e1}{cleanup\+Unshared\+Resources}} ()
+\begin{DoxyCompactList}\small\item\em Notify unshared Gl\+Resources of context destruction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty chronione dziedziczone z \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context}{sf\+::priv\+::\+Gl\+Context}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsf_1_1_context_settings}{Context\+Settings}} \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context_a7d3a359a689b303900f3f054afa35e44}{m\+\_\+settings}}
+\begin{DoxyCompactList}\small\item\em Creation settings of the context. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{classsf_1_1priv_1_1_d_r_m_context_a1c123bbed20df3936e35acb757f82c39}\label{classsf_1_1priv_1_1_d_r_m_context_a1c123bbed20df3936e35acb757f82c39} 
+\index{sf::priv::DRMContext@{sf::priv::DRMContext}!DRMContext@{DRMContext}}
+\index{DRMContext@{DRMContext}!sf::priv::DRMContext@{sf::priv::DRMContext}}
+\doxysubsubsection{\texorpdfstring{DRMContext()}{DRMContext()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily sf\+::priv\+::\+DRMContext\+::\+DRMContext (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1priv_1_1_d_r_m_context}{DRMContext}} \texorpdfstring{$\ast$}{*}}]{shared }\end{DoxyParamCaption})}
+
+
+
+Create a new context, not associated to a window. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em shared} & \doxylink{classsf_1_1_context}{Context} to share the new one with (can be NULL) \\
+\hline
+\end{DoxyParams}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_d_r_m_context_a1c123bbed20df3936e35acb757f82c39_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_d_r_m_context_a18713254720be6e968db355e9ab05258}\label{classsf_1_1priv_1_1_d_r_m_context_a18713254720be6e968db355e9ab05258} 
+\index{sf::priv::DRMContext@{sf::priv::DRMContext}!DRMContext@{DRMContext}}
+\index{DRMContext@{DRMContext}!sf::priv::DRMContext@{sf::priv::DRMContext}}
+\doxysubsubsection{\texorpdfstring{DRMContext()}{DRMContext()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily sf\+::priv\+::\+DRMContext\+::\+DRMContext (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1priv_1_1_d_r_m_context}{DRMContext}} \texorpdfstring{$\ast$}{*}}]{shared,  }\item[{const \mbox{\hyperlink{structsf_1_1_context_settings}{Context\+Settings}} \&}]{settings,  }\item[{const \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl}{Window\+Impl}} \texorpdfstring{$\ast$}{*}}]{owner,  }\item[{unsigned int}]{bits\+Per\+Pixel }\end{DoxyParamCaption})}
+
+
+
+Create a new context attached to a window. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em shared} & \doxylink{classsf_1_1_context}{Context} to share the new one with \\
+\hline
+{\em settings} & Creation parameters \\
+\hline
+{\em owner} & Pointer to the owner window \\
+\hline
+{\em bits\+Per\+Pixel} & Pixel depth, in bits per pixel \\
+\hline
+\end{DoxyParams}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_d_r_m_context_a18713254720be6e968db355e9ab05258_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_d_r_m_context_a53bbc8f2b5007f96666ac8a3e616d846}\label{classsf_1_1priv_1_1_d_r_m_context_a53bbc8f2b5007f96666ac8a3e616d846} 
+\index{sf::priv::DRMContext@{sf::priv::DRMContext}!DRMContext@{DRMContext}}
+\index{DRMContext@{DRMContext}!sf::priv::DRMContext@{sf::priv::DRMContext}}
+\doxysubsubsection{\texorpdfstring{DRMContext()}{DRMContext()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily sf\+::priv\+::\+DRMContext\+::\+DRMContext (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1priv_1_1_d_r_m_context}{DRMContext}} \texorpdfstring{$\ast$}{*}}]{shared,  }\item[{const \mbox{\hyperlink{structsf_1_1_context_settings}{Context\+Settings}} \&}]{settings,  }\item[{unsigned int}]{width,  }\item[{unsigned int}]{height }\end{DoxyParamCaption})}
+
+
+
+Create a new context that embeds its own rendering target. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em shared} & \doxylink{classsf_1_1_context}{Context} to share the new one with \\
+\hline
+{\em settings} & Creation parameters \\
+\hline
+{\em width} & Back buffer width, in pixels \\
+\hline
+{\em height} & Back buffer height, in pixels \\
+\hline
+\end{DoxyParams}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_d_r_m_context_a53bbc8f2b5007f96666ac8a3e616d846_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_d_r_m_context_a7be45ca2f85ba6923ff074d3ccf69059}\label{classsf_1_1priv_1_1_d_r_m_context_a7be45ca2f85ba6923ff074d3ccf69059} 
+\index{sf::priv::DRMContext@{sf::priv::DRMContext}!````~DRMContext@{\texorpdfstring{$\sim$}{\string~}DRMContext}}
+\index{````~DRMContext@{\texorpdfstring{$\sim$}{\string~}DRMContext}!sf::priv::DRMContext@{sf::priv::DRMContext}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}DRMContext()}{\string~DRMContext()}}
+{\footnotesize\ttfamily sf\+::priv\+::\+DRMContext\+::\texorpdfstring{$\sim$}{\string~}\+DRMContext (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{classsf_1_1priv_1_1_d_r_m_context_a4e46ad9cf32752bc61d4ba2b7a72542e}\label{classsf_1_1priv_1_1_d_r_m_context_a4e46ad9cf32752bc61d4ba2b7a72542e} 
+\index{sf::priv::DRMContext@{sf::priv::DRMContext}!createContext@{createContext}}
+\index{createContext@{createContext}!sf::priv::DRMContext@{sf::priv::DRMContext}}
+\doxysubsubsection{\texorpdfstring{createContext()}{createContext()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+DRMContext\+::create\+Context (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1priv_1_1_d_r_m_context}{DRMContext}} \texorpdfstring{$\ast$}{*}}]{shared }\end{DoxyParamCaption})}
+
+
+
+Create the EGL context. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em shared} & \doxylink{classsf_1_1_context}{Context} to share the new one with (can be NULL) \\
+\hline
+{\em bits\+Per\+Pixel} & Pixel depth, in bits per pixel \\
+\hline
+{\em settings} & Creation parameters \\
+\hline
+\end{DoxyParams}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{classsf_1_1priv_1_1_d_r_m_context_a4e46ad9cf32752bc61d4ba2b7a72542e_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classsf_1_1priv_1_1_d_r_m_context_a4e46ad9cf32752bc61d4ba2b7a72542e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_d_r_m_context_a9f6cff4cc19cf613a79396a84d8d21d4}\label{classsf_1_1priv_1_1_d_r_m_context_a9f6cff4cc19cf613a79396a84d8d21d4} 
+\index{sf::priv::DRMContext@{sf::priv::DRMContext}!createSurface@{createSurface}}
+\index{createSurface@{createSurface}!sf::priv::DRMContext@{sf::priv::DRMContext}}
+\doxysubsubsection{\texorpdfstring{createSurface()}{createSurface()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+DRMContext\+::create\+Surface (\begin{DoxyParamCaption}\item[{unsigned int}]{width,  }\item[{unsigned int}]{height,  }\item[{unsigned int}]{bpp,  }\item[{bool}]{scanout }\end{DoxyParamCaption})}
+
+
+
+Create the EGL surface. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em width} & Back buffer width, in pixels \\
+\hline
+{\em height} & Back buffer height, in pixels \\
+\hline
+{\em bpp} & Pixel depth, in bits per pixel \\
+\hline
+{\em scanout} & True to present the surface to the screen \\
+\hline
+\end{DoxyParams}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{classsf_1_1priv_1_1_d_r_m_context_a9f6cff4cc19cf613a79396a84d8d21d4_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classsf_1_1priv_1_1_d_r_m_context_a9f6cff4cc19cf613a79396a84d8d21d4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_d_r_m_context_a7a02341bb5042d1bbd99e64111c56ce6}\label{classsf_1_1priv_1_1_d_r_m_context_a7a02341bb5042d1bbd99e64111c56ce6} 
+\index{sf::priv::DRMContext@{sf::priv::DRMContext}!destroySurface@{destroySurface}}
+\index{destroySurface@{destroySurface}!sf::priv::DRMContext@{sf::priv::DRMContext}}
+\doxysubsubsection{\texorpdfstring{destroySurface()}{destroySurface()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+DRMContext\+::destroy\+Surface (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroy the EGL surface. 
+
+This function must be called when the activity is stopped, or when the orientation change. Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_d_r_m_context_a7a02341bb5042d1bbd99e64111c56ce6_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_d_r_m_context_a1d030128286270bb94faf2894ae1387c}\label{classsf_1_1priv_1_1_d_r_m_context_a1d030128286270bb94faf2894ae1387c} 
+\index{sf::priv::DRMContext@{sf::priv::DRMContext}!display@{display}}
+\index{display@{display}!sf::priv::DRMContext@{sf::priv::DRMContext}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+DRMContext\+::display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Display what has been rendered to the context so far. 
+
+
+
+Implementuje \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context_ad5cdb55f2b1dcc92c1cb6b09e68e007f}{sf\+::priv\+::\+Gl\+Context}}.
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{classsf_1_1priv_1_1_d_r_m_context_a1d030128286270bb94faf2894ae1387c_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_d_r_m_context_a1d030128286270bb94faf2894ae1387c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_d_r_m_context_a2683e50c5c6589692132fac8dc42f355}\label{classsf_1_1priv_1_1_d_r_m_context_a2683e50c5c6589692132fac8dc42f355} 
+\index{sf::priv::DRMContext@{sf::priv::DRMContext}!getBestConfig@{getBestConfig}}
+\index{getBestConfig@{getBestConfig}!sf::priv::DRMContext@{sf::priv::DRMContext}}
+\doxysubsubsection{\texorpdfstring{getBestConfig()}{getBestConfig()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{egl_8h_a691766e6d867e15207ec0a6d6e46253c}{EGLConfig}} sf\+::priv\+::\+DRMContext\+::get\+Best\+Config (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{egl_8h_a87d55554aa13accdcb0e10eab910c72e}{EGLDisplay}}}]{display,  }\item[{unsigned int}]{bits\+Per\+Pixel,  }\item[{const \mbox{\hyperlink{structsf_1_1_context_settings}{Context\+Settings}} \&}]{settings }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the best EGL visual for a given set of video settings. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em display} & EGL display \\
+\hline
+{\em bits\+Per\+Pixel} & Pixel depth, in bits per pixel \\
+\hline
+{\em settings} & Requested context settings\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+The best EGL config 
+\end{DoxyReturn}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_d_r_m_context_a2683e50c5c6589692132fac8dc42f355_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classsf_1_1priv_1_1_d_r_m_context_a2683e50c5c6589692132fac8dc42f355_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_d_r_m_context_aa49a27047aa6287e393319bd4773cb59}\label{classsf_1_1priv_1_1_d_r_m_context_aa49a27047aa6287e393319bd4773cb59} 
+\index{sf::priv::DRMContext@{sf::priv::DRMContext}!getDRM@{getDRM}}
+\index{getDRM@{getDRM}!sf::priv::DRMContext@{sf::priv::DRMContext}}
+\doxysubsubsection{\texorpdfstring{getDRM()}{getDRM()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsf_1_1priv_1_1_drm}{Drm}} \& sf\+::priv\+::\+DRMContext\+::get\+DRM (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Get Direct Rendering Manager pointer. 
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_d_r_m_context_aa49a27047aa6287e393319bd4773cb59_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_d_r_m_context_a138dce57cdaf32a08c2c18f1a3072b05}\label{classsf_1_1priv_1_1_d_r_m_context_a138dce57cdaf32a08c2c18f1a3072b05} 
+\index{sf::priv::DRMContext@{sf::priv::DRMContext}!getFunction@{getFunction}}
+\index{getFunction@{getFunction}!sf::priv::DRMContext@{sf::priv::DRMContext}}
+\doxysubsubsection{\texorpdfstring{getFunction()}{getFunction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesf_a0187a0b60bae499f24a4949973657f60}{Gl\+Function\+Pointer}} sf\+::priv\+::\+DRMContext\+::get\+Function (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the address of an Open\+GL function. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em name} & Name of the function to get the address of\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Address of the Open\+GL function, 0 on failure 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_d_r_m_context_a6c275325bc2926f013c18c8e3fa9716c}\label{classsf_1_1priv_1_1_d_r_m_context_a6c275325bc2926f013c18c8e3fa9716c} 
+\index{sf::priv::DRMContext@{sf::priv::DRMContext}!makeCurrent@{makeCurrent}}
+\index{makeCurrent@{makeCurrent}!sf::priv::DRMContext@{sf::priv::DRMContext}}
+\doxysubsubsection{\texorpdfstring{makeCurrent()}{makeCurrent()}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+DRMContext\+::make\+Current (\begin{DoxyParamCaption}\item[{bool}]{current }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Activate the context as the current target for rendering. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em current} & Whether to make the context current or no longer current\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True on success, false if any error happened 
+\end{DoxyReturn}
+
+
+Implementuje \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context_a82174f66a686bef44ea68ee55df92f8b}{sf\+::priv\+::\+Gl\+Context}}.
+
+\Hypertarget{classsf_1_1priv_1_1_d_r_m_context_a1440980667ed796f1218daad35188934}\label{classsf_1_1priv_1_1_d_r_m_context_a1440980667ed796f1218daad35188934} 
+\index{sf::priv::DRMContext@{sf::priv::DRMContext}!setVerticalSyncEnabled@{setVerticalSyncEnabled}}
+\index{setVerticalSyncEnabled@{setVerticalSyncEnabled}!sf::priv::DRMContext@{sf::priv::DRMContext}}
+\doxysubsubsection{\texorpdfstring{setVerticalSyncEnabled()}{setVerticalSyncEnabled()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+DRMContext\+::set\+Vertical\+Sync\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Enable or disable vertical synchronization. 
+
+Activating vertical synchronization will limit the number of frames displayed to the refresh rate of the monitor. This can avoid some visual artifacts, and limit the framerate to a good value (but not constant across different computers).
+
+
+\begin{DoxyParams}{Parametry}
+{\em enabled} & True to enable v-\/sync, false to deactivate \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context_a72b2c7da26f064f6d5cfbe65e4e9831c}{sf\+::priv\+::\+Gl\+Context}}.
+
+\Hypertarget{classsf_1_1priv_1_1_d_r_m_context_a0dbd481f893a3a6de4f8221bb79b8e3e}\label{classsf_1_1priv_1_1_d_r_m_context_a0dbd481f893a3a6de4f8221bb79b8e3e} 
+\index{sf::priv::DRMContext@{sf::priv::DRMContext}!updateSettings@{updateSettings}}
+\index{updateSettings@{updateSettings}!sf::priv::DRMContext@{sf::priv::DRMContext}}
+\doxysubsubsection{\texorpdfstring{updateSettings()}{updateSettings()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+DRMContext\+::update\+Settings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Helper to copy the picked EGL configuration. 
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classsf_1_1priv_1_1_d_r_m_context_a0dbd481f893a3a6de4f8221bb79b8e3e_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Dokumentacja przyjaciół i funkcji związanych}
+\Hypertarget{classsf_1_1priv_1_1_d_r_m_context_aff5c2acc44bc298ec29b3d2c356485ee}\label{classsf_1_1priv_1_1_d_r_m_context_aff5c2acc44bc298ec29b3d2c356485ee} 
+\index{sf::priv::DRMContext@{sf::priv::DRMContext}!VideoModeImpl@{VideoModeImpl}}
+\index{VideoModeImpl@{VideoModeImpl}!sf::priv::DRMContext@{sf::priv::DRMContext}}
+\doxysubsubsection{\texorpdfstring{VideoModeImpl}{VideoModeImpl}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classsf_1_1priv_1_1_video_mode_impl}{Video\+Mode\+Impl}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\Hypertarget{classsf_1_1priv_1_1_d_r_m_context_acbbedfc6c1b2f9e476412aac518629a1}\label{classsf_1_1priv_1_1_d_r_m_context_acbbedfc6c1b2f9e476412aac518629a1} 
+\index{sf::priv::DRMContext@{sf::priv::DRMContext}!WindowImplDRM@{WindowImplDRM}}
+\index{WindowImplDRM@{WindowImplDRM}!sf::priv::DRMContext@{sf::priv::DRMContext}}
+\doxysubsubsection{\texorpdfstring{WindowImplDRM}{WindowImplDRM}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_d_r_m}{Window\+Impl\+DRM}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{classsf_1_1priv_1_1_d_r_m_context_aa3497adf99508ae65dbbbe3dbfc3d0f0}\label{classsf_1_1priv_1_1_d_r_m_context_aa3497adf99508ae65dbbbe3dbfc3d0f0} 
+\index{sf::priv::DRMContext@{sf::priv::DRMContext}!m\_config@{m\_config}}
+\index{m\_config@{m\_config}!sf::priv::DRMContext@{sf::priv::DRMContext}}
+\doxysubsubsection{\texorpdfstring{m\_config}{m\_config}}
+{\footnotesize\ttfamily \mbox{\hyperlink{egl_8h_a691766e6d867e15207ec0a6d6e46253c}{EGLConfig}} sf\+::priv\+::\+DRMContext\+::m\+\_\+config\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The internal EGL config. 
+
+\Hypertarget{classsf_1_1priv_1_1_d_r_m_context_abee5f90370930663f44e7ddc1e3f4bb4}\label{classsf_1_1priv_1_1_d_r_m_context_abee5f90370930663f44e7ddc1e3f4bb4} 
+\index{sf::priv::DRMContext@{sf::priv::DRMContext}!m\_context@{m\_context}}
+\index{m\_context@{m\_context}!sf::priv::DRMContext@{sf::priv::DRMContext}}
+\doxysubsubsection{\texorpdfstring{m\_context}{m\_context}}
+{\footnotesize\ttfamily \mbox{\hyperlink{egl_8h_a5105beca2335557d2a9507727cdc78d5}{EGLContext}} sf\+::priv\+::\+DRMContext\+::m\+\_\+context\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The internal EGL context. 
+
+\Hypertarget{classsf_1_1priv_1_1_d_r_m_context_a91fa624dfa5d3a43704b83a543af1346}\label{classsf_1_1priv_1_1_d_r_m_context_a91fa624dfa5d3a43704b83a543af1346} 
+\index{sf::priv::DRMContext@{sf::priv::DRMContext}!m\_currentBO@{m\_currentBO}}
+\index{m\_currentBO@{m\_currentBO}!sf::priv::DRMContext@{sf::priv::DRMContext}}
+\doxysubsubsection{\texorpdfstring{m\_currentBO}{m\_currentBO}}
+{\footnotesize\ttfamily gbm\+\_\+bo\texorpdfstring{$\ast$}{*} sf\+::priv\+::\+DRMContext\+::m\+\_\+current\+BO\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classsf_1_1priv_1_1_d_r_m_context_a5ad9f2ca24628c0448dec84f9166f282}\label{classsf_1_1priv_1_1_d_r_m_context_a5ad9f2ca24628c0448dec84f9166f282} 
+\index{sf::priv::DRMContext@{sf::priv::DRMContext}!m\_display@{m\_display}}
+\index{m\_display@{m\_display}!sf::priv::DRMContext@{sf::priv::DRMContext}}
+\doxysubsubsection{\texorpdfstring{m\_display}{m\_display}}
+{\footnotesize\ttfamily \mbox{\hyperlink{egl_8h_a87d55554aa13accdcb0e10eab910c72e}{EGLDisplay}} sf\+::priv\+::\+DRMContext\+::m\+\_\+display\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The internal EGL display. 
+
+\Hypertarget{classsf_1_1priv_1_1_d_r_m_context_a4cbacf50f67e1670ccf62903eaa0ba1f}\label{classsf_1_1priv_1_1_d_r_m_context_a4cbacf50f67e1670ccf62903eaa0ba1f} 
+\index{sf::priv::DRMContext@{sf::priv::DRMContext}!m\_gbmSurface@{m\_gbmSurface}}
+\index{m\_gbmSurface@{m\_gbmSurface}!sf::priv::DRMContext@{sf::priv::DRMContext}}
+\doxysubsubsection{\texorpdfstring{m\_gbmSurface}{m\_gbmSurface}}
+{\footnotesize\ttfamily gbm\+\_\+surface\texorpdfstring{$\ast$}{*} sf\+::priv\+::\+DRMContext\+::m\+\_\+gbm\+Surface\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classsf_1_1priv_1_1_d_r_m_context_ae79dd442759c0acb70c7fca959673e47}\label{classsf_1_1priv_1_1_d_r_m_context_ae79dd442759c0acb70c7fca959673e47} 
+\index{sf::priv::DRMContext@{sf::priv::DRMContext}!m\_height@{m\_height}}
+\index{m\_height@{m\_height}!sf::priv::DRMContext@{sf::priv::DRMContext}}
+\doxysubsubsection{\texorpdfstring{m\_height}{m\_height}}
+{\footnotesize\ttfamily unsigned int sf\+::priv\+::\+DRMContext\+::m\+\_\+height\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classsf_1_1priv_1_1_d_r_m_context_abe62149f1e3e68eea0869c2bcb774cab}\label{classsf_1_1priv_1_1_d_r_m_context_abe62149f1e3e68eea0869c2bcb774cab} 
+\index{sf::priv::DRMContext@{sf::priv::DRMContext}!m\_nextBO@{m\_nextBO}}
+\index{m\_nextBO@{m\_nextBO}!sf::priv::DRMContext@{sf::priv::DRMContext}}
+\doxysubsubsection{\texorpdfstring{m\_nextBO}{m\_nextBO}}
+{\footnotesize\ttfamily gbm\+\_\+bo\texorpdfstring{$\ast$}{*} sf\+::priv\+::\+DRMContext\+::m\+\_\+next\+BO\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classsf_1_1priv_1_1_d_r_m_context_a61180d0957e6a9c1694a8abe50eebc46}\label{classsf_1_1priv_1_1_d_r_m_context_a61180d0957e6a9c1694a8abe50eebc46} 
+\index{sf::priv::DRMContext@{sf::priv::DRMContext}!m\_scanOut@{m\_scanOut}}
+\index{m\_scanOut@{m\_scanOut}!sf::priv::DRMContext@{sf::priv::DRMContext}}
+\doxysubsubsection{\texorpdfstring{m\_scanOut}{m\_scanOut}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+DRMContext\+::m\+\_\+scan\+Out\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classsf_1_1priv_1_1_d_r_m_context_ac58cae9496529719c72df85f021f4126}\label{classsf_1_1priv_1_1_d_r_m_context_ac58cae9496529719c72df85f021f4126} 
+\index{sf::priv::DRMContext@{sf::priv::DRMContext}!m\_shown@{m\_shown}}
+\index{m\_shown@{m\_shown}!sf::priv::DRMContext@{sf::priv::DRMContext}}
+\doxysubsubsection{\texorpdfstring{m\_shown}{m\_shown}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+DRMContext\+::m\+\_\+shown\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classsf_1_1priv_1_1_d_r_m_context_a21d80fc8623a8b5557be255a5dfb75b2}\label{classsf_1_1priv_1_1_d_r_m_context_a21d80fc8623a8b5557be255a5dfb75b2} 
+\index{sf::priv::DRMContext@{sf::priv::DRMContext}!m\_surface@{m\_surface}}
+\index{m\_surface@{m\_surface}!sf::priv::DRMContext@{sf::priv::DRMContext}}
+\doxysubsubsection{\texorpdfstring{m\_surface}{m\_surface}}
+{\footnotesize\ttfamily \mbox{\hyperlink{egl_8h_a1bd45435703af31ea10bc2f2229f337b}{EGLSurface}} sf\+::priv\+::\+DRMContext\+::m\+\_\+surface\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The internal EGL surface. 
+
+\Hypertarget{classsf_1_1priv_1_1_d_r_m_context_ab7325bc8da70cfe04f3a85d56de7ff19}\label{classsf_1_1priv_1_1_d_r_m_context_ab7325bc8da70cfe04f3a85d56de7ff19} 
+\index{sf::priv::DRMContext@{sf::priv::DRMContext}!m\_width@{m\_width}}
+\index{m\_width@{m\_width}!sf::priv::DRMContext@{sf::priv::DRMContext}}
+\doxysubsubsection{\texorpdfstring{m\_width}{m\_width}}
+{\footnotesize\ttfamily unsigned int sf\+::priv\+::\+DRMContext\+::m\+\_\+width\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+DRM/\mbox{\hyperlink{_d_r_m_context_8hpp}{DRMContext.\+hpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+DRM/\mbox{\hyperlink{_d_r_m_context_8cpp}{DRMContext.\+cpp}}\end{DoxyCompactItemize}

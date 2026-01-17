@@ -1,0 +1,233 @@
+\doxysection{Dokumentacja klasy sf\+::priv\+::Sound\+File\+Writer\+Wav}
+\hypertarget{classsf_1_1priv_1_1_sound_file_writer_wav}{}\label{classsf_1_1priv_1_1_sound_file_writer_wav}\index{sf::priv::SoundFileWriterWav@{sf::priv::SoundFileWriterWav}}
+
+
+Implementation of sound file writer that handles wav files.  
+
+
+
+
+{\ttfamily \#include $<$Sound\+File\+Writer\+Wav.\+hpp$>$}
+
+
+
+Diagram dziedziczenia dla sf\+::priv\+::Sound\+File\+Writer\+Wav\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{classsf_1_1priv_1_1_sound_file_writer_wav__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagram współpracy dla sf\+::priv\+::Sound\+File\+Writer\+Wav\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{classsf_1_1priv_1_1_sound_file_writer_wav__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsf_1_1priv_1_1_sound_file_writer_wav_a8e154bc55b09b6c9700ca6a4434eeeb4}{Sound\+File\+Writer\+Wav}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1priv_1_1_sound_file_writer_wav_ad610a293d61998d29f4ff4f06e928327}{\texorpdfstring{$\sim$}{\string~}\+Sound\+File\+Writer\+Wav}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classsf_1_1priv_1_1_sound_file_writer_wav_a5c0b3324d03249f9dcf57694ee76788e}{open}} (const std\+::string \&filename, unsigned int sample\+Rate, unsigned int channel\+Count)
+\begin{DoxyCompactList}\small\item\em Open a sound file for writing. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_sound_file_writer_wav_a981b42a9ba15d0965441705674b96a4c}{write}} (const \mbox{\hyperlink{namespacesf_a3c8e10435e2a310a7741755e66b5c94e}{Int16}} \texorpdfstring{$\ast$}{*}samples, \mbox{\hyperlink{namespacesf_add9ac83466d96b9f50a009b9f4064266}{Uint64}} count)
+\begin{DoxyCompactList}\small\item\em Write audio samples to the open file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{classsf_1_1_sound_file_writer}{sf\+::\+Sound\+File\+Writer}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classsf_1_1_sound_file_writer_a76944fc158688f35050bd5b592c90270}{\texorpdfstring{$\sim$}{\string~}\+Sound\+File\+Writer}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Statyczne metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_sound_file_writer_wav_abfffd83f86a1dddf2fadc5b938120734}{check}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Check if this writer can handle a file on disk. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_sound_file_writer_wav_a33ccde2c71d83c5b9a3111f02c9d8a56}{write\+Header}} (unsigned int sample\+Rate, unsigned int channel\+Count)
+\begin{DoxyCompactList}\small\item\em Write the header of the open file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_sound_file_writer_wav_ac538a6c692c02c5655fc4f8ed693a125}{close}} ()
+\begin{DoxyCompactList}\small\item\em Close the file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ofstream \mbox{\hyperlink{classsf_1_1priv_1_1_sound_file_writer_wav_a5b25f03a7f9132b0c9e7dbaf927a542b}{m\+\_\+file}}
+\begin{DoxyCompactList}\small\item\em File stream to write to. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Implementation of sound file writer that handles wav files. 
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{classsf_1_1priv_1_1_sound_file_writer_wav_a8e154bc55b09b6c9700ca6a4434eeeb4}\label{classsf_1_1priv_1_1_sound_file_writer_wav_a8e154bc55b09b6c9700ca6a4434eeeb4} 
+\index{sf::priv::SoundFileWriterWav@{sf::priv::SoundFileWriterWav}!SoundFileWriterWav@{SoundFileWriterWav}}
+\index{SoundFileWriterWav@{SoundFileWriterWav}!sf::priv::SoundFileWriterWav@{sf::priv::SoundFileWriterWav}}
+\doxysubsubsection{\texorpdfstring{SoundFileWriterWav()}{SoundFileWriterWav()}}
+{\footnotesize\ttfamily sf\+::priv\+::\+Sound\+File\+Writer\+Wav\+::\+Sound\+File\+Writer\+Wav (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+\Hypertarget{classsf_1_1priv_1_1_sound_file_writer_wav_ad610a293d61998d29f4ff4f06e928327}\label{classsf_1_1priv_1_1_sound_file_writer_wav_ad610a293d61998d29f4ff4f06e928327} 
+\index{sf::priv::SoundFileWriterWav@{sf::priv::SoundFileWriterWav}!````~SoundFileWriterWav@{\texorpdfstring{$\sim$}{\string~}SoundFileWriterWav}}
+\index{````~SoundFileWriterWav@{\texorpdfstring{$\sim$}{\string~}SoundFileWriterWav}!sf::priv::SoundFileWriterWav@{sf::priv::SoundFileWriterWav}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}SoundFileWriterWav()}{\string~SoundFileWriterWav()}}
+{\footnotesize\ttfamily sf\+::priv\+::\+Sound\+File\+Writer\+Wav\+::\texorpdfstring{$\sim$}{\string~}\+Sound\+File\+Writer\+Wav (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_sound_file_writer_wav_ad610a293d61998d29f4ff4f06e928327_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{classsf_1_1priv_1_1_sound_file_writer_wav_abfffd83f86a1dddf2fadc5b938120734}\label{classsf_1_1priv_1_1_sound_file_writer_wav_abfffd83f86a1dddf2fadc5b938120734} 
+\index{sf::priv::SoundFileWriterWav@{sf::priv::SoundFileWriterWav}!check@{check}}
+\index{check@{check}!sf::priv::SoundFileWriterWav@{sf::priv::SoundFileWriterWav}}
+\doxysubsubsection{\texorpdfstring{check()}{check()}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Sound\+File\+Writer\+Wav\+::check (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Check if this writer can handle a file on disk. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em filename} & Path of the sound file to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True if the file can be written by this writer 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_sound_file_writer_wav_ac538a6c692c02c5655fc4f8ed693a125}\label{classsf_1_1priv_1_1_sound_file_writer_wav_ac538a6c692c02c5655fc4f8ed693a125} 
+\index{sf::priv::SoundFileWriterWav@{sf::priv::SoundFileWriterWav}!close@{close}}
+\index{close@{close}!sf::priv::SoundFileWriterWav@{sf::priv::SoundFileWriterWav}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Sound\+File\+Writer\+Wav\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Close the file. 
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_sound_file_writer_wav_ac538a6c692c02c5655fc4f8ed693a125_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_sound_file_writer_wav_a5c0b3324d03249f9dcf57694ee76788e}\label{classsf_1_1priv_1_1_sound_file_writer_wav_a5c0b3324d03249f9dcf57694ee76788e} 
+\index{sf::priv::SoundFileWriterWav@{sf::priv::SoundFileWriterWav}!open@{open}}
+\index{open@{open}!sf::priv::SoundFileWriterWav@{sf::priv::SoundFileWriterWav}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Sound\+File\+Writer\+Wav\+::open (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename,  }\item[{unsigned int}]{sample\+Rate,  }\item[{unsigned int}]{channel\+Count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Open a sound file for writing. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em filename} & Path of the file to open \\
+\hline
+{\em sample\+Rate} & Sample rate of the sound \\
+\hline
+{\em channel\+Count} & Number of channels of the sound\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True if the file was successfully opened 
+\end{DoxyReturn}
+
+
+Implementuje \mbox{\hyperlink{classsf_1_1_sound_file_writer_a5c92bcaaa880ef4d3eaab18dae1d3d07}{sf\+::\+Sound\+File\+Writer}}.
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_sound_file_writer_wav_a5c0b3324d03249f9dcf57694ee76788e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_sound_file_writer_wav_a981b42a9ba15d0965441705674b96a4c}\label{classsf_1_1priv_1_1_sound_file_writer_wav_a981b42a9ba15d0965441705674b96a4c} 
+\index{sf::priv::SoundFileWriterWav@{sf::priv::SoundFileWriterWav}!write@{write}}
+\index{write@{write}!sf::priv::SoundFileWriterWav@{sf::priv::SoundFileWriterWav}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Sound\+File\+Writer\+Wav\+::write (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacesf_a3c8e10435e2a310a7741755e66b5c94e}{Int16}} \texorpdfstring{$\ast$}{*}}]{samples,  }\item[{\mbox{\hyperlink{namespacesf_add9ac83466d96b9f50a009b9f4064266}{Uint64}}}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Write audio samples to the open file. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em samples} & Pointer to the sample array to write \\
+\hline
+{\em count} & Number of samples to write \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \mbox{\hyperlink{classsf_1_1_sound_file_writer_a4ce597e7682d22c5b2c98d77e931a1da}{sf\+::\+Sound\+File\+Writer}}.
+
+\Hypertarget{classsf_1_1priv_1_1_sound_file_writer_wav_a33ccde2c71d83c5b9a3111f02c9d8a56}\label{classsf_1_1priv_1_1_sound_file_writer_wav_a33ccde2c71d83c5b9a3111f02c9d8a56} 
+\index{sf::priv::SoundFileWriterWav@{sf::priv::SoundFileWriterWav}!writeHeader@{writeHeader}}
+\index{writeHeader@{writeHeader}!sf::priv::SoundFileWriterWav@{sf::priv::SoundFileWriterWav}}
+\doxysubsubsection{\texorpdfstring{writeHeader()}{writeHeader()}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Sound\+File\+Writer\+Wav\+::write\+Header (\begin{DoxyParamCaption}\item[{unsigned int}]{sample\+Rate,  }\item[{unsigned int}]{channel\+Count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Write the header of the open file. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em sample\+Rate} & Sample rate of the sound \\
+\hline
+{\em channel\+Count} & Number of channels of the sound\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True on success, false on error 
+\end{DoxyReturn}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_sound_file_writer_wav_a33ccde2c71d83c5b9a3111f02c9d8a56_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{classsf_1_1priv_1_1_sound_file_writer_wav_a5b25f03a7f9132b0c9e7dbaf927a542b}\label{classsf_1_1priv_1_1_sound_file_writer_wav_a5b25f03a7f9132b0c9e7dbaf927a542b} 
+\index{sf::priv::SoundFileWriterWav@{sf::priv::SoundFileWriterWav}!m\_file@{m\_file}}
+\index{m\_file@{m\_file}!sf::priv::SoundFileWriterWav@{sf::priv::SoundFileWriterWav}}
+\doxysubsubsection{\texorpdfstring{m\_file}{m\_file}}
+{\footnotesize\ttfamily std\+::ofstream sf\+::priv\+::\+Sound\+File\+Writer\+Wav\+::m\+\_\+file\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+File stream to write to. 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Audio/\mbox{\hyperlink{_sound_file_writer_wav_8hpp}{Sound\+File\+Writer\+Wav.\+hpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Audio/\mbox{\hyperlink{_sound_file_writer_wav_8cpp}{Sound\+File\+Writer\+Wav.\+cpp}}\end{DoxyCompactItemize}

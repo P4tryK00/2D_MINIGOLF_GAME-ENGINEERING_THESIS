@@ -1,0 +1,199 @@
+\doxysection{Dokumentacja klasy sf\+::priv\+::Mutex\+Impl}
+\hypertarget{classsf_1_1priv_1_1_mutex_impl}{}\label{classsf_1_1priv_1_1_mutex_impl}\index{sf::priv::MutexImpl@{sf::priv::MutexImpl}}
+
+
+Unix implementation of mutexes.  
+
+
+
+
+{\ttfamily \#include $<$Mutex\+Impl.\+hpp$>$}
+
+
+
+Diagram dziedziczenia dla sf\+::priv\+::Mutex\+Impl\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=170pt]{classsf_1_1priv_1_1_mutex_impl__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagram współpracy dla sf\+::priv\+::Mutex\+Impl\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=170pt]{classsf_1_1priv_1_1_mutex_impl__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsf_1_1priv_1_1_mutex_impl_ae968dc16e933ff48be2863f682b302bb}{Mutex\+Impl}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1priv_1_1_mutex_impl_a4c9526cf28ab376616ed84c116a4ac78}{\texorpdfstring{$\sim$}{\string~}\+Mutex\+Impl}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_mutex_impl_acdb1b986b640e1e61bcf3eb75ca6863c}{lock}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{classsf_1_1_lock}{Lock} the mutex. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_mutex_impl_a32d5cccfed3cc6a3e1b1ad98b90e9066}{unlock}} ()
+\begin{DoxyCompactList}\small\item\em Unlock the mutex. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1priv_1_1_mutex_impl_ae968dc16e933ff48be2863f682b302bb}{Mutex\+Impl}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1priv_1_1_mutex_impl_a4c9526cf28ab376616ed84c116a4ac78}{\texorpdfstring{$\sim$}{\string~}\+Mutex\+Impl}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_mutex_impl_acdb1b986b640e1e61bcf3eb75ca6863c}{lock}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{classsf_1_1_lock}{Lock} the mutex. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_mutex_impl_a32d5cccfed3cc6a3e1b1ad98b90e9066}{unlock}} ()
+\begin{DoxyCompactList}\small\item\em Unlock the mutex. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+pthread\+\_\+mutex\+\_\+t \mbox{\hyperlink{classsf_1_1priv_1_1_mutex_impl_ab94f0f9cdfc9fd1f264640771616d45d}{m\+\_\+mutex}}
+\begin{DoxyCompactList}\small\item\em pthread handle of the mutex \end{DoxyCompactList}\item 
+CRITICAL\+\_\+\+SECTION \mbox{\hyperlink{classsf_1_1priv_1_1_mutex_impl_aab6ab0a8ace1765388a5862f0f484001}{m\+\_\+mutex}}
+\begin{DoxyCompactList}\small\item\em Win32 handle of the mutex. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Dodatkowe Dziedziczone Składowe}
+\doxysubsection*{Metody prywatne dziedziczone z \mbox{\hyperlink{classsf_1_1_non_copyable}{sf\+::\+Non\+Copyable}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsf_1_1_non_copyable_a2110add170580fdb946f887719da6860}{Non\+Copyable}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1_non_copyable_a8274ffbf46014f5f7f364befb52c7728}{\texorpdfstring{$\sim$}{\string~}\+Non\+Copyable}} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Unix implementation of mutexes. 
+
+Windows implementation of mutexes. 
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{classsf_1_1priv_1_1_mutex_impl_ae968dc16e933ff48be2863f682b302bb}\label{classsf_1_1priv_1_1_mutex_impl_ae968dc16e933ff48be2863f682b302bb} 
+\index{sf::priv::MutexImpl@{sf::priv::MutexImpl}!MutexImpl@{MutexImpl}}
+\index{MutexImpl@{MutexImpl}!sf::priv::MutexImpl@{sf::priv::MutexImpl}}
+\doxysubsubsection{\texorpdfstring{MutexImpl()}{MutexImpl()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily sf\+::priv\+::\+Mutex\+Impl\+::\+Mutex\+Impl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+\Hypertarget{classsf_1_1priv_1_1_mutex_impl_a4c9526cf28ab376616ed84c116a4ac78}\label{classsf_1_1priv_1_1_mutex_impl_a4c9526cf28ab376616ed84c116a4ac78} 
+\index{sf::priv::MutexImpl@{sf::priv::MutexImpl}!````~MutexImpl@{\texorpdfstring{$\sim$}{\string~}MutexImpl}}
+\index{````~MutexImpl@{\texorpdfstring{$\sim$}{\string~}MutexImpl}!sf::priv::MutexImpl@{sf::priv::MutexImpl}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}MutexImpl()}{\string~MutexImpl()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily sf\+::priv\+::\+Mutex\+Impl\+::\texorpdfstring{$\sim$}{\string~}\+Mutex\+Impl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+\Hypertarget{classsf_1_1priv_1_1_mutex_impl_ae968dc16e933ff48be2863f682b302bb}\label{classsf_1_1priv_1_1_mutex_impl_ae968dc16e933ff48be2863f682b302bb} 
+\index{sf::priv::MutexImpl@{sf::priv::MutexImpl}!MutexImpl@{MutexImpl}}
+\index{MutexImpl@{MutexImpl}!sf::priv::MutexImpl@{sf::priv::MutexImpl}}
+\doxysubsubsection{\texorpdfstring{MutexImpl()}{MutexImpl()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily sf\+::priv\+::\+Mutex\+Impl\+::\+Mutex\+Impl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+\Hypertarget{classsf_1_1priv_1_1_mutex_impl_a4c9526cf28ab376616ed84c116a4ac78}\label{classsf_1_1priv_1_1_mutex_impl_a4c9526cf28ab376616ed84c116a4ac78} 
+\index{sf::priv::MutexImpl@{sf::priv::MutexImpl}!````~MutexImpl@{\texorpdfstring{$\sim$}{\string~}MutexImpl}}
+\index{````~MutexImpl@{\texorpdfstring{$\sim$}{\string~}MutexImpl}!sf::priv::MutexImpl@{sf::priv::MutexImpl}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}MutexImpl()}{\string~MutexImpl()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily sf\+::priv\+::\+Mutex\+Impl\+::\texorpdfstring{$\sim$}{\string~}\+Mutex\+Impl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{classsf_1_1priv_1_1_mutex_impl_acdb1b986b640e1e61bcf3eb75ca6863c}\label{classsf_1_1priv_1_1_mutex_impl_acdb1b986b640e1e61bcf3eb75ca6863c} 
+\index{sf::priv::MutexImpl@{sf::priv::MutexImpl}!lock@{lock}}
+\index{lock@{lock}!sf::priv::MutexImpl@{sf::priv::MutexImpl}}
+\doxysubsubsection{\texorpdfstring{lock()}{lock()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Mutex\+Impl\+::lock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxylink{classsf_1_1_lock}{Lock} the mutex. 
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_mutex_impl_acdb1b986b640e1e61bcf3eb75ca6863c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_mutex_impl_acdb1b986b640e1e61bcf3eb75ca6863c}\label{classsf_1_1priv_1_1_mutex_impl_acdb1b986b640e1e61bcf3eb75ca6863c} 
+\index{sf::priv::MutexImpl@{sf::priv::MutexImpl}!lock@{lock}}
+\index{lock@{lock}!sf::priv::MutexImpl@{sf::priv::MutexImpl}}
+\doxysubsubsection{\texorpdfstring{lock()}{lock()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Mutex\+Impl\+::lock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxylink{classsf_1_1_lock}{Lock} the mutex. 
+
+\Hypertarget{classsf_1_1priv_1_1_mutex_impl_a32d5cccfed3cc6a3e1b1ad98b90e9066}\label{classsf_1_1priv_1_1_mutex_impl_a32d5cccfed3cc6a3e1b1ad98b90e9066} 
+\index{sf::priv::MutexImpl@{sf::priv::MutexImpl}!unlock@{unlock}}
+\index{unlock@{unlock}!sf::priv::MutexImpl@{sf::priv::MutexImpl}}
+\doxysubsubsection{\texorpdfstring{unlock()}{unlock()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Mutex\+Impl\+::unlock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Unlock the mutex. 
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_mutex_impl_a32d5cccfed3cc6a3e1b1ad98b90e9066_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_mutex_impl_a32d5cccfed3cc6a3e1b1ad98b90e9066}\label{classsf_1_1priv_1_1_mutex_impl_a32d5cccfed3cc6a3e1b1ad98b90e9066} 
+\index{sf::priv::MutexImpl@{sf::priv::MutexImpl}!unlock@{unlock}}
+\index{unlock@{unlock}!sf::priv::MutexImpl@{sf::priv::MutexImpl}}
+\doxysubsubsection{\texorpdfstring{unlock()}{unlock()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Mutex\+Impl\+::unlock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Unlock the mutex. 
+
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{classsf_1_1priv_1_1_mutex_impl_ab94f0f9cdfc9fd1f264640771616d45d}\label{classsf_1_1priv_1_1_mutex_impl_ab94f0f9cdfc9fd1f264640771616d45d} 
+\index{sf::priv::MutexImpl@{sf::priv::MutexImpl}!m\_mutex@{m\_mutex}}
+\index{m\_mutex@{m\_mutex}!sf::priv::MutexImpl@{sf::priv::MutexImpl}}
+\doxysubsubsection{\texorpdfstring{m\_mutex}{m\_mutex}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily pthread\+\_\+mutex\+\_\+t sf\+::priv\+::\+Mutex\+Impl\+::m\+\_\+mutex\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+pthread handle of the mutex 
+
+\Hypertarget{classsf_1_1priv_1_1_mutex_impl_aab6ab0a8ace1765388a5862f0f484001}\label{classsf_1_1priv_1_1_mutex_impl_aab6ab0a8ace1765388a5862f0f484001} 
+\index{sf::priv::MutexImpl@{sf::priv::MutexImpl}!m\_mutex@{m\_mutex}}
+\index{m\_mutex@{m\_mutex}!sf::priv::MutexImpl@{sf::priv::MutexImpl}}
+\doxysubsubsection{\texorpdfstring{m\_mutex}{m\_mutex}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily CRITICAL\+\_\+\+SECTION sf\+::priv\+::\+Mutex\+Impl\+::m\+\_\+mutex\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Win32 handle of the mutex. 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+System/\+Unix/\mbox{\hyperlink{_unix_2_mutex_impl_8hpp}{Mutex\+Impl.\+hpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+System/\+Win32/\mbox{\hyperlink{_win32_2_mutex_impl_8hpp}{Mutex\+Impl.\+hpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+System/\+Unix/\mbox{\hyperlink{_unix_2_mutex_impl_8cpp}{Mutex\+Impl.\+cpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+System/\+Win32/\mbox{\hyperlink{_win32_2_mutex_impl_8cpp}{Mutex\+Impl.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,40 @@
+\doxysection{Dokumentacja pliku cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/extlibs/headers/\+FLAC/callback.h}
+\hypertarget{callback_8h}{}\label{callback_8h}\index{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/FLAC/callback.h@{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/FLAC/callback.h}}
+{\ttfamily \#include "{}ordinals.\+h"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Wykres zależności załączania dla callback.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{callback_8h__incl}
+\end{center}
+\end{figure}
+Ten wykres pokazuje, które pliki bezpośrednio lub pośrednio załączają ten plik\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{callback_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_f_l_a_c_____i_o_callbacks}{FLAC\+\_\+\+\_\+\+IOCallbacks}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Definicje typów}
+\begin{DoxyCompactItemize}
+\item 
+typedef void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__flac__callbacks_ga4c329c3168dee6e352384c5e9306260d}{FLAC\+\_\+\+\_\+\+IOHandle}}
+\item 
+typedef size\+\_\+t(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__flac__callbacks_ga49d95218a6c09b215cd92cc96de71bf9}{FLAC\+\_\+\+\_\+\+IOCallback\+\_\+\+Read}}) (void \texorpdfstring{$\ast$}{*}ptr, size\+\_\+t size, size\+\_\+t nmemb, \mbox{\hyperlink{group__flac__callbacks_ga4c329c3168dee6e352384c5e9306260d}{FLAC\+\_\+\+\_\+\+IOHandle}} handle)
+\item 
+typedef size\+\_\+t(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__flac__callbacks_gad991792235879aecae289b56a112e1b8}{FLAC\+\_\+\+\_\+\+IOCallback\+\_\+\+Write}}) (const void \texorpdfstring{$\ast$}{*}ptr, size\+\_\+t size, size\+\_\+t nmemb, \mbox{\hyperlink{group__flac__callbacks_ga4c329c3168dee6e352384c5e9306260d}{FLAC\+\_\+\+\_\+\+IOHandle}} handle)
+\item 
+typedef int(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__flac__callbacks_gab3942bbbd6ae09bcefe7cb3a0060c49c}{FLAC\+\_\+\+\_\+\+IOCallback\+\_\+\+Seek}}) (\mbox{\hyperlink{group__flac__callbacks_ga4c329c3168dee6e352384c5e9306260d}{FLAC\+\_\+\+\_\+\+IOHandle}} handle, \mbox{\hyperlink{ordinals_8h_a12b57f75f760b9062a13bcda1bdb3f3e}{FLAC\+\_\+\+\_\+int64}} offset, int whence)
+\item 
+typedef \mbox{\hyperlink{ordinals_8h_a12b57f75f760b9062a13bcda1bdb3f3e}{FLAC\+\_\+\+\_\+int64}}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__flac__callbacks_ga45314930cabc2e9c04867eae6bca309f}{FLAC\+\_\+\+\_\+\+IOCallback\+\_\+\+Tell}}) (\mbox{\hyperlink{group__flac__callbacks_ga4c329c3168dee6e352384c5e9306260d}{FLAC\+\_\+\+\_\+\+IOHandle}} handle)
+\item 
+typedef int(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__flac__callbacks_ga00ae3b3d373e691908e9539ebf720675}{FLAC\+\_\+\+\_\+\+IOCallback\+\_\+\+Eof}}) (\mbox{\hyperlink{group__flac__callbacks_ga4c329c3168dee6e352384c5e9306260d}{FLAC\+\_\+\+\_\+\+IOHandle}} handle)
+\item 
+typedef int(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__flac__callbacks_ga0032267fac38220689778833e08f7387}{FLAC\+\_\+\+\_\+\+IOCallback\+\_\+\+Close}}) (\mbox{\hyperlink{group__flac__callbacks_ga4c329c3168dee6e352384c5e9306260d}{FLAC\+\_\+\+\_\+\+IOHandle}} handle)
+\end{DoxyCompactItemize}

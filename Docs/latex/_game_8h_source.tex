@@ -1,0 +1,36 @@
+\doxysection{Game.\+h}
+\hypertarget{_game_8h_source}{}\label{_game_8h_source}\mbox{\hyperlink{_game_8h}{Idź do dokumentacji tego pliku.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ GAME\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GAME\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_state_manager_8h}{StateManager.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_d_e_f_i_n_i_t_i_o_n_s_8h}{DEFINITIONS.h}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_game_data}{GameData}}\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_state_manager}{StateManager}}\ \mbox{\hyperlink{struct_game_data_a451c8e7b0caa23b03901f163cbf661a5}{machine}};\ }
+\DoxyCodeLine{00019\ \ \ \ \ sf::RenderWindow\ \mbox{\hyperlink{struct_game_data_ad3ebf49a95d78b14047b92b20d39b810}{window}};\ }
+\DoxyCodeLine{00020\ \};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{typedef}\ std::shared\_ptr<GameData>\ \mbox{\hyperlink{_game_8h_ae7efd7ef77698f16206f5c66180a389f}{GameDataRef}};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game}{Game}}\ \{}
+\DoxyCodeLine{00036\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{class_game_a0688bdc6486839d4436175d1d05773e0}{Game}}(\textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height,\ std::string\ title);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_a1ab78f5ed0d5ea879157357cf2fb2afa}{run}}();}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{const}\ sf::Time\ \mbox{\hyperlink{class_game_ab7ba02af20ea1e9ace8369419e064ca7}{timePerFrame}}\ =\ sf::seconds(1.f\ /\ 60.f);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ sf::Clock\ \mbox{\hyperlink{class_game_a56adf7f99e06924603e143d3f3324321}{clock}};\ }
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00067\ \ \ \ \ \mbox{\hyperlink{_game_8h_ae7efd7ef77698f16206f5c66180a389f}{GameDataRef}}\ \mbox{\hyperlink{class_game_a7481ceba9e4ddc0ab2b96b411729bf58}{m\_data}}\ =\ std::make\_shared<GameData>();}
+\DoxyCodeLine{00068\ \};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ GAME\_H}}
+
+\end{DoxyCode}

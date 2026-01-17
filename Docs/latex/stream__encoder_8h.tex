@@ -1,0 +1,221 @@
+\doxysection{Dokumentacja pliku cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/extlibs/headers/\+FLAC/stream\+\_\+encoder.h}
+\hypertarget{stream__encoder_8h}{}\label{stream__encoder_8h}\index{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/FLAC/stream\_encoder.h@{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/FLAC/stream\_encoder.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include "{}export.\+h"{}}\newline
+{\ttfamily \#include "{}format.\+h"{}}\newline
+{\ttfamily \#include "{}stream\+\_\+decoder.\+h"{}}\newline
+Wykres zależności załączania dla stream\+\_\+encoder.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{stream__encoder_8h__incl}
+\end{center}
+\end{figure}
+Ten wykres pokazuje, które pliki bezpośrednio lub pośrednio załączają ten plik\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{stream__encoder_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Definicje typów}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{group__flac__stream__encoder_ga2e81f007fb0a7414c0bbb453f37ea37f}{FLAC\+\_\+\+\_\+\+Stream\+Encoder\+Read\+Status}}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__flac__stream__encoder_ga18b7941b93bae067192732e913536d44}{FLAC\+\_\+\+\_\+\+Stream\+Encoder\+Read\+Callback}}) (const \mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder, \mbox{\hyperlink{ordinals_8h_a5eb569b12d5b047cdacada4d57924ee3}{FLAC\+\_\+\+\_\+byte}} buffer\mbox{[}$\,$\mbox{]}, size\+\_\+t \texorpdfstring{$\ast$}{*}bytes, void \texorpdfstring{$\ast$}{*}client\+\_\+data)
+\item 
+typedef \mbox{\hyperlink{group__flac__stream__encoder_ga3737471fd49730bb8cf9b182bdeda05e}{FLAC\+\_\+\+\_\+\+Stream\+Encoder\+Write\+Status}}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__flac__stream__encoder_ga50865125fd57c40fab6eb2f062651429}{FLAC\+\_\+\+\_\+\+Stream\+Encoder\+Write\+Callback}}) (const \mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder, const \mbox{\hyperlink{ordinals_8h_a5eb569b12d5b047cdacada4d57924ee3}{FLAC\+\_\+\+\_\+byte}} buffer\mbox{[}$\,$\mbox{]}, size\+\_\+t bytes, unsigned samples, unsigned current\+\_\+frame, void \texorpdfstring{$\ast$}{*}client\+\_\+data)
+\item 
+typedef \mbox{\hyperlink{group__flac__stream__encoder_ga6d5be3489f45fcf0c252022c65d87aca}{FLAC\+\_\+\+\_\+\+Stream\+Encoder\+Seek\+Status}}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__flac__stream__encoder_ga70b85349d5242e4401c4d8ddf6d9bbca}{FLAC\+\_\+\+\_\+\+Stream\+Encoder\+Seek\+Callback}}) (const \mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder, \mbox{\hyperlink{ordinals_8h_aa78c8c70a3eb8a58af7436f278acde8e}{FLAC\+\_\+\+\_\+uint64}} absolute\+\_\+byte\+\_\+offset, void \texorpdfstring{$\ast$}{*}client\+\_\+data)
+\item 
+typedef \mbox{\hyperlink{group__flac__stream__encoder_gab628f63181250eb977a28bf12b7dd9ff}{FLAC\+\_\+\+\_\+\+Stream\+Encoder\+Tell\+Status}}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__flac__stream__encoder_gabefdf2279e1d0347d9f98f46da4e415b}{FLAC\+\_\+\+\_\+\+Stream\+Encoder\+Tell\+Callback}}) (const \mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder, \mbox{\hyperlink{ordinals_8h_aa78c8c70a3eb8a58af7436f278acde8e}{FLAC\+\_\+\+\_\+uint64}} \texorpdfstring{$\ast$}{*}absolute\+\_\+byte\+\_\+offset, void \texorpdfstring{$\ast$}{*}client\+\_\+data)
+\item 
+typedef void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__flac__stream__encoder_ga091fbf3340d85bcbda1090c31bc320cf}{FLAC\+\_\+\+\_\+\+Stream\+Encoder\+Metadata\+Callback}}) (const \mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder, const \mbox{\hyperlink{struct_f_l_a_c_____stream_metadata}{FLAC\+\_\+\+\_\+\+Stream\+Metadata}} \texorpdfstring{$\ast$}{*}metadata, void \texorpdfstring{$\ast$}{*}client\+\_\+data)
+\item 
+typedef void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__flac__stream__encoder_ga6e051c0e5837433f9e7cd56cd42ca6ba}{FLAC\+\_\+\+\_\+\+Stream\+Encoder\+Progress\+Callback}}) (const \mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder, \mbox{\hyperlink{ordinals_8h_aa78c8c70a3eb8a58af7436f278acde8e}{FLAC\+\_\+\+\_\+uint64}} bytes\+\_\+written, \mbox{\hyperlink{ordinals_8h_aa78c8c70a3eb8a58af7436f278acde8e}{FLAC\+\_\+\+\_\+uint64}} samples\+\_\+written, unsigned frames\+\_\+written, unsigned total\+\_\+frames\+\_\+estimate, void \texorpdfstring{$\ast$}{*}client\+\_\+data)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Wyliczenia}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__flac__stream__encoder_gac5e9db4fc32ca2fa74abd9c8a87c02a5}{FLAC\+\_\+\+\_\+\+Stream\+Encoder\+State}} \{ \newline
+\mbox{\hyperlink{group__flac__stream__encoder_ggac5e9db4fc32ca2fa74abd9c8a87c02a5a3a6666ae61a64d955341cec285695bf6}{FLAC\+\_\+\+\_\+\+STREAM\+\_\+\+ENCODER\+\_\+\+OK}} = 0
+, \mbox{\hyperlink{group__flac__stream__encoder_ggac5e9db4fc32ca2fa74abd9c8a87c02a5a04912e04a3c57d3c53de34742f96d635}{FLAC\+\_\+\+\_\+\+STREAM\+\_\+\+ENCODER\+\_\+\+UNINITIALIZED}}
+, \mbox{\hyperlink{group__flac__stream__encoder_ggac5e9db4fc32ca2fa74abd9c8a87c02a5abb312cc8318c7a541cadacd23ceb3bbb}{FLAC\+\_\+\+\_\+\+STREAM\+\_\+\+ENCODER\+\_\+\+OGG\+\_\+\+ERROR}}
+, \mbox{\hyperlink{group__flac__stream__encoder_ggac5e9db4fc32ca2fa74abd9c8a87c02a5a4cb80be4f83eb71f04e74968af1d259e}{FLAC\+\_\+\+\_\+\+STREAM\+\_\+\+ENCODER\+\_\+\+VERIFY\+\_\+\+DECODER\+\_\+\+ERROR}}
+, \newline
+\mbox{\hyperlink{group__flac__stream__encoder_ggac5e9db4fc32ca2fa74abd9c8a87c02a5a011e3d8b2d02a940bfd0e59c05cf5ae0}{FLAC\+\_\+\+\_\+\+STREAM\+\_\+\+ENCODER\+\_\+\+VERIFY\+\_\+\+MISMATCH\+\_\+\+IN\+\_\+\+AUDIO\+\_\+\+DATA}}
+, \mbox{\hyperlink{group__flac__stream__encoder_ggac5e9db4fc32ca2fa74abd9c8a87c02a5a8c2b2e9efb43a4f9b25b1d2bd9af5f23}{FLAC\+\_\+\+\_\+\+STREAM\+\_\+\+ENCODER\+\_\+\+CLIENT\+\_\+\+ERROR}}
+, \mbox{\hyperlink{group__flac__stream__encoder_ggac5e9db4fc32ca2fa74abd9c8a87c02a5af0e4738522e05a7248435c7148f58f91}{FLAC\+\_\+\+\_\+\+STREAM\+\_\+\+ENCODER\+\_\+\+IO\+\_\+\+ERROR}}
+, \mbox{\hyperlink{group__flac__stream__encoder_ggac5e9db4fc32ca2fa74abd9c8a87c02a5a2c2937b7f1600a4ac7c84fc70ab34cf1}{FLAC\+\_\+\+\_\+\+STREAM\+\_\+\+ENCODER\+\_\+\+FRAMING\+\_\+\+ERROR}}
+, \newline
+\mbox{\hyperlink{group__flac__stream__encoder_ggac5e9db4fc32ca2fa74abd9c8a87c02a5a35db99d9958bd6c2301a04715fbc44fd}{FLAC\+\_\+\+\_\+\+STREAM\+\_\+\+ENCODER\+\_\+\+MEMORY\+\_\+\+ALLOCATION\+\_\+\+ERROR}}
+ \}
+\item 
+enum \mbox{\hyperlink{group__flac__stream__encoder_ga3bb869620af2b188d77982a5c30b047d}{FLAC\+\_\+\+\_\+\+Stream\+Encoder\+Init\+Status}} \{ \newline
+\mbox{\hyperlink{group__flac__stream__encoder_gga3bb869620af2b188d77982a5c30b047da20501dce552da74c5df935eeaa0c9ee3}{FLAC\+\_\+\+\_\+\+STREAM\+\_\+\+ENCODER\+\_\+\+INIT\+\_\+\+STATUS\+\_\+\+OK}} = 0
+, \mbox{\hyperlink{group__flac__stream__encoder_gga3bb869620af2b188d77982a5c30b047da9c64e5f9020d8799e1cd9d39d50e6955}{FLAC\+\_\+\+\_\+\+STREAM\+\_\+\+ENCODER\+\_\+\+INIT\+\_\+\+STATUS\+\_\+\+ENCODER\+\_\+\+ERROR}}
+, \mbox{\hyperlink{group__flac__stream__encoder_gga3bb869620af2b188d77982a5c30b047da8a822b011de88b67c114505ffef39327}{FLAC\+\_\+\+\_\+\+STREAM\+\_\+\+ENCODER\+\_\+\+INIT\+\_\+\+STATUS\+\_\+\+UNSUPPORTED\+\_\+\+CONTAINER}}
+, \mbox{\hyperlink{group__flac__stream__encoder_gga3bb869620af2b188d77982a5c30b047dac2cf461f02e20513003b8cadeae03f9f}{FLAC\+\_\+\+\_\+\+STREAM\+\_\+\+ENCODER\+\_\+\+INIT\+\_\+\+STATUS\+\_\+\+INVALID\+\_\+\+CALLBACKS}}
+, \newline
+\mbox{\hyperlink{group__flac__stream__encoder_gga3bb869620af2b188d77982a5c30b047da0541c4f827f081b9f1c54c9441e4aa65}{FLAC\+\_\+\+\_\+\+STREAM\+\_\+\+ENCODER\+\_\+\+INIT\+\_\+\+STATUS\+\_\+\+INVALID\+\_\+\+NUMBER\+\_\+\+OF\+\_\+\+CHANNELS}}
+, \mbox{\hyperlink{group__flac__stream__encoder_gga3bb869620af2b188d77982a5c30b047dad6d2631f464183c0c165155200882e6b}{FLAC\+\_\+\+\_\+\+STREAM\+\_\+\+ENCODER\+\_\+\+INIT\+\_\+\+STATUS\+\_\+\+INVALID\+\_\+\+BITS\+\_\+\+PER\+\_\+\+SAMPLE}}
+, \mbox{\hyperlink{group__flac__stream__encoder_gga3bb869620af2b188d77982a5c30b047da6fdcde9e18c37450c79e8f12b9d9c134}{FLAC\+\_\+\+\_\+\+STREAM\+\_\+\+ENCODER\+\_\+\+INIT\+\_\+\+STATUS\+\_\+\+INVALID\+\_\+\+SAMPLE\+\_\+\+RATE}}
+, \mbox{\hyperlink{group__flac__stream__encoder_gga3bb869620af2b188d77982a5c30b047da652c445f1bd8b6cfb963a30bf416c95a}{FLAC\+\_\+\+\_\+\+STREAM\+\_\+\+ENCODER\+\_\+\+INIT\+\_\+\+STATUS\+\_\+\+INVALID\+\_\+\+BLOCK\+\_\+\+SIZE}}
+, \newline
+\mbox{\hyperlink{group__flac__stream__encoder_gga3bb869620af2b188d77982a5c30b047da38a69e94b3333e4ba779d2ff8f43f64e}{FLAC\+\_\+\+\_\+\+STREAM\+\_\+\+ENCODER\+\_\+\+INIT\+\_\+\+STATUS\+\_\+\+INVALID\+\_\+\+MAX\+\_\+\+LPC\+\_\+\+ORDER}}
+, \mbox{\hyperlink{group__flac__stream__encoder_gga3bb869620af2b188d77982a5c30b047da5be80403bd7a43450139442e0f34ad7e}{FLAC\+\_\+\+\_\+\+STREAM\+\_\+\+ENCODER\+\_\+\+INIT\+\_\+\+STATUS\+\_\+\+INVALID\+\_\+\+QLP\+\_\+\+COEFF\+\_\+\+PRECISION}}
+, \mbox{\hyperlink{group__flac__stream__encoder_gga3bb869620af2b188d77982a5c30b047da62a17a3ed3c05ddf8ea7f6fecbd4e4a1}{FLAC\+\_\+\+\_\+\+STREAM\+\_\+\+ENCODER\+\_\+\+INIT\+\_\+\+STATUS\+\_\+\+BLOCK\+\_\+\+SIZE\+\_\+\+TOO\+\_\+\+SMALL\+\_\+\+FOR\+\_\+\+LPC\+\_\+\+ORDER}}
+, \mbox{\hyperlink{group__flac__stream__encoder_gga3bb869620af2b188d77982a5c30b047daa793405c858c7606539082750080a47e}{FLAC\+\_\+\+\_\+\+STREAM\+\_\+\+ENCODER\+\_\+\+INIT\+\_\+\+STATUS\+\_\+\+NOT\+\_\+\+STREAMABLE}}
+, \newline
+\mbox{\hyperlink{group__flac__stream__encoder_gga3bb869620af2b188d77982a5c30b047daa85afdd1849c75a19594416cef63e3e9}{FLAC\+\_\+\+\_\+\+STREAM\+\_\+\+ENCODER\+\_\+\+INIT\+\_\+\+STATUS\+\_\+\+INVALID\+\_\+\+METADATA}}
+, \mbox{\hyperlink{group__flac__stream__encoder_gga3bb869620af2b188d77982a5c30b047dab4e7b50d176a127575df90383cb15e1d}{FLAC\+\_\+\+\_\+\+STREAM\+\_\+\+ENCODER\+\_\+\+INIT\+\_\+\+STATUS\+\_\+\+ALREADY\+\_\+\+INITIALIZED}}
+ \}
+\item 
+enum \mbox{\hyperlink{group__flac__stream__encoder_ga2e81f007fb0a7414c0bbb453f37ea37f}{FLAC\+\_\+\+\_\+\+Stream\+Encoder\+Read\+Status}} \{ \mbox{\hyperlink{group__flac__stream__encoder_gga2e81f007fb0a7414c0bbb453f37ea37fa4bdd691d3666f19ec96ff99402347a2e}{FLAC\+\_\+\+\_\+\+STREAM\+\_\+\+ENCODER\+\_\+\+READ\+\_\+\+STATUS\+\_\+\+CONTINUE}}
+, \mbox{\hyperlink{group__flac__stream__encoder_gga2e81f007fb0a7414c0bbb453f37ea37fa562fef84bf86a9a39682e23066d9cfee}{FLAC\+\_\+\+\_\+\+STREAM\+\_\+\+ENCODER\+\_\+\+READ\+\_\+\+STATUS\+\_\+\+END\+\_\+\+OF\+\_\+\+STREAM}}
+, \mbox{\hyperlink{group__flac__stream__encoder_gga2e81f007fb0a7414c0bbb453f37ea37fa69b94eeab60e07d5fd33f2b3c8b85759}{FLAC\+\_\+\+\_\+\+STREAM\+\_\+\+ENCODER\+\_\+\+READ\+\_\+\+STATUS\+\_\+\+ABORT}}
+, \mbox{\hyperlink{group__flac__stream__encoder_gga2e81f007fb0a7414c0bbb453f37ea37fa9bb730b8f6354cc1e810017a2f700316}{FLAC\+\_\+\+\_\+\+STREAM\+\_\+\+ENCODER\+\_\+\+READ\+\_\+\+STATUS\+\_\+\+UNSUPPORTED}}
+ \}
+\item 
+enum \mbox{\hyperlink{group__flac__stream__encoder_ga3737471fd49730bb8cf9b182bdeda05e}{FLAC\+\_\+\+\_\+\+Stream\+Encoder\+Write\+Status}} \{ \mbox{\hyperlink{group__flac__stream__encoder_gga3737471fd49730bb8cf9b182bdeda05ea5622e0199f0203c402fcb7b4ca76f808}{FLAC\+\_\+\+\_\+\+STREAM\+\_\+\+ENCODER\+\_\+\+WRITE\+\_\+\+STATUS\+\_\+\+OK}} = 0
+, \mbox{\hyperlink{group__flac__stream__encoder_gga3737471fd49730bb8cf9b182bdeda05ea18e7cd6a443fb8bd303c3ba89946bc85}{FLAC\+\_\+\+\_\+\+STREAM\+\_\+\+ENCODER\+\_\+\+WRITE\+\_\+\+STATUS\+\_\+\+FATAL\+\_\+\+ERROR}}
+ \}
+\item 
+enum \mbox{\hyperlink{group__flac__stream__encoder_ga6d5be3489f45fcf0c252022c65d87aca}{FLAC\+\_\+\+\_\+\+Stream\+Encoder\+Seek\+Status}} \{ \mbox{\hyperlink{group__flac__stream__encoder_gga6d5be3489f45fcf0c252022c65d87acaa99853066610d798627888ec2e5afa667}{FLAC\+\_\+\+\_\+\+STREAM\+\_\+\+ENCODER\+\_\+\+SEEK\+\_\+\+STATUS\+\_\+\+OK}}
+, \mbox{\hyperlink{group__flac__stream__encoder_gga6d5be3489f45fcf0c252022c65d87acaabf93227938b4e1bf3656fe4ba4159c60}{FLAC\+\_\+\+\_\+\+STREAM\+\_\+\+ENCODER\+\_\+\+SEEK\+\_\+\+STATUS\+\_\+\+ERROR}}
+, \mbox{\hyperlink{group__flac__stream__encoder_gga6d5be3489f45fcf0c252022c65d87acaa8930179a426134caf30a70147448f037}{FLAC\+\_\+\+\_\+\+STREAM\+\_\+\+ENCODER\+\_\+\+SEEK\+\_\+\+STATUS\+\_\+\+UNSUPPORTED}}
+ \}
+\item 
+enum \mbox{\hyperlink{group__flac__stream__encoder_gab628f63181250eb977a28bf12b7dd9ff}{FLAC\+\_\+\+\_\+\+Stream\+Encoder\+Tell\+Status}} \{ \mbox{\hyperlink{group__flac__stream__encoder_ggab628f63181250eb977a28bf12b7dd9ffa48e071d89494ac8f5471e7c0d7a6f43b}{FLAC\+\_\+\+\_\+\+STREAM\+\_\+\+ENCODER\+\_\+\+TELL\+\_\+\+STATUS\+\_\+\+OK}}
+, \mbox{\hyperlink{group__flac__stream__encoder_ggab628f63181250eb977a28bf12b7dd9ffaf638882e04d7c58e6c29dcc7f410864b}{FLAC\+\_\+\+\_\+\+STREAM\+\_\+\+ENCODER\+\_\+\+TELL\+\_\+\+STATUS\+\_\+\+ERROR}}
+, \mbox{\hyperlink{group__flac__stream__encoder_ggab628f63181250eb977a28bf12b7dd9ffa9d6bbd317f85fd2d6fc72f64e3cb56e7}{FLAC\+\_\+\+\_\+\+STREAM\+\_\+\+ENCODER\+\_\+\+TELL\+\_\+\+STATUS\+\_\+\+UNSUPPORTED}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} \mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__flac__stream__encoder_ga3dec8f635821540423aff9792c5cc933}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+new}} (void)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} void \mbox{\hyperlink{group__flac__stream__encoder_ga9c9956af42bebe923da59437628aa9ea}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+delete}} (\mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} \mbox{\hyperlink{ordinals_8h_a95103469f1cbd78b8cf250194985b34e}{FLAC\+\_\+\+\_\+bool}} \mbox{\hyperlink{group__flac__stream__encoder_ga646c9800d42620a6c504fbdfbd092666}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+set\+\_\+ogg\+\_\+serial\+\_\+number}} (\mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder, long serial\+\_\+number)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} \mbox{\hyperlink{ordinals_8h_a95103469f1cbd78b8cf250194985b34e}{FLAC\+\_\+\+\_\+bool}} \mbox{\hyperlink{group__flac__stream__encoder_ga5f4ac18a7207d2864fed72d284486f9e}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+set\+\_\+verify}} (\mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder, \mbox{\hyperlink{ordinals_8h_a95103469f1cbd78b8cf250194985b34e}{FLAC\+\_\+\+\_\+bool}} value)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} \mbox{\hyperlink{ordinals_8h_a95103469f1cbd78b8cf250194985b34e}{FLAC\+\_\+\+\_\+bool}} \mbox{\hyperlink{group__flac__stream__encoder_ga163f1acfe8b6b8ae849f0f4f7c0708f4}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+set\+\_\+streamable\+\_\+subset}} (\mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder, \mbox{\hyperlink{ordinals_8h_a95103469f1cbd78b8cf250194985b34e}{FLAC\+\_\+\+\_\+bool}} value)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} \mbox{\hyperlink{ordinals_8h_a95103469f1cbd78b8cf250194985b34e}{FLAC\+\_\+\+\_\+bool}} \mbox{\hyperlink{group__flac__stream__encoder_gabfc9c883c124a849b5b42a87c30e10a5}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+set\+\_\+channels}} (\mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder, unsigned value)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} \mbox{\hyperlink{ordinals_8h_a95103469f1cbd78b8cf250194985b34e}{FLAC\+\_\+\+\_\+bool}} \mbox{\hyperlink{group__flac__stream__encoder_ga5a21cf7f86a81df6ba72714a6b917aa3}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+set\+\_\+bits\+\_\+per\+\_\+sample}} (\mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder, unsigned value)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} \mbox{\hyperlink{ordinals_8h_a95103469f1cbd78b8cf250194985b34e}{FLAC\+\_\+\+\_\+bool}} \mbox{\hyperlink{group__flac__stream__encoder_ga108c3f4fbdcaa744ddbb125f91cb3838}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+set\+\_\+sample\+\_\+rate}} (\mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder, unsigned value)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} \mbox{\hyperlink{ordinals_8h_a95103469f1cbd78b8cf250194985b34e}{FLAC\+\_\+\+\_\+bool}} \mbox{\hyperlink{group__flac__stream__encoder_ga03495bcd0aae71116c701b0dcf311c4b}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+set\+\_\+compression\+\_\+level}} (\mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder, unsigned value)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} \mbox{\hyperlink{ordinals_8h_a95103469f1cbd78b8cf250194985b34e}{FLAC\+\_\+\+\_\+bool}} \mbox{\hyperlink{group__flac__stream__encoder_gae6c001cd7601192334c58ee3631b571f}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+set\+\_\+blocksize}} (\mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder, unsigned value)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} \mbox{\hyperlink{ordinals_8h_a95103469f1cbd78b8cf250194985b34e}{FLAC\+\_\+\+\_\+bool}} \mbox{\hyperlink{group__flac__stream__encoder_gadbd1084da109cf0ddd007a5c64027504}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+set\+\_\+do\+\_\+mid\+\_\+side\+\_\+stereo}} (\mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder, \mbox{\hyperlink{ordinals_8h_a95103469f1cbd78b8cf250194985b34e}{FLAC\+\_\+\+\_\+bool}} value)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} \mbox{\hyperlink{ordinals_8h_a95103469f1cbd78b8cf250194985b34e}{FLAC\+\_\+\+\_\+bool}} \mbox{\hyperlink{group__flac__stream__encoder_ga7b7d294dccd5df7c6c67e75f59798f48}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+set\+\_\+loose\+\_\+mid\+\_\+side\+\_\+stereo}} (\mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder, \mbox{\hyperlink{ordinals_8h_a95103469f1cbd78b8cf250194985b34e}{FLAC\+\_\+\+\_\+bool}} value)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} \mbox{\hyperlink{ordinals_8h_a95103469f1cbd78b8cf250194985b34e}{FLAC\+\_\+\+\_\+bool}} \mbox{\hyperlink{group__flac__stream__encoder_ga83d38fd6fca7abbf8363bdc2536a299e}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+set\+\_\+apodization}} (\mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder, const char \texorpdfstring{$\ast$}{*}specification)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} \mbox{\hyperlink{ordinals_8h_a95103469f1cbd78b8cf250194985b34e}{FLAC\+\_\+\+\_\+bool}} \mbox{\hyperlink{group__flac__stream__encoder_gac3bde5abdaa340674c5659e2e85d2611}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+set\+\_\+max\+\_\+lpc\+\_\+order}} (\mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder, unsigned value)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} \mbox{\hyperlink{ordinals_8h_a95103469f1cbd78b8cf250194985b34e}{FLAC\+\_\+\+\_\+bool}} \mbox{\hyperlink{group__flac__stream__encoder_ga0888d739c952ff73456bf90e48634514}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+set\+\_\+qlp\+\_\+coeff\+\_\+precision}} (\mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder, unsigned value)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} \mbox{\hyperlink{ordinals_8h_a95103469f1cbd78b8cf250194985b34e}{FLAC\+\_\+\+\_\+bool}} \mbox{\hyperlink{group__flac__stream__encoder_ga3aa94a1aec1cf40c37e54434c86bb50d}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+set\+\_\+do\+\_\+qlp\+\_\+coeff\+\_\+prec\+\_\+search}} (\mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder, \mbox{\hyperlink{ordinals_8h_a95103469f1cbd78b8cf250194985b34e}{FLAC\+\_\+\+\_\+bool}} value)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} \mbox{\hyperlink{ordinals_8h_a95103469f1cbd78b8cf250194985b34e}{FLAC\+\_\+\+\_\+bool}} \mbox{\hyperlink{group__flac__stream__encoder_gaa839d19b6d1b30ba0407d419bdb6fe67}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+set\+\_\+do\+\_\+escape\+\_\+coding}} (\mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder, \mbox{\hyperlink{ordinals_8h_a95103469f1cbd78b8cf250194985b34e}{FLAC\+\_\+\+\_\+bool}} value)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} \mbox{\hyperlink{ordinals_8h_a95103469f1cbd78b8cf250194985b34e}{FLAC\+\_\+\+\_\+bool}} \mbox{\hyperlink{group__flac__stream__encoder_ga7fbc05ec9abd249a400fccb9f189e55e}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+set\+\_\+do\+\_\+exhaustive\+\_\+model\+\_\+search}} (\mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder, \mbox{\hyperlink{ordinals_8h_a95103469f1cbd78b8cf250194985b34e}{FLAC\+\_\+\+\_\+bool}} value)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} \mbox{\hyperlink{ordinals_8h_a95103469f1cbd78b8cf250194985b34e}{FLAC\+\_\+\+\_\+bool}} \mbox{\hyperlink{group__flac__stream__encoder_gae3e2dd204f276d051bf1a118383bfda2}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+set\+\_\+min\+\_\+residual\+\_\+partition\+\_\+order}} (\mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder, unsigned value)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} \mbox{\hyperlink{ordinals_8h_a95103469f1cbd78b8cf250194985b34e}{FLAC\+\_\+\+\_\+bool}} \mbox{\hyperlink{group__flac__stream__encoder_ga6de153da5a8eeeb1be2271c27fa58b37}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+set\+\_\+max\+\_\+residual\+\_\+partition\+\_\+order}} (\mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder, unsigned value)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} \mbox{\hyperlink{ordinals_8h_a95103469f1cbd78b8cf250194985b34e}{FLAC\+\_\+\+\_\+bool}} \mbox{\hyperlink{group__flac__stream__encoder_ga668de93e7061bce21475c062ffab3e18}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+set\+\_\+rice\+\_\+parameter\+\_\+search\+\_\+dist}} (\mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder, unsigned value)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} \mbox{\hyperlink{ordinals_8h_a95103469f1cbd78b8cf250194985b34e}{FLAC\+\_\+\+\_\+bool}} \mbox{\hyperlink{group__flac__stream__encoder_ga0d3f45052f2f7379c73e2b027c7f956c}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+set\+\_\+total\+\_\+samples\+\_\+estimate}} (\mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder, \mbox{\hyperlink{ordinals_8h_aa78c8c70a3eb8a58af7436f278acde8e}{FLAC\+\_\+\+\_\+uint64}} value)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} \mbox{\hyperlink{ordinals_8h_a95103469f1cbd78b8cf250194985b34e}{FLAC\+\_\+\+\_\+bool}} \mbox{\hyperlink{group__flac__stream__encoder_ga67b30b1a67a9274f7708a22154b225f6}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+set\+\_\+metadata}} (\mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder, \mbox{\hyperlink{struct_f_l_a_c_____stream_metadata}{FLAC\+\_\+\+\_\+\+Stream\+Metadata}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}metadata, unsigned num\+\_\+blocks)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} \mbox{\hyperlink{group__flac__stream__encoder_gac5e9db4fc32ca2fa74abd9c8a87c02a5}{FLAC\+\_\+\+\_\+\+Stream\+Encoder\+State}} \mbox{\hyperlink{group__flac__stream__encoder_gaff7284e55f01b59ed8f03317df510992}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+get\+\_\+state}} (const \mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} \mbox{\hyperlink{group__flac__stream__decoder_ga3adb6891c5871a87cd5bbae6c770ba2d}{FLAC\+\_\+\+\_\+\+Stream\+Decoder\+State}} \mbox{\hyperlink{group__flac__stream__encoder_gac613bebe4181568e7ca59cca30294e52}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+get\+\_\+verify\+\_\+decoder\+\_\+state}} (const \mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__flac__stream__encoder_gafd3324a31c36de1eda05c3bc0c7f6176}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+get\+\_\+resolved\+\_\+state\+\_\+string}} (const \mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} void \mbox{\hyperlink{group__flac__stream__encoder_ga3e3f5a9267eb998f74caa10865991bd5}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+get\+\_\+verify\+\_\+decoder\+\_\+error\+\_\+stats}} (const \mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder, \mbox{\hyperlink{ordinals_8h_aa78c8c70a3eb8a58af7436f278acde8e}{FLAC\+\_\+\+\_\+uint64}} \texorpdfstring{$\ast$}{*}absolute\+\_\+sample, unsigned \texorpdfstring{$\ast$}{*}frame\+\_\+number, unsigned \texorpdfstring{$\ast$}{*}channel, unsigned \texorpdfstring{$\ast$}{*}sample, \mbox{\hyperlink{ordinals_8h_a33fd77bfe6d685541a0c034a75deccdc}{FLAC\+\_\+\+\_\+int32}} \texorpdfstring{$\ast$}{*}expected, \mbox{\hyperlink{ordinals_8h_a33fd77bfe6d685541a0c034a75deccdc}{FLAC\+\_\+\+\_\+int32}} \texorpdfstring{$\ast$}{*}got)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} \mbox{\hyperlink{ordinals_8h_a95103469f1cbd78b8cf250194985b34e}{FLAC\+\_\+\+\_\+bool}} \mbox{\hyperlink{group__flac__stream__encoder_ga044d18f93fa8faa6a85eec4fa7cf86f2}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+get\+\_\+verify}} (const \mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} \mbox{\hyperlink{ordinals_8h_a95103469f1cbd78b8cf250194985b34e}{FLAC\+\_\+\+\_\+bool}} \mbox{\hyperlink{group__flac__stream__encoder_gabafaf69ed39c25c5b1c03044c1a91d66}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+get\+\_\+streamable\+\_\+subset}} (const \mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} unsigned \mbox{\hyperlink{group__flac__stream__encoder_ga4e94f87c0dc9bfc95d57217349aa5c82}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+get\+\_\+channels}} (const \mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} unsigned \mbox{\hyperlink{group__flac__stream__encoder_gacbd84a241c6718ed4c2688fd558efdcd}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+get\+\_\+bits\+\_\+per\+\_\+sample}} (const \mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} unsigned \mbox{\hyperlink{group__flac__stream__encoder_gacc8f4820dea783cc0fc2906b6078b333}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+get\+\_\+sample\+\_\+rate}} (const \mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} unsigned \mbox{\hyperlink{group__flac__stream__encoder_ga75bbef3f55b0e1e18642dd0091ad393e}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+get\+\_\+blocksize}} (const \mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} \mbox{\hyperlink{ordinals_8h_a95103469f1cbd78b8cf250194985b34e}{FLAC\+\_\+\+\_\+bool}} \mbox{\hyperlink{group__flac__stream__encoder_ga3308e73db9d0ae4803485c35d2a54a2d}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+get\+\_\+do\+\_\+mid\+\_\+side\+\_\+stereo}} (const \mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} \mbox{\hyperlink{ordinals_8h_a95103469f1cbd78b8cf250194985b34e}{FLAC\+\_\+\+\_\+bool}} \mbox{\hyperlink{group__flac__stream__encoder_ga539ac36925671ac84371a745f8acce17}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+get\+\_\+loose\+\_\+mid\+\_\+side\+\_\+stereo}} (const \mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} unsigned \mbox{\hyperlink{group__flac__stream__encoder_ga283e0a80301d38295242f9b57ade15cf}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+get\+\_\+max\+\_\+lpc\+\_\+order}} (const \mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} unsigned \mbox{\hyperlink{group__flac__stream__encoder_ga40ae31529071b3be2f39968d4265c663}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+get\+\_\+qlp\+\_\+coeff\+\_\+precision}} (const \mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} \mbox{\hyperlink{ordinals_8h_a95103469f1cbd78b8cf250194985b34e}{FLAC\+\_\+\+\_\+bool}} \mbox{\hyperlink{group__flac__stream__encoder_gaa258ce03d970b397f5b698c63636d985}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+get\+\_\+do\+\_\+qlp\+\_\+coeff\+\_\+prec\+\_\+search}} (const \mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} \mbox{\hyperlink{ordinals_8h_a95103469f1cbd78b8cf250194985b34e}{FLAC\+\_\+\+\_\+bool}} \mbox{\hyperlink{group__flac__stream__encoder_ga06a8e154139880a2def5f54b6c2700d6}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+get\+\_\+do\+\_\+escape\+\_\+coding}} (const \mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} \mbox{\hyperlink{ordinals_8h_a95103469f1cbd78b8cf250194985b34e}{FLAC\+\_\+\+\_\+bool}} \mbox{\hyperlink{group__flac__stream__encoder_gad429e31c7062baff987571d935b889f4}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+get\+\_\+do\+\_\+exhaustive\+\_\+model\+\_\+search}} (const \mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} unsigned \mbox{\hyperlink{group__flac__stream__encoder_gace80859226b77f40b7b06314b26aa478}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+get\+\_\+min\+\_\+residual\+\_\+partition\+\_\+order}} (const \mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} unsigned \mbox{\hyperlink{group__flac__stream__encoder_ga8f96ce37192b7d062394d710fc01b59e}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+get\+\_\+max\+\_\+residual\+\_\+partition\+\_\+order}} (const \mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} unsigned \mbox{\hyperlink{group__flac__stream__encoder_ga6780c051c176a3dcc4dd1a83a6309bd7}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+get\+\_\+rice\+\_\+parameter\+\_\+search\+\_\+dist}} (const \mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} \mbox{\hyperlink{ordinals_8h_aa78c8c70a3eb8a58af7436f278acde8e}{FLAC\+\_\+\+\_\+uint64}} \mbox{\hyperlink{group__flac__stream__encoder_ga8b206187a5b2a261ad4b5067fa43525b}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+get\+\_\+total\+\_\+samples\+\_\+estimate}} (const \mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} \mbox{\hyperlink{group__flac__stream__encoder_ga3bb869620af2b188d77982a5c30b047d}{FLAC\+\_\+\+\_\+\+Stream\+Encoder\+Init\+Status}} \mbox{\hyperlink{group__flac__stream__encoder_ga85221c4ceb9f22dfd4983d8f07a9a35b}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+init\+\_\+stream}} (\mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder, \mbox{\hyperlink{group__flac__stream__encoder_ga50865125fd57c40fab6eb2f062651429}{FLAC\+\_\+\+\_\+\+Stream\+Encoder\+Write\+Callback}} write\+\_\+callback, \mbox{\hyperlink{group__flac__stream__encoder_ga70b85349d5242e4401c4d8ddf6d9bbca}{FLAC\+\_\+\+\_\+\+Stream\+Encoder\+Seek\+Callback}} seek\+\_\+callback, \mbox{\hyperlink{group__flac__stream__encoder_gabefdf2279e1d0347d9f98f46da4e415b}{FLAC\+\_\+\+\_\+\+Stream\+Encoder\+Tell\+Callback}} tell\+\_\+callback, \mbox{\hyperlink{group__flac__stream__encoder_ga091fbf3340d85bcbda1090c31bc320cf}{FLAC\+\_\+\+\_\+\+Stream\+Encoder\+Metadata\+Callback}} metadata\+\_\+callback, void \texorpdfstring{$\ast$}{*}client\+\_\+data)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} \mbox{\hyperlink{group__flac__stream__encoder_ga3bb869620af2b188d77982a5c30b047d}{FLAC\+\_\+\+\_\+\+Stream\+Encoder\+Init\+Status}} \mbox{\hyperlink{group__flac__stream__encoder_ga87af71d74c09f7d482f9f420ef9bf826}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+init\+\_\+ogg\+\_\+stream}} (\mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder, \mbox{\hyperlink{group__flac__stream__encoder_ga18b7941b93bae067192732e913536d44}{FLAC\+\_\+\+\_\+\+Stream\+Encoder\+Read\+Callback}} read\+\_\+callback, \mbox{\hyperlink{group__flac__stream__encoder_ga50865125fd57c40fab6eb2f062651429}{FLAC\+\_\+\+\_\+\+Stream\+Encoder\+Write\+Callback}} write\+\_\+callback, \mbox{\hyperlink{group__flac__stream__encoder_ga70b85349d5242e4401c4d8ddf6d9bbca}{FLAC\+\_\+\+\_\+\+Stream\+Encoder\+Seek\+Callback}} seek\+\_\+callback, \mbox{\hyperlink{group__flac__stream__encoder_gabefdf2279e1d0347d9f98f46da4e415b}{FLAC\+\_\+\+\_\+\+Stream\+Encoder\+Tell\+Callback}} tell\+\_\+callback, \mbox{\hyperlink{group__flac__stream__encoder_ga091fbf3340d85bcbda1090c31bc320cf}{FLAC\+\_\+\+\_\+\+Stream\+Encoder\+Metadata\+Callback}} metadata\+\_\+callback, void \texorpdfstring{$\ast$}{*}client\+\_\+data)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} \mbox{\hyperlink{group__flac__stream__encoder_ga3bb869620af2b188d77982a5c30b047d}{FLAC\+\_\+\+\_\+\+Stream\+Encoder\+Init\+Status}} \mbox{\hyperlink{group__flac__stream__encoder_ga78653fea5d9bc490fff34e3ef86de944}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+init\+\_\+\+FILE}} (\mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder, FILE \texorpdfstring{$\ast$}{*}file, \mbox{\hyperlink{group__flac__stream__encoder_ga6e051c0e5837433f9e7cd56cd42ca6ba}{FLAC\+\_\+\+\_\+\+Stream\+Encoder\+Progress\+Callback}} progress\+\_\+callback, void \texorpdfstring{$\ast$}{*}client\+\_\+data)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} \mbox{\hyperlink{group__flac__stream__encoder_ga3bb869620af2b188d77982a5c30b047d}{FLAC\+\_\+\+\_\+\+Stream\+Encoder\+Init\+Status}} \mbox{\hyperlink{group__flac__stream__encoder_gab44c7f51a61826e04abd8cdf5c1ceac2}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+init\+\_\+ogg\+\_\+\+FILE}} (\mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder, FILE \texorpdfstring{$\ast$}{*}file, \mbox{\hyperlink{group__flac__stream__encoder_ga6e051c0e5837433f9e7cd56cd42ca6ba}{FLAC\+\_\+\+\_\+\+Stream\+Encoder\+Progress\+Callback}} progress\+\_\+callback, void \texorpdfstring{$\ast$}{*}client\+\_\+data)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} \mbox{\hyperlink{group__flac__stream__encoder_ga3bb869620af2b188d77982a5c30b047d}{FLAC\+\_\+\+\_\+\+Stream\+Encoder\+Init\+Status}} \mbox{\hyperlink{group__flac__stream__encoder_ga693bb5ed30d912822e0e6c7c0404428c}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+init\+\_\+file}} (\mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder, const char \texorpdfstring{$\ast$}{*}filename, \mbox{\hyperlink{group__flac__stream__encoder_ga6e051c0e5837433f9e7cd56cd42ca6ba}{FLAC\+\_\+\+\_\+\+Stream\+Encoder\+Progress\+Callback}} progress\+\_\+callback, void \texorpdfstring{$\ast$}{*}client\+\_\+data)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} \mbox{\hyperlink{group__flac__stream__encoder_ga3bb869620af2b188d77982a5c30b047d}{FLAC\+\_\+\+\_\+\+Stream\+Encoder\+Init\+Status}} \mbox{\hyperlink{group__flac__stream__encoder_ga51eb79f04e9a676cd1ce0c94729252e4}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+init\+\_\+ogg\+\_\+file}} (\mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder, const char \texorpdfstring{$\ast$}{*}filename, \mbox{\hyperlink{group__flac__stream__encoder_ga6e051c0e5837433f9e7cd56cd42ca6ba}{FLAC\+\_\+\+\_\+\+Stream\+Encoder\+Progress\+Callback}} progress\+\_\+callback, void \texorpdfstring{$\ast$}{*}client\+\_\+data)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} \mbox{\hyperlink{ordinals_8h_a95103469f1cbd78b8cf250194985b34e}{FLAC\+\_\+\+\_\+bool}} \mbox{\hyperlink{group__flac__stream__encoder_gab2c1e5477c1e3fe9ad0d722ff8eecda2}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+finish}} (\mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} \mbox{\hyperlink{ordinals_8h_a95103469f1cbd78b8cf250194985b34e}{FLAC\+\_\+\+\_\+bool}} \mbox{\hyperlink{group__flac__stream__encoder_gae187ec4f6cab3ca109637996ee23272d}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+process}} (\mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder, const \mbox{\hyperlink{ordinals_8h_a33fd77bfe6d685541a0c034a75deccdc}{FLAC\+\_\+\+\_\+int32}} \texorpdfstring{$\ast$}{*}const buffer\mbox{[}$\,$\mbox{]}, unsigned samples)
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} \mbox{\hyperlink{ordinals_8h_a95103469f1cbd78b8cf250194985b34e}{FLAC\+\_\+\+\_\+bool}} \mbox{\hyperlink{group__flac__stream__encoder_ga67c2ff5b23b945180797de420b1f27c0}{FLAC\+\_\+\+\_\+stream\+\_\+encoder\+\_\+process\+\_\+interleaved}} (\mbox{\hyperlink{struct_f_l_a_c_____stream_encoder}{FLAC\+\_\+\+\_\+\+Stream\+Encoder}} \texorpdfstring{$\ast$}{*}encoder, const \mbox{\hyperlink{ordinals_8h_a33fd77bfe6d685541a0c034a75deccdc}{FLAC\+\_\+\+\_\+int32}} buffer\mbox{[}$\,$\mbox{]}, unsigned samples)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Zmienne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} const char \texorpdfstring{$\ast$}{*}const \mbox{\hyperlink{group__flac__stream__encoder_ga421c1d86de745d3095b4c5d9af1ef0de}{FLAC\+\_\+\+\_\+\+Stream\+Encoder\+State\+String}} \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} const char \texorpdfstring{$\ast$}{*}const \mbox{\hyperlink{group__flac__stream__encoder_ga05203d2cf0390dfbbc2b57b0f0b8e2df}{FLAC\+\_\+\+\_\+\+Stream\+Encoder\+Init\+Status\+String}} \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} const char \texorpdfstring{$\ast$}{*}const \mbox{\hyperlink{group__flac__stream__encoder_ga056c12d2a27c562d352eb575d4cb9086}{FLAC\+\_\+\+\_\+\+Stream\+Encoder\+Read\+Status\+String}} \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} const char \texorpdfstring{$\ast$}{*}const \mbox{\hyperlink{group__flac__stream__encoder_ga00e6218364ced330f52c625061dfa485}{FLAC\+\_\+\+\_\+\+Stream\+Encoder\+Write\+Status\+String}} \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} const char \texorpdfstring{$\ast$}{*}const \mbox{\hyperlink{group__flac__stream__encoder_gaf38671371a395919b6baee141ad90642}{FLAC\+\_\+\+\_\+\+Stream\+Encoder\+Seek\+Status\+String}} \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{group__flac__export_ga56ca07df8a23310707732b1c0007d6f5}{FLAC\+\_\+\+API}} const char \texorpdfstring{$\ast$}{*}const \mbox{\hyperlink{group__flac__stream__encoder_ga53ed1172a97be80e75f493c060eff8d4}{FLAC\+\_\+\+\_\+\+Stream\+Encoder\+Tell\+Status\+String}} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}

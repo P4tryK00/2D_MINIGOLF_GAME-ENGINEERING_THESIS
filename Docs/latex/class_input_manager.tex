@@ -1,0 +1,251 @@
+\doxysection{Dokumentacja klasy Input\+Manager}
+\hypertarget{class_input_manager}{}\label{class_input_manager}\index{InputManager@{InputManager}}
+
+
+Klasa obsługująca sterowanie (mechanika Drag \& Shoot).  
+
+
+
+
+{\ttfamily \#include $<$Input\+Manager.\+h$>$}
+
+
+
+Diagram współpracy dla Input\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{class_input_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_input_manager_a8be46886da639b26d67181c29dab6d6c}{Input\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor inicjalizujący stan wejścia. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_input_manager_a805b33e09a29c48fd7e78a3e050a6f91}{handle\+Event}} (const sf\+::\+Event \&event, \mbox{\hyperlink{class_ball}{Ball}} \&ball, sf\+::\+Render\+Window \&window)
+\begin{DoxyCompactList}\small\item\em Przetwarza zdarzenia wejścia SFML. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_input_manager_a7f1b34f39c9a7f60810ad45dd097f96b}{is\+Ready}} () const
+\begin{DoxyCompactList}\small\item\em Sprawdza, czy gracz wykonał strzał (puścił przycisk myszy). \end{DoxyCompactList}\item 
+sf\+::\+Vector2f \mbox{\hyperlink{class_input_manager_a02da783e3d45711d73e81365659a7019}{get\+Force\+Vector}} ()
+\begin{DoxyCompactList}\small\item\em Oblicza i zwraca wektor siły uderzenia. \end{DoxyCompactList}\item 
+sf\+::\+Vector2f \mbox{\hyperlink{class_input_manager_ae5f5740ae134b4f9c96b25bbe9e9854c}{get\+Current\+Force}} (const sf\+::\+Render\+Window \&window) const
+\begin{DoxyCompactList}\small\item\em Oblicza aktualny wektor siły (do wizualizacji linii celowania). Nie resetuje stanu \textquotesingle{}ready\textquotesingle{}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_input_manager_aa5bae5c37c4a7ca1e634d1f88d804742}{is\+Dragging}} () const
+\begin{DoxyCompactList}\small\item\em Sprawdza, czy gracz jest w trakcie celowania (trzyma przycisk). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_input_manager_a4feb188c43d85a81fc89c923edc8ddf9}{is\+Grabbed}}
+\begin{DoxyCompactList}\small\item\em Czy gracz trzyma piłkę (lewy przycisk myszy wciśnięty). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_input_manager_adb87560da2bdd6ea9fb822be139c334f}{ready}}
+\begin{DoxyCompactList}\small\item\em Czy strzał jest gotowy do wykonania (puszczenie przycisku). \end{DoxyCompactList}\item 
+sf\+::\+Vector2f \mbox{\hyperlink{class_input_manager_a0f0f456fd4a7cac0cd16c4ca77a67ba1}{ball\+Start\+Pos}}
+\begin{DoxyCompactList}\small\item\em Pozycja piłki w momencie rozpoczęcia celowania. \end{DoxyCompactList}\item 
+sf\+::\+Vector2f \mbox{\hyperlink{class_input_manager_ab111f934ca0f84ec552f5269a17036a2}{current\+Mouse\+Pos}}
+\begin{DoxyCompactList}\small\item\em Aktualna pozycja myszy. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_input_manager_a0ad9fd1453867e42597939308d7a15b3}{force}}
+\begin{DoxyCompactList}\small\item\em Obliczona siła uderzenia (nieużywana bezpośrednio, obliczana w wektorze). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Klasa obsługująca sterowanie (mechanika Drag \& Shoot). 
+
+Odpowiada za wykrywanie kliknięć na piłce, przeciąganie myszką (celowanie) oraz obliczanie wektora siły uderzenia. 
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{class_input_manager_a8be46886da639b26d67181c29dab6d6c}\label{class_input_manager_a8be46886da639b26d67181c29dab6d6c} 
+\index{InputManager@{InputManager}!InputManager@{InputManager}}
+\index{InputManager@{InputManager}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{InputManager()}{InputManager()}}
+{\footnotesize\ttfamily Input\+Manager\+::\+Input\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Konstruktor inicjalizujący stan wejścia. 
+
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_input_manager_ae5f5740ae134b4f9c96b25bbe9e9854c}\label{class_input_manager_ae5f5740ae134b4f9c96b25bbe9e9854c} 
+\index{InputManager@{InputManager}!getCurrentForce@{getCurrentForce}}
+\index{getCurrentForce@{getCurrentForce}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{getCurrentForce()}{getCurrentForce()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Input\+Manager\+::get\+Current\+Force (\begin{DoxyParamCaption}\item[{const sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption}) const}
+
+
+
+Oblicza aktualny wektor siły (do wizualizacji linii celowania). Nie resetuje stanu \textquotesingle{}ready\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em window} & Okno gry. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Wektor siły. 
+\end{DoxyReturn}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_input_manager_ae5f5740ae134b4f9c96b25bbe9e9854c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_input_manager_a02da783e3d45711d73e81365659a7019}\label{class_input_manager_a02da783e3d45711d73e81365659a7019} 
+\index{InputManager@{InputManager}!getForceVector@{getForceVector}}
+\index{getForceVector@{getForceVector}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{getForceVector()}{getForceVector()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Input\+Manager\+::get\+Force\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Oblicza i zwraca wektor siły uderzenia. 
+
+Wektor jest obliczany na podstawie różnicy między pozycją startową a pozycją myszy. Siła jest limitowana do maksymalnej wartości. Po pobraniu wektora flaga \textquotesingle{}ready\textquotesingle{} jest resetowana.
+
+\begin{DoxyReturn}{Zwraca}
+Wektor siły (sf\+::\+Vector2f). 
+\end{DoxyReturn}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_input_manager_a02da783e3d45711d73e81365659a7019_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_input_manager_a805b33e09a29c48fd7e78a3e050a6f91}\label{class_input_manager_a805b33e09a29c48fd7e78a3e050a6f91} 
+\index{InputManager@{InputManager}!handleEvent@{handleEvent}}
+\index{handleEvent@{handleEvent}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{handleEvent()}{handleEvent()}}
+{\footnotesize\ttfamily void Input\+Manager\+::handle\+Event (\begin{DoxyParamCaption}\item[{const sf\+::\+Event \&}]{event,  }\item[{\mbox{\hyperlink{class_ball}{Ball}} \&}]{ball,  }\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})}
+
+
+
+Przetwarza zdarzenia wejścia SFML. 
+
+Obsługuje Mouse\+Button\+Pressed (chwycenie), Mouse\+Moved (celowanie) i Mouse\+Button\+Released (strzał).
+
+
+\begin{DoxyParams}{Parametry}
+{\em event} & Zdarzenie SFML. \\
+\hline
+{\em ball} & Referencja do obiektu piłki (do sprawdzenia czy kliknięto w nią). \\
+\hline
+{\em window} & Referencja do okna (do mapowania współrzędnych). \\
+\hline
+\end{DoxyParams}
+Oto graf wywołań dla tej funkcji\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{class_input_manager_a805b33e09a29c48fd7e78a3e050a6f91_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_input_manager_a805b33e09a29c48fd7e78a3e050a6f91_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_input_manager_aa5bae5c37c4a7ca1e634d1f88d804742}\label{class_input_manager_aa5bae5c37c4a7ca1e634d1f88d804742} 
+\index{InputManager@{InputManager}!isDragging@{isDragging}}
+\index{isDragging@{isDragging}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{isDragging()}{isDragging()}}
+{\footnotesize\ttfamily bool Input\+Manager\+::is\+Dragging (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Sprawdza, czy gracz jest w trakcie celowania (trzyma przycisk). 
+
+\begin{DoxyReturn}{Zwraca}
+true jeśli trwa celowanie. 
+\end{DoxyReturn}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_input_manager_aa5bae5c37c4a7ca1e634d1f88d804742_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_input_manager_a7f1b34f39c9a7f60810ad45dd097f96b}\label{class_input_manager_a7f1b34f39c9a7f60810ad45dd097f96b} 
+\index{InputManager@{InputManager}!isReady@{isReady}}
+\index{isReady@{isReady}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{isReady()}{isReady()}}
+{\footnotesize\ttfamily bool Input\+Manager\+::is\+Ready (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Sprawdza, czy gracz wykonał strzał (puścił przycisk myszy). 
+
+\begin{DoxyReturn}{Zwraca}
+true jeśli strzał jest gotowy. 
+\end{DoxyReturn}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{class_input_manager_a7f1b34f39c9a7f60810ad45dd097f96b_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{class_input_manager_a0f0f456fd4a7cac0cd16c4ca77a67ba1}\label{class_input_manager_a0f0f456fd4a7cac0cd16c4ca77a67ba1} 
+\index{InputManager@{InputManager}!ballStartPos@{ballStartPos}}
+\index{ballStartPos@{ballStartPos}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{ballStartPos}{ballStartPos}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Input\+Manager\+::ball\+Start\+Pos\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Pozycja piłki w momencie rozpoczęcia celowania. 
+
+\Hypertarget{class_input_manager_ab111f934ca0f84ec552f5269a17036a2}\label{class_input_manager_ab111f934ca0f84ec552f5269a17036a2} 
+\index{InputManager@{InputManager}!currentMousePos@{currentMousePos}}
+\index{currentMousePos@{currentMousePos}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{currentMousePos}{currentMousePos}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Input\+Manager\+::current\+Mouse\+Pos\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Aktualna pozycja myszy. 
+
+\Hypertarget{class_input_manager_a0ad9fd1453867e42597939308d7a15b3}\label{class_input_manager_a0ad9fd1453867e42597939308d7a15b3} 
+\index{InputManager@{InputManager}!force@{force}}
+\index{force@{force}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{force}{force}}
+{\footnotesize\ttfamily float Input\+Manager\+::force\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Obliczona siła uderzenia (nieużywana bezpośrednio, obliczana w wektorze). 
+
+\Hypertarget{class_input_manager_a4feb188c43d85a81fc89c923edc8ddf9}\label{class_input_manager_a4feb188c43d85a81fc89c923edc8ddf9} 
+\index{InputManager@{InputManager}!isGrabbed@{isGrabbed}}
+\index{isGrabbed@{isGrabbed}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{isGrabbed}{isGrabbed}}
+{\footnotesize\ttfamily bool Input\+Manager\+::is\+Grabbed\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Czy gracz trzyma piłkę (lewy przycisk myszy wciśnięty). 
+
+\Hypertarget{class_input_manager_adb87560da2bdd6ea9fb822be139c334f}\label{class_input_manager_adb87560da2bdd6ea9fb822be139c334f} 
+\index{InputManager@{InputManager}!ready@{ready}}
+\index{ready@{ready}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{ready}{ready}}
+{\footnotesize\ttfamily bool Input\+Manager\+::ready\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Czy strzał jest gotowy do wykonania (puszczenie przycisku). 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_input_manager_8h}{Input\+Manager.\+h}}\item 
+\mbox{\hyperlink{_input_manager_8cpp}{Input\+Manager.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,915 @@
+\doxysection{Dokumentacja klasy sf\+::priv\+::Window\+Impl\+Win32}
+\hypertarget{classsf_1_1priv_1_1_window_impl_win32}{}\label{classsf_1_1priv_1_1_window_impl_win32}\index{sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}}
+
+
+Windows implementation of \doxylink{classsf_1_1priv_1_1_window_impl}{Window\+Impl}.  
+
+
+
+
+{\ttfamily \#include $<$Window\+Impl\+Win32.\+hpp$>$}
+
+
+
+Diagram dziedziczenia dla sf\+::priv\+::Window\+Impl\+Win32\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classsf_1_1priv_1_1_window_impl_win32__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagram współpracy dla sf\+::priv\+::Window\+Impl\+Win32\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classsf_1_1priv_1_1_window_impl_win32__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_win32_a82e02682ea5de8f41a8c8d4161a1f16b}{Window\+Impl\+Win32}} (Window\+Handle handle)
+\begin{DoxyCompactList}\small\item\em Construct the window implementation from an existing control. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_win32_a06733814a1c794b439c49bc6ae3ac2b5}{Window\+Impl\+Win32}} (\mbox{\hyperlink{classsf_1_1_video_mode}{Video\+Mode}} mode, const \mbox{\hyperlink{classsf_1_1_string}{String}} \&title, \mbox{\hyperlink{namespacesf_aa746fb1ddef4410bddf198ebb27e727c}{Uint32}} style, const \mbox{\hyperlink{structsf_1_1_context_settings}{Context\+Settings}} \&settings)
+\begin{DoxyCompactList}\small\item\em Create the window implementation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_win32_a4dba0111513d3bd9637090bb8b486efc}{\texorpdfstring{$\sim$}{\string~}\+Window\+Impl\+Win32}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual Window\+Handle \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_win32_aaa0bb4170a5e4887cb8ee5f8fb87ff0d}{get\+System\+Handle}} () const
+\begin{DoxyCompactList}\small\item\em Get the OS-\/specific handle of the window. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_win32_a3200dddd1fd240886b7f41d14df6fe28}{get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Get the position of the window. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_win32_a58b8f35f51fa6a8010797f507197b835}{set\+Position}} (const \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \&position)
+\begin{DoxyCompactList}\small\item\em Change the position of the window on screen. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacesf_aaa02ba42bf79b001a376fe9d79254cb3}{Vector2u}} \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_win32_a76be535abf17c6585a9f354a9c86adbc}{get\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Get the client size of the window. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_win32_a1f9317ce9c22180dc98ccc8b2af578ec}{set\+Size}} (const \mbox{\hyperlink{namespacesf_aaa02ba42bf79b001a376fe9d79254cb3}{Vector2u}} \&size)
+\begin{DoxyCompactList}\small\item\em Change the size of the rendering region of the window. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_win32_a5116d56e6717ca6d2d18fb278a73d8a7}{set\+Title}} (const \mbox{\hyperlink{classsf_1_1_string}{String}} \&title)
+\begin{DoxyCompactList}\small\item\em Change the title of the window. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_win32_afdc575fb480419a108e6594d44fc7944}{set\+Icon}} (unsigned int width, unsigned int height, const \mbox{\hyperlink{namespacesf_a4ef3d630785c4f296f9b4f274c33d78e}{Uint8}} \texorpdfstring{$\ast$}{*}pixels)
+\begin{DoxyCompactList}\small\item\em Change the window\textquotesingle{}s icon. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_win32_a0d077acd1dbfe6d47fb1d61816d37e6a}{set\+Visible}} (bool visible)
+\begin{DoxyCompactList}\small\item\em Show or hide the window. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_win32_a35c4f933a7666ad28dd0c26586b36d07}{set\+Mouse\+Cursor\+Visible}} (bool visible)
+\begin{DoxyCompactList}\small\item\em Show or hide the mouse cursor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_win32_aa550aebc13bbd8255d37dd78cddd2889}{set\+Mouse\+Cursor\+Grabbed}} (bool grabbed)
+\begin{DoxyCompactList}\small\item\em Grab or release the mouse cursor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_win32_a0b7e5daa9b4f0cf254b5bee3231ed24c}{set\+Mouse\+Cursor}} (const \mbox{\hyperlink{classsf_1_1priv_1_1_cursor_impl}{Cursor\+Impl}} \&cursor)
+\begin{DoxyCompactList}\small\item\em Set the displayed cursor to a native system cursor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_win32_a4a38ca689f879d933113f9f1de9701da}{set\+Key\+Repeat\+Enabled}} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Enable or disable automatic key-\/repeat. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_win32_aa48968aa471208400a57e94c5be827f6}{request\+Focus}} ()
+\begin{DoxyCompactList}\small\item\em Request the current window to be made the active foreground window. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_win32_a6cb465d87ca0a514e64b937df8500f05}{has\+Focus}} () const
+\begin{DoxyCompactList}\small\item\em Check whether the window has the input focus. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl}{sf\+::priv\+::\+Window\+Impl}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a2a9935230eb4898324701cedf14dd307}{\texorpdfstring{$\sim$}{\string~}\+Window\+Impl}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_ad63050d99580126233581cbd013527ef}{set\+Joystick\+Threshold}} (float threshold)
+\begin{DoxyCompactList}\small\item\em Change the joystick threshold, i.\+e. the value below which no move event will be generated. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_ac03b5e66fbf0b64d00f28dfb06f25a94}{pop\+Event}} (\mbox{\hyperlink{classsf_1_1_event}{Event}} \&event, bool block)
+\begin{DoxyCompactList}\small\item\em Return the next window event available. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_aa34c17d9a20afe522b3d70b81947dcbf}{create\+Vulkan\+Surface}} (const \mbox{\hyperlink{_vulkan_8hpp_a6d9f7e27148712f2c97db45ca6991547}{Vk\+Instance}} \&instance, \mbox{\hyperlink{_vulkan_8hpp_a09787d7da5f3146095ed80ceccc2d794}{Vk\+Surface\+KHR}} \&surface, const \mbox{\hyperlink{struct_vk_allocation_callbacks}{Vk\+Allocation\+Callbacks}} \texorpdfstring{$\ast$}{*}allocator)
+\begin{DoxyCompactList}\small\item\em Create a \doxylink{classsf_1_1_vulkan}{Vulkan} rendering surface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Metody chronione}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_win32_aa418e3446e2e9a9994f84f5d52b8b53d}{process\+Events}} ()
+\begin{DoxyCompactList}\small\item\em Process incoming events from the operating system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody chronione dziedziczone z \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl}{sf\+::priv\+::\+Window\+Impl}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a1328634be04374d905e1f68d0688b30a}{Window\+Impl}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a9b540a7c8b1b782d771e8fdf8f451837}{push\+Event}} (const \mbox{\hyperlink{classsf_1_1_event}{Event}} \&event)
+\begin{DoxyCompactList}\small\item\em Push a new event into the event queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_win32_a3ca395755f7d1f2fc6185eb928fb3c29}{register\+Window\+Class}} ()
+\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_win32_aacad4d3ed30fc64bf245706cc75fe57a}{switch\+To\+Fullscreen}} (const \mbox{\hyperlink{classsf_1_1_video_mode}{Video\+Mode}} \&mode)
+\begin{DoxyCompactList}\small\item\em Switch to fullscreen mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_win32_a728b51815fb8b9959c620e553075a9d9}{cleanup}} ()
+\begin{DoxyCompactList}\small\item\em Free all the graphical resources attached to the window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_win32_a1e221d565d1a87d59bf53258da13a36a}{process\+Event}} (UINT message, WPARAM w\+Param, LPARAM l\+Param)
+\begin{DoxyCompactList}\small\item\em Process a Win32 event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_win32_a0e14c19f33bf7517780de12ae4a22c74}{set\+Tracking}} (bool track)
+\begin{DoxyCompactList}\small\item\em Enables or disables tracking for the mouse cursor leaving the window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_win32_ad46230726e514688bdd7fef21e243ea2}{grab\+Cursor}} (bool grabbed)
+\begin{DoxyCompactList}\small\item\em Grab or release the mouse cursor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Statyczne metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_win32_a55f81779d74403e135bcb2b78c4c1d27}{virtual\+Key\+Code\+To\+SF}} (WPARAM key, LPARAM flags)
+\begin{DoxyCompactList}\small\item\em Convert a Win32 virtual key code to a SFML key code. \end{DoxyCompactList}\item 
+static LRESULT CALLBACK \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_win32_aa96e01a30de752c6ba89f42b3e8f1ff8}{global\+On\+Event}} (HWND handle, UINT message, WPARAM w\+Param, LPARAM l\+Param)
+\begin{DoxyCompactList}\small\item\em Function called whenever one of our windows receives a message. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_win32_a580e3fa8c99b4e8415f46163a6d2638c}{to\+Scancode}} (WPARAM w\+Param, LPARAM l\+Param)
+\begin{DoxyCompactList}\small\item\em Convert a Win32 scancode to an sfml scancode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+HWND \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_win32_a2e1ade7af6915bde6005ab93ff7bafcc}{m\+\_\+handle}}
+\begin{DoxyCompactList}\small\item\em Win32 handle of the window. \end{DoxyCompactList}\item 
+LONG\+\_\+\+PTR \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_win32_aefb6500adf9f8df2d08a6b57aec8d162}{m\+\_\+callback}}
+\begin{DoxyCompactList}\small\item\em Stores the original event callback function of the control. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_win32_ac689f5af1fc17b8d7f31e4a13cd3b885}{m\+\_\+cursor\+Visible}}
+\begin{DoxyCompactList}\small\item\em Is the cursor visible or hidden? \end{DoxyCompactList}\item 
+HCURSOR \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_win32_a9c3df74045ccbbacfe3f9aee62be2d92}{m\+\_\+last\+Cursor}}
+\begin{DoxyCompactList}\small\item\em Last cursor used -- this data is not owned by the window and is required to be always valid. \end{DoxyCompactList}\item 
+HICON \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_win32_ade123ee2daa0bfc68350a2def6bc9b2f}{m\+\_\+icon}}
+\begin{DoxyCompactList}\small\item\em Custom icon assigned to the window. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_win32_aaa38d70151d3299efdd6f0e8347c380d}{m\+\_\+key\+Repeat\+Enabled}}
+\begin{DoxyCompactList}\small\item\em Automatic key-\/repeat state for keydown events. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacesf_aaa02ba42bf79b001a376fe9d79254cb3}{Vector2u}} \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_win32_a3cb5120ba48138deb0041933bcf6f1e6}{m\+\_\+last\+Size}}
+\begin{DoxyCompactList}\small\item\em The last handled size of the window. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_win32_a39bab0d52fceb2c36bc972acb8a4179e}{m\+\_\+resizing}}
+\begin{DoxyCompactList}\small\item\em Is the window being resized? \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacesf_a2fcaf787248b0b83dfb6b145ca348246}{Uint16}} \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_win32_af5637ac8259941d6dd4b954ca9321c61}{m\+\_\+surrogate}}
+\begin{DoxyCompactList}\small\item\em First half of the surrogate pair, in case we\textquotesingle{}re receiving a Unicode character in two events. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_win32_a03e2647c08c659cca58836a3bd932118}{m\+\_\+mouse\+Inside}}
+\begin{DoxyCompactList}\small\item\em \doxylink{classsf_1_1_mouse}{Mouse} is inside the window? \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_win32_af05efbdf5ff9a47e8c7b587ccc04187d}{m\+\_\+fullscreen}}
+\begin{DoxyCompactList}\small\item\em Is the window fullscreen? \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_win32_a400bbe2f43749d3a2a006f3b2cc6d8d3}{m\+\_\+cursor\+Grabbed}}
+\begin{DoxyCompactList}\small\item\em Is the mouse cursor trapped? \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Dodatkowe Dziedziczone Składowe}
+\doxysubsection*{Statyczne metody publiczne dziedziczone z \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl}{sf\+::priv\+::\+Window\+Impl}}}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl}{Window\+Impl}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a070ce3d5db3b9bd99ec61e3526e2a077}{create}} (\mbox{\hyperlink{classsf_1_1_video_mode}{Video\+Mode}} mode, const \mbox{\hyperlink{classsf_1_1_string}{String}} \&title, \mbox{\hyperlink{namespacesf_aa746fb1ddef4410bddf198ebb27e727c}{Uint32}} style, const \mbox{\hyperlink{structsf_1_1_context_settings}{Context\+Settings}} \&settings)
+\begin{DoxyCompactList}\small\item\em Create a new window depending on the current OS. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl}{Window\+Impl}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a2d0dd44bbf2ec974217f1f5da038ead6}{create}} (Window\+Handle handle)
+\begin{DoxyCompactList}\small\item\em Create a new window depending on to the current OS. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Windows implementation of \doxylink{classsf_1_1priv_1_1_window_impl}{Window\+Impl}. 
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{classsf_1_1priv_1_1_window_impl_win32_a82e02682ea5de8f41a8c8d4161a1f16b}\label{classsf_1_1priv_1_1_window_impl_win32_a82e02682ea5de8f41a8c8d4161a1f16b} 
+\index{sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}!WindowImplWin32@{WindowImplWin32}}
+\index{WindowImplWin32@{WindowImplWin32}!sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}}
+\doxysubsubsection{\texorpdfstring{WindowImplWin32()}{WindowImplWin32()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily sf\+::priv\+::\+Window\+Impl\+Win32\+::\+Window\+Impl\+Win32 (\begin{DoxyParamCaption}\item[{Window\+Handle}]{handle }\end{DoxyParamCaption})}
+
+
+
+Construct the window implementation from an existing control. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em handle} & Platform-\/specific handle of the control \\
+\hline
+\end{DoxyParams}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_window_impl_win32_a82e02682ea5de8f41a8c8d4161a1f16b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_window_impl_win32_a06733814a1c794b439c49bc6ae3ac2b5}\label{classsf_1_1priv_1_1_window_impl_win32_a06733814a1c794b439c49bc6ae3ac2b5} 
+\index{sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}!WindowImplWin32@{WindowImplWin32}}
+\index{WindowImplWin32@{WindowImplWin32}!sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}}
+\doxysubsubsection{\texorpdfstring{WindowImplWin32()}{WindowImplWin32()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily sf\+::priv\+::\+Window\+Impl\+Win32\+::\+Window\+Impl\+Win32 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_video_mode}{Video\+Mode}}}]{mode,  }\item[{const \mbox{\hyperlink{classsf_1_1_string}{String}} \&}]{title,  }\item[{\mbox{\hyperlink{namespacesf_aa746fb1ddef4410bddf198ebb27e727c}{Uint32}}}]{style,  }\item[{const \mbox{\hyperlink{structsf_1_1_context_settings}{Context\+Settings}} \&}]{settings }\end{DoxyParamCaption})}
+
+
+
+Create the window implementation. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em mode} & Video mode to use \\
+\hline
+{\em title} & Title of the window \\
+\hline
+{\em style} & \doxylink{classsf_1_1_window}{Window} style \\
+\hline
+{\em settings} & Additional settings for the underlying Open\+GL context \\
+\hline
+\end{DoxyParams}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_window_impl_win32_a06733814a1c794b439c49bc6ae3ac2b5_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_window_impl_win32_a4dba0111513d3bd9637090bb8b486efc}\label{classsf_1_1priv_1_1_window_impl_win32_a4dba0111513d3bd9637090bb8b486efc} 
+\index{sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}!````~WindowImplWin32@{\texorpdfstring{$\sim$}{\string~}WindowImplWin32}}
+\index{````~WindowImplWin32@{\texorpdfstring{$\sim$}{\string~}WindowImplWin32}!sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}WindowImplWin32()}{\string~WindowImplWin32()}}
+{\footnotesize\ttfamily sf\+::priv\+::\+Window\+Impl\+Win32\+::\texorpdfstring{$\sim$}{\string~}\+Window\+Impl\+Win32 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_window_impl_win32_a4dba0111513d3bd9637090bb8b486efc_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{classsf_1_1priv_1_1_window_impl_win32_a728b51815fb8b9959c620e553075a9d9}\label{classsf_1_1priv_1_1_window_impl_win32_a728b51815fb8b9959c620e553075a9d9} 
+\index{sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}}
+\doxysubsubsection{\texorpdfstring{cleanup()}{cleanup()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Window\+Impl\+Win32\+::cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Free all the graphical resources attached to the window. 
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_window_impl_win32_a728b51815fb8b9959c620e553075a9d9_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_window_impl_win32_a728b51815fb8b9959c620e553075a9d9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_window_impl_win32_a3200dddd1fd240886b7f41d14df6fe28}\label{classsf_1_1priv_1_1_window_impl_win32_a3200dddd1fd240886b7f41d14df6fe28} 
+\index{sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} sf\+::priv\+::\+Window\+Impl\+Win32\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the position of the window. 
+
+\begin{DoxyReturn}{Zwraca}
+Position of the window, in pixels 
+\end{DoxyReturn}
+
+
+Implementuje \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a2d824d8166f5f5a2d5554eb3d7244066}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_win32_a76be535abf17c6585a9f354a9c86adbc}\label{classsf_1_1priv_1_1_window_impl_win32_a76be535abf17c6585a9f354a9c86adbc} 
+\index{sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}!getSize@{getSize}}
+\index{getSize@{getSize}!sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesf_aaa02ba42bf79b001a376fe9d79254cb3}{Vector2u}} sf\+::priv\+::\+Window\+Impl\+Win32\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the client size of the window. 
+
+\begin{DoxyReturn}{Zwraca}
+Size of the window, in pixels 
+\end{DoxyReturn}
+
+
+Implementuje \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a2bc72a00e9960e7b4ae2d61865667c3f}{sf\+::priv\+::\+Window\+Impl}}.
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_window_impl_win32_a76be535abf17c6585a9f354a9c86adbc_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_window_impl_win32_aaa0bb4170a5e4887cb8ee5f8fb87ff0d}\label{classsf_1_1priv_1_1_window_impl_win32_aaa0bb4170a5e4887cb8ee5f8fb87ff0d} 
+\index{sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}!getSystemHandle@{getSystemHandle}}
+\index{getSystemHandle@{getSystemHandle}!sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}}
+\doxysubsubsection{\texorpdfstring{getSystemHandle()}{getSystemHandle()}}
+{\footnotesize\ttfamily Window\+Handle sf\+::priv\+::\+Window\+Impl\+Win32\+::get\+System\+Handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the OS-\/specific handle of the window. 
+
+\begin{DoxyReturn}{Zwraca}
+Handle of the window 
+\end{DoxyReturn}
+
+
+Implementuje \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a9d6b9ab4c233daf333429b3e7ee77403}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_win32_aa96e01a30de752c6ba89f42b3e8f1ff8}\label{classsf_1_1priv_1_1_window_impl_win32_aa96e01a30de752c6ba89f42b3e8f1ff8} 
+\index{sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}!globalOnEvent@{globalOnEvent}}
+\index{globalOnEvent@{globalOnEvent}!sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}}
+\doxysubsubsection{\texorpdfstring{globalOnEvent()}{globalOnEvent()}}
+{\footnotesize\ttfamily LRESULT CALLBACK sf\+::priv\+::\+Window\+Impl\+Win32\+::global\+On\+Event (\begin{DoxyParamCaption}\item[{HWND}]{handle,  }\item[{UINT}]{message,  }\item[{WPARAM}]{w\+Param,  }\item[{LPARAM}]{l\+Param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Function called whenever one of our windows receives a message. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em handle} & Win32 handle of the window \\
+\hline
+{\em message} & Message received \\
+\hline
+{\em w\+Param} & First parameter of the message \\
+\hline
+{\em l\+Param} & Second parameter of the message\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True to discard the event after it has been processed 
+\end{DoxyReturn}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_window_impl_win32_aa96e01a30de752c6ba89f42b3e8f1ff8_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_window_impl_win32_aa96e01a30de752c6ba89f42b3e8f1ff8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_window_impl_win32_ad46230726e514688bdd7fef21e243ea2}\label{classsf_1_1priv_1_1_window_impl_win32_ad46230726e514688bdd7fef21e243ea2} 
+\index{sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}!grabCursor@{grabCursor}}
+\index{grabCursor@{grabCursor}!sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}}
+\doxysubsubsection{\texorpdfstring{grabCursor()}{grabCursor()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Window\+Impl\+Win32\+::grab\+Cursor (\begin{DoxyParamCaption}\item[{bool}]{grabbed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Grab or release the mouse cursor. 
+
+This is not to be confused with set\+Mouse\+Cursor\+Grabbed. Here m\+\_\+cursor\+Grabbed is not modified; it is used, for example, to release the cursor when switching to another application.
+
+
+\begin{DoxyParams}{Parametry}
+{\em grabbed} & True to enable, false to disable \\
+\hline
+\end{DoxyParams}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_window_impl_win32_ad46230726e514688bdd7fef21e243ea2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_window_impl_win32_a6cb465d87ca0a514e64b937df8500f05}\label{classsf_1_1priv_1_1_window_impl_win32_a6cb465d87ca0a514e64b937df8500f05} 
+\index{sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}!hasFocus@{hasFocus}}
+\index{hasFocus@{hasFocus}!sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}}
+\doxysubsubsection{\texorpdfstring{hasFocus()}{hasFocus()}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Window\+Impl\+Win32\+::has\+Focus (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Check whether the window has the input focus. 
+
+\begin{DoxyReturn}{Zwraca}
+True if window has focus, false otherwise 
+\end{DoxyReturn}
+
+
+Implementuje \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_ac5c0f4a801bb04de673a476ceafcd704}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_win32_a1e221d565d1a87d59bf53258da13a36a}\label{classsf_1_1priv_1_1_window_impl_win32_a1e221d565d1a87d59bf53258da13a36a} 
+\index{sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}!processEvent@{processEvent}}
+\index{processEvent@{processEvent}!sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}}
+\doxysubsubsection{\texorpdfstring{processEvent()}{processEvent()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Window\+Impl\+Win32\+::process\+Event (\begin{DoxyParamCaption}\item[{UINT}]{message,  }\item[{WPARAM}]{w\+Param,  }\item[{LPARAM}]{l\+Param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Process a Win32 event. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em message} & Message to process \\
+\hline
+{\em w\+Param} & First parameter of the event \\
+\hline
+{\em l\+Param} & Second parameter of the event \\
+\hline
+\end{DoxyParams}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_window_impl_win32_a1e221d565d1a87d59bf53258da13a36a_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_window_impl_win32_a1e221d565d1a87d59bf53258da13a36a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_window_impl_win32_aa418e3446e2e9a9994f84f5d52b8b53d}\label{classsf_1_1priv_1_1_window_impl_win32_aa418e3446e2e9a9994f84f5d52b8b53d} 
+\index{sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}!processEvents@{processEvents}}
+\index{processEvents@{processEvents}!sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}}
+\doxysubsubsection{\texorpdfstring{processEvents()}{processEvents()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Window\+Impl\+Win32\+::process\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Process incoming events from the operating system. 
+
+
+
+Implementuje \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a3e91b707ca4b995fabd71b7bd031530a}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_win32_a3ca395755f7d1f2fc6185eb928fb3c29}\label{classsf_1_1priv_1_1_window_impl_win32_a3ca395755f7d1f2fc6185eb928fb3c29} 
+\index{sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}!registerWindowClass@{registerWindowClass}}
+\index{registerWindowClass@{registerWindowClass}!sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}}
+\doxysubsubsection{\texorpdfstring{registerWindowClass()}{registerWindowClass()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Window\+Impl\+Win32\+::register\+Window\+Class (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Register the window class Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_window_impl_win32_a3ca395755f7d1f2fc6185eb928fb3c29_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_window_impl_win32_a3ca395755f7d1f2fc6185eb928fb3c29_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_window_impl_win32_aa48968aa471208400a57e94c5be827f6}\label{classsf_1_1priv_1_1_window_impl_win32_aa48968aa471208400a57e94c5be827f6} 
+\index{sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}!requestFocus@{requestFocus}}
+\index{requestFocus@{requestFocus}!sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}}
+\doxysubsubsection{\texorpdfstring{requestFocus()}{requestFocus()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Window\+Impl\+Win32\+::request\+Focus (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Request the current window to be made the active foreground window. 
+
+
+
+Implementuje \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_afe73f678b6a53b2a231f8044663d1fca}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_win32_afdc575fb480419a108e6594d44fc7944}\label{classsf_1_1priv_1_1_window_impl_win32_afdc575fb480419a108e6594d44fc7944} 
+\index{sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}!setIcon@{setIcon}}
+\index{setIcon@{setIcon}!sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}}
+\doxysubsubsection{\texorpdfstring{setIcon()}{setIcon()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Window\+Impl\+Win32\+::set\+Icon (\begin{DoxyParamCaption}\item[{unsigned int}]{width,  }\item[{unsigned int}]{height,  }\item[{const \mbox{\hyperlink{namespacesf_a4ef3d630785c4f296f9b4f274c33d78e}{Uint8}} \texorpdfstring{$\ast$}{*}}]{pixels }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Change the window\textquotesingle{}s icon. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em width} & Icon\textquotesingle{}s width, in pixels \\
+\hline
+{\em height} & Icon\textquotesingle{}s height, in pixels \\
+\hline
+{\em pixels} & Pointer to the pixels in memory, format must be RGBA 32 bits \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a08c9d33b1a059b3825bb71e255f4dab8}{sf\+::priv\+::\+Window\+Impl}}.
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{classsf_1_1priv_1_1_window_impl_win32_afdc575fb480419a108e6594d44fc7944_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_window_impl_win32_a4a38ca689f879d933113f9f1de9701da}\label{classsf_1_1priv_1_1_window_impl_win32_a4a38ca689f879d933113f9f1de9701da} 
+\index{sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}!setKeyRepeatEnabled@{setKeyRepeatEnabled}}
+\index{setKeyRepeatEnabled@{setKeyRepeatEnabled}!sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}}
+\doxysubsubsection{\texorpdfstring{setKeyRepeatEnabled()}{setKeyRepeatEnabled()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Window\+Impl\+Win32\+::set\+Key\+Repeat\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Enable or disable automatic key-\/repeat. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em enabled} & True to enable, false to disable \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a367e5c89de51decd13444ddce3265b18}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_win32_a0b7e5daa9b4f0cf254b5bee3231ed24c}\label{classsf_1_1priv_1_1_window_impl_win32_a0b7e5daa9b4f0cf254b5bee3231ed24c} 
+\index{sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}!setMouseCursor@{setMouseCursor}}
+\index{setMouseCursor@{setMouseCursor}!sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}}
+\doxysubsubsection{\texorpdfstring{setMouseCursor()}{setMouseCursor()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Window\+Impl\+Win32\+::set\+Mouse\+Cursor (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsf_1_1priv_1_1_cursor_impl}{Cursor\+Impl}} \&}]{cursor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Set the displayed cursor to a native system cursor. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em cursor} & Native system cursor type to display \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_afad987ac0e04ffb10643d7a41e008207}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_win32_aa550aebc13bbd8255d37dd78cddd2889}\label{classsf_1_1priv_1_1_window_impl_win32_aa550aebc13bbd8255d37dd78cddd2889} 
+\index{sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}!setMouseCursorGrabbed@{setMouseCursorGrabbed}}
+\index{setMouseCursorGrabbed@{setMouseCursorGrabbed}!sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}}
+\doxysubsubsection{\texorpdfstring{setMouseCursorGrabbed()}{setMouseCursorGrabbed()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Window\+Impl\+Win32\+::set\+Mouse\+Cursor\+Grabbed (\begin{DoxyParamCaption}\item[{bool}]{grabbed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Grab or release the mouse cursor. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em grabbed} & True to enable, false to disable \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a608f2da781271c3b305bb7a6e72d71b2}{sf\+::priv\+::\+Window\+Impl}}.
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_window_impl_win32_aa550aebc13bbd8255d37dd78cddd2889_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_window_impl_win32_a35c4f933a7666ad28dd0c26586b36d07}\label{classsf_1_1priv_1_1_window_impl_win32_a35c4f933a7666ad28dd0c26586b36d07} 
+\index{sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}!setMouseCursorVisible@{setMouseCursorVisible}}
+\index{setMouseCursorVisible@{setMouseCursorVisible}!sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}}
+\doxysubsubsection{\texorpdfstring{setMouseCursorVisible()}{setMouseCursorVisible()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Window\+Impl\+Win32\+::set\+Mouse\+Cursor\+Visible (\begin{DoxyParamCaption}\item[{bool}]{visible }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Show or hide the mouse cursor. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em visible} & True to show, false to hide \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_ae04d680901e8c302a92ef879966d752b}{sf\+::priv\+::\+Window\+Impl}}.
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_window_impl_win32_a35c4f933a7666ad28dd0c26586b36d07_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_window_impl_win32_a58b8f35f51fa6a8010797f507197b835}\label{classsf_1_1priv_1_1_window_impl_win32_a58b8f35f51fa6a8010797f507197b835} 
+\index{sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Window\+Impl\+Win32\+::set\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacesf_ace09dd1447d74c6e9ba56ae874c094e1}{Vector2i}} \&}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Change the position of the window on screen. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em position} & New position of the window, in pixels \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a6f2513c0a97af5311a81744a9448c57e}{sf\+::priv\+::\+Window\+Impl}}.
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_window_impl_win32_a58b8f35f51fa6a8010797f507197b835_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_window_impl_win32_a1f9317ce9c22180dc98ccc8b2af578ec}\label{classsf_1_1priv_1_1_window_impl_win32_a1f9317ce9c22180dc98ccc8b2af578ec} 
+\index{sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}!setSize@{setSize}}
+\index{setSize@{setSize}!sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}}
+\doxysubsubsection{\texorpdfstring{setSize()}{setSize()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Window\+Impl\+Win32\+::set\+Size (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacesf_aaa02ba42bf79b001a376fe9d79254cb3}{Vector2u}} \&}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Change the size of the rendering region of the window. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em size} & New size, in pixels \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a7a6c2bbc383a912213ce8ec1bffe8954}{sf\+::priv\+::\+Window\+Impl}}.
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_window_impl_win32_a1f9317ce9c22180dc98ccc8b2af578ec_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_window_impl_win32_a5116d56e6717ca6d2d18fb278a73d8a7}\label{classsf_1_1priv_1_1_window_impl_win32_a5116d56e6717ca6d2d18fb278a73d8a7} 
+\index{sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}!setTitle@{setTitle}}
+\index{setTitle@{setTitle}!sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}}
+\doxysubsubsection{\texorpdfstring{setTitle()}{setTitle()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Window\+Impl\+Win32\+::set\+Title (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsf_1_1_string}{String}} \&}]{title }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Change the title of the window. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em title} & New title \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a5548a506ce7a5cb9c6c7f92fcdd7689a}{sf\+::priv\+::\+Window\+Impl}}.
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_window_impl_win32_a5116d56e6717ca6d2d18fb278a73d8a7_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_window_impl_win32_a0e14c19f33bf7517780de12ae4a22c74}\label{classsf_1_1priv_1_1_window_impl_win32_a0e14c19f33bf7517780de12ae4a22c74} 
+\index{sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}!setTracking@{setTracking}}
+\index{setTracking@{setTracking}!sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}}
+\doxysubsubsection{\texorpdfstring{setTracking()}{setTracking()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Window\+Impl\+Win32\+::set\+Tracking (\begin{DoxyParamCaption}\item[{bool}]{track }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Enables or disables tracking for the mouse cursor leaving the window. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em track} & True to enable, false to disable \\
+\hline
+\end{DoxyParams}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_window_impl_win32_a0e14c19f33bf7517780de12ae4a22c74_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_window_impl_win32_a0d077acd1dbfe6d47fb1d61816d37e6a}\label{classsf_1_1priv_1_1_window_impl_win32_a0d077acd1dbfe6d47fb1d61816d37e6a} 
+\index{sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}!setVisible@{setVisible}}
+\index{setVisible@{setVisible}!sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}}
+\doxysubsubsection{\texorpdfstring{setVisible()}{setVisible()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Window\+Impl\+Win32\+::set\+Visible (\begin{DoxyParamCaption}\item[{bool}]{visible }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Show or hide the window. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em visible} & True to show, false to hide \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a9119bdb8b8413c1dbfb06aa4ad78c7b5}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_win32_aacad4d3ed30fc64bf245706cc75fe57a}\label{classsf_1_1priv_1_1_window_impl_win32_aacad4d3ed30fc64bf245706cc75fe57a} 
+\index{sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}!switchToFullscreen@{switchToFullscreen}}
+\index{switchToFullscreen@{switchToFullscreen}!sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}}
+\doxysubsubsection{\texorpdfstring{switchToFullscreen()}{switchToFullscreen()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Window\+Impl\+Win32\+::switch\+To\+Fullscreen (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsf_1_1_video_mode}{Video\+Mode}} \&}]{mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Switch to fullscreen mode. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em mode} & Video mode to switch to \\
+\hline
+\end{DoxyParams}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{classsf_1_1priv_1_1_window_impl_win32_aacad4d3ed30fc64bf245706cc75fe57a_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_window_impl_win32_aacad4d3ed30fc64bf245706cc75fe57a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_window_impl_win32_a580e3fa8c99b4e8415f46163a6d2638c}\label{classsf_1_1priv_1_1_window_impl_win32_a580e3fa8c99b4e8415f46163a6d2638c} 
+\index{sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}!toScancode@{toScancode}}
+\index{toScancode@{toScancode}!sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}}
+\doxysubsubsection{\texorpdfstring{toScancode()}{toScancode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsf_1_1_keyboard_1_1_scan_aa42fbf6954d6f81f7606e566c7abe875}{Keyboard\+::\+Scancode}} sf\+::priv\+::\+Window\+Impl\+Win32\+::to\+Scancode (\begin{DoxyParamCaption}\item[{WPARAM}]{w\+Param,  }\item[{LPARAM}]{l\+Param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Convert a Win32 scancode to an sfml scancode. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em flags} & input flags\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+SFML scancode corresponding to the key 
+\end{DoxyReturn}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_window_impl_win32_a580e3fa8c99b4e8415f46163a6d2638c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_window_impl_win32_a55f81779d74403e135bcb2b78c4c1d27}\label{classsf_1_1priv_1_1_window_impl_win32_a55f81779d74403e135bcb2b78c4c1d27} 
+\index{sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}!virtualKeyCodeToSF@{virtualKeyCodeToSF}}
+\index{virtualKeyCodeToSF@{virtualKeyCodeToSF}!sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}}
+\doxysubsubsection{\texorpdfstring{virtualKeyCodeToSF()}{virtualKeyCodeToSF()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Keyboard\+::\+Key}} sf\+::priv\+::\+Window\+Impl\+Win32\+::virtual\+Key\+Code\+To\+SF (\begin{DoxyParamCaption}\item[{WPARAM}]{key,  }\item[{LPARAM}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Convert a Win32 virtual key code to a SFML key code. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em key} & Virtual key code to convert \\
+\hline
+{\em flags} & Additional flags\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+SFML key code corresponding to the key 
+\end{DoxyReturn}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_window_impl_win32_a55f81779d74403e135bcb2b78c4c1d27_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{classsf_1_1priv_1_1_window_impl_win32_aefb6500adf9f8df2d08a6b57aec8d162}\label{classsf_1_1priv_1_1_window_impl_win32_aefb6500adf9f8df2d08a6b57aec8d162} 
+\index{sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}!m\_callback@{m\_callback}}
+\index{m\_callback@{m\_callback}!sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}}
+\doxysubsubsection{\texorpdfstring{m\_callback}{m\_callback}}
+{\footnotesize\ttfamily LONG\+\_\+\+PTR sf\+::priv\+::\+Window\+Impl\+Win32\+::m\+\_\+callback\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Stores the original event callback function of the control. 
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_win32_a400bbe2f43749d3a2a006f3b2cc6d8d3}\label{classsf_1_1priv_1_1_window_impl_win32_a400bbe2f43749d3a2a006f3b2cc6d8d3} 
+\index{sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}!m\_cursorGrabbed@{m\_cursorGrabbed}}
+\index{m\_cursorGrabbed@{m\_cursorGrabbed}!sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}}
+\doxysubsubsection{\texorpdfstring{m\_cursorGrabbed}{m\_cursorGrabbed}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Window\+Impl\+Win32\+::m\+\_\+cursor\+Grabbed\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Is the mouse cursor trapped? 
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_win32_ac689f5af1fc17b8d7f31e4a13cd3b885}\label{classsf_1_1priv_1_1_window_impl_win32_ac689f5af1fc17b8d7f31e4a13cd3b885} 
+\index{sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}!m\_cursorVisible@{m\_cursorVisible}}
+\index{m\_cursorVisible@{m\_cursorVisible}!sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}}
+\doxysubsubsection{\texorpdfstring{m\_cursorVisible}{m\_cursorVisible}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Window\+Impl\+Win32\+::m\+\_\+cursor\+Visible\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Is the cursor visible or hidden? 
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_win32_af05efbdf5ff9a47e8c7b587ccc04187d}\label{classsf_1_1priv_1_1_window_impl_win32_af05efbdf5ff9a47e8c7b587ccc04187d} 
+\index{sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}!m\_fullscreen@{m\_fullscreen}}
+\index{m\_fullscreen@{m\_fullscreen}!sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}}
+\doxysubsubsection{\texorpdfstring{m\_fullscreen}{m\_fullscreen}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Window\+Impl\+Win32\+::m\+\_\+fullscreen\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Is the window fullscreen? 
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_win32_a2e1ade7af6915bde6005ab93ff7bafcc}\label{classsf_1_1priv_1_1_window_impl_win32_a2e1ade7af6915bde6005ab93ff7bafcc} 
+\index{sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}!m\_handle@{m\_handle}}
+\index{m\_handle@{m\_handle}!sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}}
+\doxysubsubsection{\texorpdfstring{m\_handle}{m\_handle}}
+{\footnotesize\ttfamily HWND sf\+::priv\+::\+Window\+Impl\+Win32\+::m\+\_\+handle\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Win32 handle of the window. 
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_win32_ade123ee2daa0bfc68350a2def6bc9b2f}\label{classsf_1_1priv_1_1_window_impl_win32_ade123ee2daa0bfc68350a2def6bc9b2f} 
+\index{sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}!m\_icon@{m\_icon}}
+\index{m\_icon@{m\_icon}!sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}}
+\doxysubsubsection{\texorpdfstring{m\_icon}{m\_icon}}
+{\footnotesize\ttfamily HICON sf\+::priv\+::\+Window\+Impl\+Win32\+::m\+\_\+icon\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Custom icon assigned to the window. 
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_win32_aaa38d70151d3299efdd6f0e8347c380d}\label{classsf_1_1priv_1_1_window_impl_win32_aaa38d70151d3299efdd6f0e8347c380d} 
+\index{sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}!m\_keyRepeatEnabled@{m\_keyRepeatEnabled}}
+\index{m\_keyRepeatEnabled@{m\_keyRepeatEnabled}!sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}}
+\doxysubsubsection{\texorpdfstring{m\_keyRepeatEnabled}{m\_keyRepeatEnabled}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Window\+Impl\+Win32\+::m\+\_\+key\+Repeat\+Enabled\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Automatic key-\/repeat state for keydown events. 
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_win32_a9c3df74045ccbbacfe3f9aee62be2d92}\label{classsf_1_1priv_1_1_window_impl_win32_a9c3df74045ccbbacfe3f9aee62be2d92} 
+\index{sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}!m\_lastCursor@{m\_lastCursor}}
+\index{m\_lastCursor@{m\_lastCursor}!sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}}
+\doxysubsubsection{\texorpdfstring{m\_lastCursor}{m\_lastCursor}}
+{\footnotesize\ttfamily HCURSOR sf\+::priv\+::\+Window\+Impl\+Win32\+::m\+\_\+last\+Cursor\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Last cursor used -- this data is not owned by the window and is required to be always valid. 
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_win32_a3cb5120ba48138deb0041933bcf6f1e6}\label{classsf_1_1priv_1_1_window_impl_win32_a3cb5120ba48138deb0041933bcf6f1e6} 
+\index{sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}!m\_lastSize@{m\_lastSize}}
+\index{m\_lastSize@{m\_lastSize}!sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}}
+\doxysubsubsection{\texorpdfstring{m\_lastSize}{m\_lastSize}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesf_aaa02ba42bf79b001a376fe9d79254cb3}{Vector2u}} sf\+::priv\+::\+Window\+Impl\+Win32\+::m\+\_\+last\+Size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The last handled size of the window. 
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_win32_a03e2647c08c659cca58836a3bd932118}\label{classsf_1_1priv_1_1_window_impl_win32_a03e2647c08c659cca58836a3bd932118} 
+\index{sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}!m\_mouseInside@{m\_mouseInside}}
+\index{m\_mouseInside@{m\_mouseInside}!sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}}
+\doxysubsubsection{\texorpdfstring{m\_mouseInside}{m\_mouseInside}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Window\+Impl\+Win32\+::m\+\_\+mouse\+Inside\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxylink{classsf_1_1_mouse}{Mouse} is inside the window? 
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_win32_a39bab0d52fceb2c36bc972acb8a4179e}\label{classsf_1_1priv_1_1_window_impl_win32_a39bab0d52fceb2c36bc972acb8a4179e} 
+\index{sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}!m\_resizing@{m\_resizing}}
+\index{m\_resizing@{m\_resizing}!sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}}
+\doxysubsubsection{\texorpdfstring{m\_resizing}{m\_resizing}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Window\+Impl\+Win32\+::m\+\_\+resizing\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Is the window being resized? 
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_win32_af5637ac8259941d6dd4b954ca9321c61}\label{classsf_1_1priv_1_1_window_impl_win32_af5637ac8259941d6dd4b954ca9321c61} 
+\index{sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}!m\_surrogate@{m\_surrogate}}
+\index{m\_surrogate@{m\_surrogate}!sf::priv::WindowImplWin32@{sf::priv::WindowImplWin32}}
+\doxysubsubsection{\texorpdfstring{m\_surrogate}{m\_surrogate}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesf_a2fcaf787248b0b83dfb6b145ca348246}{Uint16}} sf\+::priv\+::\+Window\+Impl\+Win32\+::m\+\_\+surrogate\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+First half of the surrogate pair, in case we\textquotesingle{}re receiving a Unicode character in two events. 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+Win32/\mbox{\hyperlink{_window_impl_win32_8hpp}{Window\+Impl\+Win32.\+hpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+Win32/\mbox{\hyperlink{_window_impl_win32_8cpp}{Window\+Impl\+Win32.\+cpp}}\end{DoxyCompactItemize}

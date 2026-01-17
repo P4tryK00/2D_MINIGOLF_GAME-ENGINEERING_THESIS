@@ -1,0 +1,451 @@
+\doxysection{Dokumentacja klasy sf\+::priv\+::Eagl\+Context}
+\hypertarget{classsf_1_1priv_1_1_eagl_context}{}\label{classsf_1_1priv_1_1_eagl_context}\index{sf::priv::EaglContext@{sf::priv::EaglContext}}
+
+
+i\+OS (EAGL) implementation of Open\+GL contexts  
+
+
+
+
+{\ttfamily \#include $<$Eagl\+Context.\+hpp$>$}
+
+
+
+Diagram dziedziczenia dla sf\+::priv\+::Eagl\+Context\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classsf_1_1priv_1_1_eagl_context__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagram współpracy dla sf\+::priv\+::Eagl\+Context\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classsf_1_1priv_1_1_eagl_context__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsf_1_1priv_1_1_eagl_context_a912538dbe002cc1619936730b6436d33}{Eagl\+Context}} (\mbox{\hyperlink{classsf_1_1priv_1_1_eagl_context}{Eagl\+Context}} \texorpdfstring{$\ast$}{*}shared)
+\begin{DoxyCompactList}\small\item\em Create a new context, not associated to a window. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1priv_1_1_eagl_context_a55521fa75bc092dee71953b2558eb894}{Eagl\+Context}} (\mbox{\hyperlink{classsf_1_1priv_1_1_eagl_context}{Eagl\+Context}} \texorpdfstring{$\ast$}{*}shared, const \mbox{\hyperlink{structsf_1_1_context_settings}{Context\+Settings}} \&settings, const \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl}{Window\+Impl}} \texorpdfstring{$\ast$}{*}owner, unsigned int bits\+Per\+Pixel)
+\begin{DoxyCompactList}\small\item\em Create a new context attached to a window. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1priv_1_1_eagl_context_a174f54cf2d88ad97fb422d53cd28ef03}{Eagl\+Context}} (\mbox{\hyperlink{classsf_1_1priv_1_1_eagl_context}{Eagl\+Context}} \texorpdfstring{$\ast$}{*}shared, const \mbox{\hyperlink{structsf_1_1_context_settings}{Context\+Settings}} \&settings, unsigned int width, unsigned int height)
+\begin{DoxyCompactList}\small\item\em Create a new context that embeds its own rendering target. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1priv_1_1_eagl_context_afd71703efba53593d3363963d2ebf476}{\texorpdfstring{$\sim$}{\string~}\+Eagl\+Context}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_eagl_context_a0e201e178e4a3e3850c18bfaa1076caf}{recreate\+Render\+Buffers}} (\mbox{\hyperlink{interface_s_f_view}{SFView}} \texorpdfstring{$\ast$}{*}gl\+View)
+\begin{DoxyCompactList}\small\item\em Recreate the render buffers of the context. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_eagl_context_a9713901286f20091b116b21ead6d7b12}{display}} ()
+\begin{DoxyCompactList}\small\item\em Display what has been rendered to the context so far. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_eagl_context_a39a433c80fcdd7c2472b39ae5451fbde}{set\+Vertical\+Sync\+Enabled}} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Enable or disable vertical synchronization. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context}{sf\+::priv\+::\+Gl\+Context}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context_a05eb811836d6a08a8099bb4fc7c31c61}{\texorpdfstring{$\sim$}{\string~}\+Gl\+Context}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{structsf_1_1_context_settings}{Context\+Settings}} \& \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context_abcda11cfbfa53c59db8056f23aacf147}{get\+Settings}} () const
+\begin{DoxyCompactList}\small\item\em Get the settings of the context. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context_a8d0fa09683a8a1adaabd20e01d03e72c}{set\+Active}} (bool active)
+\begin{DoxyCompactList}\small\item\em Activate or deactivate the context as the current target for rendering. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Statyczne metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{namespacesf_a0187a0b60bae499f24a4949973657f60}{Gl\+Function\+Pointer}} \mbox{\hyperlink{classsf_1_1priv_1_1_eagl_context_ac916d494b240d6ea1aec6da81675bb71}{get\+Function}} (const char \texorpdfstring{$\ast$}{*}name)
+\begin{DoxyCompactList}\small\item\em Get the address of an Open\+GL function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Statyczne metody publiczne dziedziczone z \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context}{sf\+::priv\+::\+Gl\+Context}}}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context_a4718cb115022db132fd378825098e194}{init\+Resource}} ()
+\begin{DoxyCompactList}\small\item\em Perform resource initialization. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context_a606524edac2af085d8b84fbd8d727bad}{cleanup\+Resource}} ()
+\begin{DoxyCompactList}\small\item\em Perform resource cleanup. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context_a85f9d69bc21f225de81e1770ebca0044}{register\+Context\+Destroy\+Callback}} (\mbox{\hyperlink{namespacesf_a90389f466699a5737ffa91d2a94b0166}{Context\+Destroy\+Callback}} callback, void \texorpdfstring{$\ast$}{*}arg)
+\begin{DoxyCompactList}\small\item\em Register a function to be called when a context is destroyed. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context_a6de095f2abcb01b0beb066116833737e}{acquire\+Transient\+Context}} ()
+\begin{DoxyCompactList}\small\item\em Acquires a context for short-\/term use on the current thread. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context_ac449e9982a1ac69e7c165fdad4940f7b}{release\+Transient\+Context}} ()
+\begin{DoxyCompactList}\small\item\em Releases a context after short-\/term use on the current thread. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context}{Gl\+Context}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context_a508de1c154301406e1f8ee3f4ca19bd2}{create}} ()
+\begin{DoxyCompactList}\small\item\em Create a new context, not associated to a window. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context}{Gl\+Context}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context_a4da9acecd374cf132161b1d40468660a}{create}} (const \mbox{\hyperlink{structsf_1_1_context_settings}{Context\+Settings}} \&settings, const \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl}{Window\+Impl}} \texorpdfstring{$\ast$}{*}owner, unsigned int bits\+Per\+Pixel)
+\begin{DoxyCompactList}\small\item\em Create a new context attached to a window. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context}{Gl\+Context}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context_ac1e01ff02e65e2a94665ef77d33ad019}{create}} (const \mbox{\hyperlink{structsf_1_1_context_settings}{Context\+Settings}} \&settings, unsigned int width, unsigned int height)
+\begin{DoxyCompactList}\small\item\em Create a new context that embeds its own rendering target. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context_a2fb661dfceef810ce13473962eb22775}{is\+Extension\+Available}} (const char \texorpdfstring{$\ast$}{*}name)
+\begin{DoxyCompactList}\small\item\em Check whether a given Open\+GL extension is available. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{namespacesf_a0187a0b60bae499f24a4949973657f60}{Gl\+Function\+Pointer}} \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context_af316730aba4cb7da8f8f857c4b953a31}{get\+Function}} (const char \texorpdfstring{$\ast$}{*}name)
+\begin{DoxyCompactList}\small\item\em Get the address of an Open\+GL function. \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context}{Gl\+Context}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context_a412f919fcd06ef2e145c6d5f7284c9e4}{get\+Active\+Context}} ()
+\begin{DoxyCompactList}\small\item\em Get the currently active context. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{namespacesf_add9ac83466d96b9f50a009b9f4064266}{Uint64}} \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context_ab52450881372fb98aebec9a8d1d87bea}{get\+Active\+Context\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Get the currently active context\textquotesingle{}s ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Metody chronione}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classsf_1_1priv_1_1_eagl_context_aefa9f92621de0cf5e06cf96d54dc4657}{make\+Current}} (bool current)
+\begin{DoxyCompactList}\small\item\em Activate the context as the current target for rendering. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody chronione dziedziczone z \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context}{sf\+::priv\+::\+Gl\+Context}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsf_1_1priv_1_1_gl_context_a286cd2741faff509387c1c40940303d2}{Gl\+Context}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context_adbd990d07ffa9a8bdddcfe5b80a2c5e1}{cleanup\+Unshared\+Resources}} ()
+\begin{DoxyCompactList}\small\item\em Notify unshared Gl\+Resources of context destruction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_eagl_context_ac7ae0473dd6c66d755e968b66d69d801}{create\+Context}} (\mbox{\hyperlink{classsf_1_1priv_1_1_eagl_context}{Eagl\+Context}} \texorpdfstring{$\ast$}{*}shared, const \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_u_i_kit}{Window\+Impl\+UIKit}} \texorpdfstring{$\ast$}{*}window, unsigned int bits\+Per\+Pixel, const \mbox{\hyperlink{structsf_1_1_context_settings}{Context\+Settings}} \&settings)
+\begin{DoxyCompactList}\small\item\em Create the context. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+EAGLContext \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classsf_1_1priv_1_1_eagl_context_ad72eff937d36ca92f3d826b7fba66812}{m\+\_\+context}}
+\begin{DoxyCompactList}\small\item\em The internal context. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{examples_2opengl_2gl_8h_aa311c7f0d6ec4f1a33f9235c3651b86b}{GLuint}} \mbox{\hyperlink{classsf_1_1priv_1_1_eagl_context_aebb9558de7c00dcbf8d5e00a2ff75506}{m\+\_\+framebuffer}}
+\begin{DoxyCompactList}\small\item\em Frame buffer associated to the context. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{examples_2opengl_2gl_8h_aa311c7f0d6ec4f1a33f9235c3651b86b}{GLuint}} \mbox{\hyperlink{classsf_1_1priv_1_1_eagl_context_a973eed0dada655a5d6e7425128442bc4}{m\+\_\+colorbuffer}}
+\begin{DoxyCompactList}\small\item\em \doxylink{classsf_1_1_color}{Color} render buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{examples_2opengl_2gl_8h_aa311c7f0d6ec4f1a33f9235c3651b86b}{GLuint}} \mbox{\hyperlink{classsf_1_1priv_1_1_eagl_context_a6c46c15d20ae6b1949c103283c2b8fa9}{m\+\_\+depthbuffer}}
+\begin{DoxyCompactList}\small\item\em Depth render buffer. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_eagl_context_a2107eeb555f063a2b3a261d3dd23311c}{m\+\_\+vsync\+Enabled}}
+\begin{DoxyCompactList}\small\item\em Vertical sync activation flag. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1_clock}{Clock}} \mbox{\hyperlink{classsf_1_1priv_1_1_eagl_context_a08016cf184eb9329bc88c1a4501a8132}{m\+\_\+clock}}
+\begin{DoxyCompactList}\small\item\em Measures the elapsed time for the fake v-\/sync implementation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Dodatkowe Dziedziczone Składowe}
+\doxysubsection*{Statyczne metody chronione dziedziczone z \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context}{sf\+::priv\+::\+Gl\+Context}}}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context_aa2b17884ad02fef59c5e641838ce7bf8}{evaluate\+Format}} (unsigned int bits\+Per\+Pixel, const \mbox{\hyperlink{structsf_1_1_context_settings}{Context\+Settings}} \&settings, int color\+Bits, int depth\+Bits, int stencil\+Bits, int antialiasing, bool accelerated, bool s\+Rgb)
+\begin{DoxyCompactList}\small\item\em Evaluate a pixel format configuration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty chronione dziedziczone z \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context}{sf\+::priv\+::\+Gl\+Context}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsf_1_1_context_settings}{Context\+Settings}} \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context_a7d3a359a689b303900f3f054afa35e44}{m\+\_\+settings}}
+\begin{DoxyCompactList}\small\item\em Creation settings of the context. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+i\+OS (EAGL) implementation of Open\+GL contexts 
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{classsf_1_1priv_1_1_eagl_context_a912538dbe002cc1619936730b6436d33}\label{classsf_1_1priv_1_1_eagl_context_a912538dbe002cc1619936730b6436d33} 
+\index{sf::priv::EaglContext@{sf::priv::EaglContext}!EaglContext@{EaglContext}}
+\index{EaglContext@{EaglContext}!sf::priv::EaglContext@{sf::priv::EaglContext}}
+\doxysubsubsection{\texorpdfstring{EaglContext()}{EaglContext()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily sf\+::priv\+::\+Eagl\+Context\+::\+Eagl\+Context (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1priv_1_1_eagl_context}{Eagl\+Context}} \texorpdfstring{$\ast$}{*}}]{shared }\end{DoxyParamCaption})}
+
+
+
+Create a new context, not associated to a window. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em shared} & \doxylink{classsf_1_1_context}{Context} to share the new one with (can be NULL) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classsf_1_1priv_1_1_eagl_context_a55521fa75bc092dee71953b2558eb894}\label{classsf_1_1priv_1_1_eagl_context_a55521fa75bc092dee71953b2558eb894} 
+\index{sf::priv::EaglContext@{sf::priv::EaglContext}!EaglContext@{EaglContext}}
+\index{EaglContext@{EaglContext}!sf::priv::EaglContext@{sf::priv::EaglContext}}
+\doxysubsubsection{\texorpdfstring{EaglContext()}{EaglContext()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily sf\+::priv\+::\+Eagl\+Context\+::\+Eagl\+Context (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1priv_1_1_eagl_context}{Eagl\+Context}} \texorpdfstring{$\ast$}{*}}]{shared,  }\item[{const \mbox{\hyperlink{structsf_1_1_context_settings}{Context\+Settings}} \&}]{settings,  }\item[{const \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl}{Window\+Impl}} \texorpdfstring{$\ast$}{*}}]{owner,  }\item[{unsigned int}]{bits\+Per\+Pixel }\end{DoxyParamCaption})}
+
+
+
+Create a new context attached to a window. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em shared} & \doxylink{classsf_1_1_context}{Context} to share the new one with \\
+\hline
+{\em settings} & Creation parameters \\
+\hline
+{\em owner} & Pointer to the owner window \\
+\hline
+{\em bits\+Per\+Pixel} & Pixel depth, in bits per pixel \\
+\hline
+\end{DoxyParams}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_eagl_context_a55521fa75bc092dee71953b2558eb894_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_eagl_context_a174f54cf2d88ad97fb422d53cd28ef03}\label{classsf_1_1priv_1_1_eagl_context_a174f54cf2d88ad97fb422d53cd28ef03} 
+\index{sf::priv::EaglContext@{sf::priv::EaglContext}!EaglContext@{EaglContext}}
+\index{EaglContext@{EaglContext}!sf::priv::EaglContext@{sf::priv::EaglContext}}
+\doxysubsubsection{\texorpdfstring{EaglContext()}{EaglContext()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily sf\+::priv\+::\+Eagl\+Context\+::\+Eagl\+Context (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1priv_1_1_eagl_context}{Eagl\+Context}} \texorpdfstring{$\ast$}{*}}]{shared,  }\item[{const \mbox{\hyperlink{structsf_1_1_context_settings}{Context\+Settings}} \&}]{settings,  }\item[{unsigned int}]{width,  }\item[{unsigned int}]{height }\end{DoxyParamCaption})}
+
+
+
+Create a new context that embeds its own rendering target. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em shared} & \doxylink{classsf_1_1_context}{Context} to share the new one with \\
+\hline
+{\em settings} & Creation parameters \\
+\hline
+{\em width} & Back buffer width, in pixels \\
+\hline
+{\em height} & Back buffer height, in pixels \\
+\hline
+\end{DoxyParams}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{classsf_1_1priv_1_1_eagl_context_a174f54cf2d88ad97fb422d53cd28ef03_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_eagl_context_afd71703efba53593d3363963d2ebf476}\label{classsf_1_1priv_1_1_eagl_context_afd71703efba53593d3363963d2ebf476} 
+\index{sf::priv::EaglContext@{sf::priv::EaglContext}!````~EaglContext@{\texorpdfstring{$\sim$}{\string~}EaglContext}}
+\index{````~EaglContext@{\texorpdfstring{$\sim$}{\string~}EaglContext}!sf::priv::EaglContext@{sf::priv::EaglContext}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}EaglContext()}{\string~EaglContext()}}
+{\footnotesize\ttfamily sf\+::priv\+::\+Eagl\+Context\+::\texorpdfstring{$\sim$}{\string~}\+Eagl\+Context (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_eagl_context_afd71703efba53593d3363963d2ebf476_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{classsf_1_1priv_1_1_eagl_context_ac7ae0473dd6c66d755e968b66d69d801}\label{classsf_1_1priv_1_1_eagl_context_ac7ae0473dd6c66d755e968b66d69d801} 
+\index{sf::priv::EaglContext@{sf::priv::EaglContext}!createContext@{createContext}}
+\index{createContext@{createContext}!sf::priv::EaglContext@{sf::priv::EaglContext}}
+\doxysubsubsection{\texorpdfstring{createContext()}{createContext()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Eagl\+Context\+::create\+Context (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1priv_1_1_eagl_context}{Eagl\+Context}} \texorpdfstring{$\ast$}{*}}]{shared,  }\item[{const \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_u_i_kit}{Window\+Impl\+UIKit}} \texorpdfstring{$\ast$}{*}}]{window,  }\item[{unsigned int}]{bits\+Per\+Pixel,  }\item[{const \mbox{\hyperlink{structsf_1_1_context_settings}{Context\+Settings}} \&}]{settings }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Create the context. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em shared} & \doxylink{classsf_1_1_context}{Context} to share the new one with (can be NULL) \\
+\hline
+{\em window} & \doxylink{classsf_1_1_window}{Window} to attach the context to (can be NULL) \\
+\hline
+{\em bits\+Per\+Pixel} & Pixel depth, in bits per pixel \\
+\hline
+{\em settings} & Creation parameters \\
+\hline
+\end{DoxyParams}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_eagl_context_ac7ae0473dd6c66d755e968b66d69d801_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{classsf_1_1priv_1_1_eagl_context_ac7ae0473dd6c66d755e968b66d69d801_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_eagl_context_a9713901286f20091b116b21ead6d7b12}\label{classsf_1_1priv_1_1_eagl_context_a9713901286f20091b116b21ead6d7b12} 
+\index{sf::priv::EaglContext@{sf::priv::EaglContext}!display@{display}}
+\index{display@{display}!sf::priv::EaglContext@{sf::priv::EaglContext}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Eagl\+Context\+::display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Display what has been rendered to the context so far. 
+
+
+
+Implementuje \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context_ad5cdb55f2b1dcc92c1cb6b09e68e007f}{sf\+::priv\+::\+Gl\+Context}}.
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_eagl_context_a9713901286f20091b116b21ead6d7b12_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_eagl_context_ac916d494b240d6ea1aec6da81675bb71}\label{classsf_1_1priv_1_1_eagl_context_ac916d494b240d6ea1aec6da81675bb71} 
+\index{sf::priv::EaglContext@{sf::priv::EaglContext}!getFunction@{getFunction}}
+\index{getFunction@{getFunction}!sf::priv::EaglContext@{sf::priv::EaglContext}}
+\doxysubsubsection{\texorpdfstring{getFunction()}{getFunction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesf_a0187a0b60bae499f24a4949973657f60}{Gl\+Function\+Pointer}} sf\+::priv\+::\+Eagl\+Context\+::get\+Function (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the address of an Open\+GL function. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em name} & Name of the function to get the address of\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Address of the Open\+GL function, 0 on failure 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_eagl_context_aefa9f92621de0cf5e06cf96d54dc4657}\label{classsf_1_1priv_1_1_eagl_context_aefa9f92621de0cf5e06cf96d54dc4657} 
+\index{sf::priv::EaglContext@{sf::priv::EaglContext}!makeCurrent@{makeCurrent}}
+\index{makeCurrent@{makeCurrent}!sf::priv::EaglContext@{sf::priv::EaglContext}}
+\doxysubsubsection{\texorpdfstring{makeCurrent()}{makeCurrent()}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Eagl\+Context\+::make\+Current (\begin{DoxyParamCaption}\item[{bool}]{current }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Activate the context as the current target for rendering. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em current} & Whether to make the context current or no longer current\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True on success, false if any error happened 
+\end{DoxyReturn}
+
+
+Implementuje \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context_a82174f66a686bef44ea68ee55df92f8b}{sf\+::priv\+::\+Gl\+Context}}.
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_eagl_context_aefa9f92621de0cf5e06cf96d54dc4657_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_eagl_context_a0e201e178e4a3e3850c18bfaa1076caf}\label{classsf_1_1priv_1_1_eagl_context_a0e201e178e4a3e3850c18bfaa1076caf} 
+\index{sf::priv::EaglContext@{sf::priv::EaglContext}!recreateRenderBuffers@{recreateRenderBuffers}}
+\index{recreateRenderBuffers@{recreateRenderBuffers}!sf::priv::EaglContext@{sf::priv::EaglContext}}
+\doxysubsubsection{\texorpdfstring{recreateRenderBuffers()}{recreateRenderBuffers()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Eagl\+Context\+::recreate\+Render\+Buffers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_s_f_view}{SFView}} \texorpdfstring{$\ast$}{*}}]{gl\+View }\end{DoxyParamCaption})}
+
+
+
+Recreate the render buffers of the context. 
+
+This function must be called whenever the containing view changes (typically after an orientation change)
+
+
+\begin{DoxyParams}{Parametry}
+{\em gl\+View} & Container of the context \\
+\hline
+\end{DoxyParams}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{classsf_1_1priv_1_1_eagl_context_a0e201e178e4a3e3850c18bfaa1076caf_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_eagl_context_a0e201e178e4a3e3850c18bfaa1076caf_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_eagl_context_a39a433c80fcdd7c2472b39ae5451fbde}\label{classsf_1_1priv_1_1_eagl_context_a39a433c80fcdd7c2472b39ae5451fbde} 
+\index{sf::priv::EaglContext@{sf::priv::EaglContext}!setVerticalSyncEnabled@{setVerticalSyncEnabled}}
+\index{setVerticalSyncEnabled@{setVerticalSyncEnabled}!sf::priv::EaglContext@{sf::priv::EaglContext}}
+\doxysubsubsection{\texorpdfstring{setVerticalSyncEnabled()}{setVerticalSyncEnabled()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Eagl\+Context\+::set\+Vertical\+Sync\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Enable or disable vertical synchronization. 
+
+Activating vertical synchronization will limit the number of frames displayed to the refresh rate of the monitor. This can avoid some visual artifacts, and limit the framerate to a good value (but not constant across different computers).
+
+
+\begin{DoxyParams}{Parametry}
+{\em enabled} & True to enable v-\/sync, false to deactivate \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \mbox{\hyperlink{classsf_1_1priv_1_1_gl_context_a72b2c7da26f064f6d5cfbe65e4e9831c}{sf\+::priv\+::\+Gl\+Context}}.
+
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{classsf_1_1priv_1_1_eagl_context_a08016cf184eb9329bc88c1a4501a8132}\label{classsf_1_1priv_1_1_eagl_context_a08016cf184eb9329bc88c1a4501a8132} 
+\index{sf::priv::EaglContext@{sf::priv::EaglContext}!m\_clock@{m\_clock}}
+\index{m\_clock@{m\_clock}!sf::priv::EaglContext@{sf::priv::EaglContext}}
+\doxysubsubsection{\texorpdfstring{m\_clock}{m\_clock}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1_clock}{Clock}} sf\+::priv\+::\+Eagl\+Context\+::m\+\_\+clock\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Measures the elapsed time for the fake v-\/sync implementation. 
+
+\Hypertarget{classsf_1_1priv_1_1_eagl_context_a973eed0dada655a5d6e7425128442bc4}\label{classsf_1_1priv_1_1_eagl_context_a973eed0dada655a5d6e7425128442bc4} 
+\index{sf::priv::EaglContext@{sf::priv::EaglContext}!m\_colorbuffer@{m\_colorbuffer}}
+\index{m\_colorbuffer@{m\_colorbuffer}!sf::priv::EaglContext@{sf::priv::EaglContext}}
+\doxysubsubsection{\texorpdfstring{m\_colorbuffer}{m\_colorbuffer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{examples_2opengl_2gl_8h_aa311c7f0d6ec4f1a33f9235c3651b86b}{GLuint}} sf\+::priv\+::\+Eagl\+Context\+::m\+\_\+colorbuffer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxylink{classsf_1_1_color}{Color} render buffer. 
+
+\Hypertarget{classsf_1_1priv_1_1_eagl_context_ad72eff937d36ca92f3d826b7fba66812}\label{classsf_1_1priv_1_1_eagl_context_ad72eff937d36ca92f3d826b7fba66812} 
+\index{sf::priv::EaglContext@{sf::priv::EaglContext}!m\_context@{m\_context}}
+\index{m\_context@{m\_context}!sf::priv::EaglContext@{sf::priv::EaglContext}}
+\doxysubsubsection{\texorpdfstring{m\_context}{m\_context}}
+{\footnotesize\ttfamily EAGLContext\texorpdfstring{$\ast$}{*} sf\+::priv\+::\+Eagl\+Context\+::m\+\_\+context\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The internal context. 
+
+\Hypertarget{classsf_1_1priv_1_1_eagl_context_a6c46c15d20ae6b1949c103283c2b8fa9}\label{classsf_1_1priv_1_1_eagl_context_a6c46c15d20ae6b1949c103283c2b8fa9} 
+\index{sf::priv::EaglContext@{sf::priv::EaglContext}!m\_depthbuffer@{m\_depthbuffer}}
+\index{m\_depthbuffer@{m\_depthbuffer}!sf::priv::EaglContext@{sf::priv::EaglContext}}
+\doxysubsubsection{\texorpdfstring{m\_depthbuffer}{m\_depthbuffer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{examples_2opengl_2gl_8h_aa311c7f0d6ec4f1a33f9235c3651b86b}{GLuint}} sf\+::priv\+::\+Eagl\+Context\+::m\+\_\+depthbuffer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Depth render buffer. 
+
+\Hypertarget{classsf_1_1priv_1_1_eagl_context_aebb9558de7c00dcbf8d5e00a2ff75506}\label{classsf_1_1priv_1_1_eagl_context_aebb9558de7c00dcbf8d5e00a2ff75506} 
+\index{sf::priv::EaglContext@{sf::priv::EaglContext}!m\_framebuffer@{m\_framebuffer}}
+\index{m\_framebuffer@{m\_framebuffer}!sf::priv::EaglContext@{sf::priv::EaglContext}}
+\doxysubsubsection{\texorpdfstring{m\_framebuffer}{m\_framebuffer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{examples_2opengl_2gl_8h_aa311c7f0d6ec4f1a33f9235c3651b86b}{GLuint}} sf\+::priv\+::\+Eagl\+Context\+::m\+\_\+framebuffer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Frame buffer associated to the context. 
+
+\Hypertarget{classsf_1_1priv_1_1_eagl_context_a2107eeb555f063a2b3a261d3dd23311c}\label{classsf_1_1priv_1_1_eagl_context_a2107eeb555f063a2b3a261d3dd23311c} 
+\index{sf::priv::EaglContext@{sf::priv::EaglContext}!m\_vsyncEnabled@{m\_vsyncEnabled}}
+\index{m\_vsyncEnabled@{m\_vsyncEnabled}!sf::priv::EaglContext@{sf::priv::EaglContext}}
+\doxysubsubsection{\texorpdfstring{m\_vsyncEnabled}{m\_vsyncEnabled}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Eagl\+Context\+::m\+\_\+vsync\+Enabled\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Vertical sync activation flag. 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/i\+OS/\mbox{\hyperlink{_eagl_context_8hpp}{Eagl\+Context.\+hpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/i\+OS/\mbox{\hyperlink{_eagl_context_8mm}{Eagl\+Context.\+mm}}\end{DoxyCompactItemize}

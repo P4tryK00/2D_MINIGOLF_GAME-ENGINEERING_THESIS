@@ -1,0 +1,132 @@
+\doxysection{Dokumentacja szablonu klasy Catch\+::Match\+Expression\texorpdfstring{$<$}{<} ArgT, MatcherT \texorpdfstring{$>$}{>}}
+\hypertarget{class_catch_1_1_match_expression}{}\label{class_catch_1_1_match_expression}\index{Catch::MatchExpression$<$ ArgT, MatcherT $>$@{Catch::MatchExpression$<$ ArgT, MatcherT $>$}}
+
+
+{\ttfamily \#include $<$catch.\+hpp$>$}
+
+
+
+Diagram dziedziczenia dla Catch\+::Match\+Expression\texorpdfstring{$<$}{<} ArgT, MatcherT \texorpdfstring{$>$}{>}\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{class_catch_1_1_match_expression__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagram współpracy dla Catch\+::Match\+Expression\texorpdfstring{$<$}{<} ArgT, MatcherT \texorpdfstring{$>$}{>}\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{class_catch_1_1_match_expression__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_catch_1_1_match_expression_a506f25bad7970cb35f9dbe54763a8ca5}{Match\+Expression}} (ArgT arg, MatcherT matcher, char const \texorpdfstring{$\ast$}{*}matcher\+String)
+\item 
+virtual bool \mbox{\hyperlink{class_catch_1_1_match_expression_ac4edf6e9a6e5762a487db1486d0d1f45}{is\+Binary\+Expression}} () const \mbox{\hyperlink{catch_8hpp_a8ecdce4d3f57835f707915ae831eb847}{CATCH\+\_\+\+OVERRIDE}}
+\item 
+virtual void \mbox{\hyperlink{class_catch_1_1_match_expression_a4410a93bc5b8241eb2502f400fce7ec4}{reconstruct\+Expression}} (std\+::string \&dest) const \mbox{\hyperlink{catch_8hpp_a8ecdce4d3f57835f707915ae831eb847}{CATCH\+\_\+\+OVERRIDE}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{struct_catch_1_1_decomposed_expression}{Catch\+::\+Decomposed\+Expression}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{struct_catch_1_1_decomposed_expression_aa627c69bd83582c33a4d4dcac403936c}{\texorpdfstring{$\sim$}{\string~}\+Decomposed\+Expression}} ()
+\item 
+{\footnotesize template$<$typename T $>$ }\\STATIC\+\_\+\+ASSERT\+\_\+\+Expression\+\_\+\+Too\+\_\+\+Complex\+\_\+\+Please\+\_\+\+Rewrite\+\_\+\+As\+\_\+\+Binary\+\_\+\+Comparison \& \mbox{\hyperlink{struct_catch_1_1_decomposed_expression_a4942d391c87d78c7033a763a7e1f0831}{operator+}} (T const \&)
+\item 
+{\footnotesize template$<$typename T $>$ }\\STATIC\+\_\+\+ASSERT\+\_\+\+Expression\+\_\+\+Too\+\_\+\+Complex\+\_\+\+Please\+\_\+\+Rewrite\+\_\+\+As\+\_\+\+Binary\+\_\+\+Comparison \& \mbox{\hyperlink{struct_catch_1_1_decomposed_expression_ae6887092911ea7a45d78aee15f29ca7a}{operator-\/}} (T const \&)
+\item 
+{\footnotesize template$<$typename T $>$ }\\STATIC\+\_\+\+ASSERT\+\_\+\+Expression\+\_\+\+Too\+\_\+\+Complex\+\_\+\+Please\+\_\+\+Rewrite\+\_\+\+As\+\_\+\+Binary\+\_\+\+Comparison \& \mbox{\hyperlink{struct_catch_1_1_decomposed_expression_a013645657eac22efee92d1ebd9ae2946}{operator\texorpdfstring{$\ast$}{*}}} (T const \&)
+\item 
+{\footnotesize template$<$typename T $>$ }\\STATIC\+\_\+\+ASSERT\+\_\+\+Expression\+\_\+\+Too\+\_\+\+Complex\+\_\+\+Please\+\_\+\+Rewrite\+\_\+\+As\+\_\+\+Binary\+\_\+\+Comparison \& \mbox{\hyperlink{struct_catch_1_1_decomposed_expression_a9c74d3ddf32bffd1a2ffb5883340fc6a}{operator/}} (T const \&)
+\item 
+{\footnotesize template$<$typename T $>$ }\\STATIC\+\_\+\+ASSERT\+\_\+\+Expression\+\_\+\+Too\+\_\+\+Complex\+\_\+\+Please\+\_\+\+Rewrite\+\_\+\+As\+\_\+\+Binary\+\_\+\+Comparison \& \mbox{\hyperlink{struct_catch_1_1_decomposed_expression_a9dbe00f858cd2ac9fcaadc56b053b00a}{operator\%}} (T const \&)
+\item 
+{\footnotesize template$<$typename T $>$ }\\STATIC\+\_\+\+ASSERT\+\_\+\+Expression\+\_\+\+Too\+\_\+\+Complex\+\_\+\+Please\+\_\+\+Rewrite\+\_\+\+As\+\_\+\+Binary\+\_\+\+Comparison \& \mbox{\hyperlink{struct_catch_1_1_decomposed_expression_a6033e3cf45de73da8e2ba57bc72592ed}{operator\&\&}} (T const \&)
+\item 
+{\footnotesize template$<$typename T $>$ }\\STATIC\+\_\+\+ASSERT\+\_\+\+Expression\+\_\+\+Too\+\_\+\+Complex\+\_\+\+Please\+\_\+\+Rewrite\+\_\+\+As\+\_\+\+Binary\+\_\+\+Comparison \& \mbox{\hyperlink{struct_catch_1_1_decomposed_expression_aee11987488b46d686c94dc8549f4e0eb}{operator\texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|}}} (T const \&)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+ArgT \mbox{\hyperlink{class_catch_1_1_match_expression_aaca614cfacac20f029660a3ee96b0c88}{m\+\_\+arg}}
+\item 
+MatcherT \mbox{\hyperlink{class_catch_1_1_match_expression_a29ca8dc3bd7be84235bc9f769f1daa4a}{m\+\_\+matcher}}
+\item 
+char const  \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_catch_1_1_match_expression_a765f82c4c07a1c9020e784ab5f2b7229}{m\+\_\+matcher\+String}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{class_catch_1_1_match_expression_a506f25bad7970cb35f9dbe54763a8ca5}\label{class_catch_1_1_match_expression_a506f25bad7970cb35f9dbe54763a8ca5} 
+\index{Catch::MatchExpression$<$ ArgT, MatcherT $>$@{Catch::MatchExpression$<$ ArgT, MatcherT $>$}!MatchExpression@{MatchExpression}}
+\index{MatchExpression@{MatchExpression}!Catch::MatchExpression$<$ ArgT, MatcherT $>$@{Catch::MatchExpression$<$ ArgT, MatcherT $>$}}
+\doxysubsubsection{\texorpdfstring{MatchExpression()}{MatchExpression()}}
+{\footnotesize\ttfamily template$<$typename ArgT , typename MatcherT $>$ \\
+\mbox{\hyperlink{class_catch_1_1_match_expression}{Catch\+::\+Match\+Expression}}$<$ ArgT, MatcherT $>$\+::\+Match\+Expression (\begin{DoxyParamCaption}\item[{ArgT}]{arg,  }\item[{MatcherT}]{matcher,  }\item[{char const \texorpdfstring{$\ast$}{*}}]{matcher\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_catch_1_1_match_expression_ac4edf6e9a6e5762a487db1486d0d1f45}\label{class_catch_1_1_match_expression_ac4edf6e9a6e5762a487db1486d0d1f45} 
+\index{Catch::MatchExpression$<$ ArgT, MatcherT $>$@{Catch::MatchExpression$<$ ArgT, MatcherT $>$}!isBinaryExpression@{isBinaryExpression}}
+\index{isBinaryExpression@{isBinaryExpression}!Catch::MatchExpression$<$ ArgT, MatcherT $>$@{Catch::MatchExpression$<$ ArgT, MatcherT $>$}}
+\doxysubsubsection{\texorpdfstring{isBinaryExpression()}{isBinaryExpression()}}
+{\footnotesize\ttfamily template$<$typename ArgT , typename MatcherT $>$ \\
+virtual bool \mbox{\hyperlink{class_catch_1_1_match_expression}{Catch\+::\+Match\+Expression}}$<$ ArgT, MatcherT $>$\+::is\+Binary\+Expression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplementowana z \mbox{\hyperlink{struct_catch_1_1_decomposed_expression_a1c458ece47b71f093290dbdf9bb31fdb}{Catch\+::\+Decomposed\+Expression}}.
+
+\Hypertarget{class_catch_1_1_match_expression_a4410a93bc5b8241eb2502f400fce7ec4}\label{class_catch_1_1_match_expression_a4410a93bc5b8241eb2502f400fce7ec4} 
+\index{Catch::MatchExpression$<$ ArgT, MatcherT $>$@{Catch::MatchExpression$<$ ArgT, MatcherT $>$}!reconstructExpression@{reconstructExpression}}
+\index{reconstructExpression@{reconstructExpression}!Catch::MatchExpression$<$ ArgT, MatcherT $>$@{Catch::MatchExpression$<$ ArgT, MatcherT $>$}}
+\doxysubsubsection{\texorpdfstring{reconstructExpression()}{reconstructExpression()}}
+{\footnotesize\ttfamily template$<$typename ArgT , typename MatcherT $>$ \\
+virtual void \mbox{\hyperlink{class_catch_1_1_match_expression}{Catch\+::\+Match\+Expression}}$<$ ArgT, MatcherT $>$\+::reconstruct\+Expression (\begin{DoxyParamCaption}\item[{std\+::string \&}]{dest }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implementuje \mbox{\hyperlink{struct_catch_1_1_decomposed_expression_a9ce7f356dc96f11f80e40c82f5aa7e55}{Catch\+::\+Decomposed\+Expression}}.
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{class_catch_1_1_match_expression_a4410a93bc5b8241eb2502f400fce7ec4_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{class_catch_1_1_match_expression_aaca614cfacac20f029660a3ee96b0c88}\label{class_catch_1_1_match_expression_aaca614cfacac20f029660a3ee96b0c88} 
+\index{Catch::MatchExpression$<$ ArgT, MatcherT $>$@{Catch::MatchExpression$<$ ArgT, MatcherT $>$}!m\_arg@{m\_arg}}
+\index{m\_arg@{m\_arg}!Catch::MatchExpression$<$ ArgT, MatcherT $>$@{Catch::MatchExpression$<$ ArgT, MatcherT $>$}}
+\doxysubsubsection{\texorpdfstring{m\_arg}{m\_arg}}
+{\footnotesize\ttfamily template$<$typename ArgT , typename MatcherT $>$ \\
+ArgT \mbox{\hyperlink{class_catch_1_1_match_expression}{Catch\+::\+Match\+Expression}}$<$ ArgT, MatcherT $>$\+::m\+\_\+arg\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_catch_1_1_match_expression_a29ca8dc3bd7be84235bc9f769f1daa4a}\label{class_catch_1_1_match_expression_a29ca8dc3bd7be84235bc9f769f1daa4a} 
+\index{Catch::MatchExpression$<$ ArgT, MatcherT $>$@{Catch::MatchExpression$<$ ArgT, MatcherT $>$}!m\_matcher@{m\_matcher}}
+\index{m\_matcher@{m\_matcher}!Catch::MatchExpression$<$ ArgT, MatcherT $>$@{Catch::MatchExpression$<$ ArgT, MatcherT $>$}}
+\doxysubsubsection{\texorpdfstring{m\_matcher}{m\_matcher}}
+{\footnotesize\ttfamily template$<$typename ArgT , typename MatcherT $>$ \\
+MatcherT \mbox{\hyperlink{class_catch_1_1_match_expression}{Catch\+::\+Match\+Expression}}$<$ ArgT, MatcherT $>$\+::m\+\_\+matcher\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_catch_1_1_match_expression_a765f82c4c07a1c9020e784ab5f2b7229}\label{class_catch_1_1_match_expression_a765f82c4c07a1c9020e784ab5f2b7229} 
+\index{Catch::MatchExpression$<$ ArgT, MatcherT $>$@{Catch::MatchExpression$<$ ArgT, MatcherT $>$}!m\_matcherString@{m\_matcherString}}
+\index{m\_matcherString@{m\_matcherString}!Catch::MatchExpression$<$ ArgT, MatcherT $>$@{Catch::MatchExpression$<$ ArgT, MatcherT $>$}}
+\doxysubsubsection{\texorpdfstring{m\_matcherString}{m\_matcherString}}
+{\footnotesize\ttfamily template$<$typename ArgT , typename MatcherT $>$ \\
+char const\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_catch_1_1_match_expression}{Catch\+::\+Match\+Expression}}$<$ ArgT, MatcherT $>$\+::m\+\_\+matcher\+String\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/extlibs/headers/\mbox{\hyperlink{catch_8hpp}{catch.\+hpp}}\end{DoxyCompactItemize}

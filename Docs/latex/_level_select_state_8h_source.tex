@@ -1,0 +1,45 @@
+\doxysection{Level\+Select\+State.\+h}
+\hypertarget{_level_select_state_8h_source}{}\label{_level_select_state_8h_source}\mbox{\hyperlink{_level_select_state_8h}{Idź do dokumentacji tego pliku.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MINI\_GOLF\_LEVELSELECTSTATE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MINI\_GOLF\_LEVELSELECTSTATE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_state_8h}{State.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_game_8h}{Game.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_game_state_8h}{GameState.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_main_menu_state_8h}{MainMenuState.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_resource_manager_8h}{ResourceManager.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_d_e_f_i_n_i_t_i_o_n_s_8h}{DEFINITIONS.h}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_level_select_state}{LevelSelectState}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_state}{State}}\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_level_select_state_abddddea2790d7b80c10c0b315f6d4077}{LevelSelectState}}(\mbox{\hyperlink{_game_8h_ae7efd7ef77698f16206f5c66180a389f}{GameDataRef}}\ data);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_select_state_af9065488b5b59ac7ca5057a4b69ada1c}{init}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_select_state_ab1789928c6094d98fc5ca062ac566f69}{handleInput}}(sf::Event\&\ event)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_select_state_a2336d977bf02e8d9acd81cd0214bc28a}{update}}(\textcolor{keywordtype}{float}\ dt)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_select_state_af24a821a37eb5f102e00479e358f7654}{draw}}(\textcolor{keywordtype}{float}\ dt)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{_game_8h_ae7efd7ef77698f16206f5c66180a389f}{GameDataRef}}\ \mbox{\hyperlink{class_level_select_state_a2f86c19806053d7cded86198a42bc520}{m\_data}};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ sf::Text\ \mbox{\hyperlink{class_level_select_state_a1b320a7f90702728c7ed4ed1ba9382f9}{m\_title}};\ \ \ \ \ \ }
+\DoxyCodeLine{00055\ \ \ \ \ sf::Text\ \mbox{\hyperlink{class_level_select_state_a0fb2f2d5d2d01ef623a30c1d48d67b1d}{m\_backButton}};\ }
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ std::vector<sf::Text>\ \mbox{\hyperlink{class_level_select_state_a42b8c53035f1706c2bcd37aedf23c3b3}{m\_levelButtons}};\ }
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{comment}{//\ Zmienne\ do\ przejścia\ (Fader)}}
+\DoxyCodeLine{00060\ \ \ \ \ sf::RectangleShape\ \mbox{\hyperlink{class_level_select_state_a6710633890e5c007411d582e8a31a0c2}{m\_fadeRect}};}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_level_select_state_a7e9b6df5c2d5f8ce4571377c152501cb}{m\_alpha}};}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_level_select_state_ace1c62a5f435068f90af81966359892d}{m\_isFadingIn}};}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_level_select_state_aacf0da8302d6d38a6a03c49e215bec2b}{m\_isTransitioning}};}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_level_select_state_a7e6764d15846a7b8fcffe1726f7c3e87}{m\_nextLevelToLoad}};\ }
+\DoxyCodeLine{00065\ \};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//MINI\_GOLF\_LEVELSELECTSTATE\_H}}
+
+\end{DoxyCode}

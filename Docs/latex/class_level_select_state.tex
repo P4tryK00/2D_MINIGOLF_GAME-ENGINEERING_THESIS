@@ -1,0 +1,273 @@
+\doxysection{Dokumentacja klasy Level\+Select\+State}
+\hypertarget{class_level_select_state}{}\label{class_level_select_state}\index{LevelSelectState@{LevelSelectState}}
+
+
+Stan wyboru poziomu.  
+
+
+
+
+{\ttfamily \#include $<$Level\+Select\+State.\+h$>$}
+
+
+
+Diagram dziedziczenia dla Level\+Select\+State\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{class_level_select_state__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagram współpracy dla Level\+Select\+State\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{class_level_select_state__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_level_select_state_abddddea2790d7b80c10c0b315f6d4077}{Level\+Select\+State}} (\mbox{\hyperlink{_game_8h_ae7efd7ef77698f16206f5c66180a389f}{Game\+Data\+Ref}} data)
+\begin{DoxyCompactList}\small\item\em Konstruktor stanu wyboru poziomu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_level_select_state_af9065488b5b59ac7ca5057a4b69ada1c}{init}} () override
+\begin{DoxyCompactList}\small\item\em Tworzy listę przycisków na podstawie liczby poziomów i postępu gracza. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_level_select_state_ab1789928c6094d98fc5ca062ac566f69}{handle\+Input}} (sf\+::\+Event \&event) override
+\begin{DoxyCompactList}\small\item\em Obsługuje wybór poziomu lub powrót do menu. Blokuje kliknięcia w nieodblokowane poziomy. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_level_select_state_a2336d977bf02e8d9acd81cd0214bc28a}{update}} (float dt) override
+\begin{DoxyCompactList}\small\item\em Aktualizuje logikę podświetlania dostępnych poziomów. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_level_select_state_af24a821a37eb5f102e00479e358f7654}{draw}} (float dt) override
+\begin{DoxyCompactList}\small\item\em Rysuje listę poziomów. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{class_state}{State}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_state_a9ddc1df6f998184d6477b48fab90281c}{\texorpdfstring{$\sim$}{\string~}\+State}} ()
+\begin{DoxyCompactList}\small\item\em Wirtualny destruktor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_state_abad223d1066e95bd1b70e1341fb72a88}{pause}} ()
+\begin{DoxyCompactList}\small\item\em Wywoływana, gdy stan jest pauzowany (np. inny stan jest nakładany na wierzch). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_state_a8ef6d305e962afe41b0629255f0f58f9}{resume}} ()
+\begin{DoxyCompactList}\small\item\em Wywoływana, gdy stan jest wznawiany (np. stan powyżej został zdjęty ze stosu). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_game_8h_ae7efd7ef77698f16206f5c66180a389f}{Game\+Data\+Ref}} \mbox{\hyperlink{class_level_select_state_a2f86c19806053d7cded86198a42bc520}{m\+\_\+data}}
+\item 
+sf\+::\+Text \mbox{\hyperlink{class_level_select_state_a1b320a7f90702728c7ed4ed1ba9382f9}{m\+\_\+title}}
+\begin{DoxyCompactList}\small\item\em Nagłówek "{}\+SELECT LEVEL"{}. \end{DoxyCompactList}\item 
+sf\+::\+Text \mbox{\hyperlink{class_level_select_state_a0fb2f2d5d2d01ef623a30c1d48d67b1d}{m\+\_\+back\+Button}}
+\begin{DoxyCompactList}\small\item\em Przycisk powrotu. \end{DoxyCompactList}\item 
+std\+::vector$<$ sf\+::\+Text $>$ \mbox{\hyperlink{class_level_select_state_a42b8c53035f1706c2bcd37aedf23c3b3}{m\+\_\+level\+Buttons}}
+\begin{DoxyCompactList}\small\item\em Dynamiczna lista przycisków poziomów. \end{DoxyCompactList}\item 
+sf\+::\+Rectangle\+Shape \mbox{\hyperlink{class_level_select_state_a6710633890e5c007411d582e8a31a0c2}{m\+\_\+fade\+Rect}}
+\item 
+float \mbox{\hyperlink{class_level_select_state_a7e9b6df5c2d5f8ce4571377c152501cb}{m\+\_\+alpha}}
+\item 
+bool \mbox{\hyperlink{class_level_select_state_ace1c62a5f435068f90af81966359892d}{m\+\_\+is\+Fading\+In}}
+\item 
+bool \mbox{\hyperlink{class_level_select_state_aacf0da8302d6d38a6a03c49e215bec2b}{m\+\_\+is\+Transitioning}}
+\item 
+int \mbox{\hyperlink{class_level_select_state_a7e6764d15846a7b8fcffe1726f7c3e87}{m\+\_\+next\+Level\+To\+Load}}
+\begin{DoxyCompactList}\small\item\em Numer wybranego poziomu (-\/1 oznacza powrót). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Stan wyboru poziomu. 
+
+Wyświetla listę dostępnych poziomów. Komunikuje się z Save\+Managerem, aby zablokować poziomy, do których gracz nie ma jeszcze dostępu (oznaczone jako LOCKED). 
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{class_level_select_state_abddddea2790d7b80c10c0b315f6d4077}\label{class_level_select_state_abddddea2790d7b80c10c0b315f6d4077} 
+\index{LevelSelectState@{LevelSelectState}!LevelSelectState@{LevelSelectState}}
+\index{LevelSelectState@{LevelSelectState}!LevelSelectState@{LevelSelectState}}
+\doxysubsubsection{\texorpdfstring{LevelSelectState()}{LevelSelectState()}}
+{\footnotesize\ttfamily Level\+Select\+State\+::\+Level\+Select\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_game_8h_ae7efd7ef77698f16206f5c66180a389f}{Game\+Data\+Ref}}}]{data }\end{DoxyParamCaption})}
+
+
+
+Konstruktor stanu wyboru poziomu. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em data} & Dane gry. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_level_select_state_af24a821a37eb5f102e00479e358f7654}\label{class_level_select_state_af24a821a37eb5f102e00479e358f7654} 
+\index{LevelSelectState@{LevelSelectState}!draw@{draw}}
+\index{draw@{draw}!LevelSelectState@{LevelSelectState}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Level\+Select\+State\+::draw (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Rysuje listę poziomów. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em dt} & Interpolacja. \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \mbox{\hyperlink{class_state_a78efb743026712cbd78b8c07a45c2def}{State}}.
+
+\Hypertarget{class_level_select_state_ab1789928c6094d98fc5ca062ac566f69}\label{class_level_select_state_ab1789928c6094d98fc5ca062ac566f69} 
+\index{LevelSelectState@{LevelSelectState}!handleInput@{handleInput}}
+\index{handleInput@{handleInput}!LevelSelectState@{LevelSelectState}}
+\doxysubsubsection{\texorpdfstring{handleInput()}{handleInput()}}
+{\footnotesize\ttfamily void Level\+Select\+State\+::handle\+Input (\begin{DoxyParamCaption}\item[{sf\+::\+Event \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Obsługuje wybór poziomu lub powrót do menu. Blokuje kliknięcia w nieodblokowane poziomy. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em event} & Zdarzenie SFML. \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \mbox{\hyperlink{class_state_ad0fcf10830377a1f673a714aa3b7944d}{State}}.
+
+Oto graf wywołań dla tej funkcji\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_level_select_state_ab1789928c6094d98fc5ca062ac566f69_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_level_select_state_af9065488b5b59ac7ca5057a4b69ada1c}\label{class_level_select_state_af9065488b5b59ac7ca5057a4b69ada1c} 
+\index{LevelSelectState@{LevelSelectState}!init@{init}}
+\index{init@{init}!LevelSelectState@{LevelSelectState}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Level\+Select\+State\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Tworzy listę przycisków na podstawie liczby poziomów i postępu gracza. 
+
+
+
+Implementuje \mbox{\hyperlink{class_state_a2ff5faa41a5811007e8d50542365640b}{State}}.
+
+Oto graf wywołań dla tej funkcji\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_level_select_state_af9065488b5b59ac7ca5057a4b69ada1c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_level_select_state_a2336d977bf02e8d9acd81cd0214bc28a}\label{class_level_select_state_a2336d977bf02e8d9acd81cd0214bc28a} 
+\index{LevelSelectState@{LevelSelectState}!update@{update}}
+\index{update@{update}!LevelSelectState@{LevelSelectState}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Level\+Select\+State\+::update (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Aktualizuje logikę podświetlania dostępnych poziomów. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em dt} & Czas klatki. \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \mbox{\hyperlink{class_state_a07b507523aaffc4cf78f3dd3174a68ea}{State}}.
+
+Oto graf wywołań dla tej funkcji\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_level_select_state_a2336d977bf02e8d9acd81cd0214bc28a_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{class_level_select_state_a7e9b6df5c2d5f8ce4571377c152501cb}\label{class_level_select_state_a7e9b6df5c2d5f8ce4571377c152501cb} 
+\index{LevelSelectState@{LevelSelectState}!m\_alpha@{m\_alpha}}
+\index{m\_alpha@{m\_alpha}!LevelSelectState@{LevelSelectState}}
+\doxysubsubsection{\texorpdfstring{m\_alpha}{m\_alpha}}
+{\footnotesize\ttfamily float Level\+Select\+State\+::m\+\_\+alpha\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_level_select_state_a0fb2f2d5d2d01ef623a30c1d48d67b1d}\label{class_level_select_state_a0fb2f2d5d2d01ef623a30c1d48d67b1d} 
+\index{LevelSelectState@{LevelSelectState}!m\_backButton@{m\_backButton}}
+\index{m\_backButton@{m\_backButton}!LevelSelectState@{LevelSelectState}}
+\doxysubsubsection{\texorpdfstring{m\_backButton}{m\_backButton}}
+{\footnotesize\ttfamily sf\+::\+Text Level\+Select\+State\+::m\+\_\+back\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Przycisk powrotu. 
+
+\Hypertarget{class_level_select_state_a2f86c19806053d7cded86198a42bc520}\label{class_level_select_state_a2f86c19806053d7cded86198a42bc520} 
+\index{LevelSelectState@{LevelSelectState}!m\_data@{m\_data}}
+\index{m\_data@{m\_data}!LevelSelectState@{LevelSelectState}}
+\doxysubsubsection{\texorpdfstring{m\_data}{m\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_game_8h_ae7efd7ef77698f16206f5c66180a389f}{Game\+Data\+Ref}} Level\+Select\+State\+::m\+\_\+data\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_level_select_state_a6710633890e5c007411d582e8a31a0c2}\label{class_level_select_state_a6710633890e5c007411d582e8a31a0c2} 
+\index{LevelSelectState@{LevelSelectState}!m\_fadeRect@{m\_fadeRect}}
+\index{m\_fadeRect@{m\_fadeRect}!LevelSelectState@{LevelSelectState}}
+\doxysubsubsection{\texorpdfstring{m\_fadeRect}{m\_fadeRect}}
+{\footnotesize\ttfamily sf\+::\+Rectangle\+Shape Level\+Select\+State\+::m\+\_\+fade\+Rect\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_level_select_state_ace1c62a5f435068f90af81966359892d}\label{class_level_select_state_ace1c62a5f435068f90af81966359892d} 
+\index{LevelSelectState@{LevelSelectState}!m\_isFadingIn@{m\_isFadingIn}}
+\index{m\_isFadingIn@{m\_isFadingIn}!LevelSelectState@{LevelSelectState}}
+\doxysubsubsection{\texorpdfstring{m\_isFadingIn}{m\_isFadingIn}}
+{\footnotesize\ttfamily bool Level\+Select\+State\+::m\+\_\+is\+Fading\+In\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_level_select_state_aacf0da8302d6d38a6a03c49e215bec2b}\label{class_level_select_state_aacf0da8302d6d38a6a03c49e215bec2b} 
+\index{LevelSelectState@{LevelSelectState}!m\_isTransitioning@{m\_isTransitioning}}
+\index{m\_isTransitioning@{m\_isTransitioning}!LevelSelectState@{LevelSelectState}}
+\doxysubsubsection{\texorpdfstring{m\_isTransitioning}{m\_isTransitioning}}
+{\footnotesize\ttfamily bool Level\+Select\+State\+::m\+\_\+is\+Transitioning\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_level_select_state_a42b8c53035f1706c2bcd37aedf23c3b3}\label{class_level_select_state_a42b8c53035f1706c2bcd37aedf23c3b3} 
+\index{LevelSelectState@{LevelSelectState}!m\_levelButtons@{m\_levelButtons}}
+\index{m\_levelButtons@{m\_levelButtons}!LevelSelectState@{LevelSelectState}}
+\doxysubsubsection{\texorpdfstring{m\_levelButtons}{m\_levelButtons}}
+{\footnotesize\ttfamily std\+::vector$<$sf\+::\+Text$>$ Level\+Select\+State\+::m\+\_\+level\+Buttons\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Dynamiczna lista przycisków poziomów. 
+
+\Hypertarget{class_level_select_state_a7e6764d15846a7b8fcffe1726f7c3e87}\label{class_level_select_state_a7e6764d15846a7b8fcffe1726f7c3e87} 
+\index{LevelSelectState@{LevelSelectState}!m\_nextLevelToLoad@{m\_nextLevelToLoad}}
+\index{m\_nextLevelToLoad@{m\_nextLevelToLoad}!LevelSelectState@{LevelSelectState}}
+\doxysubsubsection{\texorpdfstring{m\_nextLevelToLoad}{m\_nextLevelToLoad}}
+{\footnotesize\ttfamily int Level\+Select\+State\+::m\+\_\+next\+Level\+To\+Load\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Numer wybranego poziomu (-\/1 oznacza powrót). 
+
+\Hypertarget{class_level_select_state_a1b320a7f90702728c7ed4ed1ba9382f9}\label{class_level_select_state_a1b320a7f90702728c7ed4ed1ba9382f9} 
+\index{LevelSelectState@{LevelSelectState}!m\_title@{m\_title}}
+\index{m\_title@{m\_title}!LevelSelectState@{LevelSelectState}}
+\doxysubsubsection{\texorpdfstring{m\_title}{m\_title}}
+{\footnotesize\ttfamily sf\+::\+Text Level\+Select\+State\+::m\+\_\+title\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Nagłówek "{}\+SELECT LEVEL"{}. 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_level_select_state_8h}{Level\+Select\+State.\+h}}\item 
+\mbox{\hyperlink{_level_select_state_8cpp}{Level\+Select\+State.\+cpp}}\end{DoxyCompactItemize}

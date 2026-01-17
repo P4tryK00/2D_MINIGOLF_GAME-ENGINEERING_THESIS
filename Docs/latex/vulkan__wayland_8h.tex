@@ -1,0 +1,97 @@
+\doxysection{Dokumentacja pliku cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/extlibs/headers/vulkan/vulkan\+\_\+wayland.h}
+\hypertarget{vulkan__wayland_8h}{}\label{vulkan__wayland_8h}\index{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/vulkan/vulkan\_wayland.h@{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/vulkan/vulkan\_wayland.h}}
+\doxysubsubsection*{Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_vk_wayland_surface_create_info_k_h_r}{Vk\+Wayland\+Surface\+Create\+Info\+KHR}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Definicje}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{vulkan__wayland_8h_acb42b3739d0975a3a3bc1dbd20e412e1}{VK\+\_\+\+KHR\+\_\+wayland\+\_\+surface}}~1
+\item 
+\#define \mbox{\hyperlink{vulkan__wayland_8h_a31904b1ce3a59ee5ba7a2e7448138260}{VK\+\_\+\+KHR\+\_\+\+WAYLAND\+\_\+\+SURFACE\+\_\+\+SPEC\+\_\+\+VERSION}}~6
+\item 
+\#define \mbox{\hyperlink{vulkan__wayland_8h_ab5a00c0478f049400c066170dcc59a63}{VK\+\_\+\+KHR\+\_\+\+WAYLAND\+\_\+\+SURFACE\+\_\+\+EXTENSION\+\_\+\+NAME}}~"{}VK\+\_\+\+KHR\+\_\+wayland\+\_\+surface"{}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Definicje typów}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abb605a7700670dd8420cc3841b939444}{Vk\+Flags}} \mbox{\hyperlink{vulkan__wayland_8h_a36e579e4f2092ce7a427191251c5cc33}{Vk\+Wayland\+Surface\+Create\+Flags\+KHR}}
+\item 
+typedef struct Vk\+Wayland\+Surface\+Create\+Info\+KHR \mbox{\hyperlink{vulkan__wayland_8h_a1806f7a43bfa7c3b5dccc83f9a110f9f}{Vk\+Wayland\+Surface\+Create\+Info\+KHR}}
+\item 
+typedef \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{Vk\+Result}}(\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{vulkan__wayland_8h_adeb607fa2f622fb4ba713c95d4c09666}{PFN\+\_\+vk\+Create\+Wayland\+Surface\+KHR}}) (\mbox{\hyperlink{_vulkan_8hpp_a6d9f7e27148712f2c97db45ca6991547}{Vk\+Instance}} instance, const \mbox{\hyperlink{struct_vk_wayland_surface_create_info_k_h_r}{Vk\+Wayland\+Surface\+Create\+Info\+KHR}} \texorpdfstring{$\ast$}{*}p\+Create\+Info, const \mbox{\hyperlink{struct_vk_allocation_callbacks}{Vk\+Allocation\+Callbacks}} \texorpdfstring{$\ast$}{*}p\+Allocator, \mbox{\hyperlink{_vulkan_8hpp_a09787d7da5f3146095ed80ceccc2d794}{Vk\+Surface\+KHR}} \texorpdfstring{$\ast$}{*}p\+Surface)
+\item 
+typedef \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_ae5d9faf75f583010e32ee49087a15326}{Vk\+Bool32}}(\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{vulkan__wayland_8h_ab5444083335991da2992a0eac8797eca}{PFN\+\_\+vk\+Get\+Physical\+Device\+Wayland\+Presentation\+Support\+KHR}}) (Vk\+Physical\+Device physical\+Device, uint32\+\_\+t queue\+Family\+Index, struct wl\+\_\+display \texorpdfstring{$\ast$}{*}display)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a4394dd2421147ed91e838b086be25512}{VKAPI\+\_\+\+ATTR}} \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{Vk\+Result}} \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a3856c7761d8b7260870053d0f03a0a49}{VKAPI\+\_\+\+CALL}} \mbox{\hyperlink{vulkan__wayland_8h_a52f582521113136d1aabe3850c3ca2fb}{vk\+Create\+Wayland\+Surface\+KHR}} (\mbox{\hyperlink{_vulkan_8hpp_a6d9f7e27148712f2c97db45ca6991547}{Vk\+Instance}} instance, const \mbox{\hyperlink{struct_vk_wayland_surface_create_info_k_h_r}{Vk\+Wayland\+Surface\+Create\+Info\+KHR}} \texorpdfstring{$\ast$}{*}p\+Create\+Info, const \mbox{\hyperlink{struct_vk_allocation_callbacks}{Vk\+Allocation\+Callbacks}} \texorpdfstring{$\ast$}{*}p\+Allocator, \mbox{\hyperlink{_vulkan_8hpp_a09787d7da5f3146095ed80ceccc2d794}{Vk\+Surface\+KHR}} \texorpdfstring{$\ast$}{*}p\+Surface)
+\item 
+\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a4394dd2421147ed91e838b086be25512}{VKAPI\+\_\+\+ATTR}} \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_ae5d9faf75f583010e32ee49087a15326}{Vk\+Bool32}} \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a3856c7761d8b7260870053d0f03a0a49}{VKAPI\+\_\+\+CALL}} \mbox{\hyperlink{vulkan__wayland_8h_a38b9e0d685c544482319011f3fa43999}{vk\+Get\+Physical\+Device\+Wayland\+Presentation\+Support\+KHR}} (Vk\+Physical\+Device physical\+Device, uint32\+\_\+t queue\+Family\+Index, struct wl\+\_\+display \texorpdfstring{$\ast$}{*}display)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja definicji}
+\Hypertarget{vulkan__wayland_8h_acb42b3739d0975a3a3bc1dbd20e412e1}\label{vulkan__wayland_8h_acb42b3739d0975a3a3bc1dbd20e412e1} 
+\index{vulkan\_wayland.h@{vulkan\_wayland.h}!VK\_KHR\_wayland\_surface@{VK\_KHR\_wayland\_surface}}
+\index{VK\_KHR\_wayland\_surface@{VK\_KHR\_wayland\_surface}!vulkan\_wayland.h@{vulkan\_wayland.h}}
+\doxysubsubsection{\texorpdfstring{VK\_KHR\_wayland\_surface}{VK\_KHR\_wayland\_surface}}
+{\footnotesize\ttfamily \#define VK\+\_\+\+KHR\+\_\+wayland\+\_\+surface~1}
+
+\Hypertarget{vulkan__wayland_8h_ab5a00c0478f049400c066170dcc59a63}\label{vulkan__wayland_8h_ab5a00c0478f049400c066170dcc59a63} 
+\index{vulkan\_wayland.h@{vulkan\_wayland.h}!VK\_KHR\_WAYLAND\_SURFACE\_EXTENSION\_NAME@{VK\_KHR\_WAYLAND\_SURFACE\_EXTENSION\_NAME}}
+\index{VK\_KHR\_WAYLAND\_SURFACE\_EXTENSION\_NAME@{VK\_KHR\_WAYLAND\_SURFACE\_EXTENSION\_NAME}!vulkan\_wayland.h@{vulkan\_wayland.h}}
+\doxysubsubsection{\texorpdfstring{VK\_KHR\_WAYLAND\_SURFACE\_EXTENSION\_NAME}{VK\_KHR\_WAYLAND\_SURFACE\_EXTENSION\_NAME}}
+{\footnotesize\ttfamily \#define VK\+\_\+\+KHR\+\_\+\+WAYLAND\+\_\+\+SURFACE\+\_\+\+EXTENSION\+\_\+\+NAME~"{}VK\+\_\+\+KHR\+\_\+wayland\+\_\+surface"{}}
+
+\Hypertarget{vulkan__wayland_8h_a31904b1ce3a59ee5ba7a2e7448138260}\label{vulkan__wayland_8h_a31904b1ce3a59ee5ba7a2e7448138260} 
+\index{vulkan\_wayland.h@{vulkan\_wayland.h}!VK\_KHR\_WAYLAND\_SURFACE\_SPEC\_VERSION@{VK\_KHR\_WAYLAND\_SURFACE\_SPEC\_VERSION}}
+\index{VK\_KHR\_WAYLAND\_SURFACE\_SPEC\_VERSION@{VK\_KHR\_WAYLAND\_SURFACE\_SPEC\_VERSION}!vulkan\_wayland.h@{vulkan\_wayland.h}}
+\doxysubsubsection{\texorpdfstring{VK\_KHR\_WAYLAND\_SURFACE\_SPEC\_VERSION}{VK\_KHR\_WAYLAND\_SURFACE\_SPEC\_VERSION}}
+{\footnotesize\ttfamily \#define VK\+\_\+\+KHR\+\_\+\+WAYLAND\+\_\+\+SURFACE\+\_\+\+SPEC\+\_\+\+VERSION~6}
+
+
+
+\doxysubsection{Dokumentacja definicji typów}
+\Hypertarget{vulkan__wayland_8h_adeb607fa2f622fb4ba713c95d4c09666}\label{vulkan__wayland_8h_adeb607fa2f622fb4ba713c95d4c09666} 
+\index{vulkan\_wayland.h@{vulkan\_wayland.h}!PFN\_vkCreateWaylandSurfaceKHR@{PFN\_vkCreateWaylandSurfaceKHR}}
+\index{PFN\_vkCreateWaylandSurfaceKHR@{PFN\_vkCreateWaylandSurfaceKHR}!vulkan\_wayland.h@{vulkan\_wayland.h}}
+\doxysubsubsection{\texorpdfstring{PFN\_vkCreateWaylandSurfaceKHR}{PFN\_vkCreateWaylandSurfaceKHR}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{Vk\+Result}}(\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFN\+\_\+vk\+Create\+Wayland\+Surface\+KHR) (\mbox{\hyperlink{_vulkan_8hpp_a6d9f7e27148712f2c97db45ca6991547}{Vk\+Instance}} instance, const \mbox{\hyperlink{struct_vk_wayland_surface_create_info_k_h_r}{Vk\+Wayland\+Surface\+Create\+Info\+KHR}} \texorpdfstring{$\ast$}{*}p\+Create\+Info, const \mbox{\hyperlink{struct_vk_allocation_callbacks}{Vk\+Allocation\+Callbacks}} \texorpdfstring{$\ast$}{*}p\+Allocator, \mbox{\hyperlink{_vulkan_8hpp_a09787d7da5f3146095ed80ceccc2d794}{Vk\+Surface\+KHR}} \texorpdfstring{$\ast$}{*}p\+Surface)}
+
+\Hypertarget{vulkan__wayland_8h_ab5444083335991da2992a0eac8797eca}\label{vulkan__wayland_8h_ab5444083335991da2992a0eac8797eca} 
+\index{vulkan\_wayland.h@{vulkan\_wayland.h}!PFN\_vkGetPhysicalDeviceWaylandPresentationSupportKHR@{PFN\_vkGetPhysicalDeviceWaylandPresentationSupportKHR}}
+\index{PFN\_vkGetPhysicalDeviceWaylandPresentationSupportKHR@{PFN\_vkGetPhysicalDeviceWaylandPresentationSupportKHR}!vulkan\_wayland.h@{vulkan\_wayland.h}}
+\doxysubsubsection{\texorpdfstring{PFN\_vkGetPhysicalDeviceWaylandPresentationSupportKHR}{PFN\_vkGetPhysicalDeviceWaylandPresentationSupportKHR}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_ae5d9faf75f583010e32ee49087a15326}{Vk\+Bool32}}(\mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a97a4af711085d2aa3afd6f69defe8739}{VKAPI\+\_\+\+PTR}} \texorpdfstring{$\ast$}{*} PFN\+\_\+vk\+Get\+Physical\+Device\+Wayland\+Presentation\+Support\+KHR) (Vk\+Physical\+Device physical\+Device, uint32\+\_\+t queue\+Family\+Index, struct wl\+\_\+display \texorpdfstring{$\ast$}{*}display)}
+
+\Hypertarget{vulkan__wayland_8h_a36e579e4f2092ce7a427191251c5cc33}\label{vulkan__wayland_8h_a36e579e4f2092ce7a427191251c5cc33} 
+\index{vulkan\_wayland.h@{vulkan\_wayland.h}!VkWaylandSurfaceCreateFlagsKHR@{VkWaylandSurfaceCreateFlagsKHR}}
+\index{VkWaylandSurfaceCreateFlagsKHR@{VkWaylandSurfaceCreateFlagsKHR}!vulkan\_wayland.h@{vulkan\_wayland.h}}
+\doxysubsubsection{\texorpdfstring{VkWaylandSurfaceCreateFlagsKHR}{VkWaylandSurfaceCreateFlagsKHR}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abb605a7700670dd8420cc3841b939444}{Vk\+Flags}} \mbox{\hyperlink{vulkan__wayland_8h_a36e579e4f2092ce7a427191251c5cc33}{Vk\+Wayland\+Surface\+Create\+Flags\+KHR}}}
+
+\Hypertarget{vulkan__wayland_8h_a1806f7a43bfa7c3b5dccc83f9a110f9f}\label{vulkan__wayland_8h_a1806f7a43bfa7c3b5dccc83f9a110f9f} 
+\index{vulkan\_wayland.h@{vulkan\_wayland.h}!VkWaylandSurfaceCreateInfoKHR@{VkWaylandSurfaceCreateInfoKHR}}
+\index{VkWaylandSurfaceCreateInfoKHR@{VkWaylandSurfaceCreateInfoKHR}!vulkan\_wayland.h@{vulkan\_wayland.h}}
+\doxysubsubsection{\texorpdfstring{VkWaylandSurfaceCreateInfoKHR}{VkWaylandSurfaceCreateInfoKHR}}
+{\footnotesize\ttfamily typedef struct Vk\+Wayland\+Surface\+Create\+Info\+KHR Vk\+Wayland\+Surface\+Create\+Info\+KHR}
+
+
+
+\doxysubsection{Dokumentacja funkcji}
+\Hypertarget{vulkan__wayland_8h_a52f582521113136d1aabe3850c3ca2fb}\label{vulkan__wayland_8h_a52f582521113136d1aabe3850c3ca2fb} 
+\index{vulkan\_wayland.h@{vulkan\_wayland.h}!vkCreateWaylandSurfaceKHR@{vkCreateWaylandSurfaceKHR}}
+\index{vkCreateWaylandSurfaceKHR@{vkCreateWaylandSurfaceKHR}!vulkan\_wayland.h@{vulkan\_wayland.h}}
+\doxysubsubsection{\texorpdfstring{vkCreateWaylandSurfaceKHR()}{vkCreateWaylandSurfaceKHR()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a4394dd2421147ed91e838b086be25512}{VKAPI\+\_\+\+ATTR}} \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{Vk\+Result}} \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a3856c7761d8b7260870053d0f03a0a49}{VKAPI\+\_\+\+CALL}} vk\+Create\+Wayland\+Surface\+KHR (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_vulkan_8hpp_a6d9f7e27148712f2c97db45ca6991547}{Vk\+Instance}}}]{instance,  }\item[{const \mbox{\hyperlink{struct_vk_wayland_surface_create_info_k_h_r}{Vk\+Wayland\+Surface\+Create\+Info\+KHR}} \texorpdfstring{$\ast$}{*}}]{p\+Create\+Info,  }\item[{const \mbox{\hyperlink{struct_vk_allocation_callbacks}{Vk\+Allocation\+Callbacks}} \texorpdfstring{$\ast$}{*}}]{p\+Allocator,  }\item[{\mbox{\hyperlink{_vulkan_8hpp_a09787d7da5f3146095ed80ceccc2d794}{Vk\+Surface\+KHR}} \texorpdfstring{$\ast$}{*}}]{p\+Surface }\end{DoxyParamCaption})}
+
+\Hypertarget{vulkan__wayland_8h_a38b9e0d685c544482319011f3fa43999}\label{vulkan__wayland_8h_a38b9e0d685c544482319011f3fa43999} 
+\index{vulkan\_wayland.h@{vulkan\_wayland.h}!vkGetPhysicalDeviceWaylandPresentationSupportKHR@{vkGetPhysicalDeviceWaylandPresentationSupportKHR}}
+\index{vkGetPhysicalDeviceWaylandPresentationSupportKHR@{vkGetPhysicalDeviceWaylandPresentationSupportKHR}!vulkan\_wayland.h@{vulkan\_wayland.h}}
+\doxysubsubsection{\texorpdfstring{vkGetPhysicalDeviceWaylandPresentationSupportKHR()}{vkGetPhysicalDeviceWaylandPresentationSupportKHR()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a4394dd2421147ed91e838b086be25512}{VKAPI\+\_\+\+ATTR}} \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_ae5d9faf75f583010e32ee49087a15326}{Vk\+Bool32}} \mbox{\hyperlink{examples_2vulkan_2vulkan_8h_a3856c7761d8b7260870053d0f03a0a49}{VKAPI\+\_\+\+CALL}} vk\+Get\+Physical\+Device\+Wayland\+Presentation\+Support\+KHR (\begin{DoxyParamCaption}\item[{Vk\+Physical\+Device}]{physical\+Device,  }\item[{uint32\+\_\+t}]{queue\+Family\+Index,  }\item[{struct wl\+\_\+display \texorpdfstring{$\ast$}{*}}]{display }\end{DoxyParamCaption})}
+

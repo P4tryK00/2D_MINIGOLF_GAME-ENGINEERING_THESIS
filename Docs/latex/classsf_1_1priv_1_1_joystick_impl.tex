@@ -1,0 +1,1685 @@
+\doxysection{Dokumentacja klasy sf\+::priv\+::Joystick\+Impl}
+\hypertarget{classsf_1_1priv_1_1_joystick_impl}{}\label{classsf_1_1priv_1_1_joystick_impl}\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+
+
+Android implementation of joysticks.  
+
+
+
+
+{\ttfamily \#include $<$Joystick\+Impl.\+hpp$>$}
+
+
+
+Diagram współpracy dla sf\+::priv\+::Joystick\+Impl\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classsf_1_1priv_1_1_joystick_impl__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a285c91388783ee842cd2b63e97e7b511}{open}} (unsigned int index)
+\begin{DoxyCompactList}\small\item\em Open the joystick. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a2c3954572cd37b41ad3d2858163473c1}{close}} ()
+\begin{DoxyCompactList}\small\item\em Close the joystick. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsf_1_1priv_1_1_joystick_caps}{Joystick\+Caps}} \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_acc7ccc3fcd5e8722f42bda354f960353}{get\+Capabilities}} () const
+\begin{DoxyCompactList}\small\item\em Get the joystick capabilities. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsf_1_1_joystick_1_1_identification}{Joystick\+::\+Identification}} \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a1c169b63a61da578ed28b8314e17357d}{get\+Identification}} () const
+\begin{DoxyCompactList}\small\item\em Get the joystick identification. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsf_1_1priv_1_1_joystick_state}{Joystick\+State}} \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_af0b8d7b58072b78ee1f477e4c9b93840}{update}} ()
+\begin{DoxyCompactList}\small\item\em Update the joystick and get its new state. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a285c91388783ee842cd2b63e97e7b511}{open}} (unsigned int index)
+\begin{DoxyCompactList}\small\item\em Open the joystick. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a2c3954572cd37b41ad3d2858163473c1}{close}} ()
+\begin{DoxyCompactList}\small\item\em Close the joystick. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsf_1_1priv_1_1_joystick_caps}{Joystick\+Caps}} \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_acc7ccc3fcd5e8722f42bda354f960353}{get\+Capabilities}} () const
+\begin{DoxyCompactList}\small\item\em Get the joystick capabilities. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsf_1_1_joystick_1_1_identification}{Joystick\+::\+Identification}} \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a1c169b63a61da578ed28b8314e17357d}{get\+Identification}} () const
+\begin{DoxyCompactList}\small\item\em Get the joystick identification. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsf_1_1priv_1_1_joystick_state}{Joystick\+State}} \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_af0b8d7b58072b78ee1f477e4c9b93840}{update}} ()
+\begin{DoxyCompactList}\small\item\em Update the joystick and get its new state. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a285c91388783ee842cd2b63e97e7b511}{open}} (unsigned int index)
+\begin{DoxyCompactList}\small\item\em Open the joystick. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a2c3954572cd37b41ad3d2858163473c1}{close}} ()
+\begin{DoxyCompactList}\small\item\em Close the joystick. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsf_1_1priv_1_1_joystick_caps}{Joystick\+Caps}} \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_acc7ccc3fcd5e8722f42bda354f960353}{get\+Capabilities}} () const
+\begin{DoxyCompactList}\small\item\em Get the joystick capabilities. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsf_1_1_joystick_1_1_identification}{Joystick\+::\+Identification}} \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a1c169b63a61da578ed28b8314e17357d}{get\+Identification}} () const
+\begin{DoxyCompactList}\small\item\em Get the joystick identification. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsf_1_1priv_1_1_joystick_state}{Joystick\+State}} \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_af0b8d7b58072b78ee1f477e4c9b93840}{update}} ()
+\begin{DoxyCompactList}\small\item\em Update the joystick and get its new state. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a285c91388783ee842cd2b63e97e7b511}{open}} (unsigned int index)
+\begin{DoxyCompactList}\small\item\em Open the joystick. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a2c3954572cd37b41ad3d2858163473c1}{close}} ()
+\begin{DoxyCompactList}\small\item\em Close the joystick. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsf_1_1priv_1_1_joystick_caps}{Joystick\+Caps}} \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_acc7ccc3fcd5e8722f42bda354f960353}{get\+Capabilities}} () const
+\begin{DoxyCompactList}\small\item\em Get the joystick capabilities. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsf_1_1_joystick_1_1_identification}{Joystick\+::\+Identification}} \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a1c169b63a61da578ed28b8314e17357d}{get\+Identification}} () const
+\begin{DoxyCompactList}\small\item\em Get the joystick identification. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsf_1_1priv_1_1_joystick_state}{Joystick\+State}} \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_af0b8d7b58072b78ee1f477e4c9b93840}{update}} ()
+\begin{DoxyCompactList}\small\item\em Update the joystick and get its new state. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a285c91388783ee842cd2b63e97e7b511}{open}} (unsigned int index)
+\begin{DoxyCompactList}\small\item\em Open the joystick. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a2c3954572cd37b41ad3d2858163473c1}{close}} ()
+\begin{DoxyCompactList}\small\item\em Close the joystick. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsf_1_1priv_1_1_joystick_caps}{Joystick\+Caps}} \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_acc7ccc3fcd5e8722f42bda354f960353}{get\+Capabilities}} () const
+\begin{DoxyCompactList}\small\item\em Get the joystick capabilities. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsf_1_1_joystick_1_1_identification}{Joystick\+::\+Identification}} \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a1c169b63a61da578ed28b8314e17357d}{get\+Identification}} () const
+\begin{DoxyCompactList}\small\item\em Get the joystick identification. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsf_1_1priv_1_1_joystick_state}{Joystick\+State}} \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_af0b8d7b58072b78ee1f477e4c9b93840}{update}} ()
+\begin{DoxyCompactList}\small\item\em Update the joystick and get its new state. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a285c91388783ee842cd2b63e97e7b511}{open}} (unsigned int index)
+\begin{DoxyCompactList}\small\item\em Open the joystick. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a2c3954572cd37b41ad3d2858163473c1}{close}} ()
+\begin{DoxyCompactList}\small\item\em Close the joystick. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsf_1_1priv_1_1_joystick_caps}{Joystick\+Caps}} \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_acc7ccc3fcd5e8722f42bda354f960353}{get\+Capabilities}} () const
+\begin{DoxyCompactList}\small\item\em Get the joystick capabilities. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsf_1_1_joystick_1_1_identification}{Joystick\+::\+Identification}} \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a1c169b63a61da578ed28b8314e17357d}{get\+Identification}} () const
+\begin{DoxyCompactList}\small\item\em Get the joystick identification. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsf_1_1priv_1_1_joystick_state}{Joystick\+State}} \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_af0b8d7b58072b78ee1f477e4c9b93840}{update}} ()
+\begin{DoxyCompactList}\small\item\em Update the joystick and get its new state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_ab175935d03c985d006030f213bf3eaa9}{Joystick\+Impl}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a285c91388783ee842cd2b63e97e7b511}{open}} (unsigned int index)
+\begin{DoxyCompactList}\small\item\em Open the joystick. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a2c3954572cd37b41ad3d2858163473c1}{close}} ()
+\begin{DoxyCompactList}\small\item\em Close the joystick. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsf_1_1priv_1_1_joystick_caps}{Joystick\+Caps}} \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_acc7ccc3fcd5e8722f42bda354f960353}{get\+Capabilities}} () const
+\begin{DoxyCompactList}\small\item\em Get the joystick capabilities. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsf_1_1_joystick_1_1_identification}{Joystick\+::\+Identification}} \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a1c169b63a61da578ed28b8314e17357d}{get\+Identification}} () const
+\begin{DoxyCompactList}\small\item\em Get the joystick identification. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsf_1_1priv_1_1_joystick_state}{Joystick\+State}} \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_af0b8d7b58072b78ee1f477e4c9b93840}{update}} ()
+\begin{DoxyCompactList}\small\item\em Update the joystick and get its new state. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a285c91388783ee842cd2b63e97e7b511}{open}} (unsigned int index)
+\begin{DoxyCompactList}\small\item\em Open the joystick. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a2c3954572cd37b41ad3d2858163473c1}{close}} ()
+\begin{DoxyCompactList}\small\item\em Close the joystick. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsf_1_1priv_1_1_joystick_caps}{Joystick\+Caps}} \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_acc7ccc3fcd5e8722f42bda354f960353}{get\+Capabilities}} () const
+\begin{DoxyCompactList}\small\item\em Get the joystick capabilities. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsf_1_1_joystick_1_1_identification}{Joystick\+::\+Identification}} \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a1c169b63a61da578ed28b8314e17357d}{get\+Identification}} () const
+\begin{DoxyCompactList}\small\item\em Get the joystick identification. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsf_1_1priv_1_1_joystick_state}{Joystick\+State}} \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_af0b8d7b58072b78ee1f477e4c9b93840}{update}} ()
+\begin{DoxyCompactList}\small\item\em Update the joystick and get its new state. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a072d46492e9d438f121d68e83e22d0ad}{open\+DInput}} (unsigned int index)
+\begin{DoxyCompactList}\small\item\em Open the joystick (DInput) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_ae28a837c488a4174d254a68e63428676}{close\+DInput}} ()
+\begin{DoxyCompactList}\small\item\em Close the joystick (DInput) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsf_1_1priv_1_1_joystick_caps}{Joystick\+Caps}} \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a1835104731e8bff42bf6383df52bd2ef}{get\+Capabilities\+DInput}} () const
+\begin{DoxyCompactList}\small\item\em Get the joystick capabilities (DInput) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsf_1_1priv_1_1_joystick_state}{Joystick\+State}} \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a9ad7079fd5493f50eb01d81f6bfdc858}{update\+DInput\+Buffered}} ()
+\begin{DoxyCompactList}\small\item\em Update the joystick and get its new state (DInput, Buffered) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsf_1_1priv_1_1_joystick_state}{Joystick\+State}} \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_acbd9b9721037f8bc953e4514ca1b041d}{update\+DInput\+Polled}} ()
+\begin{DoxyCompactList}\small\item\em Update the joystick and get its new state (DInput, Polled) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Statyczne metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_ae6325c9309c5b3ac11a379f5b07813e1}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Perform the global initialization of the joystick module. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a90e201593b89532522223ba152facd66}{cleanup}} ()
+\begin{DoxyCompactList}\small\item\em Perform the global cleanup of the joystick module. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_aab3b8deaa7f0a475945d855dc858cc71}{is\+Connected}} (unsigned int index)
+\begin{DoxyCompactList}\small\item\em Check if a joystick is currently connected. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a5c431845acc18564f6ca43abf2892c98}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Perform the global initialization of the joystick module. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_aa494706a20d8dc372f9ace3a9997eb20}{cleanup}} ()
+\begin{DoxyCompactList}\small\item\em Perform the global cleanup of the joystick module. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a8dbefc9636277a127923e22a30df9339}{is\+Connected}} (unsigned int index)
+\begin{DoxyCompactList}\small\item\em Check if a joystick is currently connected. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a5c431845acc18564f6ca43abf2892c98}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Perform the global initialization of the joystick module. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_aa494706a20d8dc372f9ace3a9997eb20}{cleanup}} ()
+\begin{DoxyCompactList}\small\item\em Perform the global cleanup of the joystick module. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a8dbefc9636277a127923e22a30df9339}{is\+Connected}} (unsigned int index)
+\begin{DoxyCompactList}\small\item\em Check if a joystick is currently connected. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a5c431845acc18564f6ca43abf2892c98}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Perform the global initialization of the joystick module. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_aa494706a20d8dc372f9ace3a9997eb20}{cleanup}} ()
+\begin{DoxyCompactList}\small\item\em Perform the global cleanup of the joystick module. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a8dbefc9636277a127923e22a30df9339}{is\+Connected}} (unsigned int index)
+\begin{DoxyCompactList}\small\item\em Check if a joystick is currently connected. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a5c431845acc18564f6ca43abf2892c98}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Perform the global initialization of the joystick module. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_aa494706a20d8dc372f9ace3a9997eb20}{cleanup}} ()
+\begin{DoxyCompactList}\small\item\em Perform the global cleanup of the joystick module. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a8dbefc9636277a127923e22a30df9339}{is\+Connected}} (unsigned int index)
+\begin{DoxyCompactList}\small\item\em Check if a joystick is currently connected. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a5c431845acc18564f6ca43abf2892c98}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Perform the global initialization of the joystick module. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_aa494706a20d8dc372f9ace3a9997eb20}{cleanup}} ()
+\begin{DoxyCompactList}\small\item\em Perform the global cleanup of the joystick module. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a8dbefc9636277a127923e22a30df9339}{is\+Connected}} (unsigned int index)
+\begin{DoxyCompactList}\small\item\em Check if a joystick is currently connected. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a5c431845acc18564f6ca43abf2892c98}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Perform the global initialization of the joystick module. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_aa494706a20d8dc372f9ace3a9997eb20}{cleanup}} ()
+\begin{DoxyCompactList}\small\item\em Perform the global cleanup of the joystick module. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a8dbefc9636277a127923e22a30df9339}{is\+Connected}} (unsigned int index)
+\begin{DoxyCompactList}\small\item\em Check if a joystick is currently connected. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a5c431845acc18564f6ca43abf2892c98}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Perform the global initialization of the joystick module. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_aa494706a20d8dc372f9ace3a9997eb20}{cleanup}} ()
+\begin{DoxyCompactList}\small\item\em Perform the global cleanup of the joystick module. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a8dbefc9636277a127923e22a30df9339}{is\+Connected}} (unsigned int index)
+\begin{DoxyCompactList}\small\item\em Check if a joystick is currently connected. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a250c25c37809b5fe074aaa911a99eac8}{set\+Lazy\+Updates}} (bool status)
+\begin{DoxyCompactList}\small\item\em Enable or disable lazy enumeration updates. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a4a4bd8f9ac71c43faf1af79faba3d2b2}{update\+Connections}} ()
+\begin{DoxyCompactList}\small\item\em Update the connection status of all joysticks. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a38e9fea02e720721e9f8c0b4e1170c2d}{initialize\+DInput}} ()
+\begin{DoxyCompactList}\small\item\em Perform the global initialization of the joystick module (DInput) \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a16aa4e374bda269732c62ee15fa42db6}{cleanup\+DInput}} ()
+\begin{DoxyCompactList}\small\item\em Perform the global cleanup of the joystick module (DInput) \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a0f42492fd7690976bcb3f44fa77b907a}{is\+Connected\+DInput}} (unsigned int index)
+\begin{DoxyCompactList}\small\item\em Check if a joystick is currently connected (DInput) \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a55c71c73b1dee212d00d36dc66edf519}{update\+Connections\+DInput}} ()
+\begin{DoxyCompactList}\small\item\em Update the connection status of all joysticks (DInput) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typy prywatne}
+\begin{DoxyCompactItemize}
+\item 
+typedef long \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_af32453622487cbaf575de1706418fd70}{Location}}
+\item 
+typedef std\+::map$<$ \mbox{\hyperlink{classsf_1_1_joystick_a48db337092c2e263774f94de6d50baa7}{sf\+::\+Joystick\+::\+Axis}}, IOHIDElement\+Ref $>$ \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a6e7fb4b4b3e86009b8eec7e9ee51db6b}{Axis\+Map}}
+\item 
+typedef std\+::vector$<$ IOHIDElement\+Ref $>$ \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a64cfdab5a0420b626cb723d7efb41e8e}{Buttons\+Vector}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Statyczne metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+static BOOL CALLBACK \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a3aa1c420cd53a46018e21c5c5a5d5c6d}{device\+Enumeration\+Callback}} (const DIDEVICEINSTANCE \texorpdfstring{$\ast$}{*}device\+Instance, void \texorpdfstring{$\ast$}{*}user\+Data)
+\begin{DoxyCompactList}\small\item\em Device enumeration callback function passed to Enum\+Devices in update\+Connections. \end{DoxyCompactList}\item 
+static BOOL CALLBACK \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a8c0cb112ec9ab733925188ccf137b7fa}{device\+Object\+Enumeration\+Callback}} (const DIDEVICEOBJECTINSTANCE \texorpdfstring{$\ast$}{*}device\+Object\+Instance, void \texorpdfstring{$\ast$}{*}user\+Data)
+\begin{DoxyCompactList}\small\item\em Device object enumeration callback function passed to Enum\+Objects in open. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsf_1_1_joystick_1_1_identification}{Joystick\+::\+Identification}} \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a7efbd3f4900893c3ced688c045b36fd1}{m\+\_\+identification}}
+\begin{DoxyCompactList}\small\item\em \doxylink{classsf_1_1_joystick}{Joystick} identification. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_accba771cadd9f623b7c8fe86d8c40a7b}{m\+\_\+file}}
+\begin{DoxyCompactList}\small\item\em File descriptor of the joystick. \end{DoxyCompactList}\item 
+report\+\_\+desc\+\_\+t \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a164ef72a547ea4ffec8c00b708852bd7}{m\+\_\+desc}}
+\begin{DoxyCompactList}\small\item\em USB report descriptor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a11bdfa9e230cd846d6f9bde32e4bd45d}{m\+\_\+id}}
+\begin{DoxyCompactList}\small\item\em USB id. \end{DoxyCompactList}\item 
+std\+::vector$<$ char $>$ \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_aa74e83a6421a1bc091ebc07316389132}{m\+\_\+buffer}}
+\begin{DoxyCompactList}\small\item\em USB HID buffer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_aa8e3bb1aec63b40a5292ad397201e035}{m\+\_\+length}}
+\begin{DoxyCompactList}\small\item\em Buffer length. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsf_1_1priv_1_1_joystick_state}{Joystick\+State}} \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a78855fcdb878a62810e078de421b59c4}{m\+\_\+state}}
+\begin{DoxyCompactList}\small\item\em Current state of the joystick. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a470b99a9741d7857d5a237728b265302}{m\+\_\+index}}
+\begin{DoxyCompactList}\small\item\em Index of the joystick. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a6e7fb4b4b3e86009b8eec7e9ee51db6b}{Axis\+Map}} \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a8443b2eb0bf1cabaec18e99a519d0146}{m\+\_\+axis}}
+\begin{DoxyCompactList}\small\item\em Axes (but not POV/\+Hat) of the joystick. \end{DoxyCompactList}\item 
+IOHIDElement\+Ref \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a8c84eb7710555c6fd29d2eed0e462270}{m\+\_\+hat}}
+\begin{DoxyCompactList}\small\item\em POV/\+Hat axis of the joystick. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a64cfdab5a0420b626cb723d7efb41e8e}{Buttons\+Vector}} \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a72bbf289d2adb6ee8a725af87fe09b6e}{m\+\_\+buttons}}
+\begin{DoxyCompactList}\small\item\em Buttons of the joystick. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a470b99a9741d7857d5a237728b265302}{m\+\_\+index}}
+\begin{DoxyCompactList}\small\item\em SFML index. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a4d38f4aa21c949d0a3673a2138365c1b}{m\+\_\+mapping}} \mbox{[}ABS\+\_\+\+MAX+1\mbox{]}
+\begin{DoxyCompactList}\small\item\em Axes mapping (index to axis id) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsf_1_1_joystick_1_1_identification}{sf\+::\+Joystick\+::\+Identification}} \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_abf51ad793640de2511e3035914dc8bf4}{m\+\_\+identification}}
+\begin{DoxyCompactList}\small\item\em Identification of the joystick. \end{DoxyCompactList}\item 
+JOYCAPS \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a9a88420f006178d4e37154b270f7161b}{m\+\_\+caps}}
+\begin{DoxyCompactList}\small\item\em \doxylink{classsf_1_1_joystick}{Joystick} capabilities. \end{DoxyCompactList}\item 
+IDirect\+Input\+Device8W \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a992467e2e7fe20ef2b637748dc8948f1}{m\+\_\+device}}
+\begin{DoxyCompactList}\small\item\em Direct\+Input 8.\+x device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_d_i_d_e_v_c_a_p_s}{DIDEVCAPS}} \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a29f6f0d69bab15a4f5194370a34ed47d}{m\+\_\+device\+Caps}}
+\begin{DoxyCompactList}\small\item\em Direct\+Input device capabilities. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_ad31149c4acb152c6e1249f0c09cce122}{m\+\_\+axes}} \mbox{[}\mbox{\hyperlink{classsf_1_1_joystick_ab2f321679e29b742f24eb0de91f30149accf3e487c9f6ee2f384351323626a42c}{Joystick\+::\+Axis\+Count}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Offsets to the bytes containing the axes states, -\/1 if not available. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_ad692307d19cd2c3c5c57b1f94051a37e}{m\+\_\+buttons}} \mbox{[}\mbox{\hyperlink{classsf_1_1_joystick_ab2f321679e29b742f24eb0de91f30149a2f1b8a0a59f2c12a4775c0e1e69e1816}{Joystick\+::\+Button\+Count}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Offsets to the bytes containing the button states, -\/1 if not available. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a6429faed72ff1aaf61488abe770d3680}{m\+\_\+buffered}}
+\begin{DoxyCompactList}\small\item\em true if the device uses buffering, false if the device uses polling \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Statyczne atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_af32453622487cbaf575de1706418fd70}{Location}} \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a15bdd881634b8c06647efc79c9b159e4}{m\+\_\+location\+IDs}} \mbox{[}\mbox{\hyperlink{classsf_1_1_joystick_ab2f321679e29b742f24eb0de91f30149a6e0a2a95bc1da277610c04d80f52715e}{sf\+::\+Joystick\+::\+Count}}\mbox{]} = \{ 0 \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Android implementation of joysticks. 
+
+Windows implementation of joysticks.
+
+Linux implementation of joysticks.
+
+Mac OS X implementation of joysticks.
+
+Open\+BSD implementation of joysticks.
+
+i\+OS implementation of joysticks
+
+Free\+BSD implementation of joysticks.
+
+This code has been tested on Free\+BSD 9.\+1 only. 
+
+\doxysubsection{Dokumentacja składowych definicji typu}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a6e7fb4b4b3e86009b8eec7e9ee51db6b}\label{classsf_1_1priv_1_1_joystick_impl_a6e7fb4b4b3e86009b8eec7e9ee51db6b} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!AxisMap@{AxisMap}}
+\index{AxisMap@{AxisMap}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{AxisMap}{AxisMap}}
+{\footnotesize\ttfamily typedef std\+::map$<$\mbox{\hyperlink{classsf_1_1_joystick_a48db337092c2e263774f94de6d50baa7}{sf\+::\+Joystick\+::\+Axis}}, IOHIDElement\+Ref$>$ \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a6e7fb4b4b3e86009b8eec7e9ee51db6b}{sf\+::priv\+::\+Joystick\+Impl\+::\+Axis\+Map}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a64cfdab5a0420b626cb723d7efb41e8e}\label{classsf_1_1priv_1_1_joystick_impl_a64cfdab5a0420b626cb723d7efb41e8e} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!ButtonsVector@{ButtonsVector}}
+\index{ButtonsVector@{ButtonsVector}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{ButtonsVector}{ButtonsVector}}
+{\footnotesize\ttfamily typedef std\+::vector$<$IOHIDElement\+Ref$>$ \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a64cfdab5a0420b626cb723d7efb41e8e}{sf\+::priv\+::\+Joystick\+Impl\+::\+Buttons\+Vector}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_af32453622487cbaf575de1706418fd70}\label{classsf_1_1priv_1_1_joystick_impl_af32453622487cbaf575de1706418fd70} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!Location@{Location}}
+\index{Location@{Location}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{Location}{Location}}
+{\footnotesize\ttfamily typedef long \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_af32453622487cbaf575de1706418fd70}{sf\+::priv\+::\+Joystick\+Impl\+::\+Location}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_ab175935d03c985d006030f213bf3eaa9}\label{classsf_1_1priv_1_1_joystick_impl_ab175935d03c985d006030f213bf3eaa9} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!JoystickImpl@{JoystickImpl}}
+\index{JoystickImpl@{JoystickImpl}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{JoystickImpl()}{JoystickImpl()}}
+{\footnotesize\ttfamily sf\+::priv\+::\+Joystick\+Impl\+::\+Joystick\+Impl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a90e201593b89532522223ba152facd66}\label{classsf_1_1priv_1_1_joystick_impl_a90e201593b89532522223ba152facd66} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{cleanup()}{cleanup()}\hspace{0.1cm}{\footnotesize\ttfamily [1/8]}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Joystick\+Impl\+::cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Perform the global cleanup of the joystick module. 
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_joystick_impl_a90e201593b89532522223ba152facd66_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_aa494706a20d8dc372f9ace3a9997eb20}\label{classsf_1_1priv_1_1_joystick_impl_aa494706a20d8dc372f9ace3a9997eb20} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{cleanup()}{cleanup()}\hspace{0.1cm}{\footnotesize\ttfamily [2/8]}}
+{\footnotesize\ttfamily static void sf\+::priv\+::\+Joystick\+Impl\+::cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Perform the global cleanup of the joystick module. 
+
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_aa494706a20d8dc372f9ace3a9997eb20}\label{classsf_1_1priv_1_1_joystick_impl_aa494706a20d8dc372f9ace3a9997eb20} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{cleanup()}{cleanup()}\hspace{0.1cm}{\footnotesize\ttfamily [3/8]}}
+{\footnotesize\ttfamily static void sf\+::priv\+::\+Joystick\+Impl\+::cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Perform the global cleanup of the joystick module. 
+
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_aa494706a20d8dc372f9ace3a9997eb20}\label{classsf_1_1priv_1_1_joystick_impl_aa494706a20d8dc372f9ace3a9997eb20} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{cleanup()}{cleanup()}\hspace{0.1cm}{\footnotesize\ttfamily [4/8]}}
+{\footnotesize\ttfamily static void sf\+::priv\+::\+Joystick\+Impl\+::cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Perform the global cleanup of the joystick module. 
+
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_aa494706a20d8dc372f9ace3a9997eb20}\label{classsf_1_1priv_1_1_joystick_impl_aa494706a20d8dc372f9ace3a9997eb20} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{cleanup()}{cleanup()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
+{\footnotesize\ttfamily static void sf\+::priv\+::\+Joystick\+Impl\+::cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Perform the global cleanup of the joystick module. 
+
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_aa494706a20d8dc372f9ace3a9997eb20}\label{classsf_1_1priv_1_1_joystick_impl_aa494706a20d8dc372f9ace3a9997eb20} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{cleanup()}{cleanup()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+{\footnotesize\ttfamily static void sf\+::priv\+::\+Joystick\+Impl\+::cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Perform the global cleanup of the joystick module. 
+
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_aa494706a20d8dc372f9ace3a9997eb20}\label{classsf_1_1priv_1_1_joystick_impl_aa494706a20d8dc372f9ace3a9997eb20} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{cleanup()}{cleanup()}\hspace{0.1cm}{\footnotesize\ttfamily [7/8]}}
+{\footnotesize\ttfamily static void sf\+::priv\+::\+Joystick\+Impl\+::cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Perform the global cleanup of the joystick module. 
+
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_aa494706a20d8dc372f9ace3a9997eb20}\label{classsf_1_1priv_1_1_joystick_impl_aa494706a20d8dc372f9ace3a9997eb20} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{cleanup()}{cleanup()}\hspace{0.1cm}{\footnotesize\ttfamily [8/8]}}
+{\footnotesize\ttfamily static void sf\+::priv\+::\+Joystick\+Impl\+::cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Perform the global cleanup of the joystick module. 
+
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a16aa4e374bda269732c62ee15fa42db6}\label{classsf_1_1priv_1_1_joystick_impl_a16aa4e374bda269732c62ee15fa42db6} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!cleanupDInput@{cleanupDInput}}
+\index{cleanupDInput@{cleanupDInput}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{cleanupDInput()}{cleanupDInput()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Joystick\+Impl\+::cleanup\+DInput (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Perform the global cleanup of the joystick module (DInput) 
+
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a2c3954572cd37b41ad3d2858163473c1}\label{classsf_1_1priv_1_1_joystick_impl_a2c3954572cd37b41ad3d2858163473c1} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!close@{close}}
+\index{close@{close}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}\hspace{0.1cm}{\footnotesize\ttfamily [1/8]}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Joystick\+Impl\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Close the joystick. 
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_joystick_impl_a2c3954572cd37b41ad3d2858163473c1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a2c3954572cd37b41ad3d2858163473c1}\label{classsf_1_1priv_1_1_joystick_impl_a2c3954572cd37b41ad3d2858163473c1} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!close@{close}}
+\index{close@{close}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}\hspace{0.1cm}{\footnotesize\ttfamily [2/8]}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Joystick\+Impl\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Close the joystick. 
+
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a2c3954572cd37b41ad3d2858163473c1}\label{classsf_1_1priv_1_1_joystick_impl_a2c3954572cd37b41ad3d2858163473c1} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!close@{close}}
+\index{close@{close}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}\hspace{0.1cm}{\footnotesize\ttfamily [3/8]}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Joystick\+Impl\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Close the joystick. 
+
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a2c3954572cd37b41ad3d2858163473c1}\label{classsf_1_1priv_1_1_joystick_impl_a2c3954572cd37b41ad3d2858163473c1} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!close@{close}}
+\index{close@{close}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}\hspace{0.1cm}{\footnotesize\ttfamily [4/8]}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Joystick\+Impl\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Close the joystick. 
+
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a2c3954572cd37b41ad3d2858163473c1}\label{classsf_1_1priv_1_1_joystick_impl_a2c3954572cd37b41ad3d2858163473c1} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!close@{close}}
+\index{close@{close}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Joystick\+Impl\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Close the joystick. 
+
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a2c3954572cd37b41ad3d2858163473c1}\label{classsf_1_1priv_1_1_joystick_impl_a2c3954572cd37b41ad3d2858163473c1} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!close@{close}}
+\index{close@{close}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Joystick\+Impl\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Close the joystick. 
+
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a2c3954572cd37b41ad3d2858163473c1}\label{classsf_1_1priv_1_1_joystick_impl_a2c3954572cd37b41ad3d2858163473c1} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!close@{close}}
+\index{close@{close}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}\hspace{0.1cm}{\footnotesize\ttfamily [7/8]}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Joystick\+Impl\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Close the joystick. 
+
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a2c3954572cd37b41ad3d2858163473c1}\label{classsf_1_1priv_1_1_joystick_impl_a2c3954572cd37b41ad3d2858163473c1} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!close@{close}}
+\index{close@{close}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}\hspace{0.1cm}{\footnotesize\ttfamily [8/8]}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Joystick\+Impl\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Close the joystick. 
+
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_ae28a837c488a4174d254a68e63428676}\label{classsf_1_1priv_1_1_joystick_impl_ae28a837c488a4174d254a68e63428676} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!closeDInput@{closeDInput}}
+\index{closeDInput@{closeDInput}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{closeDInput()}{closeDInput()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Joystick\+Impl\+::close\+DInput (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Close the joystick (DInput) 
+
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a3aa1c420cd53a46018e21c5c5a5d5c6d}\label{classsf_1_1priv_1_1_joystick_impl_a3aa1c420cd53a46018e21c5c5a5d5c6d} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!deviceEnumerationCallback@{deviceEnumerationCallback}}
+\index{deviceEnumerationCallback@{deviceEnumerationCallback}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{deviceEnumerationCallback()}{deviceEnumerationCallback()}}
+{\footnotesize\ttfamily BOOL CALLBACK sf\+::priv\+::\+Joystick\+Impl\+::device\+Enumeration\+Callback (\begin{DoxyParamCaption}\item[{const DIDEVICEINSTANCE \texorpdfstring{$\ast$}{*}}]{device\+Instance,  }\item[{void \texorpdfstring{$\ast$}{*}}]{user\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Device enumeration callback function passed to Enum\+Devices in update\+Connections. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em device\+Instance} & Device object instance \\
+\hline
+{\em user\+Data} & User data (unused)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+DIENUM\+\_\+\+CONTINUE to continue enumerating devices or DIENUM\+\_\+\+STOP to stop 
+\end{DoxyReturn}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_joystick_impl_a3aa1c420cd53a46018e21c5c5a5d5c6d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a8c0cb112ec9ab733925188ccf137b7fa}\label{classsf_1_1priv_1_1_joystick_impl_a8c0cb112ec9ab733925188ccf137b7fa} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!deviceObjectEnumerationCallback@{deviceObjectEnumerationCallback}}
+\index{deviceObjectEnumerationCallback@{deviceObjectEnumerationCallback}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{deviceObjectEnumerationCallback()}{deviceObjectEnumerationCallback()}}
+{\footnotesize\ttfamily BOOL CALLBACK sf\+::priv\+::\+Joystick\+Impl\+::device\+Object\+Enumeration\+Callback (\begin{DoxyParamCaption}\item[{const DIDEVICEOBJECTINSTANCE \texorpdfstring{$\ast$}{*}}]{device\+Object\+Instance,  }\item[{void \texorpdfstring{$\ast$}{*}}]{user\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Device object enumeration callback function passed to Enum\+Objects in open. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em device\+Object\+Instance} & Device object instance \\
+\hline
+{\em user\+Data} & User data (pointer to our \doxylink{classsf_1_1priv_1_1_joystick_impl}{Joystick\+Impl} object)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+DIENUM\+\_\+\+CONTINUE to continue enumerating objects or DIENUM\+\_\+\+STOP to stop 
+\end{DoxyReturn}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classsf_1_1priv_1_1_joystick_impl_a8c0cb112ec9ab733925188ccf137b7fa_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_joystick_impl_a8c0cb112ec9ab733925188ccf137b7fa_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_acc7ccc3fcd5e8722f42bda354f960353}\label{classsf_1_1priv_1_1_joystick_impl_acc7ccc3fcd5e8722f42bda354f960353} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!getCapabilities@{getCapabilities}}
+\index{getCapabilities@{getCapabilities}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{getCapabilities()}{getCapabilities()}\hspace{0.1cm}{\footnotesize\ttfamily [1/8]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsf_1_1priv_1_1_joystick_caps}{Joystick\+Caps}} sf\+::priv\+::\+Joystick\+Impl\+::get\+Capabilities (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the joystick capabilities. 
+
+\begin{DoxyReturn}{Zwraca}
+\doxylink{classsf_1_1_joystick}{Joystick} capabilities 
+\end{DoxyReturn}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_joystick_impl_acc7ccc3fcd5e8722f42bda354f960353_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_acc7ccc3fcd5e8722f42bda354f960353}\label{classsf_1_1priv_1_1_joystick_impl_acc7ccc3fcd5e8722f42bda354f960353} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!getCapabilities@{getCapabilities}}
+\index{getCapabilities@{getCapabilities}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{getCapabilities()}{getCapabilities()}\hspace{0.1cm}{\footnotesize\ttfamily [2/8]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsf_1_1priv_1_1_joystick_caps}{Joystick\+Caps}} sf\+::priv\+::\+Joystick\+Impl\+::get\+Capabilities (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the joystick capabilities. 
+
+\begin{DoxyReturn}{Zwraca}
+\doxylink{classsf_1_1_joystick}{Joystick} capabilities 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_acc7ccc3fcd5e8722f42bda354f960353}\label{classsf_1_1priv_1_1_joystick_impl_acc7ccc3fcd5e8722f42bda354f960353} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!getCapabilities@{getCapabilities}}
+\index{getCapabilities@{getCapabilities}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{getCapabilities()}{getCapabilities()}\hspace{0.1cm}{\footnotesize\ttfamily [3/8]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsf_1_1priv_1_1_joystick_caps}{Joystick\+Caps}} sf\+::priv\+::\+Joystick\+Impl\+::get\+Capabilities (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the joystick capabilities. 
+
+\begin{DoxyReturn}{Zwraca}
+\doxylink{classsf_1_1_joystick}{Joystick} capabilities 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_acc7ccc3fcd5e8722f42bda354f960353}\label{classsf_1_1priv_1_1_joystick_impl_acc7ccc3fcd5e8722f42bda354f960353} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!getCapabilities@{getCapabilities}}
+\index{getCapabilities@{getCapabilities}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{getCapabilities()}{getCapabilities()}\hspace{0.1cm}{\footnotesize\ttfamily [4/8]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsf_1_1priv_1_1_joystick_caps}{Joystick\+Caps}} sf\+::priv\+::\+Joystick\+Impl\+::get\+Capabilities (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the joystick capabilities. 
+
+\begin{DoxyReturn}{Zwraca}
+\doxylink{classsf_1_1_joystick}{Joystick} capabilities 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_acc7ccc3fcd5e8722f42bda354f960353}\label{classsf_1_1priv_1_1_joystick_impl_acc7ccc3fcd5e8722f42bda354f960353} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!getCapabilities@{getCapabilities}}
+\index{getCapabilities@{getCapabilities}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{getCapabilities()}{getCapabilities()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsf_1_1priv_1_1_joystick_caps}{Joystick\+Caps}} sf\+::priv\+::\+Joystick\+Impl\+::get\+Capabilities (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the joystick capabilities. 
+
+\begin{DoxyReturn}{Zwraca}
+\doxylink{classsf_1_1_joystick}{Joystick} capabilities 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_acc7ccc3fcd5e8722f42bda354f960353}\label{classsf_1_1priv_1_1_joystick_impl_acc7ccc3fcd5e8722f42bda354f960353} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!getCapabilities@{getCapabilities}}
+\index{getCapabilities@{getCapabilities}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{getCapabilities()}{getCapabilities()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsf_1_1priv_1_1_joystick_caps}{Joystick\+Caps}} sf\+::priv\+::\+Joystick\+Impl\+::get\+Capabilities (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the joystick capabilities. 
+
+\begin{DoxyReturn}{Zwraca}
+\doxylink{classsf_1_1_joystick}{Joystick} capabilities 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_acc7ccc3fcd5e8722f42bda354f960353}\label{classsf_1_1priv_1_1_joystick_impl_acc7ccc3fcd5e8722f42bda354f960353} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!getCapabilities@{getCapabilities}}
+\index{getCapabilities@{getCapabilities}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{getCapabilities()}{getCapabilities()}\hspace{0.1cm}{\footnotesize\ttfamily [7/8]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsf_1_1priv_1_1_joystick_caps}{Joystick\+Caps}} sf\+::priv\+::\+Joystick\+Impl\+::get\+Capabilities (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the joystick capabilities. 
+
+\begin{DoxyReturn}{Zwraca}
+\doxylink{classsf_1_1_joystick}{Joystick} capabilities 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_acc7ccc3fcd5e8722f42bda354f960353}\label{classsf_1_1priv_1_1_joystick_impl_acc7ccc3fcd5e8722f42bda354f960353} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!getCapabilities@{getCapabilities}}
+\index{getCapabilities@{getCapabilities}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{getCapabilities()}{getCapabilities()}\hspace{0.1cm}{\footnotesize\ttfamily [8/8]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsf_1_1priv_1_1_joystick_caps}{Joystick\+Caps}} sf\+::priv\+::\+Joystick\+Impl\+::get\+Capabilities (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the joystick capabilities. 
+
+\begin{DoxyReturn}{Zwraca}
+\doxylink{classsf_1_1_joystick}{Joystick} capabilities 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a1835104731e8bff42bf6383df52bd2ef}\label{classsf_1_1priv_1_1_joystick_impl_a1835104731e8bff42bf6383df52bd2ef} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!getCapabilitiesDInput@{getCapabilitiesDInput}}
+\index{getCapabilitiesDInput@{getCapabilitiesDInput}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{getCapabilitiesDInput()}{getCapabilitiesDInput()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsf_1_1priv_1_1_joystick_caps}{Joystick\+Caps}} sf\+::priv\+::\+Joystick\+Impl\+::get\+Capabilities\+DInput (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the joystick capabilities (DInput) 
+
+\begin{DoxyReturn}{Zwraca}
+\doxylink{classsf_1_1_joystick}{Joystick} capabilities 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a1c169b63a61da578ed28b8314e17357d}\label{classsf_1_1priv_1_1_joystick_impl_a1c169b63a61da578ed28b8314e17357d} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!getIdentification@{getIdentification}}
+\index{getIdentification@{getIdentification}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{getIdentification()}{getIdentification()}\hspace{0.1cm}{\footnotesize\ttfamily [1/8]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsf_1_1_joystick_1_1_identification}{Joystick\+::\+Identification}} sf\+::priv\+::\+Joystick\+Impl\+::get\+Identification (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the joystick identification. 
+
+\begin{DoxyReturn}{Zwraca}
+\doxylink{classsf_1_1_joystick}{Joystick} identification 
+\end{DoxyReturn}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_joystick_impl_a1c169b63a61da578ed28b8314e17357d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a1c169b63a61da578ed28b8314e17357d}\label{classsf_1_1priv_1_1_joystick_impl_a1c169b63a61da578ed28b8314e17357d} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!getIdentification@{getIdentification}}
+\index{getIdentification@{getIdentification}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{getIdentification()}{getIdentification()}\hspace{0.1cm}{\footnotesize\ttfamily [2/8]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsf_1_1_joystick_1_1_identification}{Joystick\+::\+Identification}} sf\+::priv\+::\+Joystick\+Impl\+::get\+Identification (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the joystick identification. 
+
+\begin{DoxyReturn}{Zwraca}
+\doxylink{classsf_1_1_joystick}{Joystick} identification 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a1c169b63a61da578ed28b8314e17357d}\label{classsf_1_1priv_1_1_joystick_impl_a1c169b63a61da578ed28b8314e17357d} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!getIdentification@{getIdentification}}
+\index{getIdentification@{getIdentification}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{getIdentification()}{getIdentification()}\hspace{0.1cm}{\footnotesize\ttfamily [3/8]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsf_1_1_joystick_1_1_identification}{Joystick\+::\+Identification}} sf\+::priv\+::\+Joystick\+Impl\+::get\+Identification (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the joystick identification. 
+
+\begin{DoxyReturn}{Zwraca}
+\doxylink{classsf_1_1_joystick}{Joystick} identification 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a1c169b63a61da578ed28b8314e17357d}\label{classsf_1_1priv_1_1_joystick_impl_a1c169b63a61da578ed28b8314e17357d} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!getIdentification@{getIdentification}}
+\index{getIdentification@{getIdentification}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{getIdentification()}{getIdentification()}\hspace{0.1cm}{\footnotesize\ttfamily [4/8]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsf_1_1_joystick_1_1_identification}{Joystick\+::\+Identification}} sf\+::priv\+::\+Joystick\+Impl\+::get\+Identification (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the joystick identification. 
+
+\begin{DoxyReturn}{Zwraca}
+\doxylink{classsf_1_1_joystick}{Joystick} identification 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a1c169b63a61da578ed28b8314e17357d}\label{classsf_1_1priv_1_1_joystick_impl_a1c169b63a61da578ed28b8314e17357d} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!getIdentification@{getIdentification}}
+\index{getIdentification@{getIdentification}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{getIdentification()}{getIdentification()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsf_1_1_joystick_1_1_identification}{Joystick\+::\+Identification}} sf\+::priv\+::\+Joystick\+Impl\+::get\+Identification (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the joystick identification. 
+
+\begin{DoxyReturn}{Zwraca}
+\doxylink{classsf_1_1_joystick}{Joystick} identification 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a1c169b63a61da578ed28b8314e17357d}\label{classsf_1_1priv_1_1_joystick_impl_a1c169b63a61da578ed28b8314e17357d} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!getIdentification@{getIdentification}}
+\index{getIdentification@{getIdentification}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{getIdentification()}{getIdentification()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsf_1_1_joystick_1_1_identification}{Joystick\+::\+Identification}} sf\+::priv\+::\+Joystick\+Impl\+::get\+Identification (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the joystick identification. 
+
+\begin{DoxyReturn}{Zwraca}
+\doxylink{classsf_1_1_joystick}{Joystick} identification 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a1c169b63a61da578ed28b8314e17357d}\label{classsf_1_1priv_1_1_joystick_impl_a1c169b63a61da578ed28b8314e17357d} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!getIdentification@{getIdentification}}
+\index{getIdentification@{getIdentification}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{getIdentification()}{getIdentification()}\hspace{0.1cm}{\footnotesize\ttfamily [7/8]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsf_1_1_joystick_1_1_identification}{Joystick\+::\+Identification}} sf\+::priv\+::\+Joystick\+Impl\+::get\+Identification (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the joystick identification. 
+
+\begin{DoxyReturn}{Zwraca}
+\doxylink{classsf_1_1_joystick}{Joystick} identification 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a1c169b63a61da578ed28b8314e17357d}\label{classsf_1_1priv_1_1_joystick_impl_a1c169b63a61da578ed28b8314e17357d} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!getIdentification@{getIdentification}}
+\index{getIdentification@{getIdentification}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{getIdentification()}{getIdentification()}\hspace{0.1cm}{\footnotesize\ttfamily [8/8]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsf_1_1_joystick_1_1_identification}{Joystick\+::\+Identification}} sf\+::priv\+::\+Joystick\+Impl\+::get\+Identification (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the joystick identification. 
+
+\begin{DoxyReturn}{Zwraca}
+\doxylink{classsf_1_1_joystick}{Joystick} identification 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_ae6325c9309c5b3ac11a379f5b07813e1}\label{classsf_1_1priv_1_1_joystick_impl_ae6325c9309c5b3ac11a379f5b07813e1} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!initialize@{initialize}}
+\index{initialize@{initialize}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/8]}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Joystick\+Impl\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Perform the global initialization of the joystick module. 
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_joystick_impl_ae6325c9309c5b3ac11a379f5b07813e1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a5c431845acc18564f6ca43abf2892c98}\label{classsf_1_1priv_1_1_joystick_impl_a5c431845acc18564f6ca43abf2892c98} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!initialize@{initialize}}
+\index{initialize@{initialize}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/8]}}
+{\footnotesize\ttfamily static void sf\+::priv\+::\+Joystick\+Impl\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Perform the global initialization of the joystick module. 
+
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a5c431845acc18564f6ca43abf2892c98}\label{classsf_1_1priv_1_1_joystick_impl_a5c431845acc18564f6ca43abf2892c98} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!initialize@{initialize}}
+\index{initialize@{initialize}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [3/8]}}
+{\footnotesize\ttfamily static void sf\+::priv\+::\+Joystick\+Impl\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Perform the global initialization of the joystick module. 
+
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a5c431845acc18564f6ca43abf2892c98}\label{classsf_1_1priv_1_1_joystick_impl_a5c431845acc18564f6ca43abf2892c98} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!initialize@{initialize}}
+\index{initialize@{initialize}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [4/8]}}
+{\footnotesize\ttfamily static void sf\+::priv\+::\+Joystick\+Impl\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Perform the global initialization of the joystick module. 
+
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a5c431845acc18564f6ca43abf2892c98}\label{classsf_1_1priv_1_1_joystick_impl_a5c431845acc18564f6ca43abf2892c98} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!initialize@{initialize}}
+\index{initialize@{initialize}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
+{\footnotesize\ttfamily static void sf\+::priv\+::\+Joystick\+Impl\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Perform the global initialization of the joystick module. 
+
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a5c431845acc18564f6ca43abf2892c98}\label{classsf_1_1priv_1_1_joystick_impl_a5c431845acc18564f6ca43abf2892c98} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!initialize@{initialize}}
+\index{initialize@{initialize}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+{\footnotesize\ttfamily static void sf\+::priv\+::\+Joystick\+Impl\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Perform the global initialization of the joystick module. 
+
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a5c431845acc18564f6ca43abf2892c98}\label{classsf_1_1priv_1_1_joystick_impl_a5c431845acc18564f6ca43abf2892c98} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!initialize@{initialize}}
+\index{initialize@{initialize}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [7/8]}}
+{\footnotesize\ttfamily static void sf\+::priv\+::\+Joystick\+Impl\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Perform the global initialization of the joystick module. 
+
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a5c431845acc18564f6ca43abf2892c98}\label{classsf_1_1priv_1_1_joystick_impl_a5c431845acc18564f6ca43abf2892c98} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!initialize@{initialize}}
+\index{initialize@{initialize}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [8/8]}}
+{\footnotesize\ttfamily static void sf\+::priv\+::\+Joystick\+Impl\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Perform the global initialization of the joystick module. 
+
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a38e9fea02e720721e9f8c0b4e1170c2d}\label{classsf_1_1priv_1_1_joystick_impl_a38e9fea02e720721e9f8c0b4e1170c2d} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!initializeDInput@{initializeDInput}}
+\index{initializeDInput@{initializeDInput}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{initializeDInput()}{initializeDInput()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Joystick\+Impl\+::initialize\+DInput (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Perform the global initialization of the joystick module (DInput) 
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=265pt]{classsf_1_1priv_1_1_joystick_impl_a38e9fea02e720721e9f8c0b4e1170c2d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_aab3b8deaa7f0a475945d855dc858cc71}\label{classsf_1_1priv_1_1_joystick_impl_aab3b8deaa7f0a475945d855dc858cc71} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!isConnected@{isConnected}}
+\index{isConnected@{isConnected}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{isConnected()}{isConnected()}\hspace{0.1cm}{\footnotesize\ttfamily [1/8]}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Joystick\+Impl\+::is\+Connected (\begin{DoxyParamCaption}\item[{unsigned int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Check if a joystick is currently connected. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em index} & Index of the joystick to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True if the joystick is connected, false otherwise 
+\end{DoxyReturn}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_joystick_impl_aab3b8deaa7f0a475945d855dc858cc71_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a8dbefc9636277a127923e22a30df9339}\label{classsf_1_1priv_1_1_joystick_impl_a8dbefc9636277a127923e22a30df9339} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!isConnected@{isConnected}}
+\index{isConnected@{isConnected}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{isConnected()}{isConnected()}\hspace{0.1cm}{\footnotesize\ttfamily [2/8]}}
+{\footnotesize\ttfamily static bool sf\+::priv\+::\+Joystick\+Impl\+::is\+Connected (\begin{DoxyParamCaption}\item[{unsigned int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Check if a joystick is currently connected. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em index} & Index of the joystick to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True if the joystick is connected, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a8dbefc9636277a127923e22a30df9339}\label{classsf_1_1priv_1_1_joystick_impl_a8dbefc9636277a127923e22a30df9339} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!isConnected@{isConnected}}
+\index{isConnected@{isConnected}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{isConnected()}{isConnected()}\hspace{0.1cm}{\footnotesize\ttfamily [3/8]}}
+{\footnotesize\ttfamily static bool sf\+::priv\+::\+Joystick\+Impl\+::is\+Connected (\begin{DoxyParamCaption}\item[{unsigned int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Check if a joystick is currently connected. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em index} & Index of the joystick to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True if the joystick is connected, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a8dbefc9636277a127923e22a30df9339}\label{classsf_1_1priv_1_1_joystick_impl_a8dbefc9636277a127923e22a30df9339} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!isConnected@{isConnected}}
+\index{isConnected@{isConnected}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{isConnected()}{isConnected()}\hspace{0.1cm}{\footnotesize\ttfamily [4/8]}}
+{\footnotesize\ttfamily static bool sf\+::priv\+::\+Joystick\+Impl\+::is\+Connected (\begin{DoxyParamCaption}\item[{unsigned int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Check if a joystick is currently connected. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em index} & Index of the joystick to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True if the joystick is connected, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a8dbefc9636277a127923e22a30df9339}\label{classsf_1_1priv_1_1_joystick_impl_a8dbefc9636277a127923e22a30df9339} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!isConnected@{isConnected}}
+\index{isConnected@{isConnected}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{isConnected()}{isConnected()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
+{\footnotesize\ttfamily static bool sf\+::priv\+::\+Joystick\+Impl\+::is\+Connected (\begin{DoxyParamCaption}\item[{unsigned int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Check if a joystick is currently connected. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em index} & Index of the joystick to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True if the joystick is connected, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a8dbefc9636277a127923e22a30df9339}\label{classsf_1_1priv_1_1_joystick_impl_a8dbefc9636277a127923e22a30df9339} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!isConnected@{isConnected}}
+\index{isConnected@{isConnected}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{isConnected()}{isConnected()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+{\footnotesize\ttfamily static bool sf\+::priv\+::\+Joystick\+Impl\+::is\+Connected (\begin{DoxyParamCaption}\item[{unsigned int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Check if a joystick is currently connected. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em index} & Index of the joystick to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True if the joystick is connected, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a8dbefc9636277a127923e22a30df9339}\label{classsf_1_1priv_1_1_joystick_impl_a8dbefc9636277a127923e22a30df9339} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!isConnected@{isConnected}}
+\index{isConnected@{isConnected}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{isConnected()}{isConnected()}\hspace{0.1cm}{\footnotesize\ttfamily [7/8]}}
+{\footnotesize\ttfamily static bool sf\+::priv\+::\+Joystick\+Impl\+::is\+Connected (\begin{DoxyParamCaption}\item[{unsigned int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Check if a joystick is currently connected. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em index} & Index of the joystick to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True if the joystick is connected, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a8dbefc9636277a127923e22a30df9339}\label{classsf_1_1priv_1_1_joystick_impl_a8dbefc9636277a127923e22a30df9339} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!isConnected@{isConnected}}
+\index{isConnected@{isConnected}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{isConnected()}{isConnected()}\hspace{0.1cm}{\footnotesize\ttfamily [8/8]}}
+{\footnotesize\ttfamily static bool sf\+::priv\+::\+Joystick\+Impl\+::is\+Connected (\begin{DoxyParamCaption}\item[{unsigned int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Check if a joystick is currently connected. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em index} & Index of the joystick to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True if the joystick is connected, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a0f42492fd7690976bcb3f44fa77b907a}\label{classsf_1_1priv_1_1_joystick_impl_a0f42492fd7690976bcb3f44fa77b907a} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!isConnectedDInput@{isConnectedDInput}}
+\index{isConnectedDInput@{isConnectedDInput}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{isConnectedDInput()}{isConnectedDInput()}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Joystick\+Impl\+::is\+Connected\+DInput (\begin{DoxyParamCaption}\item[{unsigned int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Check if a joystick is currently connected (DInput) 
+
+
+\begin{DoxyParams}{Parametry}
+{\em index} & Index of the joystick to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True if the joystick is connected, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a285c91388783ee842cd2b63e97e7b511}\label{classsf_1_1priv_1_1_joystick_impl_a285c91388783ee842cd2b63e97e7b511} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!open@{open}}
+\index{open@{open}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}\hspace{0.1cm}{\footnotesize\ttfamily [1/8]}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Joystick\+Impl\+::open (\begin{DoxyParamCaption}\item[{unsigned int}]{index }\end{DoxyParamCaption})}
+
+
+
+Open the joystick. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em index} & Index assigned to the joystick\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True on success, false on failure 
+\end{DoxyReturn}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_joystick_impl_a285c91388783ee842cd2b63e97e7b511_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a285c91388783ee842cd2b63e97e7b511}\label{classsf_1_1priv_1_1_joystick_impl_a285c91388783ee842cd2b63e97e7b511} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!open@{open}}
+\index{open@{open}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}\hspace{0.1cm}{\footnotesize\ttfamily [2/8]}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Joystick\+Impl\+::open (\begin{DoxyParamCaption}\item[{unsigned int}]{index }\end{DoxyParamCaption})}
+
+
+
+Open the joystick. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em index} & Index assigned to the joystick\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True on success, false on failure 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a285c91388783ee842cd2b63e97e7b511}\label{classsf_1_1priv_1_1_joystick_impl_a285c91388783ee842cd2b63e97e7b511} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!open@{open}}
+\index{open@{open}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}\hspace{0.1cm}{\footnotesize\ttfamily [3/8]}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Joystick\+Impl\+::open (\begin{DoxyParamCaption}\item[{unsigned int}]{index }\end{DoxyParamCaption})}
+
+
+
+Open the joystick. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em index} & Index assigned to the joystick\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True on success, false on failure 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a285c91388783ee842cd2b63e97e7b511}\label{classsf_1_1priv_1_1_joystick_impl_a285c91388783ee842cd2b63e97e7b511} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!open@{open}}
+\index{open@{open}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}\hspace{0.1cm}{\footnotesize\ttfamily [4/8]}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Joystick\+Impl\+::open (\begin{DoxyParamCaption}\item[{unsigned int}]{index }\end{DoxyParamCaption})}
+
+
+
+Open the joystick. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em index} & Index assigned to the joystick\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True on success, false on failure 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a285c91388783ee842cd2b63e97e7b511}\label{classsf_1_1priv_1_1_joystick_impl_a285c91388783ee842cd2b63e97e7b511} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!open@{open}}
+\index{open@{open}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Joystick\+Impl\+::open (\begin{DoxyParamCaption}\item[{unsigned int}]{index }\end{DoxyParamCaption})}
+
+
+
+Open the joystick. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em index} & Index assigned to the joystick\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True on success, false on failure 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a285c91388783ee842cd2b63e97e7b511}\label{classsf_1_1priv_1_1_joystick_impl_a285c91388783ee842cd2b63e97e7b511} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!open@{open}}
+\index{open@{open}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Joystick\+Impl\+::open (\begin{DoxyParamCaption}\item[{unsigned int}]{index }\end{DoxyParamCaption})}
+
+
+
+Open the joystick. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em index} & Index assigned to the joystick\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True on success, false on failure 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a285c91388783ee842cd2b63e97e7b511}\label{classsf_1_1priv_1_1_joystick_impl_a285c91388783ee842cd2b63e97e7b511} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!open@{open}}
+\index{open@{open}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}\hspace{0.1cm}{\footnotesize\ttfamily [7/8]}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Joystick\+Impl\+::open (\begin{DoxyParamCaption}\item[{unsigned int}]{index }\end{DoxyParamCaption})}
+
+
+
+Open the joystick. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em index} & Index assigned to the joystick\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True on success, false on failure 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a285c91388783ee842cd2b63e97e7b511}\label{classsf_1_1priv_1_1_joystick_impl_a285c91388783ee842cd2b63e97e7b511} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!open@{open}}
+\index{open@{open}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}\hspace{0.1cm}{\footnotesize\ttfamily [8/8]}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Joystick\+Impl\+::open (\begin{DoxyParamCaption}\item[{unsigned int}]{index }\end{DoxyParamCaption})}
+
+
+
+Open the joystick. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em index} & Index assigned to the joystick\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True on success, false on failure 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a072d46492e9d438f121d68e83e22d0ad}\label{classsf_1_1priv_1_1_joystick_impl_a072d46492e9d438f121d68e83e22d0ad} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!openDInput@{openDInput}}
+\index{openDInput@{openDInput}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{openDInput()}{openDInput()}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Joystick\+Impl\+::open\+DInput (\begin{DoxyParamCaption}\item[{unsigned int}]{index }\end{DoxyParamCaption})}
+
+
+
+Open the joystick (DInput) 
+
+
+\begin{DoxyParams}{Parametry}
+{\em index} & Index assigned to the joystick\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+True on success, false on failure 
+\end{DoxyReturn}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_joystick_impl_a072d46492e9d438f121d68e83e22d0ad_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a250c25c37809b5fe074aaa911a99eac8}\label{classsf_1_1priv_1_1_joystick_impl_a250c25c37809b5fe074aaa911a99eac8} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!setLazyUpdates@{setLazyUpdates}}
+\index{setLazyUpdates@{setLazyUpdates}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{setLazyUpdates()}{setLazyUpdates()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Joystick\+Impl\+::set\+Lazy\+Updates (\begin{DoxyParamCaption}\item[{bool}]{status }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Enable or disable lazy enumeration updates. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em status} & Whether to rely on windows triggering enumeration updates \\
+\hline
+\end{DoxyParams}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_joystick_impl_a250c25c37809b5fe074aaa911a99eac8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_af0b8d7b58072b78ee1f477e4c9b93840}\label{classsf_1_1priv_1_1_joystick_impl_af0b8d7b58072b78ee1f477e4c9b93840} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!update@{update}}
+\index{update@{update}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}\hspace{0.1cm}{\footnotesize\ttfamily [1/8]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsf_1_1priv_1_1_joystick_state}{Joystick\+State}} sf\+::priv\+::\+Joystick\+Impl\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update the joystick and get its new state. 
+
+\begin{DoxyReturn}{Zwraca}
+\doxylink{classsf_1_1_joystick}{Joystick} state 
+\end{DoxyReturn}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_joystick_impl_af0b8d7b58072b78ee1f477e4c9b93840_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_af0b8d7b58072b78ee1f477e4c9b93840}\label{classsf_1_1priv_1_1_joystick_impl_af0b8d7b58072b78ee1f477e4c9b93840} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!update@{update}}
+\index{update@{update}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}\hspace{0.1cm}{\footnotesize\ttfamily [2/8]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsf_1_1priv_1_1_joystick_state}{Joystick\+State}} sf\+::priv\+::\+Joystick\+Impl\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update the joystick and get its new state. 
+
+\begin{DoxyReturn}{Zwraca}
+\doxylink{classsf_1_1_joystick}{Joystick} state 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_af0b8d7b58072b78ee1f477e4c9b93840}\label{classsf_1_1priv_1_1_joystick_impl_af0b8d7b58072b78ee1f477e4c9b93840} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!update@{update}}
+\index{update@{update}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}\hspace{0.1cm}{\footnotesize\ttfamily [3/8]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsf_1_1priv_1_1_joystick_state}{Joystick\+State}} sf\+::priv\+::\+Joystick\+Impl\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update the joystick and get its new state. 
+
+\begin{DoxyReturn}{Zwraca}
+\doxylink{classsf_1_1_joystick}{Joystick} state 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_af0b8d7b58072b78ee1f477e4c9b93840}\label{classsf_1_1priv_1_1_joystick_impl_af0b8d7b58072b78ee1f477e4c9b93840} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!update@{update}}
+\index{update@{update}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}\hspace{0.1cm}{\footnotesize\ttfamily [4/8]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsf_1_1priv_1_1_joystick_state}{Joystick\+State}} sf\+::priv\+::\+Joystick\+Impl\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update the joystick and get its new state. 
+
+\begin{DoxyReturn}{Zwraca}
+\doxylink{classsf_1_1_joystick}{Joystick} state 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_af0b8d7b58072b78ee1f477e4c9b93840}\label{classsf_1_1priv_1_1_joystick_impl_af0b8d7b58072b78ee1f477e4c9b93840} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!update@{update}}
+\index{update@{update}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsf_1_1priv_1_1_joystick_state}{Joystick\+State}} sf\+::priv\+::\+Joystick\+Impl\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update the joystick and get its new state. 
+
+\begin{DoxyReturn}{Zwraca}
+\doxylink{classsf_1_1_joystick}{Joystick} state 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_af0b8d7b58072b78ee1f477e4c9b93840}\label{classsf_1_1priv_1_1_joystick_impl_af0b8d7b58072b78ee1f477e4c9b93840} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!update@{update}}
+\index{update@{update}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsf_1_1priv_1_1_joystick_state}{Joystick\+State}} sf\+::priv\+::\+Joystick\+Impl\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update the joystick and get its new state. 
+
+\begin{DoxyReturn}{Zwraca}
+\doxylink{classsf_1_1_joystick}{Joystick} state 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_af0b8d7b58072b78ee1f477e4c9b93840}\label{classsf_1_1priv_1_1_joystick_impl_af0b8d7b58072b78ee1f477e4c9b93840} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!update@{update}}
+\index{update@{update}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}\hspace{0.1cm}{\footnotesize\ttfamily [7/8]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsf_1_1priv_1_1_joystick_state}{Joystick\+State}} sf\+::priv\+::\+Joystick\+Impl\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update the joystick and get its new state. 
+
+\begin{DoxyReturn}{Zwraca}
+\doxylink{classsf_1_1_joystick}{Joystick} state 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_af0b8d7b58072b78ee1f477e4c9b93840}\label{classsf_1_1priv_1_1_joystick_impl_af0b8d7b58072b78ee1f477e4c9b93840} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!update@{update}}
+\index{update@{update}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}\hspace{0.1cm}{\footnotesize\ttfamily [8/8]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsf_1_1priv_1_1_joystick_state}{Joystick\+State}} sf\+::priv\+::\+Joystick\+Impl\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update the joystick and get its new state. 
+
+\begin{DoxyReturn}{Zwraca}
+\doxylink{classsf_1_1_joystick}{Joystick} state 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a4a4bd8f9ac71c43faf1af79faba3d2b2}\label{classsf_1_1priv_1_1_joystick_impl_a4a4bd8f9ac71c43faf1af79faba3d2b2} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!updateConnections@{updateConnections}}
+\index{updateConnections@{updateConnections}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{updateConnections()}{updateConnections()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Joystick\+Impl\+::update\+Connections (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Update the connection status of all joysticks. 
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_joystick_impl_a4a4bd8f9ac71c43faf1af79faba3d2b2_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_joystick_impl_a4a4bd8f9ac71c43faf1af79faba3d2b2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a55c71c73b1dee212d00d36dc66edf519}\label{classsf_1_1priv_1_1_joystick_impl_a55c71c73b1dee212d00d36dc66edf519} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!updateConnectionsDInput@{updateConnectionsDInput}}
+\index{updateConnectionsDInput@{updateConnectionsDInput}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{updateConnectionsDInput()}{updateConnectionsDInput()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Joystick\+Impl\+::update\+Connections\+DInput (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Update the connection status of all joysticks (DInput) 
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_joystick_impl_a55c71c73b1dee212d00d36dc66edf519_cgraph}
+\end{center}
+\end{figure}
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsf_1_1priv_1_1_joystick_impl_a55c71c73b1dee212d00d36dc66edf519_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a9ad7079fd5493f50eb01d81f6bfdc858}\label{classsf_1_1priv_1_1_joystick_impl_a9ad7079fd5493f50eb01d81f6bfdc858} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!updateDInputBuffered@{updateDInputBuffered}}
+\index{updateDInputBuffered@{updateDInputBuffered}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{updateDInputBuffered()}{updateDInputBuffered()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsf_1_1priv_1_1_joystick_state}{Joystick\+State}} sf\+::priv\+::\+Joystick\+Impl\+::update\+DInput\+Buffered (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update the joystick and get its new state (DInput, Buffered) 
+
+\begin{DoxyReturn}{Zwraca}
+\doxylink{classsf_1_1_joystick}{Joystick} state 
+\end{DoxyReturn}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{classsf_1_1priv_1_1_joystick_impl_a9ad7079fd5493f50eb01d81f6bfdc858_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_acbd9b9721037f8bc953e4514ca1b041d}\label{classsf_1_1priv_1_1_joystick_impl_acbd9b9721037f8bc953e4514ca1b041d} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!updateDInputPolled@{updateDInputPolled}}
+\index{updateDInputPolled@{updateDInputPolled}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{updateDInputPolled()}{updateDInputPolled()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsf_1_1priv_1_1_joystick_state}{Joystick\+State}} sf\+::priv\+::\+Joystick\+Impl\+::update\+DInput\+Polled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update the joystick and get its new state (DInput, Polled) 
+
+\begin{DoxyReturn}{Zwraca}
+\doxylink{classsf_1_1_joystick}{Joystick} state 
+\end{DoxyReturn}
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=265pt]{classsf_1_1priv_1_1_joystick_impl_acbd9b9721037f8bc953e4514ca1b041d_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_ad31149c4acb152c6e1249f0c09cce122}\label{classsf_1_1priv_1_1_joystick_impl_ad31149c4acb152c6e1249f0c09cce122} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!m\_axes@{m\_axes}}
+\index{m\_axes@{m\_axes}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{m\_axes}{m\_axes}}
+{\footnotesize\ttfamily int sf\+::priv\+::\+Joystick\+Impl\+::m\+\_\+axes\mbox{[}\mbox{\hyperlink{classsf_1_1_joystick_ab2f321679e29b742f24eb0de91f30149accf3e487c9f6ee2f384351323626a42c}{Joystick\+::\+Axis\+Count}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Offsets to the bytes containing the axes states, -\/1 if not available. 
+
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a8443b2eb0bf1cabaec18e99a519d0146}\label{classsf_1_1priv_1_1_joystick_impl_a8443b2eb0bf1cabaec18e99a519d0146} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!m\_axis@{m\_axis}}
+\index{m\_axis@{m\_axis}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{m\_axis}{m\_axis}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a6e7fb4b4b3e86009b8eec7e9ee51db6b}{Axis\+Map}} sf\+::priv\+::\+Joystick\+Impl\+::m\+\_\+axis\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Axes (but not POV/\+Hat) of the joystick. 
+
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_aa74e83a6421a1bc091ebc07316389132}\label{classsf_1_1priv_1_1_joystick_impl_aa74e83a6421a1bc091ebc07316389132} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!m\_buffer@{m\_buffer}}
+\index{m\_buffer@{m\_buffer}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{m\_buffer}{m\_buffer}}
+{\footnotesize\ttfamily std\+::vector$<$ char $>$ sf\+::priv\+::\+Joystick\+Impl\+::m\+\_\+buffer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+USB HID buffer. 
+
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a6429faed72ff1aaf61488abe770d3680}\label{classsf_1_1priv_1_1_joystick_impl_a6429faed72ff1aaf61488abe770d3680} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!m\_buffered@{m\_buffered}}
+\index{m\_buffered@{m\_buffered}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{m\_buffered}{m\_buffered}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Joystick\+Impl\+::m\+\_\+buffered\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+true if the device uses buffering, false if the device uses polling 
+
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a72bbf289d2adb6ee8a725af87fe09b6e}\label{classsf_1_1priv_1_1_joystick_impl_a72bbf289d2adb6ee8a725af87fe09b6e} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!m\_buttons@{m\_buttons}}
+\index{m\_buttons@{m\_buttons}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{m\_buttons}{m\_buttons}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_a64cfdab5a0420b626cb723d7efb41e8e}{Buttons\+Vector}} sf\+::priv\+::\+Joystick\+Impl\+::m\+\_\+buttons\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Buttons of the joystick. 
+
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_ad692307d19cd2c3c5c57b1f94051a37e}\label{classsf_1_1priv_1_1_joystick_impl_ad692307d19cd2c3c5c57b1f94051a37e} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!m\_buttons@{m\_buttons}}
+\index{m\_buttons@{m\_buttons}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{m\_buttons}{m\_buttons}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int sf\+::priv\+::\+Joystick\+Impl\+::m\+\_\+buttons\mbox{[}\mbox{\hyperlink{classsf_1_1_joystick_ab2f321679e29b742f24eb0de91f30149a2f1b8a0a59f2c12a4775c0e1e69e1816}{Joystick\+::\+Button\+Count}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Offsets to the bytes containing the button states, -\/1 if not available. 
+
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a9a88420f006178d4e37154b270f7161b}\label{classsf_1_1priv_1_1_joystick_impl_a9a88420f006178d4e37154b270f7161b} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!m\_caps@{m\_caps}}
+\index{m\_caps@{m\_caps}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{m\_caps}{m\_caps}}
+{\footnotesize\ttfamily JOYCAPS sf\+::priv\+::\+Joystick\+Impl\+::m\+\_\+caps\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxylink{classsf_1_1_joystick}{Joystick} capabilities. 
+
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a164ef72a547ea4ffec8c00b708852bd7}\label{classsf_1_1priv_1_1_joystick_impl_a164ef72a547ea4ffec8c00b708852bd7} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!m\_desc@{m\_desc}}
+\index{m\_desc@{m\_desc}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{m\_desc}{m\_desc}}
+{\footnotesize\ttfamily report\+\_\+desc\+\_\+t sf\+::priv\+::\+Joystick\+Impl\+::m\+\_\+desc\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+USB report descriptor. 
+
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a992467e2e7fe20ef2b637748dc8948f1}\label{classsf_1_1priv_1_1_joystick_impl_a992467e2e7fe20ef2b637748dc8948f1} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!m\_device@{m\_device}}
+\index{m\_device@{m\_device}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{m\_device}{m\_device}}
+{\footnotesize\ttfamily IDirect\+Input\+Device8W\texorpdfstring{$\ast$}{*} sf\+::priv\+::\+Joystick\+Impl\+::m\+\_\+device\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Direct\+Input 8.\+x device. 
+
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a29f6f0d69bab15a4f5194370a34ed47d}\label{classsf_1_1priv_1_1_joystick_impl_a29f6f0d69bab15a4f5194370a34ed47d} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!m\_deviceCaps@{m\_deviceCaps}}
+\index{m\_deviceCaps@{m\_deviceCaps}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{m\_deviceCaps}{m\_deviceCaps}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_d_i_d_e_v_c_a_p_s}{DIDEVCAPS}} sf\+::priv\+::\+Joystick\+Impl\+::m\+\_\+device\+Caps\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Direct\+Input device capabilities. 
+
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_accba771cadd9f623b7c8fe86d8c40a7b}\label{classsf_1_1priv_1_1_joystick_impl_accba771cadd9f623b7c8fe86d8c40a7b} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!m\_file@{m\_file}}
+\index{m\_file@{m\_file}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{m\_file}{m\_file}}
+{\footnotesize\ttfamily int sf\+::priv\+::\+Joystick\+Impl\+::m\+\_\+file\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+File descriptor of the joystick. 
+
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a8c84eb7710555c6fd29d2eed0e462270}\label{classsf_1_1priv_1_1_joystick_impl_a8c84eb7710555c6fd29d2eed0e462270} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!m\_hat@{m\_hat}}
+\index{m\_hat@{m\_hat}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{m\_hat}{m\_hat}}
+{\footnotesize\ttfamily IOHIDElement\+Ref sf\+::priv\+::\+Joystick\+Impl\+::m\+\_\+hat\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+POV/\+Hat axis of the joystick. 
+
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a11bdfa9e230cd846d6f9bde32e4bd45d}\label{classsf_1_1priv_1_1_joystick_impl_a11bdfa9e230cd846d6f9bde32e4bd45d} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!m\_id@{m\_id}}
+\index{m\_id@{m\_id}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{m\_id}{m\_id}}
+{\footnotesize\ttfamily int sf\+::priv\+::\+Joystick\+Impl\+::m\+\_\+id\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+USB id. 
+
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a7efbd3f4900893c3ced688c045b36fd1}\label{classsf_1_1priv_1_1_joystick_impl_a7efbd3f4900893c3ced688c045b36fd1} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!m\_identification@{m\_identification}}
+\index{m\_identification@{m\_identification}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{m\_identification}{m\_identification}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsf_1_1_joystick_1_1_identification}{Joystick\+::\+Identification}} sf\+::priv\+::\+Joystick\+Impl\+::m\+\_\+identification\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxylink{classsf_1_1_joystick}{Joystick} identification. 
+
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_abf51ad793640de2511e3035914dc8bf4}\label{classsf_1_1priv_1_1_joystick_impl_abf51ad793640de2511e3035914dc8bf4} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!m\_identification@{m\_identification}}
+\index{m\_identification@{m\_identification}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{m\_identification}{m\_identification}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsf_1_1_joystick_1_1_identification}{sf\+::\+Joystick\+::\+Identification}} sf\+::priv\+::\+Joystick\+Impl\+::m\+\_\+identification\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Identification of the joystick. 
+
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a470b99a9741d7857d5a237728b265302}\label{classsf_1_1priv_1_1_joystick_impl_a470b99a9741d7857d5a237728b265302} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!m\_index@{m\_index}}
+\index{m\_index@{m\_index}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{m\_index}{m\_index}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily unsigned int sf\+::priv\+::\+Joystick\+Impl\+::m\+\_\+index\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Index of the joystick. 
+
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a470b99a9741d7857d5a237728b265302}\label{classsf_1_1priv_1_1_joystick_impl_a470b99a9741d7857d5a237728b265302} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!m\_index@{m\_index}}
+\index{m\_index@{m\_index}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{m\_index}{m\_index}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily unsigned int sf\+::priv\+::\+Joystick\+Impl\+::m\+\_\+index\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+SFML index. 
+
+Index of the joystick. \Hypertarget{classsf_1_1priv_1_1_joystick_impl_aa8e3bb1aec63b40a5292ad397201e035}\label{classsf_1_1priv_1_1_joystick_impl_aa8e3bb1aec63b40a5292ad397201e035} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!m\_length@{m\_length}}
+\index{m\_length@{m\_length}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{m\_length}{m\_length}}
+{\footnotesize\ttfamily int sf\+::priv\+::\+Joystick\+Impl\+::m\+\_\+length\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Buffer length. 
+
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a15bdd881634b8c06647efc79c9b159e4}\label{classsf_1_1priv_1_1_joystick_impl_a15bdd881634b8c06647efc79c9b159e4} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!m\_locationIDs@{m\_locationIDs}}
+\index{m\_locationIDs@{m\_locationIDs}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{m\_locationIDs}{m\_locationIDs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1priv_1_1_joystick_impl_af32453622487cbaf575de1706418fd70}{Joystick\+Impl\+::\+Location}} sf\+::priv\+::\+Joystick\+Impl\+::m\+\_\+location\+IDs = \{ 0 \}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Global \doxylink{classsf_1_1_joystick}{Joystick} register \Hypertarget{classsf_1_1priv_1_1_joystick_impl_a4d38f4aa21c949d0a3673a2138365c1b}\label{classsf_1_1priv_1_1_joystick_impl_a4d38f4aa21c949d0a3673a2138365c1b} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!m\_mapping@{m\_mapping}}
+\index{m\_mapping@{m\_mapping}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{m\_mapping}{m\_mapping}}
+{\footnotesize\ttfamily char sf\+::priv\+::\+Joystick\+Impl\+::m\+\_\+mapping\mbox{[}ABS\+\_\+\+MAX+1\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Axes mapping (index to axis id) 
+
+\Hypertarget{classsf_1_1priv_1_1_joystick_impl_a78855fcdb878a62810e078de421b59c4}\label{classsf_1_1priv_1_1_joystick_impl_a78855fcdb878a62810e078de421b59c4} 
+\index{sf::priv::JoystickImpl@{sf::priv::JoystickImpl}!m\_state@{m\_state}}
+\index{m\_state@{m\_state}!sf::priv::JoystickImpl@{sf::priv::JoystickImpl}}
+\doxysubsubsection{\texorpdfstring{m\_state}{m\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsf_1_1priv_1_1_joystick_state}{Joystick\+State}} sf\+::priv\+::\+Joystick\+Impl\+::m\+\_\+state\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Current state of the joystick. 
+
+Buffered joystick state. 
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+Android/\mbox{\hyperlink{_android_2_joystick_impl_8hpp}{Joystick\+Impl.\+hpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+OSX/\mbox{\hyperlink{_o_s_x_2_joystick_impl_8hpp}{Joystick\+Impl.\+hpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+Free\+BSD/\mbox{\hyperlink{_free_b_s_d_2_joystick_impl_8hpp}{Joystick\+Impl.\+hpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+Net\+BSD/\mbox{\hyperlink{_net_b_s_d_2_joystick_impl_8hpp}{Joystick\+Impl.\+hpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+Open\+BSD/\mbox{\hyperlink{_open_b_s_d_2_joystick_impl_8hpp}{Joystick\+Impl.\+hpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+Unix/\mbox{\hyperlink{_unix_2_joystick_impl_8hpp}{Joystick\+Impl.\+hpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+Win32/\mbox{\hyperlink{_win32_2_joystick_impl_8hpp}{Joystick\+Impl.\+hpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/i\+OS/\mbox{\hyperlink{i_o_s_2_joystick_impl_8hpp}{Joystick\+Impl.\+hpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+Android/\mbox{\hyperlink{_android_2_joystick_impl_8cpp}{Joystick\+Impl.\+cpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+Free\+BSD/\mbox{\hyperlink{_free_b_s_d_2_joystick_impl_8cpp}{Joystick\+Impl.\+cpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/i\+OS/\mbox{\hyperlink{_joystick_impl_8mm}{Joystick\+Impl.\+mm}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+Net\+BSD/\mbox{\hyperlink{_net_b_s_d_2_joystick_impl_8cpp}{Joystick\+Impl.\+cpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+Open\+BSD/\mbox{\hyperlink{_open_b_s_d_2_joystick_impl_8cpp}{Joystick\+Impl.\+cpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+OSX/\mbox{\hyperlink{_o_s_x_2_joystick_impl_8cpp}{Joystick\+Impl.\+cpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+Unix/\mbox{\hyperlink{_unix_2_joystick_impl_8cpp}{Joystick\+Impl.\+cpp}}\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+Win32/\mbox{\hyperlink{_win32_2_joystick_impl_8cpp}{Joystick\+Impl.\+cpp}}\end{DoxyCompactItemize}

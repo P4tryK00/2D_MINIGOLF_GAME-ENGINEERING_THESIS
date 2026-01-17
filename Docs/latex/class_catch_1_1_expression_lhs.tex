@@ -1,0 +1,240 @@
+\doxysection{Dokumentacja szablonu klasy Catch\+::Expression\+Lhs\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}}
+\hypertarget{class_catch_1_1_expression_lhs}{}\label{class_catch_1_1_expression_lhs}\index{Catch::ExpressionLhs$<$ T $>$@{Catch::ExpressionLhs$<$ T $>$}}
+
+
+{\ttfamily \#include $<$catch.\+hpp$>$}
+
+
+
+Diagram dziedziczenia dla Catch\+::Expression\+Lhs\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_catch_1_1_expression_lhs__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagram współpracy dla Catch\+::Expression\+Lhs\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_catch_1_1_expression_lhs__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_catch_1_1_expression_lhs_aa829588def6146a94fb75de9c4cc482a}{Expression\+Lhs}} (\mbox{\hyperlink{class_catch_1_1_result_builder}{Result\+Builder}} \&rb, T lhs)
+\item 
+\mbox{\hyperlink{class_catch_1_1_expression_lhs}{Expression\+Lhs}} \& \mbox{\hyperlink{class_catch_1_1_expression_lhs_acdff167ec00f22cbba32879c36d49b50}{operator=}} (const \mbox{\hyperlink{class_catch_1_1_expression_lhs}{Expression\+Lhs}} \&)
+\item 
+{\footnotesize template$<$typename RhsT $>$ }\\\mbox{\hyperlink{class_catch_1_1_binary_expression}{Binary\+Expression}}$<$ T, \mbox{\hyperlink{namespace_catch_1_1_internal_ae3f96598a7858155750bf38e7295d83ea30e0accba6ec8384f4383b04dd2a6a9e}{Internal\+::\+Is\+Equal\+To}}, RhsT const \& $>$ \mbox{\hyperlink{class_catch_1_1_expression_lhs_a412ab235f4ac5c9c7e3195e119a011d0}{operator==}} (RhsT const \&rhs)
+\item 
+{\footnotesize template$<$typename RhsT $>$ }\\\mbox{\hyperlink{class_catch_1_1_binary_expression}{Binary\+Expression}}$<$ T, \mbox{\hyperlink{namespace_catch_1_1_internal_ae3f96598a7858155750bf38e7295d83ea1e1699cf7d3dbee0908f1a123da2456d}{Internal\+::\+Is\+Not\+Equal\+To}}, RhsT const \& $>$ \mbox{\hyperlink{class_catch_1_1_expression_lhs_a0ec977d72b71e428db5715f81fccc235}{operator!=}} (RhsT const \&rhs)
+\item 
+{\footnotesize template$<$typename RhsT $>$ }\\\mbox{\hyperlink{class_catch_1_1_binary_expression}{Binary\+Expression}}$<$ T, \mbox{\hyperlink{namespace_catch_1_1_internal_ae3f96598a7858155750bf38e7295d83eabbbfc41706595e50acbefa8408004b93}{Internal\+::\+Is\+Less\+Than}}, RhsT const \& $>$ \mbox{\hyperlink{class_catch_1_1_expression_lhs_a19c9354b8a851273f56564137bf28fff}{operator$<$}} (RhsT const \&rhs)
+\item 
+{\footnotesize template$<$typename RhsT $>$ }\\\mbox{\hyperlink{class_catch_1_1_binary_expression}{Binary\+Expression}}$<$ T, \mbox{\hyperlink{namespace_catch_1_1_internal_ae3f96598a7858155750bf38e7295d83eac0e8866139e99803d169595af70f6c22}{Internal\+::\+Is\+Greater\+Than}}, RhsT const \& $>$ \mbox{\hyperlink{class_catch_1_1_expression_lhs_a647d9e1cd6083c8129088b330cfd2bf8}{operator$>$}} (RhsT const \&rhs)
+\item 
+{\footnotesize template$<$typename RhsT $>$ }\\\mbox{\hyperlink{class_catch_1_1_binary_expression}{Binary\+Expression}}$<$ T, \mbox{\hyperlink{namespace_catch_1_1_internal_ae3f96598a7858155750bf38e7295d83ea0db29a4c3f1e81260036c5e27a8407fd}{Internal\+::\+Is\+Less\+Than\+Or\+Equal\+To}}, RhsT const \& $>$ \mbox{\hyperlink{class_catch_1_1_expression_lhs_a6c8aa0a907dec23bbc5266b08e25f4e4}{operator$<$=}} (RhsT const \&rhs)
+\item 
+{\footnotesize template$<$typename RhsT $>$ }\\\mbox{\hyperlink{class_catch_1_1_binary_expression}{Binary\+Expression}}$<$ T, \mbox{\hyperlink{namespace_catch_1_1_internal_ae3f96598a7858155750bf38e7295d83ead2de7e9565e59e36c0987e402203ce1c}{Internal\+::\+Is\+Greater\+Than\+Or\+Equal\+To}}, RhsT const \& $>$ \mbox{\hyperlink{class_catch_1_1_expression_lhs_a6d1786d84badfb3124293db4e4ac3fa9}{operator$>$=}} (RhsT const \&rhs)
+\item 
+\mbox{\hyperlink{class_catch_1_1_binary_expression}{Binary\+Expression}}$<$ T, \mbox{\hyperlink{namespace_catch_1_1_internal_ae3f96598a7858155750bf38e7295d83ea30e0accba6ec8384f4383b04dd2a6a9e}{Internal\+::\+Is\+Equal\+To}}, bool $>$ \mbox{\hyperlink{class_catch_1_1_expression_lhs_a1d2991ff225194a1146ef4bb3029b0d5}{operator==}} (bool rhs)
+\item 
+\mbox{\hyperlink{class_catch_1_1_binary_expression}{Binary\+Expression}}$<$ T, \mbox{\hyperlink{namespace_catch_1_1_internal_ae3f96598a7858155750bf38e7295d83ea1e1699cf7d3dbee0908f1a123da2456d}{Internal\+::\+Is\+Not\+Equal\+To}}, bool $>$ \mbox{\hyperlink{class_catch_1_1_expression_lhs_af0e8f0bebb52244e1a9f4212039b0d00}{operator!=}} (bool rhs)
+\item 
+void \mbox{\hyperlink{class_catch_1_1_expression_lhs_a13d2551a927790284fb5ddf1ee2c9079}{end\+Expression}} ()
+\item 
+virtual void \mbox{\hyperlink{class_catch_1_1_expression_lhs_a7684a053e8e88a4be475a536252630da}{reconstruct\+Expression}} (std\+::string \&dest) const \mbox{\hyperlink{catch_8hpp_a8ecdce4d3f57835f707915ae831eb847}{CATCH\+\_\+\+OVERRIDE}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{struct_catch_1_1_decomposed_expression}{Catch\+::\+Decomposed\+Expression}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{struct_catch_1_1_decomposed_expression_aa627c69bd83582c33a4d4dcac403936c}{\texorpdfstring{$\sim$}{\string~}\+Decomposed\+Expression}} ()
+\item 
+virtual bool \mbox{\hyperlink{struct_catch_1_1_decomposed_expression_a1c458ece47b71f093290dbdf9bb31fdb}{is\+Binary\+Expression}} () const
+\item 
+{\footnotesize template$<$typename T $>$ }\\STATIC\+\_\+\+ASSERT\+\_\+\+Expression\+\_\+\+Too\+\_\+\+Complex\+\_\+\+Please\+\_\+\+Rewrite\+\_\+\+As\+\_\+\+Binary\+\_\+\+Comparison \& \mbox{\hyperlink{struct_catch_1_1_decomposed_expression_a4942d391c87d78c7033a763a7e1f0831}{operator+}} (T const \&)
+\item 
+{\footnotesize template$<$typename T $>$ }\\STATIC\+\_\+\+ASSERT\+\_\+\+Expression\+\_\+\+Too\+\_\+\+Complex\+\_\+\+Please\+\_\+\+Rewrite\+\_\+\+As\+\_\+\+Binary\+\_\+\+Comparison \& \mbox{\hyperlink{struct_catch_1_1_decomposed_expression_ae6887092911ea7a45d78aee15f29ca7a}{operator-\/}} (T const \&)
+\item 
+{\footnotesize template$<$typename T $>$ }\\STATIC\+\_\+\+ASSERT\+\_\+\+Expression\+\_\+\+Too\+\_\+\+Complex\+\_\+\+Please\+\_\+\+Rewrite\+\_\+\+As\+\_\+\+Binary\+\_\+\+Comparison \& \mbox{\hyperlink{struct_catch_1_1_decomposed_expression_a013645657eac22efee92d1ebd9ae2946}{operator\texorpdfstring{$\ast$}{*}}} (T const \&)
+\item 
+{\footnotesize template$<$typename T $>$ }\\STATIC\+\_\+\+ASSERT\+\_\+\+Expression\+\_\+\+Too\+\_\+\+Complex\+\_\+\+Please\+\_\+\+Rewrite\+\_\+\+As\+\_\+\+Binary\+\_\+\+Comparison \& \mbox{\hyperlink{struct_catch_1_1_decomposed_expression_a9c74d3ddf32bffd1a2ffb5883340fc6a}{operator/}} (T const \&)
+\item 
+{\footnotesize template$<$typename T $>$ }\\STATIC\+\_\+\+ASSERT\+\_\+\+Expression\+\_\+\+Too\+\_\+\+Complex\+\_\+\+Please\+\_\+\+Rewrite\+\_\+\+As\+\_\+\+Binary\+\_\+\+Comparison \& \mbox{\hyperlink{struct_catch_1_1_decomposed_expression_a9dbe00f858cd2ac9fcaadc56b053b00a}{operator\%}} (T const \&)
+\item 
+{\footnotesize template$<$typename T $>$ }\\STATIC\+\_\+\+ASSERT\+\_\+\+Expression\+\_\+\+Too\+\_\+\+Complex\+\_\+\+Please\+\_\+\+Rewrite\+\_\+\+As\+\_\+\+Binary\+\_\+\+Comparison \& \mbox{\hyperlink{struct_catch_1_1_decomposed_expression_a6033e3cf45de73da8e2ba57bc72592ed}{operator\&\&}} (T const \&)
+\item 
+{\footnotesize template$<$typename T $>$ }\\STATIC\+\_\+\+ASSERT\+\_\+\+Expression\+\_\+\+Too\+\_\+\+Complex\+\_\+\+Please\+\_\+\+Rewrite\+\_\+\+As\+\_\+\+Binary\+\_\+\+Comparison \& \mbox{\hyperlink{struct_catch_1_1_decomposed_expression_aee11987488b46d686c94dc8549f4e0eb}{operator\texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|}}} (T const \&)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$\mbox{\hyperlink{namespace_catch_1_1_internal_ae3f96598a7858155750bf38e7295d83e}{Internal\+::\+Operator}} Op, typename RhsT $>$ }\\\mbox{\hyperlink{class_catch_1_1_binary_expression}{Binary\+Expression}}$<$ T, Op, RhsT \& $>$ \mbox{\hyperlink{class_catch_1_1_expression_lhs_a15257ee637546cc7c766e4609257e9ac}{capture\+Expression}} (RhsT \&rhs) const
+\item 
+{\footnotesize template$<$\mbox{\hyperlink{namespace_catch_1_1_internal_ae3f96598a7858155750bf38e7295d83e}{Internal\+::\+Operator}} Op$>$ }\\\mbox{\hyperlink{class_catch_1_1_binary_expression}{Binary\+Expression}}$<$ T, Op, bool $>$ \mbox{\hyperlink{class_catch_1_1_expression_lhs_ac9c066e07860e0dd74a9891aeb0a0361}{capture\+Expression}} (bool rhs) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_catch_1_1_result_builder}{Result\+Builder}} \& \mbox{\hyperlink{class_catch_1_1_expression_lhs_a3985f8b57f5c57b45bde187ee800c1b3}{m\+\_\+rb}}
+\item 
+T \mbox{\hyperlink{class_catch_1_1_expression_lhs_a1859bbffe494088b59519c229db2a4af}{m\+\_\+lhs}}
+\item 
+bool \mbox{\hyperlink{class_catch_1_1_expression_lhs_a598c941ead12802df6f82c6389e279c0}{m\+\_\+truthy}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{class_catch_1_1_expression_lhs_aa829588def6146a94fb75de9c4cc482a}\label{class_catch_1_1_expression_lhs_aa829588def6146a94fb75de9c4cc482a} 
+\index{Catch::ExpressionLhs$<$ T $>$@{Catch::ExpressionLhs$<$ T $>$}!ExpressionLhs@{ExpressionLhs}}
+\index{ExpressionLhs@{ExpressionLhs}!Catch::ExpressionLhs$<$ T $>$@{Catch::ExpressionLhs$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ExpressionLhs()}{ExpressionLhs()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_catch_1_1_expression_lhs}{Catch\+::\+Expression\+Lhs}}$<$ T $>$\+::\+Expression\+Lhs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_catch_1_1_result_builder}{Result\+Builder}} \&}]{rb,  }\item[{T}]{lhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_catch_1_1_expression_lhs_ac9c066e07860e0dd74a9891aeb0a0361}\label{class_catch_1_1_expression_lhs_ac9c066e07860e0dd74a9891aeb0a0361} 
+\index{Catch::ExpressionLhs$<$ T $>$@{Catch::ExpressionLhs$<$ T $>$}!captureExpression@{captureExpression}}
+\index{captureExpression@{captureExpression}!Catch::ExpressionLhs$<$ T $>$@{Catch::ExpressionLhs$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{captureExpression()}{captureExpression()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$\mbox{\hyperlink{namespace_catch_1_1_internal_ae3f96598a7858155750bf38e7295d83e}{Internal\+::\+Operator}} Op$>$ \\
+\mbox{\hyperlink{class_catch_1_1_binary_expression}{Binary\+Expression}}$<$ T, Op, bool $>$ \mbox{\hyperlink{class_catch_1_1_expression_lhs}{Catch\+::\+Expression\+Lhs}}$<$ T $>$\+::capture\+Expression (\begin{DoxyParamCaption}\item[{bool}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_catch_1_1_expression_lhs_a15257ee637546cc7c766e4609257e9ac}\label{class_catch_1_1_expression_lhs_a15257ee637546cc7c766e4609257e9ac} 
+\index{Catch::ExpressionLhs$<$ T $>$@{Catch::ExpressionLhs$<$ T $>$}!captureExpression@{captureExpression}}
+\index{captureExpression@{captureExpression}!Catch::ExpressionLhs$<$ T $>$@{Catch::ExpressionLhs$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{captureExpression()}{captureExpression()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$\mbox{\hyperlink{namespace_catch_1_1_internal_ae3f96598a7858155750bf38e7295d83e}{Internal\+::\+Operator}} Op, typename RhsT $>$ \\
+\mbox{\hyperlink{class_catch_1_1_binary_expression}{Binary\+Expression}}$<$ T, Op, RhsT \& $>$ \mbox{\hyperlink{class_catch_1_1_expression_lhs}{Catch\+::\+Expression\+Lhs}}$<$ T $>$\+::capture\+Expression (\begin{DoxyParamCaption}\item[{RhsT \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_catch_1_1_expression_lhs_a13d2551a927790284fb5ddf1ee2c9079}\label{class_catch_1_1_expression_lhs_a13d2551a927790284fb5ddf1ee2c9079} 
+\index{Catch::ExpressionLhs$<$ T $>$@{Catch::ExpressionLhs$<$ T $>$}!endExpression@{endExpression}}
+\index{endExpression@{endExpression}!Catch::ExpressionLhs$<$ T $>$@{Catch::ExpressionLhs$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{endExpression()}{endExpression()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_catch_1_1_expression_lhs}{Catch\+::\+Expression\+Lhs}}$<$ T $>$\+::end\+Expression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_catch_1_1_expression_lhs_af0e8f0bebb52244e1a9f4212039b0d00}\label{class_catch_1_1_expression_lhs_af0e8f0bebb52244e1a9f4212039b0d00} 
+\index{Catch::ExpressionLhs$<$ T $>$@{Catch::ExpressionLhs$<$ T $>$}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Catch::ExpressionLhs$<$ T $>$@{Catch::ExpressionLhs$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_catch_1_1_binary_expression}{Binary\+Expression}}$<$ T, \mbox{\hyperlink{namespace_catch_1_1_internal_ae3f96598a7858155750bf38e7295d83ea1e1699cf7d3dbee0908f1a123da2456d}{Internal\+::\+Is\+Not\+Equal\+To}}, bool $>$ \mbox{\hyperlink{class_catch_1_1_expression_lhs}{Catch\+::\+Expression\+Lhs}}$<$ T $>$\+::operator!= (\begin{DoxyParamCaption}\item[{bool}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_catch_1_1_expression_lhs_a0ec977d72b71e428db5715f81fccc235}\label{class_catch_1_1_expression_lhs_a0ec977d72b71e428db5715f81fccc235} 
+\index{Catch::ExpressionLhs$<$ T $>$@{Catch::ExpressionLhs$<$ T $>$}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Catch::ExpressionLhs$<$ T $>$@{Catch::ExpressionLhs$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename RhsT $>$ \\
+\mbox{\hyperlink{class_catch_1_1_binary_expression}{Binary\+Expression}}$<$ T, \mbox{\hyperlink{namespace_catch_1_1_internal_ae3f96598a7858155750bf38e7295d83ea1e1699cf7d3dbee0908f1a123da2456d}{Internal\+::\+Is\+Not\+Equal\+To}}, RhsT const  \& $>$ \mbox{\hyperlink{class_catch_1_1_expression_lhs}{Catch\+::\+Expression\+Lhs}}$<$ T $>$\+::operator!= (\begin{DoxyParamCaption}\item[{RhsT const \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_catch_1_1_expression_lhs_a19c9354b8a851273f56564137bf28fff}\label{class_catch_1_1_expression_lhs_a19c9354b8a851273f56564137bf28fff} 
+\index{Catch::ExpressionLhs$<$ T $>$@{Catch::ExpressionLhs$<$ T $>$}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Catch::ExpressionLhs$<$ T $>$@{Catch::ExpressionLhs$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename RhsT $>$ \\
+\mbox{\hyperlink{class_catch_1_1_binary_expression}{Binary\+Expression}}$<$ T, \mbox{\hyperlink{namespace_catch_1_1_internal_ae3f96598a7858155750bf38e7295d83eabbbfc41706595e50acbefa8408004b93}{Internal\+::\+Is\+Less\+Than}}, RhsT const  \& $>$ \mbox{\hyperlink{class_catch_1_1_expression_lhs}{Catch\+::\+Expression\+Lhs}}$<$ T $>$\+::operator$<$ (\begin{DoxyParamCaption}\item[{RhsT const \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_catch_1_1_expression_lhs_a6c8aa0a907dec23bbc5266b08e25f4e4}\label{class_catch_1_1_expression_lhs_a6c8aa0a907dec23bbc5266b08e25f4e4} 
+\index{Catch::ExpressionLhs$<$ T $>$@{Catch::ExpressionLhs$<$ T $>$}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!Catch::ExpressionLhs$<$ T $>$@{Catch::ExpressionLhs$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$<$=()}{operator<=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename RhsT $>$ \\
+\mbox{\hyperlink{class_catch_1_1_binary_expression}{Binary\+Expression}}$<$ T, \mbox{\hyperlink{namespace_catch_1_1_internal_ae3f96598a7858155750bf38e7295d83ea0db29a4c3f1e81260036c5e27a8407fd}{Internal\+::\+Is\+Less\+Than\+Or\+Equal\+To}}, RhsT const  \& $>$ \mbox{\hyperlink{class_catch_1_1_expression_lhs}{Catch\+::\+Expression\+Lhs}}$<$ T $>$\+::operator$<$= (\begin{DoxyParamCaption}\item[{RhsT const \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_catch_1_1_expression_lhs_acdff167ec00f22cbba32879c36d49b50}\label{class_catch_1_1_expression_lhs_acdff167ec00f22cbba32879c36d49b50} 
+\index{Catch::ExpressionLhs$<$ T $>$@{Catch::ExpressionLhs$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!Catch::ExpressionLhs$<$ T $>$@{Catch::ExpressionLhs$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_catch_1_1_expression_lhs}{Expression\+Lhs}} \& \mbox{\hyperlink{class_catch_1_1_expression_lhs}{Catch\+::\+Expression\+Lhs}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_catch_1_1_expression_lhs}{Expression\+Lhs}}$<$ T $>$ \&}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_catch_1_1_expression_lhs_a1d2991ff225194a1146ef4bb3029b0d5}\label{class_catch_1_1_expression_lhs_a1d2991ff225194a1146ef4bb3029b0d5} 
+\index{Catch::ExpressionLhs$<$ T $>$@{Catch::ExpressionLhs$<$ T $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!Catch::ExpressionLhs$<$ T $>$@{Catch::ExpressionLhs$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_catch_1_1_binary_expression}{Binary\+Expression}}$<$ T, \mbox{\hyperlink{namespace_catch_1_1_internal_ae3f96598a7858155750bf38e7295d83ea30e0accba6ec8384f4383b04dd2a6a9e}{Internal\+::\+Is\+Equal\+To}}, bool $>$ \mbox{\hyperlink{class_catch_1_1_expression_lhs}{Catch\+::\+Expression\+Lhs}}$<$ T $>$\+::operator== (\begin{DoxyParamCaption}\item[{bool}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_catch_1_1_expression_lhs_a412ab235f4ac5c9c7e3195e119a011d0}\label{class_catch_1_1_expression_lhs_a412ab235f4ac5c9c7e3195e119a011d0} 
+\index{Catch::ExpressionLhs$<$ T $>$@{Catch::ExpressionLhs$<$ T $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!Catch::ExpressionLhs$<$ T $>$@{Catch::ExpressionLhs$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename RhsT $>$ \\
+\mbox{\hyperlink{class_catch_1_1_binary_expression}{Binary\+Expression}}$<$ T, \mbox{\hyperlink{namespace_catch_1_1_internal_ae3f96598a7858155750bf38e7295d83ea30e0accba6ec8384f4383b04dd2a6a9e}{Internal\+::\+Is\+Equal\+To}}, RhsT const  \& $>$ \mbox{\hyperlink{class_catch_1_1_expression_lhs}{Catch\+::\+Expression\+Lhs}}$<$ T $>$\+::operator== (\begin{DoxyParamCaption}\item[{RhsT const \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_catch_1_1_expression_lhs_a647d9e1cd6083c8129088b330cfd2bf8}\label{class_catch_1_1_expression_lhs_a647d9e1cd6083c8129088b330cfd2bf8} 
+\index{Catch::ExpressionLhs$<$ T $>$@{Catch::ExpressionLhs$<$ T $>$}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!Catch::ExpressionLhs$<$ T $>$@{Catch::ExpressionLhs$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename RhsT $>$ \\
+\mbox{\hyperlink{class_catch_1_1_binary_expression}{Binary\+Expression}}$<$ T, \mbox{\hyperlink{namespace_catch_1_1_internal_ae3f96598a7858155750bf38e7295d83eac0e8866139e99803d169595af70f6c22}{Internal\+::\+Is\+Greater\+Than}}, RhsT const  \& $>$ \mbox{\hyperlink{class_catch_1_1_expression_lhs}{Catch\+::\+Expression\+Lhs}}$<$ T $>$\+::operator$>$ (\begin{DoxyParamCaption}\item[{RhsT const \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_catch_1_1_expression_lhs_a6d1786d84badfb3124293db4e4ac3fa9}\label{class_catch_1_1_expression_lhs_a6d1786d84badfb3124293db4e4ac3fa9} 
+\index{Catch::ExpressionLhs$<$ T $>$@{Catch::ExpressionLhs$<$ T $>$}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!Catch::ExpressionLhs$<$ T $>$@{Catch::ExpressionLhs$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$>$=()}{operator>=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename RhsT $>$ \\
+\mbox{\hyperlink{class_catch_1_1_binary_expression}{Binary\+Expression}}$<$ T, \mbox{\hyperlink{namespace_catch_1_1_internal_ae3f96598a7858155750bf38e7295d83ead2de7e9565e59e36c0987e402203ce1c}{Internal\+::\+Is\+Greater\+Than\+Or\+Equal\+To}}, RhsT const  \& $>$ \mbox{\hyperlink{class_catch_1_1_expression_lhs}{Catch\+::\+Expression\+Lhs}}$<$ T $>$\+::operator$>$= (\begin{DoxyParamCaption}\item[{RhsT const \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_catch_1_1_expression_lhs_a7684a053e8e88a4be475a536252630da}\label{class_catch_1_1_expression_lhs_a7684a053e8e88a4be475a536252630da} 
+\index{Catch::ExpressionLhs$<$ T $>$@{Catch::ExpressionLhs$<$ T $>$}!reconstructExpression@{reconstructExpression}}
+\index{reconstructExpression@{reconstructExpression}!Catch::ExpressionLhs$<$ T $>$@{Catch::ExpressionLhs$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{reconstructExpression()}{reconstructExpression()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual void \mbox{\hyperlink{class_catch_1_1_expression_lhs}{Catch\+::\+Expression\+Lhs}}$<$ T $>$\+::reconstruct\+Expression (\begin{DoxyParamCaption}\item[{std\+::string \&}]{dest }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implementuje \mbox{\hyperlink{struct_catch_1_1_decomposed_expression_a9ce7f356dc96f11f80e40c82f5aa7e55}{Catch\+::\+Decomposed\+Expression}}.
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{class_catch_1_1_expression_lhs_a7684a053e8e88a4be475a536252630da_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{class_catch_1_1_expression_lhs_a1859bbffe494088b59519c229db2a4af}\label{class_catch_1_1_expression_lhs_a1859bbffe494088b59519c229db2a4af} 
+\index{Catch::ExpressionLhs$<$ T $>$@{Catch::ExpressionLhs$<$ T $>$}!m\_lhs@{m\_lhs}}
+\index{m\_lhs@{m\_lhs}!Catch::ExpressionLhs$<$ T $>$@{Catch::ExpressionLhs$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{m\_lhs}{m\_lhs}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{class_catch_1_1_expression_lhs}{Catch\+::\+Expression\+Lhs}}$<$ T $>$\+::m\+\_\+lhs\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_catch_1_1_expression_lhs_a3985f8b57f5c57b45bde187ee800c1b3}\label{class_catch_1_1_expression_lhs_a3985f8b57f5c57b45bde187ee800c1b3} 
+\index{Catch::ExpressionLhs$<$ T $>$@{Catch::ExpressionLhs$<$ T $>$}!m\_rb@{m\_rb}}
+\index{m\_rb@{m\_rb}!Catch::ExpressionLhs$<$ T $>$@{Catch::ExpressionLhs$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{m\_rb}{m\_rb}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_catch_1_1_result_builder}{Result\+Builder}}\& \mbox{\hyperlink{class_catch_1_1_expression_lhs}{Catch\+::\+Expression\+Lhs}}$<$ T $>$\+::m\+\_\+rb\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_catch_1_1_expression_lhs_a598c941ead12802df6f82c6389e279c0}\label{class_catch_1_1_expression_lhs_a598c941ead12802df6f82c6389e279c0} 
+\index{Catch::ExpressionLhs$<$ T $>$@{Catch::ExpressionLhs$<$ T $>$}!m\_truthy@{m\_truthy}}
+\index{m\_truthy@{m\_truthy}!Catch::ExpressionLhs$<$ T $>$@{Catch::ExpressionLhs$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{m\_truthy}{m\_truthy}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{class_catch_1_1_expression_lhs}{Catch\+::\+Expression\+Lhs}}$<$ T $>$\+::m\+\_\+truthy\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/extlibs/headers/\mbox{\hyperlink{catch_8hpp}{catch.\+hpp}}\end{DoxyCompactItemize}

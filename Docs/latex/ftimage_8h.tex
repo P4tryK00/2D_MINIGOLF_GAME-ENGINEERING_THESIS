@@ -1,0 +1,827 @@
+\doxysection{Dokumentacja pliku cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/extlibs/headers/freetype2/ftimage.h}
+\hypertarget{ftimage_8h}{}\label{ftimage_8h}\index{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/freetype2/ftimage.h@{cmake-\/build-\/debug/\_deps/sfml-\/src/extlibs/headers/freetype2/ftimage.h}}
+{\ttfamily \#include $<$ft2build.\+h$>$}\newline
+Wykres zależności załączania dla ftimage.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{ftimage_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_f_t___vector__}{FT\+\_\+\+Vector\+\_\+}}
+\item 
+struct \mbox{\hyperlink{struct_f_t___b_box__}{FT\+\_\+\+BBox\+\_\+}}
+\item 
+struct \mbox{\hyperlink{struct_f_t___bitmap__}{FT\+\_\+\+Bitmap\+\_\+}}
+\item 
+struct \mbox{\hyperlink{struct_f_t___outline__}{FT\+\_\+\+Outline\+\_\+}}
+\item 
+struct \mbox{\hyperlink{struct_f_t___outline___funcs__}{FT\+\_\+\+Outline\+\_\+\+Funcs\+\_\+}}
+\item 
+struct \mbox{\hyperlink{struct_f_t___span__}{FT\+\_\+\+Span\+\_\+}}
+\item 
+struct \mbox{\hyperlink{struct_f_t___raster___params__}{FT\+\_\+\+Raster\+\_\+\+Params\+\_\+}}
+\item 
+struct \mbox{\hyperlink{struct_f_t___raster___funcs__}{FT\+\_\+\+Raster\+\_\+\+Funcs\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Definicje}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_ae37598ecb2f865765a3abe8ff3466727}{ft\+\_\+pixel\+\_\+mode\+\_\+none}}~\mbox{\hyperlink{ftimage_8h_a4953570a0afb7abb672a6583035865a4a42b2be5eb5c8e72d81fa43b11cf942ca}{FT\+\_\+\+PIXEL\+\_\+\+MODE\+\_\+\+NONE}}
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_aef5fede71e6d6d90968255f1c728625d}{ft\+\_\+pixel\+\_\+mode\+\_\+mono}}~\mbox{\hyperlink{ftimage_8h_a4953570a0afb7abb672a6583035865a4a3c16f8be14915a529161ff1514204fb4}{FT\+\_\+\+PIXEL\+\_\+\+MODE\+\_\+\+MONO}}
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_a8dabde8b30dc0dc8842f7d15ae354a73}{ft\+\_\+pixel\+\_\+mode\+\_\+grays}}~\mbox{\hyperlink{ftimage_8h_a4953570a0afb7abb672a6583035865a4a58a764f37700cb5258d02987a9209e2c}{FT\+\_\+\+PIXEL\+\_\+\+MODE\+\_\+\+GRAY}}
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_a9c58ec93a6ea09a9d66ad661567f88b7}{ft\+\_\+pixel\+\_\+mode\+\_\+pal2}}~\mbox{\hyperlink{ftimage_8h_a4953570a0afb7abb672a6583035865a4a15764edffc5eb2f5b55e989a1d2be93a}{FT\+\_\+\+PIXEL\+\_\+\+MODE\+\_\+\+GRAY2}}
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_a06e0e74ada05dc865422aec86699cf6d}{ft\+\_\+pixel\+\_\+mode\+\_\+pal4}}~\mbox{\hyperlink{ftimage_8h_a4953570a0afb7abb672a6583035865a4aed2aa6cba156a0cd9c4bf16be7a9249d}{FT\+\_\+\+PIXEL\+\_\+\+MODE\+\_\+\+GRAY4}}
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_aa50d34733fea6dbd96ccf45641176261}{FT\+\_\+\+OUTLINE\+\_\+\+CONTOURS\+\_\+\+MAX}}~SHRT\+\_\+\+MAX
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_aab3403442f558892216d95af8a41075d}{FT\+\_\+\+OUTLINE\+\_\+\+POINTS\+\_\+\+MAX}}~SHRT\+\_\+\+MAX
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_a5b9770808811255f74015c64ddca54c9}{FT\+\_\+\+OUTLINE\+\_\+\+NONE}}~0x0
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_ace1302f12b2a7d5824d7fb346cdca89c}{FT\+\_\+\+OUTLINE\+\_\+\+OWNER}}~0x1
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_a4efa7b75e501ea7e8f299649336a201d}{FT\+\_\+\+OUTLINE\+\_\+\+EVEN\+\_\+\+ODD\+\_\+\+FILL}}~0x2
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_ae6eb93e2e13c7e67da3b399f1dd57045}{FT\+\_\+\+OUTLINE\+\_\+\+REVERSE\+\_\+\+FILL}}~0x4
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_a6ad8f4d36f10c26397c4fbd74b306f7a}{FT\+\_\+\+OUTLINE\+\_\+\+IGNORE\+\_\+\+DROPOUTS}}~0x8
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_a2d69c5b5db14cdcaccf941cfe3788204}{FT\+\_\+\+OUTLINE\+\_\+\+SMART\+\_\+\+DROPOUTS}}~0x10
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_a6cc7c7324d7c0382c2e211ccdf0ababd}{FT\+\_\+\+OUTLINE\+\_\+\+INCLUDE\+\_\+\+STUBS}}~0x20
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_aa52794bb013ef86fc3da0eb8502024b1}{FT\+\_\+\+OUTLINE\+\_\+\+HIGH\+\_\+\+PRECISION}}~0x100
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_ae7ff66a72c5702a0ab34436b02ca8662}{FT\+\_\+\+OUTLINE\+\_\+\+SINGLE\+\_\+\+PASS}}~0x200
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_a8206880ac83ae4a79912cebff21aa26d}{ft\+\_\+outline\+\_\+none}}~\mbox{\hyperlink{ftimage_8h_a5b9770808811255f74015c64ddca54c9}{FT\+\_\+\+OUTLINE\+\_\+\+NONE}}
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_a7f0f4693f1bdcfdaed206d97688b8070}{ft\+\_\+outline\+\_\+owner}}~\mbox{\hyperlink{ftimage_8h_ace1302f12b2a7d5824d7fb346cdca89c}{FT\+\_\+\+OUTLINE\+\_\+\+OWNER}}
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_a8fab8e2a53bdfa2d25a0ce9213304d3e}{ft\+\_\+outline\+\_\+even\+\_\+odd\+\_\+fill}}~\mbox{\hyperlink{ftimage_8h_a4efa7b75e501ea7e8f299649336a201d}{FT\+\_\+\+OUTLINE\+\_\+\+EVEN\+\_\+\+ODD\+\_\+\+FILL}}
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_a141d4ef79000e3e959ca209cccdba2ce}{ft\+\_\+outline\+\_\+reverse\+\_\+fill}}~\mbox{\hyperlink{ftimage_8h_ae6eb93e2e13c7e67da3b399f1dd57045}{FT\+\_\+\+OUTLINE\+\_\+\+REVERSE\+\_\+\+FILL}}
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_a42b656a9c0ecfaa210a21f9e6a759d2e}{ft\+\_\+outline\+\_\+ignore\+\_\+dropouts}}~\mbox{\hyperlink{ftimage_8h_a6ad8f4d36f10c26397c4fbd74b306f7a}{FT\+\_\+\+OUTLINE\+\_\+\+IGNORE\+\_\+\+DROPOUTS}}
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_aa6ca3f2d8d6817877c159a23ed7e300f}{ft\+\_\+outline\+\_\+high\+\_\+precision}}~\mbox{\hyperlink{ftimage_8h_aa52794bb013ef86fc3da0eb8502024b1}{FT\+\_\+\+OUTLINE\+\_\+\+HIGH\+\_\+\+PRECISION}}
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_a4dd16821c11559df986080778a2f9267}{ft\+\_\+outline\+\_\+single\+\_\+pass}}~\mbox{\hyperlink{ftimage_8h_ae7ff66a72c5702a0ab34436b02ca8662}{FT\+\_\+\+OUTLINE\+\_\+\+SINGLE\+\_\+\+PASS}}
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_a87ccc09e7aaa99f75a5e7f5360ad6e47}{FT\+\_\+\+CURVE\+\_\+\+TAG}}(flag)~( flag \& 3 )
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_a967f934e5e5e1ee1fe4291d23959aa9c}{FT\+\_\+\+CURVE\+\_\+\+TAG\+\_\+\+ON}}~1
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_a4083b94d7eb1e27dce067c38faa040ba}{FT\+\_\+\+CURVE\+\_\+\+TAG\+\_\+\+CONIC}}~0
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_a031f7941800d809c561e39bc10935b18}{FT\+\_\+\+CURVE\+\_\+\+TAG\+\_\+\+CUBIC}}~2
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_a3dd1ef72bd2a47f89b354a3c76c5720f}{FT\+\_\+\+CURVE\+\_\+\+TAG\+\_\+\+HAS\+\_\+\+SCANMODE}}~4
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_a208728b27b1fa2962cdc05a4f8861476}{FT\+\_\+\+CURVE\+\_\+\+TAG\+\_\+\+TOUCH\+\_\+X}}~8  /\texorpdfstring{$\ast$}{*} reserved for the True\+Type hinter \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_a2d3c478c162d051b173095198cf40eb9}{FT\+\_\+\+CURVE\+\_\+\+TAG\+\_\+\+TOUCH\+\_\+Y}}~16  /\texorpdfstring{$\ast$}{*} reserved for the True\+Type hinter \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_a2bdd5798976257559d1bb624e17a951b}{FT\+\_\+\+CURVE\+\_\+\+TAG\+\_\+\+TOUCH\+\_\+\+BOTH}}
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_a9548449bf2fae689516af3b733e13acb}{FT\+\_\+\+Curve\+\_\+\+Tag\+\_\+\+On}}~\mbox{\hyperlink{ftimage_8h_a967f934e5e5e1ee1fe4291d23959aa9c}{FT\+\_\+\+CURVE\+\_\+\+TAG\+\_\+\+ON}}
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_a7137878cba0793e4e1e0ece434a3324e}{FT\+\_\+\+Curve\+\_\+\+Tag\+\_\+\+Conic}}~\mbox{\hyperlink{ftimage_8h_a4083b94d7eb1e27dce067c38faa040ba}{FT\+\_\+\+CURVE\+\_\+\+TAG\+\_\+\+CONIC}}
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_ab1fc759555474f5952aca97ac354bd15}{FT\+\_\+\+Curve\+\_\+\+Tag\+\_\+\+Cubic}}~\mbox{\hyperlink{ftimage_8h_a031f7941800d809c561e39bc10935b18}{FT\+\_\+\+CURVE\+\_\+\+TAG\+\_\+\+CUBIC}}
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_a2a73ec8dd1884906136072ba15c6ad23}{FT\+\_\+\+Curve\+\_\+\+Tag\+\_\+\+Touch\+\_\+X}}~\mbox{\hyperlink{ftimage_8h_a208728b27b1fa2962cdc05a4f8861476}{FT\+\_\+\+CURVE\+\_\+\+TAG\+\_\+\+TOUCH\+\_\+X}}
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_a7d46e507c9ce73a609d753505e3b7da6}{FT\+\_\+\+Curve\+\_\+\+Tag\+\_\+\+Touch\+\_\+Y}}~\mbox{\hyperlink{ftimage_8h_a2d3c478c162d051b173095198cf40eb9}{FT\+\_\+\+CURVE\+\_\+\+TAG\+\_\+\+TOUCH\+\_\+Y}}
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_ae5c15ee22f5ae04acc40ebc08b2c384b}{FT\+\_\+\+Outline\+\_\+\+Move\+To\+\_\+\+Func}}~\mbox{\hyperlink{ftimage_8h_adb1c27eedf361dcd3d331fa266a466af}{FT\+\_\+\+Outline\+\_\+\+Move\+To\+Func}}
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_a77419f525bb73211cc997081290367d0}{FT\+\_\+\+Outline\+\_\+\+Line\+To\+\_\+\+Func}}~\mbox{\hyperlink{ftimage_8h_a522526513387d998682d59515fe93ccf}{FT\+\_\+\+Outline\+\_\+\+Line\+To\+Func}}
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_a95a8dd2e9f3fb3da159807606d3e46a2}{FT\+\_\+\+Outline\+\_\+\+Conic\+To\+\_\+\+Func}}~\mbox{\hyperlink{ftimage_8h_a44b83dd26e7f37eae86aee33ff3efd9b}{FT\+\_\+\+Outline\+\_\+\+Conic\+To\+Func}}
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_a67500fd20d9d06ae0baa123b28f4a35e}{FT\+\_\+\+Outline\+\_\+\+Cubic\+To\+\_\+\+Func}}~\mbox{\hyperlink{ftimage_8h_a9c6f8d42a1660a57f55614baaa4b61b2}{FT\+\_\+\+Outline\+\_\+\+Cubic\+To\+Func}}
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_a20f1ec5a92f85f98bcd219141b604cfb}{FT\+\_\+\+IMAGE\+\_\+\+TAG}}(value,  \+\_\+x1,  \+\_\+x2,  \+\_\+x3,  \+\_\+x4)
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_a11d7e34888fb972beba499f0c71e2fa1}{ft\+\_\+glyph\+\_\+format\+\_\+none}}~FT\+\_\+\+GLYPH\+\_\+\+FORMAT\+\_\+\+NONE
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_a9ffc312de5036f898e5b6d56c2034925}{ft\+\_\+glyph\+\_\+format\+\_\+composite}}~FT\+\_\+\+GLYPH\+\_\+\+FORMAT\+\_\+\+COMPOSITE
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_a3f74f8a5a721951381a9ec21889757d9}{ft\+\_\+glyph\+\_\+format\+\_\+bitmap}}~FT\+\_\+\+GLYPH\+\_\+\+FORMAT\+\_\+\+BITMAP
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_ad9d7e20f1492e8ba16fddd5c91fea832}{ft\+\_\+glyph\+\_\+format\+\_\+outline}}~FT\+\_\+\+GLYPH\+\_\+\+FORMAT\+\_\+\+OUTLINE
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_a127746d73f015c67e3a9037b9630726f}{ft\+\_\+glyph\+\_\+format\+\_\+plotter}}~FT\+\_\+\+GLYPH\+\_\+\+FORMAT\+\_\+\+PLOTTER
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_a27308127a1ced75fcb7c2af04a858a54}{FT\+\_\+\+Raster\+\_\+\+Span\+\_\+\+Func}}~\mbox{\hyperlink{ftimage_8h_abae5f0d92287252b367d3e8210ec4e3a}{FT\+\_\+\+Span\+Func}}
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_a3fc8ce328ef25aa1de7e28466d1c6009}{FT\+\_\+\+RASTER\+\_\+\+FLAG\+\_\+\+DEFAULT}}~0x0
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_a13000ad084c4cb1d878a179aba9763ee}{FT\+\_\+\+RASTER\+\_\+\+FLAG\+\_\+\+AA}}~0x1
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_a83b26348efb1b92915c4927e8a87cb4c}{FT\+\_\+\+RASTER\+\_\+\+FLAG\+\_\+\+DIRECT}}~0x2
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_a680cffd057eb1375459fe576791f2b7f}{FT\+\_\+\+RASTER\+\_\+\+FLAG\+\_\+\+CLIP}}~0x4
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_acea91525c5657d9e06f4cbb22938050b}{ft\+\_\+raster\+\_\+flag\+\_\+default}}~\mbox{\hyperlink{ftimage_8h_a3fc8ce328ef25aa1de7e28466d1c6009}{FT\+\_\+\+RASTER\+\_\+\+FLAG\+\_\+\+DEFAULT}}
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_a078b9acf5d8ca399833af886d8c4008a}{ft\+\_\+raster\+\_\+flag\+\_\+aa}}~\mbox{\hyperlink{ftimage_8h_a13000ad084c4cb1d878a179aba9763ee}{FT\+\_\+\+RASTER\+\_\+\+FLAG\+\_\+\+AA}}
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_aa87501beac782a89867a87433f0577c0}{ft\+\_\+raster\+\_\+flag\+\_\+direct}}~\mbox{\hyperlink{ftimage_8h_a83b26348efb1b92915c4927e8a87cb4c}{FT\+\_\+\+RASTER\+\_\+\+FLAG\+\_\+\+DIRECT}}
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_a97bd3d42e14d10a256c45546605e0beb}{ft\+\_\+raster\+\_\+flag\+\_\+clip}}~\mbox{\hyperlink{ftimage_8h_a680cffd057eb1375459fe576791f2b7f}{FT\+\_\+\+RASTER\+\_\+\+FLAG\+\_\+\+CLIP}}
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_ab50a467c3e9e8313c31c14f1e694af34}{FT\+\_\+\+Raster\+\_\+\+New\+\_\+\+Func}}~\mbox{\hyperlink{ftimage_8h_acfff989cc4f373de6211b12c97a265e8}{FT\+\_\+\+Raster\+\_\+\+New\+Func}}
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_af3fbba4618478eb180ed0ac2ed09e8d6}{FT\+\_\+\+Raster\+\_\+\+Done\+\_\+\+Func}}~\mbox{\hyperlink{ftimage_8h_a2df7d8d26927263fc038263851b18cf6}{FT\+\_\+\+Raster\+\_\+\+Done\+Func}}
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_a7af295aa684d0354fced2dc791a4de89}{FT\+\_\+\+Raster\+\_\+\+Reset\+\_\+\+Func}}~\mbox{\hyperlink{ftimage_8h_a0ae680a37517fe355321f780123d12f6}{FT\+\_\+\+Raster\+\_\+\+Reset\+Func}}
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_ad86623a6850838c7fec54f4f622c2744}{FT\+\_\+\+Raster\+\_\+\+Set\+\_\+\+Mode\+\_\+\+Func}}~\mbox{\hyperlink{ftimage_8h_a959011dc7420bae5989460bfd0727bd1}{FT\+\_\+\+Raster\+\_\+\+Set\+Mode\+Func}}
+\item 
+\#define \mbox{\hyperlink{ftimage_8h_a469b1d3125d0032b8c66df3179832657}{FT\+\_\+\+Raster\+\_\+\+Render\+\_\+\+Func}}~\mbox{\hyperlink{ftimage_8h_a4da783a601182e9e5b9d75584fd814ec}{FT\+\_\+\+Raster\+\_\+\+Render\+Func}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Definicje typów}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_f_t___vector__}{FT\+\_\+\+Vector\+\_\+}} \mbox{\hyperlink{ftimage_8h_abfcb941b4b81f3a922d4ae57c620db27}{FT\+\_\+\+Vector}}
+\item 
+typedef struct \mbox{\hyperlink{struct_f_t___b_box__}{FT\+\_\+\+BBox\+\_\+}} \mbox{\hyperlink{ftimage_8h_a1e1422cfbeb7c3992d5d7b8f85732efd}{FT\+\_\+\+BBox}}
+\item 
+typedef enum \mbox{\hyperlink{ftimage_8h_a4953570a0afb7abb672a6583035865a4}{FT\+\_\+\+Pixel\+\_\+\+Mode\+\_\+}} \mbox{\hyperlink{ftimage_8h_ac567a2d1df18aa5cd04d09859152ff3a}{FT\+\_\+\+Pixel\+\_\+\+Mode}}
+\item 
+typedef struct \mbox{\hyperlink{struct_f_t___bitmap__}{FT\+\_\+\+Bitmap\+\_\+}} \mbox{\hyperlink{ftimage_8h_a1901381e05d5dd7ad6567c85ee2076c3}{FT\+\_\+\+Bitmap}}
+\item 
+typedef struct \mbox{\hyperlink{struct_f_t___outline__}{FT\+\_\+\+Outline\+\_\+}} \mbox{\hyperlink{ftimage_8h_a6b64eb35252e8829024c12c98cce37d4}{FT\+\_\+\+Outline}}
+\item 
+typedef int(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{ftimage_8h_adb1c27eedf361dcd3d331fa266a466af}{FT\+\_\+\+Outline\+\_\+\+Move\+To\+Func}}) (const \mbox{\hyperlink{ftimage_8h_abfcb941b4b81f3a922d4ae57c620db27}{FT\+\_\+\+Vector}} \texorpdfstring{$\ast$}{*}to, void \texorpdfstring{$\ast$}{*}user)
+\item 
+typedef int(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{ftimage_8h_a522526513387d998682d59515fe93ccf}{FT\+\_\+\+Outline\+\_\+\+Line\+To\+Func}}) (const \mbox{\hyperlink{ftimage_8h_abfcb941b4b81f3a922d4ae57c620db27}{FT\+\_\+\+Vector}} \texorpdfstring{$\ast$}{*}to, void \texorpdfstring{$\ast$}{*}user)
+\item 
+typedef int(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{ftimage_8h_a44b83dd26e7f37eae86aee33ff3efd9b}{FT\+\_\+\+Outline\+\_\+\+Conic\+To\+Func}}) (const \mbox{\hyperlink{ftimage_8h_abfcb941b4b81f3a922d4ae57c620db27}{FT\+\_\+\+Vector}} \texorpdfstring{$\ast$}{*}control, const \mbox{\hyperlink{ftimage_8h_abfcb941b4b81f3a922d4ae57c620db27}{FT\+\_\+\+Vector}} \texorpdfstring{$\ast$}{*}to, void \texorpdfstring{$\ast$}{*}user)
+\item 
+typedef int(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{ftimage_8h_a9c6f8d42a1660a57f55614baaa4b61b2}{FT\+\_\+\+Outline\+\_\+\+Cubic\+To\+Func}}) (const \mbox{\hyperlink{ftimage_8h_abfcb941b4b81f3a922d4ae57c620db27}{FT\+\_\+\+Vector}} \texorpdfstring{$\ast$}{*}control1, const \mbox{\hyperlink{ftimage_8h_abfcb941b4b81f3a922d4ae57c620db27}{FT\+\_\+\+Vector}} \texorpdfstring{$\ast$}{*}control2, const \mbox{\hyperlink{ftimage_8h_abfcb941b4b81f3a922d4ae57c620db27}{FT\+\_\+\+Vector}} \texorpdfstring{$\ast$}{*}to, void \texorpdfstring{$\ast$}{*}user)
+\item 
+typedef struct \mbox{\hyperlink{struct_f_t___outline___funcs__}{FT\+\_\+\+Outline\+\_\+\+Funcs\+\_\+}} \mbox{\hyperlink{ftimage_8h_ae5de8c9dd920eccd7ef91a7a4c0f1645}{FT\+\_\+\+Outline\+\_\+\+Funcs}}
+\item 
+typedef enum \mbox{\hyperlink{ftimage_8h_a62d06240f489f4d35830e42b7297eb22}{FT\+\_\+\+Glyph\+\_\+\+Format\+\_\+}} \mbox{\hyperlink{ftimage_8h_ac277a6c91e1d785fae31f2aa86d60588}{FT\+\_\+\+Glyph\+\_\+\+Format}}
+\item 
+typedef struct FT\+\_\+\+Raster\+Rec\+\_\+ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{ftimage_8h_a6774d2eb4bf030daf319aa6b56347431}{FT\+\_\+\+Raster}}
+\item 
+typedef struct \mbox{\hyperlink{struct_f_t___span__}{FT\+\_\+\+Span\+\_\+}} \mbox{\hyperlink{ftimage_8h_a6436dd00a70a85bfc3a8012bdc47b958}{FT\+\_\+\+Span}}
+\item 
+typedef void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{ftimage_8h_abae5f0d92287252b367d3e8210ec4e3a}{FT\+\_\+\+Span\+Func}}) (int y, int count, const \mbox{\hyperlink{ftimage_8h_a6436dd00a70a85bfc3a8012bdc47b958}{FT\+\_\+\+Span}} \texorpdfstring{$\ast$}{*}spans, void \texorpdfstring{$\ast$}{*}user)
+\item 
+typedef int(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{ftimage_8h_a2ac5897dab423a944f4457a3131061e4}{FT\+\_\+\+Raster\+\_\+\+Bit\+Test\+\_\+\+Func}}) (int y, int x, void \texorpdfstring{$\ast$}{*}user)
+\item 
+typedef void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{ftimage_8h_a715e9f91407a9758dbefb6dd6549fe35}{FT\+\_\+\+Raster\+\_\+\+Bit\+Set\+\_\+\+Func}}) (int y, int x, void \texorpdfstring{$\ast$}{*}user)
+\item 
+typedef struct \mbox{\hyperlink{struct_f_t___raster___params__}{FT\+\_\+\+Raster\+\_\+\+Params\+\_\+}} \mbox{\hyperlink{ftimage_8h_a4f41c3fb4a05eacd520be21e4db611bc}{FT\+\_\+\+Raster\+\_\+\+Params}}
+\item 
+typedef int(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{ftimage_8h_acfff989cc4f373de6211b12c97a265e8}{FT\+\_\+\+Raster\+\_\+\+New\+Func}}) (void \texorpdfstring{$\ast$}{*}memory, \mbox{\hyperlink{ftimage_8h_a6774d2eb4bf030daf319aa6b56347431}{FT\+\_\+\+Raster}} \texorpdfstring{$\ast$}{*}raster)
+\item 
+typedef void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{ftimage_8h_a2df7d8d26927263fc038263851b18cf6}{FT\+\_\+\+Raster\+\_\+\+Done\+Func}}) (\mbox{\hyperlink{ftimage_8h_a6774d2eb4bf030daf319aa6b56347431}{FT\+\_\+\+Raster}} raster)
+\item 
+typedef void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{ftimage_8h_a0ae680a37517fe355321f780123d12f6}{FT\+\_\+\+Raster\+\_\+\+Reset\+Func}}) (\mbox{\hyperlink{ftimage_8h_a6774d2eb4bf030daf319aa6b56347431}{FT\+\_\+\+Raster}} raster, unsigned char \texorpdfstring{$\ast$}{*}pool\+\_\+base, unsigned long pool\+\_\+size)
+\item 
+typedef int(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{ftimage_8h_a959011dc7420bae5989460bfd0727bd1}{FT\+\_\+\+Raster\+\_\+\+Set\+Mode\+Func}}) (\mbox{\hyperlink{ftimage_8h_a6774d2eb4bf030daf319aa6b56347431}{FT\+\_\+\+Raster}} raster, unsigned long mode, void \texorpdfstring{$\ast$}{*}args)
+\item 
+typedef int(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{ftimage_8h_a4da783a601182e9e5b9d75584fd814ec}{FT\+\_\+\+Raster\+\_\+\+Render\+Func}}) (\mbox{\hyperlink{ftimage_8h_a6774d2eb4bf030daf319aa6b56347431}{FT\+\_\+\+Raster}} raster, const \mbox{\hyperlink{ftimage_8h_a4f41c3fb4a05eacd520be21e4db611bc}{FT\+\_\+\+Raster\+\_\+\+Params}} \texorpdfstring{$\ast$}{*}params)
+\item 
+typedef struct \mbox{\hyperlink{struct_f_t___raster___funcs__}{FT\+\_\+\+Raster\+\_\+\+Funcs\+\_\+}} \mbox{\hyperlink{ftimage_8h_a738d501723224dee6667ada1e1b6eb1c}{FT\+\_\+\+Raster\+\_\+\+Funcs}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Wyliczenia}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{ftimage_8h_a4953570a0afb7abb672a6583035865a4}{FT\+\_\+\+Pixel\+\_\+\+Mode\+\_\+}} \{ \newline
+\mbox{\hyperlink{ftimage_8h_a4953570a0afb7abb672a6583035865a4a42b2be5eb5c8e72d81fa43b11cf942ca}{FT\+\_\+\+PIXEL\+\_\+\+MODE\+\_\+\+NONE}} = 0
+, \mbox{\hyperlink{ftimage_8h_a4953570a0afb7abb672a6583035865a4a3c16f8be14915a529161ff1514204fb4}{FT\+\_\+\+PIXEL\+\_\+\+MODE\+\_\+\+MONO}}
+, \mbox{\hyperlink{ftimage_8h_a4953570a0afb7abb672a6583035865a4a58a764f37700cb5258d02987a9209e2c}{FT\+\_\+\+PIXEL\+\_\+\+MODE\+\_\+\+GRAY}}
+, \mbox{\hyperlink{ftimage_8h_a4953570a0afb7abb672a6583035865a4a15764edffc5eb2f5b55e989a1d2be93a}{FT\+\_\+\+PIXEL\+\_\+\+MODE\+\_\+\+GRAY2}}
+, \newline
+\mbox{\hyperlink{ftimage_8h_a4953570a0afb7abb672a6583035865a4aed2aa6cba156a0cd9c4bf16be7a9249d}{FT\+\_\+\+PIXEL\+\_\+\+MODE\+\_\+\+GRAY4}}
+, \mbox{\hyperlink{ftimage_8h_a4953570a0afb7abb672a6583035865a4a7735f0c481982819c28cce353230d214}{FT\+\_\+\+PIXEL\+\_\+\+MODE\+\_\+\+LCD}}
+, \mbox{\hyperlink{ftimage_8h_a4953570a0afb7abb672a6583035865a4a2fe6ff91ba59130265c5c371e0fe671b}{FT\+\_\+\+PIXEL\+\_\+\+MODE\+\_\+\+LCD\+\_\+V}}
+, \mbox{\hyperlink{ftimage_8h_a4953570a0afb7abb672a6583035865a4a873a05979d3276a655b0757039a84cad}{FT\+\_\+\+PIXEL\+\_\+\+MODE\+\_\+\+BGRA}}
+, \newline
+\mbox{\hyperlink{ftimage_8h_a4953570a0afb7abb672a6583035865a4a650b585fbc19e71dafed4861dd71d04c}{FT\+\_\+\+PIXEL\+\_\+\+MODE\+\_\+\+MAX}}
+ \}
+\item 
+enum \mbox{\hyperlink{ftimage_8h_a62d06240f489f4d35830e42b7297eb22}{FT\+\_\+\+Glyph\+\_\+\+Format\+\_\+}} \{ \mbox{\hyperlink{ftimage_8h_a62d06240f489f4d35830e42b7297eb22a6fbfde68c5be5ff527967af5cd7bf947}{FT\+\_\+\+IMAGE\+\_\+\+TAG}} =( FT\+\_\+\+GLYPH\+\_\+\+FORMAT\+\_\+\+NONE, 0, 0, 0, 0 )
+, \mbox{\hyperlink{ftimage_8h_a62d06240f489f4d35830e42b7297eb22a6fbfde68c5be5ff527967af5cd7bf947}{FT\+\_\+\+IMAGE\+\_\+\+TAG}} =( FT\+\_\+\+GLYPH\+\_\+\+FORMAT\+\_\+\+NONE, 0, 0, 0, 0 )
+, \mbox{\hyperlink{ftimage_8h_a62d06240f489f4d35830e42b7297eb22a6fbfde68c5be5ff527967af5cd7bf947}{FT\+\_\+\+IMAGE\+\_\+\+TAG}} =( FT\+\_\+\+GLYPH\+\_\+\+FORMAT\+\_\+\+NONE, 0, 0, 0, 0 )
+, \mbox{\hyperlink{ftimage_8h_a62d06240f489f4d35830e42b7297eb22a6fbfde68c5be5ff527967af5cd7bf947}{FT\+\_\+\+IMAGE\+\_\+\+TAG}} =( FT\+\_\+\+GLYPH\+\_\+\+FORMAT\+\_\+\+NONE, 0, 0, 0, 0 )
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Zmienne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ftheader_8h_a72ee5814b3ae378ebb7fd3a8e3ddec14}{FT\+\_\+\+BEGIN\+\_\+\+HEADER}} typedef signed long \mbox{\hyperlink{ftimage_8h_af5f230f4b253d4c7715fd2e595614c90}{FT\+\_\+\+Pos}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja definicji}
+\Hypertarget{ftimage_8h_a87ccc09e7aaa99f75a5e7f5360ad6e47}\label{ftimage_8h_a87ccc09e7aaa99f75a5e7f5360ad6e47} 
+\index{ftimage.h@{ftimage.h}!FT\_CURVE\_TAG@{FT\_CURVE\_TAG}}
+\index{FT\_CURVE\_TAG@{FT\_CURVE\_TAG}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_CURVE\_TAG}{FT\_CURVE\_TAG}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+CURVE\+\_\+\+TAG(\begin{DoxyParamCaption}\item[{}]{flag }\end{DoxyParamCaption})~( flag \& 3 )}
+
+\Hypertarget{ftimage_8h_a4083b94d7eb1e27dce067c38faa040ba}\label{ftimage_8h_a4083b94d7eb1e27dce067c38faa040ba} 
+\index{ftimage.h@{ftimage.h}!FT\_CURVE\_TAG\_CONIC@{FT\_CURVE\_TAG\_CONIC}}
+\index{FT\_CURVE\_TAG\_CONIC@{FT\_CURVE\_TAG\_CONIC}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_CURVE\_TAG\_CONIC}{FT\_CURVE\_TAG\_CONIC}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+CURVE\+\_\+\+TAG\+\_\+\+CONIC~0}
+
+\Hypertarget{ftimage_8h_a7137878cba0793e4e1e0ece434a3324e}\label{ftimage_8h_a7137878cba0793e4e1e0ece434a3324e} 
+\index{ftimage.h@{ftimage.h}!FT\_Curve\_Tag\_Conic@{FT\_Curve\_Tag\_Conic}}
+\index{FT\_Curve\_Tag\_Conic@{FT\_Curve\_Tag\_Conic}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Curve\_Tag\_Conic}{FT\_Curve\_Tag\_Conic}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+Curve\+\_\+\+Tag\+\_\+\+Conic~\mbox{\hyperlink{ftimage_8h_a4083b94d7eb1e27dce067c38faa040ba}{FT\+\_\+\+CURVE\+\_\+\+TAG\+\_\+\+CONIC}}}
+
+\Hypertarget{ftimage_8h_a031f7941800d809c561e39bc10935b18}\label{ftimage_8h_a031f7941800d809c561e39bc10935b18} 
+\index{ftimage.h@{ftimage.h}!FT\_CURVE\_TAG\_CUBIC@{FT\_CURVE\_TAG\_CUBIC}}
+\index{FT\_CURVE\_TAG\_CUBIC@{FT\_CURVE\_TAG\_CUBIC}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_CURVE\_TAG\_CUBIC}{FT\_CURVE\_TAG\_CUBIC}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+CURVE\+\_\+\+TAG\+\_\+\+CUBIC~2}
+
+\Hypertarget{ftimage_8h_ab1fc759555474f5952aca97ac354bd15}\label{ftimage_8h_ab1fc759555474f5952aca97ac354bd15} 
+\index{ftimage.h@{ftimage.h}!FT\_Curve\_Tag\_Cubic@{FT\_Curve\_Tag\_Cubic}}
+\index{FT\_Curve\_Tag\_Cubic@{FT\_Curve\_Tag\_Cubic}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Curve\_Tag\_Cubic}{FT\_Curve\_Tag\_Cubic}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+Curve\+\_\+\+Tag\+\_\+\+Cubic~\mbox{\hyperlink{ftimage_8h_a031f7941800d809c561e39bc10935b18}{FT\+\_\+\+CURVE\+\_\+\+TAG\+\_\+\+CUBIC}}}
+
+\Hypertarget{ftimage_8h_a3dd1ef72bd2a47f89b354a3c76c5720f}\label{ftimage_8h_a3dd1ef72bd2a47f89b354a3c76c5720f} 
+\index{ftimage.h@{ftimage.h}!FT\_CURVE\_TAG\_HAS\_SCANMODE@{FT\_CURVE\_TAG\_HAS\_SCANMODE}}
+\index{FT\_CURVE\_TAG\_HAS\_SCANMODE@{FT\_CURVE\_TAG\_HAS\_SCANMODE}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_CURVE\_TAG\_HAS\_SCANMODE}{FT\_CURVE\_TAG\_HAS\_SCANMODE}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+CURVE\+\_\+\+TAG\+\_\+\+HAS\+\_\+\+SCANMODE~4}
+
+\Hypertarget{ftimage_8h_a967f934e5e5e1ee1fe4291d23959aa9c}\label{ftimage_8h_a967f934e5e5e1ee1fe4291d23959aa9c} 
+\index{ftimage.h@{ftimage.h}!FT\_CURVE\_TAG\_ON@{FT\_CURVE\_TAG\_ON}}
+\index{FT\_CURVE\_TAG\_ON@{FT\_CURVE\_TAG\_ON}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_CURVE\_TAG\_ON}{FT\_CURVE\_TAG\_ON}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+CURVE\+\_\+\+TAG\+\_\+\+ON~1}
+
+\Hypertarget{ftimage_8h_a9548449bf2fae689516af3b733e13acb}\label{ftimage_8h_a9548449bf2fae689516af3b733e13acb} 
+\index{ftimage.h@{ftimage.h}!FT\_Curve\_Tag\_On@{FT\_Curve\_Tag\_On}}
+\index{FT\_Curve\_Tag\_On@{FT\_Curve\_Tag\_On}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Curve\_Tag\_On}{FT\_Curve\_Tag\_On}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+Curve\+\_\+\+Tag\+\_\+\+On~\mbox{\hyperlink{ftimage_8h_a967f934e5e5e1ee1fe4291d23959aa9c}{FT\+\_\+\+CURVE\+\_\+\+TAG\+\_\+\+ON}}}
+
+\Hypertarget{ftimage_8h_a2bdd5798976257559d1bb624e17a951b}\label{ftimage_8h_a2bdd5798976257559d1bb624e17a951b} 
+\index{ftimage.h@{ftimage.h}!FT\_CURVE\_TAG\_TOUCH\_BOTH@{FT\_CURVE\_TAG\_TOUCH\_BOTH}}
+\index{FT\_CURVE\_TAG\_TOUCH\_BOTH@{FT\_CURVE\_TAG\_TOUCH\_BOTH}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_CURVE\_TAG\_TOUCH\_BOTH}{FT\_CURVE\_TAG\_TOUCH\_BOTH}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+CURVE\+\_\+\+TAG\+\_\+\+TOUCH\+\_\+\+BOTH}
+
+{\bfseries Wartość\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\ \mbox{\hyperlink{ftimage_8h_a208728b27b1fa2962cdc05a4f8861476}{FT\_CURVE\_TAG\_TOUCH\_X}}\ |\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ftimage_8h_a2d3c478c162d051b173095198cf40eb9}{FT\_CURVE\_TAG\_TOUCH\_Y}}\ )}
+
+\end{DoxyCode}
+\Hypertarget{ftimage_8h_a208728b27b1fa2962cdc05a4f8861476}\label{ftimage_8h_a208728b27b1fa2962cdc05a4f8861476} 
+\index{ftimage.h@{ftimage.h}!FT\_CURVE\_TAG\_TOUCH\_X@{FT\_CURVE\_TAG\_TOUCH\_X}}
+\index{FT\_CURVE\_TAG\_TOUCH\_X@{FT\_CURVE\_TAG\_TOUCH\_X}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_CURVE\_TAG\_TOUCH\_X}{FT\_CURVE\_TAG\_TOUCH\_X}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+CURVE\+\_\+\+TAG\+\_\+\+TOUCH\+\_\+X~8  /\texorpdfstring{$\ast$}{*} reserved for the True\+Type hinter \texorpdfstring{$\ast$}{*}/}
+
+\Hypertarget{ftimage_8h_a2a73ec8dd1884906136072ba15c6ad23}\label{ftimage_8h_a2a73ec8dd1884906136072ba15c6ad23} 
+\index{ftimage.h@{ftimage.h}!FT\_Curve\_Tag\_Touch\_X@{FT\_Curve\_Tag\_Touch\_X}}
+\index{FT\_Curve\_Tag\_Touch\_X@{FT\_Curve\_Tag\_Touch\_X}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Curve\_Tag\_Touch\_X}{FT\_Curve\_Tag\_Touch\_X}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+Curve\+\_\+\+Tag\+\_\+\+Touch\+\_\+X~\mbox{\hyperlink{ftimage_8h_a208728b27b1fa2962cdc05a4f8861476}{FT\+\_\+\+CURVE\+\_\+\+TAG\+\_\+\+TOUCH\+\_\+X}}}
+
+\Hypertarget{ftimage_8h_a2d3c478c162d051b173095198cf40eb9}\label{ftimage_8h_a2d3c478c162d051b173095198cf40eb9} 
+\index{ftimage.h@{ftimage.h}!FT\_CURVE\_TAG\_TOUCH\_Y@{FT\_CURVE\_TAG\_TOUCH\_Y}}
+\index{FT\_CURVE\_TAG\_TOUCH\_Y@{FT\_CURVE\_TAG\_TOUCH\_Y}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_CURVE\_TAG\_TOUCH\_Y}{FT\_CURVE\_TAG\_TOUCH\_Y}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+CURVE\+\_\+\+TAG\+\_\+\+TOUCH\+\_\+Y~16  /\texorpdfstring{$\ast$}{*} reserved for the True\+Type hinter \texorpdfstring{$\ast$}{*}/}
+
+\Hypertarget{ftimage_8h_a7d46e507c9ce73a609d753505e3b7da6}\label{ftimage_8h_a7d46e507c9ce73a609d753505e3b7da6} 
+\index{ftimage.h@{ftimage.h}!FT\_Curve\_Tag\_Touch\_Y@{FT\_Curve\_Tag\_Touch\_Y}}
+\index{FT\_Curve\_Tag\_Touch\_Y@{FT\_Curve\_Tag\_Touch\_Y}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Curve\_Tag\_Touch\_Y}{FT\_Curve\_Tag\_Touch\_Y}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+Curve\+\_\+\+Tag\+\_\+\+Touch\+\_\+Y~\mbox{\hyperlink{ftimage_8h_a2d3c478c162d051b173095198cf40eb9}{FT\+\_\+\+CURVE\+\_\+\+TAG\+\_\+\+TOUCH\+\_\+Y}}}
+
+\Hypertarget{ftimage_8h_a3f74f8a5a721951381a9ec21889757d9}\label{ftimage_8h_a3f74f8a5a721951381a9ec21889757d9} 
+\index{ftimage.h@{ftimage.h}!ft\_glyph\_format\_bitmap@{ft\_glyph\_format\_bitmap}}
+\index{ft\_glyph\_format\_bitmap@{ft\_glyph\_format\_bitmap}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{ft\_glyph\_format\_bitmap}{ft\_glyph\_format\_bitmap}}
+{\footnotesize\ttfamily \#define ft\+\_\+glyph\+\_\+format\+\_\+bitmap~FT\+\_\+\+GLYPH\+\_\+\+FORMAT\+\_\+\+BITMAP}
+
+\Hypertarget{ftimage_8h_a9ffc312de5036f898e5b6d56c2034925}\label{ftimage_8h_a9ffc312de5036f898e5b6d56c2034925} 
+\index{ftimage.h@{ftimage.h}!ft\_glyph\_format\_composite@{ft\_glyph\_format\_composite}}
+\index{ft\_glyph\_format\_composite@{ft\_glyph\_format\_composite}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{ft\_glyph\_format\_composite}{ft\_glyph\_format\_composite}}
+{\footnotesize\ttfamily \#define ft\+\_\+glyph\+\_\+format\+\_\+composite~FT\+\_\+\+GLYPH\+\_\+\+FORMAT\+\_\+\+COMPOSITE}
+
+\Hypertarget{ftimage_8h_a11d7e34888fb972beba499f0c71e2fa1}\label{ftimage_8h_a11d7e34888fb972beba499f0c71e2fa1} 
+\index{ftimage.h@{ftimage.h}!ft\_glyph\_format\_none@{ft\_glyph\_format\_none}}
+\index{ft\_glyph\_format\_none@{ft\_glyph\_format\_none}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{ft\_glyph\_format\_none}{ft\_glyph\_format\_none}}
+{\footnotesize\ttfamily \#define ft\+\_\+glyph\+\_\+format\+\_\+none~FT\+\_\+\+GLYPH\+\_\+\+FORMAT\+\_\+\+NONE}
+
+\Hypertarget{ftimage_8h_ad9d7e20f1492e8ba16fddd5c91fea832}\label{ftimage_8h_ad9d7e20f1492e8ba16fddd5c91fea832} 
+\index{ftimage.h@{ftimage.h}!ft\_glyph\_format\_outline@{ft\_glyph\_format\_outline}}
+\index{ft\_glyph\_format\_outline@{ft\_glyph\_format\_outline}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{ft\_glyph\_format\_outline}{ft\_glyph\_format\_outline}}
+{\footnotesize\ttfamily \#define ft\+\_\+glyph\+\_\+format\+\_\+outline~FT\+\_\+\+GLYPH\+\_\+\+FORMAT\+\_\+\+OUTLINE}
+
+\Hypertarget{ftimage_8h_a127746d73f015c67e3a9037b9630726f}\label{ftimage_8h_a127746d73f015c67e3a9037b9630726f} 
+\index{ftimage.h@{ftimage.h}!ft\_glyph\_format\_plotter@{ft\_glyph\_format\_plotter}}
+\index{ft\_glyph\_format\_plotter@{ft\_glyph\_format\_plotter}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{ft\_glyph\_format\_plotter}{ft\_glyph\_format\_plotter}}
+{\footnotesize\ttfamily \#define ft\+\_\+glyph\+\_\+format\+\_\+plotter~FT\+\_\+\+GLYPH\+\_\+\+FORMAT\+\_\+\+PLOTTER}
+
+\Hypertarget{ftimage_8h_a20f1ec5a92f85f98bcd219141b604cfb}\label{ftimage_8h_a20f1ec5a92f85f98bcd219141b604cfb} 
+\index{ftimage.h@{ftimage.h}!FT\_IMAGE\_TAG@{FT\_IMAGE\_TAG}}
+\index{FT\_IMAGE\_TAG@{FT\_IMAGE\_TAG}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_IMAGE\_TAG}{FT\_IMAGE\_TAG}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+IMAGE\+\_\+\+TAG(\begin{DoxyParamCaption}\item[{}]{value,  }\item[{}]{\+\_\+x1,  }\item[{}]{\+\_\+x2,  }\item[{}]{\+\_\+x3,  }\item[{}]{\+\_\+x4 }\end{DoxyParamCaption})}
+
+{\bfseries Wartość\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ value\ =\ (\ (\ (\textcolor{keywordtype}{unsigned}\ long)\_x1\ <<\ 24\ )\ |\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\ (\textcolor{keywordtype}{unsigned}\ long)\_x2\ <<\ 16\ )\ |\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\ (\textcolor{keywordtype}{unsigned}\ long)\_x3\ <<\ 8\ \ )\ |\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{keywordtype}{unsigned}\ long)\_x4\ \ \ \ \ \ \ \ \ )}
+
+\end{DoxyCode}
+\Hypertarget{ftimage_8h_a95a8dd2e9f3fb3da159807606d3e46a2}\label{ftimage_8h_a95a8dd2e9f3fb3da159807606d3e46a2} 
+\index{ftimage.h@{ftimage.h}!FT\_Outline\_ConicTo\_Func@{FT\_Outline\_ConicTo\_Func}}
+\index{FT\_Outline\_ConicTo\_Func@{FT\_Outline\_ConicTo\_Func}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Outline\_ConicTo\_Func}{FT\_Outline\_ConicTo\_Func}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+Outline\+\_\+\+Conic\+To\+\_\+\+Func~\mbox{\hyperlink{ftimage_8h_a44b83dd26e7f37eae86aee33ff3efd9b}{FT\+\_\+\+Outline\+\_\+\+Conic\+To\+Func}}}
+
+\Hypertarget{ftimage_8h_aa50d34733fea6dbd96ccf45641176261}\label{ftimage_8h_aa50d34733fea6dbd96ccf45641176261} 
+\index{ftimage.h@{ftimage.h}!FT\_OUTLINE\_CONTOURS\_MAX@{FT\_OUTLINE\_CONTOURS\_MAX}}
+\index{FT\_OUTLINE\_CONTOURS\_MAX@{FT\_OUTLINE\_CONTOURS\_MAX}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_OUTLINE\_CONTOURS\_MAX}{FT\_OUTLINE\_CONTOURS\_MAX}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+OUTLINE\+\_\+\+CONTOURS\+\_\+\+MAX~SHRT\+\_\+\+MAX}
+
+\Hypertarget{ftimage_8h_a67500fd20d9d06ae0baa123b28f4a35e}\label{ftimage_8h_a67500fd20d9d06ae0baa123b28f4a35e} 
+\index{ftimage.h@{ftimage.h}!FT\_Outline\_CubicTo\_Func@{FT\_Outline\_CubicTo\_Func}}
+\index{FT\_Outline\_CubicTo\_Func@{FT\_Outline\_CubicTo\_Func}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Outline\_CubicTo\_Func}{FT\_Outline\_CubicTo\_Func}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+Outline\+\_\+\+Cubic\+To\+\_\+\+Func~\mbox{\hyperlink{ftimage_8h_a9c6f8d42a1660a57f55614baaa4b61b2}{FT\+\_\+\+Outline\+\_\+\+Cubic\+To\+Func}}}
+
+\Hypertarget{ftimage_8h_a4efa7b75e501ea7e8f299649336a201d}\label{ftimage_8h_a4efa7b75e501ea7e8f299649336a201d} 
+\index{ftimage.h@{ftimage.h}!FT\_OUTLINE\_EVEN\_ODD\_FILL@{FT\_OUTLINE\_EVEN\_ODD\_FILL}}
+\index{FT\_OUTLINE\_EVEN\_ODD\_FILL@{FT\_OUTLINE\_EVEN\_ODD\_FILL}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_OUTLINE\_EVEN\_ODD\_FILL}{FT\_OUTLINE\_EVEN\_ODD\_FILL}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+OUTLINE\+\_\+\+EVEN\+\_\+\+ODD\+\_\+\+FILL~0x2}
+
+\Hypertarget{ftimage_8h_a8fab8e2a53bdfa2d25a0ce9213304d3e}\label{ftimage_8h_a8fab8e2a53bdfa2d25a0ce9213304d3e} 
+\index{ftimage.h@{ftimage.h}!ft\_outline\_even\_odd\_fill@{ft\_outline\_even\_odd\_fill}}
+\index{ft\_outline\_even\_odd\_fill@{ft\_outline\_even\_odd\_fill}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{ft\_outline\_even\_odd\_fill}{ft\_outline\_even\_odd\_fill}}
+{\footnotesize\ttfamily \#define ft\+\_\+outline\+\_\+even\+\_\+odd\+\_\+fill~\mbox{\hyperlink{ftimage_8h_a4efa7b75e501ea7e8f299649336a201d}{FT\+\_\+\+OUTLINE\+\_\+\+EVEN\+\_\+\+ODD\+\_\+\+FILL}}}
+
+\Hypertarget{ftimage_8h_aa52794bb013ef86fc3da0eb8502024b1}\label{ftimage_8h_aa52794bb013ef86fc3da0eb8502024b1} 
+\index{ftimage.h@{ftimage.h}!FT\_OUTLINE\_HIGH\_PRECISION@{FT\_OUTLINE\_HIGH\_PRECISION}}
+\index{FT\_OUTLINE\_HIGH\_PRECISION@{FT\_OUTLINE\_HIGH\_PRECISION}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_OUTLINE\_HIGH\_PRECISION}{FT\_OUTLINE\_HIGH\_PRECISION}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+OUTLINE\+\_\+\+HIGH\+\_\+\+PRECISION~0x100}
+
+\Hypertarget{ftimage_8h_aa6ca3f2d8d6817877c159a23ed7e300f}\label{ftimage_8h_aa6ca3f2d8d6817877c159a23ed7e300f} 
+\index{ftimage.h@{ftimage.h}!ft\_outline\_high\_precision@{ft\_outline\_high\_precision}}
+\index{ft\_outline\_high\_precision@{ft\_outline\_high\_precision}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{ft\_outline\_high\_precision}{ft\_outline\_high\_precision}}
+{\footnotesize\ttfamily \#define ft\+\_\+outline\+\_\+high\+\_\+precision~\mbox{\hyperlink{ftimage_8h_aa52794bb013ef86fc3da0eb8502024b1}{FT\+\_\+\+OUTLINE\+\_\+\+HIGH\+\_\+\+PRECISION}}}
+
+\Hypertarget{ftimage_8h_a6ad8f4d36f10c26397c4fbd74b306f7a}\label{ftimage_8h_a6ad8f4d36f10c26397c4fbd74b306f7a} 
+\index{ftimage.h@{ftimage.h}!FT\_OUTLINE\_IGNORE\_DROPOUTS@{FT\_OUTLINE\_IGNORE\_DROPOUTS}}
+\index{FT\_OUTLINE\_IGNORE\_DROPOUTS@{FT\_OUTLINE\_IGNORE\_DROPOUTS}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_OUTLINE\_IGNORE\_DROPOUTS}{FT\_OUTLINE\_IGNORE\_DROPOUTS}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+OUTLINE\+\_\+\+IGNORE\+\_\+\+DROPOUTS~0x8}
+
+\Hypertarget{ftimage_8h_a42b656a9c0ecfaa210a21f9e6a759d2e}\label{ftimage_8h_a42b656a9c0ecfaa210a21f9e6a759d2e} 
+\index{ftimage.h@{ftimage.h}!ft\_outline\_ignore\_dropouts@{ft\_outline\_ignore\_dropouts}}
+\index{ft\_outline\_ignore\_dropouts@{ft\_outline\_ignore\_dropouts}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{ft\_outline\_ignore\_dropouts}{ft\_outline\_ignore\_dropouts}}
+{\footnotesize\ttfamily \#define ft\+\_\+outline\+\_\+ignore\+\_\+dropouts~\mbox{\hyperlink{ftimage_8h_a6ad8f4d36f10c26397c4fbd74b306f7a}{FT\+\_\+\+OUTLINE\+\_\+\+IGNORE\+\_\+\+DROPOUTS}}}
+
+\Hypertarget{ftimage_8h_a6cc7c7324d7c0382c2e211ccdf0ababd}\label{ftimage_8h_a6cc7c7324d7c0382c2e211ccdf0ababd} 
+\index{ftimage.h@{ftimage.h}!FT\_OUTLINE\_INCLUDE\_STUBS@{FT\_OUTLINE\_INCLUDE\_STUBS}}
+\index{FT\_OUTLINE\_INCLUDE\_STUBS@{FT\_OUTLINE\_INCLUDE\_STUBS}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_OUTLINE\_INCLUDE\_STUBS}{FT\_OUTLINE\_INCLUDE\_STUBS}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+OUTLINE\+\_\+\+INCLUDE\+\_\+\+STUBS~0x20}
+
+\Hypertarget{ftimage_8h_a77419f525bb73211cc997081290367d0}\label{ftimage_8h_a77419f525bb73211cc997081290367d0} 
+\index{ftimage.h@{ftimage.h}!FT\_Outline\_LineTo\_Func@{FT\_Outline\_LineTo\_Func}}
+\index{FT\_Outline\_LineTo\_Func@{FT\_Outline\_LineTo\_Func}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Outline\_LineTo\_Func}{FT\_Outline\_LineTo\_Func}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+Outline\+\_\+\+Line\+To\+\_\+\+Func~\mbox{\hyperlink{ftimage_8h_a522526513387d998682d59515fe93ccf}{FT\+\_\+\+Outline\+\_\+\+Line\+To\+Func}}}
+
+\Hypertarget{ftimage_8h_ae5c15ee22f5ae04acc40ebc08b2c384b}\label{ftimage_8h_ae5c15ee22f5ae04acc40ebc08b2c384b} 
+\index{ftimage.h@{ftimage.h}!FT\_Outline\_MoveTo\_Func@{FT\_Outline\_MoveTo\_Func}}
+\index{FT\_Outline\_MoveTo\_Func@{FT\_Outline\_MoveTo\_Func}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Outline\_MoveTo\_Func}{FT\_Outline\_MoveTo\_Func}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+Outline\+\_\+\+Move\+To\+\_\+\+Func~\mbox{\hyperlink{ftimage_8h_adb1c27eedf361dcd3d331fa266a466af}{FT\+\_\+\+Outline\+\_\+\+Move\+To\+Func}}}
+
+\Hypertarget{ftimage_8h_a5b9770808811255f74015c64ddca54c9}\label{ftimage_8h_a5b9770808811255f74015c64ddca54c9} 
+\index{ftimage.h@{ftimage.h}!FT\_OUTLINE\_NONE@{FT\_OUTLINE\_NONE}}
+\index{FT\_OUTLINE\_NONE@{FT\_OUTLINE\_NONE}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_OUTLINE\_NONE}{FT\_OUTLINE\_NONE}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+OUTLINE\+\_\+\+NONE~0x0}
+
+\Hypertarget{ftimage_8h_a8206880ac83ae4a79912cebff21aa26d}\label{ftimage_8h_a8206880ac83ae4a79912cebff21aa26d} 
+\index{ftimage.h@{ftimage.h}!ft\_outline\_none@{ft\_outline\_none}}
+\index{ft\_outline\_none@{ft\_outline\_none}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{ft\_outline\_none}{ft\_outline\_none}}
+{\footnotesize\ttfamily \#define ft\+\_\+outline\+\_\+none~\mbox{\hyperlink{ftimage_8h_a5b9770808811255f74015c64ddca54c9}{FT\+\_\+\+OUTLINE\+\_\+\+NONE}}}
+
+\Hypertarget{ftimage_8h_ace1302f12b2a7d5824d7fb346cdca89c}\label{ftimage_8h_ace1302f12b2a7d5824d7fb346cdca89c} 
+\index{ftimage.h@{ftimage.h}!FT\_OUTLINE\_OWNER@{FT\_OUTLINE\_OWNER}}
+\index{FT\_OUTLINE\_OWNER@{FT\_OUTLINE\_OWNER}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_OUTLINE\_OWNER}{FT\_OUTLINE\_OWNER}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+OUTLINE\+\_\+\+OWNER~0x1}
+
+\Hypertarget{ftimage_8h_a7f0f4693f1bdcfdaed206d97688b8070}\label{ftimage_8h_a7f0f4693f1bdcfdaed206d97688b8070} 
+\index{ftimage.h@{ftimage.h}!ft\_outline\_owner@{ft\_outline\_owner}}
+\index{ft\_outline\_owner@{ft\_outline\_owner}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{ft\_outline\_owner}{ft\_outline\_owner}}
+{\footnotesize\ttfamily \#define ft\+\_\+outline\+\_\+owner~\mbox{\hyperlink{ftimage_8h_ace1302f12b2a7d5824d7fb346cdca89c}{FT\+\_\+\+OUTLINE\+\_\+\+OWNER}}}
+
+\Hypertarget{ftimage_8h_aab3403442f558892216d95af8a41075d}\label{ftimage_8h_aab3403442f558892216d95af8a41075d} 
+\index{ftimage.h@{ftimage.h}!FT\_OUTLINE\_POINTS\_MAX@{FT\_OUTLINE\_POINTS\_MAX}}
+\index{FT\_OUTLINE\_POINTS\_MAX@{FT\_OUTLINE\_POINTS\_MAX}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_OUTLINE\_POINTS\_MAX}{FT\_OUTLINE\_POINTS\_MAX}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+OUTLINE\+\_\+\+POINTS\+\_\+\+MAX~SHRT\+\_\+\+MAX}
+
+\Hypertarget{ftimage_8h_ae6eb93e2e13c7e67da3b399f1dd57045}\label{ftimage_8h_ae6eb93e2e13c7e67da3b399f1dd57045} 
+\index{ftimage.h@{ftimage.h}!FT\_OUTLINE\_REVERSE\_FILL@{FT\_OUTLINE\_REVERSE\_FILL}}
+\index{FT\_OUTLINE\_REVERSE\_FILL@{FT\_OUTLINE\_REVERSE\_FILL}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_OUTLINE\_REVERSE\_FILL}{FT\_OUTLINE\_REVERSE\_FILL}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+OUTLINE\+\_\+\+REVERSE\+\_\+\+FILL~0x4}
+
+\Hypertarget{ftimage_8h_a141d4ef79000e3e959ca209cccdba2ce}\label{ftimage_8h_a141d4ef79000e3e959ca209cccdba2ce} 
+\index{ftimage.h@{ftimage.h}!ft\_outline\_reverse\_fill@{ft\_outline\_reverse\_fill}}
+\index{ft\_outline\_reverse\_fill@{ft\_outline\_reverse\_fill}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{ft\_outline\_reverse\_fill}{ft\_outline\_reverse\_fill}}
+{\footnotesize\ttfamily \#define ft\+\_\+outline\+\_\+reverse\+\_\+fill~\mbox{\hyperlink{ftimage_8h_ae6eb93e2e13c7e67da3b399f1dd57045}{FT\+\_\+\+OUTLINE\+\_\+\+REVERSE\+\_\+\+FILL}}}
+
+\Hypertarget{ftimage_8h_ae7ff66a72c5702a0ab34436b02ca8662}\label{ftimage_8h_ae7ff66a72c5702a0ab34436b02ca8662} 
+\index{ftimage.h@{ftimage.h}!FT\_OUTLINE\_SINGLE\_PASS@{FT\_OUTLINE\_SINGLE\_PASS}}
+\index{FT\_OUTLINE\_SINGLE\_PASS@{FT\_OUTLINE\_SINGLE\_PASS}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_OUTLINE\_SINGLE\_PASS}{FT\_OUTLINE\_SINGLE\_PASS}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+OUTLINE\+\_\+\+SINGLE\+\_\+\+PASS~0x200}
+
+\Hypertarget{ftimage_8h_a4dd16821c11559df986080778a2f9267}\label{ftimage_8h_a4dd16821c11559df986080778a2f9267} 
+\index{ftimage.h@{ftimage.h}!ft\_outline\_single\_pass@{ft\_outline\_single\_pass}}
+\index{ft\_outline\_single\_pass@{ft\_outline\_single\_pass}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{ft\_outline\_single\_pass}{ft\_outline\_single\_pass}}
+{\footnotesize\ttfamily \#define ft\+\_\+outline\+\_\+single\+\_\+pass~\mbox{\hyperlink{ftimage_8h_ae7ff66a72c5702a0ab34436b02ca8662}{FT\+\_\+\+OUTLINE\+\_\+\+SINGLE\+\_\+\+PASS}}}
+
+\Hypertarget{ftimage_8h_a2d69c5b5db14cdcaccf941cfe3788204}\label{ftimage_8h_a2d69c5b5db14cdcaccf941cfe3788204} 
+\index{ftimage.h@{ftimage.h}!FT\_OUTLINE\_SMART\_DROPOUTS@{FT\_OUTLINE\_SMART\_DROPOUTS}}
+\index{FT\_OUTLINE\_SMART\_DROPOUTS@{FT\_OUTLINE\_SMART\_DROPOUTS}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_OUTLINE\_SMART\_DROPOUTS}{FT\_OUTLINE\_SMART\_DROPOUTS}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+OUTLINE\+\_\+\+SMART\+\_\+\+DROPOUTS~0x10}
+
+\Hypertarget{ftimage_8h_a8dabde8b30dc0dc8842f7d15ae354a73}\label{ftimage_8h_a8dabde8b30dc0dc8842f7d15ae354a73} 
+\index{ftimage.h@{ftimage.h}!ft\_pixel\_mode\_grays@{ft\_pixel\_mode\_grays}}
+\index{ft\_pixel\_mode\_grays@{ft\_pixel\_mode\_grays}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{ft\_pixel\_mode\_grays}{ft\_pixel\_mode\_grays}}
+{\footnotesize\ttfamily \#define ft\+\_\+pixel\+\_\+mode\+\_\+grays~\mbox{\hyperlink{ftimage_8h_a4953570a0afb7abb672a6583035865a4a58a764f37700cb5258d02987a9209e2c}{FT\+\_\+\+PIXEL\+\_\+\+MODE\+\_\+\+GRAY}}}
+
+\Hypertarget{ftimage_8h_aef5fede71e6d6d90968255f1c728625d}\label{ftimage_8h_aef5fede71e6d6d90968255f1c728625d} 
+\index{ftimage.h@{ftimage.h}!ft\_pixel\_mode\_mono@{ft\_pixel\_mode\_mono}}
+\index{ft\_pixel\_mode\_mono@{ft\_pixel\_mode\_mono}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{ft\_pixel\_mode\_mono}{ft\_pixel\_mode\_mono}}
+{\footnotesize\ttfamily \#define ft\+\_\+pixel\+\_\+mode\+\_\+mono~\mbox{\hyperlink{ftimage_8h_a4953570a0afb7abb672a6583035865a4a3c16f8be14915a529161ff1514204fb4}{FT\+\_\+\+PIXEL\+\_\+\+MODE\+\_\+\+MONO}}}
+
+\Hypertarget{ftimage_8h_ae37598ecb2f865765a3abe8ff3466727}\label{ftimage_8h_ae37598ecb2f865765a3abe8ff3466727} 
+\index{ftimage.h@{ftimage.h}!ft\_pixel\_mode\_none@{ft\_pixel\_mode\_none}}
+\index{ft\_pixel\_mode\_none@{ft\_pixel\_mode\_none}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{ft\_pixel\_mode\_none}{ft\_pixel\_mode\_none}}
+{\footnotesize\ttfamily \#define ft\+\_\+pixel\+\_\+mode\+\_\+none~\mbox{\hyperlink{ftimage_8h_a4953570a0afb7abb672a6583035865a4a42b2be5eb5c8e72d81fa43b11cf942ca}{FT\+\_\+\+PIXEL\+\_\+\+MODE\+\_\+\+NONE}}}
+
+\Hypertarget{ftimage_8h_a9c58ec93a6ea09a9d66ad661567f88b7}\label{ftimage_8h_a9c58ec93a6ea09a9d66ad661567f88b7} 
+\index{ftimage.h@{ftimage.h}!ft\_pixel\_mode\_pal2@{ft\_pixel\_mode\_pal2}}
+\index{ft\_pixel\_mode\_pal2@{ft\_pixel\_mode\_pal2}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{ft\_pixel\_mode\_pal2}{ft\_pixel\_mode\_pal2}}
+{\footnotesize\ttfamily \#define ft\+\_\+pixel\+\_\+mode\+\_\+pal2~\mbox{\hyperlink{ftimage_8h_a4953570a0afb7abb672a6583035865a4a15764edffc5eb2f5b55e989a1d2be93a}{FT\+\_\+\+PIXEL\+\_\+\+MODE\+\_\+\+GRAY2}}}
+
+\Hypertarget{ftimage_8h_a06e0e74ada05dc865422aec86699cf6d}\label{ftimage_8h_a06e0e74ada05dc865422aec86699cf6d} 
+\index{ftimage.h@{ftimage.h}!ft\_pixel\_mode\_pal4@{ft\_pixel\_mode\_pal4}}
+\index{ft\_pixel\_mode\_pal4@{ft\_pixel\_mode\_pal4}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{ft\_pixel\_mode\_pal4}{ft\_pixel\_mode\_pal4}}
+{\footnotesize\ttfamily \#define ft\+\_\+pixel\+\_\+mode\+\_\+pal4~\mbox{\hyperlink{ftimage_8h_a4953570a0afb7abb672a6583035865a4aed2aa6cba156a0cd9c4bf16be7a9249d}{FT\+\_\+\+PIXEL\+\_\+\+MODE\+\_\+\+GRAY4}}}
+
+\Hypertarget{ftimage_8h_af3fbba4618478eb180ed0ac2ed09e8d6}\label{ftimage_8h_af3fbba4618478eb180ed0ac2ed09e8d6} 
+\index{ftimage.h@{ftimage.h}!FT\_Raster\_Done\_Func@{FT\_Raster\_Done\_Func}}
+\index{FT\_Raster\_Done\_Func@{FT\_Raster\_Done\_Func}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Raster\_Done\_Func}{FT\_Raster\_Done\_Func}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+Raster\+\_\+\+Done\+\_\+\+Func~\mbox{\hyperlink{ftimage_8h_a2df7d8d26927263fc038263851b18cf6}{FT\+\_\+\+Raster\+\_\+\+Done\+Func}}}
+
+\Hypertarget{ftimage_8h_a13000ad084c4cb1d878a179aba9763ee}\label{ftimage_8h_a13000ad084c4cb1d878a179aba9763ee} 
+\index{ftimage.h@{ftimage.h}!FT\_RASTER\_FLAG\_AA@{FT\_RASTER\_FLAG\_AA}}
+\index{FT\_RASTER\_FLAG\_AA@{FT\_RASTER\_FLAG\_AA}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_RASTER\_FLAG\_AA}{FT\_RASTER\_FLAG\_AA}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+RASTER\+\_\+\+FLAG\+\_\+\+AA~0x1}
+
+\Hypertarget{ftimage_8h_a078b9acf5d8ca399833af886d8c4008a}\label{ftimage_8h_a078b9acf5d8ca399833af886d8c4008a} 
+\index{ftimage.h@{ftimage.h}!ft\_raster\_flag\_aa@{ft\_raster\_flag\_aa}}
+\index{ft\_raster\_flag\_aa@{ft\_raster\_flag\_aa}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{ft\_raster\_flag\_aa}{ft\_raster\_flag\_aa}}
+{\footnotesize\ttfamily \#define ft\+\_\+raster\+\_\+flag\+\_\+aa~\mbox{\hyperlink{ftimage_8h_a13000ad084c4cb1d878a179aba9763ee}{FT\+\_\+\+RASTER\+\_\+\+FLAG\+\_\+\+AA}}}
+
+\Hypertarget{ftimage_8h_a680cffd057eb1375459fe576791f2b7f}\label{ftimage_8h_a680cffd057eb1375459fe576791f2b7f} 
+\index{ftimage.h@{ftimage.h}!FT\_RASTER\_FLAG\_CLIP@{FT\_RASTER\_FLAG\_CLIP}}
+\index{FT\_RASTER\_FLAG\_CLIP@{FT\_RASTER\_FLAG\_CLIP}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_RASTER\_FLAG\_CLIP}{FT\_RASTER\_FLAG\_CLIP}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+RASTER\+\_\+\+FLAG\+\_\+\+CLIP~0x4}
+
+\Hypertarget{ftimage_8h_a97bd3d42e14d10a256c45546605e0beb}\label{ftimage_8h_a97bd3d42e14d10a256c45546605e0beb} 
+\index{ftimage.h@{ftimage.h}!ft\_raster\_flag\_clip@{ft\_raster\_flag\_clip}}
+\index{ft\_raster\_flag\_clip@{ft\_raster\_flag\_clip}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{ft\_raster\_flag\_clip}{ft\_raster\_flag\_clip}}
+{\footnotesize\ttfamily \#define ft\+\_\+raster\+\_\+flag\+\_\+clip~\mbox{\hyperlink{ftimage_8h_a680cffd057eb1375459fe576791f2b7f}{FT\+\_\+\+RASTER\+\_\+\+FLAG\+\_\+\+CLIP}}}
+
+\Hypertarget{ftimage_8h_a3fc8ce328ef25aa1de7e28466d1c6009}\label{ftimage_8h_a3fc8ce328ef25aa1de7e28466d1c6009} 
+\index{ftimage.h@{ftimage.h}!FT\_RASTER\_FLAG\_DEFAULT@{FT\_RASTER\_FLAG\_DEFAULT}}
+\index{FT\_RASTER\_FLAG\_DEFAULT@{FT\_RASTER\_FLAG\_DEFAULT}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_RASTER\_FLAG\_DEFAULT}{FT\_RASTER\_FLAG\_DEFAULT}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+RASTER\+\_\+\+FLAG\+\_\+\+DEFAULT~0x0}
+
+\Hypertarget{ftimage_8h_acea91525c5657d9e06f4cbb22938050b}\label{ftimage_8h_acea91525c5657d9e06f4cbb22938050b} 
+\index{ftimage.h@{ftimage.h}!ft\_raster\_flag\_default@{ft\_raster\_flag\_default}}
+\index{ft\_raster\_flag\_default@{ft\_raster\_flag\_default}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{ft\_raster\_flag\_default}{ft\_raster\_flag\_default}}
+{\footnotesize\ttfamily \#define ft\+\_\+raster\+\_\+flag\+\_\+default~\mbox{\hyperlink{ftimage_8h_a3fc8ce328ef25aa1de7e28466d1c6009}{FT\+\_\+\+RASTER\+\_\+\+FLAG\+\_\+\+DEFAULT}}}
+
+\Hypertarget{ftimage_8h_a83b26348efb1b92915c4927e8a87cb4c}\label{ftimage_8h_a83b26348efb1b92915c4927e8a87cb4c} 
+\index{ftimage.h@{ftimage.h}!FT\_RASTER\_FLAG\_DIRECT@{FT\_RASTER\_FLAG\_DIRECT}}
+\index{FT\_RASTER\_FLAG\_DIRECT@{FT\_RASTER\_FLAG\_DIRECT}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_RASTER\_FLAG\_DIRECT}{FT\_RASTER\_FLAG\_DIRECT}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+RASTER\+\_\+\+FLAG\+\_\+\+DIRECT~0x2}
+
+\Hypertarget{ftimage_8h_aa87501beac782a89867a87433f0577c0}\label{ftimage_8h_aa87501beac782a89867a87433f0577c0} 
+\index{ftimage.h@{ftimage.h}!ft\_raster\_flag\_direct@{ft\_raster\_flag\_direct}}
+\index{ft\_raster\_flag\_direct@{ft\_raster\_flag\_direct}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{ft\_raster\_flag\_direct}{ft\_raster\_flag\_direct}}
+{\footnotesize\ttfamily \#define ft\+\_\+raster\+\_\+flag\+\_\+direct~\mbox{\hyperlink{ftimage_8h_a83b26348efb1b92915c4927e8a87cb4c}{FT\+\_\+\+RASTER\+\_\+\+FLAG\+\_\+\+DIRECT}}}
+
+\Hypertarget{ftimage_8h_ab50a467c3e9e8313c31c14f1e694af34}\label{ftimage_8h_ab50a467c3e9e8313c31c14f1e694af34} 
+\index{ftimage.h@{ftimage.h}!FT\_Raster\_New\_Func@{FT\_Raster\_New\_Func}}
+\index{FT\_Raster\_New\_Func@{FT\_Raster\_New\_Func}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Raster\_New\_Func}{FT\_Raster\_New\_Func}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+Raster\+\_\+\+New\+\_\+\+Func~\mbox{\hyperlink{ftimage_8h_acfff989cc4f373de6211b12c97a265e8}{FT\+\_\+\+Raster\+\_\+\+New\+Func}}}
+
+\Hypertarget{ftimage_8h_a469b1d3125d0032b8c66df3179832657}\label{ftimage_8h_a469b1d3125d0032b8c66df3179832657} 
+\index{ftimage.h@{ftimage.h}!FT\_Raster\_Render\_Func@{FT\_Raster\_Render\_Func}}
+\index{FT\_Raster\_Render\_Func@{FT\_Raster\_Render\_Func}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Raster\_Render\_Func}{FT\_Raster\_Render\_Func}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+Raster\+\_\+\+Render\+\_\+\+Func~\mbox{\hyperlink{ftimage_8h_a4da783a601182e9e5b9d75584fd814ec}{FT\+\_\+\+Raster\+\_\+\+Render\+Func}}}
+
+\Hypertarget{ftimage_8h_a7af295aa684d0354fced2dc791a4de89}\label{ftimage_8h_a7af295aa684d0354fced2dc791a4de89} 
+\index{ftimage.h@{ftimage.h}!FT\_Raster\_Reset\_Func@{FT\_Raster\_Reset\_Func}}
+\index{FT\_Raster\_Reset\_Func@{FT\_Raster\_Reset\_Func}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Raster\_Reset\_Func}{FT\_Raster\_Reset\_Func}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+Raster\+\_\+\+Reset\+\_\+\+Func~\mbox{\hyperlink{ftimage_8h_a0ae680a37517fe355321f780123d12f6}{FT\+\_\+\+Raster\+\_\+\+Reset\+Func}}}
+
+\Hypertarget{ftimage_8h_ad86623a6850838c7fec54f4f622c2744}\label{ftimage_8h_ad86623a6850838c7fec54f4f622c2744} 
+\index{ftimage.h@{ftimage.h}!FT\_Raster\_Set\_Mode\_Func@{FT\_Raster\_Set\_Mode\_Func}}
+\index{FT\_Raster\_Set\_Mode\_Func@{FT\_Raster\_Set\_Mode\_Func}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Raster\_Set\_Mode\_Func}{FT\_Raster\_Set\_Mode\_Func}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+Raster\+\_\+\+Set\+\_\+\+Mode\+\_\+\+Func~\mbox{\hyperlink{ftimage_8h_a959011dc7420bae5989460bfd0727bd1}{FT\+\_\+\+Raster\+\_\+\+Set\+Mode\+Func}}}
+
+\Hypertarget{ftimage_8h_a27308127a1ced75fcb7c2af04a858a54}\label{ftimage_8h_a27308127a1ced75fcb7c2af04a858a54} 
+\index{ftimage.h@{ftimage.h}!FT\_Raster\_Span\_Func@{FT\_Raster\_Span\_Func}}
+\index{FT\_Raster\_Span\_Func@{FT\_Raster\_Span\_Func}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Raster\_Span\_Func}{FT\_Raster\_Span\_Func}}
+{\footnotesize\ttfamily \#define FT\+\_\+\+Raster\+\_\+\+Span\+\_\+\+Func~\mbox{\hyperlink{ftimage_8h_abae5f0d92287252b367d3e8210ec4e3a}{FT\+\_\+\+Span\+Func}}}
+
+
+
+\doxysubsection{Dokumentacja definicji typów}
+\Hypertarget{ftimage_8h_a1e1422cfbeb7c3992d5d7b8f85732efd}\label{ftimage_8h_a1e1422cfbeb7c3992d5d7b8f85732efd} 
+\index{ftimage.h@{ftimage.h}!FT\_BBox@{FT\_BBox}}
+\index{FT\_BBox@{FT\_BBox}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_BBox}{FT\_BBox}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_f_t___b_box__}{FT\+\_\+\+BBox\+\_\+}} \mbox{\hyperlink{ftimage_8h_a1e1422cfbeb7c3992d5d7b8f85732efd}{FT\+\_\+\+BBox}}}
+
+\Hypertarget{ftimage_8h_a1901381e05d5dd7ad6567c85ee2076c3}\label{ftimage_8h_a1901381e05d5dd7ad6567c85ee2076c3} 
+\index{ftimage.h@{ftimage.h}!FT\_Bitmap@{FT\_Bitmap}}
+\index{FT\_Bitmap@{FT\_Bitmap}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Bitmap}{FT\_Bitmap}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_f_t___bitmap__}{FT\+\_\+\+Bitmap\+\_\+}} \mbox{\hyperlink{ftimage_8h_a1901381e05d5dd7ad6567c85ee2076c3}{FT\+\_\+\+Bitmap}}}
+
+\Hypertarget{ftimage_8h_ac277a6c91e1d785fae31f2aa86d60588}\label{ftimage_8h_ac277a6c91e1d785fae31f2aa86d60588} 
+\index{ftimage.h@{ftimage.h}!FT\_Glyph\_Format@{FT\_Glyph\_Format}}
+\index{FT\_Glyph\_Format@{FT\_Glyph\_Format}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Glyph\_Format}{FT\_Glyph\_Format}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{ftimage_8h_a62d06240f489f4d35830e42b7297eb22}{FT\+\_\+\+Glyph\+\_\+\+Format\+\_\+}} \mbox{\hyperlink{ftimage_8h_ac277a6c91e1d785fae31f2aa86d60588}{FT\+\_\+\+Glyph\+\_\+\+Format}}}
+
+\Hypertarget{ftimage_8h_a6b64eb35252e8829024c12c98cce37d4}\label{ftimage_8h_a6b64eb35252e8829024c12c98cce37d4} 
+\index{ftimage.h@{ftimage.h}!FT\_Outline@{FT\_Outline}}
+\index{FT\_Outline@{FT\_Outline}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Outline}{FT\_Outline}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_f_t___outline__}{FT\+\_\+\+Outline\+\_\+}} \mbox{\hyperlink{ftimage_8h_a6b64eb35252e8829024c12c98cce37d4}{FT\+\_\+\+Outline}}}
+
+\Hypertarget{ftimage_8h_a44b83dd26e7f37eae86aee33ff3efd9b}\label{ftimage_8h_a44b83dd26e7f37eae86aee33ff3efd9b} 
+\index{ftimage.h@{ftimage.h}!FT\_Outline\_ConicToFunc@{FT\_Outline\_ConicToFunc}}
+\index{FT\_Outline\_ConicToFunc@{FT\_Outline\_ConicToFunc}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Outline\_ConicToFunc}{FT\_Outline\_ConicToFunc}}
+{\footnotesize\ttfamily typedef int(\texorpdfstring{$\ast$}{*} FT\+\_\+\+Outline\+\_\+\+Conic\+To\+Func) (const \mbox{\hyperlink{ftimage_8h_abfcb941b4b81f3a922d4ae57c620db27}{FT\+\_\+\+Vector}} \texorpdfstring{$\ast$}{*}control, const \mbox{\hyperlink{ftimage_8h_abfcb941b4b81f3a922d4ae57c620db27}{FT\+\_\+\+Vector}} \texorpdfstring{$\ast$}{*}to, void \texorpdfstring{$\ast$}{*}user)}
+
+\Hypertarget{ftimage_8h_a9c6f8d42a1660a57f55614baaa4b61b2}\label{ftimage_8h_a9c6f8d42a1660a57f55614baaa4b61b2} 
+\index{ftimage.h@{ftimage.h}!FT\_Outline\_CubicToFunc@{FT\_Outline\_CubicToFunc}}
+\index{FT\_Outline\_CubicToFunc@{FT\_Outline\_CubicToFunc}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Outline\_CubicToFunc}{FT\_Outline\_CubicToFunc}}
+{\footnotesize\ttfamily typedef int(\texorpdfstring{$\ast$}{*} FT\+\_\+\+Outline\+\_\+\+Cubic\+To\+Func) (const \mbox{\hyperlink{ftimage_8h_abfcb941b4b81f3a922d4ae57c620db27}{FT\+\_\+\+Vector}} \texorpdfstring{$\ast$}{*}control1, const \mbox{\hyperlink{ftimage_8h_abfcb941b4b81f3a922d4ae57c620db27}{FT\+\_\+\+Vector}} \texorpdfstring{$\ast$}{*}control2, const \mbox{\hyperlink{ftimage_8h_abfcb941b4b81f3a922d4ae57c620db27}{FT\+\_\+\+Vector}} \texorpdfstring{$\ast$}{*}to, void \texorpdfstring{$\ast$}{*}user)}
+
+\Hypertarget{ftimage_8h_ae5de8c9dd920eccd7ef91a7a4c0f1645}\label{ftimage_8h_ae5de8c9dd920eccd7ef91a7a4c0f1645} 
+\index{ftimage.h@{ftimage.h}!FT\_Outline\_Funcs@{FT\_Outline\_Funcs}}
+\index{FT\_Outline\_Funcs@{FT\_Outline\_Funcs}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Outline\_Funcs}{FT\_Outline\_Funcs}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_f_t___outline___funcs__}{FT\+\_\+\+Outline\+\_\+\+Funcs\+\_\+}} \mbox{\hyperlink{ftimage_8h_ae5de8c9dd920eccd7ef91a7a4c0f1645}{FT\+\_\+\+Outline\+\_\+\+Funcs}}}
+
+\Hypertarget{ftimage_8h_a522526513387d998682d59515fe93ccf}\label{ftimage_8h_a522526513387d998682d59515fe93ccf} 
+\index{ftimage.h@{ftimage.h}!FT\_Outline\_LineToFunc@{FT\_Outline\_LineToFunc}}
+\index{FT\_Outline\_LineToFunc@{FT\_Outline\_LineToFunc}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Outline\_LineToFunc}{FT\_Outline\_LineToFunc}}
+{\footnotesize\ttfamily typedef int(\texorpdfstring{$\ast$}{*} FT\+\_\+\+Outline\+\_\+\+Line\+To\+Func) (const \mbox{\hyperlink{ftimage_8h_abfcb941b4b81f3a922d4ae57c620db27}{FT\+\_\+\+Vector}} \texorpdfstring{$\ast$}{*}to, void \texorpdfstring{$\ast$}{*}user)}
+
+\Hypertarget{ftimage_8h_adb1c27eedf361dcd3d331fa266a466af}\label{ftimage_8h_adb1c27eedf361dcd3d331fa266a466af} 
+\index{ftimage.h@{ftimage.h}!FT\_Outline\_MoveToFunc@{FT\_Outline\_MoveToFunc}}
+\index{FT\_Outline\_MoveToFunc@{FT\_Outline\_MoveToFunc}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Outline\_MoveToFunc}{FT\_Outline\_MoveToFunc}}
+{\footnotesize\ttfamily typedef int(\texorpdfstring{$\ast$}{*} FT\+\_\+\+Outline\+\_\+\+Move\+To\+Func) (const \mbox{\hyperlink{ftimage_8h_abfcb941b4b81f3a922d4ae57c620db27}{FT\+\_\+\+Vector}} \texorpdfstring{$\ast$}{*}to, void \texorpdfstring{$\ast$}{*}user)}
+
+\Hypertarget{ftimage_8h_ac567a2d1df18aa5cd04d09859152ff3a}\label{ftimage_8h_ac567a2d1df18aa5cd04d09859152ff3a} 
+\index{ftimage.h@{ftimage.h}!FT\_Pixel\_Mode@{FT\_Pixel\_Mode}}
+\index{FT\_Pixel\_Mode@{FT\_Pixel\_Mode}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Pixel\_Mode}{FT\_Pixel\_Mode}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{ftimage_8h_a4953570a0afb7abb672a6583035865a4}{FT\+\_\+\+Pixel\+\_\+\+Mode\+\_\+}} \mbox{\hyperlink{ftimage_8h_ac567a2d1df18aa5cd04d09859152ff3a}{FT\+\_\+\+Pixel\+\_\+\+Mode}}}
+
+\Hypertarget{ftimage_8h_a6774d2eb4bf030daf319aa6b56347431}\label{ftimage_8h_a6774d2eb4bf030daf319aa6b56347431} 
+\index{ftimage.h@{ftimage.h}!FT\_Raster@{FT\_Raster}}
+\index{FT\_Raster@{FT\_Raster}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Raster}{FT\_Raster}}
+{\footnotesize\ttfamily typedef struct FT\+\_\+\+Raster\+Rec\+\_\+\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{ftimage_8h_a6774d2eb4bf030daf319aa6b56347431}{FT\+\_\+\+Raster}}}
+
+\Hypertarget{ftimage_8h_a715e9f91407a9758dbefb6dd6549fe35}\label{ftimage_8h_a715e9f91407a9758dbefb6dd6549fe35} 
+\index{ftimage.h@{ftimage.h}!FT\_Raster\_BitSet\_Func@{FT\_Raster\_BitSet\_Func}}
+\index{FT\_Raster\_BitSet\_Func@{FT\_Raster\_BitSet\_Func}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Raster\_BitSet\_Func}{FT\_Raster\_BitSet\_Func}}
+{\footnotesize\ttfamily typedef void(\texorpdfstring{$\ast$}{*} FT\+\_\+\+Raster\+\_\+\+Bit\+Set\+\_\+\+Func) (int y, int x, void \texorpdfstring{$\ast$}{*}user)}
+
+\Hypertarget{ftimage_8h_a2ac5897dab423a944f4457a3131061e4}\label{ftimage_8h_a2ac5897dab423a944f4457a3131061e4} 
+\index{ftimage.h@{ftimage.h}!FT\_Raster\_BitTest\_Func@{FT\_Raster\_BitTest\_Func}}
+\index{FT\_Raster\_BitTest\_Func@{FT\_Raster\_BitTest\_Func}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Raster\_BitTest\_Func}{FT\_Raster\_BitTest\_Func}}
+{\footnotesize\ttfamily typedef int(\texorpdfstring{$\ast$}{*} FT\+\_\+\+Raster\+\_\+\+Bit\+Test\+\_\+\+Func) (int y, int x, void \texorpdfstring{$\ast$}{*}user)}
+
+\Hypertarget{ftimage_8h_a2df7d8d26927263fc038263851b18cf6}\label{ftimage_8h_a2df7d8d26927263fc038263851b18cf6} 
+\index{ftimage.h@{ftimage.h}!FT\_Raster\_DoneFunc@{FT\_Raster\_DoneFunc}}
+\index{FT\_Raster\_DoneFunc@{FT\_Raster\_DoneFunc}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Raster\_DoneFunc}{FT\_Raster\_DoneFunc}}
+{\footnotesize\ttfamily typedef void(\texorpdfstring{$\ast$}{*} FT\+\_\+\+Raster\+\_\+\+Done\+Func) (\mbox{\hyperlink{ftimage_8h_a6774d2eb4bf030daf319aa6b56347431}{FT\+\_\+\+Raster}} raster)}
+
+\Hypertarget{ftimage_8h_a738d501723224dee6667ada1e1b6eb1c}\label{ftimage_8h_a738d501723224dee6667ada1e1b6eb1c} 
+\index{ftimage.h@{ftimage.h}!FT\_Raster\_Funcs@{FT\_Raster\_Funcs}}
+\index{FT\_Raster\_Funcs@{FT\_Raster\_Funcs}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Raster\_Funcs}{FT\_Raster\_Funcs}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_f_t___raster___funcs__}{FT\+\_\+\+Raster\+\_\+\+Funcs\+\_\+}} \mbox{\hyperlink{ftimage_8h_a738d501723224dee6667ada1e1b6eb1c}{FT\+\_\+\+Raster\+\_\+\+Funcs}}}
+
+\Hypertarget{ftimage_8h_acfff989cc4f373de6211b12c97a265e8}\label{ftimage_8h_acfff989cc4f373de6211b12c97a265e8} 
+\index{ftimage.h@{ftimage.h}!FT\_Raster\_NewFunc@{FT\_Raster\_NewFunc}}
+\index{FT\_Raster\_NewFunc@{FT\_Raster\_NewFunc}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Raster\_NewFunc}{FT\_Raster\_NewFunc}}
+{\footnotesize\ttfamily typedef int(\texorpdfstring{$\ast$}{*} FT\+\_\+\+Raster\+\_\+\+New\+Func) (void \texorpdfstring{$\ast$}{*}memory, \mbox{\hyperlink{ftimage_8h_a6774d2eb4bf030daf319aa6b56347431}{FT\+\_\+\+Raster}} \texorpdfstring{$\ast$}{*}raster)}
+
+\Hypertarget{ftimage_8h_a4f41c3fb4a05eacd520be21e4db611bc}\label{ftimage_8h_a4f41c3fb4a05eacd520be21e4db611bc} 
+\index{ftimage.h@{ftimage.h}!FT\_Raster\_Params@{FT\_Raster\_Params}}
+\index{FT\_Raster\_Params@{FT\_Raster\_Params}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Raster\_Params}{FT\_Raster\_Params}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_f_t___raster___params__}{FT\+\_\+\+Raster\+\_\+\+Params\+\_\+}} \mbox{\hyperlink{ftimage_8h_a4f41c3fb4a05eacd520be21e4db611bc}{FT\+\_\+\+Raster\+\_\+\+Params}}}
+
+\Hypertarget{ftimage_8h_a4da783a601182e9e5b9d75584fd814ec}\label{ftimage_8h_a4da783a601182e9e5b9d75584fd814ec} 
+\index{ftimage.h@{ftimage.h}!FT\_Raster\_RenderFunc@{FT\_Raster\_RenderFunc}}
+\index{FT\_Raster\_RenderFunc@{FT\_Raster\_RenderFunc}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Raster\_RenderFunc}{FT\_Raster\_RenderFunc}}
+{\footnotesize\ttfamily typedef int(\texorpdfstring{$\ast$}{*} FT\+\_\+\+Raster\+\_\+\+Render\+Func) (\mbox{\hyperlink{ftimage_8h_a6774d2eb4bf030daf319aa6b56347431}{FT\+\_\+\+Raster}} raster, const \mbox{\hyperlink{ftimage_8h_a4f41c3fb4a05eacd520be21e4db611bc}{FT\+\_\+\+Raster\+\_\+\+Params}} \texorpdfstring{$\ast$}{*}params)}
+
+\Hypertarget{ftimage_8h_a0ae680a37517fe355321f780123d12f6}\label{ftimage_8h_a0ae680a37517fe355321f780123d12f6} 
+\index{ftimage.h@{ftimage.h}!FT\_Raster\_ResetFunc@{FT\_Raster\_ResetFunc}}
+\index{FT\_Raster\_ResetFunc@{FT\_Raster\_ResetFunc}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Raster\_ResetFunc}{FT\_Raster\_ResetFunc}}
+{\footnotesize\ttfamily typedef void(\texorpdfstring{$\ast$}{*} FT\+\_\+\+Raster\+\_\+\+Reset\+Func) (\mbox{\hyperlink{ftimage_8h_a6774d2eb4bf030daf319aa6b56347431}{FT\+\_\+\+Raster}} raster, unsigned char \texorpdfstring{$\ast$}{*}pool\+\_\+base, unsigned long pool\+\_\+size)}
+
+\Hypertarget{ftimage_8h_a959011dc7420bae5989460bfd0727bd1}\label{ftimage_8h_a959011dc7420bae5989460bfd0727bd1} 
+\index{ftimage.h@{ftimage.h}!FT\_Raster\_SetModeFunc@{FT\_Raster\_SetModeFunc}}
+\index{FT\_Raster\_SetModeFunc@{FT\_Raster\_SetModeFunc}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Raster\_SetModeFunc}{FT\_Raster\_SetModeFunc}}
+{\footnotesize\ttfamily typedef int(\texorpdfstring{$\ast$}{*} FT\+\_\+\+Raster\+\_\+\+Set\+Mode\+Func) (\mbox{\hyperlink{ftimage_8h_a6774d2eb4bf030daf319aa6b56347431}{FT\+\_\+\+Raster}} raster, unsigned long mode, void \texorpdfstring{$\ast$}{*}args)}
+
+\Hypertarget{ftimage_8h_a6436dd00a70a85bfc3a8012bdc47b958}\label{ftimage_8h_a6436dd00a70a85bfc3a8012bdc47b958} 
+\index{ftimage.h@{ftimage.h}!FT\_Span@{FT\_Span}}
+\index{FT\_Span@{FT\_Span}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Span}{FT\_Span}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_f_t___span__}{FT\+\_\+\+Span\+\_\+}} \mbox{\hyperlink{ftimage_8h_a6436dd00a70a85bfc3a8012bdc47b958}{FT\+\_\+\+Span}}}
+
+\Hypertarget{ftimage_8h_abae5f0d92287252b367d3e8210ec4e3a}\label{ftimage_8h_abae5f0d92287252b367d3e8210ec4e3a} 
+\index{ftimage.h@{ftimage.h}!FT\_SpanFunc@{FT\_SpanFunc}}
+\index{FT\_SpanFunc@{FT\_SpanFunc}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_SpanFunc}{FT\_SpanFunc}}
+{\footnotesize\ttfamily typedef void(\texorpdfstring{$\ast$}{*} FT\+\_\+\+Span\+Func) (int y, int count, const \mbox{\hyperlink{ftimage_8h_a6436dd00a70a85bfc3a8012bdc47b958}{FT\+\_\+\+Span}} \texorpdfstring{$\ast$}{*}spans, void \texorpdfstring{$\ast$}{*}user)}
+
+\Hypertarget{ftimage_8h_abfcb941b4b81f3a922d4ae57c620db27}\label{ftimage_8h_abfcb941b4b81f3a922d4ae57c620db27} 
+\index{ftimage.h@{ftimage.h}!FT\_Vector@{FT\_Vector}}
+\index{FT\_Vector@{FT\_Vector}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Vector}{FT\_Vector}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_f_t___vector__}{FT\+\_\+\+Vector\+\_\+}} \mbox{\hyperlink{ftimage_8h_abfcb941b4b81f3a922d4ae57c620db27}{FT\+\_\+\+Vector}}}
+
+
+
+\doxysubsection{Dokumentacja typów wyliczanych}
+\Hypertarget{ftimage_8h_a62d06240f489f4d35830e42b7297eb22}\label{ftimage_8h_a62d06240f489f4d35830e42b7297eb22} 
+\index{ftimage.h@{ftimage.h}!FT\_Glyph\_Format\_@{FT\_Glyph\_Format\_}}
+\index{FT\_Glyph\_Format\_@{FT\_Glyph\_Format\_}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Glyph\_Format\_}{FT\_Glyph\_Format\_}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ftimage_8h_a62d06240f489f4d35830e42b7297eb22}{FT\+\_\+\+Glyph\+\_\+\+Format\+\_\+}}}
+
+\begin{DoxyEnumFields}{Wartości wyliczeń}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FT\_IMAGE\_TAG@{FT\_IMAGE\_TAG}!ftimage.h@{ftimage.h}}\index{ftimage.h@{ftimage.h}!FT\_IMAGE\_TAG@{FT\_IMAGE\_TAG}}}\Hypertarget{ftimage_8h_a62d06240f489f4d35830e42b7297eb22a6fbfde68c5be5ff527967af5cd7bf947}\label{ftimage_8h_a62d06240f489f4d35830e42b7297eb22a6fbfde68c5be5ff527967af5cd7bf947} 
+FT\+\_\+\+IMAGE\+\_\+\+TAG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FT\_IMAGE\_TAG@{FT\_IMAGE\_TAG}!ftimage.h@{ftimage.h}}\index{ftimage.h@{ftimage.h}!FT\_IMAGE\_TAG@{FT\_IMAGE\_TAG}}}\Hypertarget{ftimage_8h_a62d06240f489f4d35830e42b7297eb22a6fbfde68c5be5ff527967af5cd7bf947}\label{ftimage_8h_a62d06240f489f4d35830e42b7297eb22a6fbfde68c5be5ff527967af5cd7bf947} 
+FT\+\_\+\+IMAGE\+\_\+\+TAG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FT\_IMAGE\_TAG@{FT\_IMAGE\_TAG}!ftimage.h@{ftimage.h}}\index{ftimage.h@{ftimage.h}!FT\_IMAGE\_TAG@{FT\_IMAGE\_TAG}}}\Hypertarget{ftimage_8h_a62d06240f489f4d35830e42b7297eb22a6fbfde68c5be5ff527967af5cd7bf947}\label{ftimage_8h_a62d06240f489f4d35830e42b7297eb22a6fbfde68c5be5ff527967af5cd7bf947} 
+FT\+\_\+\+IMAGE\+\_\+\+TAG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FT\_IMAGE\_TAG@{FT\_IMAGE\_TAG}!ftimage.h@{ftimage.h}}\index{ftimage.h@{ftimage.h}!FT\_IMAGE\_TAG@{FT\_IMAGE\_TAG}}}\Hypertarget{ftimage_8h_a62d06240f489f4d35830e42b7297eb22a6fbfde68c5be5ff527967af5cd7bf947}\label{ftimage_8h_a62d06240f489f4d35830e42b7297eb22a6fbfde68c5be5ff527967af5cd7bf947} 
+FT\+\_\+\+IMAGE\+\_\+\+TAG&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{ftimage_8h_a4953570a0afb7abb672a6583035865a4}\label{ftimage_8h_a4953570a0afb7abb672a6583035865a4} 
+\index{ftimage.h@{ftimage.h}!FT\_Pixel\_Mode\_@{FT\_Pixel\_Mode\_}}
+\index{FT\_Pixel\_Mode\_@{FT\_Pixel\_Mode\_}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Pixel\_Mode\_}{FT\_Pixel\_Mode\_}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ftimage_8h_a4953570a0afb7abb672a6583035865a4}{FT\+\_\+\+Pixel\+\_\+\+Mode\+\_\+}}}
+
+\begin{DoxyEnumFields}{Wartości wyliczeń}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FT\_PIXEL\_MODE\_NONE@{FT\_PIXEL\_MODE\_NONE}!ftimage.h@{ftimage.h}}\index{ftimage.h@{ftimage.h}!FT\_PIXEL\_MODE\_NONE@{FT\_PIXEL\_MODE\_NONE}}}\Hypertarget{ftimage_8h_a4953570a0afb7abb672a6583035865a4a42b2be5eb5c8e72d81fa43b11cf942ca}\label{ftimage_8h_a4953570a0afb7abb672a6583035865a4a42b2be5eb5c8e72d81fa43b11cf942ca} 
+FT\+\_\+\+PIXEL\+\_\+\+MODE\+\_\+\+NONE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FT\_PIXEL\_MODE\_MONO@{FT\_PIXEL\_MODE\_MONO}!ftimage.h@{ftimage.h}}\index{ftimage.h@{ftimage.h}!FT\_PIXEL\_MODE\_MONO@{FT\_PIXEL\_MODE\_MONO}}}\Hypertarget{ftimage_8h_a4953570a0afb7abb672a6583035865a4a3c16f8be14915a529161ff1514204fb4}\label{ftimage_8h_a4953570a0afb7abb672a6583035865a4a3c16f8be14915a529161ff1514204fb4} 
+FT\+\_\+\+PIXEL\+\_\+\+MODE\+\_\+\+MONO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FT\_PIXEL\_MODE\_GRAY@{FT\_PIXEL\_MODE\_GRAY}!ftimage.h@{ftimage.h}}\index{ftimage.h@{ftimage.h}!FT\_PIXEL\_MODE\_GRAY@{FT\_PIXEL\_MODE\_GRAY}}}\Hypertarget{ftimage_8h_a4953570a0afb7abb672a6583035865a4a58a764f37700cb5258d02987a9209e2c}\label{ftimage_8h_a4953570a0afb7abb672a6583035865a4a58a764f37700cb5258d02987a9209e2c} 
+FT\+\_\+\+PIXEL\+\_\+\+MODE\+\_\+\+GRAY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FT\_PIXEL\_MODE\_GRAY2@{FT\_PIXEL\_MODE\_GRAY2}!ftimage.h@{ftimage.h}}\index{ftimage.h@{ftimage.h}!FT\_PIXEL\_MODE\_GRAY2@{FT\_PIXEL\_MODE\_GRAY2}}}\Hypertarget{ftimage_8h_a4953570a0afb7abb672a6583035865a4a15764edffc5eb2f5b55e989a1d2be93a}\label{ftimage_8h_a4953570a0afb7abb672a6583035865a4a15764edffc5eb2f5b55e989a1d2be93a} 
+FT\+\_\+\+PIXEL\+\_\+\+MODE\+\_\+\+GRAY2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FT\_PIXEL\_MODE\_GRAY4@{FT\_PIXEL\_MODE\_GRAY4}!ftimage.h@{ftimage.h}}\index{ftimage.h@{ftimage.h}!FT\_PIXEL\_MODE\_GRAY4@{FT\_PIXEL\_MODE\_GRAY4}}}\Hypertarget{ftimage_8h_a4953570a0afb7abb672a6583035865a4aed2aa6cba156a0cd9c4bf16be7a9249d}\label{ftimage_8h_a4953570a0afb7abb672a6583035865a4aed2aa6cba156a0cd9c4bf16be7a9249d} 
+FT\+\_\+\+PIXEL\+\_\+\+MODE\+\_\+\+GRAY4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FT\_PIXEL\_MODE\_LCD@{FT\_PIXEL\_MODE\_LCD}!ftimage.h@{ftimage.h}}\index{ftimage.h@{ftimage.h}!FT\_PIXEL\_MODE\_LCD@{FT\_PIXEL\_MODE\_LCD}}}\Hypertarget{ftimage_8h_a4953570a0afb7abb672a6583035865a4a7735f0c481982819c28cce353230d214}\label{ftimage_8h_a4953570a0afb7abb672a6583035865a4a7735f0c481982819c28cce353230d214} 
+FT\+\_\+\+PIXEL\+\_\+\+MODE\+\_\+\+LCD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FT\_PIXEL\_MODE\_LCD\_V@{FT\_PIXEL\_MODE\_LCD\_V}!ftimage.h@{ftimage.h}}\index{ftimage.h@{ftimage.h}!FT\_PIXEL\_MODE\_LCD\_V@{FT\_PIXEL\_MODE\_LCD\_V}}}\Hypertarget{ftimage_8h_a4953570a0afb7abb672a6583035865a4a2fe6ff91ba59130265c5c371e0fe671b}\label{ftimage_8h_a4953570a0afb7abb672a6583035865a4a2fe6ff91ba59130265c5c371e0fe671b} 
+FT\+\_\+\+PIXEL\+\_\+\+MODE\+\_\+\+LCD\+\_\+V&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FT\_PIXEL\_MODE\_BGRA@{FT\_PIXEL\_MODE\_BGRA}!ftimage.h@{ftimage.h}}\index{ftimage.h@{ftimage.h}!FT\_PIXEL\_MODE\_BGRA@{FT\_PIXEL\_MODE\_BGRA}}}\Hypertarget{ftimage_8h_a4953570a0afb7abb672a6583035865a4a873a05979d3276a655b0757039a84cad}\label{ftimage_8h_a4953570a0afb7abb672a6583035865a4a873a05979d3276a655b0757039a84cad} 
+FT\+\_\+\+PIXEL\+\_\+\+MODE\+\_\+\+BGRA&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FT\_PIXEL\_MODE\_MAX@{FT\_PIXEL\_MODE\_MAX}!ftimage.h@{ftimage.h}}\index{ftimage.h@{ftimage.h}!FT\_PIXEL\_MODE\_MAX@{FT\_PIXEL\_MODE\_MAX}}}\Hypertarget{ftimage_8h_a4953570a0afb7abb672a6583035865a4a650b585fbc19e71dafed4861dd71d04c}\label{ftimage_8h_a4953570a0afb7abb672a6583035865a4a650b585fbc19e71dafed4861dd71d04c} 
+FT\+\_\+\+PIXEL\+\_\+\+MODE\+\_\+\+MAX&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Dokumentacja zmiennych}
+\Hypertarget{ftimage_8h_af5f230f4b253d4c7715fd2e595614c90}\label{ftimage_8h_af5f230f4b253d4c7715fd2e595614c90} 
+\index{ftimage.h@{ftimage.h}!FT\_Pos@{FT\_Pos}}
+\index{FT\_Pos@{FT\_Pos}!ftimage.h@{ftimage.h}}
+\doxysubsubsection{\texorpdfstring{FT\_Pos}{FT\_Pos}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ftheader_8h_a72ee5814b3ae378ebb7fd3a8e3ddec14}{FT\+\_\+\+BEGIN\+\_\+\+HEADER}} typedef signed long FT\+\_\+\+Pos}
+

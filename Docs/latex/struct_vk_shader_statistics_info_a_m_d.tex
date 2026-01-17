@@ -1,0 +1,82 @@
+\doxysection{Dokumentacja struktury Vk\+Shader\+Statistics\+Info\+AMD}
+\hypertarget{struct_vk_shader_statistics_info_a_m_d}{}\label{struct_vk_shader_statistics_info_a_m_d}\index{VkShaderStatisticsInfoAMD@{VkShaderStatisticsInfoAMD}}
+
+
+{\ttfamily \#include $<$vulkan\+\_\+core.\+h$>$}
+
+
+
+Diagram współpracy dla Vk\+Shader\+Statistics\+Info\+AMD\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{struct_vk_shader_statistics_info_a_m_d__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{vulkan__core_8h_a930573a60f78bbf5a06d8ea370a0eba9}{Vk\+Shader\+Stage\+Flags}} \mbox{\hyperlink{struct_vk_shader_statistics_info_a_m_d_ab9d2af837bc58e77adf1401681df861c}{shader\+Stage\+Mask}}
+\item 
+\mbox{\hyperlink{struct_vk_shader_resource_usage_a_m_d}{Vk\+Shader\+Resource\+Usage\+AMD}} \mbox{\hyperlink{struct_vk_shader_statistics_info_a_m_d_ad4961a35fd1c453956101098567fcaa3}{resource\+Usage}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_vk_shader_statistics_info_a_m_d_a5a16a3d3fb1dee64698699c4a90416a5}{num\+Physical\+Vgprs}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_vk_shader_statistics_info_a_m_d_aa5a84dbb0f257d34260b475842cbf999}{num\+Physical\+Sgprs}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_vk_shader_statistics_info_a_m_d_a1bc0c13d13df82f17e6b8dab50bc8d33}{num\+Available\+Vgprs}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_vk_shader_statistics_info_a_m_d_a40f161e38ee1e237b710c1dc68bd6531}{num\+Available\+Sgprs}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_vk_shader_statistics_info_a_m_d_ad570ee30240e6269b17517af7d2ccd44}{compute\+Work\+Group\+Size}} \mbox{[}3\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{struct_vk_shader_statistics_info_a_m_d_ad570ee30240e6269b17517af7d2ccd44}\label{struct_vk_shader_statistics_info_a_m_d_ad570ee30240e6269b17517af7d2ccd44} 
+\index{VkShaderStatisticsInfoAMD@{VkShaderStatisticsInfoAMD}!computeWorkGroupSize@{computeWorkGroupSize}}
+\index{computeWorkGroupSize@{computeWorkGroupSize}!VkShaderStatisticsInfoAMD@{VkShaderStatisticsInfoAMD}}
+\doxysubsubsection{\texorpdfstring{computeWorkGroupSize}{computeWorkGroupSize}}
+{\footnotesize\ttfamily uint32\+\_\+t Vk\+Shader\+Statistics\+Info\+AMD\+::compute\+Work\+Group\+Size\mbox{[}3\mbox{]}}
+
+\Hypertarget{struct_vk_shader_statistics_info_a_m_d_a40f161e38ee1e237b710c1dc68bd6531}\label{struct_vk_shader_statistics_info_a_m_d_a40f161e38ee1e237b710c1dc68bd6531} 
+\index{VkShaderStatisticsInfoAMD@{VkShaderStatisticsInfoAMD}!numAvailableSgprs@{numAvailableSgprs}}
+\index{numAvailableSgprs@{numAvailableSgprs}!VkShaderStatisticsInfoAMD@{VkShaderStatisticsInfoAMD}}
+\doxysubsubsection{\texorpdfstring{numAvailableSgprs}{numAvailableSgprs}}
+{\footnotesize\ttfamily uint32\+\_\+t Vk\+Shader\+Statistics\+Info\+AMD\+::num\+Available\+Sgprs}
+
+\Hypertarget{struct_vk_shader_statistics_info_a_m_d_a1bc0c13d13df82f17e6b8dab50bc8d33}\label{struct_vk_shader_statistics_info_a_m_d_a1bc0c13d13df82f17e6b8dab50bc8d33} 
+\index{VkShaderStatisticsInfoAMD@{VkShaderStatisticsInfoAMD}!numAvailableVgprs@{numAvailableVgprs}}
+\index{numAvailableVgprs@{numAvailableVgprs}!VkShaderStatisticsInfoAMD@{VkShaderStatisticsInfoAMD}}
+\doxysubsubsection{\texorpdfstring{numAvailableVgprs}{numAvailableVgprs}}
+{\footnotesize\ttfamily uint32\+\_\+t Vk\+Shader\+Statistics\+Info\+AMD\+::num\+Available\+Vgprs}
+
+\Hypertarget{struct_vk_shader_statistics_info_a_m_d_aa5a84dbb0f257d34260b475842cbf999}\label{struct_vk_shader_statistics_info_a_m_d_aa5a84dbb0f257d34260b475842cbf999} 
+\index{VkShaderStatisticsInfoAMD@{VkShaderStatisticsInfoAMD}!numPhysicalSgprs@{numPhysicalSgprs}}
+\index{numPhysicalSgprs@{numPhysicalSgprs}!VkShaderStatisticsInfoAMD@{VkShaderStatisticsInfoAMD}}
+\doxysubsubsection{\texorpdfstring{numPhysicalSgprs}{numPhysicalSgprs}}
+{\footnotesize\ttfamily uint32\+\_\+t Vk\+Shader\+Statistics\+Info\+AMD\+::num\+Physical\+Sgprs}
+
+\Hypertarget{struct_vk_shader_statistics_info_a_m_d_a5a16a3d3fb1dee64698699c4a90416a5}\label{struct_vk_shader_statistics_info_a_m_d_a5a16a3d3fb1dee64698699c4a90416a5} 
+\index{VkShaderStatisticsInfoAMD@{VkShaderStatisticsInfoAMD}!numPhysicalVgprs@{numPhysicalVgprs}}
+\index{numPhysicalVgprs@{numPhysicalVgprs}!VkShaderStatisticsInfoAMD@{VkShaderStatisticsInfoAMD}}
+\doxysubsubsection{\texorpdfstring{numPhysicalVgprs}{numPhysicalVgprs}}
+{\footnotesize\ttfamily uint32\+\_\+t Vk\+Shader\+Statistics\+Info\+AMD\+::num\+Physical\+Vgprs}
+
+\Hypertarget{struct_vk_shader_statistics_info_a_m_d_ad4961a35fd1c453956101098567fcaa3}\label{struct_vk_shader_statistics_info_a_m_d_ad4961a35fd1c453956101098567fcaa3} 
+\index{VkShaderStatisticsInfoAMD@{VkShaderStatisticsInfoAMD}!resourceUsage@{resourceUsage}}
+\index{resourceUsage@{resourceUsage}!VkShaderStatisticsInfoAMD@{VkShaderStatisticsInfoAMD}}
+\doxysubsubsection{\texorpdfstring{resourceUsage}{resourceUsage}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_vk_shader_resource_usage_a_m_d}{Vk\+Shader\+Resource\+Usage\+AMD}} Vk\+Shader\+Statistics\+Info\+AMD\+::resource\+Usage}
+
+\Hypertarget{struct_vk_shader_statistics_info_a_m_d_ab9d2af837bc58e77adf1401681df861c}\label{struct_vk_shader_statistics_info_a_m_d_ab9d2af837bc58e77adf1401681df861c} 
+\index{VkShaderStatisticsInfoAMD@{VkShaderStatisticsInfoAMD}!shaderStageMask@{shaderStageMask}}
+\index{shaderStageMask@{shaderStageMask}!VkShaderStatisticsInfoAMD@{VkShaderStatisticsInfoAMD}}
+\doxysubsubsection{\texorpdfstring{shaderStageMask}{shaderStageMask}}
+{\footnotesize\ttfamily \mbox{\hyperlink{vulkan__core_8h_a930573a60f78bbf5a06d8ea370a0eba9}{Vk\+Shader\+Stage\+Flags}} Vk\+Shader\+Statistics\+Info\+AMD\+::shader\+Stage\+Mask}
+
+
+
+Dokumentacja dla tej struktury została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/extlibs/headers/vulkan/\mbox{\hyperlink{vulkan__core_8h}{vulkan\+\_\+core.\+h}}\end{DoxyCompactItemize}

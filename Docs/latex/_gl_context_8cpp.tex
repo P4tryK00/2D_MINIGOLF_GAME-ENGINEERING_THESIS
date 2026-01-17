@@ -1,0 +1,174 @@
+\doxysection{Dokumentacja pliku cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+Gl\+Context.cpp}
+\hypertarget{_gl_context_8cpp}{}\label{_gl_context_8cpp}\index{cmake-\/build-\/debug/\_deps/sfml-\/src/src/SFML/Window/GlContext.cpp@{cmake-\/build-\/debug/\_deps/sfml-\/src/src/SFML/Window/GlContext.cpp}}
+{\ttfamily \#include $<$SFML/\+Window/\+Gl\+Context.\+hpp$>$}\newline
+{\ttfamily \#include $<$SFML/\+Window/\+Context.\+hpp$>$}\newline
+{\ttfamily \#include $<$SFML/\+System/\+Thread\+Local\+Ptr.\+hpp$>$}\newline
+{\ttfamily \#include $<$SFML/\+System/\+Mutex.\+hpp$>$}\newline
+{\ttfamily \#include $<$SFML/\+System/\+Lock.\+hpp$>$}\newline
+{\ttfamily \#include $<$SFML/\+System/\+Err.\+hpp$>$}\newline
+{\ttfamily \#include $<$glad/gl.\+h$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$set$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$cctype$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+Wykres zależności załączania dla Gl\+Context.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_gl_context_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Przestrzenie nazw}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_gl_context_impl}{Gl\+Context\+Impl}}
+\item 
+namespace \mbox{\hyperlink{namespacesf}{sf}}
+\begin{DoxyCompactList}\small\item\em Predefine some classes. \end{DoxyCompactList}\item 
+namespace \mbox{\hyperlink{namespacesf_1_1priv}{sf\+::priv}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Definicje}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_gl_context_8cpp_aa2b6486ff7ecee8bf04e3371f197527a}{GL\+\_\+\+MULTISAMPLE}}~0x809D
+\item 
+\#define \mbox{\hyperlink{_gl_context_8cpp_a2b2319323c7cfb4ed795be005209d73d}{GL\+\_\+\+MAJOR\+\_\+\+VERSION}}~0x821B
+\item 
+\#define \mbox{\hyperlink{_gl_context_8cpp_ad45fb154a63b2b32a07732388e8251ad}{GL\+\_\+\+MINOR\+\_\+\+VERSION}}~0x821C
+\item 
+\#define \mbox{\hyperlink{_gl_context_8cpp_af541c15d841e8064600dec789ab4727e}{GL\+\_\+\+NUM\+\_\+\+EXTENSIONS}}~0x821D
+\item 
+\#define \mbox{\hyperlink{_gl_context_8cpp_adc35186e7c186e46a8908aee0a0bca78}{GL\+\_\+\+CONTEXT\+\_\+\+FLAGS}}~0x821E
+\item 
+\#define \mbox{\hyperlink{_gl_context_8cpp_a4559c867cb31fcc7b490ebd0b052e293}{GL\+\_\+\+FRAMEBUFFER\+\_\+\+SRGB}}~0x8\+DB9
+\item 
+\#define \mbox{\hyperlink{_gl_context_8cpp_aea16c79d68e4e6382f4c129d779142cd}{GL\+\_\+\+CONTEXT\+\_\+\+FLAG\+\_\+\+DEBUG\+\_\+\+BIT}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{_gl_context_8cpp_a426e3339384069032cc9cbe21878d8bf}{GL\+\_\+\+CONTEXT\+\_\+\+PROFILE\+\_\+\+MASK}}~0x9126
+\item 
+\#define \mbox{\hyperlink{_gl_context_8cpp_ac5751a9eac1542ce1f725eece0f2908f}{GL\+\_\+\+CONTEXT\+\_\+\+CORE\+\_\+\+PROFILE\+\_\+\+BIT}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{_gl_context_8cpp_aa463ea4d8b3d0d45f3d837b855778927}{GL\+\_\+\+CONTEXT\+\_\+\+COMPATIBILITY\+\_\+\+PROFILE\+\_\+\+BIT}}~0x00000002
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Definicje typów}
+\begin{DoxyCompactItemize}
+\item 
+typedef void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_gl_context_8cpp_a2eb49c36c2afdff18a68b58edd754fbd}{gl\+Enable\+Func\+Type}}) (\mbox{\hyperlink{examples_2opengl_2gl_8h_a7efd7809e1632cdae75603fd1fee61c0}{GLenum}})
+\item 
+typedef \mbox{\hyperlink{examples_2opengl_2gl_8h_a7efd7809e1632cdae75603fd1fee61c0}{GLenum}}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_gl_context_8cpp_a83edf17583d045392e7299fb85ee18ac}{gl\+Get\+Error\+Func\+Type}}) ()
+\item 
+typedef void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_gl_context_8cpp_a80f87c618a910b98024bfa1c7360458a}{gl\+Get\+Integerv\+Func\+Type}}) (\mbox{\hyperlink{examples_2opengl_2gl_8h_a7efd7809e1632cdae75603fd1fee61c0}{GLenum}}, \mbox{\hyperlink{examples_2opengl_2gl_8h_a5ac0f3c4d7fafd42b284b5487a791017}{GLint}} \texorpdfstring{$\ast$}{*})
+\item 
+typedef const \mbox{\hyperlink{examples_2opengl_2gl_8h_a59983474d77b865798a8f3b9afd2e93c}{GLubyte}} \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_gl_context_8cpp_ad7e870b2d4de640d3b230715038223a8}{gl\+Get\+String\+Func\+Type}}) (\mbox{\hyperlink{examples_2opengl_2gl_8h_a7efd7809e1632cdae75603fd1fee61c0}{GLenum}})
+\item 
+typedef const \mbox{\hyperlink{examples_2opengl_2gl_8h_a59983474d77b865798a8f3b9afd2e93c}{GLubyte}} \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_gl_context_8cpp_abd34b05378134c659d8bc4b80cd4e372}{gl\+Get\+Stringi\+Func\+Type}}) (\mbox{\hyperlink{examples_2opengl_2gl_8h_a7efd7809e1632cdae75603fd1fee61c0}{GLenum}}, \mbox{\hyperlink{examples_2opengl_2gl_8h_aa311c7f0d6ec4f1a33f9235c3651b86b}{GLuint}})
+\item 
+typedef \mbox{\hyperlink{examples_2opengl_2gl_8h_aa010a67382116caf29c29318251ccb6c}{GLboolean}}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_gl_context_8cpp_ac7a45af6373be47752f94d92a8945050}{gl\+Is\+Enabled\+Func\+Type}}) (\mbox{\hyperlink{examples_2opengl_2gl_8h_a7efd7809e1632cdae75603fd1fee61c0}{GLenum}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja definicji}
+\Hypertarget{_gl_context_8cpp_aa463ea4d8b3d0d45f3d837b855778927}\label{_gl_context_8cpp_aa463ea4d8b3d0d45f3d837b855778927} 
+\index{GlContext.cpp@{GlContext.cpp}!GL\_CONTEXT\_COMPATIBILITY\_PROFILE\_BIT@{GL\_CONTEXT\_COMPATIBILITY\_PROFILE\_BIT}}
+\index{GL\_CONTEXT\_COMPATIBILITY\_PROFILE\_BIT@{GL\_CONTEXT\_COMPATIBILITY\_PROFILE\_BIT}!GlContext.cpp@{GlContext.cpp}}
+\doxysubsubsection{\texorpdfstring{GL\_CONTEXT\_COMPATIBILITY\_PROFILE\_BIT}{GL\_CONTEXT\_COMPATIBILITY\_PROFILE\_BIT}}
+{\footnotesize\ttfamily \#define GL\+\_\+\+CONTEXT\+\_\+\+COMPATIBILITY\+\_\+\+PROFILE\+\_\+\+BIT~0x00000002}
+
+\Hypertarget{_gl_context_8cpp_ac5751a9eac1542ce1f725eece0f2908f}\label{_gl_context_8cpp_ac5751a9eac1542ce1f725eece0f2908f} 
+\index{GlContext.cpp@{GlContext.cpp}!GL\_CONTEXT\_CORE\_PROFILE\_BIT@{GL\_CONTEXT\_CORE\_PROFILE\_BIT}}
+\index{GL\_CONTEXT\_CORE\_PROFILE\_BIT@{GL\_CONTEXT\_CORE\_PROFILE\_BIT}!GlContext.cpp@{GlContext.cpp}}
+\doxysubsubsection{\texorpdfstring{GL\_CONTEXT\_CORE\_PROFILE\_BIT}{GL\_CONTEXT\_CORE\_PROFILE\_BIT}}
+{\footnotesize\ttfamily \#define GL\+\_\+\+CONTEXT\+\_\+\+CORE\+\_\+\+PROFILE\+\_\+\+BIT~0x00000001}
+
+\Hypertarget{_gl_context_8cpp_aea16c79d68e4e6382f4c129d779142cd}\label{_gl_context_8cpp_aea16c79d68e4e6382f4c129d779142cd} 
+\index{GlContext.cpp@{GlContext.cpp}!GL\_CONTEXT\_FLAG\_DEBUG\_BIT@{GL\_CONTEXT\_FLAG\_DEBUG\_BIT}}
+\index{GL\_CONTEXT\_FLAG\_DEBUG\_BIT@{GL\_CONTEXT\_FLAG\_DEBUG\_BIT}!GlContext.cpp@{GlContext.cpp}}
+\doxysubsubsection{\texorpdfstring{GL\_CONTEXT\_FLAG\_DEBUG\_BIT}{GL\_CONTEXT\_FLAG\_DEBUG\_BIT}}
+{\footnotesize\ttfamily \#define GL\+\_\+\+CONTEXT\+\_\+\+FLAG\+\_\+\+DEBUG\+\_\+\+BIT~0x00000002}
+
+\Hypertarget{_gl_context_8cpp_adc35186e7c186e46a8908aee0a0bca78}\label{_gl_context_8cpp_adc35186e7c186e46a8908aee0a0bca78} 
+\index{GlContext.cpp@{GlContext.cpp}!GL\_CONTEXT\_FLAGS@{GL\_CONTEXT\_FLAGS}}
+\index{GL\_CONTEXT\_FLAGS@{GL\_CONTEXT\_FLAGS}!GlContext.cpp@{GlContext.cpp}}
+\doxysubsubsection{\texorpdfstring{GL\_CONTEXT\_FLAGS}{GL\_CONTEXT\_FLAGS}}
+{\footnotesize\ttfamily \#define GL\+\_\+\+CONTEXT\+\_\+\+FLAGS~0x821E}
+
+\Hypertarget{_gl_context_8cpp_a426e3339384069032cc9cbe21878d8bf}\label{_gl_context_8cpp_a426e3339384069032cc9cbe21878d8bf} 
+\index{GlContext.cpp@{GlContext.cpp}!GL\_CONTEXT\_PROFILE\_MASK@{GL\_CONTEXT\_PROFILE\_MASK}}
+\index{GL\_CONTEXT\_PROFILE\_MASK@{GL\_CONTEXT\_PROFILE\_MASK}!GlContext.cpp@{GlContext.cpp}}
+\doxysubsubsection{\texorpdfstring{GL\_CONTEXT\_PROFILE\_MASK}{GL\_CONTEXT\_PROFILE\_MASK}}
+{\footnotesize\ttfamily \#define GL\+\_\+\+CONTEXT\+\_\+\+PROFILE\+\_\+\+MASK~0x9126}
+
+\Hypertarget{_gl_context_8cpp_a4559c867cb31fcc7b490ebd0b052e293}\label{_gl_context_8cpp_a4559c867cb31fcc7b490ebd0b052e293} 
+\index{GlContext.cpp@{GlContext.cpp}!GL\_FRAMEBUFFER\_SRGB@{GL\_FRAMEBUFFER\_SRGB}}
+\index{GL\_FRAMEBUFFER\_SRGB@{GL\_FRAMEBUFFER\_SRGB}!GlContext.cpp@{GlContext.cpp}}
+\doxysubsubsection{\texorpdfstring{GL\_FRAMEBUFFER\_SRGB}{GL\_FRAMEBUFFER\_SRGB}}
+{\footnotesize\ttfamily \#define GL\+\_\+\+FRAMEBUFFER\+\_\+\+SRGB~0x8\+DB9}
+
+\Hypertarget{_gl_context_8cpp_a2b2319323c7cfb4ed795be005209d73d}\label{_gl_context_8cpp_a2b2319323c7cfb4ed795be005209d73d} 
+\index{GlContext.cpp@{GlContext.cpp}!GL\_MAJOR\_VERSION@{GL\_MAJOR\_VERSION}}
+\index{GL\_MAJOR\_VERSION@{GL\_MAJOR\_VERSION}!GlContext.cpp@{GlContext.cpp}}
+\doxysubsubsection{\texorpdfstring{GL\_MAJOR\_VERSION}{GL\_MAJOR\_VERSION}}
+{\footnotesize\ttfamily \#define GL\+\_\+\+MAJOR\+\_\+\+VERSION~0x821B}
+
+\Hypertarget{_gl_context_8cpp_ad45fb154a63b2b32a07732388e8251ad}\label{_gl_context_8cpp_ad45fb154a63b2b32a07732388e8251ad} 
+\index{GlContext.cpp@{GlContext.cpp}!GL\_MINOR\_VERSION@{GL\_MINOR\_VERSION}}
+\index{GL\_MINOR\_VERSION@{GL\_MINOR\_VERSION}!GlContext.cpp@{GlContext.cpp}}
+\doxysubsubsection{\texorpdfstring{GL\_MINOR\_VERSION}{GL\_MINOR\_VERSION}}
+{\footnotesize\ttfamily \#define GL\+\_\+\+MINOR\+\_\+\+VERSION~0x821C}
+
+\Hypertarget{_gl_context_8cpp_aa2b6486ff7ecee8bf04e3371f197527a}\label{_gl_context_8cpp_aa2b6486ff7ecee8bf04e3371f197527a} 
+\index{GlContext.cpp@{GlContext.cpp}!GL\_MULTISAMPLE@{GL\_MULTISAMPLE}}
+\index{GL\_MULTISAMPLE@{GL\_MULTISAMPLE}!GlContext.cpp@{GlContext.cpp}}
+\doxysubsubsection{\texorpdfstring{GL\_MULTISAMPLE}{GL\_MULTISAMPLE}}
+{\footnotesize\ttfamily \#define GL\+\_\+\+MULTISAMPLE~0x809D}
+
+\Hypertarget{_gl_context_8cpp_af541c15d841e8064600dec789ab4727e}\label{_gl_context_8cpp_af541c15d841e8064600dec789ab4727e} 
+\index{GlContext.cpp@{GlContext.cpp}!GL\_NUM\_EXTENSIONS@{GL\_NUM\_EXTENSIONS}}
+\index{GL\_NUM\_EXTENSIONS@{GL\_NUM\_EXTENSIONS}!GlContext.cpp@{GlContext.cpp}}
+\doxysubsubsection{\texorpdfstring{GL\_NUM\_EXTENSIONS}{GL\_NUM\_EXTENSIONS}}
+{\footnotesize\ttfamily \#define GL\+\_\+\+NUM\+\_\+\+EXTENSIONS~0x821D}
+
+
+
+\doxysubsection{Dokumentacja definicji typów}
+\Hypertarget{_gl_context_8cpp_a2eb49c36c2afdff18a68b58edd754fbd}\label{_gl_context_8cpp_a2eb49c36c2afdff18a68b58edd754fbd} 
+\index{GlContext.cpp@{GlContext.cpp}!glEnableFuncType@{glEnableFuncType}}
+\index{glEnableFuncType@{glEnableFuncType}!GlContext.cpp@{GlContext.cpp}}
+\doxysubsubsection{\texorpdfstring{glEnableFuncType}{glEnableFuncType}}
+{\footnotesize\ttfamily typedef void(\texorpdfstring{$\ast$}{*} gl\+Enable\+Func\+Type) (\mbox{\hyperlink{examples_2opengl_2gl_8h_a7efd7809e1632cdae75603fd1fee61c0}{GLenum}})}
+
+\Hypertarget{_gl_context_8cpp_a83edf17583d045392e7299fb85ee18ac}\label{_gl_context_8cpp_a83edf17583d045392e7299fb85ee18ac} 
+\index{GlContext.cpp@{GlContext.cpp}!glGetErrorFuncType@{glGetErrorFuncType}}
+\index{glGetErrorFuncType@{glGetErrorFuncType}!GlContext.cpp@{GlContext.cpp}}
+\doxysubsubsection{\texorpdfstring{glGetErrorFuncType}{glGetErrorFuncType}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{examples_2opengl_2gl_8h_a7efd7809e1632cdae75603fd1fee61c0}{GLenum}}(\texorpdfstring{$\ast$}{*} gl\+Get\+Error\+Func\+Type) ()}
+
+\Hypertarget{_gl_context_8cpp_a80f87c618a910b98024bfa1c7360458a}\label{_gl_context_8cpp_a80f87c618a910b98024bfa1c7360458a} 
+\index{GlContext.cpp@{GlContext.cpp}!glGetIntegervFuncType@{glGetIntegervFuncType}}
+\index{glGetIntegervFuncType@{glGetIntegervFuncType}!GlContext.cpp@{GlContext.cpp}}
+\doxysubsubsection{\texorpdfstring{glGetIntegervFuncType}{glGetIntegervFuncType}}
+{\footnotesize\ttfamily typedef void(\texorpdfstring{$\ast$}{*} gl\+Get\+Integerv\+Func\+Type) (\mbox{\hyperlink{examples_2opengl_2gl_8h_a7efd7809e1632cdae75603fd1fee61c0}{GLenum}}, \mbox{\hyperlink{examples_2opengl_2gl_8h_a5ac0f3c4d7fafd42b284b5487a791017}{GLint}} \texorpdfstring{$\ast$}{*})}
+
+\Hypertarget{_gl_context_8cpp_ad7e870b2d4de640d3b230715038223a8}\label{_gl_context_8cpp_ad7e870b2d4de640d3b230715038223a8} 
+\index{GlContext.cpp@{GlContext.cpp}!glGetStringFuncType@{glGetStringFuncType}}
+\index{glGetStringFuncType@{glGetStringFuncType}!GlContext.cpp@{GlContext.cpp}}
+\doxysubsubsection{\texorpdfstring{glGetStringFuncType}{glGetStringFuncType}}
+{\footnotesize\ttfamily typedef const \mbox{\hyperlink{examples_2opengl_2gl_8h_a59983474d77b865798a8f3b9afd2e93c}{GLubyte}} \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} gl\+Get\+String\+Func\+Type) (\mbox{\hyperlink{examples_2opengl_2gl_8h_a7efd7809e1632cdae75603fd1fee61c0}{GLenum}})}
+
+\Hypertarget{_gl_context_8cpp_abd34b05378134c659d8bc4b80cd4e372}\label{_gl_context_8cpp_abd34b05378134c659d8bc4b80cd4e372} 
+\index{GlContext.cpp@{GlContext.cpp}!glGetStringiFuncType@{glGetStringiFuncType}}
+\index{glGetStringiFuncType@{glGetStringiFuncType}!GlContext.cpp@{GlContext.cpp}}
+\doxysubsubsection{\texorpdfstring{glGetStringiFuncType}{glGetStringiFuncType}}
+{\footnotesize\ttfamily typedef const \mbox{\hyperlink{examples_2opengl_2gl_8h_a59983474d77b865798a8f3b9afd2e93c}{GLubyte}} \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} gl\+Get\+Stringi\+Func\+Type) (\mbox{\hyperlink{examples_2opengl_2gl_8h_a7efd7809e1632cdae75603fd1fee61c0}{GLenum}}, \mbox{\hyperlink{examples_2opengl_2gl_8h_aa311c7f0d6ec4f1a33f9235c3651b86b}{GLuint}})}
+
+\Hypertarget{_gl_context_8cpp_ac7a45af6373be47752f94d92a8945050}\label{_gl_context_8cpp_ac7a45af6373be47752f94d92a8945050} 
+\index{GlContext.cpp@{GlContext.cpp}!glIsEnabledFuncType@{glIsEnabledFuncType}}
+\index{glIsEnabledFuncType@{glIsEnabledFuncType}!GlContext.cpp@{GlContext.cpp}}
+\doxysubsubsection{\texorpdfstring{glIsEnabledFuncType}{glIsEnabledFuncType}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{examples_2opengl_2gl_8h_aa010a67382116caf29c29318251ccb6c}{GLboolean}}(\texorpdfstring{$\ast$}{*} gl\+Is\+Enabled\+Func\+Type) (\mbox{\hyperlink{examples_2opengl_2gl_8h_a7efd7809e1632cdae75603fd1fee61c0}{GLenum}})}
+
