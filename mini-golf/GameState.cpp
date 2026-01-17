@@ -1,10 +1,10 @@
 #include "GameState.h"
 #include <cmath>
+#include <iostream>
+#include <algorithm>
 
 
-
-
-GameState::GameState(GameDataRef data,int level) : m_data(data),m_level(level) {
+GameState::GameState(GameDataRef data, int level) : m_data(data), m_level(level) {
     strokes = 0;
     ballInHole = false;
     wasInWater = false;
@@ -12,6 +12,7 @@ GameState::GameState(GameDataRef data,int level) : m_data(data),m_level(level) {
 
     isJumping = false;
     jumpTimer = 0.0f;
+    maxJumpTime = 0.0f;
 
     lives = 3;
 
@@ -22,14 +23,10 @@ GameState::GameState(GameDataRef data,int level) : m_data(data),m_level(level) {
 void GameState::init() {
 
     levelData = LevelManager::loadLevelFromImage(m_level);
-
     tileMap.load("tileset", TILE_SIZE, levelData, LEVEL_WIDTH, LEVEL_HEIGHT);
-
     m_data->window.setView(m_data->window.getDefaultView());
 
     ball.setPosition((LevelManager::startPosition));
-
-
     lastSafePos = ball.getPosition();
 
     aimLine.setSize(sf::Vector2f(0.f, 6.f));
@@ -51,19 +48,17 @@ void GameState::init() {
         float scale = 1.5f;
         sf::Sprite heart;
         heart.setTexture(heartTex);
-
         heart.setScale(scale, scale);
         float spacing = 60.0f;
         float margin = 70.0f;
         float xPos = SCREEN_WIDTH - margin - (i * spacing);
         float yPos = 10.f;
-
         heart.setPosition(xPos, yPos);
         heartSprites.push_back(heart);
     }
 
-    m_shadow.setRadius(9.f); // Nieco mniejszy niż piłka (10.f)
-    m_shadow.setFillColor(sf::Color(0, 0, 0, 100)); // Półprzezroczysty czarny
+    m_shadow.setRadius(9.f);
+    m_shadow.setFillColor(sf::Color(0, 0, 0, 100));
     m_shadow.setOrigin(9.f, 9.f);
 
     updateHearts();
@@ -92,9 +87,9 @@ void GameState::resetLevel() {
     ball.stop();
 
     sf::Vector2u size = m_data->window.getSize();
-    sf::Vector2f startPos(size.x / 2.f, size.y / 2.f + 200.f);
-    ball.setPosition(startPos);
-    lastSafePos = startPos;
+    // Resetujemy do pozycji startowej z LevelManager (lub lastSafePos jeśli wolisz ostatnie bezpieczne miejsce)
+    ball.setPosition(LevelManager::startPosition);
+    lastSafePos = LevelManager::startPosition;
 
     wasInWater = false;
     isSinking = false;
@@ -128,33 +123,26 @@ void GameState::update(float dt) {
         m_fadeRect.setFillColor(sf::Color(0, 0, 0, static_cast<sf::Uint8>(m_alpha)));
     }
 
+    // --- TONIĘCIE ---
     if (isSinking) {
         float currentScale = ball.getScale().x;
         currentScale -= dt * 2.5f;
-
         if (currentScale < 0.f) currentScale = 0.f;
         ball.setScale(currentScale);
 
         if (currentScale <= 0.f) {
             isSinking = false;
-
             lives--;
             updateHearts();
 
             if (lives <= 0) {
-
-                // Robimy zrzut ekranu
                 auto texture = std::make_shared<sf::Texture>();
                 texture->create(m_data->window.getSize().x, m_data->window.getSize().y);
                 texture->update(m_data->window);
                 sf::Sprite bgSprite(*texture);
-
-                // Przełączamy na GameOver
                 m_data->machine.switchState(std::make_unique<GameOverState>(m_data, bgSprite, texture, m_level));
-                return; // Wychodzimy z funkcji
-
+                return;
             } else {
-                // Zwykły reset piłki (mamy jeszcze życia)
                 ball.stop();
                 ball.setPosition(lastSafePos);
                 ball.setScale(1.0f);
@@ -166,6 +154,7 @@ void GameState::update(float dt) {
 
     bool ballIsStopped = (std::abs(ball.getVelocity().x) < 5.f && std::abs(ball.getVelocity().y) < 5.f);
 
+    // --- STRZAŁ ---
     if (!ballInHole && ballIsStopped && !isJumping) {
         if (inputManager.isReady()) {
             forceVector = inputManager.getForceVector();
@@ -185,6 +174,7 @@ void GameState::update(float dt) {
 
     int tileUnderBall = getTileAt(ball.getPosition());
 
+    // --- DŹWIĘK WODY ---
     if (tileUnderBall == 11 && !isJumping) {
         if (!wasInWater) {
             m_splashSound.play();
@@ -194,11 +184,12 @@ void GameState::update(float dt) {
         wasInWater = false;
     }
 
+    // --- FIZYKA TARCIA ---
     float currentFriction = 0.98f;
-
     if (isJumping) currentFriction = 0.999f;
     else if (tileUnderBall == 2) currentFriction = 0.90f;
 
+    // --- FIZYKA WODY (PRZYCIĄGANIE) ---
     if (tileUnderBall == 11 && !isJumping) {
         currentFriction = 0.96f;
         int gridX = static_cast<int>(ball.getPosition().x) / 32;
@@ -221,14 +212,10 @@ void GameState::update(float dt) {
 
             sf::Vector2f currentVel = ball.getVelocity();
             sf::Vector2f impulse = direction * pullStrength;
-            sf::Vector2f newVel = currentVel + impulse;
-            float oldSpeed = std::sqrt(currentVel.x*currentVel.x + currentVel.y*currentVel.y);
-            float newSpeed = std::sqrt(newVel.x*newVel.x + newVel.y*newVel.y);
-            if (newSpeed > oldSpeed && oldSpeed > 0.1f) {
-                newVel = (newVel / newSpeed) * oldSpeed;
-            }
-            ball.applyImpulse(newVel);
+            ball.applyImpulse(currentVel + impulse);
         }
+
+        // Efekt zmniejszania w wodzie
         float targetScale = std::min(1.0f, std::max(0.6f, distance / 15.f));
         float currentScale = ball.getScale().x;
         float smoothScale = currentScale + (targetScale - currentScale) * 5.0f * dt;
@@ -241,23 +228,19 @@ void GameState::update(float dt) {
 
     ball.update(dt, currentFriction);
 
+    // --- OBSŁUGA POZYCJI POZA EKRANEM ---
     sf::Vector2f pos = ball.getPosition();
     sf::Vector2u windowSize = m_data->window.getSize();
-
     if (pos.x < -50 || pos.x > windowSize.x + 50 || pos.y < -50 || pos.y > windowSize.y + 50) {
         lives--;
         updateHearts();
-
         if (lives <= 0) {
-
             auto texture = std::make_shared<sf::Texture>();
             texture->create(m_data->window.getSize().x, m_data->window.getSize().y);
             texture->update(m_data->window);
             sf::Sprite bgSprite(*texture);
-
             m_data->machine.switchState(std::make_unique<GameOverState>(m_data, bgSprite, texture, m_level));
             return;
-
         } else {
             ball.stop();
             ball.setPosition(lastSafePos);
@@ -267,11 +250,14 @@ void GameState::update(float dt) {
         }
     }
 
+    // ==========================================
+    // === MECHANIKA RAMP - POPRAWIONA ===
+    // ==========================================
     float speed = std::sqrt(ball.getVelocity().x * ball.getVelocity().x + ball.getVelocity().y * ball.getVelocity().y);
 
     if (!isJumping) {
         bool triggerJump = false;
-        float minSpeedForJump = 150.0f;
+        float minSpeedForJump = 120.0f; // Zmniejszyłem lekko próg
 
         if (speed > minSpeedForJump) {
             if (tileUnderBall == 13 && ball.getVelocity().y < 0) triggerJump = true;
@@ -282,35 +268,59 @@ void GameState::update(float dt) {
 
         if (triggerJump) {
             isJumping = true;
-            jumpTimer = 0.8f;
+
+            // --- DYNAMICZNY CZAS SKOKU ---
+            // Im szybciej jedziesz, tym dłużej lecisz.
+            // speed ~150 -> 0.6s
+            // speed ~400 -> 1.2s
+            float dynamicTime = speed / 350.0f;
+
+            // Clamp (ograniczenie) czasu skoku (min 0.6s, max 1.3s)
+            if (dynamicTime < 0.6f) dynamicTime = 0.6f;
+            if (dynamicTime > 1.3f) dynamicTime = 1.3f;
+
+            jumpTimer = dynamicTime;
+            maxJumpTime = dynamicTime; // Zapamiętujemy do obliczania skali
         }
     }
 
+    // --- OBSŁUGA LOTU ---
     if (isJumping) {
         jumpTimer -= dt;
 
-        float jumpProgress = 1.0f - (jumpTimer / 0.8f);
+        // Progress od 0.0 do 1.0
+        float jumpProgress = 1.0f - (jumpTimer / maxJumpTime);
+
+        // Sinusoida dla wysokości (skali)
         float scaleFactor = 1.0f + (0.5f * std::sin(jumpProgress * std::numbers::pi_v<float>));
+
+        // Cień maleje, gdy piłka jest wysoko
         float shadowScale = 1.0f - (scaleFactor - 1.0f);
         m_shadow.setScale(shadowScale, shadowScale);
         m_shadow.setPosition(ball.getPosition());
+
         ball.setScale(scaleFactor);
 
         if (jumpTimer <= 0.0f) {
             isJumping = false;
             ball.setScale(1.0f);
 
+            // Lądowanie poza mapą
             sf::Vector2f landPos = ball.getPosition();
             if (landPos.x < 0 || landPos.x > windowSize.x || landPos.y < 0 || landPos.y > windowSize.y) {
                  ball.stop();
                  ball.setPosition(lastSafePos);
             }
         }
-    }else {
+    } else {
+        // Cień normalnie
         m_shadow.setScale(1.0f, 1.0f);
         m_shadow.setPosition(ball.getPosition().x + 2.0f, ball.getPosition().y + 2.0f);
     }
 
+    // ==================================================
+    // === POPRAWIONE KOLIZJE ZE ŚCIANAMI (Sub-tile) ===
+    // ==================================================
     if (!isJumping) {
         sf::Vector2f ballPos = ball.getPosition();
         float r = 10.f;
@@ -325,16 +335,46 @@ void GameState::update(float dt) {
         int tLeft   = getTileAt(pLeft);
         int tRight  = getTileAt(pRight);
 
-        bool stdHitTop    = isWall(tTop);
+
+        auto isSolidPart = [&](int tileId, sf::Vector2f point) -> bool {
+            int lx = static_cast<int>(point.x) % 32;
+            int ly = static_cast<int>(point.y) % 32;
+            if (lx < 0) lx += 32;
+            if (ly < 0) ly += 32;
+
+            int half = 24; // Połowa kafelka
+
+            // 3: Ściana PRAWA (odbija od prawej, lewa to trawa) -> Hitbox: lx > 16
+            if (tileId == 3) return lx > half;
+
+            // 4: Ściana LEWA (odbija od lewej, prawa to trawa) -> Hitbox: lx < 16
+            if (tileId == 4) return lx < half;
+
+            // 5: Ściana DÓŁ (odbija od dołu, góra to trawa) -> Hitbox: ly > 16
+            if (tileId == 5) return ly > half;
+
+            // 6: Ściana GÓRA (odbija od góry, dół to trawa) -> Hitbox: ly < 16
+            if (tileId == 6) return ly < half;
+
+            return true; // Inne ściany (7,8,9,10) są pełne
+        };
+
+        // --- Sprawdzanie kolizji ze standardowymi ścianami (3-10) ---
+        bool stdHitTop = isWall(tTop);
+        if (stdHitTop && (tTop >= 3 && tTop <= 6)) stdHitTop = isSolidPart(tTop, pTop);
+
         bool stdHitBottom = isWall(tBottom);
-        bool stdHitLeft   = isWall(tLeft);
-        bool stdHitRight  = isWall(tRight);
+        if (stdHitBottom && (tBottom >= 3 && tBottom <= 6)) stdHitBottom = isSolidPart(tBottom, pBottom);
 
-        bool rampHitTop = false;
-        bool rampHitBottom = false;
-        bool rampHitLeft = false;
-        bool rampHitRight = false;
+        bool stdHitLeft = isWall(tLeft);
+        if (stdHitLeft && (tLeft >= 3 && tLeft <= 6)) stdHitLeft = isSolidPart(tLeft, pLeft);
 
+        bool stdHitRight = isWall(tRight);
+        if (stdHitRight && (tRight >= 3 && tRight <= 6)) stdHitRight = isSolidPart(tRight, pRight);
+
+
+        // --- Blokowanie ramp od złej strony (bez zmian) ---
+        bool rampHitTop = false, rampHitBottom = false, rampHitLeft = false, rampHitRight = false;
         if (tTop == 14 || tTop == 15 || tTop == 16) rampHitTop = true;
         if (tBottom == 13 || tBottom == 15 || tBottom == 16) rampHitBottom = true;
         if (tLeft == 13 || tLeft == 14 || tLeft == 15) rampHitLeft = true;
@@ -368,8 +408,6 @@ void GameState::update(float dt) {
         ball.setScale(1.0f);
     }
 
-    // ... wewnątrz update ...
-
     // Dołek
     if (tileUnderBall == 1 && !isJumping) {
         int gridX = static_cast<int>(ball.getPosition().x) / 32;
@@ -379,11 +417,8 @@ void GameState::update(float dt) {
         float distance = std::sqrt(toHole.x * toHole.x + toHole.y * toHole.y);
 
         if (distance < 20.f) {
-            // ... (logika przyciągania bez zmian) ...
-
             float currentSpeed = std::sqrt(ball.getVelocity().x * ball.getVelocity().x + ball.getVelocity().y * ball.getVelocity().y);
             if (currentSpeed < 250.f) {
-                 // ... (fizyka wciągania) ...
                  currentFriction = 0.94f;
                  sf::Vector2f direction = toHole / distance;
                  float pullStrength = 1.0f + (20.0f - distance) * 0.15f;
@@ -391,7 +426,6 @@ void GameState::update(float dt) {
                  float scale = std::max(0.0f, distance / 20.f);
                  ball.setScale(scale);
 
-                // --- WPADNIĘCIE ---
                 if (distance < 5.0f) {
                     if (!ballInHole) {
                         m_winSound.play();
@@ -405,25 +439,20 @@ void GameState::update(float dt) {
         }
     }
 
-    // --- NOWA LOGIKA: PRZEJŚCIE DO EKRANU ZWYCIĘSTWA ---
+    // Przejście do wygranej
     if (ballInHole) {
         levelFinishTimer += dt;
-
-        // Czekamy 1.0 sekundy po wpadnięciu
         if (levelFinishTimer > 1.0f) {
-            // Robimy zrzut ekranu do tła
             auto texture = std::make_shared<sf::Texture>();
             texture->create(m_data->window.getSize().x, m_data->window.getSize().y);
             texture->update(m_data->window);
             sf::Sprite bgSprite(*texture);
-
-            // Przełączamy na ekran zwycięstwa (switchState - czyścimy pamięć starej gry)
-            // Przekazujemy: strokes (wynik) i m_level (żeby wiedzieć co jest następne)
             m_data->machine.switchState(std::make_unique<LevelCompleteState>(m_data, bgSprite, texture, strokes, m_level));
             return;
         }
     }
 
+    // Beton
     if (tileUnderBall == 12 && !isJumping) {
          currentFriction = 0.99f;
          float speedBeton = std::sqrt(ball.getVelocity().x * ball.getVelocity().x + ball.getVelocity().y * ball.getVelocity().y);
@@ -465,6 +494,7 @@ void GameState::draw(float dt) {
     m_data->window.display();
 }
 
+// ... initUI, initSounds, updateAimLine, getTileAt, isWall bez zmian ...
 void GameState::initUI() {
     const sf::Font& font = FontManager::get("font");
     scoreText.setFont(font);

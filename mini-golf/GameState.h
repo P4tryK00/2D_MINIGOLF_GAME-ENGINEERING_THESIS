@@ -76,6 +76,7 @@ private:
     std::vector<sf::Sprite> heartSprites;
     void updateHearts();
     void resetLevel();
+    float maxJumpTime;
 
 };
 
