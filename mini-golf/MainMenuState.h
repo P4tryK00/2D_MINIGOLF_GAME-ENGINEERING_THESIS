@@ -9,6 +9,8 @@
 #include "State.h"
 #include "Game.h"
 #include "LevelSelectState.h"
+#include "SaveManager.h"
+#include "LeaderBoardState.h"
 
 class MainMenuState : public State {
 public:
@@ -27,10 +29,12 @@ private:
     sf::Text m_title;
     sf::Text m_playButton;
     sf::Text m_exitButton;
+    sf::Text m_leaderboardButton;
     sf::RectangleShape m_fadeRect;
     float m_alpha;
     bool m_isTransitioning;
     bool m_isFadingIn;
+    bool m_goToLeaderboard;
 };
 
 

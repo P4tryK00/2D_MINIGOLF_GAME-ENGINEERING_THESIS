@@ -41,6 +41,12 @@ set(PROJECT_SOURCES
         LevelManager.h
         LevelCompleteState.cpp
         LevelCompleteState.h
+        SaveManager.cpp
+        SaveManager.h
+        LeaderBoardState.cpp
+        LeaderBoardState.h
+        GameOverState.cpp
+        GameOverState.h
 
 
 )

@@ -21,14 +21,15 @@ GameState::GameState(GameDataRef data,int level) : m_data(data),m_level(level) {
 
 void GameState::init() {
 
-    levelData = LevelManager::getLevel(m_level);
+    levelData = LevelManager::loadLevelFromImage(m_level);
 
     tileMap.load("tileset", TILE_SIZE, levelData, LEVEL_WIDTH, LEVEL_HEIGHT);
 
     m_data->window.setView(m_data->window.getDefaultView());
 
-    sf::Vector2u size = m_data->window.getSize();
-    ball.setPosition(sf::Vector2f(size.x / 2.f, size.y / 2.f + 200.f));
+    ball.setPosition((LevelManager::startPosition));
+
+
     lastSafePos = ball.getPosition();
 
     aimLine.setSize(sf::Vector2f(0.f, 6.f));
@@ -60,6 +61,11 @@ void GameState::init() {
         heart.setPosition(xPos, yPos);
         heartSprites.push_back(heart);
     }
+
+    m_shadow.setRadius(9.f); // Nieco mniejszy niż piłka (10.f)
+    m_shadow.setFillColor(sf::Color(0, 0, 0, 100)); // Półprzezroczysty czarny
+    m_shadow.setOrigin(9.f, 9.f);
+
     updateHearts();
 }
 
@@ -136,8 +142,19 @@ void GameState::update(float dt) {
             updateHearts();
 
             if (lives <= 0) {
-                resetLevel();
+
+                // Robimy zrzut ekranu
+                auto texture = std::make_shared<sf::Texture>();
+                texture->create(m_data->window.getSize().x, m_data->window.getSize().y);
+                texture->update(m_data->window);
+                sf::Sprite bgSprite(*texture);
+
+                // Przełączamy na GameOver
+                m_data->machine.switchState(std::make_unique<GameOverState>(m_data, bgSprite, texture, m_level));
+                return; // Wychodzimy z funkcji
+
             } else {
+                // Zwykły reset piłki (mamy jeszcze życia)
                 ball.stop();
                 ball.setPosition(lastSafePos);
                 ball.setScale(1.0f);
@@ -232,7 +249,15 @@ void GameState::update(float dt) {
         updateHearts();
 
         if (lives <= 0) {
-            resetLevel();
+
+            auto texture = std::make_shared<sf::Texture>();
+            texture->create(m_data->window.getSize().x, m_data->window.getSize().y);
+            texture->update(m_data->window);
+            sf::Sprite bgSprite(*texture);
+
+            m_data->machine.switchState(std::make_unique<GameOverState>(m_data, bgSprite, texture, m_level));
+            return;
+
         } else {
             ball.stop();
             ball.setPosition(lastSafePos);
@@ -266,6 +291,9 @@ void GameState::update(float dt) {
 
         float jumpProgress = 1.0f - (jumpTimer / 0.8f);
         float scaleFactor = 1.0f + (0.5f * std::sin(jumpProgress * std::numbers::pi_v<float>));
+        float shadowScale = 1.0f - (scaleFactor - 1.0f);
+        m_shadow.setScale(shadowScale, shadowScale);
+        m_shadow.setPosition(ball.getPosition());
         ball.setScale(scaleFactor);
 
         if (jumpTimer <= 0.0f) {
@@ -278,6 +306,9 @@ void GameState::update(float dt) {
                  ball.setPosition(lastSafePos);
             }
         }
+    }else {
+        m_shadow.setScale(1.0f, 1.0f);
+        m_shadow.setPosition(ball.getPosition().x + 2.0f, ball.getPosition().y + 2.0f);
     }
 
     if (!isJumping) {
@@ -416,6 +447,7 @@ void GameState::update(float dt) {
 void GameState::draw(float dt) {
     m_data->window.clear();
     m_data->window.draw(tileMap);
+    m_data->window.draw(m_shadow);
     ball.draw(m_data->window);
     m_data->window.draw(aimLine);
     m_data->window.draw(scoreText);

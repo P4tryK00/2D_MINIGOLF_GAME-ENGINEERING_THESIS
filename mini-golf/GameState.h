@@ -17,6 +17,7 @@
 #include <numbers>
 #include "LevelManager.h"
 #include "LevelCompleteState.h"
+#include "GameOverState.h"
 
 class GameState : public State {
 public:
@@ -36,6 +37,7 @@ private:
     sf::Vector2f lastSafePos;
     sf::Vector2f forceVector;
     int m_level;
+    sf::CircleShape m_shadow;
 
 
     // UI

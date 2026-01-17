@@ -18,13 +18,19 @@ void LevelSelectState::init() {
     m_title.setOrigin(titleRect.left + titleRect.width / 2.0f, titleRect.top + titleRect.height / 2.0f);
     m_title.setPosition(SCREEN_WIDTH / 2.0f, 100.f);
 
-    // Generowanie przycisków 1-5
+    auto unlocked = SaveManager::getUnlockedLevel();
+
     for (int i = 1; i <= 5; i++) {
         sf::Text btn;
         btn.setFont(font);
-        btn.setString("LEVEL " + std::to_string(i));
         btn.setCharacterSize(40);
-        btn.setFillColor(sf::Color::White);
+        if (i > unlocked) {
+            btn.setString("LEVEL " + std::to_string(i) + " (LOCKED)");
+            btn.setFillColor(sf::Color(100, 100, 100)); // Szary
+        } else {
+            btn.setString("LEVEL " + std::to_string(i));
+            btn.setFillColor(sf::Color::White);
+        }
         
         sf::FloatRect rect = btn.getLocalBounds();
         btn.setOrigin(rect.left + rect.width / 2.0f, rect.top + rect.height / 2.0f);
@@ -60,12 +66,20 @@ void LevelSelectState::handleInput(sf::Event& event) {
 
         if (!m_isFadingIn && !m_isTransitioning) {
             
-            // Sprawdzamy przyciski poziomów
             for (int i = 0; i < m_levelButtons.size(); i++) {
                 if (m_levelButtons[i].getGlobalBounds().contains(mousePosF)) {
-                    m_nextLevelToLoad = i + 1; // Poziomy są 1-5, indexy 0-4
-                    m_isTransitioning = true;
-                    return;
+
+                    // Sprawdzamy czy odblokowany
+                    int levelNum = i + 1;
+                    int unlocked = SaveManager::getUnlockedLevel();
+
+                    if (levelNum <= unlocked) {
+                        m_nextLevelToLoad = levelNum;
+                        m_isTransitioning = true;
+                        return;
+                    } else {
+
+                    }
                 }
             }
 
@@ -84,10 +98,18 @@ void LevelSelectState::update(float dt) {
         sf::Vector2i mousePos = sf::Mouse::getPosition(m_data->window);
         sf::Vector2f mousePosF = m_data->window.mapPixelToCoords(mousePos);
 
-        // Poziomy
-        for (auto& btn : m_levelButtons) {
-            if (btn.getGlobalBounds().contains(mousePosF)) btn.setFillColor(sf::Color::Red);
-            else btn.setFillColor(sf::Color::White);
+        for (int i = 0; i < m_levelButtons.size(); i++) {
+            int levelNum = i + 1;
+            int unlocked = SaveManager::getUnlockedLevel();
+
+            // Podświetlamy tylko odblokowane
+            if (levelNum <= unlocked) {
+                if (m_levelButtons[i].getGlobalBounds().contains(mousePosF)) {
+                    m_levelButtons[i].setFillColor(sf::Color::Red);
+                } else {
+                    m_levelButtons[i].setFillColor(sf::Color::White);
+                }
+            }
         }
         // Back
         if (m_backButton.getGlobalBounds().contains(mousePosF)) m_backButton.setFillColor(sf::Color::Red);
