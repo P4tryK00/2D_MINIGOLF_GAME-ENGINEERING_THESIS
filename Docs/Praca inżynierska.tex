@@ -1,0 +1,120 @@
+\documentclass[12pt, a4paper, oneside]{report}
+
+% =========================================================
+% PODSTAWOWE PAKIETY
+% =========================================================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{mathptmx}       % Times New Roman (wymagany)
+\usepackage{anyfontsize}    % Do precyzyjnego ustawiania wielkości czcionek
+\usepackage{titlesec}       % Do formatowania nagłówków
+\usepackage{caption}        % Do podpisów tabel/rysunków
+\usepackage[hidelinks]{hyperref} % Linki w spisie treści
+
+% =========================================================
+% MARGINESY – WFiIS UŁ
+% =========================================================
+\geometry{
+  a4paper,
+  left=30mm,
+  right=20mm,
+  top=25mm,
+  bottom=25mm
+}
+
+% =========================================================
+% INTERLINIA
+% =========================================================
+\onehalfspacing
+
+% =========================================================
+% START DOKUMENTU
+% =========================================================
+\begin{document}
+
+% =========================================================
+% STRONA TYTUŁOWA – POPRAWIONA WG WZORU 1a
+% =========================================================
+\begin{titlepage}
+
+% Top logo and faculty name
+\begin{center}
+\vspace*{0.5cm}
+\includegraphics[width=4.69861in,height=1.55278in]{logo.png}
+\end{center}
+
+\vspace{1.2cm}
+
+% Name line
+\begin{center}
+\noindent\makebox[0.85\textwidth]{\dotfill}\\[-0.2em]
+{\footnotesize (imi\k{e} i nazwisko)}
+\end{center}
+
+\vspace{1.3cm}
+
+% Study info block
+\noindent
+Kierunek: informatyka\\
+Specjalno\'s\'c: informatyka stosowana\\
+Specjalizacja: \makebox[0.35\textwidth]{\dotfill}\\
+Numer albumu: \makebox[0.35\textwidth]{\dotfill}
+
+\vspace{2.2cm}
+
+% Thesis title line
+\begin{center}
+\noindent\makebox[0.95\textwidth]{\dotfill}\\[-0.2em]
+{\footnotesize (tytu\l{} pracy dyplomowej)}
+\end{center}
+
+\vspace{2.6cm}
+
+% Right-side engineering thesis block
+\hfill
+\begin{minipage}[t]{0.45\textwidth}
+\raggedleft
+{\bfseries Praca in\.zynierska}\\
+wykonana pod kierunkiem\\
+\makebox[0.65\textwidth]{\dotfill}\\
+w Katedrze \makebox[0.65\textwidth]{\dotfill}\\
+WFiIS U\L{}
+\end{minipage}
+
+\vfill
+
+% Bottom city and year
+\begin{center}
+\L{}\'od\'z \makebox[0.25\textwidth]{\dotfill}\\[-0.2em]
+{\footnotesize (rok kalendarzowy)}
+\end{center}
+\end{titlepage}
+
+% =========================================================
+% SPISY – NUMERACJA RZYMSKA
+% =========================================================
+\pagenumbering{roman}
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\clearpage
+
+% =========================================================
+% TREŚĆ GŁÓWNA – NUMERACJA ARABSKA
+% =========================================================
+\pagenumbering{arabic}
+
+\chapter{Wstęp}
+Tutaj zaczynasz pisać wstęp...
+
+\chapter{Przegląd technologii}
+\section{Biblioteka SFML}
+Tekst...
+
+\end{document}
