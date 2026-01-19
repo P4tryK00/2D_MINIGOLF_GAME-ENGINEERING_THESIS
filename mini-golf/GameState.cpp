@@ -3,8 +3,6 @@
 #include <iostream>
 #include <algorithm>
 
-
-
 // =============================================================
 // KONSTRUKTOR I INICJALIZACJA
 // =============================================================
@@ -27,16 +25,16 @@ GameState::GameState(GameDataRef data, int level) : m_data(data), m_level(level)
 }
 
 void GameState::init() {
-    // 1. Ładowanie poziomu z obrazka (LevelManager parsuje piksele)
+    // 1. Ładowanie poziomu z obrazka
     levelData = LevelManager::loadLevelFromImage(m_level);
 
-    // 2. Generowanie mapy kafelkowej na podstawie danych
+    // 2. Generowanie mapy kafelkowej
     tileMap.load("tileset", TILE_SIZE, levelData, LEVEL_WIDTH, LEVEL_HEIGHT);
 
     // 3. Ustawienie widoku kamery
     m_data->window.setView(m_data->window.getDefaultView());
 
-    // 4. Ustawienie piłki na pozycji startowej wykrytej przez LevelManager
+    // 4. Ustawienie piłki
     ball.setPosition((LevelManager::startPosition));
     lastSafePos = ball.getPosition();
 
@@ -54,7 +52,7 @@ void GameState::init() {
     m_alpha = 255.0f;
     m_fadeRect.setFillColor(sf::Color(0, 0, 0, 255));
 
-    // 8. Inicjalizacja systemu serc (życia)
+    // 8. Inicjalizacja systemu serc
     lives = 3;
     heartSprites.clear();
     const sf::Texture& heartTex = TextureManager::get("heart");
@@ -74,16 +72,16 @@ void GameState::init() {
         heartSprites.push_back(heart);
     }
 
-    // 9. Cień pod piłką (dla efektu głębi przy skoku)
+    // 9. Cień pod piłką
     m_shadow.setRadius(9.f);
-    m_shadow.setFillColor(sf::Color(0, 0, 0, 100)); // Półprzezroczysty czarny
+    m_shadow.setFillColor(sf::Color(0, 0, 0, 100));
     m_shadow.setOrigin(9.f, 9.f);
 
     updateHearts();
 }
 
 // =============================================================
-// METODY POMOCNICZE (LOGIKA STANU)
+// METODY POMOCNICZE
 // =============================================================
 
 void GameState::updateHearts() {
@@ -100,7 +98,6 @@ void GameState::updateHearts() {
 }
 
 void GameState::resetLevel() {
-    // Reset zmiennych logicznych
     ballInHole = false;
     strokes = 0;
     lives = 3;
@@ -108,8 +105,6 @@ void GameState::resetLevel() {
 
     scoreText.setString("Strokes: 0");
     ball.stop();
-
-    // Reset pozycji piłki do startu poziomu
     ball.setPosition(LevelManager::startPosition);
     lastSafePos = LevelManager::startPosition;
 
@@ -124,58 +119,48 @@ void GameState::resetLevel() {
 // =============================================================
 
 void GameState::handleInput(sf::Event& event) {
-    // Restart poziomu pod klawiszem R
     if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::R) {
         resetLevel();
     }
 
-    // Pauza pod klawiszem ESC
     if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape) {
-        // Robimy zrzut ekranu do tła menu pauzy
         auto texture = std::make_shared<sf::Texture>();
         texture->create(m_data->window.getSize().x, m_data->window.getSize().y);
         texture->update(m_data->window);
-
         sf::Sprite sprite;
         sprite.setTexture(*texture);
-
-        // Dodajemy stan pauzy na stos (nie usuwamy gry)
         m_data->machine.addState(std::make_unique<PauseMenuState>(m_data, sprite, texture, m_level), false);
     }
 
-    // Obsługa myszy (Drag & Shoot)
     inputManager.handleEvent(event, ball, m_data->window);
 }
 
 // =============================================================
-// GŁÓWNA PĘTLA LOGIKI (UPDATE)
+// UPDATE (FIZYKA I LOGIKA)
 // =============================================================
 
 void GameState::update(float dt) {
 
-    // 1. Obsługa efektu Fade In (rozjaśnianie ekranu)
+    // 1. Fade In
     if (m_alpha > 0.0f) {
         m_alpha -= 300.0f * dt;
         if (m_alpha < 0.0f) m_alpha = 0.0f;
         m_fadeRect.setFillColor(sf::Color(0, 0, 0, static_cast<sf::Uint8>(m_alpha)));
     }
 
-    // 2. Obsługa tonięcia (animacja zmniejszania piłki)
+    // 2. Tnięcie
     if (isSinking) {
         float currentScale = ball.getScale().x;
         currentScale -= dt * 2.5f;
-
         if (currentScale < 0.f) currentScale = 0.f;
         ball.setScale(currentScale);
 
         if (currentScale <= 0.f) {
             isSinking = false;
-
             lives--;
             updateHearts();
 
             if (lives <= 0) {
-                // GAME OVER - Przejście do stanu przegranej
                 auto texture = std::make_shared<sf::Texture>();
                 texture->create(m_data->window.getSize().x, m_data->window.getSize().y);
                 texture->update(m_data->window);
@@ -183,26 +168,22 @@ void GameState::update(float dt) {
                 m_data->machine.switchState(std::make_unique<GameOverState>(m_data, bgSprite, texture, m_level));
                 return;
             } else {
-                // Reset do ostatniej bezpiecznej pozycji
                 ball.stop();
                 ball.setPosition(lastSafePos);
                 ball.setScale(1.0f);
                 wasInWater = false;
             }
         }
-        return; // Przerywamy update fizyki podczas tonięcia
+        return;
     }
 
-    // Sprawdzenie czy piłka stoi w miejscu
+    // 3. Logika strzału
     bool ballIsStopped = (std::abs(ball.getVelocity().x) < 5.f && std::abs(ball.getVelocity().y) < 5.f);
-
-    // 3. Logika strzału (InputManager)
     if (!ballInHole && ballIsStopped && !isJumping) {
         if (inputManager.isReady()) {
             forceVector = inputManager.getForceVector();
-            // Ignorujemy bardzo słabe pociągnięcia
             if (std::abs(forceVector.x) > 1.f || std::abs(forceVector.y) > 1.f) {
-                lastSafePos = ball.getPosition(); // Zapisujemy pozycję przed strzałem
+                lastSafePos = ball.getPosition();
                 m_hitSound.play();
                 ball.applyImpulse(forceVector);
                 strokes++;
@@ -210,15 +191,12 @@ void GameState::update(float dt) {
             }
         }
     } else {
-        // Resetujemy input jeśli piłka się rusza
-        if (inputManager.isReady()) {
-            inputManager.getForceVector();
-        }
+        if (inputManager.isReady()) inputManager.getForceVector();
     }
 
     int tileUnderBall = getTileAt(ball.getPosition());
 
-    // 4. Obsługa dźwięku wody (tylko raz przy wejściu)
+    // 4. Dźwięk wody
     if (tileUnderBall == 11 && !isJumping) {
         if (!wasInWater) {
             m_splashSound.play();
@@ -228,32 +206,24 @@ void GameState::update(float dt) {
         wasInWater = false;
     }
 
-    // 5. Fizyka Tarcia (zależna od podłoża)
-    float currentFriction = 0.98f; // Domyślna trawa
+    // 5. Tarcie
+    float currentFriction = 0.98f;
+    if (isJumping) currentFriction = 0.999f;
+    else if (tileUnderBall == 2) currentFriction = 0.90f;
 
-    if (isJumping) currentFriction = 0.999f; // W powietrzu opór jest minimalny
-    else if (tileUnderBall == 2) currentFriction = 0.90f; // Piasek spowalnia
-
-    // 6. Fizyka Wody (Wektorowe pole sił)
+    // 6. Fizyka Wody
     if (tileUnderBall == 11 && !isJumping) {
         currentFriction = 0.96f;
-
-        // Obliczamy środek kafelka wody
         int gridX = static_cast<int>(ball.getPosition().x) / 32;
         int gridY = static_cast<int>(ball.getPosition().y) / 32;
         sf::Vector2f waterCenter(gridX * 32.f + 16.f, gridY * 32.f + 16.f);
-
         sf::Vector2f toCenter = waterCenter - ball.getPosition();
         float distance = std::sqrt(toCenter.x * toCenter.x + toCenter.y * toCenter.y);
 
-        // Przyciąganie do środka
         if (distance > 1.0f) {
             sf::Vector2f direction = toCenter / distance;
             float pullStrength = 10.0f;
-
-            // Siła rośnie im bliżej środka, ale słabnie przy dużej prędkości (żeby dało się przeskoczyć)
-            float currentSpeed = std::sqrt(ball.getVelocity().x * ball.getVelocity().x +
-                                           ball.getVelocity().y * ball.getVelocity().y);
+            float currentSpeed = std::sqrt(ball.getVelocity().x * ball.getVelocity().x + ball.getVelocity().y * ball.getVelocity().y);
 
             if (currentSpeed > 300.f) pullStrength *= 0.1f;
             else if (currentSpeed > 100.f) pullStrength *= 0.5f;
@@ -261,25 +231,23 @@ void GameState::update(float dt) {
             ball.applyImpulse(ball.getVelocity() + (direction * pullStrength));
         }
 
-        // Efekt wizualny zanurzania
         float targetScale = std::min(1.0f, std::max(0.6f, distance / 15.f));
         float currentScale = ball.getScale().x;
         float smoothScale = currentScale + (targetScale - currentScale) * 5.0f * dt;
         ball.setScale(smoothScale);
 
-        // Warunek zatonięcia
         float speed = std::sqrt(ball.getVelocity().x * ball.getVelocity().x + ball.getVelocity().y * ball.getVelocity().y);
         if (distance < 8.0f && speed < 60.f) {
             isSinking = true;
         }
     }
 
-    // Aktualizacja pozycji piłki
     ball.update(dt, currentFriction);
 
-    // 7. Obsługa wypadnięcia poza mapę
+    // 7. Wypadnięcie poza mapę
     sf::Vector2f pos = ball.getPosition();
     sf::Vector2u windowSize = m_data->window.getSize();
+    // Margines 50px pozwala piłce "wylecieć" zamiast się odbić od krawędzi
     if (pos.x < -50 || pos.x > windowSize.x + 50 || pos.y < -50 || pos.y > windowSize.y + 50) {
         lives--;
         updateHearts();
@@ -306,26 +274,20 @@ void GameState::update(float dt) {
 
     if (!isJumping) {
         bool triggerJump = false;
-        float minSpeedForJump = 80.0f; // Próg prędkości wymagany do skoku
+        float minSpeedForJump = 80.0f;
 
         if (speed > minSpeedForJump) {
-            // Sprawdzamy kierunek najazdu na rampę
-            if (tileUnderBall == 13 && ball.getVelocity().y < 0) triggerJump = true; // Rampa UP
-            else if (tileUnderBall == 14 && ball.getVelocity().y > 0) triggerJump = true; // Rampa DOWN
-            else if (tileUnderBall == 15 && ball.getVelocity().x > 0) triggerJump = true; // Rampa RIGHT
-            else if (tileUnderBall == 16 && ball.getVelocity().x < 0) triggerJump = true; // Rampa LEFT
+            if (tileUnderBall == 13 && ball.getVelocity().y < 0) triggerJump = true;
+            else if (tileUnderBall == 14 && ball.getVelocity().y > 0) triggerJump = true;
+            else if (tileUnderBall == 15 && ball.getVelocity().x > 0) triggerJump = true;
+            else if (tileUnderBall == 16 && ball.getVelocity().x < 0) triggerJump = true;
         }
 
         if (triggerJump) {
             isJumping = true;
-
-            // Obliczamy dynamiczny czas skoku na podstawie prędkości
             float dynamicTime = speed / 300.0f;
-
-            // Ograniczamy czas (min 0.6s, max 1.3s)
             if (dynamicTime < 0.6f) dynamicTime = 0.6f;
             if (dynamicTime > 1.3f) dynamicTime = 1.3f;
-
             jumpTimer = dynamicTime;
             maxJumpTime = dynamicTime;
         }
@@ -334,23 +296,21 @@ void GameState::update(float dt) {
     // Animacja lotu
     if (isJumping) {
         jumpTimer -= dt;
-
         float jumpProgress = 1.0f - (jumpTimer / maxJumpTime);
-        // Funkcja sinus do symulacji paraboli lotu (zmiana skali)
         float scaleFactor = 1.0f + (0.5f * std::sin(jumpProgress * std::numbers::pi_v<float>));
 
-        // Cień maleje gdy piłka jest wysoko
         float shadowScale = 1.0f - (scaleFactor - 1.0f);
         m_shadow.setScale(shadowScale, shadowScale);
-        m_shadow.setPosition(ball.getPosition());
+
+        // Przesunięcie cienia zależne od wysokości skoku
+        float shadowOffset = (scaleFactor - 1.0f) * 20.0f;
+        m_shadow.setPosition(ball.getPosition().x + 5.0f + shadowOffset, ball.getPosition().y + 5.0f + shadowOffset);
 
         ball.setScale(scaleFactor);
 
         if (jumpTimer <= 0.0f) {
             isJumping = false;
             ball.setScale(1.0f);
-
-            // Sprawdzenie lądowania poza mapą
             sf::Vector2f landPos = ball.getPosition();
             if (landPos.x < 0 || landPos.x > windowSize.x || landPos.y < 0 || landPos.y > windowSize.y) {
                  ball.stop();
@@ -358,7 +318,6 @@ void GameState::update(float dt) {
             }
         }
     } else {
-        // Cień w normalnej pozycji
         m_shadow.setScale(1.0f, 1.0f);
         m_shadow.setPosition(ball.getPosition().x + 2.0f, ball.getPosition().y + 2.0f);
     }
@@ -368,9 +327,8 @@ void GameState::update(float dt) {
     // ==================================================
     if (!isJumping) {
         sf::Vector2f ballPos = ball.getPosition();
-        float r = 10.f; // Promień kolizji
+        float r = 10.f;
 
-        // Punkty sprawdzania kolizji (Góra, Dół, Lewo, Prawo)
         sf::Vector2f pTop    = {ballPos.x, ballPos.y - r};
         sf::Vector2f pBottom = {ballPos.x, ballPos.y + r};
         sf::Vector2f pLeft   = {ballPos.x - r, ballPos.y};
@@ -381,50 +339,74 @@ void GameState::update(float dt) {
         int tLeft   = getTileAt(pLeft);
         int tRight  = getTileAt(pRight);
 
-        // Funkcja lambda: Sprawdza czy uderzyliśmy w TWARDĄ część kafelka
+        // --- FUNKCJA OKREŚLAJĄCA TWARDĄ CZĘŚĆ KAFELKA ---
         auto isSolidPart = [&](int tileId, sf::Vector2f point) -> bool {
             int lx = static_cast<int>(point.x) % 32;
             int ly = static_cast<int>(point.y) % 32;
             if (lx < 0) lx += 32;
             if (ly < 0) ly += 32;
 
-            int half = 16;
+            // Granice dla ścian prostych
+            int wallThickness = 7;
+            int lowBorder = wallThickness;
+            int highBorder = 32 - wallThickness;
 
-            // Logika dla pół-ścian (naprawia odbijanie się od "powietrza")
-            if (tileId == 3) return lx > half; // Ściana Prawa
-            if (tileId == 4) return lx < half; // Ściana Lewa
-            if (tileId == 5) return ly > half; // Ściana Dół
-            if (tileId == 6) return ly < half; // Ściana Góra
+            // --- ŚCIANY PROSTE ---
+            // 4: Ściana LEWA (czyli zajmuje piksele od 0 do lowBorder)
+            if (tileId == 4) return lx < lowBorder;
 
-            return true; // Pełna ściana
+            // 3: Ściana PRAWA (zajmuje piksele od highBorder do 32)
+            if (tileId == 3) return lx > highBorder;
+
+            // 6: Ściana GÓRNA (zajmuje piksele od 0 do lowBorder w osi Y)
+            if (tileId == 6) return ly < lowBorder;
+
+            // 5: Ściana DOLNA (zajmuje piksele od highBorder do 32 w osi Y)
+            if (tileId == 5) return ly > highBorder;
+
+
+            // 7: Narożnik Lewy-Dół (LD) -> x < lowBorder ORAZ y > highBorder
+            if (tileId == 10) return lx < lowBorder && ly > highBorder;
+
+            // 8: Narożnik Prawy-Dół (RD) -> x > highBorder ORAZ y > highBorder
+            if (tileId == 9) return lx > highBorder && ly > highBorder;
+
+            // 9: Narożnik Lewy-Góra (LU) -> x < lowBorder ORAZ y < lowBorder
+            if (tileId == 8) return lx < lowBorder && ly < lowBorder;
+
+            // 10: Narożnik Prawy-Góra (RU) -> x > highBorder ORAZ y < lowBorder
+            if (tileId == 7) return lx > highBorder && ly < lowBorder;
+
+            return true; // Domyślnie pełna ściana
         };
 
-        // Weryfikacja kolizji
+        // --- SPRAWDZANIE KOLIZJI
         bool stdHitTop = isWall(tTop);
-        if (stdHitTop && (tTop >= 3 && tTop <= 6)) stdHitTop = isSolidPart(tTop, pTop);
+        if (stdHitTop && (tTop >= 3 && tTop <= 10)) stdHitTop = isSolidPart(tTop, pTop);
 
         bool stdHitBottom = isWall(tBottom);
-        if (stdHitBottom && (tBottom >= 3 && tBottom <= 6)) stdHitBottom = isSolidPart(tBottom, pBottom);
+        if (stdHitBottom && (tBottom >= 3 && tBottom <= 10)) stdHitBottom = isSolidPart(tBottom, pBottom);
 
         bool stdHitLeft = isWall(tLeft);
-        if (stdHitLeft && (tLeft >= 3 && tLeft <= 6)) stdHitLeft = isSolidPart(tLeft, pLeft);
+        if (stdHitLeft && (tLeft >= 3 && tLeft <= 10)) stdHitLeft = isSolidPart(tLeft, pLeft);
 
         bool stdHitRight = isWall(tRight);
-        if (stdHitRight && (tRight >= 3 && tRight <= 6)) stdHitRight = isSolidPart(tRight, pRight);
+        if (stdHitRight && (tRight >= 3 && tRight <= 10)) stdHitRight = isSolidPart(tRight, pRight);
 
-        // Blokowanie ramp od złej strony (ściany jednokierunkowe)
+        int currentTile = getTileAt(ball.getPosition());
+
         bool rampHitTop = false, rampHitBottom = false, rampHitLeft = false, rampHitRight = false;
-        if (tTop == 14 || tTop == 15 || tTop == 16) rampHitTop = true;
-        if (tBottom == 13 || tBottom == 15 || tBottom == 16) rampHitBottom = true;
-        if (tLeft == 13 || tLeft == 14 || tLeft == 15) rampHitLeft = true;
-        if (tRight == 13 || tRight == 14 || tRight == 16) rampHitRight = true;
+        if ((tTop == 14 || tTop == 15 || tTop == 16) && tTop != currentTile) rampHitTop = true;
+        if ((tBottom == 13 || tBottom == 15 || tBottom == 16) && tBottom != currentTile) rampHitBottom = true;
+        if ((tLeft == 13 || tLeft == 14 || tLeft == 15) && tLeft != currentTile) rampHitLeft = true;
+        if ((tRight == 13 || tRight == 14 || tRight == 16) && tRight != currentTile) rampHitRight = true;
 
         bool hitTop    = stdHitTop || rampHitTop;
         bool hitBottom = stdHitBottom || rampHitBottom;
         bool hitLeft   = stdHitLeft || rampHitLeft;
         bool hitRight  = stdHitRight || rampHitRight;
 
-        // Reakcja na kolizję (Odbicie + Korekta pozycji + Dźwięk)
+        // Reakcja
         if (hitTop || hitBottom) {
             if (speed > 50.f && (stdHitTop || stdHitBottom)) {
                 m_wallHitSound.play();
@@ -444,12 +426,12 @@ void GameState::update(float dt) {
         }
     }
 
-    // Reset skali jeśli jesteśmy na zwykłym terenie
+    // Reset skali
     if (!ballInHole && !isSinking && !isJumping && tileUnderBall != 11 && tileUnderBall != 1 && tileUnderBall != 12) {
         ball.setScale(1.0f);
     }
 
-    // 8. Logika Dołka (Hole)
+    // 8. Dołek
     if (tileUnderBall == 1 && !isJumping) {
         int gridX = static_cast<int>(ball.getPosition().x) / 32;
         int gridY = static_cast<int>(ball.getPosition().y) / 32;
@@ -457,7 +439,6 @@ void GameState::update(float dt) {
         sf::Vector2f toHole = holeCenter - ball.getPosition();
         float distance = std::sqrt(toHole.x * toHole.x + toHole.y * toHole.y);
 
-        // Przyciąganie (magnes) gdy blisko
         if (distance < 20.f) {
             float currentSpeed = std::sqrt(ball.getVelocity().x * ball.getVelocity().x + ball.getVelocity().y * ball.getVelocity().y);
             if (currentSpeed < 250.f) {
@@ -466,11 +447,9 @@ void GameState::update(float dt) {
                  float pullStrength = 1.0f + (20.0f - distance) * 0.15f;
                  ball.applyImpulse(ball.getVelocity() + (direction * pullStrength));
 
-                 // Zmniejszanie piłki
                  float scale = std::max(0.0f, distance / 20.f);
                  ball.setScale(scale);
 
-                // Wpadnięcie
                 if (distance < 5.0f) {
                     if (!ballInHole) {
                         m_winSound.play();
@@ -484,10 +463,10 @@ void GameState::update(float dt) {
         }
     }
 
-    // 9. Przejście do ekranu wygranej (Level Complete)
+    // 9. Level Complete
     if (ballInHole) {
         levelFinishTimer += dt;
-        if (levelFinishTimer > 1.0f) { // Czekamy 1s po wpadnięciu
+        if (levelFinishTimer > 1.0f) {
             auto texture = std::make_shared<sf::Texture>();
             texture->create(m_data->window.getSize().x, m_data->window.getSize().y);
             texture->update(m_data->window);
@@ -497,7 +476,7 @@ void GameState::update(float dt) {
         }
     }
 
-    // 10. Logika Betonu (Losowe odbicia / nierówności)
+    // 10. Beton
     if (tileUnderBall == 12 && !isJumping) {
          currentFriction = 0.99f;
          float speedBeton = std::sqrt(ball.getVelocity().x * ball.getVelocity().x + ball.getVelocity().y * ball.getVelocity().y);
@@ -508,7 +487,6 @@ void GameState::update(float dt) {
              sf::Vector2f jitter(rX * roughness, rY * roughness);
              ball.applyImpulse(ball.getVelocity() + jitter);
 
-             // Efekt wizualny podskakiwania
              float bounceIntensity = (std::abs(rX) + std::abs(rY)) / 2.0f;
              float bounceScale = 1.0f + (bounceIntensity * 0.06f);
              ball.setScale(bounceScale);
@@ -517,18 +495,15 @@ void GameState::update(float dt) {
          }
     }
 
-    // Aktualizacja linii celowania
     updateAimLine();
 }
 
 // =============================================================
-// METODY RYSOWANIA I INITIALIZACJI POMOCNICZEJ
+// DRAW & UTILS
 // =============================================================
 
 void GameState::draw(float dt) {
     m_data->window.clear();
-
-    // Warstwy rysowania
     m_data->window.draw(tileMap);
     m_data->window.draw(m_shadow);
     ball.draw(m_data->window);
@@ -539,14 +514,8 @@ void GameState::draw(float dt) {
         m_data->window.draw(heart);
     }
 
-    if (ballInHole) {
-        m_data->window.draw(winText);
-    }
-
-    // Rysowanie efektu przejścia na wierzchu
-    if (m_alpha > 0.0f) {
-        m_data->window.draw(m_fadeRect);
-    }
+    if (ballInHole) m_data->window.draw(winText);
+    if (m_alpha > 0.0f) m_data->window.draw(m_fadeRect);
     m_data->window.display();
 }
 
@@ -564,8 +533,7 @@ void GameState::initUI() {
     winText.setString("WIN!");
 
     sf::FloatRect textRect = winText.getLocalBounds();
-    winText.setOrigin(textRect.left + textRect.width/2.0f,
-                      textRect.top  + textRect.height/2.0f);
+    winText.setOrigin(textRect.left + textRect.width/2.0f, textRect.top  + textRect.height/2.0f);
     winText.setPosition(SCREEN_WIDTH / 2.0f, SCREEN_HEIGHT / 2.0f);
 }
 
@@ -602,12 +570,13 @@ void GameState::updateAimLine() {
 }
 
 int GameState::getTileAt(sf::Vector2f position) {
-    if (position.x < 0 || position.y < 0 || position.x >= SCREEN_WIDTH || position.y >= SCREEN_HEIGHT) return 3;
+    if (position.x < 0 || position.y < 0 || position.x >= SCREEN_WIDTH || position.y >= SCREEN_HEIGHT) return 0;
+
     int gridX = static_cast<int>(position.x) / 32;
     int gridY = static_cast<int>(position.y) / 32;
-    if (gridX >= LEVEL_WIDTH || gridY >= LEVEL_HEIGHT) return 3;
+    if (gridX >= LEVEL_WIDTH || gridY >= LEVEL_HEIGHT) return 0;
     int index = gridX + gridY * LEVEL_WIDTH;
-    if (index < 0 || index >= levelData.size()) return 3;
+    if (index < 0 || index >= levelData.size()) return 0;
     return levelData[index];
 }
 

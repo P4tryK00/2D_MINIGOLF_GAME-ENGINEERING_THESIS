@@ -58,6 +58,11 @@ int LevelManager::colorToTileID(sf::Color color) {
     if (color == COLOR_RAMP_DOWN)return 14;
     if (color == COLOR_RAMP_R)return 15;
     if (color == COLOR_RAMP_L)return 16;
+    if (color == COLOR_RAMP_TEST)return 17;
+    if (color == COLOR_RAMP_TEST2)return 18;
+    if (color == COLOR_RAMP_UP_TEST1)return 19;
+    if (color == COLOR_RAMP_UP_TEST2)return 20;
+    if (color == COLOR_RAMP_UP_TEST3)return 21;
 
     // Domyślna wartość (trawa) w przypadku nieznanego koloru
     return 0;

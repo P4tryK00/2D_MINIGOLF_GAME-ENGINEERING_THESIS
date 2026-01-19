@@ -72,6 +72,12 @@ const sf::Color COLOR_RAMP_UP(25, 25, 25);    ///< Rampa w górę (ID 13).
 const sf::Color COLOR_RAMP_DOWN( 50, 50, 50); ///< Rampa w dół (ID 14).
 const sf::Color COLOR_RAMP_R( 100, 100, 100); ///< Rampa w prawo (ID 15).
 const sf::Color COLOR_RAMP_L( 150, 150, 150); ///< Rampa w lewo (ID 16).
+const sf::Color COLOR_RAMP_TEST(200, 200, 200);///< Rampa testowa (ID 17).
+const sf::Color COLOR_RAMP_TEST2(220, 220, 220);///< Rampa testowa 2 (ID 18).
+const sf::Color COLOR_RAMP_UP_TEST1(240, 240, 240);///< Rampa w górę testowa (ID 19).
+const sf::Color COLOR_RAMP_UP_TEST2(230, 230, 230);///< Rampa w górę testowa 2 (ID 20).
+const sf::Color COLOR_RAMP_UP_TEST3(210, 210, 210);///< Rampa w górę testowa 3 (ID 21).
+
 ///@}
 
 #endif //MINI_GOLF_DEFINITIONS_H
