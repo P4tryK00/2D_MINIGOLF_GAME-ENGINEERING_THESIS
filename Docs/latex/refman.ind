@@ -1,0 +1,798 @@
+\begin{theindex}
+
+  \item {\texorpdfstring{$\sim$}{\string~}State}
+    \subitem {State}, \hyperpage{103}
+  \item {\texorpdfstring{$\sim$}{\string~}StateManager}
+    \subitem {StateManager}, \hyperpage{106}
+
+  \indexspace
+
+  \item {addState}
+    \subitem {StateManager}, \hyperpage{106}
+  \item {aimLine}
+    \subitem {GameState}, \hyperpage{41}
+  \item {applyImpulse}
+    \subitem {Ball}, \hyperpage{9}
+
+  \indexspace
+
+  \item {Ball}, \hyperpage{7}
+    \subitem {applyImpulse}, \hyperpage{9}
+    \subitem {Ball}, \hyperpage{9}
+    \subitem {bounceX}, \hyperpage{9}
+    \subitem {bounceY}, \hyperpage{10}
+    \subitem {contains}, \hyperpage{10}
+    \subitem {draw}, \hyperpage{11}
+    \subitem {getPosition}, \hyperpage{11}
+    \subitem {getScale}, \hyperpage{12}
+    \subitem {getVelocity}, \hyperpage{12}
+    \subitem {invertVelocity}, \hyperpage{13}
+    \subitem {player}, \hyperpage{15}
+    \subitem {setPosition}, \hyperpage{13}
+    \subitem {setScale}, \hyperpage{13}
+    \subitem {stop}, \hyperpage{14}
+    \subitem {update}, \hyperpage{14}
+    \subitem {velocity}, \hyperpage{15}
+  \item {ball}
+    \subitem {GameState}, \hyperpage{41}
+  \item {Ball.cpp}, \hyperpage{115}
+  \item {Ball.h}, \hyperpage{115}
+  \item {BALL\_TEXTURE\_PATH}
+    \subitem {DEFINITIONS.h}, \hyperpage{119}
+  \item {ballInHole}
+    \subitem {GameState}, \hyperpage{41}
+  \item {ballStartPos}
+    \subitem {InputManager}, \hyperpage{49}
+  \item {bestScores}
+    \subitem {SaveManager}, \hyperpage{98}
+  \item {bounceX}
+    \subitem {Ball}, \hyperpage{9}
+  \item {bounceY}
+    \subitem {Ball}, \hyperpage{10}
+
+  \indexspace
+
+  \item {cleanup}
+    \subitem {FontManager}, \hyperpage{16}
+    \subitem {SoundManager}, \hyperpage{100}
+    \subitem {TextureManager}, \hyperpage{109}
+  \item {cleanUpAllResources}
+    \subitem {ResourceManager}, \hyperpage{91}
+  \item {clock}
+    \subitem {Game}, \hyperpage{20}
+  \item {COLOR\_BALL}
+    \subitem {DEFINITIONS.h}, \hyperpage{121}
+  \item {COLOR\_CONCRETE}
+    \subitem {DEFINITIONS.h}, \hyperpage{121}
+  \item {COLOR\_CORNER\_LD}
+    \subitem {DEFINITIONS.h}, \hyperpage{121}
+  \item {COLOR\_CORNER\_LU}
+    \subitem {DEFINITIONS.h}, \hyperpage{122}
+  \item {COLOR\_CORNER\_RD}
+    \subitem {DEFINITIONS.h}, \hyperpage{122}
+  \item {COLOR\_CORNER\_RU}
+    \subitem {DEFINITIONS.h}, \hyperpage{122}
+  \item {COLOR\_GRASS}
+    \subitem {DEFINITIONS.h}, \hyperpage{123}
+  \item {COLOR\_HOLE}
+    \subitem {DEFINITIONS.h}, \hyperpage{123}
+  \item {COLOR\_RAMP\_DOWN}
+    \subitem {DEFINITIONS.h}, \hyperpage{123}
+  \item {COLOR\_RAMP\_L}
+    \subitem {DEFINITIONS.h}, \hyperpage{124}
+  \item {COLOR\_RAMP\_R}
+    \subitem {DEFINITIONS.h}, \hyperpage{124}
+  \item {COLOR\_RAMP\_UP}
+    \subitem {DEFINITIONS.h}, \hyperpage{124}
+  \item {COLOR\_SAND}
+    \subitem {DEFINITIONS.h}, \hyperpage{125}
+  \item {COLOR\_WALL\_DOWN}
+    \subitem {DEFINITIONS.h}, \hyperpage{125}
+  \item {COLOR\_WALL\_L}
+    \subitem {DEFINITIONS.h}, \hyperpage{125}
+  \item {COLOR\_WALL\_R}
+    \subitem {DEFINITIONS.h}, \hyperpage{126}
+  \item {COLOR\_WALL\_UP}
+    \subitem {DEFINITIONS.h}, \hyperpage{126}
+  \item {COLOR\_WATER}
+    \subitem {DEFINITIONS.h}, \hyperpage{126}
+  \item {colorToTileID}
+    \subitem {LevelManager}, \hyperpage{65}
+  \item {contains}
+    \subitem {Ball}, \hyperpage{10}
+  \item {currentMousePos}
+    \subitem {InputManager}, \hyperpage{49}
+
+  \indexspace
+
+  \item {DEFINITIONS.h}, \hyperpage{117}
+    \subitem {BALL\_TEXTURE\_PATH}, \hyperpage{119}
+    \subitem {COLOR\_BALL}, \hyperpage{121}
+    \subitem {COLOR\_CONCRETE}, \hyperpage{121}
+    \subitem {COLOR\_CORNER\_LD}, \hyperpage{121}
+    \subitem {COLOR\_CORNER\_LU}, \hyperpage{122}
+    \subitem {COLOR\_CORNER\_RD}, \hyperpage{122}
+    \subitem {COLOR\_CORNER\_RU}, \hyperpage{122}
+    \subitem {COLOR\_GRASS}, \hyperpage{123}
+    \subitem {COLOR\_HOLE}, \hyperpage{123}
+    \subitem {COLOR\_RAMP\_DOWN}, \hyperpage{123}
+    \subitem {COLOR\_RAMP\_L}, \hyperpage{124}
+    \subitem {COLOR\_RAMP\_R}, \hyperpage{124}
+    \subitem {COLOR\_RAMP\_UP}, \hyperpage{124}
+    \subitem {COLOR\_SAND}, \hyperpage{125}
+    \subitem {COLOR\_WALL\_DOWN}, \hyperpage{125}
+    \subitem {COLOR\_WALL\_L}, \hyperpage{125}
+    \subitem {COLOR\_WALL\_R}, \hyperpage{126}
+    \subitem {COLOR\_WALL\_UP}, \hyperpage{126}
+    \subitem {COLOR\_WATER}, \hyperpage{126}
+    \subitem {FONT\_PATH}, \hyperpage{119}
+    \subitem {HEART\_PATH}, \hyperpage{119}
+    \subitem {HEART\_WHITE\_PATH}, \hyperpage{119}
+    \subitem {HIT\_PATH}, \hyperpage{119}
+    \subitem {LEVEL\_HEIGHT}, \hyperpage{120}
+    \subitem {LEVEL\_WIDTH}, \hyperpage{120}
+    \subitem {SCREEN\_HEIGHT}, \hyperpage{120}
+    \subitem {SCREEN\_WIDTH}, \hyperpage{120}
+    \subitem {SPLASH\_PATH}, \hyperpage{120}
+    \subitem {TILE\_SIZE}, \hyperpage{120}
+    \subitem {TILESET\_PATH}, \hyperpage{120}
+    \subitem {TITLE}, \hyperpage{120}
+    \subitem {WALL\_HIT\_PATH}, \hyperpage{121}
+    \subitem {WIN\_PATH}, \hyperpage{121}
+  \item {draw}
+    \subitem {Ball}, \hyperpage{11}
+    \subitem {GameOverState}, \hyperpage{26}
+    \subitem {GameState}, \hyperpage{34}
+    \subitem {LeaderboardState}, \hyperpage{54}
+    \subitem {LevelCompleteState}, \hyperpage{60}
+    \subitem {LevelSelectState}, \hyperpage{73}
+    \subitem {MainMenuState}, \hyperpage{79}
+    \subitem {PauseMenuState}, \hyperpage{87}
+    \subitem {State}, \hyperpage{103}
+    \subitem {TileMap}, \hyperpage{113}
+
+  \indexspace
+
+  \item {fileName}
+    \subitem {SaveManager}, \hyperpage{98}
+  \item {FONT\_PATH}
+    \subitem {DEFINITIONS.h}, \hyperpage{119}
+  \item {FontManager}, \hyperpage{15}
+    \subitem {cleanup}, \hyperpage{16}
+    \subitem {FontManager}, \hyperpage{16}
+    \subitem {get}, \hyperpage{16}
+    \subitem {load}, \hyperpage{17}
+    \subitem {m\_Font}, \hyperpage{18}
+  \item {FontManager.cpp}, \hyperpage{128}
+  \item {FontManager.h}, \hyperpage{128}
+  \item {force}
+    \subitem {InputManager}, \hyperpage{49}
+  \item {forceVector}
+    \subitem {GameState}, \hyperpage{41}
+
+  \indexspace
+
+  \item {Game}, \hyperpage{18}
+    \subitem {clock}, \hyperpage{20}
+    \subitem {Game}, \hyperpage{19}
+    \subitem {m\_data}, \hyperpage{20}
+    \subitem {run}, \hyperpage{20}
+    \subitem {timePerFrame}, \hyperpage{20}
+  \item {Game.cpp}, \hyperpage{129}
+  \item {Game.h}, \hyperpage{130}
+    \subitem {GameDataRef}, \hyperpage{131}
+  \item {GameData}, \hyperpage{21}
+    \subitem {machine}, \hyperpage{22}
+    \subitem {window}, \hyperpage{22}
+  \item {GameDataRef}
+    \subitem {Game.h}, \hyperpage{131}
+  \item {GameOverState}, \hyperpage{22}
+    \subitem {draw}, \hyperpage{26}
+    \subitem {GameOverState}, \hyperpage{26}
+    \subitem {handleInput}, \hyperpage{26}
+    \subitem {init}, \hyperpage{27}
+    \subitem {m\_alpha}, \hyperpage{27}
+    \subitem {m\_backgroundSprite}, \hyperpage{27}
+    \subitem {m\_bgTexture}, \hyperpage{27}
+    \subitem {m\_data}, \hyperpage{28}
+    \subitem {m\_dimmer}, \hyperpage{28}
+    \subitem {m\_fadeRect}, \hyperpage{28}
+    \subitem {m\_goToMenu}, \hyperpage{28}
+    \subitem {m\_isTransitioning}, \hyperpage{28}
+    \subitem {m\_level}, \hyperpage{28}
+    \subitem {m\_menuButton}, \hyperpage{28}
+    \subitem {m\_retryButton}, \hyperpage{28}
+    \subitem {m\_retryLevel}, \hyperpage{29}
+    \subitem {m\_title}, \hyperpage{29}
+    \subitem {update}, \hyperpage{27}
+  \item {GameOverState.cpp}, \hyperpage{132}
+  \item {GameOverState.h}, \hyperpage{132}
+  \item {GameState}, \hyperpage{29}
+    \subitem {aimLine}, \hyperpage{41}
+    \subitem {ball}, \hyperpage{41}
+    \subitem {ballInHole}, \hyperpage{41}
+    \subitem {draw}, \hyperpage{34}
+    \subitem {forceVector}, \hyperpage{41}
+    \subitem {GameState}, \hyperpage{34}
+    \subitem {getTileAt}, \hyperpage{34}
+    \subitem {handleInput}, \hyperpage{35}
+    \subitem {heartSprites}, \hyperpage{41}
+    \subitem {init}, \hyperpage{35}
+    \subitem {initSounds}, \hyperpage{36}
+    \subitem {initUI}, \hyperpage{37}
+    \subitem {inputManager}, \hyperpage{41}
+    \subitem {isJumping}, \hyperpage{42}
+    \subitem {isSinking}, \hyperpage{42}
+    \subitem {isWall}, \hyperpage{37}
+    \subitem {jumpTimer}, \hyperpage{42}
+    \subitem {lastSafePos}, \hyperpage{42}
+    \subitem {levelData}, \hyperpage{42}
+    \subitem {levelFinishTimer}, \hyperpage{42}
+    \subitem {lives}, \hyperpage{42}
+    \subitem {m\_alpha}, \hyperpage{42}
+    \subitem {m\_data}, \hyperpage{43}
+    \subitem {m\_fadeRect}, \hyperpage{43}
+    \subitem {m\_hitSound}, \hyperpage{43}
+    \subitem {m\_level}, \hyperpage{43}
+    \subitem {m\_shadow}, \hyperpage{43}
+    \subitem {m\_splashSound}, \hyperpage{43}
+    \subitem {m\_wallHitSound}, \hyperpage{43}
+    \subitem {m\_winSound}, \hyperpage{43}
+    \subitem {maxJumpTime}, \hyperpage{44}
+    \subitem {resetLevel}, \hyperpage{38}
+    \subitem {scoreText}, \hyperpage{44}
+    \subitem {strokes}, \hyperpage{44}
+    \subitem {tileMap}, \hyperpage{44}
+    \subitem {update}, \hyperpage{38}
+    \subitem {updateAimLine}, \hyperpage{39}
+    \subitem {updateHearts}, \hyperpage{40}
+    \subitem {wasInWater}, \hyperpage{44}
+    \subitem {winText}, \hyperpage{44}
+  \item {GameState.cpp}, \hyperpage{134}
+  \item {GameState.h}, \hyperpage{134}
+  \item {get}
+    \subitem {FontManager}, \hyperpage{16}
+    \subitem {SoundManager}, \hyperpage{100}
+    \subitem {TextureManager}, \hyperpage{109}
+  \item {getActiveState}
+    \subitem {StateManager}, \hyperpage{107}
+  \item {getBestScore}
+    \subitem {SaveManager}, \hyperpage{94}
+  \item {getCurrentForce}
+    \subitem {InputManager}, \hyperpage{46}
+  \item {getForceVector}
+    \subitem {InputManager}, \hyperpage{47}
+  \item {getPosition}
+    \subitem {Ball}, \hyperpage{11}
+  \item {getScale}
+    \subitem {Ball}, \hyperpage{12}
+  \item {getTileAt}
+    \subitem {GameState}, \hyperpage{34}
+  \item {getUnlockedLevel}
+    \subitem {SaveManager}, \hyperpage{94}
+  \item {getVelocity}
+    \subitem {Ball}, \hyperpage{12}
+
+  \indexspace
+
+  \item {handleEvent}
+    \subitem {InputManager}, \hyperpage{47}
+  \item {handleInput}
+    \subitem {GameOverState}, \hyperpage{26}
+    \subitem {GameState}, \hyperpage{35}
+    \subitem {LeaderboardState}, \hyperpage{54}
+    \subitem {LevelCompleteState}, \hyperpage{60}
+    \subitem {LevelSelectState}, \hyperpage{73}
+    \subitem {MainMenuState}, \hyperpage{79}
+    \subitem {PauseMenuState}, \hyperpage{87}
+    \subitem {State}, \hyperpage{103}
+  \item {HEART\_PATH}
+    \subitem {DEFINITIONS.h}, \hyperpage{119}
+  \item {HEART\_WHITE\_PATH}
+    \subitem {DEFINITIONS.h}, \hyperpage{119}
+  \item {heartSprites}
+    \subitem {GameState}, \hyperpage{41}
+  \item {HIT\_PATH}
+    \subitem {DEFINITIONS.h}, \hyperpage{119}
+
+  \indexspace
+
+  \item {init}
+    \subitem {GameOverState}, \hyperpage{27}
+    \subitem {GameState}, \hyperpage{35}
+    \subitem {LeaderboardState}, \hyperpage{54}
+    \subitem {LevelCompleteState}, \hyperpage{61}
+    \subitem {LevelSelectState}, \hyperpage{73}
+    \subitem {MainMenuState}, \hyperpage{79}
+    \subitem {PauseMenuState}, \hyperpage{87}
+    \subitem {SaveManager}, \hyperpage{95}
+    \subitem {State}, \hyperpage{104}
+  \item {initSounds}
+    \subitem {GameState}, \hyperpage{36}
+  \item {initUI}
+    \subitem {GameState}, \hyperpage{37}
+  \item {InputManager}, \hyperpage{45}
+    \subitem {ballStartPos}, \hyperpage{49}
+    \subitem {currentMousePos}, \hyperpage{49}
+    \subitem {force}, \hyperpage{49}
+    \subitem {getCurrentForce}, \hyperpage{46}
+    \subitem {getForceVector}, \hyperpage{47}
+    \subitem {handleEvent}, \hyperpage{47}
+    \subitem {InputManager}, \hyperpage{46}
+    \subitem {isDragging}, \hyperpage{48}
+    \subitem {isGrabbed}, \hyperpage{49}
+    \subitem {isReady}, \hyperpage{48}
+    \subitem {ready}, \hyperpage{49}
+  \item {inputManager}
+    \subitem {GameState}, \hyperpage{41}
+  \item {InputManager.cpp}, \hyperpage{136}
+  \item {InputManager.h}, \hyperpage{137}
+  \item {invertVelocity}
+    \subitem {Ball}, \hyperpage{13}
+  \item {isDragging}
+    \subitem {InputManager}, \hyperpage{48}
+  \item {isGrabbed}
+    \subitem {InputManager}, \hyperpage{49}
+  \item {isJumping}
+    \subitem {GameState}, \hyperpage{42}
+  \item {isReady}
+    \subitem {InputManager}, \hyperpage{48}
+  \item {isSinking}
+    \subitem {GameState}, \hyperpage{42}
+  \item {isWall}
+    \subitem {GameState}, \hyperpage{37}
+
+  \indexspace
+
+  \item {jumpTimer}
+    \subitem {GameState}, \hyperpage{42}
+
+  \indexspace
+
+  \item {lastSafePos}
+    \subitem {GameState}, \hyperpage{42}
+  \item {LeaderboardState}, \hyperpage{50}
+    \subitem {draw}, \hyperpage{54}
+    \subitem {handleInput}, \hyperpage{54}
+    \subitem {init}, \hyperpage{54}
+    \subitem {LeaderboardState}, \hyperpage{53}
+    \subitem {m\_alpha}, \hyperpage{55}
+    \subitem {m\_backButton}, \hyperpage{55}
+    \subitem {m\_data}, \hyperpage{55}
+    \subitem {m\_fadeRect}, \hyperpage{55}
+    \subitem {m\_isFadingIn}, \hyperpage{55}
+    \subitem {m\_isGoingBack}, \hyperpage{55}
+    \subitem {m\_scoreTexts}, \hyperpage{55}
+    \subitem {m\_title}, \hyperpage{55}
+    \subitem {update}, \hyperpage{54}
+  \item {LeaderBoardState.cpp}, \hyperpage{138}
+  \item {LeaderBoardState.h}, \hyperpage{139}
+  \item {LEVEL\_HEIGHT}
+    \subitem {DEFINITIONS.h}, \hyperpage{120}
+  \item {LEVEL\_WIDTH}
+    \subitem {DEFINITIONS.h}, \hyperpage{120}
+  \item {LevelCompleteState}, \hyperpage{56}
+    \subitem {draw}, \hyperpage{60}
+    \subitem {handleInput}, \hyperpage{60}
+    \subitem {init}, \hyperpage{61}
+    \subitem {LevelCompleteState}, \hyperpage{60}
+    \subitem {m\_alpha}, \hyperpage{62}
+    \subitem {m\_backgroundSprite}, \hyperpage{62}
+    \subitem {m\_bgTexture}, \hyperpage{62}
+    \subitem {m\_currentLevel}, \hyperpage{62}
+    \subitem {m\_data}, \hyperpage{62}
+    \subitem {m\_dimmer}, \hyperpage{62}
+    \subitem {m\_fadeRect}, \hyperpage{62}
+    \subitem {m\_goToMenu}, \hyperpage{62}
+    \subitem {m\_isTransitioning}, \hyperpage{63}
+    \subitem {m\_menuButton}, \hyperpage{63}
+    \subitem {m\_nextLevelButton}, \hyperpage{63}
+    \subitem {m\_retryButton}, \hyperpage{63}
+    \subitem {m\_retryLevel}, \hyperpage{63}
+    \subitem {m\_scoreText}, \hyperpage{63}
+    \subitem {m\_strokes}, \hyperpage{63}
+    \subitem {m\_title}, \hyperpage{63}
+    \subitem {update}, \hyperpage{61}
+  \item {LevelCompleteState.cpp}, \hyperpage{140}
+  \item {LevelCompleteState.h}, \hyperpage{140}
+  \item {levelData}
+    \subitem {GameState}, \hyperpage{42}
+  \item {levelFinishTimer}
+    \subitem {GameState}, \hyperpage{42}
+  \item {LevelManager}, \hyperpage{64}
+    \subitem {colorToTileID}, \hyperpage{65}
+    \subitem {loadLevelFromImage}, \hyperpage{67}
+    \subitem {startPosition}, \hyperpage{69}
+  \item {LevelManager.cpp}, \hyperpage{142}
+  \item {LevelManager.h}, \hyperpage{143}
+  \item {LevelSelectState}, \hyperpage{69}
+    \subitem {draw}, \hyperpage{73}
+    \subitem {handleInput}, \hyperpage{73}
+    \subitem {init}, \hyperpage{73}
+    \subitem {LevelSelectState}, \hyperpage{72}
+    \subitem {m\_alpha}, \hyperpage{74}
+    \subitem {m\_backButton}, \hyperpage{74}
+    \subitem {m\_data}, \hyperpage{74}
+    \subitem {m\_fadeRect}, \hyperpage{75}
+    \subitem {m\_isFadingIn}, \hyperpage{75}
+    \subitem {m\_isTransitioning}, \hyperpage{75}
+    \subitem {m\_levelButtons}, \hyperpage{75}
+    \subitem {m\_nextLevelToLoad}, \hyperpage{75}
+    \subitem {m\_title}, \hyperpage{75}
+    \subitem {update}, \hyperpage{74}
+  \item {LevelSelectState.cpp}, \hyperpage{144}
+  \item {LevelSelectState.h}, \hyperpage{144}
+  \item {lives}
+    \subitem {GameState}, \hyperpage{42}
+  \item {load}
+    \subitem {FontManager}, \hyperpage{17}
+    \subitem {SaveManager}, \hyperpage{96}
+    \subitem {SoundManager}, \hyperpage{100}
+    \subitem {TextureManager}, \hyperpage{110}
+    \subitem {TileMap}, \hyperpage{113}
+  \item {loadAllResources}
+    \subitem {ResourceManager}, \hyperpage{91}
+  \item {loadLevelFromImage}
+    \subitem {LevelManager}, \hyperpage{67}
+
+  \indexspace
+
+  \item {m\_alpha}
+    \subitem {GameOverState}, \hyperpage{27}
+    \subitem {GameState}, \hyperpage{42}
+    \subitem {LeaderboardState}, \hyperpage{55}
+    \subitem {LevelCompleteState}, \hyperpage{62}
+    \subitem {LevelSelectState}, \hyperpage{74}
+    \subitem {MainMenuState}, \hyperpage{80}
+    \subitem {PauseMenuState}, \hyperpage{88}
+  \item {m\_backButton}
+    \subitem {LeaderboardState}, \hyperpage{55}
+    \subitem {LevelSelectState}, \hyperpage{74}
+  \item {m\_background}
+    \subitem {MainMenuState}, \hyperpage{80}
+  \item {m\_backgroundSprite}
+    \subitem {GameOverState}, \hyperpage{27}
+    \subitem {LevelCompleteState}, \hyperpage{62}
+    \subitem {PauseMenuState}, \hyperpage{88}
+  \item {m\_bgTexture}
+    \subitem {GameOverState}, \hyperpage{27}
+    \subitem {LevelCompleteState}, \hyperpage{62}
+    \subitem {PauseMenuState}, \hyperpage{88}
+  \item {m\_currentLevel}
+    \subitem {LevelCompleteState}, \hyperpage{62}
+    \subitem {PauseMenuState}, \hyperpage{88}
+  \item {m\_data}
+    \subitem {Game}, \hyperpage{20}
+    \subitem {GameOverState}, \hyperpage{28}
+    \subitem {GameState}, \hyperpage{43}
+    \subitem {LeaderboardState}, \hyperpage{55}
+    \subitem {LevelCompleteState}, \hyperpage{62}
+    \subitem {LevelSelectState}, \hyperpage{74}
+    \subitem {MainMenuState}, \hyperpage{80}
+    \subitem {PauseMenuState}, \hyperpage{88}
+  \item {m\_dimmer}
+    \subitem {GameOverState}, \hyperpage{28}
+    \subitem {LevelCompleteState}, \hyperpage{62}
+    \subitem {PauseMenuState}, \hyperpage{89}
+  \item {m\_exitButton}
+    \subitem {MainMenuState}, \hyperpage{80}
+  \item {m\_fadeRect}
+    \subitem {GameOverState}, \hyperpage{28}
+    \subitem {GameState}, \hyperpage{43}
+    \subitem {LeaderboardState}, \hyperpage{55}
+    \subitem {LevelCompleteState}, \hyperpage{62}
+    \subitem {LevelSelectState}, \hyperpage{75}
+    \subitem {MainMenuState}, \hyperpage{81}
+    \subitem {PauseMenuState}, \hyperpage{89}
+  \item {m\_Font}
+    \subitem {FontManager}, \hyperpage{18}
+  \item {m\_goToLeaderboard}
+    \subitem {MainMenuState}, \hyperpage{81}
+  \item {m\_goToMenu}
+    \subitem {GameOverState}, \hyperpage{28}
+    \subitem {LevelCompleteState}, \hyperpage{62}
+  \item {m\_hitSound}
+    \subitem {GameState}, \hyperpage{43}
+  \item {m\_isAdding}
+    \subitem {StateManager}, \hyperpage{107}
+  \item {m\_isClearing}
+    \subitem {StateManager}, \hyperpage{107}
+  \item {m\_isFadingIn}
+    \subitem {LeaderboardState}, \hyperpage{55}
+    \subitem {LevelSelectState}, \hyperpage{75}
+    \subitem {MainMenuState}, \hyperpage{81}
+  \item {m\_isGoingBack}
+    \subitem {LeaderboardState}, \hyperpage{55}
+  \item {m\_isGoingToMenu}
+    \subitem {PauseMenuState}, \hyperpage{89}
+  \item {m\_isRemoving}
+    \subitem {StateManager}, \hyperpage{107}
+  \item {m\_isReplacing}
+    \subitem {StateManager}, \hyperpage{108}
+  \item {m\_isReseting}
+    \subitem {PauseMenuState}, \hyperpage{89}
+  \item {m\_isTransitioning}
+    \subitem {GameOverState}, \hyperpage{28}
+    \subitem {LevelCompleteState}, \hyperpage{63}
+    \subitem {LevelSelectState}, \hyperpage{75}
+    \subitem {MainMenuState}, \hyperpage{81}
+  \item {m\_leaderboardButton}
+    \subitem {MainMenuState}, \hyperpage{81}
+  \item {m\_level}
+    \subitem {GameOverState}, \hyperpage{28}
+    \subitem {GameState}, \hyperpage{43}
+  \item {m\_levelButtons}
+    \subitem {LevelSelectState}, \hyperpage{75}
+  \item {m\_menuButton}
+    \subitem {GameOverState}, \hyperpage{28}
+    \subitem {LevelCompleteState}, \hyperpage{63}
+    \subitem {PauseMenuState}, \hyperpage{89}
+  \item {m\_newState}
+    \subitem {StateManager}, \hyperpage{108}
+  \item {m\_nextLevelButton}
+    \subitem {LevelCompleteState}, \hyperpage{63}
+  \item {m\_nextLevelToLoad}
+    \subitem {LevelSelectState}, \hyperpage{75}
+  \item {m\_pauseTitle}
+    \subitem {PauseMenuState}, \hyperpage{89}
+  \item {m\_playButton}
+    \subitem {MainMenuState}, \hyperpage{81}
+  \item {m\_resetButton}
+    \subitem {PauseMenuState}, \hyperpage{89}
+  \item {m\_resumeButton}
+    \subitem {PauseMenuState}, \hyperpage{89}
+  \item {m\_retryButton}
+    \subitem {GameOverState}, \hyperpage{28}
+    \subitem {LevelCompleteState}, \hyperpage{63}
+  \item {m\_retryLevel}
+    \subitem {GameOverState}, \hyperpage{29}
+    \subitem {LevelCompleteState}, \hyperpage{63}
+  \item {m\_scoreText}
+    \subitem {LevelCompleteState}, \hyperpage{63}
+  \item {m\_scoreTexts}
+    \subitem {LeaderboardState}, \hyperpage{55}
+  \item {m\_shadow}
+    \subitem {GameState}, \hyperpage{43}
+  \item {m\_Sounds}
+    \subitem {SoundManager}, \hyperpage{101}
+  \item {m\_splashSound}
+    \subitem {GameState}, \hyperpage{43}
+  \item {m\_states}
+    \subitem {StateManager}, \hyperpage{108}
+  \item {m\_strokes}
+    \subitem {LevelCompleteState}, \hyperpage{63}
+  \item {m\_Textures}
+    \subitem {TextureManager}, \hyperpage{111}
+  \item {m\_tileset}
+    \subitem {TileMap}, \hyperpage{114}
+  \item {m\_title}
+    \subitem {GameOverState}, \hyperpage{29}
+    \subitem {LeaderboardState}, \hyperpage{55}
+    \subitem {LevelCompleteState}, \hyperpage{63}
+    \subitem {LevelSelectState}, \hyperpage{75}
+    \subitem {MainMenuState}, \hyperpage{81}
+  \item {m\_vertices}
+    \subitem {TileMap}, \hyperpage{114}
+  \item {m\_wallHitSound}
+    \subitem {GameState}, \hyperpage{43}
+  \item {m\_winSound}
+    \subitem {GameState}, \hyperpage{43}
+  \item {machine}
+    \subitem {GameData}, \hyperpage{22}
+  \item {main}
+    \subitem {main.cpp}, \hyperpage{146}
+  \item {main.cpp}, \hyperpage{146}
+    \subitem {main}, \hyperpage{146}
+  \item {MainMenuState}, \hyperpage{76}
+    \subitem {draw}, \hyperpage{79}
+    \subitem {handleInput}, \hyperpage{79}
+    \subitem {init}, \hyperpage{79}
+    \subitem {m\_alpha}, \hyperpage{80}
+    \subitem {m\_background}, \hyperpage{80}
+    \subitem {m\_data}, \hyperpage{80}
+    \subitem {m\_exitButton}, \hyperpage{80}
+    \subitem {m\_fadeRect}, \hyperpage{81}
+    \subitem {m\_goToLeaderboard}, \hyperpage{81}
+    \subitem {m\_isFadingIn}, \hyperpage{81}
+    \subitem {m\_isTransitioning}, \hyperpage{81}
+    \subitem {m\_leaderboardButton}, \hyperpage{81}
+    \subitem {m\_playButton}, \hyperpage{81}
+    \subitem {m\_title}, \hyperpage{81}
+    \subitem {MainMenuState}, \hyperpage{79}
+    \subitem {update}, \hyperpage{80}
+  \item {MainMenuState.cpp}, \hyperpage{147}
+  \item {MainMenuState.h}, \hyperpage{147}
+  \item {maxJumpTime}
+    \subitem {GameState}, \hyperpage{44}
+
+  \indexspace
+
+  \item {pause}
+    \subitem {State}, \hyperpage{104}
+  \item {PauseMenuState}, \hyperpage{82}
+    \subitem {draw}, \hyperpage{87}
+    \subitem {handleInput}, \hyperpage{87}
+    \subitem {init}, \hyperpage{87}
+    \subitem {m\_alpha}, \hyperpage{88}
+    \subitem {m\_backgroundSprite}, \hyperpage{88}
+    \subitem {m\_bgTexture}, \hyperpage{88}
+    \subitem {m\_currentLevel}, \hyperpage{88}
+    \subitem {m\_data}, \hyperpage{88}
+    \subitem {m\_dimmer}, \hyperpage{89}
+    \subitem {m\_fadeRect}, \hyperpage{89}
+    \subitem {m\_isGoingToMenu}, \hyperpage{89}
+    \subitem {m\_isReseting}, \hyperpage{89}
+    \subitem {m\_menuButton}, \hyperpage{89}
+    \subitem {m\_pauseTitle}, \hyperpage{89}
+    \subitem {m\_resetButton}, \hyperpage{89}
+    \subitem {m\_resumeButton}, \hyperpage{89}
+    \subitem {PauseMenuState}, \hyperpage{86}
+    \subitem {update}, \hyperpage{88}
+  \item {PauseMenuState.cpp}, \hyperpage{148}
+  \item {PauseMenuState.h}, \hyperpage{149}
+  \item {player}
+    \subitem {Ball}, \hyperpage{15}
+  \item {processStateChanges}
+    \subitem {StateManager}, \hyperpage{107}
+
+  \indexspace
+
+  \item {ready}
+    \subitem {InputManager}, \hyperpage{49}
+  \item {removeState}
+    \subitem {StateManager}, \hyperpage{107}
+  \item {resetLevel}
+    \subitem {GameState}, \hyperpage{38}
+  \item {ResourceManager}, \hyperpage{90}
+    \subitem {cleanUpAllResources}, \hyperpage{91}
+    \subitem {loadAllResources}, \hyperpage{91}
+    \subitem {ResourceManager}, \hyperpage{90}
+  \item {ResourceManager.cpp}, \hyperpage{150}
+  \item {ResourceManager.h}, \hyperpage{150}
+  \item {resume}
+    \subitem {State}, \hyperpage{104}
+  \item {run}
+    \subitem {Game}, \hyperpage{20}
+
+  \indexspace
+
+  \item {save}
+    \subitem {SaveManager}, \hyperpage{96}
+  \item {SaveManager}, \hyperpage{92}
+    \subitem {bestScores}, \hyperpage{98}
+    \subitem {fileName}, \hyperpage{98}
+    \subitem {getBestScore}, \hyperpage{94}
+    \subitem {getUnlockedLevel}, \hyperpage{94}
+    \subitem {init}, \hyperpage{95}
+    \subitem {load}, \hyperpage{96}
+    \subitem {save}, \hyperpage{96}
+    \subitem {submitScore}, \hyperpage{97}
+    \subitem {unlockedLevel}, \hyperpage{98}
+  \item {SaveManager.cpp}, \hyperpage{152}
+  \item {SaveManager.h}, \hyperpage{152}
+  \item {scoreText}
+    \subitem {GameState}, \hyperpage{44}
+  \item {SCREEN\_HEIGHT}
+    \subitem {DEFINITIONS.h}, \hyperpage{120}
+  \item {SCREEN\_WIDTH}
+    \subitem {DEFINITIONS.h}, \hyperpage{120}
+  \item {setPosition}
+    \subitem {Ball}, \hyperpage{13}
+  \item {setScale}
+    \subitem {Ball}, \hyperpage{13}
+  \item {SoundManager}, \hyperpage{99}
+    \subitem {cleanup}, \hyperpage{100}
+    \subitem {get}, \hyperpage{100}
+    \subitem {load}, \hyperpage{100}
+    \subitem {m\_Sounds}, \hyperpage{101}
+    \subitem {SoundManager}, \hyperpage{100}
+  \item {SoundManager.cpp}, \hyperpage{154}
+  \item {SoundManager.h}, \hyperpage{154}
+  \item {SPLASH\_PATH}
+    \subitem {DEFINITIONS.h}, \hyperpage{120}
+  \item {startPosition}
+    \subitem {LevelManager}, \hyperpage{69}
+  \item {State}, \hyperpage{101}
+    \subitem {\texorpdfstring{$\sim$}{\string~}State}, \hyperpage{103}
+    \subitem {draw}, \hyperpage{103}
+    \subitem {handleInput}, \hyperpage{103}
+    \subitem {init}, \hyperpage{104}
+    \subitem {pause}, \hyperpage{104}
+    \subitem {resume}, \hyperpage{104}
+    \subitem {update}, \hyperpage{104}
+  \item {State.h}, \hyperpage{156}
+  \item {StateManager}, \hyperpage{105}
+    \subitem {\texorpdfstring{$\sim$}{\string~}StateManager}, 
+		\hyperpage{106}
+    \subitem {addState}, \hyperpage{106}
+    \subitem {getActiveState}, \hyperpage{107}
+    \subitem {m\_isAdding}, \hyperpage{107}
+    \subitem {m\_isClearing}, \hyperpage{107}
+    \subitem {m\_isRemoving}, \hyperpage{107}
+    \subitem {m\_isReplacing}, \hyperpage{108}
+    \subitem {m\_newState}, \hyperpage{108}
+    \subitem {m\_states}, \hyperpage{108}
+    \subitem {processStateChanges}, \hyperpage{107}
+    \subitem {removeState}, \hyperpage{107}
+    \subitem {StateManager}, \hyperpage{106}
+    \subitem {switchState}, \hyperpage{107}
+  \item {StateManager.cpp}, \hyperpage{157}
+  \item {StateManager.h}, \hyperpage{157}
+    \subitem {StateRef}, \hyperpage{159}
+  \item {StateRef}
+    \subitem {StateManager.h}, \hyperpage{159}
+  \item {stop}
+    \subitem {Ball}, \hyperpage{14}
+  \item {strokes}
+    \subitem {GameState}, \hyperpage{44}
+  \item {submitScore}
+    \subitem {SaveManager}, \hyperpage{97}
+  \item {switchState}
+    \subitem {StateManager}, \hyperpage{107}
+
+  \indexspace
+
+  \item {TextureManager}, \hyperpage{108}
+    \subitem {cleanup}, \hyperpage{109}
+    \subitem {get}, \hyperpage{109}
+    \subitem {load}, \hyperpage{110}
+    \subitem {m\_Textures}, \hyperpage{111}
+    \subitem {TextureManager}, \hyperpage{109}
+  \item {TextureManager.cpp}, \hyperpage{160}
+  \item {TextureManager.h}, \hyperpage{160}
+  \item {TILE\_SIZE}
+    \subitem {DEFINITIONS.h}, \hyperpage{120}
+  \item {TileMap}, \hyperpage{111}
+    \subitem {draw}, \hyperpage{113}
+    \subitem {load}, \hyperpage{113}
+    \subitem {m\_tileset}, \hyperpage{114}
+    \subitem {m\_vertices}, \hyperpage{114}
+  \item {tileMap}
+    \subitem {GameState}, \hyperpage{44}
+  \item {TileMap.cpp}, \hyperpage{161}
+  \item {TileMap.h}, \hyperpage{162}
+  \item {TILESET\_PATH}
+    \subitem {DEFINITIONS.h}, \hyperpage{120}
+  \item {timePerFrame}
+    \subitem {Game}, \hyperpage{20}
+  \item {TITLE}
+    \subitem {DEFINITIONS.h}, \hyperpage{120}
+
+  \indexspace
+
+  \item {unlockedLevel}
+    \subitem {SaveManager}, \hyperpage{98}
+  \item {update}
+    \subitem {Ball}, \hyperpage{14}
+    \subitem {GameOverState}, \hyperpage{27}
+    \subitem {GameState}, \hyperpage{38}
+    \subitem {LeaderboardState}, \hyperpage{54}
+    \subitem {LevelCompleteState}, \hyperpage{61}
+    \subitem {LevelSelectState}, \hyperpage{74}
+    \subitem {MainMenuState}, \hyperpage{80}
+    \subitem {PauseMenuState}, \hyperpage{88}
+    \subitem {State}, \hyperpage{104}
+  \item {updateAimLine}
+    \subitem {GameState}, \hyperpage{39}
+  \item {updateHearts}
+    \subitem {GameState}, \hyperpage{40}
+
+  \indexspace
+
+  \item {velocity}
+    \subitem {Ball}, \hyperpage{15}
+
+  \indexspace
+
+  \item {WALL\_HIT\_PATH}
+    \subitem {DEFINITIONS.h}, \hyperpage{121}
+  \item {wasInWater}
+    \subitem {GameState}, \hyperpage{44}
+  \item {WIN\_PATH}
+    \subitem {DEFINITIONS.h}, \hyperpage{121}
+  \item {window}
+    \subitem {GameData}, \hyperpage{22}
+  \item {winText}
+    \subitem {GameState}, \hyperpage{44}
+
+\end{theindex}

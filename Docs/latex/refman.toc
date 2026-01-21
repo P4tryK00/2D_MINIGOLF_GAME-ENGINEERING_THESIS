@@ -1,0 +1,433 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\babel@toc {polish}{}\relax 
+\contentsline {chapter}{\numberline {1}Indeks hierarchiczny}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Hierarchia klas}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Indeks klas}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Lista klas}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Indeks plików}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Lista plików}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Dokumentacja klas}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Dokumentacja klasy Ball}{7}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Opis szczegółowy}{8}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Dokumentacja konstruktora i destruktora}{9}{subsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.2.1}Ball()}{9}{subsubsection.4.1.2.1}%
+\contentsline {subsection}{\numberline {4.1.3}Dokumentacja funkcji składowych}{9}{subsection.4.1.3}%
+\contentsline {subsubsection}{\numberline {4.1.3.1}applyImpulse()}{9}{subsubsection.4.1.3.1}%
+\contentsline {subsubsection}{\numberline {4.1.3.2}bounceX()}{9}{subsubsection.4.1.3.2}%
+\contentsline {subsubsection}{\numberline {4.1.3.3}bounceY()}{10}{subsubsection.4.1.3.3}%
+\contentsline {subsubsection}{\numberline {4.1.3.4}contains()}{10}{subsubsection.4.1.3.4}%
+\contentsline {subsubsection}{\numberline {4.1.3.5}draw()}{11}{subsubsection.4.1.3.5}%
+\contentsline {subsubsection}{\numberline {4.1.3.6}getPosition()}{11}{subsubsection.4.1.3.6}%
+\contentsline {subsubsection}{\numberline {4.1.3.7}getScale()}{12}{subsubsection.4.1.3.7}%
+\contentsline {subsubsection}{\numberline {4.1.3.8}getVelocity()}{12}{subsubsection.4.1.3.8}%
+\contentsline {subsubsection}{\numberline {4.1.3.9}invertVelocity()}{13}{subsubsection.4.1.3.9}%
+\contentsline {subsubsection}{\numberline {4.1.3.10}setPosition()}{13}{subsubsection.4.1.3.10}%
+\contentsline {subsubsection}{\numberline {4.1.3.11}setScale()}{13}{subsubsection.4.1.3.11}%
+\contentsline {subsubsection}{\numberline {4.1.3.12}stop()}{14}{subsubsection.4.1.3.12}%
+\contentsline {subsubsection}{\numberline {4.1.3.13}update()}{14}{subsubsection.4.1.3.13}%
+\contentsline {subsection}{\numberline {4.1.4}Dokumentacja atrybutów składowych}{15}{subsection.4.1.4}%
+\contentsline {subsubsection}{\numberline {4.1.4.1}player}{15}{subsubsection.4.1.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.4.2}velocity}{15}{subsubsection.4.1.4.2}%
+\contentsline {section}{\numberline {4.2}Dokumentacja klasy Font\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager}{15}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Opis szczegółowy}{16}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Dokumentacja konstruktora i destruktora}{16}{subsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.1}FontManager()}{16}{subsubsection.4.2.2.1}%
+\contentsline {subsection}{\numberline {4.2.3}Dokumentacja funkcji składowych}{16}{subsection.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.3.1}cleanup()}{16}{subsubsection.4.2.3.1}%
+\contentsline {subsubsection}{\numberline {4.2.3.2}get()}{17}{subsubsection.4.2.3.2}%
+\contentsline {subsubsection}{\numberline {4.2.3.3}load()}{17}{subsubsection.4.2.3.3}%
+\contentsline {subsection}{\numberline {4.2.4}Dokumentacja atrybutów składowych}{18}{subsection.4.2.4}%
+\contentsline {subsubsection}{\numberline {4.2.4.1}m\_Font}{18}{subsubsection.4.2.4.1}%
+\contentsline {section}{\numberline {4.3}Dokumentacja klasy Game}{18}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Opis szczegółowy}{19}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Dokumentacja konstruktora i destruktora}{19}{subsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.1}Game()}{19}{subsubsection.4.3.2.1}%
+\contentsline {subsection}{\numberline {4.3.3}Dokumentacja funkcji składowych}{20}{subsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.3.1}run()}{20}{subsubsection.4.3.3.1}%
+\contentsline {subsection}{\numberline {4.3.4}Dokumentacja atrybutów składowych}{20}{subsection.4.3.4}%
+\contentsline {subsubsection}{\numberline {4.3.4.1}clock}{20}{subsubsection.4.3.4.1}%
+\contentsline {subsubsection}{\numberline {4.3.4.2}m\_data}{20}{subsubsection.4.3.4.2}%
+\contentsline {subsubsection}{\numberline {4.3.4.3}timePerFrame}{20}{subsubsection.4.3.4.3}%
+\contentsline {section}{\numberline {4.4}Dokumentacja struktury Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data}{21}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Opis szczegółowy}{21}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Dokumentacja atrybutów składowych}{22}{subsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {4.4.2.1}machine}{22}{subsubsection.4.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.4.2.2}window}{22}{subsubsection.4.4.2.2}%
+\contentsline {section}{\numberline {4.5}Dokumentacja klasy Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Over\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State}{22}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Opis szczegółowy}{25}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Dokumentacja konstruktora i destruktora}{26}{subsection.4.5.2}%
+\contentsline {subsubsection}{\numberline {4.5.2.1}GameOverState()}{26}{subsubsection.4.5.2.1}%
+\contentsline {subsection}{\numberline {4.5.3}Dokumentacja funkcji składowych}{26}{subsection.4.5.3}%
+\contentsline {subsubsection}{\numberline {4.5.3.1}draw()}{26}{subsubsection.4.5.3.1}%
+\contentsline {subsubsection}{\numberline {4.5.3.2}handleInput()}{26}{subsubsection.4.5.3.2}%
+\contentsline {subsubsection}{\numberline {4.5.3.3}init()}{27}{subsubsection.4.5.3.3}%
+\contentsline {subsubsection}{\numberline {4.5.3.4}update()}{27}{subsubsection.4.5.3.4}%
+\contentsline {subsection}{\numberline {4.5.4}Dokumentacja atrybutów składowych}{27}{subsection.4.5.4}%
+\contentsline {subsubsection}{\numberline {4.5.4.1}m\_alpha}{27}{subsubsection.4.5.4.1}%
+\contentsline {subsubsection}{\numberline {4.5.4.2}m\_backgroundSprite}{27}{subsubsection.4.5.4.2}%
+\contentsline {subsubsection}{\numberline {4.5.4.3}m\_bgTexture}{28}{subsubsection.4.5.4.3}%
+\contentsline {subsubsection}{\numberline {4.5.4.4}m\_data}{28}{subsubsection.4.5.4.4}%
+\contentsline {subsubsection}{\numberline {4.5.4.5}m\_dimmer}{28}{subsubsection.4.5.4.5}%
+\contentsline {subsubsection}{\numberline {4.5.4.6}m\_fadeRect}{28}{subsubsection.4.5.4.6}%
+\contentsline {subsubsection}{\numberline {4.5.4.7}m\_goToMenu}{28}{subsubsection.4.5.4.7}%
+\contentsline {subsubsection}{\numberline {4.5.4.8}m\_isTransitioning}{28}{subsubsection.4.5.4.8}%
+\contentsline {subsubsection}{\numberline {4.5.4.9}m\_level}{28}{subsubsection.4.5.4.9}%
+\contentsline {subsubsection}{\numberline {4.5.4.10}m\_menuButton}{28}{subsubsection.4.5.4.10}%
+\contentsline {subsubsection}{\numberline {4.5.4.11}m\_retryButton}{29}{subsubsection.4.5.4.11}%
+\contentsline {subsubsection}{\numberline {4.5.4.12}m\_retryLevel}{29}{subsubsection.4.5.4.12}%
+\contentsline {subsubsection}{\numberline {4.5.4.13}m\_title}{29}{subsubsection.4.5.4.13}%
+\contentsline {section}{\numberline {4.6}Dokumentacja klasy Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State}{29}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Opis szczegółowy}{33}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Dokumentacja konstruktora i destruktora}{34}{subsection.4.6.2}%
+\contentsline {subsubsection}{\numberline {4.6.2.1}GameState()}{34}{subsubsection.4.6.2.1}%
+\contentsline {subsection}{\numberline {4.6.3}Dokumentacja funkcji składowych}{34}{subsection.4.6.3}%
+\contentsline {subsubsection}{\numberline {4.6.3.1}draw()}{34}{subsubsection.4.6.3.1}%
+\contentsline {subsubsection}{\numberline {4.6.3.2}getTileAt()}{34}{subsubsection.4.6.3.2}%
+\contentsline {subsubsection}{\numberline {4.6.3.3}handleInput()}{35}{subsubsection.4.6.3.3}%
+\contentsline {subsubsection}{\numberline {4.6.3.4}init()}{36}{subsubsection.4.6.3.4}%
+\contentsline {subsubsection}{\numberline {4.6.3.5}initSounds()}{36}{subsubsection.4.6.3.5}%
+\contentsline {subsubsection}{\numberline {4.6.3.6}initUI()}{37}{subsubsection.4.6.3.6}%
+\contentsline {subsubsection}{\numberline {4.6.3.7}isWall()}{37}{subsubsection.4.6.3.7}%
+\contentsline {subsubsection}{\numberline {4.6.3.8}resetLevel()}{38}{subsubsection.4.6.3.8}%
+\contentsline {subsubsection}{\numberline {4.6.3.9}update()}{39}{subsubsection.4.6.3.9}%
+\contentsline {subsubsection}{\numberline {4.6.3.10}updateAimLine()}{40}{subsubsection.4.6.3.10}%
+\contentsline {subsubsection}{\numberline {4.6.3.11}updateHearts()}{40}{subsubsection.4.6.3.11}%
+\contentsline {subsection}{\numberline {4.6.4}Dokumentacja atrybutów składowych}{41}{subsection.4.6.4}%
+\contentsline {subsubsection}{\numberline {4.6.4.1}aimLine}{41}{subsubsection.4.6.4.1}%
+\contentsline {subsubsection}{\numberline {4.6.4.2}ball}{41}{subsubsection.4.6.4.2}%
+\contentsline {subsubsection}{\numberline {4.6.4.3}ballInHole}{41}{subsubsection.4.6.4.3}%
+\contentsline {subsubsection}{\numberline {4.6.4.4}forceVector}{41}{subsubsection.4.6.4.4}%
+\contentsline {subsubsection}{\numberline {4.6.4.5}heartSprites}{41}{subsubsection.4.6.4.5}%
+\contentsline {subsubsection}{\numberline {4.6.4.6}inputManager}{42}{subsubsection.4.6.4.6}%
+\contentsline {subsubsection}{\numberline {4.6.4.7}isJumping}{42}{subsubsection.4.6.4.7}%
+\contentsline {subsubsection}{\numberline {4.6.4.8}isSinking}{42}{subsubsection.4.6.4.8}%
+\contentsline {subsubsection}{\numberline {4.6.4.9}jumpTimer}{42}{subsubsection.4.6.4.9}%
+\contentsline {subsubsection}{\numberline {4.6.4.10}lastSafePos}{42}{subsubsection.4.6.4.10}%
+\contentsline {subsubsection}{\numberline {4.6.4.11}levelData}{42}{subsubsection.4.6.4.11}%
+\contentsline {subsubsection}{\numberline {4.6.4.12}levelFinishTimer}{42}{subsubsection.4.6.4.12}%
+\contentsline {subsubsection}{\numberline {4.6.4.13}lives}{42}{subsubsection.4.6.4.13}%
+\contentsline {subsubsection}{\numberline {4.6.4.14}m\_alpha}{43}{subsubsection.4.6.4.14}%
+\contentsline {subsubsection}{\numberline {4.6.4.15}m\_data}{43}{subsubsection.4.6.4.15}%
+\contentsline {subsubsection}{\numberline {4.6.4.16}m\_fadeRect}{43}{subsubsection.4.6.4.16}%
+\contentsline {subsubsection}{\numberline {4.6.4.17}m\_hitSound}{43}{subsubsection.4.6.4.17}%
+\contentsline {subsubsection}{\numberline {4.6.4.18}m\_level}{43}{subsubsection.4.6.4.18}%
+\contentsline {subsubsection}{\numberline {4.6.4.19}m\_shadow}{43}{subsubsection.4.6.4.19}%
+\contentsline {subsubsection}{\numberline {4.6.4.20}m\_splashSound}{43}{subsubsection.4.6.4.20}%
+\contentsline {subsubsection}{\numberline {4.6.4.21}m\_wallHitSound}{43}{subsubsection.4.6.4.21}%
+\contentsline {subsubsection}{\numberline {4.6.4.22}m\_winSound}{44}{subsubsection.4.6.4.22}%
+\contentsline {subsubsection}{\numberline {4.6.4.23}maxJumpTime}{44}{subsubsection.4.6.4.23}%
+\contentsline {subsubsection}{\numberline {4.6.4.24}scoreText}{44}{subsubsection.4.6.4.24}%
+\contentsline {subsubsection}{\numberline {4.6.4.25}strokes}{44}{subsubsection.4.6.4.25}%
+\contentsline {subsubsection}{\numberline {4.6.4.26}tileMap}{44}{subsubsection.4.6.4.26}%
+\contentsline {subsubsection}{\numberline {4.6.4.27}wasInWater}{44}{subsubsection.4.6.4.27}%
+\contentsline {subsubsection}{\numberline {4.6.4.28}winText}{44}{subsubsection.4.6.4.28}%
+\contentsline {section}{\numberline {4.7}Dokumentacja klasy Input\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager}{45}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Opis szczegółowy}{46}{subsection.4.7.1}%
+\contentsline {subsection}{\numberline {4.7.2}Dokumentacja konstruktora i destruktora}{46}{subsection.4.7.2}%
+\contentsline {subsubsection}{\numberline {4.7.2.1}InputManager()}{46}{subsubsection.4.7.2.1}%
+\contentsline {subsection}{\numberline {4.7.3}Dokumentacja funkcji składowych}{46}{subsection.4.7.3}%
+\contentsline {subsubsection}{\numberline {4.7.3.1}getCurrentForce()}{46}{subsubsection.4.7.3.1}%
+\contentsline {subsubsection}{\numberline {4.7.3.2}getForceVector()}{47}{subsubsection.4.7.3.2}%
+\contentsline {subsubsection}{\numberline {4.7.3.3}handleEvent()}{47}{subsubsection.4.7.3.3}%
+\contentsline {subsubsection}{\numberline {4.7.3.4}isDragging()}{48}{subsubsection.4.7.3.4}%
+\contentsline {subsubsection}{\numberline {4.7.3.5}isReady()}{49}{subsubsection.4.7.3.5}%
+\contentsline {subsection}{\numberline {4.7.4}Dokumentacja atrybutów składowych}{49}{subsection.4.7.4}%
+\contentsline {subsubsection}{\numberline {4.7.4.1}ballStartPos}{49}{subsubsection.4.7.4.1}%
+\contentsline {subsubsection}{\numberline {4.7.4.2}currentMousePos}{49}{subsubsection.4.7.4.2}%
+\contentsline {subsubsection}{\numberline {4.7.4.3}force}{49}{subsubsection.4.7.4.3}%
+\contentsline {subsubsection}{\numberline {4.7.4.4}isGrabbed}{49}{subsubsection.4.7.4.4}%
+\contentsline {subsubsection}{\numberline {4.7.4.5}ready}{50}{subsubsection.4.7.4.5}%
+\contentsline {section}{\numberline {4.8}Dokumentacja klasy Leaderboard\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State}{50}{section.4.8}%
+\contentsline {subsection}{\numberline {4.8.1}Opis szczegółowy}{53}{subsection.4.8.1}%
+\contentsline {subsection}{\numberline {4.8.2}Dokumentacja konstruktora i destruktora}{53}{subsection.4.8.2}%
+\contentsline {subsubsection}{\numberline {4.8.2.1}LeaderboardState()}{53}{subsubsection.4.8.2.1}%
+\contentsline {subsection}{\numberline {4.8.3}Dokumentacja funkcji składowych}{54}{subsection.4.8.3}%
+\contentsline {subsubsection}{\numberline {4.8.3.1}draw()}{54}{subsubsection.4.8.3.1}%
+\contentsline {subsubsection}{\numberline {4.8.3.2}handleInput()}{54}{subsubsection.4.8.3.2}%
+\contentsline {subsubsection}{\numberline {4.8.3.3}init()}{54}{subsubsection.4.8.3.3}%
+\contentsline {subsubsection}{\numberline {4.8.3.4}update()}{54}{subsubsection.4.8.3.4}%
+\contentsline {subsection}{\numberline {4.8.4}Dokumentacja atrybutów składowych}{55}{subsection.4.8.4}%
+\contentsline {subsubsection}{\numberline {4.8.4.1}m\_alpha}{55}{subsubsection.4.8.4.1}%
+\contentsline {subsubsection}{\numberline {4.8.4.2}m\_backButton}{55}{subsubsection.4.8.4.2}%
+\contentsline {subsubsection}{\numberline {4.8.4.3}m\_data}{55}{subsubsection.4.8.4.3}%
+\contentsline {subsubsection}{\numberline {4.8.4.4}m\_fadeRect}{55}{subsubsection.4.8.4.4}%
+\contentsline {subsubsection}{\numberline {4.8.4.5}m\_isFadingIn}{55}{subsubsection.4.8.4.5}%
+\contentsline {subsubsection}{\numberline {4.8.4.6}m\_isGoingBack}{55}{subsubsection.4.8.4.6}%
+\contentsline {subsubsection}{\numberline {4.8.4.7}m\_scoreTexts}{55}{subsubsection.4.8.4.7}%
+\contentsline {subsubsection}{\numberline {4.8.4.8}m\_title}{56}{subsubsection.4.8.4.8}%
+\contentsline {section}{\numberline {4.9}Dokumentacja klasy Level\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Complete\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State}{56}{section.4.9}%
+\contentsline {subsection}{\numberline {4.9.1}Opis szczegółowy}{60}{subsection.4.9.1}%
+\contentsline {subsection}{\numberline {4.9.2}Dokumentacja konstruktora i destruktora}{60}{subsection.4.9.2}%
+\contentsline {subsubsection}{\numberline {4.9.2.1}LevelCompleteState()}{60}{subsubsection.4.9.2.1}%
+\contentsline {subsection}{\numberline {4.9.3}Dokumentacja funkcji składowych}{60}{subsection.4.9.3}%
+\contentsline {subsubsection}{\numberline {4.9.3.1}draw()}{60}{subsubsection.4.9.3.1}%
+\contentsline {subsubsection}{\numberline {4.9.3.2}handleInput()}{61}{subsubsection.4.9.3.2}%
+\contentsline {subsubsection}{\numberline {4.9.3.3}init()}{61}{subsubsection.4.9.3.3}%
+\contentsline {subsubsection}{\numberline {4.9.3.4}update()}{61}{subsubsection.4.9.3.4}%
+\contentsline {subsection}{\numberline {4.9.4}Dokumentacja atrybutów składowych}{62}{subsection.4.9.4}%
+\contentsline {subsubsection}{\numberline {4.9.4.1}m\_alpha}{62}{subsubsection.4.9.4.1}%
+\contentsline {subsubsection}{\numberline {4.9.4.2}m\_backgroundSprite}{62}{subsubsection.4.9.4.2}%
+\contentsline {subsubsection}{\numberline {4.9.4.3}m\_bgTexture}{62}{subsubsection.4.9.4.3}%
+\contentsline {subsubsection}{\numberline {4.9.4.4}m\_currentLevel}{62}{subsubsection.4.9.4.4}%
+\contentsline {subsubsection}{\numberline {4.9.4.5}m\_data}{62}{subsubsection.4.9.4.5}%
+\contentsline {subsubsection}{\numberline {4.9.4.6}m\_dimmer}{62}{subsubsection.4.9.4.6}%
+\contentsline {subsubsection}{\numberline {4.9.4.7}m\_fadeRect}{62}{subsubsection.4.9.4.7}%
+\contentsline {subsubsection}{\numberline {4.9.4.8}m\_goToMenu}{63}{subsubsection.4.9.4.8}%
+\contentsline {subsubsection}{\numberline {4.9.4.9}m\_isTransitioning}{63}{subsubsection.4.9.4.9}%
+\contentsline {subsubsection}{\numberline {4.9.4.10}m\_menuButton}{63}{subsubsection.4.9.4.10}%
+\contentsline {subsubsection}{\numberline {4.9.4.11}m\_nextLevelButton}{63}{subsubsection.4.9.4.11}%
+\contentsline {subsubsection}{\numberline {4.9.4.12}m\_retryButton}{63}{subsubsection.4.9.4.12}%
+\contentsline {subsubsection}{\numberline {4.9.4.13}m\_retryLevel}{63}{subsubsection.4.9.4.13}%
+\contentsline {subsubsection}{\numberline {4.9.4.14}m\_scoreText}{63}{subsubsection.4.9.4.14}%
+\contentsline {subsubsection}{\numberline {4.9.4.15}m\_strokes}{63}{subsubsection.4.9.4.15}%
+\contentsline {subsubsection}{\numberline {4.9.4.16}m\_title}{64}{subsubsection.4.9.4.16}%
+\contentsline {section}{\numberline {4.10}Dokumentacja klasy Level\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager}{64}{section.4.10}%
+\contentsline {subsection}{\numberline {4.10.1}Opis szczegółowy}{65}{subsection.4.10.1}%
+\contentsline {subsection}{\numberline {4.10.2}Dokumentacja funkcji składowych}{65}{subsection.4.10.2}%
+\contentsline {subsubsection}{\numberline {4.10.2.1}colorToTileID()}{65}{subsubsection.4.10.2.1}%
+\contentsline {subsubsection}{\numberline {4.10.2.2}loadLevelFromImage()}{67}{subsubsection.4.10.2.2}%
+\contentsline {subsection}{\numberline {4.10.3}Dokumentacja atrybutów składowych}{69}{subsection.4.10.3}%
+\contentsline {subsubsection}{\numberline {4.10.3.1}startPosition}{69}{subsubsection.4.10.3.1}%
+\contentsline {section}{\numberline {4.11}Dokumentacja klasy Level\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Select\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State}{69}{section.4.11}%
+\contentsline {subsection}{\numberline {4.11.1}Opis szczegółowy}{72}{subsection.4.11.1}%
+\contentsline {subsection}{\numberline {4.11.2}Dokumentacja konstruktora i destruktora}{72}{subsection.4.11.2}%
+\contentsline {subsubsection}{\numberline {4.11.2.1}LevelSelectState()}{72}{subsubsection.4.11.2.1}%
+\contentsline {subsection}{\numberline {4.11.3}Dokumentacja funkcji składowych}{73}{subsection.4.11.3}%
+\contentsline {subsubsection}{\numberline {4.11.3.1}draw()}{73}{subsubsection.4.11.3.1}%
+\contentsline {subsubsection}{\numberline {4.11.3.2}handleInput()}{73}{subsubsection.4.11.3.2}%
+\contentsline {subsubsection}{\numberline {4.11.3.3}init()}{73}{subsubsection.4.11.3.3}%
+\contentsline {subsubsection}{\numberline {4.11.3.4}update()}{74}{subsubsection.4.11.3.4}%
+\contentsline {subsection}{\numberline {4.11.4}Dokumentacja atrybutów składowych}{74}{subsection.4.11.4}%
+\contentsline {subsubsection}{\numberline {4.11.4.1}m\_alpha}{74}{subsubsection.4.11.4.1}%
+\contentsline {subsubsection}{\numberline {4.11.4.2}m\_backButton}{74}{subsubsection.4.11.4.2}%
+\contentsline {subsubsection}{\numberline {4.11.4.3}m\_data}{75}{subsubsection.4.11.4.3}%
+\contentsline {subsubsection}{\numberline {4.11.4.4}m\_fadeRect}{75}{subsubsection.4.11.4.4}%
+\contentsline {subsubsection}{\numberline {4.11.4.5}m\_isFadingIn}{75}{subsubsection.4.11.4.5}%
+\contentsline {subsubsection}{\numberline {4.11.4.6}m\_isTransitioning}{75}{subsubsection.4.11.4.6}%
+\contentsline {subsubsection}{\numberline {4.11.4.7}m\_levelButtons}{75}{subsubsection.4.11.4.7}%
+\contentsline {subsubsection}{\numberline {4.11.4.8}m\_nextLevelToLoad}{75}{subsubsection.4.11.4.8}%
+\contentsline {subsubsection}{\numberline {4.11.4.9}m\_title}{75}{subsubsection.4.11.4.9}%
+\contentsline {section}{\numberline {4.12}Dokumentacja klasy Main\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Menu\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State}{76}{section.4.12}%
+\contentsline {subsection}{\numberline {4.12.1}Opis szczegółowy}{78}{subsection.4.12.1}%
+\contentsline {subsection}{\numberline {4.12.2}Dokumentacja konstruktora i destruktora}{79}{subsection.4.12.2}%
+\contentsline {subsubsection}{\numberline {4.12.2.1}MainMenuState()}{79}{subsubsection.4.12.2.1}%
+\contentsline {subsection}{\numberline {4.12.3}Dokumentacja funkcji składowych}{79}{subsection.4.12.3}%
+\contentsline {subsubsection}{\numberline {4.12.3.1}draw()}{79}{subsubsection.4.12.3.1}%
+\contentsline {subsubsection}{\numberline {4.12.3.2}handleInput()}{79}{subsubsection.4.12.3.2}%
+\contentsline {subsubsection}{\numberline {4.12.3.3}init()}{79}{subsubsection.4.12.3.3}%
+\contentsline {subsubsection}{\numberline {4.12.3.4}update()}{80}{subsubsection.4.12.3.4}%
+\contentsline {subsection}{\numberline {4.12.4}Dokumentacja atrybutów składowych}{80}{subsection.4.12.4}%
+\contentsline {subsubsection}{\numberline {4.12.4.1}m\_alpha}{80}{subsubsection.4.12.4.1}%
+\contentsline {subsubsection}{\numberline {4.12.4.2}m\_background}{80}{subsubsection.4.12.4.2}%
+\contentsline {subsubsection}{\numberline {4.12.4.3}m\_data}{80}{subsubsection.4.12.4.3}%
+\contentsline {subsubsection}{\numberline {4.12.4.4}m\_exitButton}{81}{subsubsection.4.12.4.4}%
+\contentsline {subsubsection}{\numberline {4.12.4.5}m\_fadeRect}{81}{subsubsection.4.12.4.5}%
+\contentsline {subsubsection}{\numberline {4.12.4.6}m\_goToLeaderboard}{81}{subsubsection.4.12.4.6}%
+\contentsline {subsubsection}{\numberline {4.12.4.7}m\_isFadingIn}{81}{subsubsection.4.12.4.7}%
+\contentsline {subsubsection}{\numberline {4.12.4.8}m\_isTransitioning}{81}{subsubsection.4.12.4.8}%
+\contentsline {subsubsection}{\numberline {4.12.4.9}m\_leaderboardButton}{81}{subsubsection.4.12.4.9}%
+\contentsline {subsubsection}{\numberline {4.12.4.10}m\_playButton}{81}{subsubsection.4.12.4.10}%
+\contentsline {subsubsection}{\numberline {4.12.4.11}m\_title}{82}{subsubsection.4.12.4.11}%
+\contentsline {section}{\numberline {4.13}Dokumentacja klasy Pause\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Menu\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State}{82}{section.4.13}%
+\contentsline {subsection}{\numberline {4.13.1}Opis szczegółowy}{85}{subsection.4.13.1}%
+\contentsline {subsection}{\numberline {4.13.2}Dokumentacja konstruktora i destruktora}{86}{subsection.4.13.2}%
+\contentsline {subsubsection}{\numberline {4.13.2.1}PauseMenuState()}{86}{subsubsection.4.13.2.1}%
+\contentsline {subsection}{\numberline {4.13.3}Dokumentacja funkcji składowych}{87}{subsection.4.13.3}%
+\contentsline {subsubsection}{\numberline {4.13.3.1}draw()}{87}{subsubsection.4.13.3.1}%
+\contentsline {subsubsection}{\numberline {4.13.3.2}handleInput()}{87}{subsubsection.4.13.3.2}%
+\contentsline {subsubsection}{\numberline {4.13.3.3}init()}{87}{subsubsection.4.13.3.3}%
+\contentsline {subsubsection}{\numberline {4.13.3.4}update()}{88}{subsubsection.4.13.3.4}%
+\contentsline {subsection}{\numberline {4.13.4}Dokumentacja atrybutów składowych}{88}{subsection.4.13.4}%
+\contentsline {subsubsection}{\numberline {4.13.4.1}m\_alpha}{88}{subsubsection.4.13.4.1}%
+\contentsline {subsubsection}{\numberline {4.13.4.2}m\_backgroundSprite}{88}{subsubsection.4.13.4.2}%
+\contentsline {subsubsection}{\numberline {4.13.4.3}m\_bgTexture}{88}{subsubsection.4.13.4.3}%
+\contentsline {subsubsection}{\numberline {4.13.4.4}m\_currentLevel}{88}{subsubsection.4.13.4.4}%
+\contentsline {subsubsection}{\numberline {4.13.4.5}m\_data}{89}{subsubsection.4.13.4.5}%
+\contentsline {subsubsection}{\numberline {4.13.4.6}m\_dimmer}{89}{subsubsection.4.13.4.6}%
+\contentsline {subsubsection}{\numberline {4.13.4.7}m\_fadeRect}{89}{subsubsection.4.13.4.7}%
+\contentsline {subsubsection}{\numberline {4.13.4.8}m\_isGoingToMenu}{89}{subsubsection.4.13.4.8}%
+\contentsline {subsubsection}{\numberline {4.13.4.9}m\_isReseting}{89}{subsubsection.4.13.4.9}%
+\contentsline {subsubsection}{\numberline {4.13.4.10}m\_menuButton}{89}{subsubsection.4.13.4.10}%
+\contentsline {subsubsection}{\numberline {4.13.4.11}m\_pauseTitle}{89}{subsubsection.4.13.4.11}%
+\contentsline {subsubsection}{\numberline {4.13.4.12}m\_resetButton}{89}{subsubsection.4.13.4.12}%
+\contentsline {subsubsection}{\numberline {4.13.4.13}m\_resumeButton}{89}{subsubsection.4.13.4.13}%
+\contentsline {section}{\numberline {4.14}Dokumentacja klasy Resource\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager}{90}{section.4.14}%
+\contentsline {subsection}{\numberline {4.14.1}Opis szczegółowy}{90}{subsection.4.14.1}%
+\contentsline {subsection}{\numberline {4.14.2}Dokumentacja konstruktora i destruktora}{90}{subsection.4.14.2}%
+\contentsline {subsubsection}{\numberline {4.14.2.1}ResourceManager()}{90}{subsubsection.4.14.2.1}%
+\contentsline {subsection}{\numberline {4.14.3}Dokumentacja funkcji składowych}{91}{subsection.4.14.3}%
+\contentsline {subsubsection}{\numberline {4.14.3.1}cleanUpAllResources()}{91}{subsubsection.4.14.3.1}%
+\contentsline {subsubsection}{\numberline {4.14.3.2}loadAllResources()}{91}{subsubsection.4.14.3.2}%
+\contentsline {section}{\numberline {4.15}Dokumentacja klasy Save\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager}{92}{section.4.15}%
+\contentsline {subsection}{\numberline {4.15.1}Opis szczegółowy}{94}{subsection.4.15.1}%
+\contentsline {subsection}{\numberline {4.15.2}Dokumentacja funkcji składowych}{94}{subsection.4.15.2}%
+\contentsline {subsubsection}{\numberline {4.15.2.1}getBestScore()}{94}{subsubsection.4.15.2.1}%
+\contentsline {subsubsection}{\numberline {4.15.2.2}getUnlockedLevel()}{95}{subsubsection.4.15.2.2}%
+\contentsline {subsubsection}{\numberline {4.15.2.3}init()}{95}{subsubsection.4.15.2.3}%
+\contentsline {subsubsection}{\numberline {4.15.2.4}load()}{96}{subsubsection.4.15.2.4}%
+\contentsline {subsubsection}{\numberline {4.15.2.5}save()}{97}{subsubsection.4.15.2.5}%
+\contentsline {subsubsection}{\numberline {4.15.2.6}submitScore()}{97}{subsubsection.4.15.2.6}%
+\contentsline {subsection}{\numberline {4.15.3}Dokumentacja atrybutów składowych}{98}{subsection.4.15.3}%
+\contentsline {subsubsection}{\numberline {4.15.3.1}bestScores}{98}{subsubsection.4.15.3.1}%
+\contentsline {subsubsection}{\numberline {4.15.3.2}fileName}{98}{subsubsection.4.15.3.2}%
+\contentsline {subsubsection}{\numberline {4.15.3.3}unlockedLevel}{98}{subsubsection.4.15.3.3}%
+\contentsline {section}{\numberline {4.16}Dokumentacja klasy Sound\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager}{99}{section.4.16}%
+\contentsline {subsection}{\numberline {4.16.1}Opis szczegółowy}{99}{subsection.4.16.1}%
+\contentsline {subsection}{\numberline {4.16.2}Dokumentacja konstruktora i destruktora}{100}{subsection.4.16.2}%
+\contentsline {subsubsection}{\numberline {4.16.2.1}SoundManager()}{100}{subsubsection.4.16.2.1}%
+\contentsline {subsection}{\numberline {4.16.3}Dokumentacja funkcji składowych}{100}{subsection.4.16.3}%
+\contentsline {subsubsection}{\numberline {4.16.3.1}cleanup()}{100}{subsubsection.4.16.3.1}%
+\contentsline {subsubsection}{\numberline {4.16.3.2}get()}{100}{subsubsection.4.16.3.2}%
+\contentsline {subsubsection}{\numberline {4.16.3.3}load()}{101}{subsubsection.4.16.3.3}%
+\contentsline {subsection}{\numberline {4.16.4}Dokumentacja atrybutów składowych}{101}{subsection.4.16.4}%
+\contentsline {subsubsection}{\numberline {4.16.4.1}m\_Sounds}{101}{subsubsection.4.16.4.1}%
+\contentsline {section}{\numberline {4.17}Dokumentacja klasy State}{101}{section.4.17}%
+\contentsline {subsection}{\numberline {4.17.1}Opis szczegółowy}{103}{subsection.4.17.1}%
+\contentsline {subsection}{\numberline {4.17.2}Dokumentacja konstruktora i destruktora}{103}{subsection.4.17.2}%
+\contentsline {subsubsection}{\numberline {4.17.2.1}$\sim $State()}{103}{subsubsection.4.17.2.1}%
+\contentsline {subsection}{\numberline {4.17.3}Dokumentacja funkcji składowych}{103}{subsection.4.17.3}%
+\contentsline {subsubsection}{\numberline {4.17.3.1}draw()}{103}{subsubsection.4.17.3.1}%
+\contentsline {subsubsection}{\numberline {4.17.3.2}handleInput()}{103}{subsubsection.4.17.3.2}%
+\contentsline {subsubsection}{\numberline {4.17.3.3}init()}{104}{subsubsection.4.17.3.3}%
+\contentsline {subsubsection}{\numberline {4.17.3.4}pause()}{104}{subsubsection.4.17.3.4}%
+\contentsline {subsubsection}{\numberline {4.17.3.5}resume()}{104}{subsubsection.4.17.3.5}%
+\contentsline {subsubsection}{\numberline {4.17.3.6}update()}{104}{subsubsection.4.17.3.6}%
+\contentsline {section}{\numberline {4.18}Dokumentacja klasy State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager}{105}{section.4.18}%
+\contentsline {subsection}{\numberline {4.18.1}Opis szczegółowy}{106}{subsection.4.18.1}%
+\contentsline {subsection}{\numberline {4.18.2}Dokumentacja konstruktora i destruktora}{106}{subsection.4.18.2}%
+\contentsline {subsubsection}{\numberline {4.18.2.1}StateManager()}{106}{subsubsection.4.18.2.1}%
+\contentsline {subsubsection}{\numberline {4.18.2.2}$\sim $StateManager()}{106}{subsubsection.4.18.2.2}%
+\contentsline {subsection}{\numberline {4.18.3}Dokumentacja funkcji składowych}{106}{subsection.4.18.3}%
+\contentsline {subsubsection}{\numberline {4.18.3.1}addState()}{106}{subsubsection.4.18.3.1}%
+\contentsline {subsubsection}{\numberline {4.18.3.2}getActiveState()}{107}{subsubsection.4.18.3.2}%
+\contentsline {subsubsection}{\numberline {4.18.3.3}processStateChanges()}{107}{subsubsection.4.18.3.3}%
+\contentsline {subsubsection}{\numberline {4.18.3.4}removeState()}{107}{subsubsection.4.18.3.4}%
+\contentsline {subsubsection}{\numberline {4.18.3.5}switchState()}{107}{subsubsection.4.18.3.5}%
+\contentsline {subsection}{\numberline {4.18.4}Dokumentacja atrybutów składowych}{107}{subsection.4.18.4}%
+\contentsline {subsubsection}{\numberline {4.18.4.1}m\_isAdding}{107}{subsubsection.4.18.4.1}%
+\contentsline {subsubsection}{\numberline {4.18.4.2}m\_isClearing}{107}{subsubsection.4.18.4.2}%
+\contentsline {subsubsection}{\numberline {4.18.4.3}m\_isRemoving}{108}{subsubsection.4.18.4.3}%
+\contentsline {subsubsection}{\numberline {4.18.4.4}m\_isReplacing}{108}{subsubsection.4.18.4.4}%
+\contentsline {subsubsection}{\numberline {4.18.4.5}m\_newState}{108}{subsubsection.4.18.4.5}%
+\contentsline {subsubsection}{\numberline {4.18.4.6}m\_states}{108}{subsubsection.4.18.4.6}%
+\contentsline {section}{\numberline {4.19}Dokumentacja klasy Texture\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager}{108}{section.4.19}%
+\contentsline {subsection}{\numberline {4.19.1}Opis szczegółowy}{109}{subsection.4.19.1}%
+\contentsline {subsection}{\numberline {4.19.2}Dokumentacja konstruktora i destruktora}{109}{subsection.4.19.2}%
+\contentsline {subsubsection}{\numberline {4.19.2.1}TextureManager()}{109}{subsubsection.4.19.2.1}%
+\contentsline {subsection}{\numberline {4.19.3}Dokumentacja funkcji składowych}{109}{subsection.4.19.3}%
+\contentsline {subsubsection}{\numberline {4.19.3.1}cleanup()}{109}{subsubsection.4.19.3.1}%
+\contentsline {subsubsection}{\numberline {4.19.3.2}get()}{109}{subsubsection.4.19.3.2}%
+\contentsline {subsubsection}{\numberline {4.19.3.3}load()}{110}{subsubsection.4.19.3.3}%
+\contentsline {subsection}{\numberline {4.19.4}Dokumentacja atrybutów składowych}{111}{subsection.4.19.4}%
+\contentsline {subsubsection}{\numberline {4.19.4.1}m\_Textures}{111}{subsubsection.4.19.4.1}%
+\contentsline {section}{\numberline {4.20}Dokumentacja klasy Tile\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Map}{111}{section.4.20}%
+\contentsline {subsection}{\numberline {4.20.1}Opis szczegółowy}{112}{subsection.4.20.1}%
+\contentsline {subsection}{\numberline {4.20.2}Dokumentacja funkcji składowych}{113}{subsection.4.20.2}%
+\contentsline {subsubsection}{\numberline {4.20.2.1}draw()}{113}{subsubsection.4.20.2.1}%
+\contentsline {subsubsection}{\numberline {4.20.2.2}load()}{113}{subsubsection.4.20.2.2}%
+\contentsline {subsection}{\numberline {4.20.3}Dokumentacja atrybutów składowych}{114}{subsection.4.20.3}%
+\contentsline {subsubsection}{\numberline {4.20.3.1}m\_tileset}{114}{subsubsection.4.20.3.1}%
+\contentsline {subsubsection}{\numberline {4.20.3.2}m\_vertices}{114}{subsubsection.4.20.3.2}%
+\contentsline {chapter}{\numberline {5}Dokumentacja plików}{115}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Dokumentacja pliku Ball.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{115}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Dokumentacja pliku Ball.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{115}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Ball.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{116}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Dokumentacja pliku DEFINITIONS.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{117}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Opis szczegółowy}{119}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Dokumentacja definicji}{119}{subsection.5.4.2}%
+\contentsline {subsubsection}{\numberline {5.4.2.1}BALL\_TEXTURE\_PATH}{119}{subsubsection.5.4.2.1}%
+\contentsline {subsubsection}{\numberline {5.4.2.2}FONT\_PATH}{119}{subsubsection.5.4.2.2}%
+\contentsline {subsubsection}{\numberline {5.4.2.3}HEART\_PATH}{119}{subsubsection.5.4.2.3}%
+\contentsline {subsubsection}{\numberline {5.4.2.4}HEART\_WHITE\_PATH}{119}{subsubsection.5.4.2.4}%
+\contentsline {subsubsection}{\numberline {5.4.2.5}HIT\_PATH}{120}{subsubsection.5.4.2.5}%
+\contentsline {subsubsection}{\numberline {5.4.2.6}LEVEL\_HEIGHT}{120}{subsubsection.5.4.2.6}%
+\contentsline {subsubsection}{\numberline {5.4.2.7}LEVEL\_WIDTH}{120}{subsubsection.5.4.2.7}%
+\contentsline {subsubsection}{\numberline {5.4.2.8}SCREEN\_HEIGHT}{120}{subsubsection.5.4.2.8}%
+\contentsline {subsubsection}{\numberline {5.4.2.9}SCREEN\_WIDTH}{120}{subsubsection.5.4.2.9}%
+\contentsline {subsubsection}{\numberline {5.4.2.10}SPLASH\_PATH}{120}{subsubsection.5.4.2.10}%
+\contentsline {subsubsection}{\numberline {5.4.2.11}TILE\_SIZE}{120}{subsubsection.5.4.2.11}%
+\contentsline {subsubsection}{\numberline {5.4.2.12}TILESET\_PATH}{120}{subsubsection.5.4.2.12}%
+\contentsline {subsubsection}{\numberline {5.4.2.13}TITLE}{121}{subsubsection.5.4.2.13}%
+\contentsline {subsubsection}{\numberline {5.4.2.14}WALL\_HIT\_PATH}{121}{subsubsection.5.4.2.14}%
+\contentsline {subsubsection}{\numberline {5.4.2.15}WIN\_PATH}{121}{subsubsection.5.4.2.15}%
+\contentsline {subsection}{\numberline {5.4.3}Dokumentacja funkcji}{121}{subsection.5.4.3}%
+\contentsline {subsubsection}{\numberline {5.4.3.1}COLOR\_BALL()}{121}{subsubsection.5.4.3.1}%
+\contentsline {subsubsection}{\numberline {5.4.3.2}COLOR\_CONCRETE()}{121}{subsubsection.5.4.3.2}%
+\contentsline {subsubsection}{\numberline {5.4.3.3}COLOR\_CORNER\_LD()}{122}{subsubsection.5.4.3.3}%
+\contentsline {subsubsection}{\numberline {5.4.3.4}COLOR\_CORNER\_LU()}{122}{subsubsection.5.4.3.4}%
+\contentsline {subsubsection}{\numberline {5.4.3.5}COLOR\_CORNER\_RD()}{122}{subsubsection.5.4.3.5}%
+\contentsline {subsubsection}{\numberline {5.4.3.6}COLOR\_CORNER\_RU()}{123}{subsubsection.5.4.3.6}%
+\contentsline {subsubsection}{\numberline {5.4.3.7}COLOR\_GRASS()}{123}{subsubsection.5.4.3.7}%
+\contentsline {subsubsection}{\numberline {5.4.3.8}COLOR\_HOLE()}{123}{subsubsection.5.4.3.8}%
+\contentsline {subsubsection}{\numberline {5.4.3.9}COLOR\_RAMP\_DOWN()}{124}{subsubsection.5.4.3.9}%
+\contentsline {subsubsection}{\numberline {5.4.3.10}COLOR\_RAMP\_L()}{124}{subsubsection.5.4.3.10}%
+\contentsline {subsubsection}{\numberline {5.4.3.11}COLOR\_RAMP\_R()}{124}{subsubsection.5.4.3.11}%
+\contentsline {subsubsection}{\numberline {5.4.3.12}COLOR\_RAMP\_UP()}{125}{subsubsection.5.4.3.12}%
+\contentsline {subsubsection}{\numberline {5.4.3.13}COLOR\_SAND()}{125}{subsubsection.5.4.3.13}%
+\contentsline {subsubsection}{\numberline {5.4.3.14}COLOR\_WALL\_DOWN()}{125}{subsubsection.5.4.3.14}%
+\contentsline {subsubsection}{\numberline {5.4.3.15}COLOR\_WALL\_L()}{126}{subsubsection.5.4.3.15}%
+\contentsline {subsubsection}{\numberline {5.4.3.16}COLOR\_WALL\_R()}{126}{subsubsection.5.4.3.16}%
+\contentsline {subsubsection}{\numberline {5.4.3.17}COLOR\_WALL\_UP()}{126}{subsubsection.5.4.3.17}%
+\contentsline {subsubsection}{\numberline {5.4.3.18}COLOR\_WATER()}{127}{subsubsection.5.4.3.18}%
+\contentsline {section}{\numberline {5.5}DEFINITIONS.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{127}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Dokumentacja pliku Font\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{128}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Dokumentacja pliku Font\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{128}{section.5.7}%
+\contentsline {section}{\numberline {5.8}Font\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{129}{section.5.8}%
+\contentsline {section}{\numberline {5.9}Dokumentacja pliku Game.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{129}{section.5.9}%
+\contentsline {section}{\numberline {5.10}Dokumentacja pliku Game.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{130}{section.5.10}%
+\contentsline {subsection}{\numberline {5.10.1}Dokumentacja definicji typów}{131}{subsection.5.10.1}%
+\contentsline {subsubsection}{\numberline {5.10.1.1}GameDataRef}{131}{subsubsection.5.10.1.1}%
+\contentsline {section}{\numberline {5.11}Game.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{131}{section.5.11}%
+\contentsline {section}{\numberline {5.12}Dokumentacja pliku Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Over\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{132}{section.5.12}%
+\contentsline {section}{\numberline {5.13}Dokumentacja pliku Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Over\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{132}{section.5.13}%
+\contentsline {section}{\numberline {5.14}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Over\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{133}{section.5.14}%
+\contentsline {section}{\numberline {5.15}Dokumentacja pliku Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{134}{section.5.15}%
+\contentsline {section}{\numberline {5.16}Dokumentacja pliku Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{134}{section.5.16}%
+\contentsline {section}{\numberline {5.17}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{135}{section.5.17}%
+\contentsline {section}{\numberline {5.18}Dokumentacja pliku Input\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{136}{section.5.18}%
+\contentsline {section}{\numberline {5.19}Dokumentacja pliku Input\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{137}{section.5.19}%
+\contentsline {section}{\numberline {5.20}Input\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{138}{section.5.20}%
+\contentsline {section}{\numberline {5.21}Dokumentacja pliku Leader\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Board\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{138}{section.5.21}%
+\contentsline {section}{\numberline {5.22}Dokumentacja pliku Leader\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Board\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{139}{section.5.22}%
+\contentsline {section}{\numberline {5.23}Leader\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Board\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{140}{section.5.23}%
+\contentsline {section}{\numberline {5.24}Dokumentacja pliku Level\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Complete\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{140}{section.5.24}%
+\contentsline {section}{\numberline {5.25}Dokumentacja pliku Level\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Complete\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{140}{section.5.25}%
+\contentsline {section}{\numberline {5.26}Level\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Complete\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{141}{section.5.26}%
+\contentsline {section}{\numberline {5.27}Dokumentacja pliku Level\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{142}{section.5.27}%
+\contentsline {section}{\numberline {5.28}Dokumentacja pliku Level\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{143}{section.5.28}%
+\contentsline {section}{\numberline {5.29}Level\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{143}{section.5.29}%
+\contentsline {section}{\numberline {5.30}Dokumentacja pliku Level\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Select\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{144}{section.5.30}%
+\contentsline {section}{\numberline {5.31}Dokumentacja pliku Level\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Select\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{144}{section.5.31}%
+\contentsline {section}{\numberline {5.32}Level\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Select\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{145}{section.5.32}%
+\contentsline {section}{\numberline {5.33}Dokumentacja pliku main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{146}{section.5.33}%
+\contentsline {subsection}{\numberline {5.33.1}Dokumentacja funkcji}{146}{subsection.5.33.1}%
+\contentsline {subsubsection}{\numberline {5.33.1.1}main()}{146}{subsubsection.5.33.1.1}%
+\contentsline {section}{\numberline {5.34}Dokumentacja pliku Main\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Menu\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{147}{section.5.34}%
+\contentsline {section}{\numberline {5.35}Dokumentacja pliku Main\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Menu\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{147}{section.5.35}%
+\contentsline {section}{\numberline {5.36}Main\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Menu\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{148}{section.5.36}%
+\contentsline {section}{\numberline {5.37}Dokumentacja pliku Pause\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Menu\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{148}{section.5.37}%
+\contentsline {section}{\numberline {5.38}Dokumentacja pliku Pause\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Menu\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{149}{section.5.38}%
+\contentsline {section}{\numberline {5.39}Pause\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Menu\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{150}{section.5.39}%
+\contentsline {section}{\numberline {5.40}Dokumentacja pliku Resource\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{150}{section.5.40}%
+\contentsline {section}{\numberline {5.41}Dokumentacja pliku Resource\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{150}{section.5.41}%
+\contentsline {section}{\numberline {5.42}Resource\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{151}{section.5.42}%
+\contentsline {section}{\numberline {5.43}Dokumentacja pliku Save\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{152}{section.5.43}%
+\contentsline {section}{\numberline {5.44}Dokumentacja pliku Save\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{152}{section.5.44}%
+\contentsline {section}{\numberline {5.45}Save\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{153}{section.5.45}%
+\contentsline {section}{\numberline {5.46}Dokumentacja pliku Sound\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{154}{section.5.46}%
+\contentsline {section}{\numberline {5.47}Dokumentacja pliku Sound\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{154}{section.5.47}%
+\contentsline {section}{\numberline {5.48}Sound\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{155}{section.5.48}%
+\contentsline {section}{\numberline {5.49}Dokumentacja pliku State.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{156}{section.5.49}%
+\contentsline {section}{\numberline {5.50}State.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{156}{section.5.50}%
+\contentsline {section}{\numberline {5.51}Dokumentacja pliku State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{157}{section.5.51}%
+\contentsline {section}{\numberline {5.52}Dokumentacja pliku State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{157}{section.5.52}%
+\contentsline {subsection}{\numberline {5.52.1}Dokumentacja definicji typów}{159}{subsection.5.52.1}%
+\contentsline {subsubsection}{\numberline {5.52.1.1}StateRef}{159}{subsubsection.5.52.1.1}%
+\contentsline {section}{\numberline {5.53}State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{159}{section.5.53}%
+\contentsline {section}{\numberline {5.54}Dokumentacja pliku Texture\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{160}{section.5.54}%
+\contentsline {section}{\numberline {5.55}Dokumentacja pliku Texture\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{160}{section.5.55}%
+\contentsline {section}{\numberline {5.56}Texture\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{161}{section.5.56}%
+\contentsline {section}{\numberline {5.57}Dokumentacja pliku Tile\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Map.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{161}{section.5.57}%
+\contentsline {section}{\numberline {5.58}Dokumentacja pliku Tile\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Map.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{162}{section.5.58}%
+\contentsline {section}{\numberline {5.59}Tile\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Map.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{163}{section.5.59}%
+\contentsline {chapter}{Skorowidz}{165}{section*.257}%

@@ -59,6 +59,14 @@ void Ball::draw(sf::RenderWindow& window)
 void Ball::applyImpulse(const sf::Vector2f& impulse)
 {
     velocity = impulse;
+    float maxSpeed = 550.0f; // Limit prędkości
+    float speedSq = velocity.x * velocity.x + velocity.y * velocity.y;
+
+    if (speedSq > maxSpeed * maxSpeed) {
+        float currentSpeed = std::sqrt(speedSq);
+        float scale = maxSpeed / currentSpeed;
+        velocity *= scale;
+    }
 }
 
 bool Ball::contains(const sf::Vector2f& point) const
