@@ -52,6 +52,5 @@ set(PROJECT_SOURCES
 )
 add_executable(mini_golf ${PROJECT_SOURCES})
 
-
 target_link_libraries(mini_golf sfml-graphics)
 target_link_libraries(mini_golf sfml-audio)

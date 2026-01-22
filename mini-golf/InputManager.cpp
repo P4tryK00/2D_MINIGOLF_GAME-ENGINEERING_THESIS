@@ -53,7 +53,7 @@ sf::Vector2f InputManager::getForceVector()
         diff /= length; // Normalizacja wektora (kierunek)
 
         // Obliczenie siły: Długość * mnożnik, z limitem maksymalnym (1000.f)
-        float strength = std::min(length * 5.f, 1000.f);
+        float strength = std::min(length * 5.f, 550.f);
         diff *= strength;
     }
 

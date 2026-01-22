@@ -1,3 +1,19 @@
+/**
+* @file TileMap.h
+ * @brief Deklaracja klasy TileMap odpowiedzialnej za renderowanie mapy kafelkowej.
+ *
+ * Uwaga o źródle inspiracji:
+ * Implementacja (TileMap.cpp) wykorzystuje podejście oparte o sf::VertexArray i quady,
+ * inspirowane oficjalnym poradnikiem SFML dotyczącym map kafelkowych (Vertex Arrays).
+ * Rozwiązanie zostało następnie dostosowane do potrzeb projektu (format danych poziomu,
+ * integracja z menedżerem zasobów/tekstur, parametry mapy).
+ *
+ * Źródło: https://www.sfml-dev.org/tutorials/2.6/graphics-vertex-array.php
+ */
+
+
+
+
 #ifndef TILEMAP_H
 #define TILEMAP_H
 

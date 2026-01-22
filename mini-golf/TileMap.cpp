@@ -1,3 +1,16 @@
+/**
+ * @file TileMap.cpp
+ * @brief Implementacja renderowania mapy kafelkowej z użyciem sf::VertexArray.
+ *
+ * Uwaga o źródle inspiracji:
+ * Fragment dotyczący budowy tablicy wierzchołków (quady + współrzędne tekstury) jest
+ * inspirowany oficjalnym poradnikiem SFML „Vertex Arrays / TileMap”.
+ * Kod został dostosowany do architektury projektu (TextureManager, format mapy, rozmiary).
+ *
+ * Źródło: https://www.sfml-dev.org/tutorials/2.6/graphics-vertex-array.php
+ */
+
+
 #include "TileMap.h"
 #include "TextureManager.h"
 

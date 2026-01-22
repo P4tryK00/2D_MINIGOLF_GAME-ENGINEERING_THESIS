@@ -559,7 +559,7 @@ void GameState::updateAimLine() {
         float angle = std::atan2(force.y, force.x) * 180.f / std::numbers::pi_v<float>;
         aimLine.setRotation(angle);
 
-        float powerRatio = std::min(lineLength * 3.0f / 1000.f, 1.0f);
+        float powerRatio = std::min(lineLength * 3.0f / 550.f, 1.0f);
         sf::Uint8 r = 255;
         sf::Uint8 gb = static_cast<sf::Uint8>(255 * (1.0f - powerRatio));
         aimLine.setFillColor(sf::Color(r, gb, gb));
