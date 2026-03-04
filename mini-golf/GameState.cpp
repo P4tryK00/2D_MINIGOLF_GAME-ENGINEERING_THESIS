@@ -484,7 +484,7 @@ void GameState::update(float dt) {
              float rX = ((std::rand() % 200) - 100) / 100.0f;
              float rY = ((std::rand() % 200) - 100) / 100.0f;
              float roughness = 8.0f;
-             sf::Vector2f jitter(rX * roughness, rY * roughness);
+             sf::Vector2f jitter    (rX * roughness, rY * roughness);
              ball.applyImpulse(ball.getVelocity() + jitter);
 
              float bounceIntensity = (std::abs(rX) + std::abs(rY)) / 2.0f;

@@ -6,9 +6,11 @@
 Game::Game(int width, int height, std::string title) {
     // Tworzenie okna z możliwością zamknięcia i paskiem tytułu
     m_data->window.create(sf::VideoMode(width, height), title, sf::Style::Close | sf::Style::Titlebar);
-
+    //Vsync ON
+    m_data->window.setVerticalSyncEnabled(true);
     // Dodanie pierwszego stanu (Menu Główne) na stos
     m_data->machine.addState(std::make_unique<MainMenuState>(m_data));
+
 }
 
 void Game::run() {
